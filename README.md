@@ -7,7 +7,7 @@ It contains a single experiment, but the schema has two major version available:
 
 * 1.0 didn't contain a `foo` property.
 * 1.1 added an optional `foo` property that contains a string.
-* 2.0 changed the `foo` property from a string to any array.
+* 2.0 changed the `foo` property from a string to an array.
 
 1. Execute `vagrant up`.
 2. Execute `curl --include http://localhost:8080/labs-experiments/1` to find the latest version (ie 2) of experiment 1.
