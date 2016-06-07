@@ -25,7 +25,7 @@ final class Image
     ) {
         Assertion::url($uri);
         Assertion::regex($mediaType, '/^[\w.+-]+\/[\w.+-]+$/');
-        Assertion::regex($ratio, '/^[0-9]*[1-9]:[0-9]*[1-9]$/');
+        Assertion::regex($ratio, '/^[1-9][0-9]*:[1-9][0-9]*$/');
         Assertion::min($width, 1);
 
         $this->uri = $uri;

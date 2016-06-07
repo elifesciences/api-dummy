@@ -2,8 +2,11 @@
 
 namespace eLife\Labs\Serializer;
 
+use eLife\Labs\Blocks\Block;
 use eLife\Labs\Blocks\Image;
 use eLife\Labs\Blocks\Paragraph;
+use eLife\Labs\Blocks\Section;
+use eLife\Labs\Blocks\YouTube;
 use eLife\Labs\Experiment;
 use RuntimeException;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
@@ -30,38 +33,11 @@ final class ExperimentNormalizer implements NormalizerInterface
                     ],
                 ],
             ],
-            'content' => [],
         ];
 
-        foreach ($object->getContent() as $block) {
-            switch (get_class($block)) {
-                case Paragraph::class:
-                    $return['content'][] = [
-                        'type' => 'paragraph',
-                        'version' => 1,
-                        'text' => $block->getText(),
-                    ];
-                    break;
-                case Image::class:
-                    $return['content'][] = [
-                        'type' => 'image',
-                        'version' => 2,
-                        'image' => [
-                            $block->getImage()->getRatio() => [
-                                '0' => [
-                                    $block->getImage()->getMediaType() => [
-                                        $block->getImage()
-                                            ->getWidth() => $block->getImage()
-                                            ->getUri(),
-                                    ],
-                                ],
-                            ],
-                        ],
-                        'caption' => $block->getCaption(),
-                    ];
-                    break;
-                default:
-                    throw new RuntimeException('Unknown block type ' . get_class($block));
+        if (empty($context['partial'])) {
+            foreach ($object->getContent() as $block) {
+                $return['content'][] = $this->serializeBlock($block);
             }
         }
 
@@ -73,17 +49,58 @@ final class ExperimentNormalizer implements NormalizerInterface
             $return['isHighlighted'] = true;
         }
 
-        if (1 === $context['version']) {
-            $return['foo'] = 'bar';
-        } else {
-            $return['foo'] = ['bar' => 'baz'];
-        }
-
         return $return;
     }
 
     public function supportsNormalization($data, $format = null)
     {
         return is_object($data) && $data instanceof Experiment && 'json' === $format;
+    }
+
+    private function serializeBlock(Block $block) : array
+    {
+        switch (get_class($block)) {
+            case Paragraph::class:
+                return [
+                    'type' => 'paragraph',
+                    'text' => $block->getText(),
+                ];
+            case Image::class:
+                return [
+                    'type' => 'image',
+                    'image' => [
+                        $block->getImage()->getRatio() => [
+                            '0' => [
+                                $block->getImage()->getMediaType() => [
+                                    $block->getImage()
+                                        ->getWidth() => $block->getImage()
+                                        ->getUri(),
+                                ],
+                            ],
+                        ],
+                    ],
+                    'caption' => $block->getCaption(),
+                ];
+            case Section::class:
+                $section = [
+                    'type' => 'section',
+                    'title' => $block->getTitle(),
+                ];
+
+                foreach ($block->getContent() as $subBlock) {
+                    $section['content'][] = $this->serializeBlock($subBlock);
+                }
+
+                return $section;
+            case YouTube::class:
+                return [
+                    'type' => 'youtube',
+                    'id' => $block->getId(),
+                    'width' => $block->getWidth(),
+                    'height' => $block->getHeight(),
+                ];
+            default:
+                throw new RuntimeException('Unknown block type ' . get_class($block));
+        }
     }
 }

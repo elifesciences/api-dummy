@@ -34,7 +34,7 @@ final class InMemoryExperiments implements Experiments
      */
     public function all() : array
     {
-        return array_values($this->experiments);
+        return array_reverse($this->experiments);
     }
 
     /**
