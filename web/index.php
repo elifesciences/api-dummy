@@ -27,8 +27,23 @@ $experiments = [
         1,
         'What is Manuscripts?',
         DateTimeImmutable::createFromFormat('Y-m-d H:i:s', '2016-01-11 16:53:00'),
-        new Image('https://cdn.elifesciences.org/images/news/manuscripts-figure1.png', '', 'image/png', '1280:799',
-            2560),
+        [
+            'alt' => '',
+            'sizes' => [
+                '2:1' => [
+                    '900' => 'https://placehold.it/900x450',
+                    '1800' => 'https://placehold.it/1800x900'
+                ],
+                '16:9' => [
+                    '250' => 'https://placehold.it/250x141',
+                    '500' => 'https://placehold.it/500x281'
+                ],
+                '1:1' => [
+                    '70' => 'https://placehold.it/70x70',
+                    '140' => 'https://placehold.it/140x140'
+                ],
+            ],
+        ],
         [
             new Paragraph('It is a tool I created based on my own writing experiences during during my PhD research at the Sanger Institute in Cambridge.'),
             new Paragraph('In essence, Manuscripts is a word processor re-imagined to take a lot of mechanical formatting work off the author\'s shoulders, so he or she can focus on the actual paper. We top the editing features with a fully version-controlled file format and flexible import and export options.'),
@@ -36,19 +51,13 @@ $experiments = [
             new Paragraph('Our design packs in an unprecedented range of functionality, including multi-figure panels, table editing and equations, as well as a top-of-the-line citation workflow, all in one unified experience.'),
             new Paragraph('We also include over 1,000 journal-specific manuscript templates to act as a starting point for writing and are seeking new publishing partners to build more. Manuscript templates inform many factors besides the obvious, such as maximum word counts and acceptable figure formats which, among other details, are enforced by the app.'),
             new Paragraph('The styling used in the document can be exported to Word, LaTeX and Markdown formats. In a way, Manuscripts helps both the author and publisher by guaranteeing a certain minimum technical quality to the documents, without users needing to understand paragraph styling or, for instance, how to produce clean typesetting markup in LaTeX form.'),
-            new ImageBlock(
-                new Image('https://cdn.elifesciences.org/images/news/manuscripts-figure1.png', '', 'image/png',
-                    '1280:799', 2560),
-                'Manuscripts at a glance'
-            ),
+            new ImageBlock('', 'https://cdn.elifesciences.org/images/news/manuscripts-figure1.png',
+                'Manuscripts at a glance'),
             new Section(
                 'Manuscripts is an opinionated writing tool',
                 new Paragraph('We are big believers in building approachable, easy-to-use tools because we think that researchers really value their time and are a conservative audience in picking up new workflows and tools. I think this is often under-appreciated in the publishing world.'),
-                new ImageBlock(
-                    new Image('https://cdn.elifesciences.org/images/news/manuscripts_fig2.png', '', 'image/png',
-                        '8:5', 2560),
-                    'Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project.'
-                ),
+                new ImageBlock('', 'https://cdn.elifesciences.org/images/news/manuscripts_fig2.png',
+                    'Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project.'),
                 new Paragraph('Compared to your typical word processor, Manuscripts shuns half a dozen ribbons and most character styling options available. This is because we think that good writing is all about consistency. A visually consistent, and dare I say beautiful, representation of your writing on the screen really helps you to maintain focus on the consistency of your writing during the entire process.'),
                 new Paragraph('This is not to say Manuscripts is feature limited in terms of styling the document. It’s actually really powerful. However, a lot of this power is hidden away in the paragraph styling that is automatically applied to different parts of the document. For instance, headings are never pieces of bold text in Manuscripts, and you cannot space items out with tabs or extra linefeeds. We feel these kinds of formatting tricks are counterproductive for the author and also the publisher that receives the document, so we don’t provide them. Instead, we automatically prepare the visual representation of a document as much as possible. This is a task that computers are good at, just as long as the document is structured well, and it lets the author focus on formulating an argument – which is what they are good at.'),
                 new Paragraph('To see how easy Manuscripts is to get started with, have a look at our intro video:'),
@@ -74,41 +83,41 @@ $experiments = [
         2,
         'Toward publishing reproducible computation with Binder',
         DateTimeImmutable::createFromFormat('Y-m-d H:i:s', '2016-05-13 16:25:00'),
-        new Image('https://cdn.elifesciences.org/images/labs/binder-post-juptyer-notebook.png', '', 'image/png',
-            '1122:817', 1122),
+        [
+            'alt' => '',
+            'sizes' => [
+                '2:1' => [
+                    '900' => 'https://placehold.it/900x450',
+                    '1800' => 'https://placehold.it/1800x900'
+                ],
+                '16:9' => [
+                    '250' => 'https://placehold.it/250x141',
+                    '500' => 'https://placehold.it/500x281'
+                ],
+                '1:1' => [
+                    '70' => 'https://placehold.it/70x70',
+                    '140' => 'https://placehold.it/140x140'
+                ],
+            ],
+        ],
         [
             new Paragraph('Modern science depends on data analysis. From neuroscience to genomics, to cancer research, scientific conclusions are often several stages removed from raw data, and reflect extensive data processing and statistical analyses.'),
             new Paragraph('Yet in the traditional academic paper, we can only show a small sample of raw data, and report just a few of many possible summary statistics. We have to describe our analyses in compact paragraphs of plain text sprinkled with equations — an opaque starting point when trying to reproduce an analysis. Data and code, if shared at all, are appended to the paper as an afterthought, without ensuring that they are easy to reuse.'),
             new Paragraph('Why does this matter? Scientific progress depends on replicating and validating the work of others. And replicating what someone else has done is often the starting point for scientific collaboration.'),
             new Paragraph('Several open-source tools can be used to help address the challenges of sharing and reproducing scientific analyses. The <a href="http://jupyter.org/">Jupyter notebook</a> is a coding environment that runs in a web browser and lets users create computational “narrative documents” that combine code, data, figures, and text in a single interactive, executable document. These notebooks are easy to write, support many programming languages, and are already being used in science, journalism, and education.'),
-            new ImageBlock(
-                new Image('https://cdn.elifesciences.org/images/labs/binder-post-juptyer-notebook.png', '', 'image/png',
-                    '1122:817', 1122)
-            ),
+            new ImageBlock('', 'https://cdn.elifesciences.org/images/labs/binder-post-juptyer-notebook.png'),
             new Paragraph('GitHub is a website for collaborative code development, built on top of the version-control system git. GitHub makes it easy to track changes to code over time, especially when multiple contributors are working on the same project. Putting data, code, and notebooks into a GitHub “repository” is a terrific way to share and organize scientific analyses.'),
-            new ImageBlock(
-                new Image('https://cdn.elifesciences.org/images/labs/binder-post-github-repository.png', '',
-                    'image/png',
-                    '1122:817', 1122)
-            ),
+            new ImageBlock('', 'https://cdn.elifesciences.org/images/labs/binder-post-github-repository.png'),
             new Paragraph('But just providing our code, data, and notebooks alongside a paper isn’t enough — what ran on my machine might not run on yours. We can share our computer configurations, but setting up a new machine the exact same way can be challenging and unreliable.'),
             new Paragraph('We designed Binder to make it as easy as possible to go straight from a paper to an interactive version of an analysis.'),
             new Section(
                 'How it works',
                 new Paragraph('To use Binder, you only have to put the code, data, and Jupyter notebooks that you are already using for analysis on your machine into a GitHub repository, and provide Binder with the link.'),
-                new ImageBlock(
-                    new Image('https://cdn.elifesciences.org/images/labs/binder-post-binder-homepage.png', '',
-                        'image/png',
-                        '1122:817', 1122)
-                ),
+                new ImageBlock('', 'https://cdn.elifesciences.org/images/labs/binder-post-binder-homepage.png'),
                 new Paragraph('Binder will then build an executable environment that contains all the necessary dependencies to run your code, and can be launched by clicking a link in your web browser. Now, with one click, anyone can immediately inspect the raw data, recompute a statistic, regenerate a figure, and perform arbitrary interactive analyses.'),
                 new Paragraph('To make this work, Binder uses existing, robust tools wherever possible. Along with Jupyter and GitHub, Binder leverages two open-source projects under the hood to manage computational environments — Docker builds the environments from a project’s dependencies, and Kubernetes schedules resources for these environments across a cloud compute cluster.'),
                 new Paragraph('A key use case for Binder is sharing analyses alongside traditional journal publications, and a few great examples of that already exist. A recent paper on neural coding in the somatosensory cortex by Sofroniew et al. in eLife used Binder to share data and analyses of neural recordings. Another example is a recent paper in Nature by Li et al. on robustness to perturbation in neural circuits, which used Binder to share simulation results from a computational model. Notebooks demonstrating the discovery of gravitational waves from the LIGO group were turned into a Binder, which has been by far our most popular example.'),
-                new ImageBlock(
-                    new Image('https://cdn.elifesciences.org/images/labs/binder-post-ligo-example.png', '',
-                        'image/png',
-                        '1122:817', 1122)
-                ),
+                new ImageBlock('', 'https://cdn.elifesciences.org/images/labs/binder-post-ligo-example.png'),
                 new Paragraph('We’ve also seen Binder used in domains we didn’t expect. Outside of science publications, Binder has been used to make analyses for news stories more reproducible, and even to make an entire book on data science executable. It’s also become a popular way to run courses or tutorial sessions, because students can launch tutorials straight from their web browsers, without wasting precious time configuring dependencies. Physicists at CERN use it to showcase demos of their ROOT analysis framework.')
             ),
             new Section(
@@ -127,13 +136,26 @@ $experiments = [
         3,
         'Experiment 3',
         DateTimeImmutable::createFromFormat('Y-m-d H:i:s', '2016-04-29 17:44:12'),
-        new Image('https://placekitten.com/300/300', '', 'image/jpeg', '1:1', 300),
+        [
+            'alt' => '',
+            'sizes' => [
+                '2:1' => [
+                    '900' => 'https://placehold.it/900x450',
+                    '1800' => 'https://placehold.it/1800x900'
+                ],
+                '16:9' => [
+                    '250' => 'https://placehold.it/250x141',
+                    '500' => 'https://placehold.it/500x281'
+                ],
+                '1:1' => [
+                    '70' => 'https://placehold.it/70x70',
+                    '140' => 'https://placehold.it/140x140'
+                ],
+            ],
+        ],
         [
             new Paragraph('Paragraph 1'),
-            new ImageBlock(
-                new Image('https://placekitten.com/600/300', '', 'image/jpeg', '2:1', 600),
-                'Kitteh!'
-            ),
+            new ImageBlock('', 'https://placekitten.com/600/300', 'Kitteh!'),
             new Paragraph('Paragraph 2'),
         ],
         null,
@@ -143,13 +165,26 @@ $experiments = [
         4,
         'Experiment 4',
         DateTimeImmutable::createFromFormat('Y-m-d H:i:s', '2016-04-29 17:44:12'),
-        new Image('https://placekitten.com/300/300', '', 'image/jpeg', '1:1', 300),
+        [
+            'alt' => '',
+            'sizes' => [
+                '2:1' => [
+                    '900' => 'https://placehold.it/900x450',
+                    '1800' => 'https://placehold.it/1800x900'
+                ],
+                '16:9' => [
+                    '250' => 'https://placehold.it/250x141',
+                    '500' => 'https://placehold.it/500x281'
+                ],
+                '1:1' => [
+                    '70' => 'https://placehold.it/70x70',
+                    '140' => 'https://placehold.it/140x140'
+                ],
+            ],
+        ],
         [
             new Paragraph('Paragraph 1'),
-            new ImageBlock(
-                new Image('https://placekitten.com/600/300', '', 'image/jpeg', '2:1', 600),
-                'Kitteh!'
-            ),
+            new ImageBlock('', 'https://placekitten.com/600/300', 'Kitteh!'),
             new Paragraph('Paragraph 2'),
         ],
         null,
@@ -159,13 +194,26 @@ $experiments = [
         5,
         'Experiment 5',
         DateTimeImmutable::createFromFormat('Y-m-d H:i:s', '2016-04-29 17:44:12'),
-        new Image('https://placekitten.com/300/300', '', 'image/jpeg', '1:1', 300),
+        [
+            'alt' => '',
+            'sizes' => [
+                '2:1' => [
+                    '900' => 'https://placehold.it/900x450',
+                    '1800' => 'https://placehold.it/1800x900'
+                ],
+                '16:9' => [
+                    '250' => 'https://placehold.it/250x141',
+                    '500' => 'https://placehold.it/500x281'
+                ],
+                '1:1' => [
+                    '70' => 'https://placehold.it/70x70',
+                    '140' => 'https://placehold.it/140x140'
+                ],
+            ],
+        ],
         [
             new Paragraph('Paragraph 1'),
-            new ImageBlock(
-                new Image('https://placekitten.com/600/300', '', 'image/jpeg', '2:1', 600),
-                'Kitteh!'
-            ),
+            new ImageBlock('', 'https://placekitten.com/600/300', 'Kitteh!'),
             new Paragraph('Paragraph 2'),
         ],
         null,
@@ -193,7 +241,7 @@ $app['negotiator'] = function () {
 
 $app->get('/labs-experiments', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.list+json; version=1'
+        'application/vnd.elife.labs-experiment-list+json; version=1'
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -215,6 +263,10 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
         'items' => [],
     ];
 
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $experiments = array_reverse($experiments);
+    }
+
     $experiments = array_slice($experiments, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($experiments) && $page > 1) {
@@ -222,12 +274,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     }
 
     foreach ($experiments as $i => $experiment) {
-        $content['items'][$i] = [
-            '$ref' => '/labs-experiments/' . $experiment->getNumber(),
-            'type' => 'labs-experiment',
-        ];
-
-        $content['items'][$i] += json_decode($app['serializer']->serialize($experiment, 'json',
+        $content['items'][$i] = json_decode($app['serializer']->serialize($experiment, 'json',
             ['version' => $version, 'partial' => true]), true);
     }
 

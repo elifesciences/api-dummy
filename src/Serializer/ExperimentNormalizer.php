@@ -21,18 +21,7 @@ final class ExperimentNormalizer implements NormalizerInterface
             'number' => $object->getNumber(),
             'title' => $object->getTitle(),
             'published' => $object->getPublished()->format(DATE_RFC3339),
-            'image' => [
-                'alt' => $object->getImage()->getAltText(),
-                'source' => [
-                    'ratio' => $object->getImage()->getRatio(),
-                    'types' => [
-                        $object->getImage()->getMediaType() => [
-                            $object->getImage()
-                                ->getWidth() => $object->getImage()->getUri(),
-                        ],
-                    ],
-                ],
-            ],
+            'image' => $object->getImage(),
         ];
 
         if (empty($context['partial'])) {
@@ -43,10 +32,6 @@ final class ExperimentNormalizer implements NormalizerInterface
 
         if (!empty($object->getImpactStatement())) {
             $return['impactStatement'] = $object->getImpactStatement();
-        }
-
-        if ($object->isHighlighted()) {
-            $return['isHighlighted'] = true;
         }
 
         return $return;
@@ -68,17 +53,8 @@ final class ExperimentNormalizer implements NormalizerInterface
             case Image::class:
                 return [
                     'type' => 'image',
-                    'image' => [
-                        $block->getImage()->getRatio() => [
-                            '0' => [
-                                $block->getImage()->getMediaType() => [
-                                    $block->getImage()
-                                        ->getWidth() => $block->getImage()
-                                        ->getUri(),
-                                ],
-                            ],
-                        ],
-                    ],
+                    'alt' => $block->getAlt(),
+                    'uri' => $block->getUri(),
                     'caption' => $block->getCaption(),
                 ];
             case Section::class:

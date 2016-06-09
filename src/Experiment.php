@@ -27,7 +27,7 @@ final class Experiment
         int $number,
         string $title,
         DateTimeImmutable $published,
-        Image $image,
+        array $image,
         array $content,
         string $impactStatement = null,
         bool $highlighted = false
@@ -61,7 +61,7 @@ final class Experiment
         return $this->published;
     }
 
-    public function getImage() : Image
+    public function getImage() : array
     {
         return $this->image;
     }

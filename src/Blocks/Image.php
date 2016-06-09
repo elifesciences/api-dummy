@@ -2,26 +2,39 @@
 
 namespace eLife\Labs\Blocks;
 
-use eLife\Labs\Image as ImageItem;
+use Assert\Assertion;
 
 final class Image extends Block
 {
-    private $image;
+    private $alt;
+
+    private $uri;
 
     private $caption;
 
-    public function __construct(ImageItem $image, string $caption = null)
+    public function __construct(string $alt, string $uri, string $caption = null)
     {
-        $this->image = $image;
-        $this->caption = (string) $caption;
+        Assertion::url($uri);
+
+        $this->alt = $alt;
+        $this->uri = $uri;
+        $this->caption = $caption;
     }
 
-    public function getImage() : ImageItem
+    public function getAlt() : string
     {
-        return $this->image;
+        return $this->alt;
     }
 
-    public function getCaption() : string
+    public function getUri() : string
+    {
+        return $this->uri;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getCaption()
     {
         return $this->caption;
     }
