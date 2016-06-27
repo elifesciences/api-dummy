@@ -1,10 +1,10 @@
 {
-    "name": "elife/labs",
+    "name": "elife/dummy-api",
     "type": "project",
     "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "eLife\\Labs\\": "./src"
+            "eLife\\Api\\": "./src"
         }
     },
     "require": {

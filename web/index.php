@@ -1,15 +1,14 @@
 <?php
 
 use Crell\ApiProblem\ApiProblem;
-use eLife\Labs\Blocks\Image as ImageBlock;
-use eLife\Labs\Blocks\Paragraph;
-use eLife\Labs\Blocks\Section;
-use eLife\Labs\Blocks\YouTube;
-use eLife\Labs\Experiment;
-use eLife\Labs\ExperimentNotFound;
-use eLife\Labs\Image;
-use eLife\Labs\InMemoryExperiments;
-use eLife\Labs\Serializer\ExperimentNormalizer;
+use eLife\Api\Blocks\Image as ImageBlock;
+use eLife\Api\Blocks\Paragraph;
+use eLife\Api\Blocks\Section;
+use eLife\Api\Blocks\YouTube;
+use eLife\Api\Experiment;
+use eLife\Api\ExperimentNotFound;
+use eLife\Api\InMemoryExperiments;
+use eLife\Api\Serializer\ExperimentNormalizer;
 use Negotiation\Accept;
 use Negotiation\Negotiator;
 use Silex\Application;

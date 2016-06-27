@@ -1,6 +1,6 @@
 <?php
 
-namespace eLife\Labs\Blocks;
+namespace eLife\Api\Blocks;
 
 abstract class Block
 {

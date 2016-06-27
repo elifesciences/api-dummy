@@ -1,13 +1,13 @@
 <?php
 
-namespace eLife\Labs\Serializer;
+namespace eLife\Api\Serializer;
 
-use eLife\Labs\Blocks\Block;
-use eLife\Labs\Blocks\Image;
-use eLife\Labs\Blocks\Paragraph;
-use eLife\Labs\Blocks\Section;
-use eLife\Labs\Blocks\YouTube;
-use eLife\Labs\Experiment;
+use eLife\Api\Blocks\Block;
+use eLife\Api\Blocks\Image;
+use eLife\Api\Blocks\Paragraph;
+use eLife\Api\Blocks\Section;
+use eLife\Api\Blocks\YouTube;
+use eLife\Api\Experiment;
 use RuntimeException;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 

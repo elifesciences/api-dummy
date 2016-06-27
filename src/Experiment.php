@@ -1,11 +1,11 @@
 <?php
 
-namespace eLife\Labs;
+namespace eLife\Api;
 
 use Assert\Assertion;
 use DateTimeImmutable;
 use DateTimeZone;
-use eLife\Labs\Blocks\Block;
+use eLife\Api\Blocks\Block;
 
 final class Experiment
 {

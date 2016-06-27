@@ -1,4 +1,4 @@
-labs-composer:
+api-composer:
     composer.installed:
         - user: vagrant
         - name: /vagrant

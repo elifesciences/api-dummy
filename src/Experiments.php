@@ -1,6 +1,6 @@
 <?php
 
-namespace eLife\Labs;
+namespace eLife\Api;
 
 interface Experiments
 {
