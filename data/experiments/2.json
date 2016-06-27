@@ -1,0 +1,129 @@
+{
+    "number": 2,
+    "title": "Toward publishing reproducible computation with Binder",
+    "published": "2016-05-13T16:25:00+00:00",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https:\/\/placehold.it\/900x450",
+                "1800": "https:\/\/placehold.it\/1800x900"
+            },
+            "16:9": {
+                "250": "https:\/\/placehold.it\/250x141",
+                "500": "https:\/\/placehold.it\/500x281"
+            },
+            "1:1": {
+                "70": "https:\/\/placehold.it\/70x70",
+                "140": "https:\/\/placehold.it\/140x140"
+            }
+        }
+    },
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Modern science depends on data analysis. From neuroscience to genomics, to cancer research, scientific conclusions are often several stages removed from raw data, and reflect extensive data processing and statistical analyses."
+        },
+        {
+            "type": "paragraph",
+            "text": "Yet in the traditional academic paper, we can only show a small sample of raw data, and report just a few of many possible summary statistics. We have to describe our analyses in compact paragraphs of plain text sprinkled with equations \u2014 an opaque starting point when trying to reproduce an analysis. Data and code, if shared at all, are appended to the paper as an afterthought, without ensuring that they are easy to reuse."
+        },
+        {
+            "type": "paragraph",
+            "text": "Why does this matter? Scientific progress depends on replicating and validating the work of others. And replicating what someone else has done is often the starting point for scientific collaboration."
+        },
+        {
+            "type": "paragraph",
+            "text": "Several open-source tools can be used to help address the challenges of sharing and reproducing scientific analyses. The <a href=\"http:\/\/jupyter.org\/\">Jupyter notebook<\/a> is a coding environment that runs in a web browser and lets users create computational \u201cnarrative documents\u201d that combine code, data, figures, and text in a single interactive, executable document. These notebooks are easy to write, support many programming languages, and are already being used in science, journalism, and education."
+        },
+        {
+            "type": "image",
+            "alt": "",
+            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-juptyer-notebook.png",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "text": "GitHub is a website for collaborative code development, built on top of the version-control system git. GitHub makes it easy to track changes to code over time, especially when multiple contributors are working on the same project. Putting data, code, and notebooks into a GitHub \u201crepository\u201d is a terrific way to share and organize scientific analyses."
+        },
+        {
+            "type": "image",
+            "alt": "",
+            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-github-repository.png",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "text": "But just providing our code, data, and notebooks alongside a paper isn\u2019t enough \u2014 what ran on my machine might not run on yours. We can share our computer configurations, but setting up a new machine the exact same way can be challenging and unreliable."
+        },
+        {
+            "type": "paragraph",
+            "text": "We designed Binder to make it as easy as possible to go straight from a paper to an interactive version of an analysis."
+        },
+        {
+            "type": "section",
+            "title": "How it works",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "To use Binder, you only have to put the code, data, and Jupyter notebooks that you are already using for analysis on your machine into a GitHub repository, and provide Binder with the link."
+                },
+                {
+                    "type": "image",
+                    "alt": "",
+                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-binder-homepage.png",
+                    "caption": null
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Binder will then build an executable environment that contains all the necessary dependencies to run your code, and can be launched by clicking a link in your web browser. Now, with one click, anyone can immediately inspect the raw data, recompute a statistic, regenerate a figure, and perform arbitrary interactive analyses."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "To make this work, Binder uses existing, robust tools wherever possible. Along with Jupyter and GitHub, Binder leverages two open-source projects under the hood to manage computational environments \u2014 Docker builds the environments from a project\u2019s dependencies, and Kubernetes schedules resources for these environments across a cloud compute cluster."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "A key use case for Binder is sharing analyses alongside traditional journal publications, and a few great examples of that already exist. A recent paper on neural coding in the somatosensory cortex by Sofroniew et al. in eLife used Binder to share data and analyses of neural recordings. Another example is a recent paper in Nature by Li et al. on robustness to perturbation in neural circuits, which used Binder to share simulation results from a computational model. Notebooks demonstrating the discovery of gravitational waves from the LIGO group were turned into a Binder, which has been by far our most popular example."
+                },
+                {
+                    "type": "image",
+                    "alt": "",
+                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-ligo-example.png",
+                    "caption": null
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We\u2019ve also seen Binder used in domains we didn\u2019t expect. Outside of science publications, Binder has been used to make analyses for news stories more reproducible, and even to make an entire book on data science executable. It\u2019s also become a popular way to run courses or tutorial sessions, because students can launch tutorials straight from their web browsers, without wasting precious time configuring dependencies. Physicists at CERN use it to showcase demos of their ROOT analysis framework."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Next steps",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "With more than 1200 reproducible environments already built by its users, Binder has proven useful and we\u2019re excited by its potential \u2014 but much work remains, both on Binder itself and the underlying technologies, especially for making it better suited to scientific publishing."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Here are a couple of directions we\u2019re excited about:"
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We currently maintain a public Binder deployment, hosted by our lab at HHMI Janelia Research Campus and running on Google Compute Engine, designed for open source and open science. But we\u2019ve recently made it easy for others to deploy custom versions of Binder on their own compute infrastructure. We hope this can provide a way for publishers to deploy and host Binders with guaranteed availability for their readers."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We currently recommend users put data in their GitHub repositories, but git was designed to keep track of code, not data, which often consists of heterogenous files in a variety of formats, rather than plain text. We are collaborating with the team behind a new peer-to-peer data sharing and versioning project called Dat, and hope to integrate it with Binder."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "We want to work on new ways to integrate static papers and interactive notebooks. Even with Binder, these remain separate and very different kinds of documents. Ideally, we would have unified interfaces that give readers the option to engage with code and figures at whatever level of detail they desire."
+                }
+            ]
+        }
+    ],
+    "impactStatement": "eLife is looking to innovate in all aspects of scientific publishing to support excellence in science and we\u2019re pleased to bring attention to a new and exciting open-source project called Binder, created by scientists at HHMI\u2019s Janelia Research Campus."
+}
