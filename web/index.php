@@ -224,11 +224,11 @@ $app = new Application();
 
 $app->register(new SerializerServiceProvider());
 
-$app['serializer.normalizers'] = $app->share($app->extend('serializer.normalizers',
+$app['serializer.normalizers'] = $app->extend('serializer.normalizers',
     function () {
         return [new ExperimentNormalizer()];
     }
-));
+);
 
 $app['experiments'] = function () use ($app, $experiments) {
     return new InMemoryExperiments($experiments);
@@ -320,7 +320,7 @@ $app->get('/labs-experiments/{number}',
         );
     })->assert('number', '[1-9][0-9]*');
 
-$app->error(function (Exception $e) {
+$app->error(function (Throwable $e) {
     if ($e instanceof HttpExceptionInterface) {
         $status = $e->getStatusCode();
         $message = $e->getMessage();
