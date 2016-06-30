@@ -1,21 +1,14 @@
 {
     "name": "elife/dummy-api",
     "type": "project",
-    "license": "proprietary",
-    "autoload": {
-        "psr-4": {
-            "eLife\\Api\\": "./src"
-        }
-    },
+    "license": "GPL-3.0+",
     "require": {
         "php": "^7.0",
-        "beberlei/assert": "^2.5",
         "crell/api-problem": "^1.7",
         "silex/silex": "^2.0",
         "symfony/finder": "^3.1",
         "symfony/http-foundation": "^3.0",
         "symfony/http-kernel": "^3.0",
-        "symfony/serializer": "^3.0",
         "willdurand/negotiation": "^2.0"
     }
 }

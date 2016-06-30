@@ -1,42 +1,31 @@
 <?php
 
 use Crell\ApiProblem\ApiProblem;
-use eLife\Api\Experiment;
-use eLife\Api\ExperimentNotFound;
-use eLife\Api\InMemoryExperiments;
-use eLife\Api\Serializer\ExperimentNormalizer;
 use Negotiation\Accept;
 use Negotiation\Negotiator;
 use Silex\Application;
-use Silex\Provider\SerializerServiceProvider;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
-use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
-$app->register(new SerializerServiceProvider());
-
-$app['serializer.normalizers'] = $app->extend('serializer.normalizers',
-    function () {
-        return [new ExperimentNormalizer()];
-    }
-);
-
 $app['experiments'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/experiments');
 
     $experiments = [];
     foreach ($finder as $file) {
-        $experiments[] = $app['serializer']->deserialize($file->getContents(), Experiment::class, 'json');
+        $json = json_decode($file->getContents(), true);
+        $experiments[(int) $json['number']] = $json;
     }
 
-    return new InMemoryExperiments($experiments);
+    ksort($experiments);
+
+    return $experiments;
 };
 
 $app['negotiator'] = function () {
@@ -57,7 +46,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
 
-    $experiments = $app['experiments']->all();
+    $experiments = $app['experiments'];
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
@@ -67,7 +56,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
         'items' => [],
     ];
 
-    if ('asc' === $request->query->get('order', 'desc')) {
+    if ('desc' === $request->query->get('order', 'desc')) {
         $experiments = array_reverse($experiments);
     }
 
@@ -78,8 +67,9 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     }
 
     foreach ($experiments as $i => $experiment) {
-        $content['items'][$i] = json_decode($app['serializer']->serialize($experiment, 'json',
-            ['version' => $version, 'partial' => true]), true);
+        unset($experiment['content']);
+
+        $content['items'][$i] = $experiment;
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
@@ -97,11 +87,11 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
 
 $app->get('/labs-experiments/{number}',
     function (Request $request, int $number) use ($app) {
-        try {
-            $experiment = $app['experiments']->get($number);
-        } catch (ExperimentNotFound $e) {
-            throw new NotFoundHttpException($e->getMessage(), $e);
+        if (false === isset($app['experiments'][$number])) {
+            throw new NotFoundHttpException('Not found');
         };
+
+        $experiment = $app['experiments'][$number];
 
         $accepts = [
             'application/vnd.elife.labs-experiment+json; version=1'
@@ -116,10 +106,8 @@ $app->get('/labs-experiments/{number}',
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
 
-        $experiment = $app['serializer']->serialize($experiment, 'json', ['version' => $version]);
-
         return new Response(
-            json_encode(json_decode($experiment), JSON_PRETTY_PRINT),
+            json_encode($experiment, JSON_PRETTY_PRINT),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
