@@ -1,0 +1,22 @@
+{
+    "id": "cancer-biology",
+    "name": "Cancer biology",
+    "impactStatement": "eLife publishes research into cancer spanning from oncogenes and tumor suppressors to metastasis and anticancer treatments. Decisions are made by journal editors who are active researchers in cancer biology.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://placehold.it/900x450",
+                "1800": "https://placehold.it/1800x900"
+            },
+            "16:9": {
+                "250": "https://placehold.it/250x141",
+                "500": "https://placehold.it/500x281"
+            },
+            "1:1": {
+                "70": "https://placehold.it/70x70",
+                "140": "https://placehold.it/140x140"
+            }
+        }
+    }
+}

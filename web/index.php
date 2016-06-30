@@ -28,6 +28,20 @@ $app['experiments'] = function () use ($app) {
     return $experiments;
 };
 
+$app['subjects'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/subjects');
+
+    $subjects = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $subjects[$json['id']] = $json;
+    }
+
+    ksort($subjects);
+
+    return $subjects;
+};
+
 $app['negotiator'] = function () {
     return new Negotiator();
 };
@@ -112,6 +126,82 @@ $app->get('/labs-experiments/{number}',
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
     })->assert('number', '[1-9][0-9]*');
+
+$app->get('/subjects', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.subject-list+json; version=1'
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $subjects = $app['subjects'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($subjects),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $subjects = array_reverse($subjects);
+    }
+
+    $subjects = array_slice($subjects, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($subjects) && $page > 1) {
+        throw new NotFoundHttpException('No page ' . $page);
+    }
+
+    foreach ($subjects as $i => $subject) {
+        unset($subject['content']);
+
+        $content['items'][$i] = $subject;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
+    if (false === isset($app['subjects'][$id])) {
+        throw new NotFoundHttpException('Not found');
+    };
+
+    $subject = $app['subjects'][$id];
+
+    $accepts = [
+        'application/vnd.elife.subject+json; version=1'
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    return new Response(
+        json_encode($subject, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+    );
+});
 
 $app->error(function (Throwable $e) {
     if ($e instanceof HttpExceptionInterface) {
