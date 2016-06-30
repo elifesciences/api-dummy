@@ -83,7 +83,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     foreach ($experiments as $i => $experiment) {
         unset($experiment['content']);
 
-        $content['items'][$i] = $experiment;
+        $content['items'][] = $experiment;
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
@@ -164,7 +164,7 @@ $app->get('/subjects', function (Request $request) use ($app) {
     foreach ($subjects as $i => $subject) {
         unset($subject['content']);
 
-        $content['items'][$i] = $subject;
+        $content['items'][] = $subject;
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
