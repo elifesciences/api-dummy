@@ -1,0 +1,23 @@
+{
+    "uri": "https://medium.com/life-on-earth/hardened-hearts-reveal-organ-evolution-8eb882a8bf18",
+    "title": "Hardened hearts reveal organ evolution",
+    "published": "2016-07-08T10:48:20+00:00",
+    "impactStatement": "Fossilized hearts have been found in specimens of an extinct fish in Brazil.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://cdn-images-1.medium.com/fit/t/900/450/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg",
+                "1800": "https://cdn-images-1.medium.com/fit/t/1800/900/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg"
+            },
+            "16:9": {
+                "250": "https://cdn-images-1.medium.com/fit/t/250/141/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg",
+                "500": "https://cdn-images-1.medium.com/fit/t/500/281/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg"
+            },
+            "1:1": {
+                "70": "https://cdn-images-1.medium.com/fit/t/70/70/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg",
+                "140": "https://cdn-images-1.medium.com/fit/t/140/140/1*eDBmGJ3a3IkqSp6HhAFqPQ.jpeg"
+            }
+        }
+    }
+}

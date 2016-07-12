@@ -1,0 +1,23 @@
+{
+    "uri": "https://medium.com/lifes-building-blocks/how-do-bacteria-know-when-to-attack-d8fe7a32514f",
+    "title": "How do bacteria know when to attack?",
+    "published": "2016-07-06T10:56:01+00:00",
+    "impactStatement": "Certain bacteria that cause food poisoning rely on two proteins to sense bile salts the small intestine of their host.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://cdn-images-1.medium.com/fit/t/900/450/1*2YPqnBTvdQSPhSmuhF3JOg.png",
+                "1800": "https://cdn-images-1.medium.com/fit/t/1800/900/1*2YPqnBTvdQSPhSmuhF3JOg.png"
+            },
+            "16:9": {
+                "250": "https://cdn-images-1.medium.com/fit/t/250/141/1*2YPqnBTvdQSPhSmuhF3JOg.png",
+                "500": "https://cdn-images-1.medium.com/fit/t/500/281/1*2YPqnBTvdQSPhSmuhF3JOg.png"
+            },
+            "1:1": {
+                "70": "https://cdn-images-1.medium.com/fit/t/70/70/1*2YPqnBTvdQSPhSmuhF3JOg.png",
+                "140": "https://cdn-images-1.medium.com/fit/t/140/140/1*2YPqnBTvdQSPhSmuhF3JOg.png"
+            }
+        }
+    }
+}
