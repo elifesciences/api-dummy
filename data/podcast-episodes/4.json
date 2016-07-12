@@ -1,0 +1,24 @@
+{
+    "number": 4,
+    "title": "September 2013",
+    "impactStatement": "In this episode of the eLife podcast we discuss how flatworms can grow new heads and tails, how photosynthesis has evolved over time, social interactions between mice, the properties of undead cells, and interactions between steroids and genes.",
+    "published": "2013-08-21T12:54:08+00:00",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https:\/\/placehold.it\/900x450",
+                "1800": "https:\/\/placehold.it\/1800x900"
+            },
+            "16:9": {
+                "250": "https:\/\/placehold.it\/250x141",
+                "500": "https:\/\/placehold.it\/500x281"
+            },
+            "1:1": {
+                "70": "https:\/\/placehold.it\/70x70",
+                "140": "https:\/\/placehold.it\/140x140"
+            }
+        }
+    },
+    "mp3": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+}

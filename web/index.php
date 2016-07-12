@@ -28,6 +28,20 @@ $app['experiments'] = function () use ($app) {
     return $experiments;
 };
 
+$app['podcast-episodes'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/podcast-episodes');
+
+    $episodes = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $episodes[(int) $json['number']] = $json;
+    }
+
+    ksort($episodes);
+
+    return $episodes;
+};
+
 $app['subjects'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/subjects');
 
@@ -122,6 +136,91 @@ $app->get('/labs-experiments/{number}',
 
         return new Response(
             json_encode($experiment, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    })->assert('number', '[1-9][0-9]*');
+
+$app->get('/podcast-episodes', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.podcast-episode-list+json; version=1'
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $episodes = $app['podcast-episodes'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($subjects)) {
+        $episodes = array_filter($episodes, function ($episode) use ($subjects) {
+            $episodeSubjects = $episode['subjects'] ?? [];
+
+            return count(array_intersect($subjects, $episodeSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($episodes),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $episodes = array_reverse($episodes);
+    }
+
+    $episodes = array_slice($episodes, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($episodes) && $page > 1) {
+        throw new NotFoundHttpException('No page ' . $page);
+    }
+
+    foreach ($episodes as $i => $episode) {
+        $content['items'][] = $episode;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/podcast-episodes/{number}',
+    function (Request $request, int $number) use ($app) {
+        if (false === isset($app['podcast-episodes'][$number])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $episode = $app['podcast-episodes'][$number];
+
+        $accepts = [
+            'application/vnd.elife.podcast-episode+json; version=1'
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($episode, JSON_PRETTY_PRINT),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
