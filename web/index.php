@@ -28,6 +28,23 @@ $app['experiments'] = function () use ($app) {
     return $experiments;
 };
 
+$app['medium-articles'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/medium-articles');
+
+    $articles = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $articles[] = $json;
+    }
+
+    usort($articles, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $articles;
+};
+
 $app['podcast-episodes'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/podcast-episodes');
 
@@ -140,6 +157,35 @@ $app->get('/labs-experiments/{number}',
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
     })->assert('number', '[1-9][0-9]*');
+
+$app->get('/medium-articles', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.medium-article-list+json; version=1'
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $articles = $app['medium-articles'];
+
+    $content = [
+        'items' => array_slice($articles, 0, 10),
+    ];
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
 
 $app->get('/podcast-episodes', function (Request $request) use ($app) {
     $accepts = [

@@ -1,0 +1,23 @@
+{
+    "uri": "https://medium.com/brains-and-behaviour/read-my-lips-ed85579bd37c",
+    "title": "Read my lips",
+    "published": "2016-07-01T11:26:01+00:00",
+    "impactStatement": "The part of the brain responsible for lip movements also plays an important role in understanding speech.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://placehold.it/900x450",
+                "1800": "https://placehold.it/1800x900"
+            },
+            "16:9": {
+                "250": "https://placehold.it/250x141",
+                "500": "https://placehold.it/500x281"
+            },
+            "1:1": {
+                "70": "https://placehold.it/70x70",
+                "140": "https://placehold.it/140x140"
+            }
+        }
+    }
+}
