@@ -13,7 +13,7 @@ trait SilexTestCase
      */
     final public function setUpApp()
     {
-        $this->app = require __DIR__ . '/../src/bootstrap.php';
+        $this->app = require __DIR__.'/../src/bootstrap.php';
     }
 
     final protected function getApp() : Application

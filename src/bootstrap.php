@@ -10,12 +10,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
 
 $app['blog-articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/blog-articles');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/blog-articles');
 
     $articles = [];
     foreach ($finder as $file) {
@@ -32,7 +32,7 @@ $app['blog-articles'] = function () use ($app) {
 };
 
 $app['experiments'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/experiments');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments');
 
     $experiments = [];
     foreach ($finder as $file) {
@@ -46,7 +46,7 @@ $app['experiments'] = function () use ($app) {
 };
 
 $app['medium-articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/medium-articles');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/medium-articles');
 
     $articles = [];
     foreach ($finder as $file) {
@@ -63,7 +63,7 @@ $app['medium-articles'] = function () use ($app) {
 };
 
 $app['podcast-episodes'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/podcast-episodes');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/podcast-episodes');
 
     $episodes = [];
     foreach ($finder as $file) {
@@ -77,7 +77,7 @@ $app['podcast-episodes'] = function () use ($app) {
 };
 
 $app['subjects'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/subjects');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects');
 
     $subjects = [];
     foreach ($finder as $file) {
@@ -96,7 +96,7 @@ $app['negotiator'] = function () {
 
 $app->get('/blog-articles', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.blog-article-list+json; version=1'
+        'application/vnd.elife.blog-article-list+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -135,7 +135,7 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
     $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($articles) && $page > 1) {
-        throw new NotFoundHttpException('No page ' . $page);
+        throw new NotFoundHttpException('No page '.$page);
     }
 
     foreach ($articles as $i => $article) {
@@ -160,7 +160,7 @@ $app->get('/blog-articles/{id}',
         $article = $app['blog-articles'][$id];
 
         $accepts = [
-            'application/vnd.elife.blog-article+json; version=1'
+            'application/vnd.elife.blog-article+json; version=1',
         ];
 
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -181,7 +181,7 @@ $app->get('/blog-articles/{id}',
 
 $app->get('/labs-experiments', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.labs-experiment-list+json; version=1'
+        'application/vnd.elife.labs-experiment-list+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -210,7 +210,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     $experiments = array_slice($experiments, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($experiments) && $page > 1) {
-        throw new NotFoundHttpException('No page ' . $page);
+        throw new NotFoundHttpException('No page '.$page);
     }
 
     foreach ($experiments as $i => $experiment) {
@@ -241,7 +241,7 @@ $app->get('/labs-experiments/{number}',
         $experiment = $app['experiments'][$number];
 
         $accepts = [
-            'application/vnd.elife.labs-experiment+json; version=1'
+            'application/vnd.elife.labs-experiment+json; version=1',
         ];
 
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -262,7 +262,7 @@ $app->get('/labs-experiments/{number}',
 
 $app->get('/medium-articles', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.medium-article-list+json; version=1'
+        'application/vnd.elife.medium-article-list+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -291,7 +291,7 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
 
 $app->get('/podcast-episodes', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.podcast-episode-list+json; version=1'
+        'application/vnd.elife.podcast-episode-list+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -330,7 +330,7 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
     $episodes = array_slice($episodes, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($episodes) && $page > 1) {
-        throw new NotFoundHttpException('No page ' . $page);
+        throw new NotFoundHttpException('No page '.$page);
     }
 
     foreach ($episodes as $i => $episode) {
@@ -355,7 +355,7 @@ $app->get('/podcast-episodes/{number}',
         $episode = $app['podcast-episodes'][$number];
 
         $accepts = [
-            'application/vnd.elife.podcast-episode+json; version=1'
+            'application/vnd.elife.podcast-episode+json; version=1',
         ];
 
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -376,7 +376,7 @@ $app->get('/podcast-episodes/{number}',
 
 $app->get('/subjects', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.subject-list+json; version=1'
+        'application/vnd.elife.subject-list+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -405,7 +405,7 @@ $app->get('/subjects', function (Request $request) use ($app) {
     $subjects = array_slice($subjects, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($subjects) && $page > 1) {
-        throw new NotFoundHttpException('No page ' . $page);
+        throw new NotFoundHttpException('No page '.$page);
     }
 
     foreach ($subjects as $i => $subject) {
@@ -431,7 +431,7 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
     $subject = $app['subjects'][$id];
 
     $accepts = [
-        'application/vnd.elife.subject+json; version=1'
+        'application/vnd.elife.subject+json; version=1',
     ];
 
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
@@ -460,7 +460,7 @@ $app->error(function (Throwable $e) {
         $message = 'Error';
         $extra = [
             'exception' => $e->getMessage(),
-            'stacktrace' => $e->getTraceAsString()
+            'stacktrace' => $e->getTraceAsString(),
         ];
     }
 
