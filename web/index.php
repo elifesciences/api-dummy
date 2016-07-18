@@ -14,6 +14,23 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = new Application();
 
+$app['blog-articles'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/blog-articles');
+
+    $articles = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $articles[$json['id']] = $json;
+    }
+
+    uasort($articles, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $articles;
+};
+
 $app['experiments'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/experiments');
 
@@ -76,6 +93,91 @@ $app['subjects'] = function () use ($app) {
 $app['negotiator'] = function () {
     return new Negotiator();
 };
+
+$app->get('/blog-articles', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.blog-article-list+json; version=1'
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $articles = $app['blog-articles'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($subjects)) {
+        $articles = array_filter($articles, function ($article) use ($subjects) {
+            $articleSubjects = $article['subjects'] ?? [];
+
+            return count(array_intersect($subjects, $articleSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($articles),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $articles = array_reverse($articles);
+    }
+
+    $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($articles) && $page > 1) {
+        throw new NotFoundHttpException('No page ' . $page);
+    }
+
+    foreach ($articles as $i => $article) {
+        $content['items'][] = $article;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/blog-articles/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['blog-articles'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $article = $app['blog-articles'][$id];
+
+        $accepts = [
+            'application/vnd.elife.blog-article+json; version=1'
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($article, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
 
 $app->get('/labs-experiments', function (Request $request) use ($app) {
     $accepts = [
