@@ -62,6 +62,22 @@ $app['medium-articles'] = function () use ($app) {
     return $articles;
 };
 
+$app['people'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/people');
+
+    $people = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $people[$json['id']] = $json;
+    }
+
+    uasort($people, function (array $a, array $b) {
+        return ($a['name']['surname'].', '.$a['name']['givenNames']) <=> ($b['name']['surname'].', '.$b['name']['givenNames']);
+    });
+
+    return $people;
+};
+
 $app['podcast-episodes'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/podcast-episodes');
 
@@ -288,6 +304,98 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
         $headers
     );
 });
+
+$app->get('/people', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.person-list+json; version=1',
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $people = $app['people'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $personType = $request->query->get('type', null);
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($personType)) {
+        $people = array_filter($people, function ($person) use ($personType) {
+            return $personType === $person['type'];
+        });
+    }
+
+    if (false === empty($subjects)) {
+        $people = array_filter($people, function ($person) use ($subjects) {
+            $personSubjects = $person['research']['expertises'] ?? [];
+
+            return count(array_intersect($subjects, $personSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($people),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $people = array_reverse($people);
+    }
+
+    $people = array_slice($people, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($people) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($people as $i => $person) {
+        $content['items'][] = $person;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/people/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['people'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $person = $app['people'][$id];
+
+        $accepts = [
+            'application/vnd.elife.person+json; version=1',
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($person, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
 
 $app->get('/podcast-episodes', function (Request $request) use ($app) {
     $accepts = [
