@@ -39,8 +39,7 @@
         {
             "type": "image",
             "alt": "",
-            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-juptyer-notebook.png",
-            "caption": null
+            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-juptyer-notebook.png"
         },
         {
             "type": "paragraph",
@@ -49,8 +48,7 @@
         {
             "type": "image",
             "alt": "",
-            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-github-repository.png",
-            "caption": null
+            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-github-repository.png"
         },
         {
             "type": "paragraph",
@@ -71,8 +69,7 @@
                 {
                     "type": "image",
                     "alt": "",
-                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-binder-homepage.png",
-                    "caption": null
+                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-binder-homepage.png"
                 },
                 {
                     "type": "paragraph",
@@ -89,8 +86,7 @@
                 {
                     "type": "image",
                     "alt": "",
-                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-ligo-example.png",
-                    "caption": null
+                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-ligo-example.png"
                 },
                 {
                     "type": "paragraph",
