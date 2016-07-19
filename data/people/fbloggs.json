@@ -1,0 +1,9 @@
+{
+    "id": "fbloggs",
+    "type": "leadership",
+    "name": {
+        "givenNames": "Fred",
+        "surname": "Bloggs",
+        "suffix": "III"
+    }
+}

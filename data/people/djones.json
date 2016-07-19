@@ -1,0 +1,13 @@
+{
+    "id": "djones",
+    "type": "reviewing-editor",
+    "name": {
+        "givenNames": "Dai",
+        "surname": "Jones"
+    },
+    "research": {
+        "expertises": [
+            "cell-biology"
+        ]
+    }
+}

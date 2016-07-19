@@ -1,0 +1,13 @@
+{
+    "id": "jqpublic",
+    "type": "reviewing-editor",
+    "name": {
+        "givenNames": "John Q.",
+        "surname": "Public"
+    },
+    "research": {
+        "expertises": [
+            "cell-biology"
+        ]
+    }
+}
