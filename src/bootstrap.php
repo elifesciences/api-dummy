@@ -482,6 +482,130 @@ $app->get('/podcast-episodes/{number}',
         );
     })->assert('number', '[1-9][0-9]*');
 
+$app->get('/search', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.search+json; version=1',
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $for = strtolower(trim($request->query->get('for')));
+
+    $sort = $request->query->get('sort', 'relevance');
+    $subjects = (array) $request->query->get('subject', []);
+    $types = (array) $request->query->get('type', []);
+
+    $results = [];
+
+    foreach ($app['blog-articles'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        unset($result['content']);
+        $result['type'] = 'blog-article';
+        $results[] = $result;
+    }
+
+    foreach ($app['experiments'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        unset($result['content']);
+        $result['type'] = 'labs-experiment';
+        $results[] = $result;
+    }
+
+    foreach ($app['podcast-episodes'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        $result['type'] = 'podcast-episode';
+        $results[] = $result;
+    }
+
+    if ('' !== $for) {
+        $results = array_filter($results, function ($result) use ($for) {
+            return false !== strpos($result['_search'], $for);
+        });
+    }
+
+    array_walk($results, function (&$result) {
+        unset($result['_search']);
+    });
+
+    $allSubjects = array_values($app['subjects']);
+
+    array_walk($allSubjects, function (&$subject) use ($results) {
+        $subject = [
+            'id' => $subject['id'],
+            'name' => $subject['name'],
+            'results' => count(array_filter($results, function ($result) use ($subject) {
+                return in_array($subject['id'], $result['subjects'] ?? []);
+            })),
+        ];
+    });
+
+    $allTypes = [];
+    foreach (['blog-article', 'labs-experiment', 'podcast-episode'] as $contentType) {
+        $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
+            return $contentType === $result['type'];
+        }));
+    }
+
+    if (false === empty($types)) {
+        $results = array_filter($results, function ($result) use ($types) {
+            return in_array($result['type'], $types);
+        });
+    }
+
+    if (false === empty($subjects)) {
+        $results = array_filter($results, function ($result) use ($subjects) {
+            return count(array_intersect($subjects, $result['subjects'] ?? []));
+        });
+    }
+
+    $content = [
+        'total' => count($results),
+        'items' => [],
+        'subjects' => $allSubjects,
+        'types' => $allTypes,
+    ];
+
+    if ('date' === $sort) {
+        usort($results, function (array $a, array $b) {
+            $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+            $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
+
+            return $bDate <=> $aDate;
+        });
+    } else {
+    }
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $results = array_reverse($results);
+    }
+
+    $results = array_slice($results, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($results) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content['items'] = $results;
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
 $app->get('/subjects', function (Request $request) use ($app) {
     $accepts = [
         'application/vnd.elife.subject-list+json; version=1',
