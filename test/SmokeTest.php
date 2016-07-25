@@ -35,6 +35,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             [Request::create('/people/jpublic'), 'application/vnd.elife.person+json; version=1'],
             [Request::create('/podcast-episodes'), 'application/vnd.elife.podcast-episode-list+json; version=1'],
             [Request::create('/podcast-episodes/1'), 'application/vnd.elife.podcast-episode+json; version=1'],
+            [Request::create('/search'), 'application/vnd.elife.search+json; version=1'],
+            [Request::create('/search?for=cell'), 'application/vnd.elife.search+json; version=1'],
+            [Request::create('/search?subject[]=cell-biology'), 'application/vnd.elife.search+json; version=1'],
             [Request::create('/subjects'), 'application/vnd.elife.subject-list+json; version=1'],
             [Request::create('/subjects/biochemistry'), 'application/vnd.elife.subject+json; version=1'],
         ];
