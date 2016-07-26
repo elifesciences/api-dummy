@@ -447,11 +447,11 @@ $app->get('/events', function (Request $request) use ($app) {
 
     if ('open' === $eventType) {
         $events = array_filter($events, function ($event) use ($now) {
-            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['starts']) <=> $now;
+            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['ends']) > $now;
         });
     } elseif ('closed' === $eventType) {
         $events = array_filter($events, function ($event) use ($now) {
-            return $now <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $event['starts']);
+            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['ends']) <= $now;
         });
     }
 
