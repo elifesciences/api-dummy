@@ -33,6 +33,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             [Request::create('/articles/14107/versions/1'), 'application/vnd.elife.article-poa+json; version=1'],
             [Request::create('/blog-articles'), 'application/vnd.elife.blog-article-list+json; version=1'],
             [Request::create('/blog-articles/339482'), 'application/vnd.elife.blog-article+json; version=1'],
+            [Request::create('/events'), 'application/vnd.elife.event-list+json; version=1'],
+            [Request::create('/events/1'), 'application/vnd.elife.event+json; version=1'],
             [Request::create('/labs-experiments'), 'application/vnd.elife.labs-experiment-list+json; version=1'],
             [Request::create('/labs-experiments/1'), 'application/vnd.elife.labs-experiment+json; version=1'],
             [Request::create('/medium-articles'), 'application/vnd.elife.medium-article-list+json; version=1'],

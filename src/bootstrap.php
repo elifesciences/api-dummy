@@ -75,6 +75,23 @@ $app['blog-articles'] = function () use ($app) {
     return $articles;
 };
 
+$app['events'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events');
+
+    $events = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $events[$json['id']] = $json;
+    }
+
+    uasort($events, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+            $b['starts']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
+    });
+
+    return $events;
+};
+
 $app['experiments'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments');
 
@@ -405,6 +422,95 @@ $app->get('/blog-articles/{id}',
         );
     });
 
+$app->get('/events', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.event-list+json; version=1',
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $events = $app['events'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $eventType = $request->query->get('type', 'all');
+
+    $now = new DateTimeImmutable();
+
+    if ('open' === $eventType) {
+        $events = array_filter($events, function ($event) use ($now) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['starts']) <=> $now;
+        });
+    } elseif ('closed' === $eventType) {
+        $events = array_filter($events, function ($event) use ($now) {
+            return $now <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $event['starts']);
+        });
+    }
+
+    $content = [
+        'total' => count($events),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $events = array_reverse($events);
+    }
+
+    $events = array_slice($events, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($events) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($events as $i => $event) {
+        $content['items'][] = $event;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/events/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['events'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $events = $app['events'][$id];
+
+        $accepts = [
+            'application/vnd.elife.event+json; version=1',
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($events, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
+
 $app->get('/labs-experiments', function (Request $request) use ($app) {
     $accepts = [
         'application/vnd.elife.labs-experiment-list+json; version=1',
@@ -484,7 +590,8 @@ $app->get('/labs-experiments/{number}',
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
-    })->assert('number', '[1-9][0-9]*');
+    })->assert('number', '[1-9][0-9]*')
+;
 
 $app->get('/medium-articles', function (Request $request) use ($app) {
     $accepts = [
@@ -690,7 +797,8 @@ $app->get('/podcast-episodes/{number}',
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
-    })->assert('number', '[1-9][0-9]*');
+    })->assert('number', '[1-9][0-9]*')
+;
 
 $app->get('/search', function (Request $request) use ($app) {
     $accepts = [
