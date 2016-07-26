@@ -847,6 +847,17 @@ $app->get('/search', function (Request $request) use ($app) {
         $results[] = $result;
     }
 
+    foreach ($app['events'] as $result) {
+        if (DateTimeImmutable::createFromFormat(DATE_ATOM, $result['ends']) <= new DateTimeImmutable()) {
+            continue;
+        }
+
+        $result['_search'] = strtolower(json_encode($result));
+        unset($result['content']);
+        $result['type'] = 'event';
+        $results[] = $result;
+    }
+
     foreach ($app['experiments'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
@@ -904,7 +915,7 @@ $app->get('/search', function (Request $request) use ($app) {
         }));
     }
 
-    foreach (['blog-article', 'labs-experiment', 'podcast-episode'] as $contentType) {
+    foreach (['blog-article', 'event', 'labs-experiment', 'podcast-episode'] as $contentType) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
             return $contentType === $result['type'];
         }));
@@ -931,8 +942,16 @@ $app->get('/search', function (Request $request) use ($app) {
 
     if ('date' === $sort) {
         usort($results, function (array $a, array $b) {
-            $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-            $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
+            if ('event' === $a['type']) {
+                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
+            } else {
+                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+            }
+            if ('event' === $b['type']) {
+                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['starts']);
+            } else {
+                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
+            }
 
             return $bDate <=> $aDate;
         });
