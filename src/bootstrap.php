@@ -471,6 +471,9 @@ $app->get('/events', function (Request $request) use ($app) {
     }
 
     foreach ($events as $i => $event) {
+        unset($event['content']);
+        unset($event['venue']);
+
         $content['items'][] = $event;
     }
 
@@ -854,6 +857,7 @@ $app->get('/search', function (Request $request) use ($app) {
 
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
+        unset($result['venue']);
         $result['type'] = 'event';
         $results[] = $result;
     }

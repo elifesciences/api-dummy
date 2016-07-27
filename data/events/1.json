@@ -5,6 +5,15 @@
     "starts": "2016-04-22T20:00:00+00:00",
     "ends": "2016-04-22T21:00:00+00:00",
     "timezone": "America/Los_Angeles",
+    "venue": {
+        "coordinates": {
+            "latitude": 47.6272994,
+            "longitude": -122.3324216
+        },
+        "name": "Fred Hutchinson Cancer Research Center",
+        "address": "1100 Fairview Ave N, Seattle, WA 98109, United States",
+        "inside": "D1-080/084 (Thomas Building)"
+    },
     "content": [
         {
             "type": "paragraph",
