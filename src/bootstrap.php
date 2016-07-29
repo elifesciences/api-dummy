@@ -1090,7 +1090,11 @@ $app->get('images/{type}/{file}/{extension}',
         if (false === $cache->has($cacheKey)) {
             $imagine = $app['imagine'];
 
-            $image = $imagine->open(__DIR__.'/../assets/'.$type.'/'.$file.'.'.$extension);
+            try {
+                $image = $imagine->open(__DIR__.'/../assets/'.$type.'/'.$file.'.'.$extension);
+            } catch (Exception $e) {
+                throw new NotFoundHttpException('Image not found', $e);
+            }
 
             if ($width && $height) {
                 if ($height > $image->getSize()->getHeight()) {
