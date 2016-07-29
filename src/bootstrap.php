@@ -1,12 +1,19 @@
 <?php
 
 use Crell\ApiProblem\ApiProblem;
+use Imagine\Gd\Imagine;
+use Imagine\Image\Box;
+use Imagine\Image\ImageInterface;
+use League\Flysystem\Adapter\Local;
+use League\Flysystem\Filesystem;
 use Negotiation\Accept;
 use Negotiation\Negotiator;
 use Silex\Application;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
@@ -165,6 +172,14 @@ $app['subjects'] = function () use ($app) {
     ksort($subjects);
 
     return $subjects;
+};
+
+$app['filesystem'] = function () {
+    return new Filesystem(new Local(__DIR__.'/../cache'));
+};
+
+$app['imagine'] = function () {
+    return new Imagine();
 };
 
 $app['negotiator'] = function () {
@@ -1057,6 +1072,77 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
         Response::HTTP_OK,
         ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
     );
+});
+
+$app->get('images/{type}/{file}/{extension}',
+    function (Request $request, string $type, string $file, string $extension) use ($app) {
+        $width = $request->query->get('width');
+        $height = $request->query->get('height');
+
+        if ($width > 5000 || $height > 5000) {
+            throw new BadRequestHttpException('Too big');
+        }
+
+        $cacheKey = md5(implode('|', [$type, $file, $extension, $width, $height]));
+
+        $cache = $app['filesystem'];
+
+        if (false === $cache->has($cacheKey)) {
+            $imagine = $app['imagine'];
+
+            $image = $imagine->open(__DIR__.'/../assets/'.$type.'/'.$file.'.'.$extension);
+
+            if ($width && $height) {
+                if ($height > $image->getSize()->getHeight()) {
+                    $image = $image->resize($image->getSize()->heighten($height));
+                }
+                if ($width > $image->getSize()->getWidth()) {
+                    $image = $image->resize($image->getSize()->widen($width));
+                }
+                $image = $image->thumbnail(new Box($width, $height), ImageInterface::THUMBNAIL_OUTBOUND);
+            } elseif ($width) {
+                $image = $image->resize($image->getSize()->widen($width));
+            } elseif ($height) {
+                $image = $image->resize($image->getSize()->heighten($height));
+            }
+
+            $cache->put($cacheKey, $image->get($extension));
+        }
+
+        switch ($extension) {
+            case 'jpg':
+                $contentType = 'image/jpeg';
+                break;
+            default:
+                throw new RuntimeException('Unknown extension '.$extension);
+        }
+
+        return new StreamedResponse(
+            function () use ($cache, $cacheKey) {
+                $image = $cache->readStream($cacheKey);
+
+                while (!feof($image)) {
+                    $buffer = fread($image, 1024);
+                    echo $buffer;
+                    flush();
+                }
+                fclose($image);
+            },
+            Response::HTTP_OK,
+            ['Content-Type' => $contentType]
+        );
+    })->assert('number', '[1-9][0-9]*')->assert('width', '[1-9][0-9]*')->assert('height', '[1-9][0-9]*')
+;
+
+$app->after(function (Request $request, Response $response, Application $app) {
+    if ($response instanceof StreamedResponse) {
+        return;
+    }
+
+    $content = $response->getContent();
+
+    $response->setContent(str_replace('%base_url%', $request->getSchemeAndHttpHost().$request->getBasePath(),
+        $content));
 });
 
 $app->error(function (Throwable $e) {

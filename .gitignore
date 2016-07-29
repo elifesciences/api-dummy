@@ -1,3 +1,4 @@
 /build/
+/cache/
 /phpunit.xml
 /vendor/
