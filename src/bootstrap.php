@@ -22,6 +22,20 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
 
+$app['annual-reports'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports');
+
+    $reports = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $reports[$json['year']] = $json;
+    }
+
+    ksort($reports);
+
+    return $reports;
+};
+
 $app['articles'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles');
 
@@ -185,6 +199,84 @@ $app['imagine'] = function () {
 $app['negotiator'] = function () {
     return new Negotiator();
 };
+
+$app->get('/annual-reports', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.annual-report-list+json; version=1',
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $reports = $app['annual-reports'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($reports),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $reports = array_reverse($reports);
+    }
+
+    $reports = array_slice($reports, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reports) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($reports as $i => $report) {
+        unset($report['content']);
+
+        $content['items'][] = $report;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/annual-reports/{year}',
+    function (Request $request, int $year) use ($app) {
+        if (false === isset($app['annual-reports'][$year])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $report = $app['annual-reports'][$year];
+
+        $accepts = [
+            'application/vnd.elife.annual-report+json; version=1',
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($report, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    })->assert('number', '[1-9][0-9]*')
+;
 
 $app->get('/articles', function (Request $request) use ($app) {
     $accepts = [

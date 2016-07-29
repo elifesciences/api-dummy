@@ -1,0 +1,23 @@
+{
+    "year": 2013,
+    "uri": "http://2013.elifesciences.org/",
+    "title": "The eLife Sciences 2013 Annual Report",
+    "impactStatement": "In 2013, eLife made clear its intentions to address some of the critical issues facing science today . The 2013 Annual Report emphasises areas where eLife made significant progress, including challenging the incentive system through the Declaration on Research Assessment and the introduction of eLife Lens, an innovative new article - viewing platform . The Report also points towards how the unique initiative will continue to expand on successes in technology innovation and challenge the status quo.",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "%base_url%/images/annual-reports/2013/jpg?width=900&height=450",
+                "1800": "%base_url%/images/annual-reports/2013/jpg?width=1800&height=900"
+            },
+            "16:9": {
+                "250": "%base_url%/images/annual-reports/2013/jpg?width=250&height=141",
+                "500": "%base_url%/images/annual-reports/2013/jpg?width=500&height=281"
+            },
+            "1:1": {
+                "70": "%base_url%/images/annual-reports/2013/jpg?width=70&height=70",
+                "140": "%base_url%/images/annual-reports/2013/jpg?width=140&height=140"
+            }
+        }
+    }
+}
