@@ -19,7 +19,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($statusCode, $response->getStatusCode());
         $this->assertSame($contentType, $response->headers->get('Content-Type'));
-        $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
+        if (strpos('+json', $contentType)) {
+            $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
+        }
     }
 
     public function requestProvider() : array
@@ -47,6 +49,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             [Request::create('/search?subject[]=cell-biology'), 'application/vnd.elife.search+json; version=1'],
             [Request::create('/subjects'), 'application/vnd.elife.subject-list+json; version=1'],
             [Request::create('/subjects/biochemistry'), 'application/vnd.elife.subject+json; version=1'],
+            [Request::create('/images/subjects/cell-biology/png'), 'application/problem+json', 404],
+            [Request::create('/images/subjects/cell-biology/jpg'), 'image/jpeg'],
+            [Request::create('/images/subjects/cell-biology/jpg?width=900'), 'image/jpeg'],
+            [Request::create('/images/subjects/cell-biology/jpg?height=450'), 'image/jpeg'],
+            [Request::create('/images/subjects/cell-biology/jpg?width=900&height=450'), 'image/jpeg'],
+            [Request::create('/images/subjects/cell-biology/jpg?width=5001'), 'application/problem+json', 400],
+            [Request::create('/images/subjects/cell-biology/jpg?height=5001'), 'application/problem+json', 400],
         ];
     }
 }
