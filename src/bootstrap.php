@@ -154,7 +154,7 @@ $app['people'] = function () use ($app) {
     }
 
     uasort($people, function (array $a, array $b) {
-        return ($a['name']['surname'].', '.$a['name']['givenNames']) <=> ($b['name']['surname'].', '.$b['name']['givenNames']);
+        return $a['name']['index'] <=> $b['name']['index'];
     });
 
     return $people;

@@ -2,8 +2,8 @@
     "id": "jqpublic",
     "type": "reviewing-editor",
     "name": {
-        "givenNames": "John Q.",
-        "surname": "Public"
+        "preferred": "John Q. Public",
+        "index": "Public, John Q."
     },
     "research": {
         "expertises": [
