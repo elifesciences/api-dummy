@@ -2,8 +2,8 @@
     "id": "djones",
     "type": "reviewing-editor",
     "name": {
-        "givenNames": "Dai",
-        "surname": "Jones"
+        "preferred": "Dai Jones",
+        "index": "Jones, Dai"
     },
     "research": {
         "expertises": [

@@ -2,8 +2,7 @@
     "id": "fbloggs",
     "type": "leadership",
     "name": {
-        "givenNames": "Fred",
-        "surname": "Bloggs",
-        "suffix": "III"
+        "preferred": "Fred Bloggs III",
+        "index": "Bloggs, Fred, III"
     }
 }

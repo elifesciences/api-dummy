@@ -2,8 +2,8 @@
     "id": "jpublic",
     "type": "senior-editor",
     "name": {
-        "givenNames": "Jane",
-        "surname": "Public"
+        "preferred": "Jane Public",
+        "index": "Public, Jane"
     },
     "orcid": "0000-0002-1825-0097",
     "research": {
