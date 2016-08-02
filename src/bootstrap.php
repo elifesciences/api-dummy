@@ -1209,6 +1209,9 @@ $app->get('images/{type}/{file}/{extension}',
             case 'jpg':
                 $contentType = 'image/jpeg';
                 break;
+            case 'png':
+                $contentType = 'image/png';
+                break;
             default:
                 throw new RuntimeException('Unknown extension '.$extension);
         }
