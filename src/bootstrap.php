@@ -428,8 +428,6 @@ $app->get('/articles/{number}/versions/{version}',
             ];
         }
 
-        unset($articleVersion['status']);
-
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
 
         if (null === $type) {
