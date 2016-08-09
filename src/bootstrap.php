@@ -330,6 +330,9 @@ $app->get('/articles', function (Request $request) use ($app) {
         unset($latestVersion['relatedArticles']);
         unset($latestVersion['abstract']);
         unset($latestVersion['digest']);
+        unset($latestVersion['body']);
+        unset($latestVersion['decisionLetter']);
+        unset($latestVersion['authorResponse']);
 
         $content['items'][] = $latestVersion;
     }
@@ -946,6 +949,9 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['relatedArticles']);
         unset($result['abstract']);
         unset($result['digest']);
+        unset($result['body']);
+        unset($result['decisionLetter']);
+        unset($result['authorResponse']);
 
         $results[] = $result;
     }

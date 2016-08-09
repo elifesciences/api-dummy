@@ -65,6 +65,74 @@
                         "text": "The <i>Homo naledi</i> fossils are the largest collection of a single species of hominin that has been discovered in Africa so far and, in a related study, Dirks et al. describe the setting and context for these fossils. However, since the age of the fossils remains unclear, one of the next challenges will be to date the remains to provide more information about the early evolution of humans and their close relatives."
                     }
                 ]
+            },
+            "body": [
+                {
+                    "type": "section",
+                    "title": "Introduction",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Fossil hominins were first recognized in the Dinaledi Chamber in the Rising Star cave system in October 2013. During a relatively short excavation, our team recovered an extensive collection of 1550 hominin specimens, representing nearly every element of the skeleton multiple times (Figure 1), including many complete elements and morphologically informative fragments, some in articulation, as well as smaller fragments many of which could be refit into more complete elements. The collection is a morphologically homogeneous sample that can be attributed to no previously-known hominin species. Here we describe this new species, <i>Homo naledi</i>. We have not defined <i>H. naledi</i> narrowly based on a single jaw or skull because the entire body of material has informed our understanding of its biology."
+                        },
+                        {
+                            "type": "section",
+                            "title": "Etymology",
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The word <i>naledi</i> means ‘star’ in the Sotho language and refers to the Dinaledi Chamber's location within the Rising Star cave system."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "Differential diagnosis",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "This comprehensive differential diagnosis is based upon cranial, dental and postcranial characters. The hypodigms used for other species are detailed in the ‘Materials and methods’. We examined original specimens for most species, except where indicated in the ‘Materials and methods’; when we relied on other sources for anatomical observations we indicate this. A summary of traits of <i>H. naledi</i> in comparison to other species is presented in Supplementary file 2. Comparative cranial and mandibular measures are presented in Table 1, and comparative dental measures are provided in Table 2."
+                        }
+                    ]
+                }
+            ],
+            "decisionLetter": {
+                "doi": "10.7554/eLife.09560.030",
+                "description": [
+                    {
+                        "type": "paragraph",
+                        "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent. Similarly, the author response typically shows only responses to the major concerns raised by the reviewers."
+                    }
+                ],
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+                    }
+                ]
+            },
+            "authorResponse": {
+                "doi": "10.7554/eLife.09560.031",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "We have added <i>H. floresiensis</i> to the differential diagnosis, including relevant aspects of cranial, dental, hand, lower limb and foot anatomy. We have also added <i>H. floresiensis</i> to both relevant figures (Figure 5 and Figure 7). We have also made a short comment on the validity of <i>H. gautengensis</i> in the Materials and methods."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "We have removed both initial and final paragraphs in their entirety as suggested, and have slightly altered the remaining (second and penultimate) paragraphs to introduce and conclude the paper."
+                    }
+                ]
             }
         }
     ]
