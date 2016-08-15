@@ -8,6 +8,10 @@
     "research": {
         "expertises": [
             "cell-biology"
+        ],
+        "focuses": [
+            "Endocytosis",
+            "Secretion"
         ]
     }
 }

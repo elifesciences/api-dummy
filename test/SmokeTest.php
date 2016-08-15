@@ -3,7 +3,9 @@
 namespace test\eLife\DummyApi;
 
 use PHPUnit_Framework_TestCase;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
+use Traversable;
 
 final class SmokeTest extends PHPUnit_Framework_TestCase
 {
@@ -13,53 +15,201 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
      * @test
      * @dataProvider requestProvider
      */
-    public function it_returns_valid_responses(Request $request, string $contentType, int $statusCode = 200)
+    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200)
     {
         $response = $this->getApp()->handle($request);
 
         $this->assertSame($statusCode, $response->getStatusCode());
-        $this->assertSame($contentType, $response->headers->get('Content-Type'));
-        if (strpos('+json', $contentType)) {
+        if (is_array($contentType)) {
+            $this->assertContains($response->headers->get('Content-Type'), $contentType);
+        } else {
+            $this->assertSame($contentType, $response->headers->get('Content-Type'));
+        }
+        if (strpos('+json', $response->headers->get('Content-Type'))) {
             $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
         }
     }
 
-    public function requestProvider() : array
+    public function requestProvider() : Traversable
     {
-        return [
-            [Request::create('/'), 'application/problem+json', 404],
-            [Request::create('/annual-reports'), 'application/vnd.elife.annual-report-list+json; version=1'],
-            [Request::create('/annual-reports/2012'), 'application/vnd.elife.annual-report+json; version=1'],
-            [Request::create('/articles'), 'application/vnd.elife.article-list+json; version=1'],
-            [Request::create('/articles/09560'), 'application/vnd.elife.article-vor+json; version=1'],
-            [Request::create('/articles/14107'), 'application/vnd.elife.article-poa+json; version=1'],
-            [Request::create('/articles/14107/versions'), 'application/vnd.elife.article-history+json; version=1'],
-            [Request::create('/articles/14107/versions/1'), 'application/vnd.elife.article-poa+json; version=1'],
-            [Request::create('/blog-articles'), 'application/vnd.elife.blog-article-list+json; version=1'],
-            [Request::create('/blog-articles/339482'), 'application/vnd.elife.blog-article+json; version=1'],
-            [Request::create('/collections'), 'application/vnd.elife.collection-list+json; version=1'],
-            [Request::create('/collections/tropical-disease'), 'application/vnd.elife.collection+json; version=1'],
-            [Request::create('/events'), 'application/vnd.elife.event-list+json; version=1'],
-            [Request::create('/events/1'), 'application/vnd.elife.event+json; version=1'],
-            [Request::create('/labs-experiments'), 'application/vnd.elife.labs-experiment-list+json; version=1'],
-            [Request::create('/labs-experiments/1'), 'application/vnd.elife.labs-experiment+json; version=1'],
-            [Request::create('/medium-articles'), 'application/vnd.elife.medium-article-list+json; version=1'],
-            [Request::create('/people'), 'application/vnd.elife.person-list+json; version=1'],
-            [Request::create('/people/jpublic'), 'application/vnd.elife.person+json; version=1'],
-            [Request::create('/podcast-episodes'), 'application/vnd.elife.podcast-episode-list+json; version=1'],
-            [Request::create('/podcast-episodes/1'), 'application/vnd.elife.podcast-episode+json; version=1'],
-            [Request::create('/search'), 'application/vnd.elife.search+json; version=1'],
-            [Request::create('/search?for=cell'), 'application/vnd.elife.search+json; version=1'],
-            [Request::create('/search?subject[]=cell-biology'), 'application/vnd.elife.search+json; version=1'],
-            [Request::create('/subjects'), 'application/vnd.elife.subject-list+json; version=1'],
-            [Request::create('/subjects/biochemistry'), 'application/vnd.elife.subject+json; version=1'],
-            [Request::create('/images/subjects/cell-biology/png'), 'application/problem+json', 404],
-            [Request::create('/images/subjects/cell-biology/jpg'), 'image/jpeg'],
-            [Request::create('/images/subjects/cell-biology/jpg?width=900'), 'image/jpeg'],
-            [Request::create('/images/subjects/cell-biology/jpg?height=450'), 'image/jpeg'],
-            [Request::create('/images/subjects/cell-biology/jpg?width=900&height=450'), 'image/jpeg'],
-            [Request::create('/images/subjects/cell-biology/jpg?width=5001'), 'application/problem+json', 400],
-            [Request::create('/images/subjects/cell-biology/jpg?height=5001'), 'application/problem+json', 400],
+        yield $path = '/' => [
+            Request::create($path),
+            'application/problem+json',
+            404,
+        ];
+
+        yield $path = '/annual-reports' => [
+            Request::create($path),
+            'application/vnd.elife.annual-report-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports') as $file) {
+            yield $path = '/annual-reports/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.annual-report+json; version=1',
+            ];
+        }
+
+        yield $path = '/articles' => [
+            Request::create($path),
+            'application/vnd.elife.article-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
+            yield $path = '/articles/'.$file->getBasename('.json') => [
+                Request::create($path),
+                [
+                    'application/vnd.elife.article-poa+json; version=1',
+                    'application/vnd.elife.article-vor+json; version=1',
+                ],
+            ];
+            yield $path = '/articles/'.$file->getBasename('.json').'/versions' => [
+                Request::create($path),
+                'application/vnd.elife.article-history+json; version=1',
+            ];
+            yield $path = '/articles/'.$file->getBasename('.json').'/versions/1' => [
+                Request::create($path),
+                [
+                    'application/vnd.elife.article-poa+json; version=1',
+                    'application/vnd.elife.article-vor+json; version=1',
+                ],
+            ];
+        }
+
+        yield $path = '/blog-articles' => [
+            Request::create($path),
+            'application/vnd.elife.blog-article-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/blog-articles') as $file) {
+            yield $path = '/blog-articles/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.blog-article+json; version=1',
+            ];
+        }
+
+        yield $path = '/collections' => [
+            Request::create($path),
+            'application/vnd.elife.collection-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
+            yield $path = '/collections/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.collection+json; version=1',
+            ];
+        }
+
+        yield $path = '/events' => [
+            Request::create($path),
+            'application/vnd.elife.event-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events') as $file) {
+            yield $path = '/events/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.event+json; version=1',
+            ];
+        }
+
+        yield $path = '/labs-experiments' => [
+            Request::create($path),
+            'application/vnd.elife.labs-experiment-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments') as $file) {
+            yield $path = '/labs-experiments/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.labs-experiment+json; version=1',
+            ];
+        }
+
+        yield $path = '/medium-articles' => [
+            Request::create($path),
+            'application/vnd.elife.medium-article-list+json; version=1',
+        ];
+
+        yield $path = '/labs-experiments' => [
+            Request::create($path),
+            'application/vnd.elife.labs-experiment-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments') as $file) {
+            yield $path = '/labs-experiments/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.labs-experiment+json; version=1',
+            ];
+        }
+
+        yield $path = '/people' => [
+            Request::create($path),
+            'application/vnd.elife.person-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/people') as $file) {
+            yield $path = '/people/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.person+json; version=1',
+            ];
+        }
+
+        yield $path = '/podcast-episodes' => [
+            Request::create($path),
+            'application/vnd.elife.podcast-episode-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/podcast-episodes') as $file) {
+            yield $path = '/podcast-episodes/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.podcast-episode+json; version=1',
+            ];
+        }
+
+        yield $path = '/subjects' => [
+            Request::create($path),
+            'application/vnd.elife.subject-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects') as $file) {
+            yield $path = '/subjects/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.subject+json; version=1',
+            ];
+        }
+
+        yield $path = '/search' => [
+            Request::create($path),
+            'application/vnd.elife.search+json; version=1',
+        ];
+        yield $path = '/search?for=cell' => [
+            Request::create($path),
+            'application/vnd.elife.search+json; version=1',
+        ];
+        yield $path = '/search?subject[]=cell-biology' => [
+            Request::create($path),
+            'application/vnd.elife.search+json; version=1',
+        ];
+
+        yield $path = '/images/subjects/cell-biology/png' => [
+            Request::create($path),
+            'application/problem+json',
+            404,
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg' => [
+            Request::create($path),
+            'image/jpeg',
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg?width=900' => [
+            Request::create($path),
+            'image/jpeg',
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg?height=450' => [
+            Request::create($path),
+            'image/jpeg',
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg?width=900&height=450' => [
+            Request::create($path),
+            'image/jpeg',
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg?width=5001' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/images/subjects/cell-biology/jpg?height=5001' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
         ];
     }
 }

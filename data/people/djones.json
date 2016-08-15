@@ -8,6 +8,9 @@
     "research": {
         "expertises": [
             "cell-biology"
+        ],
+        "focuses": [
+            "Cell polarity"
         ]
     }
 }
