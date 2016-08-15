@@ -1,0 +1,182 @@
+{
+    "received": "2015-12-06",
+    "accepted": "2016-06-07",
+    "versions": [
+        {
+            "status": "vor",
+            "id": "13410",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.13410",
+            "title": "A century of trends in adult human height",
+            "published": "2016-07-25T23:00:00Z",
+            "volume": 5,
+            "issue": 7,
+            "elocationId": "e13410",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Franco et al",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "pdf": "https://elifesciences.org/content/4/e13410.pdf",
+            "subjects": [
+                "epidemiology-global-health"
+            ],
+            "keywords": [
+                "biological sciences",
+                "epidemiology",
+                "medical research",
+                "nutrition"
+            ],
+            "impactStatement": "Height in early adulthood is an indicator that integrates across different dimensions of sustainable human development with links to health and longevity, nutrition, education and economic productivity.",
+            "abstract": {
+                "doi": "10.7554/eLife.13410.001",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Being taller is associated with enhanced longevity, and higher education and earnings. We reanalysed 1472 population-based studies, with measurement of height on more than 18.6 million participants to estimate mean height for people born between 1896 and 1996 in 200 countries. The largest gain in adult height over the past century has occurred in South Korean women and Iranian men, who became 20.2 cm (95% credible interval 17.5–22.7) and 16.5 cm (13.3–19.7) taller, respectively. In contrast, there was little change in adult height in some sub-Saharan African countries and in South Asia over the century of analysis. The tallest people over these 100 years are men born in the Netherlands in the last quarter of 20th century, whose average heights surpassed 182.5 cm, and the shortest were women born in Guatemala in 1896 (140.3 cm; 135.8–144.8). The height differential between the tallest and shortest populations was 19-20 cm a century ago, and has remained the same for women and increased for men a century later despite substantial changes in the ranking of countries."
+                    }
+                ]
+            },
+            "digest": {
+                "doi": "10.7554/eLife.13410.002",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "People from different countries grow to different heights. This may be partly due to genetics, but most differences in height between countries have other causes. For example, children and adolescents who are malnourished, or who suffer from serious diseases, will generally be shorter as adults. This is important because taller people generally live longer, are less likely to suffer from heart disease and stroke, and taller women and their children are less likely to have complications during and after birth. Taller people may also earn more and be more successful at school. However, they are also more likely to develop some cancers."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The NCD Risk Factor Collaboration set out to find out how tall people are, on average, in every country in the world at the moment, and how this has changed over the past 100 years. The analysis revealed large differences in height between countries. The tallest men were born in the last part of the 20th century in the Netherlands, and were nearly 183 cm tall on average. The shortest women were born in 1896 in Guatemala, and were on average 140 cm tall. The difference between the shortest and tallest countries is about 20 cm for both men and women. This means there are large differences between countries in terms of nutrition and the risk of developing some diseases."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The way in which height has changed over the past 100 years also varies from country to country. Iranian men born in 1996 were around 17 cm taller than those born in 1896, and South Korean women were 20 cm taller. In other parts of the world, particularly in South Asia and parts of Africa, people are only slightly taller than 100 years ago, and in some countries people are shorter than they were 50 years ago."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "There is a need to better understand why height has changed in different countries by different amounts, and use this information to improve nutrition and health across the world. It would also be valuable to understand how much becoming taller has been responsible for improved health and longevity throughout the world."
+                    }
+                ]
+            },
+            "body": [
+                {
+                    "type": "section",
+                    "title": "Introduction",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Being taller is associated with enhanced longevity, lower risk of adverse pregnancy outcomes and cardiovascular and respiratory diseases, and higher risk of some cancers (Paajanen et al., 2010; Emerging Risk Factors Collaboration, 2012; Green et al., 2011; Nelson et al., 2015; Batty et al., 2010; World Cancer Research Fund / American Institute for Cancer Research, 2007; 2010; 2011; 2012; 2014a; 2014b; Nüesch et al., 2015; Davies et al., 2015; Zhang et al., 2015; Kozuki et al., 2015; Black et al., 2008). There is also evidence that taller people on average have higher education, earnings, and possibly even social position (Adair et al., 2013; Stulp et al., 2015; Barker et al., 2005; Strauss and Thomas, 1998; Chen and Zhou, 2007; Case and Paxson, 2008)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Although height is one of the most heritable human traits (Fisher, 1919; Lettre, 2011), cross-population differences are believed to be related to non-genetic, environmental factors. Of these, foetal growth (itself related to maternal size, nutrition and environmental exposures), and nutrition and infections during childhood and adolescence are particularly important determinants of height during adulthood (Cole, 2000; Silventoinen et al., 2000; Dubois et al., 2012; Haeffner et al., 2002; Sørensen et al., 1999; Victora et al., 2008; Eveleth and Tanner, 1990; Tanner, 1962; Tanner, 1992; Bogin, 2013). Information on height, and its trends, can therefore help understand the health impacts of childhood and adolescent nutrition and environment, and of their social, economic, and political determinants, on both non-communicable diseases (NCDs) and on neonatal health and survival in the next generation (Cole, 2000; Tanner, 1992; Tanner, 1987)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Trends in men’s height have been analysed in Europe, the USA, and Japan for up to 250 years, using data on conscripts, voluntary military personnel, convicts, or slaves (Cole, 2000; Floud et al., 1990; Fogel et al., 1983; Schmidt et al., 1995; Floud et al., 2011; Tanner et al., 1982; Hatton and Bray, 2010; Tanner, 1981; Facchini and Gualdi-Russo, 1982). There are fewer historical data for women, and for other regions where focus has largely been on children and where adult data tend to be reported at one point in time or over short periods (Subramanian et al., 2011; Grasgruber et al., 2014; Baten and Blum, 2012; Deaton, 2007; Mamidi et al., 2011; van Zanden et al., 2014). In this paper, we pooled worldwide population-based data to estimate height in adulthood for men and women born over a whole century throughout the world."
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "Results",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "We estimated that people born in 1896 were shortest in Asia and in Central and Andean Latin America (Figure 1 and Figure 2). The 1896 male birth cohort on average measured only 152.9 cm (credible interval 147.9–157.9) in Laos, which is the same as a well-nourished 12.5-year boy according to international growth standards (de Onis et al., 2007), followed by Timor-Leste and Guatemala. Women born in the same year in Guatemala were on average 140.3 cm (135.8–144.8), the same as a well-nourished 10-year girl. El Salvador, Peru, Bangladesh, South Korea and Japan had the next shortest women. The tallest populations a century ago lived in Central and Northern Europe, North America and some Pacific islands. The height of men born in Sweden, Norway and the USA surpassed 171 cm, ~18–19 cm taller than men in Laos. Swedish women, with average adult height of 160.3 cm (158.2–162.4), were the tallest a century ago and 20 cm taller than women in Guatemala. Women were also taller than 158 cm in Norway, Iceland, the USA and American Samoa."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig1-v1.jpg",
+                            "caption": "Adult height for the 1896 and 1996 birth cohorts for men."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig2-v1.jpg",
+                            "caption": "Adult height for the 1896 and 1996 birth cohorts for men."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Changes in adult height over the century of analysis varied drastically across countries. Notably, although the large increases in European men’s heights in the 19th and 20th century have been highlighted, we found that the largest gains since the 1896 birth cohort occurred in South Korean women and Iranian men, who became 20.2 cm (17.5–22.7) and 16.5 cm (13.3–19.7) taller, respectively (Figure 3, Figure 4 and Figure 5). As a result, South Korean women moved from the fifth shortest to the top tertile of tallest women in the world over the course of a century. Men in South Korea also had large gains relative to other countries, by 15.2 cm (12.3–18.1). There were also large gains in height in Japan, Greenland, some countries in Southern Europe (e.g., Greece) and Central Europe (e.g., Serbia and Poland, and for women Czech Republic). In contrast, there was little gain in height in many countries in sub-Saharan Africa and South Asia."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig3-v1.jpg",
+                            "caption": "Change in adult height between the 1896 and 1996 birth cohorts."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig4-v1.jpg",
+                            "caption": "Height in adulthood for the 1896 and 1996 birth cohorts for men."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig5-v1.jpg",
+                            "caption": "Height in adulthood for the 1896 and 1996 birth cohorts for women."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The pace of growth in height has not been uniform over the past century. The impressive rise in height in Japan stopped in people born after the early 1960s (Figure 6). In South Korea, the flattening began in the cohorts born in the 1980s for men and it may have just begun in women. As a result, South Korean men and women are now taller than their Japanese counterparts. The rise is continuing in other East and Southeast Asian countries like China and Thailand, with Chinese men and women having surpassed the Japanese (but not yet as tall as South Koreans). The rise in adult height also seems to have plateaued in South Asian countries like Bangladesh and India at much lower levels than in East Asia, e.g., 5–10 cm shorter than it did in Japan and South Korea."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig6-v1.jpg",
+                            "caption": "Trends in height for the adult populations of selected countries in Asia."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "There were also variations in the time course of height change across high-income western countries, with height increase having plateaued in Northern European countries like Finland and in English-speaking countries like the UK for 2–3 decades (Larnkaer et al., 2006; Schönbeck et al., 2013), followed by Eastern Europe (Figure 7). The earliest of these occurred in the USA, which was one of the tallest nations a century ago but has now fallen behind its European counterparts after having had the smallest gain in height of any high-income country (Tanner, 1981; Komlos and Lauderdale, 2007; Komlos and Baur, 2004; Sokoloff and Villaflor, 1982). In contrast, height is still increasing in some Southern European countries (e.g., Spain), and in many countries in Latin America."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig7-v1.jpg",
+                            "caption": "Trends in height for the adult populations of selected countries in Europe."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "As an exception to the steady gains in most countries, adult height decreased or at best remained the same in many countries in sub-Saharan Africa for cohorts born after the early 1960s, by around 5 cm from its peak in some countries (see for example Niger, Rwanda, Sierra Leone, and Uganda in Figure 8). More recently, the same seems to have happened for men, but not women, in some countries in Central Asia (e.g., Azerbaijan and Uzbekistan) and Middle East and North Africa (e.g., Egypt and Yemen), whereas in others (e.g., Iran) both sexes continue to grow taller."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig8-v1.jpg",
+                            "caption": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Men born in 1996 surpass average heights of 181 cm in the Netherlands, Belgium, Estonia, Latvia and Denmark, with Dutch men, at 182.5 cm (180.6–184.5), the tallest people on the planet. The gap with the shortest countries – Timor-Leste, Yemen and Laos, where men are only ~160 cm tall – is 22–23 cm, an increase of ~4 cm on the global gap in the 1896 birth cohort. Australia was the only non-European country where men born in 1996 were among the 25 tallest in the world. Women born in 1996 are shortest in Guatemala, with an average height of 149.4 cm (148.0–150.8), and are shorter than 151 cm in the Philippines, Bangladesh and Nepal. The tallest women live in Latvia, the Netherlands, Estonia and Czech Republic, with average height surpassing 168 cm, creating a 20 cm global gap in women’s height (Figure 5)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Male and female heights were correlated across countries in 1896 as well as in 1996. Men were taller than women in every country, on average by ~11 cm in the 1896 birth cohort and ~12 cm in the 1996 birth cohort (Figure 9). In the 1896 birth cohort, the male-female height gap in countries where average height was low was slightly larger than in taller nations. In other words, at the turn of the 20th century, men seem to have had a relative advantage over women in undernourished compared to better-nourished populations. A century later, the male-female height gap is about the same throughout the height range. Changes in male and female heights over the century of analysis were also correlated, which is in contrast to low correlation between changes in male and female BMIs as reported elsewhere (NCD Risk Factor Collaboration, 2016)."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig9-v1.jpg",
+                            "caption": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Change in population mean height was not correlated with change in mean BMI (NCD Risk Factor Collaboration, 2016) across countries for men (correlation coefficient = −0.016) and was weakly inversely correlated for women (correlation coefficient = −0.28) (Figure 10). Countries like Japan, Singapore and France had larger-than-median gains in height but little change in BMI, in contrast to places like the USA and Kiribati where height has increased less than the worldwide median while BMI has increased a great deal."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig10-v1.jpg",
+                            "caption": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

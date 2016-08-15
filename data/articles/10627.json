@@ -1,0 +1,88 @@
+{
+    "versions": [
+        {
+            "status": "vor",
+            "id": "10627",
+            "version": 1,
+            "type": "insight",
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "%base_url%/images/articles/10627/jpg?width=900&height=450",
+                        "1800": "%base_url%/images/articles/10627/jpg?width=1800&height=900"
+                    },
+                    "16:9": {
+                        "250": "%base_url%/images/articles/10627/jpg?width=250&height=141",
+                        "500": "%base_url%/images/articles/10627/jpg?width=500&height=281"
+                    },
+                    "1:1": {
+                        "70": "%base_url%/images/articles/10627/jpg?width=70&height=70",
+                        "140": "%base_url%/images/articles/10627/jpg?width=140&height=140"
+                    }
+                }
+            },
+            "doi": "10.7554/eLife.10627",
+            "title": "The many mysteries of <i>Homo naledi</i>",
+            "published": "2016-09-10T00:00:00Z",
+            "volume": 4,
+            "issue": 9,
+            "elocationId": "e10627",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Stringer",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+            "subjects": [
+                "genomics-evolutionary-biology"
+            ],
+            "keywords": [
+                "Dinaledi Chamber",
+                "hominin",
+                "<i>Homo naledi</i>",
+                "paleoanthropology",
+                "taphonomy"
+            ],
+            "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton.",
+            "body": [
+                {
+                    "type": "section",
+                    "title": "Main text",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "When the recovery of fossil hominin remains from the Rising Star cave system near Johannesburg in South Africa was widely publicised in 2013 and 2014, I'm sure I wasn't the only one who thought that the coverage had more hype than substance. But now, in two papers in <italic>eLife</italic>, we can see what the fuss was all about as Lee Berger of the University of the Witwatersrand, Paul Dirks of James Cook University and an international team of colleagues report the discovery of more than 1500 fossils that represent at least 15 individuals. These remains have now been assigned to a new human species, which has been named <italic>Homo naledi</italic>. However, despite the wealth of information about the physical characteristics of <italic>H. naledi</italic> that this collection provides, many mysteries remain. How old are the fossils? Where does <italic>H. naledi</italic> fit in the scheme of human evolution? And how did the remains arrive deep within the cave system?"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "In the first paper, Berger et al. describe how the collection displays a unique combination of primitive and derived characteristics. For example, the small brain size, curved fingers and form of the shoulder, trunk and hip joint resemble the prehuman australopithecines and the early human species <italic>Homo habilis</italic>. Yet the wrist, hands, legs and feet look most like those of Neanderthals and modern humans. The teeth have some primitive features (such as increasing in size towards the back of the tooth row), but they are relatively small and simple, and set in lightly built jawbones. Overall, to my eye, the material looks most similar to the small-bodied examples of <italic>Homo erectus</italic> from Dmanisi in Georgia, which have been dated at ∼1.8 million years old. However, the rich <italic>H. naledi</italic> sample includes bones that are poorly known in other early humans species such as <italic>Homo rudolfensis,</italic> <italic>H. habilis</italic> and <italic>H. erectus</italic>, so it is difficult at the moment to assess how similar these species were throughout the skeleton."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "%base_url%/images/articles/10627/jpg",
+                            "caption": "Comparison of skull features of <italic>Homo naledi</italic> and other early human species."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "If <italic>H. naledi</italic> is more than 2 million years old, which Berger et al. suggest could be possible, the species might lie close to the very origin of the genus <italic>Homo</italic>. However, if the <italic>H. naledi</italic> fossils are less than 100,000 years old, it would mean that it survived until relatively recently, just like <italic>Homo floresiensis</italic> far away in Indonesia (another species which combines a small brain with small teeth). Because <italic>H. naledi</italic> is currently only known from one site, it is unclear whether or not it was restricted to southern Africa. If it turns out that <italic>H. naledi</italic> was more widespread, its moderate body size may lead scientists to re-examine other diminutive fossils from across Africa, which have usually been attributed to a small form of <italic>H. erectus</italic>."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "In the second paper, Dirks, Berger and colleagues describe the setting of the fossils: the Dinaledi Chamber. This cave chamber lies some 80 metres into the Rising Star system, and must have always been in constant darkness. This closely parallels the circumstances of a famous accumulation of ∼6500 human fossils in the Sima de los Huesos (‘Pit of the Bones’) in the Sierra de Atapuerca in Spain. In both cases, there is no associated evidence of human occupation. However, unlike the Dinaledi Chamber, the Sima did contain material from other large mammals. Moreover, the Atapuerca team also recovered numerous bones of the hands, feet and spine that could be articulated (or connected back together as they were in life). This led them to propose that the remains of at least 28 early Neanderthals had been intentionally thrown down into the pit, where the bodies decayed. After considering the alternative explanations, ranging from whether <italic>H. naledi</italic> occupied the caves to whether the bodies were left there by predators, Dirks et al. favour a similar scenario to that proposed for the Sima. However, they also recognise that the intentional disposal of the dead bodies is a surprisingly complex behaviour for a creature with a brain no bigger than that of <italic>H. habilis</italic> or a gorilla"
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Frustratingly, the rich and informative <italic>H. naledi</italic> material remains undated. Given that this hominin material could conceivably even date within the last 100,000 years, I am puzzled by the apparent lack of attempts to estimate its age. This could have been achieved directly via radiocarbon dating (even if only to test whether the material lies beyond the effective range of that method) or indirectly based on ancient DNA samples. For example, after ancient DNA was successfully recovered from the Sima de los Huesos fossils, it was used to date them to about 400,000 years old. Moreover, tests on even small fragments of bone and tooth enamel could have narrowed down the possible age range and at least ruled out either a very ancient or very young age."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Even without date information, the mosaic nature of the <italic>H. naledi</italic> skeletons provides yet another indication that the genus <italic>Homo</italic> had complex origins. The individual mix of primitive and derived characteristics in different fossils perhaps even indicates that the genus <italic>Homo</italic> might be ‘polyphyletic’: in other words, some members of the genus might have originated independently in different regions of Africa. If this is the case, it would mean that the species currently placed within the genus <italic>Homo</italic> would need to be reassessed. While many have concentrated on East Africa as the key and perhaps sole region for the origins of the genus <italic>Homo</italic>, the continuing surprises emerging from further south remind us that Africa is a huge continent that even now is largely unexplored for its early human fossils."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
