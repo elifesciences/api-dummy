@@ -96,6 +96,23 @@ $app['blog-articles'] = function () use ($app) {
     return $articles;
 };
 
+$app['collections'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections');
+
+    $collections = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $collections[$json['id']] = $json;
+    }
+
+    uasort($collections, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+            $b['updated']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated']);
+    });
+
+    return $collections;
+};
+
 $app['events'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events');
 
@@ -525,6 +542,95 @@ $app->get('/blog-articles/{id}',
 
         return new Response(
             json_encode($article, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
+
+$app->get('/collections', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.collection-list+json; version=1',
+    ];
+
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    if (null === $type) {
+        $type = new Accept($accepts[0]);
+    }
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $collections = $app['collections'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($subjects)) {
+        $collections = array_filter($collections, function ($collection) use ($subjects) {
+            $collectionSubjects = $collection['subjects'] ?? [];
+
+            return count(array_intersect($subjects, $collectionSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($collections),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $collections = array_reverse($collections);
+    }
+
+    $collections = array_slice($collections, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($collections) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($collections as $i => $collection) {
+        unset($collection['curators']);
+        unset($collection['content']);
+        unset($collection['relatedContent']);
+        unset($collection['podcastEpisodes']);
+
+        $content['items'][] = $collection;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/collections/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['collections'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $collection = $app['collections'][$id];
+
+        $accepts = [
+            'application/vnd.elife.collection+json; version=1',
+        ];
+
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        if (null === $type) {
+            $type = new Accept($accepts[0]);
+        }
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($collection, JSON_PRETTY_PRINT),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -961,6 +1067,16 @@ $app->get('/search', function (Request $request) use ($app) {
         $results[] = $result;
     }
 
+    foreach ($app['collections'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        unset($result['curators']);
+        unset($result['content']);
+        unset($result['relatedContent']);
+        unset($result['podcastEpisodes']);
+        $result['type'] = 'collection';
+        $results[] = $result;
+    }
+
     foreach ($app['events'] as $result) {
         if (DateTimeImmutable::createFromFormat(DATE_ATOM, $result['ends']) <= new DateTimeImmutable()) {
             continue;
@@ -1030,7 +1146,7 @@ $app->get('/search', function (Request $request) use ($app) {
         }));
     }
 
-    foreach (['blog-article', 'event', 'labs-experiment', 'podcast-episode'] as $contentType) {
+    foreach (['blog-article', 'collection', 'event', 'labs-experiment', 'podcast-episode'] as $contentType) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
             return $contentType === $result['type'];
         }));
@@ -1059,11 +1175,15 @@ $app->get('/search', function (Request $request) use ($app) {
         usort($results, function (array $a, array $b) {
             if ('event' === $a['type']) {
                 $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
+            } elseif ('collection' === $a['type']) {
+                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated']);
             } else {
                 $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
             }
             if ('event' === $b['type']) {
                 $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['starts']);
+            } elseif ('collection' === $b['type']) {
+                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['updated']);
             } else {
                 $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
             }

@@ -1,0 +1,138 @@
+{
+    "id": "tropical-disease",
+    "title": "Tropical disease",
+    "subTitle": "A selection of papers",
+    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal.",
+    "updated": "2015-09-16T11:19:26+00:00",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "https://placehold.it/900x450",
+                "1800": "https://placehold.it/1800x900"
+            },
+            "16:9": {
+                "250": "https://placehold.it/250x141",
+                "500": "https://placehold.it/500x281"
+            },
+            "1:1": {
+                "70": "https://placehold.it/70x70",
+                "140": "https://placehold.it/140x140"
+            }
+        }
+    },
+    "subjects": [
+        "epidemiology-global-health",
+        "microbiology-infectious-disease"
+    ],
+    "selectedCurator": {
+        "id": "pjha",
+        "type": "senior-editor",
+        "name": {
+            "preferred": "Prabhat Jha",
+            "index": "Jha, Prabhat"
+        }
+    },
+    "curators": [
+        {
+            "id": "bcooper",
+            "type": "reviewing-editor",
+            "name": {
+                "preferred": "Ben Cooper",
+                "index": "Cooper, Ben"
+            }
+        },
+        {
+            "id": "pjha",
+            "type": "senior-editor",
+            "name": {
+                "preferred": "Prabhat Jha",
+                "index": "Jha, Prabhat"
+            }
+        }
+    ],
+    "content": [
+        {
+            "type": "research-article",
+            "status": "vor",
+            "id": "09560",
+            "version": 1,
+            "doi": "10.7554/eLife.09560",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "published": "2015-09-10T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e09560",
+            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+            "subjects": [
+                "genomics-evolutionary-biology"
+            ],
+            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "https://placehold.it/900x450",
+                        "1800": "https://placehold.it/1800x900"
+                    },
+                    "16:9": {
+                        "250": "https://placehold.it/250x141",
+                        "500": "https://placehold.it/500x281"
+                    },
+                    "1:1": {
+                        "70": "https://placehold.it/70x70",
+                        "140": "https://placehold.it/140x140"
+                    }
+                }
+            }
+        },
+        {
+            "type": "blog-article",
+            "id": "359325",
+            "title": "Media coverage: Slime can see",
+            "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
+            "published": "2016-07-08T08:33:25+00:00",
+            "subjects": [
+                "biophysics-structural-biology"
+            ]
+        }
+    ],
+    "relatedContent": [
+        {
+            "type": "research-article",
+            "status": "poa",
+            "id": "14107",
+            "version": 1,
+            "doi": "10.7554/eLife.14107",
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "published": "2016-03-28T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e14107"
+        }
+    ],
+    "podcastEpisodes": [
+        {
+            "number": 4,
+            "title": "September 2013",
+            "impactStatement": "In this episode of the eLife podcast we discuss how flatworms can grow new heads and tails, how photosynthesis has evolved over time, social interactions between mice, the properties of undead cells, and interactions between steroids and genes.",
+            "published": "2013-08-21T12:54:08+00:00",
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "https:\/\/placehold.it\/900x450",
+                        "1800": "https:\/\/placehold.it\/1800x900"
+                    },
+                    "16:9": {
+                        "250": "https:\/\/placehold.it\/250x141",
+                        "500": "https:\/\/placehold.it\/500x281"
+                    },
+                    "1:1": {
+                        "70": "https:\/\/placehold.it\/70x70",
+                        "140": "https:\/\/placehold.it\/140x140"
+                    }
+                }
+            },
+            "mp3": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+        }
+    ]
+}
