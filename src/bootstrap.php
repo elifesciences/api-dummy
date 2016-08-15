@@ -1,13 +1,14 @@
 <?php
 
 use Crell\ApiProblem\ApiProblem;
+use eLife\DummyApi\UnsupportedVersion;
+use eLife\DummyApi\VersionedNegotiator;
 use Imagine\Gd\Imagine;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
 use Negotiation\Accept;
-use Negotiation\Negotiator;
 use Silex\Application;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
@@ -214,7 +215,7 @@ $app['imagine'] = function () {
 };
 
 $app['negotiator'] = function () {
-    return new Negotiator();
+    return new VersionedNegotiator();
 };
 
 $app->get('/annual-reports', function (Request $request) use ($app) {
@@ -222,11 +223,8 @@ $app->get('/annual-reports', function (Request $request) use ($app) {
         'application/vnd.elife.annual-report-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -278,11 +276,8 @@ $app->get('/annual-reports/{year}',
             'application/vnd.elife.annual-report+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -300,11 +295,8 @@ $app->get('/articles', function (Request $request) use ($app) {
         'application/vnd.elife.article-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -390,11 +382,8 @@ $app->get('/articles/{number}/versions',
             'application/vnd.elife.article-history+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -445,11 +434,8 @@ $app->get('/articles/{number}/versions/{version}',
             ];
         }
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -467,11 +453,8 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
         'application/vnd.elife.blog-article-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -531,11 +514,8 @@ $app->get('/blog-articles/{id}',
             'application/vnd.elife.blog-article+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -552,11 +532,8 @@ $app->get('/collections', function (Request $request) use ($app) {
         'application/vnd.elife.collection-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -620,11 +597,8 @@ $app->get('/collections/{id}',
             'application/vnd.elife.collection+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -641,11 +615,8 @@ $app->get('/events', function (Request $request) use ($app) {
         'application/vnd.elife.event-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -712,11 +683,8 @@ $app->get('/events/{id}',
             'application/vnd.elife.event+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -733,11 +701,8 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
         'application/vnd.elife.labs-experiment-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -793,11 +758,8 @@ $app->get('/labs-experiments/{number}',
             'application/vnd.elife.labs-experiment+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -815,11 +777,8 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
         'application/vnd.elife.medium-article-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -844,11 +803,8 @@ $app->get('/people', function (Request $request) use ($app) {
         'application/vnd.elife.person-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -915,11 +871,8 @@ $app->get('/people/{id}',
             'application/vnd.elife.person+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -936,11 +889,8 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
         'application/vnd.elife.podcast-episode-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -1000,11 +950,8 @@ $app->get('/podcast-episodes/{number}',
             'application/vnd.elife.podcast-episode+json; version=1',
         ];
 
+        /** @var Accept $type */
         $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        if (null === $type) {
-            $type = new Accept($accepts[0]);
-        }
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
@@ -1022,11 +969,8 @@ $app->get('/search', function (Request $request) use ($app) {
         'application/vnd.elife.search+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -1219,11 +1163,8 @@ $app->get('/subjects', function (Request $request) use ($app) {
         'application/vnd.elife.subject-list+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -1274,11 +1215,8 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
         'application/vnd.elife.subject+json; version=1',
     ];
 
+    /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    if (null === $type) {
-        $type = new Accept($accepts[0]);
-    }
 
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
@@ -1307,6 +1245,7 @@ $app->get('images/{type}/{file}/{extension}',
             $imagine = $app['imagine'];
 
             try {
+                /** @var ImageInterface $image */
                 $image = $imagine->open(__DIR__.'/../assets/'.$type.'/'.$file.'.'.$extension);
             } catch (Exception $e) {
                 throw new NotFoundHttpException('Image not found', $e);
@@ -1371,6 +1310,10 @@ $app->after(function (Request $request, Response $response, Application $app) {
 $app->error(function (Throwable $e) {
     if ($e instanceof HttpExceptionInterface) {
         $status = $e->getStatusCode();
+        $message = $e->getMessage();
+        $extra = [];
+    } elseif ($e instanceof UnsupportedVersion) {
+        $status = Response::HTTP_NOT_ACCEPTABLE;
         $message = $e->getMessage();
         $extra = [];
     } else {
