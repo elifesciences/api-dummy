@@ -1171,11 +1171,15 @@ $app->get('/search', function (Request $request) use ($app) {
         usort($results, function (array $a, array $b) {
             if ('event' === $a['type']) {
                 $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
+            } elseif ('collection' === $a['type']) {
+                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated']);
             } else {
                 $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
             }
             if ('event' === $b['type']) {
                 $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['starts']);
+            } elseif ('collection' === $b['type']) {
+                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['updated']);
             } else {
                 $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
             }
