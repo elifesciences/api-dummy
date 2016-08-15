@@ -38,6 +38,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             404,
         ];
 
+        yield '/annual-reports/2012 wrong version' => [
+            Request::create('/annual-reports/2012', 'GET', [], [], [],
+                ['HTTP_ACCEPT' => 'application/vnd.elife.annual-report+json; version=2']),
+            'application/problem+json',
+            406,
+        ];
+
         yield $path = '/annual-reports' => [
             Request::create($path),
             'application/vnd.elife.annual-report-list+json; version=1',

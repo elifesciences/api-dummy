@@ -2,6 +2,11 @@
     "name": "elife/dummy-api",
     "type": "project",
     "license": "GPL-3.0+",
+    "autoload": {
+        "psr-4": {
+            "eLife\\DummyApi\\": "src/"
+        }
+    },
     "autoload-dev": {
         "psr-4": {
             "test\\eLife\\DummyApi\\": "test/"
