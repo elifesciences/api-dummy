@@ -1,0 +1,159 @@
+{
+    "received": "2014-08-18",
+    "accepted": "2014-08-31",
+    "versions": [
+        {
+            "status": "poa",
+            "id": "04395",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.04395",
+            "title": "Mapping the zoonotic niche of Ebola virus disease in Africa",
+            "published": "2014-09-08T00:00:00Z",
+            "volume": 3,
+            "elocationId": "e04395",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Pigott et al",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "subjects": [
+                "epidemiology-global-health",
+                "microbiology-infectious-disease"
+            ],
+            "researchOrganisms": [
+                "Human",
+                "Virus"
+            ],
+            "relatedArticles": [
+                "16412"
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Ebola virus disease (EVD) is a complex zoonosis that is highly virulent in humans. The largest recorded outbreak of EVD is ongoing in West Africa, outside of its previously reported and predicted niche. We assembled location data on all recorded zoonotic transmission to humans and Ebola virus infection in bats and primates (1976-2014). Using species distribution models, these occurrence data were paired with environmental covariates to predict a zoonotic transmission niche covering 22 countries across Central and West Africa. Vegetation, elevation, temperature, evapotranspiration, and suspected reservoir bat distributions define this relationship. At-risk areas are inhabited by 22 million people; however, the rarity of human outbreaks emphasises the very low probability of transmission to humans. Increasing population sizes and international connectivity by air since the first detection of EVD in 1976 suggest that the dynamics of human-to-human secondary transmission in contemporary outbreaks will be very different to those of the past."
+                    }
+                ]
+            }
+        },
+        {
+            "status": "vor",
+            "id": "04395",
+            "version": 2,
+            "type": "research-article",
+            "doi": "10.7554/eLife.04395",
+            "title": "Mapping the zoonotic niche of Ebola virus disease in Africa",
+            "published": "2014-09-19T00:00:00Z",
+            "volume": 3,
+            "issue": 3,
+            "elocationId": "e04395",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Berger et al",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "pdf": "https://elifesciences.org/content/4/e04395.pdf",
+            "subjects": [
+                "epidemiology-global-health",
+                "microbiology-infectious-disease"
+            ],
+            "researchOrganisms": [
+                "Human",
+                "Virus"
+            ],
+            "keywords": [
+                "Ebola",
+                "species distribution modelling",
+                "boosted regression tree",
+                "disease mapping",
+                "Ebola virus",
+                "niche based modelling"
+            ],
+            "relatedArticles": [
+                "16412"
+            ],
+            "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks.",
+            "abstract": {
+                "doi": "10.7554/eLife.04395.001",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Ebola virus disease (EVD) is a complex zoonosis that is highly virulent in humans. The largest recorded outbreak of EVD is ongoing in West Africa, outside of its previously reported and predicted niche. We assembled location data on all recorded zoonotic transmission to humans and Ebola virus infection in bats and primates (1976–2014). Using species distribution models, these occurrence data were paired with environmental covariates to predict a zoonotic transmission niche covering 22 countries across Central and West Africa. Vegetation, elevation, temperature, evapotranspiration, and suspected reservoir bat distributions define this relationship. At-risk areas are inhabited by 22 million people; however, the rarity of human outbreaks emphasises the very low probability of transmission to humans. Increasing population sizes and international connectivity by air since the first detection of EVD in 1976 suggest that the dynamics of human-to-human secondary transmission in contemporary outbreaks will be very different to those of the past."
+                    }
+                ]
+            },
+            "digest": {
+                "doi": "10.7554/eLife.04395.002",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Since the first outbreaks of Ebola virus disease in 1976, there have been numerous other outbreaks in humans across Africa with fatality rates ranging from 50% to 90%. Humans can become infected with the Ebola virus after direct contact with blood or bodily fluids from an infected person or animal. The virus also infects and kills other primates—such as chimpanzees or gorillas—though Old World fruit bats are suspected to be the most likely carriers of the virus in the wild."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The largest recorded outbreak of Ebola virus disease is ongoing in West Africa: more people have been infected in this current outbreak than in all previous outbreaks combined. The current outbreak is also the first to occur in West Africa—which is outside the previously known range of the Ebola virus."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Pigott et al. have now updated predictions about where in Africa wild animals may harbour the virus and where the transmission of the virus from these animals to humans is possible. As such, the map identifies the regions that are most at risk of a future Ebola outbreak. The data behind these new maps include the locations of all recorded primary cases of Ebola in human populations—the ‘index’ cases—many of which have been linked to animal sources. The data also include the locations of recorded cases of Ebola virus infections in wild bats and primates from the last forty years. The maps, which were modelled using more flexible methods than previous predictions, also include new information—collected using satellites—about environmental factors and new predictions of the range of wild fruit bats."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Pigott et al. report that the transmission of Ebola virus from animals to humans is possible in 22 countries across Central and West Africa—and that 22 million people live in the areas at risk. However, outbreaks in human populations are rare and the likelihood of a human getting the disease from an infected animal still remains very low. The updated map does not include data about how infections spread from one person to another, so the next challenge is to use existing data on human-to-human transmission to better understand the likely size and extent of current and future outbreaks. As more people live in, and travel to and from, the at-risk regions than ever before, Pigott et al. note that new outbreaks of Ebola virus disease are likely to be very different to those of the past."
+                    }
+                ]
+            },
+            "body": [
+                {
+                    "type": "section",
+                    "title": "Introduction",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Ebola viruses have for the last forty years been responsible for a number of outbreaks of Ebola virus disease (EVD) in humans (Pattyn et al., 1977), with high case fatality rates typically around 60–70%, but potentially reaching as high as 90% (Feldmann and Geisbert, 2011). The most recent outbreak began in Guinea in December 2013 (Baize et al., 2014; Bausch and Schwarz, 2014) and has subsequently spread to Liberia, Sierra Leone and Nigeria (ECDC, 2014). The unprecedented size and scale of this ongoing outbreak has the potential to destabilise already fragile economies and healthcare systems (Fauci, 2014), and fears of international spread of a Category A Priority Pathogen (NIH, 2014) have made this a massive focus for international public health (Chan, 2014). This has led to the current outbreak being declared a Public Health Emergency of International Concern on the 8 August 2014 (Briand et al., 2014; Gostin et al., 2014; WHO, 2014d)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The <italic>Filoviridae</italic>, of which <italic>Ebolavirus</italic> is a constituent genus, belong to the order <italic>Mononegavirales</italic>. Two other genera complete the family: <italic>Marburgvirus</italic>, itself responsible for a number of outbreaks of haemorrhagic fever across Africa (Gear et al., 1975; Conrad et al., 1978; Smith et al., 1982; Towner et al., 2006) and <italic>Cuevavirus</italic>, recently isolated from bats in northern Spain (Negredo et al., 2011). Five species of <italic>Ebolavirus</italic> have been isolated to date (Kuhn et al., 2010; King et al., 2012); the earliest recognised outbreaks of EVD were reported in Zaire (now the Democratic Republic of the Congo [DRC]) and Sudan in 1976 (International Commission, 1978; WHO International Study Team, 1978). The causative viruses were isolated (Pattyn et al., 1977) and later identified to be distinct species, <italic>Zaire ebolavirus</italic> (EBOV) and <italic>Sudan ebolavirus</italic> (SUDV). A third species of <italic>Ebolavirus</italic>, <italic>Reston ebolavirus</italic>, was isolated from Cynomologus monkeys imported from the Philippines to a facility in the United States, where they experienced severe haemorrhaging (Jahrling et al., 1990). Whilst serological evidence of infection with this species has been reported in individuals in the Philippines (Miranda et al., 1991), no pathogenicity has been reported beyond primates and porcids (Barrette et al., 2009; Feldmann and Geisbert, 2011). In 1994 a fourth species, <italic>Tai Forest ebolavirus</italic> was isolated from a veterinarian who had autopsied a chimpanzee in Côte d’Ivoire (Le Guenno et al., 1995), though the virus has not been detected subsequently. The final species, <italic>Bundibugyo ebolavirus</italic>, was responsible for an outbreak of EVD in Uganda in 2007 (Towner et al., 2008), as well as a more recent outbreak in the DRC (WHO, 2012b)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Initial analysis suggested that the viruses isolated from the current outbreak, originating in Guinea, formed a separate clade within the five <italic>Ebolavirus</italic> species (Baize et al., 2014). Subsequent re-analysis of the same sequences however, indicated that these isolates instead nest within the <italic>Zaire ebolavirus</italic> lineage (Dudas and Rambaut, 2014), and diverged from Central Africa strains approximately ten years ago (Gire et al., 2014)."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Which reservoir species are responsible for maintaining Ebola transmission between outbreaks is not well understood (Peterson et al., 2004b), but over the last decade significant progress has been made in narrowing down the list of likely hosts (Peterson et al., 2007) (Figure 1). Primates have long been known to harbour filoviral infections, with the first Marburg strains identified in African green monkeys in 1967 (Siegert et al., 1967; Beer et al., 1999). Significant mortality has also been reported in wild primate populations across Africa, most notably in gorilla (<italic>Gorilla gorilla</italic>) and chimpanzee (<italic>Pan troglodytes</italic>) populations (Formenty et al., 1999; Rouquet et al., 2005; Bermejo et al., 2006). The high case fatality rates recorded in the great apes combined with their declining populations and limited geographical range, indicate they are likely dead-end hosts for the virus and not reservoir species (Groseth et al., 2007). A large survey of small mammals in and around Gabon identified three species of bats which were infected with Ebola viruses—<italic>Hypsignathus monstrosus</italic>, <italic>Epomops franqueti</italic> and <italic>Myonycetris torquata</italic> (Leroy et al., 2005). Subsequent serological surveys (Pourrut et al., 2009; Hayman et al., 2010) and evidence linking the potential source of human outbreaks to bats (Leroy et al., 2009) lend support to the hypothesis of a bat reservoir. This, coupled with repeated detection of <italic>Marburgvirus</italic> in the fruit bat <italic>Rousettus aegypticus</italic> (Towner et al., 2009) and the only isolations of <italic>Cuevavirus</italic> also from bats (specifically <italic>Llovia virus</italic> [Negredo et al., 2011]), all support the suspicion that Chiroptera play an important role in the natural life-cycle of the filoviruses."
+                        },
+                        {
+                            "type": "image",
+                            "alt": "",
+                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/04395/elife-04395-fig1-v2.jpg",
+                            "caption": "The epidemiology of Ebola virus transmission in Africa."
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "Humans represent a dead-end host for the virus, with only stuttering chains of transmission reported between humans in the majority of previous outbreaks (Chowell et al., 2004; Legrand et al., 2007) and no indication that humans can reintroduce the virus back into reservoir species (Karesh et al., 2012). The incubation period in humans ranges from two days to three weeks, after which a variety of clinical symptoms arise, affecting multiple organs of the body. At the peak of illness, haemorrhaging shock and widespread tissue damage can occur and can eventually lead to death within 6–16 days (Feldmann and Geisbert, 2011). Human-to-human transmission is mainly through direct unprotected contact with infected individuals and cadavers, with infectious particles detected in a number of different body fluids (Feldmann and Geisbert, 2011). The typical outbreak profile is defined by an index individual that has recently come into contact with the blood of another mammal through either hunting or the butchering of animal carcasses (Pourrut et al., 2005). Whilst it has been difficult to identify the zoonotic source for the index cases of some outbreaks, a recurring theme of hunting and handling bushmeat is suspected (Table 1; Boumandouki et al., 2005; Nkoghe et al., 2005, 2011; Leroy et al., 2009). For some outbreaks, including the most recent, the initial source of zoonotic transmission has not been identified. In subsequent human-to-human transmission, the highest risk activities are those that bring humans into close contact with infected individuals. These include medical settings where insufficient infection control precautions have been taken, as well as home care and funeral preparations carried out by families or close friends (Baron et al., 1983; Georges et al., 1999; Boumandouki et al., 2005). As the conditions required for transmission are culturally and contextually dependent, opportunities for sustained transmission are highly heterogeneously distributed. Typically, chains of infection do not exceed three or four sequential transmission events, although occasionally (and particularly in the early stages of infection) a single individual may be responsible for directly infecting a large number of others (Brady et al., 2014). In the outbreak in Gabon in 1996, a single person was responsible for infecting ten other individuals (Milleliri et al., 2004) whilst in the 1995 outbreak in the DRC, thirty five cases resulted from one individual (Khan et al., 1999). Secondary transmission can be restricted by effective case detection and isolation measures (Shoemaker et al., 2012; WHO, 2014c). Where this cannot be achieved, either due to a lack of infrastructure, poor understanding of the disease, or distrust of medical practices, secondary cases can continue to occur (Khan et al., 1999; Larkin, 2003; Hewlett et al., 2005). As the number of infections grows, the ability of healthcare systems to control the further spread diminishes and the risk of a large outbreak increases."
+                        },
+                        {
+                            "type": "table",
+                            "doi": "10.7554/eLife.04395.004",
+                            "id": "tbl1",
+                            "label": "Table 1.",
+                            "title": "Locations of outbreaks of Ebola virus disease in humans",
+                            "tables": [
+                                "<table><thead><tr><th>Outbreak</th><th>Countries</th><th>Date range</th><th>Location</th><th>Species</th><th>Reference</th></tr></thead><tbody><tr><td>1</td><td>South Sudan</td><td>Jun–Nov 1976</td><td>Nzara</td><td>SUDV</td><td>(WHO International Study Team, 1978)</td></tr><tr><td>2</td><td>DRC</td><td>Sep–Oct 1976</td><td>Yambuku</td><td>EBOV</td><td>(International Commission, 1978)</td></tr><tr><td>3</td><td>DRC</td><td>Jun 1977</td><td>Bonduni</td><td>EBOV</td><td>(Heymann et al., 1980)</td></tr><tr><td>4</td><td>South Sudan</td><td>Jul–Oct 1979</td><td>Nzara</td><td>SUDV</td><td>(Baron et al., 1983)</td></tr><tr><td>5</td><td>Côte d’Ivoire</td><td>Nov 1994</td><td>Tai Forest</td><td>TAFV</td><td>(Le Guenno et al., 1995; Formenty et al., 1999)</td></tr><tr><td>6</td><td>Gabon</td><td>Nov 1994–Feb 1995</td><td>Mekouka and Andock mining camps</td><td>EBOV</td><td>(Amblard et al., 1997; Georges et al., 1999; Milleliri et al., 2004)</td></tr><tr><td>7</td><td>DRC</td><td>Jan–Jul 1995</td><td>Mwembe Forest</td><td>EBOV</td><td>(Muyembe and Kipasa, 1995; Khan et al., 1999)</td></tr><tr><td>8</td><td>Gabon</td><td>Jan–Mar 1996</td><td>Mayibout 2</td><td>EBOV</td><td>(Georges et al., 1999; Milleliri et al., 2004)</td></tr><tr><td>9</td><td>Gabon</td><td>Jul 1996–Jan 1997</td><td>Booue</td><td>EBOV</td><td>(Georges et al., 1999; Milleliri et al., 2004)</td></tr><tr><td>10</td><td>Uganda</td><td>Oct 2000–Feb 2001</td><td>Rwot-Obillo</td><td>SUDV</td><td>(WHO, 2001; Okware et al., 2002; Lamunu et al., 2004)</td></tr><tr><td rowspan=\"5\">11</td><td rowspan=\"5\">Gabon &amp; ROC</td><td rowspan=\"5\">Oct 2001–Mar 2002</td><td>Memdemba Entsiami, Abolo and Ambomi</td><td rowspan=\"5\">EBOV</td><td rowspan=\"5\">(WHO, 2003; Milleliri et al., 2004; Nkoghe et al., 2005; Pourrut et al., 2005)</td></tr><tr><td>Ekata</td></tr><tr><td>Oloba</td></tr><tr><td>Etakangaye</td></tr><tr><td>Grand Etoumbi</td></tr><tr><td rowspan=\"3\">12</td><td rowspan=\"3\">ROC</td><td rowspan=\"3\">Dec 2002–Apr 2003</td><td>Yembelangoye</td><td rowspan=\"3\">EBOV</td><td rowspan=\"3\">(WHO, 2003; Pourrut et al., 2005)</td></tr><tr><td>Nearby hunting camp</td></tr><tr><td>Mvoula</td></tr><tr><td>13</td><td>ROC</td><td>Oct–Dec 2003</td><td>Mbandza</td><td>EBOV</td><td>(Boumandouki et al., 2005)</td></tr><tr><td>14</td><td>South Sudan</td><td>Apr–Jun 2004</td><td>Forests bordering Yambio</td><td>SUDV</td><td>(WHO, 2005; Onyango et al., 2007)</td></tr><tr><td>15</td><td>ROC</td><td>Apr–May 2005</td><td>Odzala National Park</td><td>EBOV</td><td>(Nkoghe et al., 2011)</td></tr><tr><td>16</td><td>DRC</td><td>May–Nov 2007</td><td>Mombo Mounene 2 market</td><td>EBOV</td><td>(Leroy et al., 2009)</td></tr><tr><td>17</td><td>Uganda</td><td>Aug–Dec 2007</td><td>Kabango</td><td>BDBV</td><td>(Towner et al., 2008; MacNeil et al., 2010; Wamala et al., 2010)</td></tr><tr><td>18</td><td>DRC</td><td>Nov 2008–Feb 2009</td><td>Luebo</td><td>EBOV</td><td>(Grard et al., 2011)</td></tr><tr><td>19</td><td>Uganda</td><td>May 2011</td><td>Nakisamata</td><td>SUDV</td><td>(Shoemaker et al., 2012)</td></tr><tr><td>20</td><td>DRC</td><td>July–Nov 2012</td><td>Isiro</td><td>BDBV</td><td>(CDC, 2014; WHO, 2012b)</td></tr><tr><td>21</td><td>Uganda</td><td>July–Oct 2012</td><td>Nyanswiga</td><td>SUDV</td><td>(CDC, 2014; WHO, 2012a)</td></tr><tr><td>22</td><td>Uganda</td><td>Nov 2012–Jan 2013</td><td>Luwero District</td><td>SUDV</td><td>(WHO, 2012c; CDC, 2014)</td></tr><tr><td>23</td><td>Guinea</td><td>Dec 2013 -</td><td>Meliandou</td><td>EBOV</td><td>(Baize et al., 2014; Bausch and Schwarz, 2014)</td></tr></tbody></table>"
+                            ],
+                            "footer": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "DRC = Democratic Republic of the Congo, ROC = Republic of Congo."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
