@@ -1,0 +1,20 @@
+{
+    "id": "bcooper",
+    "type": "reviewing-editor",
+    "name": {
+        "preferred": "Ben Cooper",
+        "index": "Cooper, Ben"
+    },
+    "orcid": "0000-0002-9445-7217",
+    "research": {
+        "expertises": [
+            "computational-systems-biology",
+            "epidemiology-global-health"
+        ],
+        "focuses": [
+            "Population biology of communicable diseases",
+            "Antimicrobial resistance",
+            "Epidemiological methods"
+        ]
+    }
+}

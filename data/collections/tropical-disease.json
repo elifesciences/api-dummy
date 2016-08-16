@@ -31,7 +31,20 @@
         "name": {
             "preferred": "Prabhat Jha",
             "index": "Jha, Prabhat"
-        }
+        },
+        "image": {
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
+                    "500": "%base_url%/images/people/pjha/jpg?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/people/pjha/jpg?width=70&height=70",
+                    "140": "%base_url%/images/people/pjha/jpg?width=140&height=140"
+                }
+            }
+        },
+        "etAl": true
     },
     "curators": [
         {
@@ -48,6 +61,18 @@
             "name": {
                 "preferred": "Prabhat Jha",
                 "index": "Jha, Prabhat"
+            },
+            "image": {
+                "sizes": {
+                    "16:9": {
+                        "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
+                        "500": "%base_url%/images/people/pjha/jpg?width=500&height=281"
+                    },
+                    "1:1": {
+                        "70": "%base_url%/images/people/pjha/jpg?width=70&height=70",
+                        "140": "%base_url%/images/people/pjha/jpg?width=140&height=140"
+                    }
+                }
             }
         }
     ],
@@ -106,7 +131,40 @@
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "published": "2016-03-28T00:00:00Z",
             "volume": 5,
-            "elocationId": "e14107"
+            "elocationId": "e14107",
+            "subjects": [
+                "biochemistry",
+                "biophysics-structural-biology"
+            ]
+        },
+        {
+            "type": "editorial",
+            "status": "vor",
+            "id": "05770",
+            "version": 1,
+            "image": {
+                "alt": "",
+                "sizes": {
+                    "2:1": {
+                        "900": "%base_url%/images/articles/05770/jpg?width=900&height=450",
+                        "1800": "%base_url%/images/articles/05770/jpg?width=1800&height=900"
+                    },
+                    "16:9": {
+                        "250": "%base_url%/images/articles/05770/jpg?width=250&height=141",
+                        "500": "%base_url%/images/articles/05770/jpg?width=500&height=281"
+                    },
+                    "1:1": {
+                        "70": "%base_url%/images/articles/05770/jpg?width=70&height=70",
+                        "140": "%base_url%/images/articles/05770/jpg?width=140&height=140"
+                    }
+                }
+            },
+            "doi": "10.7554/eLife.05770",
+            "title": "The pleasure of publishing",
+            "published": "2015-01-06T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e05770",
+            "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
         }
     ],
     "podcastEpisodes": [
