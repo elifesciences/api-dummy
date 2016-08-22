@@ -969,12 +969,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "c27f5f7381f571cb8cc998c2ddb11ae1296558f2"
+                "reference": "54ac0ec134d84fade469d94195d2755d6a771470"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/c27f5f7381f571cb8cc998c2ddb11ae1296558f2",
-                "reference": "c27f5f7381f571cb8cc998c2ddb11ae1296558f2",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/54ac0ec134d84fade469d94195d2755d6a771470",
+                "reference": "54ac0ec134d84fade469d94195d2755d6a771470",
                 "shasum": ""
             },
             "require": {

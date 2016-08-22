@@ -145,6 +145,23 @@ $app['experiments'] = function () use ($app) {
     return $experiments;
 };
 
+$app['interviews'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/interviews');
+
+    $interviews = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $interviews[$json['id']] = $json;
+    }
+
+    uasort($interviews, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $interviews;
+};
+
 $app['medium-articles'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/medium-articles');
 
@@ -696,6 +713,78 @@ $app->get('/events/{id}',
         );
     });
 
+$app->get('/interviews', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.interview-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $interviews = $app['interviews'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($interviews),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $interviews = array_reverse($interviews);
+    }
+
+    $interviews = array_slice($interviews, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($interviews) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($interviews as $i => $interview) {
+        unset($interview['interviewee']['cv']);
+        unset($interview['content']);
+
+        $content['items'][] = $interview;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/interviews/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['interviews'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        };
+
+        $interview = $app['interviews'][$id];
+
+        $accepts = [
+            'application/vnd.elife.interview+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($interview, JSON_PRETTY_PRINT),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
+
 $app->get('/labs-experiments', function (Request $request) use ($app) {
     $accepts = [
         'application/vnd.elife.labs-experiment-list+json; version=1',
@@ -1042,6 +1131,14 @@ $app->get('/search', function (Request $request) use ($app) {
         $results[] = $result;
     }
 
+    foreach ($app['interviews'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        unset($result['interviewee']['cv']);
+        unset($result['content']);
+        $result['type'] = 'interview';
+        $results[] = $result;
+    }
+
     foreach ($app['podcast-episodes'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['chapters']);
@@ -1093,7 +1190,16 @@ $app->get('/search', function (Request $request) use ($app) {
         }));
     }
 
-    foreach (['blog-article', 'collection', 'event', 'labs-experiment', 'podcast-episode'] as $contentType) {
+    foreach (
+        [
+            'blog-article',
+            'collection',
+            'event',
+            'labs-experiment',
+            'interview',
+            'podcast-episode',
+        ] as $contentType
+    ) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
             return $contentType === $result['type'];
         }));
