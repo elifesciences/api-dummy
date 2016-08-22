@@ -24,5 +24,45 @@
     "subjects": [
         "cell-biology",
         "genomics-evolutionary-biology"
+    ],
+    "chapters": [
+        {
+            "number": 1,
+            "title": "The pleasure of publishing",
+            "time": 0,
+            "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject.",
+            "content": [
+                {
+                    "status": "vor",
+                    "id": "05770",
+                    "version": 1,
+                    "type": "editorial",
+                    "image": {
+                        "alt": "",
+                        "sizes": {
+                            "2:1": {
+                                "900": "%base_url%/images/articles/05770/jpg?width=900&height=450",
+                                "1800": "%base_url%/images/articles/05770/jpg?width=1800&height=900"
+                            },
+                            "16:9": {
+                                "250": "%base_url%/images/articles/05770/jpg?width=250&height=141",
+                                "500": "%base_url%/images/articles/05770/jpg?width=500&height=281"
+                            },
+                            "1:1": {
+                                "70": "%base_url%/images/articles/05770/jpg?width=70&height=70",
+                                "140": "%base_url%/images/articles/05770/jpg?width=140&height=140"
+                            }
+                        }
+                    },
+                    "doi": "10.7554/eLife.05770",
+                    "title": "The pleasure of publishing",
+                    "published": "2015-01-06T00:00:00Z",
+                    "volume": 5,
+                    "elocationId": "e05770",
+                    "pdf": "https://elifesciences.org/content/4/e05770.pdf",
+                    "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
+                }
+            ]
+        }
     ]
 }

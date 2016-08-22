@@ -926,6 +926,8 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
     }
 
     foreach ($episodes as $i => $episode) {
+        unset($episode['chapters']);
+
         $content['items'][] = $episode;
     }
 
@@ -1042,6 +1044,7 @@ $app->get('/search', function (Request $request) use ($app) {
 
     foreach ($app['podcast-episodes'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
+        unset($result['chapters']);
         $result['type'] = 'podcast-episode';
         $results[] = $result;
     }

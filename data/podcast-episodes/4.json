@@ -20,5 +20,30 @@
             }
         }
     },
-    "mp3": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+    "mp3": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3",
+    "chapters": [
+        {
+            "number": 1,
+            "title": "Adult human height",
+            "time": 0,
+            "content": [
+                {
+                    "status": "vor",
+                    "id": "13410",
+                    "version": 1,
+                    "type": "research-article",
+                    "doi": "10.7554/eLife.13410",
+                    "title": "A century of trends in adult human height",
+                    "published": "2016-07-25T23:00:00Z",
+                    "volume": 5,
+                    "elocationId": "e13410",
+                    "pdf": "https://elifesciences.org/content/4/e13410.pdf",
+                    "subjects": [
+                        "epidemiology-global-health"
+                    ],
+                    "impactStatement": "Height in early adulthood is an indicator that integrates across different dimensions of sustainable human development with links to health and longevity, nutrition, education and economic productivity."
+                }
+            ]
+        }
+    ]
 }
