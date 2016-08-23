@@ -874,9 +874,27 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
 
     $articles = $app['medium-articles'];
 
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
     $content = [
-        'items' => array_slice($articles, 0, 10),
+        'total' => count($articles),
+        'items' => [],
     ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $articles = array_reverse($articles);
+    }
+
+    $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($articles) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($articles as $i => $article) {
+        $content['items'][] = $article;
+    }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
