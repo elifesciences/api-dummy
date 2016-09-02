@@ -882,7 +882,7 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
         'items' => [],
     ];
 
-    if ('desc' === $request->query->get('order', 'desc')) {
+    if ('asc' === $request->query->get('order', 'desc')) {
         $articles = array_reverse($articles);
     }
 
