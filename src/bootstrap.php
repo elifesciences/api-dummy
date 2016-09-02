@@ -285,7 +285,7 @@ $app->get('/annual-reports/{year}',
     function (Request $request, int $year) use ($app) {
         if (false === isset($app['annual-reports'][$year])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $report = $app['annual-reports'][$year];
 
@@ -376,7 +376,7 @@ $app->get('/articles/{number}',
     function (Request $request, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
-        };
+        }
 
         $latestVersion = count($app['articles'][$number]['versions']);
 
@@ -391,7 +391,7 @@ $app->get('/articles/{number}/versions',
     function (Request $request, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
-        };
+        }
 
         $article = $app['articles'][$number];
 
@@ -431,13 +431,13 @@ $app->get('/articles/{number}/versions/{version}',
     function (Request $request, string $number, int $version) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
-        };
+        }
 
         $article = $app['articles'][$number];
 
         if (false === isset($article['versions'][$version - 1])) {
             throw new NotFoundHttpException('Version not found');
-        };
+        }
 
         $articleVersion = $article['versions'][$version - 1];
 
@@ -523,7 +523,7 @@ $app->get('/blog-articles/{id}',
     function (Request $request, string $id) use ($app) {
         if (false === isset($app['blog-articles'][$id])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $article = $app['blog-articles'][$id];
 
@@ -606,7 +606,7 @@ $app->get('/collections/{id}',
     function (Request $request, string $id) use ($app) {
         if (false === isset($app['collections'][$id])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $collection = $app['collections'][$id];
 
@@ -692,7 +692,7 @@ $app->get('/events/{id}',
     function (Request $request, string $id) use ($app) {
         if (false === isset($app['events'][$id])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $events = $app['events'][$id];
 
@@ -764,7 +764,7 @@ $app->get('/interviews/{id}',
     function (Request $request, string $id) use ($app) {
         if (false === isset($app['interviews'][$id])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $interview = $app['interviews'][$id];
 
@@ -839,7 +839,7 @@ $app->get('/labs-experiments/{number}',
     function (Request $request, int $number) use ($app) {
         if (false === isset($app['experiments'][$number])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $experiment = $app['experiments'][$number];
 
@@ -970,7 +970,7 @@ $app->get('/people/{id}',
     function (Request $request, string $id) use ($app) {
         if (false === isset($app['people'][$id])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $person = $app['people'][$id];
 
@@ -1051,7 +1051,7 @@ $app->get('/podcast-episodes/{number}',
     function (Request $request, int $number) use ($app) {
         if (false === isset($app['podcast-episodes'][$number])) {
             throw new NotFoundHttpException('Not found');
-        };
+        }
 
         $episode = $app['podcast-episodes'][$number];
 
@@ -1334,7 +1334,7 @@ $app->get('/subjects', function (Request $request) use ($app) {
 $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
     if (false === isset($app['subjects'][$id])) {
         throw new NotFoundHttpException('Not found');
-    };
+    }
 
     $subject = $app['subjects'][$id];
 
