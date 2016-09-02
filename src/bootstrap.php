@@ -507,6 +507,8 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
     }
 
     foreach ($articles as $i => $article) {
+        unset($article['content']);
+
         $content['items'][] = $article;
     }
 
