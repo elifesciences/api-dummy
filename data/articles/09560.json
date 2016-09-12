@@ -18,6 +18,286 @@
                 "holder": "Berger et al",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "Lee R Berger et al",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Lee R Berger",
+                        "index": "Berger, Lee R"
+                    },
+                    "email": "Lee.Berger@wits.ac.za",
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "School of Geosciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "John Hawks",
+                        "index": "Hawks, John"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Anthropology",
+                                "University of Wisconsin-Madison"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Madison",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Madison"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Darryl J de Ruiter",
+                        "index": "De Ruiter, Darryl J"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Anthropology",
+                                "Texas A&M University"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "College Station",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "College Station"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Steven E Churchill",
+                        "index": "Churchill, Steven E"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Evolutionary Anthropology",
+                                "Duke University"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Durham",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Durham"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Peter Schmid",
+                        "index": "Schmid, Peter"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Anthropological Institute and Museum",
+                                "University of Zurich"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Zurich",
+                                    "Switzerland"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Zurich"
+                                    ],
+                                    "country": "Switzerland"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Lucas K Delezene",
+                        "index": "Delezene, Lucas K"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Evolutionary Studies Institute and Centre of Excellence in PalaeoSciences",
+                                "University of the Witwatersrand"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Johannesburg",
+                                    "South Africa"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Johannesburg"
+                                    ],
+                                    "country": "South Africa"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Anthropology",
+                                "University of Arkansas"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Fayetteville",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Fayetteville"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Acquisition of data, Analysis and interpretation of data, Contributed unpublished essential data or reagents"
+                }
+            ],
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
                 "genomics-evolutionary-biology"

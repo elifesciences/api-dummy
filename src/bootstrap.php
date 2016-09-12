@@ -351,6 +351,7 @@ $app->get('/articles', function (Request $request) use ($app) {
 
         unset($latestVersion['issue']);
         unset($latestVersion['copyright']);
+        unset($latestVersion['authors']);
         unset($latestVersion['researchOrganisms']);
         unset($latestVersion['keywords']);
         unset($latestVersion['relatedArticles']);
@@ -1103,6 +1104,7 @@ $app->get('/search', function (Request $request) use ($app) {
 
         unset($result['issue']);
         unset($result['copyright']);
+        unset($result['authors']);
         unset($result['researchOrganisms']);
         unset($result['keywords']);
         unset($result['relatedArticles']);

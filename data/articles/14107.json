@@ -16,7 +16,247 @@
                 "license": "CC-BY-4.0",
                 "holder": "Huang et al",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
-            }
+            },
+            "authorLine": "Yongjian Huang et al",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Yongjian Huang",
+                        "index": "Huang, Yongjian"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "California Institute for Quantitative Biosciences",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Howard Hughes Medical Institute",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Biophysics Graduate Group",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Conducted the data collection and analysis, Designed mammalian cell-based EGFR activity assay and conducted the data analysis and interpretation, Designed and conducted docking and model building, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Shashank Bharill",
+                        "index": "Bharill, Shashank"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Conducted the data collection and analysis, Drafting or revising the article."
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "John Kuriyan",
+                        "index": "Kuriyan, John"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "California Institute for Quantitative Biosciences",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Howard Hughes Medical Institute",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Biophysics Graduate Group",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Physical Biosciences Division",
+                                "Lawrence Berkeley National Laboratory"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Chemistry",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "orcid": "0000-0002-4414-5477",
+                    "email": "kuriyan@berkeley.edu",
+                    "competingInterests": "Senior editor, <i>eLife</i>",
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Designed mammalian cell-based EGFR activity assay and conducted the data analysis and interpretation, Designed and conducted docking and model building, Drafting or revising the article."
+                }
+            ]
         },
         {
             "status": "poa",
@@ -34,6 +274,246 @@
                 "holder": "Huang et al",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "Yongjian Huang et al",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Yongjian Huang",
+                        "index": "Huang, Yongjian"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "California Institute for Quantitative Biosciences",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Howard Hughes Medical Institute",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Biophysics Graduate Group",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Conducted the data collection and analysis, Designed mammalian cell-based EGFR activity assay and conducted the data analysis and interpretation, Designed and conducted docking and model building, Drafting or revising the article, Contributed unpublished essential data or reagents"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Shashank Bharill",
+                        "index": "Bharill, Shashank"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Conducted the data collection and analysis, Drafting or revising the article."
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "John Kuriyan",
+                        "index": "Kuriyan, John"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Molecular and Cell Biology",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "California Institute for Quantitative Biosciences",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Howard Hughes Medical Institute",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Biophysics Graduate Group",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Physical Biosciences Division",
+                                "Lawrence Berkeley National Laboratory"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Department of Chemistry",
+                                "University of California, Berkeley"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Berkeley"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "orcid": "0000-0002-4414-5477",
+                    "email": "kuriyan@berkeley.edu",
+                    "competingInterests": "Senior editor, <i>eLife</i>",
+                    "contribution": "Designed Xenopus oocyte based single-molecule analysis of EGFR stoichiometry and interpreted the data, Designed mammalian cell-based EGFR activity assay and conducted the data analysis and interpretation, Designed and conducted docking and model building, Drafting or revising the article."
+                }
+            ],
             "pdf": "https://elifesciences.org/content/5/e14107.pdf",
             "subjects": [
                 "biochemistry",

@@ -33,6 +33,38 @@
                 "holder": "Stringer",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "Chris Stringer",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Chris Stringer",
+                        "index": "Stringer, Chris"
+                    },
+                    "orcid": "0000-0002-9183-7337",
+                    "email": "c.stringer@nhm.ac.uk",
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Earth Sciences",
+                                "Natural History Museum"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "London",
+                                    "United Kingdom"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "London"
+                                    ],
+                                    "country": "United Kingdom"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
             "pdf": "https://elifesciences.org/content/4/e10627.pdf",
             "subjects": [
                 "genomics-evolutionary-biology"

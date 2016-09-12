@@ -18,6 +18,142 @@
                 "holder": "Pigott et al",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "David M Pigott et al",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "David M Pigott",
+                        "index": "Pigott, David M"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Institute for Health Metrics and Evaluation",
+                                "University of Washington"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Seattle",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Seattle"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        },
+                        {
+                            "name": [
+                                "Oxford Big Data Institute",
+                                "Li Ka Shing Centre for Health Information and Discovery"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Oxford",
+                                    "United Kingdom"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Oxford"
+                                    ],
+                                    "country": "United Kingdom"
+                                }
+                            }
+                        }
+                    ],
+                    "email": "pigottdm@uw.edu",
+                    "contribution": "Conception and design, Acquisition of data, Analysis and interpretation of data, Drafting or revising the article"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Anoushka I Millear",
+                        "index": "Millear, Anoushka I"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Institute for Health Metrics and Evaluation",
+                                "University of Washington"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Seattle",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Seattle"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Acquisition of data, Analysis and interpretation of data, Drafting or revising the article"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Lucas Earl",
+                        "index": "Earl, Lucas"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Institute for Health Metrics and Evaluation",
+                                "University of Washington"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Seattle",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Seattle"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "contribution": "Analysis and interpretation of data, Drafting or revising the article"
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Chloe Morozoff",
+                        "index": "Morozoff, Chloe"
+                    },
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Institute for Health Metrics and Evaluation",
+                                "University of Washington"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Seattle",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Seattle"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ],
+                    "orcid": "0000-0002-3254-5553",
+                    "email": "chloemor@uw.edu",
+                    "contribution": "Analysis and interpretation of data, Drafting or revising the article"
+                }
+            ],
             "pdf": "https://elifesciences.org/content/4/e16412.pdf",
             "subjects": [
                 "epidemiology-global-health",

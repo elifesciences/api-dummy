@@ -18,6 +18,133 @@
                 "holder": "Franco et al",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "NCD Risk Factor Collaboration (NCD-RisC)",
+            "authors": [
+                {
+                    "type": "group",
+                    "name": "NCD Risk Factor Collaboration (NCD-RisC)",
+                    "people": [
+                        {
+                            "name": {
+                                "preferred": "James Bentham",
+                                "index": "Bentham, James"
+                            },
+                            "affiliations": [
+                                {
+                                    "name": [
+                                        "Imperial College London"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "United Kingdom"
+                                        ],
+                                        "components": {
+                                            "country": "United Kingdom"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "preferred": "Mariachiara Di Cesare",
+                                "index": "Di Cesare, Mariachiara"
+                            },
+                            "affiliations": [
+                                {
+                                    "name": [
+                                        "Middlesex University"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "United Kingdom"
+                                        ],
+                                        "components": {
+                                            "country": "United Kingdom"
+                                        }
+                                    }
+                                },
+                                {
+                                    "name": [
+                                        "Imperial College London"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "United Kingdom"
+                                        ],
+                                        "components": {
+                                            "country": "United Kingdom"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "preferred": "Gretchen A Stevens",
+                                "index": "Stevens, Gretchen A"
+                            },
+                            "affiliations": [
+                                {
+                                    "name": [
+                                        "World Health Organization"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "Switzerland"
+                                        ],
+                                        "components": {
+                                            "country": "Switzerland"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "preferred": "Bin Zhou",
+                                "index": "Zhou, Bin"
+                            },
+                            "affiliations": [
+                                {
+                                    "name": [
+                                        "Imperial College London"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "United Kingdom"
+                                        ],
+                                        "components": {
+                                            "country": "United Kingdom"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": {
+                                "preferred": "Honor Bixby",
+                                "index": "Bixby, Honor"
+                            },
+                            "affiliations": [
+                                {
+                                    "name": [
+                                        "Imperial College London"
+                                    ],
+                                    "address": {
+                                        "formatted": [
+                                            "United Kingdom"
+                                        ],
+                                        "components": {
+                                            "country": "United Kingdom"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "pdf": "https://elifesciences.org/content/4/e13410.pdf",
             "subjects": [
                 "epidemiology-global-health"
