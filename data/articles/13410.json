@@ -88,15 +88,33 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.003",
+                            "id": "fig1",
+                            "label": "Figure 1",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig1-v1.jpg",
-                            "caption": "Adult height for the 1896 and 1996 birth cohorts for men."
+                            "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                }
+                            ]
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.004",
+                            "id": "fig2",
+                            "label": "Figure 2",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig2-v1.jpg",
-                            "caption": "Adult height for the 1896 and 1996 birth cohorts for men."
+                            "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -104,21 +122,42 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.005",
+                            "id": "fig3",
+                            "label": "Figure 3",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig3-v1.jpg",
-                            "caption": "Change in adult height between the 1896 and 1996 birth cohorts."
+                            "title": "Change in adult height between the 1896 and 1996 birth cohorts."
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.006",
+                            "id": "fig4",
+                            "label": "Figure 4",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig4-v1.jpg",
-                            "caption": "Height in adulthood for the 1896 and 1996 birth cohorts for men."
+                            "title": "Height in adulthood for the 1896 and 1996 birth cohorts for men.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                }
+                            ]
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.007",
+                            "id": "fig5",
+                            "label": "Figure 5",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig5-v1.jpg",
-                            "caption": "Height in adulthood for the 1896 and 1996 birth cohorts for women."
+                            "title": "Height in adulthood for the 1896 and 1996 birth cohorts for women.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -126,9 +165,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.008",
+                            "id": "fig6",
+                            "label": "Figure 6",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig6-v1.jpg",
-                            "caption": "Trends in height for the adult populations of selected countries in Asia."
+                            "title": "Trends in height for the adult populations of selected countries in Asia.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -136,9 +184,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.009",
+                            "id": "fig7",
+                            "label": "Figure 7",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig7-v1.jpg",
-                            "caption": "Trends in height for the adult populations of selected countries in Europe."
+                            "title": "Trends in height for the adult populations of selected countries in Europe.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -146,9 +203,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.010",
+                            "id": "fig8",
+                            "label": "Figure 8",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig8-v1.jpg",
-                            "caption": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa."
+                            "title": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
@@ -160,9 +226,12 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.011",
+                            "id": "fig9",
+                            "label": "Figure 9",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig9-v1.jpg",
-                            "caption": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
+                            "title": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
                         },
                         {
                             "type": "paragraph",
@@ -170,9 +239,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.13410.012",
+                            "id": "fig10",
+                            "label": "Figure 10",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig10-v1.jpg",
-                            "caption": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height."
+                            "title": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Each point shows one country. BMI change was calculated for mean BMI at 45–49 years of age – an age when diseases associated with excess weight become common but weight loss due to pre-existing disease is still uncommon. BMI data were available for 1975–2014 (NCD Risk Factor Collaboration, 2016); 45–49 year olds in these years correspond to 1928–1967 birth cohorts. BMI data were from a pooled analysis of 1698 population-based measurement studies with 19.2 million participants, with details reported elsewhere (NCD Risk Factor Collaboration, 2016)."
+                                }
+                            ]
                         }
                     ]
                 }

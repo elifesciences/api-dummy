@@ -60,9 +60,17 @@
                         },
                         {
                             "type": "image",
+                            "id": "fig1",
+                            "label": "Figure 1",
                             "alt": "",
                             "uri": "%base_url%/images/articles/10627/jpg",
-                            "caption": "Comparison of skull features of <italic>Homo naledi</italic> and other early human species."
+                            "title": "Comparison of skull features of <italic>Homo naledi</italic> and other early human species.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Replica crania of (left to right) <i>Homo habilis</i> (KNM-ER 1813, Koobi Fora, Kenya ∼1.8 million years old), an early <i>Homo erectus</i> (D2700, Dmanisi, Georgia ∼1.8 million years old) and <i>Homo floresiensis</i> (Liang Bua 1, Indonesia ∼20,000 years old) are compared with actual fragments of cranial material of <i>H. naledi</i> that have been overlaid on a virtual reconstruction (far right; note some of the images of <i>H. naledi</i> material have been reversed). In each case, the crania are labelled with the typical features of each species. For example, while the adult brain volume of modern humans (<i>Homo sapiens</i>) is typically between 1000 and 1500 cubic centimetres (cc), <i>H. habilis</i> ranged from about 510 to &gt;700 cc, <i>H. erectus</i> from about 550 to &gt;1100 cc, <i>H. floresiensis</i> about 426 cc, and <i>H. naledi</i> between 466 and 560 cc. Furthermore, in modern humans, the occipital bone (at the back of the skull) is typically evenly rounded in profile, whereas in some early humans such as <i>H. erectus</i>, the upper and lower portions of the occipital are sharply angled to each other (i.e., ‘flexed’), and there is a strong ridge of bone running across the angulated region (called a transverse torus)."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",
