@@ -127,9 +127,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.04395.003",
+                            "id": "fig1",
+                            "label": "Figure 1",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/04395/elife-04395-fig1-v2.jpg",
-                            "caption": "The epidemiology of Ebola virus transmission in Africa."
+                            "title": "The epidemiology of Ebola virus transmission in Africa.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Of the suspected reservoir species, 1, 2 and 3 represent the three bat species from which Ebola virus has been isolated (<i>Hypsignathus monstrosus</i>, <i>Myonycteris torquata</i> and <i>Epomops franqueti</i>) and <i>n</i> represents unknown reservoirs of the disease yet to be discovered. Of the susceptible species, A represents <i>Pan troglodytes</i>, B <i>Gorilla gorilla</i> and <i>m</i> represents other organisms susceptible to the disease, such as duikers. H represents humans. Blue arrows indicate unknown transmission cycles or infection routes and red arrow routes have been confirmed or are suspected. Adapted from Groseth et al (2007)."
+                                }
+                            ]
                         },
                         {
                             "type": "paragraph",

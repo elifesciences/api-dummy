@@ -72,9 +72,18 @@
                         },
                         {
                             "type": "image",
+                            "doi": "10.7554/eLife.16412.002",
+                            "id": "fig1",
+                            "label": "Figure 1",
                             "alt": "",
                             "uri": "https://elife-publishing-cdn.s3.amazonaws.com/16412/elife-16412-fig1-v1.jpg",
-                            "caption": "Updated Ebola virus disease occurrence database."
+                            "title": "Updated Ebola virus disease occurrence database.",
+                            "caption": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Human index cases are represented by red circles, animal occurrences in blue. New occurrence information is indicated by the black circle. The coordinates of polygon centroids are displayed for occurrences defined by an area greater than 5 km x 5 km."
+                                }
+                            ]
                         }
                     ]
                 }

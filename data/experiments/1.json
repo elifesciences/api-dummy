@@ -48,7 +48,7 @@
             "type": "image",
             "alt": "",
             "uri": "https:\/\/cdn.elifesciences.org\/images\/news\/manuscripts-figure1.png",
-            "caption": "Manuscripts at a glance"
+            "title": "Manuscripts at a glance"
         },
         {
             "type": "section",
@@ -62,7 +62,7 @@
                     "type": "image",
                     "alt": "",
                     "uri": "https:\/\/cdn.elifesciences.org\/images\/news\/manuscripts_fig2.png",
-                    "caption": "Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project."
+                    "title": "Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project."
                 },
                 {
                     "type": "paragraph",

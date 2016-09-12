@@ -58,9 +58,13 @@
                         },
                         {
                             "type": "image",
+                            "id": "fig1",
                             "alt": "",
                             "uri": "%base_url%/images/articles/16846/jpg",
-                            "caption": "Many aspects of the recruitment of PhD students have changed over the past two decades, but the challenges of identifying those students who will thrive in a given program remain the same."
+                            "title": "Many aspects of the recruitment of PhD students have changed over the past two decades, but the challenges of identifying those students who will thrive in a given program remain the same.",
+                            "attribution": [
+                                "Illustration: Ben Marder"
+                            ]
                         },
                         {
                             "type": "paragraph",

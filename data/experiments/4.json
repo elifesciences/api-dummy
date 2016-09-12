@@ -28,7 +28,7 @@
             "type": "image",
             "alt": "",
             "uri": "https:\/\/placekitten.com\/600\/300",
-            "caption": "Kitteh!"
+            "title": "Kitteh!"
         },
         {
             "type": "paragraph",
