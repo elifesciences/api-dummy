@@ -42,6 +42,7 @@
                     "published": "2015-09-10T00:00:00Z",
                     "volume": 4,
                     "elocationId": "e09560",
+                    "authorLine": "Lee R Berger et al",
                     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
                     "subjects": [
                         "genomics-evolutionary-biology"
@@ -75,6 +76,7 @@
                     "published": "2016-09-10T00:00:00Z",
                     "volume": 4,
                     "elocationId": "e10627",
+                    "authorLine": "Chris Stringer",
                     "pdf": "https://elifesciences.org/content/4/e10627.pdf",
                     "subjects": [
                         "genomics-evolutionary-biology"

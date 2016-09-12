@@ -87,6 +87,7 @@
             "published": "2015-09-10T00:00:00Z",
             "volume": 4,
             "elocationId": "e09560",
+            "authorLine": "Lee R Berger et al",
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
                 "genomics-evolutionary-biology"
@@ -132,6 +133,7 @@
             "published": "2016-03-28T00:00:00Z",
             "volume": 5,
             "elocationId": "e14107",
+            "authorLine": "Yongjian Huang et al",
             "subjects": [
                 "biochemistry",
                 "biophysics-structural-biology"
@@ -164,6 +166,7 @@
             "published": "2015-01-06T00:00:00Z",
             "volume": 5,
             "elocationId": "e05770",
+            "authorLine": "Vivek Malhotra, Eve Marder",
             "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
         }
     ],

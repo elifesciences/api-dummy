@@ -33,6 +33,66 @@
                 "holder": "Malhotra and Marder",
                 "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
             },
+            "authorLine": "Vivek Malhotra, Eve Marder",
+            "authors": [
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Vivek Malhotra",
+                        "index": "Malhotra, Vivek"
+                    },
+                    "email": "vivek.malhotra@crg.eu",
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Cell and Developmental Biology Program",
+                                "Center for Genomic Regulation"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Barcelona",
+                                    "Spain"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Barcelona"
+                                    ],
+                                    "country": "Spain"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "person",
+                    "name": {
+                        "preferred": "Eve Marder",
+                        "index": "Marder, Eve"
+                    },
+                    "orcid": "0000-0001-9632-5448",
+                    "email": "marder@brandeis.edu",
+                    "affiliations": [
+                        {
+                            "name": [
+                                "Department of Biology and the Volen National Center for Complex Systems",
+                                "Brandeis University"
+                            ],
+                            "address": {
+                                "formatted": [
+                                    "Waltham",
+                                    "United States"
+                                ],
+                                "components": {
+                                    "locality": [
+                                        "Waltham"
+                                    ],
+                                    "country": "United States"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
             "pdf": "https://elifesciences.org/content/4/e05770.pdf",
             "keywords": [
                 "eLife",
