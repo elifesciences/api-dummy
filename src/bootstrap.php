@@ -275,7 +275,7 @@ $app->get('/annual-reports', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -300,7 +300,7 @@ $app->get('/annual-reports/{year}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($report, JSON_PRETTY_PRINT),
+            json_encode($report, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -367,7 +367,7 @@ $app->get('/articles', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -421,7 +421,7 @@ $app->get('/articles/{number}/versions',
         }
 
         return new Response(
-            json_encode($content, JSON_PRETTY_PRINT),
+            json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -459,7 +459,7 @@ $app->get('/articles/{number}/versions/{version}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($articleVersion, JSON_PRETTY_PRINT),
+            json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -516,7 +516,7 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -541,7 +541,7 @@ $app->get('/blog-articles/{id}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($article, JSON_PRETTY_PRINT),
+            json_encode($article, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -599,7 +599,7 @@ $app->get('/collections', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -624,7 +624,7 @@ $app->get('/collections/{id}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($collection, JSON_PRETTY_PRINT),
+            json_encode($collection, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -685,7 +685,7 @@ $app->get('/events', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -710,7 +710,7 @@ $app->get('/events/{id}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($events, JSON_PRETTY_PRINT),
+            json_encode($events, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -757,7 +757,7 @@ $app->get('/interviews', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -782,7 +782,7 @@ $app->get('/interviews/{id}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($interview, JSON_PRETTY_PRINT),
+            json_encode($interview, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -832,7 +832,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     }
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -857,7 +857,7 @@ $app->get('/labs-experiments/{number}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($experiment, JSON_PRETTY_PRINT),
+            json_encode($experiment, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -902,7 +902,7 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -963,7 +963,7 @@ $app->get('/people', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -988,7 +988,7 @@ $app->get('/people/{id}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($person, JSON_PRETTY_PRINT),
+            json_encode($person, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -1044,7 +1044,7 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -1069,7 +1069,7 @@ $app->get('/podcast-episodes/{number}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($episode, JSON_PRETTY_PRINT),
+            json_encode($episode, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -1283,7 +1283,7 @@ $app->get('/search', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -1329,7 +1329,7 @@ $app->get('/subjects', function (Request $request) use ($app) {
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
     return new Response(
-        json_encode($content, JSON_PRETTY_PRINT),
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
@@ -1353,7 +1353,7 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
     $type = $type->getType();
 
     return new Response(
-        json_encode($subject, JSON_PRETTY_PRINT),
+        json_encode($subject, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
     );
@@ -1463,7 +1463,7 @@ $app->error(function (Throwable $e) {
     }
 
     return new Response(
-        json_encode(json_decode($problem->asJson()), JSON_PRETTY_PRINT),
+        json_encode(json_decode($problem->asJson()), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         $status,
         ['Content-Type' => 'application/problem+json']
     );

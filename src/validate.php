@@ -1,5 +1,6 @@
 <?php
 
+use eLife\ApiValidator\MessageValidator\FakeHttpsMessageValidator;
 use eLife\ApiValidator\MessageValidator\JsonMessageValidator;
 use eLife\ApiValidator\SchemaFinder\PuliSchemaFinder;
 use Silex\Application;
@@ -22,7 +23,12 @@ $app['puli.repository'] = function (Application $app) {
 };
 
 $app['message-validator'] = function (Application $app) {
-    return new JsonMessageValidator(new PuliSchemaFinder($app['puli.repository']), new JsonDecoder());
+    $jsonDecoder = new JsonDecoder();
+
+    return new FakeHttpsMessageValidator(
+        new JsonMessageValidator(new PuliSchemaFinder($app['puli.repository']), $jsonDecoder),
+        $jsonDecoder
+    );
 };
 
 $app['symfony.psr7-factory'] = function (Application $app) {
@@ -38,16 +44,7 @@ $app->after(function (Request $request, Response $response, Application $app) {
         return;
     }
 
-    $content = $response->getContent();
-
-    $httpsRequest = $subRequest = Request::create(str_replace('http://', 'https://', $request->getUri()), 'GET', [],
-        $request->cookies->all(), [], $request->server->all());
-
-    $httpsResponse = clone $response;
-    $httpsResponse->setContent(str_replace($request->getSchemeAndHttpHost(), $httpsRequest->getSchemeAndHttpHost(),
-        $content));
-
-    $app['message-validator']->validate($app['symfony.psr7-factory']->createResponse($httpsResponse));
+    $app['message-validator']->validate($app['symfony.psr7-factory']->createResponse($response));
 });
 
 return $app;

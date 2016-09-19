@@ -994,12 +994,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-validator-php.git",
-                "reference": "07cd5706098e9206f0ea344fe87974271bf04123"
+                "reference": "6dc70d71f5212588c3851b3b26e50474839bcffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/07cd5706098e9206f0ea344fe87974271bf04123",
-                "reference": "07cd5706098e9206f0ea344fe87974271bf04123",
+                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/6dc70d71f5212588c3851b3b26e50474839bcffd",
+                "reference": "6dc70d71f5212588c3851b3b26e50474839bcffd",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1033,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API validator",
-            "time": "2016-08-01 12:42:52"
+            "time": "2016-09-19 06:27:04"
         },
         {
             "name": "guzzlehttp/psr7",
