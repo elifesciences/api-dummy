@@ -34,12 +34,12 @@
         },
         {
             "type": "paragraph",
-            "text": "Several open-source tools can be used to help address the challenges of sharing and reproducing scientific analyses. The <a href=\"http:\/\/jupyter.org\/\">Jupyter notebook<\/a> is a coding environment that runs in a web browser and lets users create computational \u201cnarrative documents\u201d that combine code, data, figures, and text in a single interactive, executable document. These notebooks are easy to write, support many programming languages, and are already being used in science, journalism, and education."
+            "text": "Several open-source tools can be used to help address the challenges of sharing and reproducing scientific analyses. The <a href=\"http://jupyter.org/\">Jupyter notebook</a> is a coding environment that runs in a web browser and lets users create computational \u201cnarrative documents\u201d that combine code, data, figures, and text in a single interactive, executable document. These notebooks are easy to write, support many programming languages, and are already being used in science, journalism, and education."
         },
         {
             "type": "image",
             "alt": "",
-            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-juptyer-notebook.png"
+            "uri": "https://cdn.elifesciences.org/images/labs/binder-post-juptyer-notebook.png"
         },
         {
             "type": "paragraph",
@@ -48,7 +48,7 @@
         {
             "type": "image",
             "alt": "",
-            "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-github-repository.png"
+            "uri": "https://cdn.elifesciences.org/images/labs/binder-post-github-repository.png"
         },
         {
             "type": "paragraph",
@@ -69,7 +69,7 @@
                 {
                     "type": "image",
                     "alt": "",
-                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-binder-homepage.png"
+                    "uri": "https://cdn.elifesciences.org/images/labs/binder-post-binder-homepage.png"
                 },
                 {
                     "type": "paragraph",
@@ -86,7 +86,7 @@
                 {
                     "type": "image",
                     "alt": "",
-                    "uri": "https:\/\/cdn.elifesciences.org\/images\/labs\/binder-post-ligo-example.png"
+                    "uri": "https://cdn.elifesciences.org/images/labs/binder-post-ligo-example.png"
                 },
                 {
                     "type": "paragraph",
