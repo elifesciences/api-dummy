@@ -80,6 +80,7 @@
             "body": [
                 {
                     "type": "section",
+                    "id": "s-1",
                     "title": "Main text",
                     "content": [
                         {
