@@ -312,8 +312,40 @@
                 "paleoanthropology"
             ],
             "relatedArticles": [
-                "09561",
-                "10627"
+                {
+                    "status": "vor",
+                    "id": "10627",
+                    "version": 1,
+                    "type": "insight",
+                    "image": {
+                        "alt": "",
+                        "sizes": {
+                            "2:1": {
+                                "900": "%base_url%/images/articles/10627/jpg?width=900&height=450",
+                                "1800": "%base_url%/images/articles/10627/jpg?width=1800&height=900"
+                            },
+                            "16:9": {
+                                "250": "%base_url%/images/articles/10627/jpg?width=250&height=141",
+                                "500": "%base_url%/images/articles/10627/jpg?width=500&height=281"
+                            },
+                            "1:1": {
+                                "70": "%base_url%/images/articles/10627/jpg?width=70&height=70",
+                                "140": "%base_url%/images/articles/10627/jpg?width=140&height=140"
+                            }
+                        }
+                    },
+                    "doi": "10.7554/eLife.10627",
+                    "title": "The many mysteries of <i>Homo naledi</i>",
+                    "published": "2016-09-10T00:00:00Z",
+                    "volume": 4,
+                    "elocationId": "e10627",
+                    "authorLine": "Chris Stringer",
+                    "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+                    "subjects": [
+                        "genomics-evolutionary-biology"
+                    ],
+                    "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+                }
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
             "abstract": {
