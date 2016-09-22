@@ -193,7 +193,12 @@
                     }
                 }
             },
-            "mp3": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+            "sources": [
+                {
+                    "mediaType": "audio/mpeg",
+                    "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+                }
+            ]
         }
     ]
 }
