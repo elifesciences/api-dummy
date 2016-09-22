@@ -171,7 +171,24 @@
                 "species distribution modelling"
             ],
             "relatedArticles": [
-                "04395"
+                {
+                    "status": "vor",
+                    "id": "04395",
+                    "version": 2,
+                    "type": "research-article",
+                    "doi": "10.7554/eLife.04395",
+                    "title": "Mapping the zoonotic niche of Ebola virus disease in Africa",
+                    "published": "2014-09-19T00:00:00Z",
+                    "volume": 3,
+                    "elocationId": "e04395",
+                    "authorLine": "David M Pigott et al",
+                    "pdf": "https://elifesciences.org/content/4/e04395.pdf",
+                    "subjects": [
+                        "epidemiology-global-health",
+                        "microbiology-infectious-disease"
+                    ],
+                    "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks."
+                }
             ],
             "impactStatement": "Building on previous work (Pigott et al. 2014), estimates of areas of potential transmission of Ebola virus are revised and updated to provide a contemporary map for use by researchers and policymakers.",
             "abstract": {

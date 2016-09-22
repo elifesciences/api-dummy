@@ -170,7 +170,24 @@
                 "Virus"
             ],
             "relatedArticles": [
-                "16412"
+                {
+                    "status": "vor",
+                    "id": "16412",
+                    "version": 1,
+                    "type": "research-advance",
+                    "doi": "10.7554/eLife.16412",
+                    "title": "Updates to the zoonotic niche map of Ebola virus disease in Africa",
+                    "published": "2016-07-14T19:00:00Z",
+                    "volume": 5,
+                    "elocationId": "e16412",
+                    "authorLine": "David M Pigott et al",
+                    "pdf": "https://elifesciences.org/content/4/e16412.pdf",
+                    "subjects": [
+                        "epidemiology-global-health",
+                        "microbiology-infectious-disease"
+                    ],
+                    "impactStatement": "Building on previous work (Pigott et al. 2014), estimates of areas of potential transmission of Ebola virus are revised and updated to provide a contemporary map for use by researchers and policymakers."
+                }
             ],
             "abstract": {
                 "content": [
@@ -359,7 +376,24 @@
                 "niche based modelling"
             ],
             "relatedArticles": [
-                "16412"
+                {
+                    "status": "vor",
+                    "id": "16412",
+                    "version": 1,
+                    "type": "research-advance",
+                    "doi": "10.7554/eLife.16412",
+                    "title": "Updates to the zoonotic niche map of Ebola virus disease in Africa",
+                    "published": "2016-07-14T19:00:00Z",
+                    "volume": 5,
+                    "elocationId": "e16412",
+                    "authorLine": "David M Pigott et al",
+                    "pdf": "https://elifesciences.org/content/4/e16412.pdf",
+                    "subjects": [
+                        "epidemiology-global-health",
+                        "microbiology-infectious-disease"
+                    ],
+                    "impactStatement": "Building on previous work (Pigott et al. 2014), estimates of areas of potential transmission of Ebola virus are revised and updated to provide a contemporary map for use by researchers and policymakers."
+                }
             ],
             "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks.",
             "abstract": {
