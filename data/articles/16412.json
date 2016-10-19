@@ -157,8 +157,14 @@
             ],
             "pdf": "https://elifesciences.org/content/4/e16412.pdf",
             "subjects": [
-                "epidemiology-global-health",
-                "microbiology-infectious-disease"
+                {
+                    "id": "epidemiology-global-health",
+                    "name": "Epidemiology and Global Health"
+                },
+                {
+                    "id": "microbiology-infectious-disease",
+                    "name": "Microbiology and Infectious Disease"
+                }
             ],
             "researchOrganisms": [
                 "Human"
@@ -186,8 +192,14 @@
                     "authorLine": "David M Pigott et al",
                     "pdf": "https://elifesciences.org/content/4/e04395.pdf",
                     "subjects": [
-                        "epidemiology-global-health",
-                        "microbiology-infectious-disease"
+                        {
+                            "id": "epidemiology-global-health",
+                            "name": "Epidemiology and Global Health"
+                        },
+                        {
+                            "id": "microbiology-infectious-disease",
+                            "name": "Microbiology and Infectious Disease"
+                        }
                     ],
                     "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks."
                 }

@@ -323,6 +323,16 @@ $app->get('/articles', function (Request $request) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
+    if ($request->query->has('subject')) {
+        $articles = array_filter($articles, function (array $article) use ($request) : bool {
+            $latestVersion = $article['versions'][count($article['versions']) - 1];
+
+            return count(array_intersect((array) $request->query->get('subject'), array_map(function (array $subject) {
+                return $subject['id'];
+            }, $latestVersion['subjects'] ?? [])));
+        });
+    }
+
     $content = [
         'total' => count($articles),
         'items' => [],
@@ -330,14 +340,6 @@ $app->get('/articles', function (Request $request) use ($app) {
 
     if ('desc' === $request->query->get('order', 'desc')) {
         $articles = array_reverse($articles);
-    }
-
-    if ($request->query->has('subject')) {
-        $articles = array_filter($articles, function (array $article) use ($request) : bool {
-            $latestVersion = $article['versions'][count($article['versions']) - 1];
-
-            return count(array_intersect((array) $request->query->get('subject'), $latestVersion['subjects']));
-        });
     }
 
     $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
@@ -488,7 +490,9 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
 
     if (false === empty($subjects)) {
         $articles = array_filter($articles, function ($article) use ($subjects) {
-            $articleSubjects = $article['subjects'] ?? [];
+            $articleSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $article['subjects'] ?? []);
 
             return count(array_intersect($subjects, $articleSubjects));
         });
@@ -568,7 +572,9 @@ $app->get('/collections', function (Request $request) use ($app) {
 
     if (false === empty($subjects)) {
         $collections = array_filter($collections, function ($collection) use ($subjects) {
-            $collectionSubjects = $collection['subjects'] ?? [];
+            $collectionSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $collection['subjects'] ?? []);
 
             return count(array_intersect($subjects, $collectionSubjects));
         });
@@ -937,7 +943,9 @@ $app->get('/people', function (Request $request) use ($app) {
 
     if (false === empty($subjects)) {
         $people = array_filter($people, function ($person) use ($subjects) {
-            $personSubjects = $person['research']['expertises'] ?? [];
+            $personSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $person['research']['expertises'] ?? []);
 
             return count(array_intersect($subjects, $personSubjects));
         });
@@ -1016,7 +1024,9 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
 
     if (false === empty($subjects)) {
         $episodes = array_filter($episodes, function ($episode) use ($subjects) {
-            $episodeSubjects = $episode['subjects'] ?? [];
+            $episodeSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $episode['subjects'] ?? []);
 
             return count(array_intersect($subjects, $episodeSubjects));
         });
@@ -1187,7 +1197,9 @@ $app->get('/search', function (Request $request) use ($app) {
             'id' => $subject['id'],
             'name' => $subject['name'],
             'results' => count(array_filter($results, function ($result) use ($subject) {
-                return in_array($subject['id'], $result['subjects'] ?? []);
+                return in_array($subject['id'], array_map(function (array $subject) {
+                    return $subject['id'];
+                }, $result['subjects'] ?? []));
             })),
         ];
     });
@@ -1237,7 +1249,9 @@ $app->get('/search', function (Request $request) use ($app) {
 
     if (false === empty($subjects)) {
         $results = array_filter($results, function ($result) use ($subjects) {
-            return count(array_intersect($subjects, $result['subjects'] ?? []));
+            return count(array_intersect($subjects, array_map(function (array $subject) {
+                return $subject['id'];
+            }, $result['subjects'] ?? [])));
         });
     }
 

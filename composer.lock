@@ -983,12 +983,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "204d1c7c28855950c2801d50b6999d805bdbd358"
+                "reference": "5d9008248f06512c9c702741d6196b8b6adf1d59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/204d1c7c28855950c2801d50b6999d805bdbd358",
-                "reference": "204d1c7c28855950c2801d50b6999d805bdbd358",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/5d9008248f06512c9c702741d6196b8b6adf1d59",
+                "reference": "5d9008248f06512c9c702741d6196b8b6adf1d59",
                 "shasum": ""
             },
             "require": {
@@ -1000,7 +1000,7 @@
                 "GPL-3.0+"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2016-10-19 10:35:26"
+            "time": "2016-10-19 11:06:42"
         },
         {
             "name": "elife/api-validator",

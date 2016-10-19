@@ -7,7 +7,10 @@
     },
     "research": {
         "expertises": [
-            "cell-biology"
+            {
+                "id": "cell-biology",
+                "name": "Cell Biology"
+            }
         ],
         "focuses": [
             "Endocytosis",
