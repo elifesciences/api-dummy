@@ -27,8 +27,14 @@
         }
     ],
     "subjects": [
-        "cell-biology",
-        "genomics-evolutionary-biology"
+        {
+            "id": "cell-biology",
+            "name": "Cell Biology"
+        },
+        {
+            "id": "genomics-evolutionary-biology",
+            "name": "Genomics and Evolutionary Biology"
+        }
     ],
     "chapters": [
         {

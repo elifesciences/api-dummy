@@ -148,7 +148,10 @@
             ],
             "pdf": "https://elifesciences.org/content/4/e13410.pdf",
             "subjects": [
-                "epidemiology-global-health"
+                {
+                    "id": "epidemiology-global-health",
+                    "name": "Epidemiology and Global Health"
+                }
             ],
             "keywords": [
                 "biological sciences",

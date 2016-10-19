@@ -163,8 +163,14 @@
                 }
             ],
             "subjects": [
-                "epidemiology-global-health",
-                "microbiology-infectious-disease"
+                {
+                    "id": "epidemiology-global-health",
+                    "name": "Epidemiology and Global Health"
+                },
+                {
+                    "id": "microbiology-infectious-disease",
+                    "name": "Microbiology and Infectious Disease"
+                }
             ],
             "researchOrganisms": [
                 "Human",
@@ -185,8 +191,14 @@
                     "authorLine": "David M Pigott et al",
                     "pdf": "https://elifesciences.org/content/4/e16412.pdf",
                     "subjects": [
-                        "epidemiology-global-health",
-                        "microbiology-infectious-disease"
+                        {
+                            "id": "epidemiology-global-health",
+                            "name": "Epidemiology and Global Health"
+                        },
+                        {
+                            "id": "microbiology-infectious-disease",
+                            "name": "Microbiology and Infectious Disease"
+                        }
                     ],
                     "impactStatement": "Building on previous work (Pigott et al. 2014), estimates of areas of potential transmission of Ebola virus are revised and updated to provide a contemporary map for use by researchers and policymakers."
                 }
@@ -363,8 +375,14 @@
             ],
             "pdf": "https://elifesciences.org/content/4/e04395.pdf",
             "subjects": [
-                "epidemiology-global-health",
-                "microbiology-infectious-disease"
+                {
+                    "id": "epidemiology-global-health",
+                    "name": "Epidemiology and Global Health"
+                },
+                {
+                    "id": "microbiology-infectious-disease",
+                    "name": "Microbiology and Infectious Disease"
+                }
             ],
             "researchOrganisms": [
                 "Human",
@@ -393,8 +411,14 @@
                     "authorLine": "David M Pigott et al",
                     "pdf": "https://elifesciences.org/content/4/e16412.pdf",
                     "subjects": [
-                        "epidemiology-global-health",
-                        "microbiology-infectious-disease"
+                        {
+                            "id": "epidemiology-global-health",
+                            "name": "Epidemiology and Global Health"
+                        },
+                        {
+                            "id": "microbiology-infectious-disease",
+                            "name": "Microbiology and Infectious Disease"
+                        }
                     ],
                     "impactStatement": "Building on previous work (Pigott et al. 2014), estimates of areas of potential transmission of Ebola virus are revised and updated to provide a contemporary map for use by researchers and policymakers."
                 }

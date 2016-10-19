@@ -7,8 +7,14 @@
     },
     "research": {
         "expertises": [
-            "epidemiology-global-health",
-            "microbiology-infectious-disease"
+            {
+                "id": "epidemiology-global-health",
+                "name": "Epidemiology and Global Health"
+            },
+            {
+                "id": "microbiology-infectious-disease",
+                "name": "Microbiology and Infectious Disease"
+            }
         ],
         "focuses": [
             "Epidemiology"

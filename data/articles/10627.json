@@ -71,7 +71,10 @@
             ],
             "pdf": "https://elifesciences.org/content/4/e10627.pdf",
             "subjects": [
-                "genomics-evolutionary-biology"
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
             ],
             "keywords": [
                 "Dinaledi Chamber",
