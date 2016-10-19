@@ -19,6 +19,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
     {
         $response = $this->getApp()->handle($request);
 
+        if (in_array('--debug', $_SERVER['argv'], true) && $response->getStatusCode() === 500) {
+            $json = json_decode($response->getContent(), true);
+            if (isset($json['exception'])) {
+                $this->fail($json['exception']);
+            }
+            $this->fail($json);
+        }
+
         $this->assertSame($statusCode, $response->getStatusCode());
         if (is_array($contentType)) {
             $this->assertContains($response->headers->get('Content-Type'), $contentType);

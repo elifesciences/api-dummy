@@ -413,11 +413,13 @@ $app->get('/articles/{number}/versions',
             ];
         }
 
-        $content['poa'] = 0;
-        $content['vor'] = 0;
-
+        $content['versions'] = [];
         foreach ($article['versions'] as $articleVersion) {
-            ++$content[$articleVersion['status']];
+            array_push($content['versions'], [
+            'status' => $articleVersion['status'],
+            'version' => $articleVersion['version'],
+            'published' => $articleVersion['published'],
+          ]);
         }
 
         return new Response(
