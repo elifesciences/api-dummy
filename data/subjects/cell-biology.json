@@ -3,19 +3,26 @@
     "name": "Cell Biology",
     "impactStatement": "eLife publishes research spanning vesicle transport and signal transduction to cell cycle and cell polarity and fate. Decisions are made by journal editors who are active researchers in cell biology.",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/subjects/cell-biology/jpg?width=900&height=450",
-                "1800": "%base_url%/images/subjects/cell-biology/jpg?width=1800&height=900"
-            },
-            "16:9": {
-                "250": "%base_url%/images/subjects/cell-biology/jpg?width=250&height=141",
-                "500": "%base_url%/images/subjects/cell-biology/jpg?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/subjects/cell-biology/jpg?width=70&height=70",
-                "140": "%base_url%/images/subjects/cell-biology/jpg?width=140&height=140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "%base_url%/images/subjects/cell-biology/jpg?width=900&height=450",
+                    "1800": "%base_url%/images/subjects/cell-biology/jpg?width=1800&height=900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/subjects/cell-biology/jpg?width=250&height=141",
+                    "500": "%base_url%/images/subjects/cell-biology/jpg?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/subjects/cell-biology/jpg?width=70&height=70",
+                    "140": "%base_url%/images/subjects/cell-biology/jpg?width=140&height=140"
+                }
             }
         }
     }

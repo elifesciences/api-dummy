@@ -5,19 +5,26 @@
     "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal.",
     "updated": "2015-09-16T11:19:26+00:00",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/collections/tropical-disease/png?width=900&height=450",
-                "1800": "%base_url%/images/collections/tropical-disease/png?width=1800&height=900"
-            },
-            "16:9": {
-                "250": "%base_url%/images/collections/tropical-disease/png?width=250&height=141",
-                "500": "%base_url%/images/collections/tropical-disease/png?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/collections/tropical-disease/png?width=70&height=70",
-                "140": "%base_url%/images/collections/tropical-disease/png?width=140&height=140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "%base_url%/images/collections/tropical-disease/png?width=900&height=450",
+                    "1800": "%base_url%/images/collections/tropical-disease/png?width=1800&height=900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/collections/tropical-disease/png?width=250&height=141",
+                    "500": "%base_url%/images/collections/tropical-disease/png?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/collections/tropical-disease/png?width=70&height=70",
+                    "140": "%base_url%/images/collections/tropical-disease/png?width=140&height=140"
+                }
             }
         }
     },
@@ -39,6 +46,7 @@
             "index": "Jha, Prabhat"
         },
         "image": {
+            "alt": "",
             "sizes": {
                 "16:9": {
                     "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
@@ -69,6 +77,7 @@
                 "index": "Jha, Prabhat"
             },
             "image": {
+                "alt": "",
                 "sizes": {
                     "16:9": {
                         "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
@@ -83,44 +92,6 @@
         }
     ],
     "content": [
-        {
-            "type": "research-article",
-            "status": "vor",
-            "id": "09560",
-            "version": 1,
-            "doi": "10.7554/eLife.09560",
-            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
-            "published": "2015-09-10T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 4,
-            "elocationId": "e09560",
-            "authorLine": "Lee R Berger et al",
-            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
-            "subjects": [
-                {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
-                }
-            ],
-            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
-            "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
-                    }
-                }
-            }
-        },
         {
             "type": "blog-article",
             "id": "359325",
@@ -165,19 +136,17 @@
             "id": "05770",
             "version": 1,
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "%base_url%/images/articles/05770/jpg?width=900&height=450",
-                        "1800": "%base_url%/images/articles/05770/jpg?width=1800&height=900"
-                    },
-                    "16:9": {
-                        "250": "%base_url%/images/articles/05770/jpg?width=250&height=141",
-                        "500": "%base_url%/images/articles/05770/jpg?width=500&height=281"
-                    },
-                    "1:1": {
-                        "70": "%base_url%/images/articles/05770/jpg?width=70&height=70",
-                        "140": "%base_url%/images/articles/05770/jpg?width=140&height=140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "%base_url%/images/articles/05770/jpg?width=250&height=141",
+                            "500": "%base_url%/images/articles/05770/jpg?width=500&height=281"
+                        },
+                        "1:1": {
+                            "70": "%base_url%/images/articles/05770/jpg?width=70&height=70",
+                            "140": "%base_url%/images/articles/05770/jpg?width=140&height=140"
+                        }
                     }
                 }
             },
@@ -198,19 +167,17 @@
             "impactStatement": "In this episode of the eLife podcast we discuss how flatworms can grow new heads and tails, how photosynthesis has evolved over time, social interactions between mice, the properties of undead cells, and interactions between steroids and genes.",
             "published": "2013-08-21T12:54:08+00:00",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "https://placehold.it/900x450",
-                        "1800": "https://placehold.it/1800x900"
-                    },
-                    "16:9": {
-                        "250": "https://placehold.it/250x141",
-                        "500": "https://placehold.it/500x281"
-                    },
-                    "1:1": {
-                        "70": "https://placehold.it/70x70",
-                        "140": "https://placehold.it/140x140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "https://placehold.it/250x141",
+                            "500": "https://placehold.it/500x281"
+                        },
+                        "1:1": {
+                            "70": "https://placehold.it/70x70",
+                            "140": "https://placehold.it/140x140"
+                        }
                     }
                 }
             },

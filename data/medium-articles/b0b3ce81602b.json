@@ -6,10 +6,6 @@
     "image": {
         "alt": "",
         "sizes": {
-            "2:1": {
-                "900": "https://cdn-images-1.medium.com/fit/t/900/450/1*RfcnA_r0r2Q_jf6aZU0YZg.jpeg",
-                "1800": "https://cdn-images-1.medium.com/fit/t/1800/900/1*RfcnA_r0r2Q_jf6aZU0YZg.jpeg"
-            },
             "16:9": {
                 "250": "https://cdn-images-1.medium.com/fit/t/250/141/1*RfcnA_r0r2Q_jf6aZU0YZg.jpeg",
                 "500": "https://cdn-images-1.medium.com/fit/t/500/281/1*RfcnA_r0r2Q_jf6aZU0YZg.jpeg"

@@ -4,19 +4,26 @@
     "impactStatement": "In this issue of the eLife podcast we discuss plants performing arithmetic division, the evolutionary dynamics of cancer, single-molecule measurements in the immune system, why blood vessels don’t grow in the retina, how to make science count in government, a sensor for ammonium, and the evolution of gene regulation.",
     "published": "2013-07-17T08:33:32+00:00",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/podcast-episodes/2/jpg?width=900&height=450",
-                "1800": "%base_url%/images/podcast-episodes/2/jpg?width=1800&height=900"
-            },
-            "16:9": {
-                "250": "%base_url%/images/podcast-episodes/2/jpg?width=250&height=141",
-                "500": "%base_url%/images/podcast-episodes/2/jpg?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/podcast-episodes/2/jpg?width=70&height=70",
-                "140": "%base_url%/images/podcast-episodes/2/jpg?width=140&height=140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "%base_url%/images/podcast-episodes/2/jpg?width=900&height=450",
+                    "1800": "%base_url%/images/podcast-episodes/2/jpg?width=1800&height=900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/podcast-episodes/2/jpg?width=250&height=141",
+                    "500": "%base_url%/images/podcast-episodes/2/jpg?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/podcast-episodes/2/jpg?width=70&height=70",
+                    "140": "%base_url%/images/podcast-episodes/2/jpg?width=140&height=140"
+                }
             }
         }
     },
@@ -70,19 +77,17 @@
                     "version": 1,
                     "type": "insight",
                     "image": {
-                        "alt": "",
-                        "sizes": {
-                            "2:1": {
-                                "900": "%base_url%/images/articles/10627/jpg?width=900&height=450",
-                                "1800": "%base_url%/images/articles/10627/jpg?width=1800&height=900"
-                            },
-                            "16:9": {
-                                "250": "%base_url%/images/articles/10627/jpg?width=250&height=141",
-                                "500": "%base_url%/images/articles/10627/jpg?width=500&height=281"
-                            },
-                            "1:1": {
-                                "70": "%base_url%/images/articles/10627/jpg?width=70&height=70",
-                                "140": "%base_url%/images/articles/10627/jpg?width=140&height=140"
+                        "thumbnail": {
+                            "alt": "",
+                            "sizes": {
+                                "16:9": {
+                                    "250": "%base_url%/images/articles/10627/jpg?width=250&height=141",
+                                    "500": "%base_url%/images/articles/10627/jpg?width=500&height=281"
+                                },
+                                "1:1": {
+                                    "70": "%base_url%/images/articles/10627/jpg?width=70&height=70",
+                                    "140": "%base_url%/images/articles/10627/jpg?width=140&height=140"
+                                }
                             }
                         }
                     },
@@ -101,69 +106,6 @@
                         }
                     ],
                     "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
-                }
-            ]
-        },
-        {
-            "number": 2,
-            "title": "Tropical disease",
-            "time": 300,
-            "content": [
-                {
-                    "type": "collection",
-                    "id": "tropical-disease",
-                    "title": "Tropical disease",
-                    "subTitle": "A selection of papers",
-                    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal.",
-                    "updated": "2015-09-16T11:19:26+00:00",
-                    "image": {
-                        "alt": "",
-                        "sizes": {
-                            "2:1": {
-                                "900": "%base_url%/images/articles/05770/jpg?width=900&height=450",
-                                "1800": "%base_url%/images/articles/05770/jpg?width=1800&height=900"
-                            },
-                            "16:9": {
-                                "250": "%base_url%/images/articles/05770/jpg?width=250&height=141",
-                                "500": "%base_url%/images/articles/05770/jpg?width=500&height=281"
-                            },
-                            "1:1": {
-                                "70": "%base_url%/images/articles/05770/jpg?width=70&height=70",
-                                "140": "%base_url%/images/articles/05770/jpg?width=140&height=140"
-                            }
-                        }
-                    },
-                    "subjects": [
-                        {
-                            "id": "epidemiology-global-health",
-                            "name": "Epidemiology and Global Health"
-                        },
-                        {
-                            "id": "microbiology-infectious-disease",
-                            "name": "Microbiology and Infectious Disease"
-                        }
-                    ],
-                    "selectedCurator": {
-                        "id": "pjha",
-                        "type": "senior-editor",
-                        "name": {
-                            "preferred": "Prabhat Jha",
-                            "index": "Jha, Prabhat"
-                        },
-                        "image": {
-                            "sizes": {
-                                "16:9": {
-                                    "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
-                                    "500": "%base_url%/images/people/pjha/jpg?width=500&height=281"
-                                },
-                                "1:1": {
-                                    "70": "%base_url%/images/people/pjha/jpg?width=70&height=70",
-                                    "140": "%base_url%/images/people/pjha/jpg?width=140&height=140"
-                                }
-                            }
-                        },
-                        "etAl": true
-                    }
                 }
             ]
         }

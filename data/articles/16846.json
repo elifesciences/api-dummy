@@ -8,19 +8,17 @@
             "version": 1,
             "type": "feature",
             "image": {
-                "alt": "",
-                "sizes": {
-                    "2:1": {
-                        "900": "%base_url%/images/articles/16846/jpg?width=900&height=450",
-                        "1800": "%base_url%/images/articles/16846/jpg?width=1800&height=900"
-                    },
-                    "16:9": {
-                        "250": "%base_url%/images/articles/16846/jpg?width=250&height=141",
-                        "500": "%base_url%/images/articles/16846/jpg?width=500&height=281"
-                    },
-                    "1:1": {
-                        "70": "%base_url%/images/articles/16846/jpg?width=70&height=70",
-                        "140": "%base_url%/images/articles/16846/jpg?width=140&height=140"
+                "thumbnail": {
+                    "alt": "",
+                    "sizes": {
+                        "16:9": {
+                            "250": "%base_url%/images/articles/16846/jpg?width=250&height=141",
+                            "500": "%base_url%/images/articles/16846/jpg?width=500&height=281"
+                        },
+                        "1:1": {
+                            "70": "%base_url%/images/articles/16846/jpg?width=70&height=70",
+                            "140": "%base_url%/images/articles/16846/jpg?width=140&height=140"
+                        }
                     }
                 }
             },

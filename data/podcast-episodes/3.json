@@ -4,19 +4,26 @@
     "impactStatement": "In this episode of the eLife podcast we discuss the cocktail party effect, how psuedogene RNA has a role in the immune response, new insights into the genetic origins of a common form of blindness, research into individual responses to the flu vaccine, and the origins of the tropical disease schistosomiasis.",
     "published": "2013-08-21T12:48:50+00:00",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/podcast-episodes/3/jpg?width=900&height=450",
-                "1800": "%base_url%/images/podcast-episodes/3/jpg?width=1800&height=900"
-            },
-            "16:9": {
-                "250": "%base_url%/images/podcast-episodes/3/jpg?width=250&height=141",
-                "500": "%base_url%/images/podcast-episodes/3/jpg?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/podcast-episodes/3/jpg?width=70&height=70",
-                "140": "%base_url%/images/podcast-episodes/3/jpg?width=140&height=140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "%base_url%/images/podcast-episodes/3/jpg?width=900&height=450",
+                    "1800": "%base_url%/images/podcast-episodes/3/jpg?width=1800&height=900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/podcast-episodes/3/jpg?width=250&height=141",
+                    "500": "%base_url%/images/podcast-episodes/3/jpg?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/podcast-episodes/3/jpg?width=70&height=70",
+                    "140": "%base_url%/images/podcast-episodes/3/jpg?width=140&height=140"
+                }
             }
         }
     },

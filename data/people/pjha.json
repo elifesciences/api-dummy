@@ -28,6 +28,7 @@
     ],
     "competingInterests": "Prabhat Jha has received funding from the Bill and Melinda Gates Foundation, Canadian International Development Research Agency, Canadian International Development Agency, the International Science and Technology Program of the Canadian government, and the US National Institutes of Health. He serves on the editorial board of <i>Demography India</i>. He advises several agencies and the Canadian government on epidemiology, disease control strategies, and tobacco control, and serves on the advisory board of the UK Biobank.",
     "image": {
+        "alt": "",
         "sizes": {
             "16:9": {
                 "250": "%base_url%/images/people/pjha/jpg?width=250&height=141",
