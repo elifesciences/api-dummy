@@ -3,19 +3,26 @@
     "title": "Toward publishing reproducible computation with Binder",
     "published": "2016-05-13T16:25:00+00:00",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/experiments/2/png?width=900&height=450",
-                "1800": "%base_url%/images/experiments/2/png?width=1800&height=900"
-            },
-            "16:9": {
-                "250": "%base_url%/images/experiments/2/png?width=250&height=141",
-                "500": "%base_url%/images/experiments/2/png?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/experiments/2/png?width=70&height=70",
-                "140": "%base_url%/images/experiments/2/png?width=140&height=140"
+        "banner": {
+            "alt": "",
+            "sizes": {
+                "2:1": {
+                    "900": "%base_url%/images/experiments/2/png?width=900&height=450",
+                    "1800": "%base_url%/images/experiments/2/png?width=1800&height=900"
+                }
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "sizes": {
+                "16:9": {
+                    "250": "%base_url%/images/experiments/2/png?width=250&height=141",
+                    "500": "%base_url%/images/experiments/2/png?width=500&height=281"
+                },
+                "1:1": {
+                    "70": "%base_url%/images/experiments/2/png?width=70&height=70",
+                    "140": "%base_url%/images/experiments/2/png?width=140&height=140"
+                }
             }
         }
     },

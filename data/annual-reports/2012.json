@@ -6,10 +6,6 @@
     "image": {
         "alt": "",
         "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/annual-reports/2012/jpg?width=900&height=450",
-                "1800": "%base_url%/images/annual-reports/2012/jpg?width=1800&height=900"
-            },
             "16:9": {
                 "250": "%base_url%/images/annual-reports/2012/jpg?width=250&height=141",
                 "500": "%base_url%/images/annual-reports/2012/jpg?width=500&height=281"
