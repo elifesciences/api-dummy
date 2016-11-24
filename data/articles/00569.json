@@ -4,6 +4,7 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "00569",
             "version": 1,
             "type": "research-article",
@@ -11,6 +12,7 @@
             "authorLine": "Ayelet Voskoboynik et al",
             "title": "The genome sequence of the colonial chordate, <i>Botryllus schlosseri</i>",
             "published": "2013-07-02T00:00:00Z",
+            "versionDate": "2013-07-02T00:00:00Z",
             "statusDate": "2013-07-02T00:00:00Z",
             "volume": 2,
             "elocationId": "e00569",

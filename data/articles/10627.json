@@ -4,6 +4,7 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "10627",
             "version": 1,
             "type": "insight",
@@ -26,6 +27,7 @@
             "title": "The many mysteries of <i>Homo naledi</i>",
             "titlePrefix": "Title prefix",
             "published": "2016-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 4,
             "issue": 9,
