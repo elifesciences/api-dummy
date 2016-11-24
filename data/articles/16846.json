@@ -4,6 +4,7 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "16846",
             "version": 1,
             "type": "feature",
@@ -25,6 +26,7 @@
             "doi": "10.7554/eLife.16846",
             "title": "The rites of spring, Take 2",
             "published": "2016-05-18T16:00:30Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "issue": 5,

@@ -2,6 +2,7 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "05770",
             "version": 1,
             "type": "editorial",
@@ -32,6 +33,7 @@
             "doi": "10.7554/eLife.05770",
             "title": "The pleasure of publishing",
             "published": "2015-01-06T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "issue": 1,

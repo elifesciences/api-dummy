@@ -109,12 +109,14 @@
     "relatedContent": [
         {
             "type": "research-article",
+            "stage": "published",
             "status": "poa",
             "id": "14107",
             "version": 1,
             "doi": "10.7554/eLife.14107",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "published": "2016-03-28T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "elocationId": "e14107",
@@ -132,6 +134,7 @@
         },
         {
             "type": "editorial",
+            "stage": "published",
             "status": "vor",
             "id": "05770",
             "version": 1,
@@ -153,6 +156,7 @@
             "doi": "10.7554/eLife.05770",
             "title": "The pleasure of publishing",
             "published": "2015-01-06T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "elocationId": "e05770",

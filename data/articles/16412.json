@@ -4,12 +4,14 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "16412",
             "version": 1,
             "type": "research-advance",
             "doi": "10.7554/eLife.16412",
             "title": "Updates to the zoonotic niche map of Ebola virus disease in Africa",
             "published": "2016-07-14T19:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 5,
             "issue": 7,
@@ -180,12 +182,14 @@
             "relatedArticles": [
                 {
                     "status": "vor",
+                    "stage": "published",
                     "id": "04395",
                     "version": 2,
                     "type": "research-article",
                     "doi": "10.7554/eLife.04395",
                     "title": "Mapping the zoonotic niche of Ebola virus disease in Africa",
                     "published": "2014-09-19T00:00:00Z",
+                    "versionDate": "2016-03-28T00:00:00Z",
                     "statusDate": "2016-03-28T00:00:00Z",
                     "volume": 3,
                     "elocationId": "e04395",

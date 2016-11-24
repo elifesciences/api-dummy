@@ -4,12 +4,14 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "09560",
             "version": 1,
             "type": "research-article",
             "doi": "10.7554/eLife.09560",
             "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
             "published": "2015-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
             "statusDate": "2016-03-28T00:00:00Z",
             "volume": 4,
             "issue": 3,
@@ -318,6 +320,7 @@
             "relatedArticles": [
                 {
                     "status": "vor",
+                    "stage": "published",
                     "id": "10627",
                     "version": 1,
                     "type": "insight",
@@ -339,6 +342,7 @@
                     "doi": "10.7554/eLife.10627",
                     "title": "The many mysteries of <i>Homo naledi</i>",
                     "published": "2016-09-10T00:00:00Z",
+                    "versionDate": "2016-03-28T00:00:00Z",
                     "statusDate": "2016-03-28T00:00:00Z",
                     "volume": 4,
                     "elocationId": "e10627",

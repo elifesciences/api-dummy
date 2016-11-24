@@ -4,6 +4,7 @@
     "versions": [
         {
             "status": "vor",
+            "stage": "published",
             "id": "15278",
             "version": 1,
             "type": "research-article",
@@ -11,6 +12,7 @@
             "authorLine": "Stefan Schaffelhofer, Hansjörg Scherberger",
             "title": "Object vision to hand action in macaque parietal, premotor, and motor cortices",
             "published": "2016-07-26T00:00:00Z",
+            "versionDate": "2016-07-26T00:00:00Z",
             "statusDate": "2016-07-26T00:00:00Z",
             "volume": 5,
             "elocationId": "e15278",
