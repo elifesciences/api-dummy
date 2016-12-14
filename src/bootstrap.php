@@ -1,6 +1,7 @@
 <?php
 
 use Crell\ApiProblem\ApiProblem;
+use eLife\ApiFaker\Factory;
 use eLife\DummyApi\UnsupportedVersion;
 use eLife\DummyApi\VersionedNegotiator;
 use Imagine\Gd\Imagine;
@@ -22,6 +23,14 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
+
+$app['faker'] = function () {
+    $faker = Factory::create();
+
+    $faker->seed('gb213dassdddas56');
+
+    return $faker;
+};
 
 $app['annual-reports'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports');
@@ -132,12 +141,10 @@ $app['events'] = function () use ($app) {
 };
 
 $app['experiments'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments');
-
     $experiments = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $experiments[(int) $json['number']] = $json;
+
+    foreach (range(1, 100) as $number) {
+        $experiments[$number] = $app['faker']->labsExperimentV1($number);
     }
 
     ksort($experiments);
