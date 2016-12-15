@@ -1,0 +1,35 @@
+{
+    "title": "Macaque parietal, premotor, and motor cortices",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "%base_url%/images/covers/article-15278/jpg?width=900&height=450",
+                "1800": "%base_url%/images/covers/article-15278/jpg?width=1800&height=900"
+            }
+        }
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "15278",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.15278",
+        "authorLine": "Stefan Schaffelhofer, Hansj\u00f6rg Scherberger",
+        "title": "Object vision to hand action in macaque parietal, premotor, and motor cortices",
+        "published": "2016-07-26T00:00:00Z",
+        "versionDate": "2016-07-26T00:00:00Z",
+        "statusDate": "2016-07-26T00:00:00Z",
+        "volume": 5,
+        "elocationId": "e15278",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/15278/elife-15278-v1.pdf",
+        "subjects": [
+            {
+                "id": "neuroscience",
+                "name": "Neuroscience"
+            }
+        ],
+        "impactStatement": "The cortical grasping circuit separates but shares visual and motor processes to transform object attributes into appropriate hand movements."
+    }
+}

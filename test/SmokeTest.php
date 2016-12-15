@@ -111,6 +111,15 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield $path = '/covers' => [
+            Request::create($path),
+            'application/vnd.elife.cover-list+json; version=1',
+        ];
+        yield $path = '/covers/current' => [
+            Request::create($path),
+            'application/vnd.elife.cover-list+json; version=1',
+        ];
+
         yield $path = '/events' => [
             Request::create($path),
             'application/vnd.elife.event-list+json; version=1',

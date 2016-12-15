@@ -1,0 +1,38 @@
+{
+    "title": "<i>Botryllus schlosseri</i>",
+    "image": {
+        "alt": "",
+        "sizes": {
+            "2:1": {
+                "900": "%base_url%/images/covers/article-00569/jpg?width=900&height=450",
+                "1800": "%base_url%/images/covers/article-00569/jpg?width=1800&height=900"
+            }
+        }
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "00569",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.00569",
+        "authorLine": "Ayelet Voskoboynik et al",
+        "title": "The genome sequence of the colonial chordate, <i>Botryllus schlosseri</i>",
+        "published": "2013-07-02T00:00:00Z",
+        "versionDate": "2013-07-02T00:00:00Z",
+        "statusDate": "2013-07-02T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e00569",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-v1.pdf",
+        "subjects": [
+            {
+                "id": "developmental-biology-stem-cells",
+                "name": "Developmental Biology and Stem Cells"
+            },
+            {
+                "id": "genomics-evolutionary-biology",
+                "name": "Genomics and Evolutionary Biology"
+            }
+        ]
+    }
+}
