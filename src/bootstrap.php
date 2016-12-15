@@ -114,6 +114,22 @@ $app['collections'] = function () use ($app) {
     return $collections;
 };
 
+$app['covers'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/covers');
+
+    $covers = [];
+    foreach ($finder as $file) {
+        $covers[] = json_decode($file->getContents(), true);
+    }
+
+    uasort($covers, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $a['item']['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $b['item']['published']);
+    });
+
+    return $covers;
+};
+
 $app['events'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events');
 
@@ -645,6 +661,87 @@ $app->get('/collections/{id}',
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
     });
+
+$app->get('/covers', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.cover-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $covers = $app['covers'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($covers),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $covers = array_reverse($covers);
+    }
+
+    $covers = array_slice($covers, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($covers) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($covers as $i => $report) {
+        unset($report['content']);
+
+        $content['items'][] = $report;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/covers/current', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.cover-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $covers = $app['covers'];
+
+    $content = [
+        'total' => count($covers),
+        'items' => [],
+    ];
+
+    $covers = array_slice(array_reverse($covers), 0, 3);
+
+    foreach ($covers as $i => $report) {
+        unset($report['content']);
+
+        $content['items'][] = $report;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
 
 $app->get('/events', function (Request $request) use ($app) {
     $accepts = [
