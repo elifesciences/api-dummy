@@ -835,9 +835,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     }
 
     foreach ($experiments as $i => $experiment) {
-        unset($experiment['content']);
-
-        $content['items'][] = $experiment;
+        $content['items'][] = $app['faker']->labsExperimentSnippetV1($experiment['number']);
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
@@ -1166,10 +1164,10 @@ $app->get('/search', function (Request $request) use ($app) {
     }
 
     foreach ($app['experiments'] as $result) {
-        $result['_search'] = strtolower(json_encode($result));
-        unset($result['content']);
-        $result['type'] = 'labs-experiment';
-        $results[] = $result;
+        $snippet = $app['faker']->labsExperimentSnippetV1($result['number']);
+        $snippet['_search'] = strtolower(json_encode($result));
+        $snippet['type'] = 'labs-experiment';
+        $results[] = $snippet;
     }
 
     foreach ($app['interviews'] as $result) {

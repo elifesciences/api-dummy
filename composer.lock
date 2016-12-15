@@ -122,17 +122,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-faker-php.git",
-                "reference": "dbc6620556a89ae29333aae0f3933f33aad7fa95"
+                "reference": "92f3ed8ec6984652bd57b62d6ad7b91ef362d21b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-faker-php/zipball/dbc6620556a89ae29333aae0f3933f33aad7fa95",
-                "reference": "dbc6620556a89ae29333aae0f3933f33aad7fa95",
+                "url": "https://api.github.com/repos/elifesciences/api-faker-php/zipball/92f3ed8ec6984652bd57b62d6ad7b91ef362d21b",
+                "reference": "92f3ed8ec6984652bd57b62d6ad7b91ef362d21b",
                 "shasum": ""
             },
             "require": {
-                "beberlei/assert": "^2.0",
-                "fzaninotto/faker": "^1.0",
+                "beberlei/assert": "^2.6.7",
+                "fzaninotto/faker": "^1.3",
                 "php": "^7.0"
             },
             "require-dev": {
@@ -159,7 +159,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API faker",
-            "time": "2016-12-14 13:38:39"
+            "time": "2016-12-15 07:45:09"
         },
         {
             "name": "fzaninotto/faker",
