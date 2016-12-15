@@ -7,8 +7,7 @@
     "packages": {
         "beberlei/assert": {
             "install-path": "vendor/beberlei/assert",
-            "installer": "composer",
-            "env": "dev"
+            "installer": "composer"
         },
         "crell/api-problem": {
             "install-path": "vendor/crell/api-problem",
@@ -24,10 +23,18 @@
             "installer": "composer",
             "env": "dev"
         },
+        "elife/api-faker": {
+            "install-path": "vendor/elife/api-faker",
+            "installer": "composer"
+        },
         "elife/api-validator": {
             "install-path": "vendor/elife/api-validator",
             "installer": "composer",
             "env": "dev"
+        },
+        "fzaninotto/faker": {
+            "install-path": "vendor/fzaninotto/faker",
+            "installer": "composer"
         },
         "guzzlehttp/psr7": {
             "install-path": "vendor/guzzlehttp/psr7",
