@@ -417,11 +417,19 @@ $app->get('/articles/{number}/versions',
 
         $content['versions'] = [];
         foreach ($article['versions'] as $articleVersion) {
-            array_push($content['versions'], [
-            'status' => $articleVersion['status'],
-            'version' => $articleVersion['version'],
-            'published' => $articleVersion['published'],
-          ]);
+            unset($articleVersion['issue']);
+            unset($articleVersion['copyright']);
+            unset($articleVersion['authors']);
+            unset($articleVersion['researchOrganisms']);
+            unset($articleVersion['keywords']);
+            unset($articleVersion['relatedArticles']);
+            unset($articleVersion['abstract']);
+            unset($articleVersion['digest']);
+            unset($articleVersion['body']);
+            unset($articleVersion['decisionLetter']);
+            unset($articleVersion['authorResponse']);
+
+            $content['versions'][] = $articleVersion;
         }
 
         return new Response(
