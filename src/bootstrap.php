@@ -195,6 +195,20 @@ $app['medium-articles'] = function () use ($app) {
     return $articles;
 };
 
+$app['metrics'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics');
+
+    $items = [];
+    foreach ($finder as $file) {
+        $name = explode('-', $file->getBasename('.json'));
+
+        $json = json_decode($file->getContents(), true);
+        $items[$name[0]][$name[1]] = $json;
+    }
+
+    return $items;
+};
+
 $app['people'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/people');
 
@@ -1020,6 +1034,100 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
         $headers
     );
 });
+
+$app->get('/metrics/{contentType}/{id}/citations',
+    function (Request $request, string $contentType, string $id) use ($app) {
+        if (false === isset($app['metrics'][$contentType][$id])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $accepts = [
+            'application/vnd.elife.metric-citations+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+        $content = $app['metrics'][$contentType][$id]['citations'];
+
+        return new Response(
+            json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            $headers
+        );
+    });
+
+$app->get('/metrics/{contentType}/{id}/{metric}',
+    function (Request $request, string $contentType, string $id, string $metric) use ($app) {
+        if (false === isset($app['metrics'][$contentType][$id]) || !in_array($metric, ['page-views', 'downloads'])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $accepts = [
+            'application/vnd.elife.metric-time-period+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        if ('page-views' === $metric) {
+            $metric = $app['metrics'][$contentType][$id]['pageViews'];
+        } else {
+            $metric = $app['metrics'][$contentType][$id]['downloads'];
+        }
+
+        $page = $request->query->get('page', 1);
+        $perPage = $request->query->get('per-page', 10);
+
+        if ('month' === $request->query->get('by', 'month')) {
+            $months = [];
+            foreach ($metric as $day => $value) {
+                $month = substr($day, 0, 7);
+                if (!isset($months[$month])) {
+                    $months[$month] = 0;
+                }
+
+                $months[$month] = $months[$month] + $value;
+            }
+
+            $metric = $months;
+        }
+
+        $content = [
+            'totalValue' => array_reduce($metric, function (int $carry, int $value) {
+                return $carry + $value;
+            }, 0),
+            'totalPeriods' => count($metric),
+            'periods' => [],
+        ];
+
+        if ('desc' === $request->query->get('order', 'desc')) {
+            $metric = array_reverse($metric);
+        }
+
+        $metric = array_slice($metric, ($page * $perPage) - $perPage, $perPage);
+
+        if (0 === count($metric) && $page > 1) {
+            throw new NotFoundHttpException('No page '.$page);
+        }
+
+        $content['periods'] = $metric;
+
+        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+        return new Response(
+            json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            $headers
+        );
+    });
 
 $app->get('/people', function (Request $request) use ($app) {
     $accepts = [
