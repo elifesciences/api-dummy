@@ -692,8 +692,8 @@ $app->get('/covers', function (Request $request) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'));
-    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'));
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
 
     if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
         throw new BadRequestHttpException('Invalid start date');
@@ -1345,8 +1345,8 @@ $app->get('/search', function (Request $request) use ($app) {
     $subjects = (array) $request->query->get('subject', []);
     $types = (array) $request->query->get('type', []);
 
-    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'));
-    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'));
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
 
     if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
         throw new BadRequestHttpException('Invalid start date');
