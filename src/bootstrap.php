@@ -692,6 +692,30 @@ $app->get('/covers', function (Request $request) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
+
+    if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
+        throw new BadRequestHttpException('Invalid start date');
+    } elseif (!$endDate || $endDate->format('Y-m-d') !== $originalEndDate) {
+        throw new BadRequestHttpException('Invalid end date');
+    }
+
+    $startDate = $startDate->setTime(0, 0, 0);
+    $endDate = $endDate->setTime(23, 59, 59);
+
+    if ($endDate < $startDate) {
+        throw new BadRequestHttpException('End date must be on or after start date');
+    }
+
+    $covers = array_filter($covers, function ($result) use ($startDate) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM, $result['item']['statusDate']) >= $startDate;
+    });
+
+    $covers = array_filter($covers, function ($result) use ($endDate) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM, $result['item']['statusDate']) <= $endDate;
+    });
+
     $content = [
         'total' => count($covers),
         'items' => [],
@@ -1321,6 +1345,22 @@ $app->get('/search', function (Request $request) use ($app) {
     $subjects = (array) $request->query->get('subject', []);
     $types = (array) $request->query->get('type', []);
 
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
+
+    if (!$startDate || $startDate->format('Y-m-d') !== $requestStartDate) {
+        throw new BadRequestHttpException('Invalid start date');
+    } elseif (!$endDate || $endDate->format('Y-m-d') !== $requestEndDate) {
+        throw new BadRequestHttpException('Invalid end date');
+    }
+
+    $startDate = $startDate->setTime(0, 0, 0);
+    $endDate = $endDate->setTime(23, 59, 59);
+
+    if ($endDate < $startDate) {
+        throw new BadRequestHttpException('End date must be on or after start date');
+    }
+
     $results = [];
 
     foreach ($app['articles'] as $result) {
@@ -1339,6 +1379,8 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['decisionLetter']);
         unset($result['authorResponse']);
 
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate'] ?? date(DATE_ATOM));
+
         $results[] = $result;
     }
 
@@ -1346,6 +1388,7 @@ $app->get('/search', function (Request $request) use ($app) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
         $result['type'] = 'blog-article';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
     }
 
@@ -1356,6 +1399,7 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['relatedContent']);
         unset($result['podcastEpisodes']);
         $result['type'] = 'collection';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated']);
         $results[] = $result;
     }
 
@@ -1368,6 +1412,7 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['content']);
         unset($result['venue']);
         $result['type'] = 'event';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['starts']);
         $results[] = $result;
     }
 
@@ -1375,6 +1420,7 @@ $app->get('/search', function (Request $request) use ($app) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
         $result['type'] = 'labs-experiment';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
     }
 
@@ -1383,6 +1429,7 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['interviewee']['cv']);
         unset($result['content']);
         $result['type'] = 'interview';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
     }
 
@@ -1390,6 +1437,7 @@ $app->get('/search', function (Request $request) use ($app) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['chapters']);
         $result['type'] = 'podcast-episode';
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
     }
 
@@ -1468,6 +1516,14 @@ $app->get('/search', function (Request $request) use ($app) {
         });
     }
 
+    $results = array_filter($results, function ($result) use ($startDate) {
+        return $result['_sort_date'] >= $startDate;
+    });
+
+    $results = array_filter($results, function ($result) use ($endDate) {
+        return $result['_sort_date'] <= $endDate;
+    });
+
     $content = [
         'total' => count($results),
         'items' => [],
@@ -1477,22 +1533,7 @@ $app->get('/search', function (Request $request) use ($app) {
 
     if ('date' === $sort) {
         usort($results, function (array $a, array $b) {
-            if ('event' === $a['type']) {
-                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
-            } elseif ('collection' === $a['type']) {
-                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated']);
-            } else {
-                $aDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-            }
-            if ('event' === $b['type']) {
-                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['starts']);
-            } elseif ('collection' === $b['type']) {
-                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['updated']);
-            } else {
-                $bDate = DateTimeImmutable::createFromFormat(DATE_ATOM, $b['published']);
-            }
-
-            return $bDate <=> $aDate;
+            return $b['_sort_date'] <=> $a['_sort_date'];
         });
     } else {
     }
@@ -1507,7 +1548,11 @@ $app->get('/search', function (Request $request) use ($app) {
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    $content['items'] = $results;
+    $content['items'] = array_map(function (array $result) {
+        unset($result['_sort_date']);
+
+        return $result;
+    }, $results);
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
