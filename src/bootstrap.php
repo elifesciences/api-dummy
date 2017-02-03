@@ -1345,12 +1345,12 @@ $app->get('/search', function (Request $request) use ($app) {
     $subjects = (array) $request->query->get('subject', []);
     $types = (array) $request->query->get('type', []);
 
-    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
-    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
 
-    if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
+    if (!$startDate || $startDate->format('Y-m-d') !== $requestStartDate) {
         throw new BadRequestHttpException('Invalid start date');
-    } elseif (!$endDate || $endDate->format('Y-m-d') !== $originalEndDate) {
+    } elseif (!$endDate || $endDate->format('Y-m-d') !== $requestEndDate) {
         throw new BadRequestHttpException('Invalid end date');
     }
 
