@@ -1358,7 +1358,7 @@ $app->get('/search', function (Request $request) use ($app) {
     $endDate = $endDate->setTime(23, 59, 59);
 
     if ($endDate < $startDate) {
-        throw new InvalidArgumentException('End date must be on or after start date');
+        throw new BadRequestHttpException('End date must be on or after start date');
     }
 
     $results = [];

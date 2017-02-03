@@ -115,6 +115,25 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             Request::create($path),
             'application/vnd.elife.cover-list+json; version=1',
         ];
+        yield $path = '/covers?start-date=2017-01-01&end-date=2017-01-01' => [
+            Request::create($path),
+            'application/vnd.elife.cover-list+json; version=1',
+        ];
+        yield $path = '/covers?start-date=2017-02-29' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/covers?end-date=2017-02-29' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/covers?start-date=2017-01-02&end-date=2017-01-01' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
         yield $path = '/covers/current' => [
             Request::create($path),
             'application/vnd.elife.cover-list+json; version=1',
@@ -202,6 +221,25 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         yield $path = '/search?subject[]=cell-biology' => [
             Request::create($path),
             'application/vnd.elife.search+json; version=1',
+        ];
+        yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
+            Request::create($path),
+            'application/vnd.elife.search+json; version=1',
+        ];
+        yield $path = '/search?start-date=2017-02-29' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/search?end-date=2017-02-29' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/search?start-date=2017-01-02&end-date=2017-01-01' => [
+            Request::create($path),
+            'application/problem+json',
+            400,
         ];
 
         yield $path = '/images/subjects/cell-biology/png' => [
