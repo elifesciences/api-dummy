@@ -698,6 +698,9 @@ $app->get('/community', function (Request $request) use ($app) {
         array_map($addType('interview'), $app['interviews']),
         array_map($addType('labs-experiment'), $app['experiments'])
     );
+    usort($items, function ($a, $b) {
+        return $a['published'] >= $b['published'] ? -1 : 1;
+    });
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
