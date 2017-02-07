@@ -687,9 +687,10 @@ $app->get('/community', function (Request $request) use ($app) {
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
 
-    $addType = function($type) {
-        return function($item) use ($type) {
+    $addType = function ($type) {
+        return function ($item) use ($type) {
             $item['type'] = $type;
+
             return $item;
         };
     };
