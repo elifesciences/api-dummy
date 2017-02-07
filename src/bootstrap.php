@@ -718,7 +718,7 @@ $app->get('/community', function (Request $request) use ($app) {
     }
 
     foreach ($items as $i => $item) {
-        unset($item['itemee']['cv']);
+        unset($item['interviewee']['cv']);
         unset($item['content']);
         unset($item['image']['banner']);
 
