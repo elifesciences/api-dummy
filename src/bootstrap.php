@@ -676,6 +676,67 @@ $app->get('/collections/{id}',
         );
     });
 
+$app->get('/community', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.community-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $addType = function ($type) {
+        return function ($item) use ($type) {
+            $item['type'] = $type;
+
+            return $item;
+        };
+    };
+    $items = array_merge(
+        array_map($addType('interview'), $app['interviews']),
+        array_map($addType('labs-experiment'), $app['experiments'])
+    );
+    usort($items, function ($a, $b) {
+        return $a['published'] >= $b['published'] ? -1 : 1;
+    });
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($items),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $items = array_reverse($items);
+    }
+
+    $items = array_slice($items, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($items) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($items as $i => $item) {
+        unset($item['interviewee']['cv']);
+        unset($item['content']);
+        unset($item['image']['banner']);
+
+        $content['items'][] = $item;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
 $app->get('/covers', function (Request $request) use ($app) {
     $accepts = [
         'application/vnd.elife.cover-list+json; version=1',
