@@ -386,7 +386,6 @@ $app->get('/articles', function (Request $request) use ($app) {
         unset($latestVersion['authors']);
         unset($latestVersion['researchOrganisms']);
         unset($latestVersion['keywords']);
-        unset($latestVersion['relatedArticles']);
         unset($latestVersion['abstract']);
         unset($latestVersion['digest']);
         unset($latestVersion['body']);
@@ -452,7 +451,6 @@ $app->get('/articles/{number}/versions',
             unset($articleVersion['authors']);
             unset($articleVersion['researchOrganisms']);
             unset($articleVersion['keywords']);
-            unset($articleVersion['relatedArticles']);
             unset($articleVersion['abstract']);
             unset($articleVersion['digest']);
             unset($articleVersion['body']);
@@ -502,6 +500,34 @@ $app->get('/articles/{number}/versions/{version}',
 
         return new Response(
             json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    }
+);
+
+$app->get('/articles/{number}/related',
+    function (Request $request, string $number) use ($app) {
+        if (false === isset($app['articles'][$number])) {
+            throw new NotFoundHttpException('Article not found');
+        }
+
+        $article = $app['articles'][$number];
+
+        $accepts = [
+            'application/vnd.elife.article-related+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        $content = $article['relatedArticles'] ?? [];
+
+        return new Response(
+            json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
@@ -1433,7 +1459,6 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['authors']);
         unset($result['researchOrganisms']);
         unset($result['keywords']);
-        unset($result['relatedArticles']);
         unset($result['abstract']);
         unset($result['digest']);
         unset($result['body']);
