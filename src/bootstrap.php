@@ -1489,19 +1489,6 @@ $app->get('/search', function (Request $request) use ($app) {
         $results[] = $result;
     }
 
-    foreach ($app['events'] as $result) {
-        if (DateTimeImmutable::createFromFormat(DATE_ATOM, $result['ends']) <= new DateTimeImmutable()) {
-            continue;
-        }
-
-        $result['_search'] = strtolower(json_encode($result));
-        unset($result['content']);
-        unset($result['venue']);
-        $result['type'] = 'event';
-        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['starts']);
-        $results[] = $result;
-    }
-
     foreach ($app['experiments'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
@@ -1577,7 +1564,6 @@ $app->get('/search', function (Request $request) use ($app) {
         [
             'blog-article',
             'collection',
-            'event',
             'labs-experiment',
             'interview',
             'podcast-episode',
