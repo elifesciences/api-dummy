@@ -239,6 +239,23 @@ $app['podcast-episodes'] = function () use ($app) {
     return $episodes;
 };
 
+$app['press-packages'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages');
+
+    $packages = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $packages[$json['id']] = $json;
+    }
+
+    uasort($packages, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $packages;
+};
+
 $app['subjects'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects');
 
@@ -1411,6 +1428,92 @@ $app->get('/podcast-episodes/{number}',
         );
     })->assert('number', '[1-9][0-9]*')
 ;
+
+$app->get('/press-packages', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.press-package-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $packages = $app['press-packages'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($subjects)) {
+        $packages = array_filter($packages, function ($article) use ($subjects) {
+            $articleSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $article['subjects'] ?? []);
+
+            return count(array_intersect($subjects, $articleSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($packages),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $packages = array_reverse($packages);
+    }
+
+    $packages = array_slice($packages, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($packages) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($packages as $i => $package) {
+        unset($package['content']);
+        unset($package['relatedContent']);
+        unset($package['mediaContacts']);
+        unset($package['about']);
+
+        $content['items'][] = $package;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/press-packages/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['press-packages'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $packages = $app['press-packages'][$id];
+
+        $accepts = [
+            'application/vnd.elife.press-package+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($packages, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
 
 $app->get('/search', function (Request $request) use ($app) {
     $accepts = [
