@@ -108,7 +108,7 @@ $app['collections'] = function () use ($app) {
 
     uasort($collections, function (array $a, array $b) {
         return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['updated']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated']);
+            $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
     });
 
     return $collections;
@@ -1588,7 +1588,7 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['relatedContent']);
         unset($result['podcastEpisodes']);
         $result['type'] = 'collection';
-        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated']);
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated'] ?? $result['published']);
         $results[] = $result;
     }
 
