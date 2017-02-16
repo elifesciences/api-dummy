@@ -408,6 +408,15 @@ $app->get('/articles', function (Request $request) use ($app) {
         unset($latestVersion['body']);
         unset($latestVersion['decisionLetter']);
         unset($latestVersion['authorResponse']);
+        unset($latestVersion['reviewers']);
+        unset($latestVersion['references']);
+        unset($latestVersion['ethics']);
+        unset($latestVersion['funding']);
+        unset($latestVersion['additionalFiles']);
+        unset($latestVersion['dataSets']);
+        unset($latestVersion['acknowledgements']);
+        unset($latestVersion['appendices']);
+        unset($latestVersion['image']['banner']);
 
         $content['items'][] = $latestVersion;
     }
@@ -473,6 +482,15 @@ $app->get('/articles/{number}/versions',
             unset($articleVersion['body']);
             unset($articleVersion['decisionLetter']);
             unset($articleVersion['authorResponse']);
+            unset($articleVersion['reviewers']);
+            unset($articleVersion['references']);
+            unset($articleVersion['ethics']);
+            unset($articleVersion['funding']);
+            unset($articleVersion['additionalFiles']);
+            unset($articleVersion['dataSets']);
+            unset($articleVersion['acknowledgements']);
+            unset($articleVersion['appendices']);
+            unset($articleVersion['image']['banner']);
 
             $content['versions'][] = $articleVersion;
         }
@@ -681,6 +699,7 @@ $app->get('/collections', function (Request $request) use ($app) {
         unset($collection['content']);
         unset($collection['relatedContent']);
         unset($collection['podcastEpisodes']);
+        unset($collection['image']['banner']);
 
         $content['items'][] = $collection;
     }
@@ -1076,6 +1095,7 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
 
     foreach ($experiments as $i => $experiment) {
         unset($experiment['content']);
+        unset($experiment['image']['banner']);
 
         $content['items'][] = $experiment;
     }
@@ -1390,6 +1410,7 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
 
     foreach ($episodes as $i => $episode) {
         unset($episode['chapters']);
+        unset($episode['image']['banner']);
 
         $content['items'][] = $episode;
     }
@@ -1567,6 +1588,15 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['body']);
         unset($result['decisionLetter']);
         unset($result['authorResponse']);
+        unset($result['reviewers']);
+        unset($result['references']);
+        unset($result['ethics']);
+        unset($result['funding']);
+        unset($result['additionalFiles']);
+        unset($result['dataSets']);
+        unset($result['acknowledgements']);
+        unset($result['appendices']);
+        unset($result['image']['banner']);
 
         $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate'] ?? date(DATE_ATOM));
 
@@ -1587,6 +1617,7 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['content']);
         unset($result['relatedContent']);
         unset($result['podcastEpisodes']);
+        unset($result['image']['banner']);
         $result['type'] = 'collection';
         $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated'] ?? $result['published']);
         $results[] = $result;
@@ -1595,6 +1626,7 @@ $app->get('/search', function (Request $request) use ($app) {
     foreach ($app['experiments'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
+        unset($result['image']['banner']);
         $result['type'] = 'labs-experiment';
         $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
@@ -1612,6 +1644,7 @@ $app->get('/search', function (Request $request) use ($app) {
     foreach ($app['podcast-episodes'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['chapters']);
+        unset($result['image']['banner']);
         $result['type'] = 'podcast-episode';
         $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
