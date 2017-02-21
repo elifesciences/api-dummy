@@ -832,12 +832,12 @@ $app->get('/covers', function (Request $request) use ($app) {
         throw new BadRequestHttpException('End date must be on or after start date');
     }
 
-    foreach($covers as $i => $cover) {
-        if('published' === $useDate) {
+    foreach ($covers as $i => $cover) {
+        if ('published' === $useDate) {
             $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['published']);
-        } elseif(!empty($cover['item']['statusDate'])) {
+        } elseif (!empty($cover['item']['statusDate'])) {
             $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['statusDate']);
-        } elseif('collection' === $cover['item']['type'] && !empty($cover['item']['updated'])) {
+        } elseif ('collection' === $cover['item']['type'] && !empty($cover['item']['updated'])) {
             $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['updated']);
         } else {
             $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['published']);
