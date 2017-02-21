@@ -812,6 +812,7 @@ $app->get('/covers', function (Request $request) use ($app) {
 
     $covers = $app['covers'];
 
+    $useDate = $request->query->get('use-date', 'default');
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
@@ -831,12 +832,28 @@ $app->get('/covers', function (Request $request) use ($app) {
         throw new BadRequestHttpException('End date must be on or after start date');
     }
 
+    foreach ($covers as $i => $cover) {
+        if ('published' === $useDate) {
+            $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['published']);
+        } elseif (!empty($cover['item']['statusDate'])) {
+            $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['statusDate']);
+        } elseif ('collection' === $cover['item']['type'] && !empty($cover['item']['updated'])) {
+            $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['updated']);
+        } else {
+            $covers[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $cover['item']['published']);
+        }
+    }
+
+    uasort($covers, function (array $a, array $b) {
+        return $a['_sort_date'] <=> $b['_sort_date'];
+    });
+
     $covers = array_filter($covers, function ($result) use ($startDate) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM, $result['item']['statusDate']) >= $startDate;
+        return $result['_sort_date'] >= $startDate;
     });
 
     $covers = array_filter($covers, function ($result) use ($endDate) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM, $result['item']['statusDate']) <= $endDate;
+        return $result['_sort_date'] <= $endDate;
     });
 
     $content = [
@@ -854,10 +871,10 @@ $app->get('/covers', function (Request $request) use ($app) {
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($covers as $i => $report) {
-        unset($report['content']);
+    foreach ($covers as $i => $cover) {
+        unset($cover['_sort_date']);
 
-        $content['items'][] = $report;
+        $content['items'][] = $cover;
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
@@ -1552,6 +1569,7 @@ $app->get('/search', function (Request $request) use ($app) {
 
     $for = strtolower(trim($request->query->get('for')));
 
+    $useDate = $request->query->get('use-date', 'default');
     $sort = $request->query->get('sort', 'relevance');
     $subjects = (array) $request->query->get('subject', []);
     $types = (array) $request->query->get('type', []);
@@ -1598,7 +1616,11 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['appendices']);
         unset($result['image']['banner']);
 
-        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate'] ?? date(DATE_ATOM));
+        if ('published' === $useDate) {
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
+        } else {
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate'] ?? date(DATE_ATOM));
+        }
 
         $results[] = $result;
     }
@@ -1619,7 +1641,11 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['podcastEpisodes']);
         unset($result['image']['banner']);
         $result['type'] = 'collection';
-        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated'] ?? $result['published']);
+        if ('published' === $useDate) {
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
+        } else {
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['updated'] ?? $result['published']);
+        }
         $results[] = $result;
     }
 
