@@ -175,14 +175,20 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.medium-article-list+json; version=1',
         ];
 
-        yield $path = '/labs-experiments' => [
-            Request::create($path),
-            'application/vnd.elife.labs-experiment-list+json; version=1',
-        ];
-        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments') as $file) {
-            yield $path = '/labs-experiments/'.$file->getBasename('.json') => [
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics') as $file) {
+            $parts = explode('-', $file->getBasename('.json'));
+
+            yield $path = '/metrics/'.$parts[0].'/'.$parts[1].'/citations' => [
                 Request::create($path),
-                'application/vnd.elife.labs-experiment+json; version=1',
+                'application/vnd.elife.metric-citations+json; version=1',
+            ];
+            yield $path = '/metrics/'.$parts[0].'/'.$parts[1].'/downloads' => [
+                Request::create($path),
+                'application/vnd.elife.metric-time-period+json; version=1',
+            ];
+            yield $path = '/metrics/'.$parts[0].'/'.$parts[1].'/page-views' => [
+                Request::create($path),
+                'application/vnd.elife.metric-time-period+json; version=1',
             ];
         }
 

@@ -1283,7 +1283,9 @@ $app->get('/metrics/{contentType}/{id}/{metric}',
             throw new NotFoundHttpException('No page '.$page);
         }
 
-        $content['periods'] = $metric;
+        $content['periods'] = array_map(function (string $period, int $value) {
+            return compact('period', 'value');
+        }, array_keys($metric), array_values($metric));
 
         $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
