@@ -403,7 +403,6 @@ $app->get('/articles', function (Request $request) use ($app) {
         unset($latestVersion['authors']);
         unset($latestVersion['researchOrganisms']);
         unset($latestVersion['keywords']);
-        unset($latestVersion['abstract']);
         unset($latestVersion['digest']);
         unset($latestVersion['body']);
         unset($latestVersion['decisionLetter']);
@@ -477,7 +476,6 @@ $app->get('/articles/{number}/versions',
             unset($articleVersion['authors']);
             unset($articleVersion['researchOrganisms']);
             unset($articleVersion['keywords']);
-            unset($articleVersion['abstract']);
             unset($articleVersion['digest']);
             unset($articleVersion['body']);
             unset($articleVersion['decisionLetter']);
@@ -1603,7 +1601,6 @@ $app->get('/search', function (Request $request) use ($app) {
         unset($result['authors']);
         unset($result['researchOrganisms']);
         unset($result['keywords']);
-        unset($result['abstract']);
         unset($result['digest']);
         unset($result['body']);
         unset($result['decisionLetter']);
