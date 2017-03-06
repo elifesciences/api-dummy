@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9be7b52e845a97aa7d045a1c80cf35a7",
-    "content-hash": "5b6a6b6669a8cea4d015e6d1c0719ffb",
+    "hash": "1bad88c638bd5e70033e6039b30b71e0",
+    "content-hash": "9cc678bf206ece7cd7a3aec9a2f57d10",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -117,6 +117,56 @@
                 "image processing"
             ],
             "time": "2015-09-19 16:54:05"
+        },
+        {
+            "name": "jdesrosiers/silex-cors-provider",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdesrosiers/silex-cors-provider.git",
+                "reference": "d3bda18f048271e64e5e749ba86bcfd43f5fb2a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdesrosiers/silex-cors-provider/zipball/d3bda18f048271e64e5e749ba86bcfd43f5fb2a6",
+                "reference": "d3bda18f048271e64e5e749ba86bcfd43f5fb2a6",
+                "shasum": ""
+            },
+            "require": {
+                "silex/silex": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "symfony/browser-kit": "2.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JDesrosiers\\Silex\\Provider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Desrosiers",
+                    "email": "jdesrosi@gmail.com"
+                }
+            ],
+            "description": "A silex service provider that adds CORS services to silex",
+            "keywords": [
+                "cors",
+                "cross",
+                "origin",
+                "provider",
+                "resource",
+                "service",
+                "sharing",
+                "silex"
+            ],
+            "time": "2017-02-17 06:21:01"
         },
         {
             "name": "league/flysystem",
