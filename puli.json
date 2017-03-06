@@ -38,6 +38,10 @@
             "install-path": "vendor/imagine/imagine",
             "installer": "composer"
         },
+        "jdesrosiers/silex-cors-provider": {
+            "install-path": "vendor/jdesrosiers/silex-cors-provider",
+            "installer": "composer"
+        },
         "justinrainbow/json-schema": {
             "install-path": "vendor/justinrainbow/json-schema",
             "installer": "composer",

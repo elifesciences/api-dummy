@@ -6,6 +6,7 @@ use eLife\DummyApi\VersionedNegotiator;
 use Imagine\Gd\Imagine;
 use Imagine\Image\Box;
 use Imagine\Image\ImageInterface;
+use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
 use Negotiation\Accept;
@@ -22,6 +23,10 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
+
+$app->register(new CorsServiceProvider(), ['cors.allowOrigin' => '*']);
+
+$app['cors-enabled']($app);
 
 $app['annual-reports'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports');
