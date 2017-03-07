@@ -261,6 +261,24 @@ $app['press-packages'] = function () use ($app) {
     return $packages;
 };
 
+$app['recommendations'] = function () use ($app) {
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/recommendations');
+    } catch (Throwable $e) {
+        $finder = [];
+    }
+
+    $items = [];
+    foreach ($finder as $file) {
+        $name = explode('-', $file->getBasename('.json'));
+
+        $json = json_decode($file->getContents(), true);
+        $items[$name[0]][$name[1]] = $json;
+    }
+
+    return $items;
+};
+
 $app['subjects'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects');
 
@@ -1557,6 +1575,52 @@ $app->get('/press-packages/{id}',
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
     });
+
+$app->get('/recommendations/{contentType}/{id}', function (Request $request, string $contentType, string $id) use ($app) {
+    if (false === isset($app['recommendations'][$contentType][$id])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $accepts = [
+        'application/vnd.elife.recommendations+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $recommendations = $app['recommendations'][$contentType][$id];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($recommendations),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $recommendations = array_reverse($recommendations);
+    }
+
+    $recommendations = array_slice($recommendations, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($recommendations) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content['items'] = $recommendations;
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
 
 $app->get('/search', function (Request $request) use ($app) {
     $accepts = [
