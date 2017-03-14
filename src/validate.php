@@ -2,32 +2,22 @@
 
 use eLife\ApiValidator\MessageValidator\FakeHttpsMessageValidator;
 use eLife\ApiValidator\MessageValidator\JsonMessageValidator;
-use eLife\ApiValidator\SchemaFinder\PuliSchemaFinder;
+use eLife\ApiValidator\SchemaFinder\PathBasedSchemaFinder;
+use JsonSchema\Validator;
 use Silex\Application;
 use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
-use Webmozart\Json\JsonDecoder;
 
 $app = require __DIR__.'/bootstrap.php';
 
-$app['puli.factory'] = function () {
-    $factoryClass = PULI_FACTORY_CLASS;
-
-    return new $factoryClass();
-};
-
-$app['puli.repository'] = function (Application $app) {
-    return $app['puli.factory']->createRepository();
-};
-
 $app['message-validator'] = function (Application $app) {
-    $jsonDecoder = new JsonDecoder();
-
     return new FakeHttpsMessageValidator(
-        new JsonMessageValidator(new PuliSchemaFinder($app['puli.repository']), $jsonDecoder),
-        $jsonDecoder
+        new JsonMessageValidator(
+            new PathBasedSchemaFinder(ComposerLocator::getPath('elife/api').'/dist/model'),
+            new Validator()
+        )
     );
 };
 
