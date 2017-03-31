@@ -2004,6 +2004,9 @@ $app->get('images/{type}/{file}/{extension}',
 ;
 
 $app->after(function (Request $request, Response $response, Application $app) {
+    $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
+    $response->headers->set('Vary', 'Accept', false);
+
     if ($response instanceof StreamedResponse) {
         return;
     }
@@ -2012,6 +2015,9 @@ $app->after(function (Request $request, Response $response, Application $app) {
 
     $response->setContent(str_replace('%base_url%', $request->getSchemeAndHttpHost().$request->getBasePath(),
         $content));
+
+    $response->headers->set('ETag', md5($response->getContent()));
+    $response->isNotModified($request);
 });
 
 $app->error(function (Throwable $e) {
