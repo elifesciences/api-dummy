@@ -1935,6 +1935,17 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
     );
 });
 
+$app->get('ping', function () use ($app) {
+    return new Response(
+        'pong',
+        Response::HTTP_OK,
+        [
+            'Cache-Control' => 'must-revalidate, no-cache, no-store, private',
+            'Content-Type' => 'text/plain; charset=UTF-8',
+        ]
+    );
+});
+
 $app->get('images/{type}/{file}/{extension}',
     function (Request $request, string $type, string $file, string $extension) use ($app) {
         $width = $request->query->get('width');
@@ -2004,8 +2015,10 @@ $app->get('images/{type}/{file}/{extension}',
 ;
 
 $app->after(function (Request $request, Response $response, Application $app) {
-    $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
-    $response->headers->set('Vary', 'Accept', false);
+    if ('/ping' !== $request->getPathInfo()) {
+        $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
+        $response->headers->set('Vary', 'Accept', false);
+    }
 
     if ($response instanceof StreamedResponse) {
         return;
