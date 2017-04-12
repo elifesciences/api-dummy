@@ -5,24 +5,28 @@
     "image": {
         "banner": {
             "alt": "",
-            "sizes": {
-                "2:1": {
-                    "900": "%base_url%/images/experiments/1/png?width=900&height=450",
-                    "1800": "%base_url%/images/experiments/1/png?width=1800&height=900"
-                }
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "filename": "manuscripts-elife-labs.png"
+            },
+            "size": {
+                "width": 1363,
+                "height": 456
             }
         },
         "thumbnail": {
             "alt": "",
-            "sizes": {
-                "16:9": {
-                    "250": "%base_url%/images/experiments/1/png?width=250&height=141",
-                    "500": "%base_url%/images/experiments/1/png?width=500&height=281"
-                },
-                "1:1": {
-                    "70": "%base_url%/images/experiments/1/png?width=70&height=70",
-                    "140": "%base_url%/images/experiments/1/png?width=140&height=140"
-                }
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "filename": "manuscripts-elife-labs.png"
+            },
+            "size": {
+                "width": 1363,
+                "height": 456
             }
         }
     },
@@ -53,8 +57,19 @@
         },
         {
             "type": "image",
-            "alt": "",
-            "uri": "https://cdn.elifesciences.org/images/news/manuscripts-figure1.png",
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts-figure1.png",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts-figure1.png/full/full/0/default.png",
+                    "filename": "manuscripts-figure1.png"
+                },
+                "size": {
+                    "width": 2560,
+                    "height": 1598
+                }
+            },
             "title": "Manuscripts at a glance"
         },
         {
@@ -67,8 +82,19 @@
                 },
                 {
                     "type": "image",
-                    "alt": "",
-                    "uri": "https://cdn.elifesciences.org/images/news/manuscripts_fig2.png",
+                    "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts_fig2.png",
+                        "source": {
+                            "mediaType": "image/png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts_fig2.png/full/full/0/default.png",
+                            "filename": "manuscripts_fig2.png"
+                        },
+                        "size": {
+                            "width": 2560,
+                            "height": 1600
+                        }
+                    },
                     "title": "Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project."
                 },
                 {

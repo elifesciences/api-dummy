@@ -226,8 +226,19 @@
                             "doi": "10.7554/eLife.13410.003",
                             "id": "fig1",
                             "label": "Figure 1",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig1-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig1-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 2249,
+                                    "height": 2431
+                                }
+                            },
                             "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
                             "caption": [
                                 {
@@ -241,8 +252,19 @@
                             "doi": "10.7554/eLife.13410.004",
                             "id": "fig2",
                             "label": "Figure 2",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig2-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig2-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 2249,
+                                    "height": 2431
+                                }
+                            },
                             "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
                             "caption": [
                                 {
@@ -260,8 +282,19 @@
                             "doi": "10.7554/eLife.13410.005",
                             "id": "fig3",
                             "label": "Figure 3",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig3-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig3-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 2195,
+                                    "height": 2342
+                                }
+                            },
                             "title": "Change in adult height between the 1896 and 1996 birth cohorts."
                         },
                         {
@@ -269,8 +302,19 @@
                             "doi": "10.7554/eLife.13410.006",
                             "id": "fig4",
                             "label": "Figure 4",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig4-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig4-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 4404,
+                                    "height": 10344
+                                }
+                            },
                             "title": "Height in adulthood for the 1896 and 1996 birth cohorts for men.",
                             "caption": [
                                 {
@@ -284,8 +328,19 @@
                             "doi": "10.7554/eLife.13410.007",
                             "id": "fig5",
                             "label": "Figure 5",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig5-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig5-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 4404,
+                                    "height": 10344
+                                }
+                            },
                             "title": "Height in adulthood for the 1896 and 1996 birth cohorts for women.",
                             "caption": [
                                 {
@@ -303,8 +358,19 @@
                             "doi": "10.7554/eLife.13410.008",
                             "id": "fig6",
                             "label": "Figure 6",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig6-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig6-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 3359,
+                                    "height": 2021
+                                }
+                            },
                             "title": "Trends in height for the adult populations of selected countries in Asia.",
                             "caption": [
                                 {
@@ -322,8 +388,19 @@
                             "doi": "10.7554/eLife.13410.009",
                             "id": "fig7",
                             "label": "Figure 7",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig7-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig7-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 3359,
+                                    "height": 2021
+                                }
+                            },
                             "title": "Trends in height for the adult populations of selected countries in Europe.",
                             "caption": [
                                 {
@@ -341,8 +418,19 @@
                             "doi": "10.7554/eLife.13410.010",
                             "id": "fig8",
                             "label": "Figure 8",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig8-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig8-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 3359,
+                                    "height": 2020
+                                }
+                            },
                             "title": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa.",
                             "caption": [
                                 {
@@ -364,8 +452,19 @@
                             "doi": "10.7554/eLife.13410.011",
                             "id": "fig9",
                             "label": "Figure 9",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig9-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig9-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 2009,
+                                    "height": 587
+                                }
+                            },
                             "title": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
                         },
                         {
@@ -377,8 +476,19 @@
                             "doi": "10.7554/eLife.13410.012",
                             "id": "fig10",
                             "label": "Figure 10",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/13410/elife-13410-fig10-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-13410-fig10-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 2010,
+                                    "height": 875
+                                }
+                            },
                             "title": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height.",
                             "caption": [
                                 {

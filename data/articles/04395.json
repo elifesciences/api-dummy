@@ -431,8 +431,19 @@
                             "doi": "10.7554/eLife.04395.003",
                             "id": "fig1",
                             "label": "Figure 1",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/04395/elife-04395-fig1-v2.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:04395/elife-04395-fig1-v2.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:04395/elife-04395-fig1-v2.tif/full/full/0/default.jpg",
+                                    "filename": "elife-04395-fig1-v2.jpg"
+                                },
+                                "size": {
+                                    "width": 1445,
+                                    "height": 1005
+                                }
+                            },
                             "title": "The epidemiology of Ebola virus transmission in Africa.",
                             "caption": [
                                 {

@@ -219,8 +219,19 @@
                             "doi": "10.7554/eLife.16412.002",
                             "id": "fig1",
                             "label": "Figure 1",
-                            "alt": "",
-                            "uri": "https://elife-publishing-cdn.s3.amazonaws.com/16412/elife-16412-fig1-v1.jpg",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif",
+                                "source": {
+                                    "mediaType": "image/jpg",
+                                    "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif/full/full/0/default.jpg",
+                                    "filename": "elife-16412-fig1-v1.jpg"
+                                },
+                                "size": {
+                                    "width": 1378,
+                                    "height": 1378
+                                }
+                            },
                             "title": "Updated Ebola virus disease occurrence database.",
                             "caption": [
                                 {

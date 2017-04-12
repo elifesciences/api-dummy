@@ -1,13 +1,18 @@
 {
     "title": "Macaque parietal, premotor, and motor cortices",
     "image": {
-        "alt": "",
-        "sizes": {
-            "2:1": {
-                "900": "%base_url%/images/covers/article-15278/jpg?width=900&height=450",
-                "1800": "%base_url%/images/covers/article-15278/jpg?width=1800&height=900"
-            }
-        }
+        "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-fig1-v1.jpg",
+        "filename": "elife-15278-fig1-v1.jpg",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-15278-fig1-v1.jpg",
+            "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-fig1-v1.jpg/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1829,
+            "width": 2460
+        },
+        "alt": ""
     },
     "item": {
         "status": "vor",
