@@ -5,15 +5,15 @@
     "impactStatement": "Having published almost 800 research articles by the close of 2014, in this report eLife is showcasing its achievements in attracting growing numbers of submissions, publishing a broad swath of high-quality research swiftly and constructively, supporting transparency and reproducibility, as well as the careers of early-career researchers, and exploring new publication formats.",
     "image": {
         "alt": "",
-        "sizes": {
-            "16:9": {
-                "250": "%base_url%/images/annual-reports/2014/jpg?width=250&height=141",
-                "500": "%base_url%/images/annual-reports/2014/jpg?width=500&height=281"
-            },
-            "1:1": {
-                "70": "%base_url%/images/annual-reports/2014/jpg?width=70&height=70",
-                "140": "%base_url%/images/annual-reports/2014/jpg?width=140&height=140"
-            }
+        "uri": "https://iiif.elifesciences.org/journal-cms:annual_report/2017-04/annual_report_2014.png",
+        "source": {
+            "mediaType": "image/png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:annual_report/2017-04/annual_report_2014.png/full/full/0/default.png",
+            "filename": "annual_report_2014.png"
+        },
+        "size": {
+            "width": 1800,
+            "height": 1350
         }
     }
 }

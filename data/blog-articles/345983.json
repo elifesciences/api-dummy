@@ -22,8 +22,19 @@
         },
         {
             "type": "image",
-            "alt": "",
-            "uri": "https://cdn.elifesciences.org/images/news/ORCID_iD-fig.png",
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-06/orcid_id-fig.png",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-06/orcid_id-fig.png/full/full/0/default.png",
+                    "filename": "orcid_id-fig.png"
+                },
+                "size": {
+                    "width": 865,
+                    "height": 649
+                }
+            },
             "title": "Increase in the number of eLife profiles linked to an ORCID iD"
         },
         {

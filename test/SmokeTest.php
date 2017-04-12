@@ -280,37 +280,5 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/problem+json',
             400,
         ];
-
-        yield $path = '/images/subjects/cell-biology/png' => [
-            Request::create($path),
-            'application/problem+json',
-            404,
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg' => [
-            Request::create($path),
-            'image/jpeg',
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg?width=900' => [
-            Request::create($path),
-            'image/jpeg',
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg?height=450' => [
-            Request::create($path),
-            'image/jpeg',
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg?width=900&height=450' => [
-            Request::create($path),
-            'image/jpeg',
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg?width=5001' => [
-            Request::create($path),
-            'application/problem+json',
-            400,
-        ];
-        yield $path = '/images/subjects/cell-biology/jpg?height=5001' => [
-            Request::create($path),
-            'application/problem+json',
-            400,
-        ];
     }
 }

@@ -431,15 +431,15 @@
             "image": {
                 "thumbnail": {
                     "alt": "",
-                    "sizes": {
-                        "16:9": {
-                            "250": "%base_url%/images/articles/10627/jpg?width=250&height=141",
-                            "500": "%base_url%/images/articles/10627/jpg?width=500&height=281"
-                        },
-                        "1:1": {
-                            "70": "%base_url%/images/articles/10627/jpg?width=70&height=70",
-                            "140": "%base_url%/images/articles/10627/jpg?width=140&height=140"
-                        }
+                    "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax:09560/elife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-09560-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
                     }
                 }
             },

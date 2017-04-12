@@ -3,12 +3,7 @@
 use Crell\ApiProblem\ApiProblem;
 use eLife\DummyApi\UnsupportedVersion;
 use eLife\DummyApi\VersionedNegotiator;
-use Imagine\Gd\Imagine;
-use Imagine\Image\Box;
-use Imagine\Image\ImageInterface;
 use JDesrosiers\Silex\Provider\CorsServiceProvider;
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\Filesystem;
 use Negotiation\Accept;
 use Silex\Application;
 use Symfony\Component\Finder\Finder;
@@ -291,14 +286,6 @@ $app['subjects'] = function () use ($app) {
     ksort($subjects);
 
     return $subjects;
-};
-
-$app['filesystem'] = function () {
-    return new Filesystem(new Local(__DIR__.'/../cache'));
-};
-
-$app['imagine'] = function () {
-    return new Imagine();
 };
 
 $app['negotiator'] = function () {
@@ -1945,74 +1932,6 @@ $app->get('ping', function () use ($app) {
         ]
     );
 });
-
-$app->get('images/{type}/{file}/{extension}',
-    function (Request $request, string $type, string $file, string $extension) use ($app) {
-        $width = $request->query->get('width');
-        $height = $request->query->get('height');
-
-        if ($width > 5000 || $height > 5000) {
-            throw new BadRequestHttpException('Too big');
-        }
-
-        $cacheKey = md5(implode('|', [$type, $file, $extension, $width, $height]));
-
-        $cache = $app['filesystem'];
-
-        if (false === $cache->has($cacheKey)) {
-            $imagine = $app['imagine'];
-
-            try {
-                /** @var ImageInterface $image */
-                $image = $imagine->open(__DIR__.'/../assets/'.$type.'/'.$file.'.'.$extension);
-            } catch (Exception $e) {
-                throw new NotFoundHttpException('Image not found', $e);
-            }
-
-            if ($width && $height) {
-                if ($height > $image->getSize()->getHeight()) {
-                    $image = $image->resize($image->getSize()->heighten($height));
-                }
-                if ($width > $image->getSize()->getWidth()) {
-                    $image = $image->resize($image->getSize()->widen($width));
-                }
-                $image = $image->thumbnail(new Box($width, $height), ImageInterface::THUMBNAIL_OUTBOUND);
-            } elseif ($width) {
-                $image = $image->resize($image->getSize()->widen($width));
-            } elseif ($height) {
-                $image = $image->resize($image->getSize()->heighten($height));
-            }
-
-            $cache->put($cacheKey, $image->get($extension));
-        }
-
-        switch ($extension) {
-            case 'jpg':
-                $contentType = 'image/jpeg';
-                break;
-            case 'png':
-                $contentType = 'image/png';
-                break;
-            default:
-                throw new RuntimeException('Unknown extension '.$extension);
-        }
-
-        return new StreamedResponse(
-            function () use ($cache, $cacheKey) {
-                $image = $cache->readStream($cacheKey);
-
-                while (!feof($image)) {
-                    $buffer = fread($image, 1024);
-                    echo $buffer;
-                    flush();
-                }
-                fclose($image);
-            },
-            Response::HTTP_OK,
-            ['Content-Type' => $contentType]
-        );
-    })->assert('number', '[1-9][0-9]*')->assert('width', '[1-9][0-9]*')->assert('height', '[1-9][0-9]*')
-;
 
 $app->after(function (Request $request, Response $response, Application $app) {
     if ('/ping' !== $request->getPathInfo()) {
