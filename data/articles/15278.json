@@ -877,8 +877,8 @@
                                     "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-media2.jpg/full/full/0/default.jpg"
                                 },
                                 "size": {
-                                    "height": 1,
-                                    "width": 1
+                                    "height": 1080,
+                                    "width": 1920
                                 },
                                 "alt": ""
                             },
@@ -1017,8 +1017,8 @@
                                             "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-media3.jpg/full/full/0/default.jpg"
                                         },
                                         "size": {
-                                            "height": 1,
-                                            "width": 1
+                                            "height": 1080,
+                                            "width": 1920
                                         },
                                         "alt": ""
                                     },
@@ -1089,8 +1089,8 @@
                                             "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-media4.jpg/full/full/0/default.jpg"
                                         },
                                         "size": {
-                                            "height": 1,
-                                            "width": 1
+                                            "height": 1080,
+                                            "width": 1920
                                         },
                                         "alt": ""
                                     },
@@ -1500,8 +1500,8 @@
                                             "uri": "https://iiif.elifesciences.org/lax:15278/elife-15278-media5.jpg/full/full/0/default.jpg"
                                         },
                                         "size": {
-                                            "height": 1,
-                                            "width": 1
+                                            "height": 1078,
+                                            "width": 1920
                                         },
                                         "alt": ""
                                     },
