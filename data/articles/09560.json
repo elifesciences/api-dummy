@@ -459,6 +459,13 @@
                 }
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+        },
+        {
+            "journal": "Science Translational Medicine",
+            "articleTitle": "Discovery and Preclinical Validation of Drug Indications Using Compendia of Public Gene Expression Data",
+            "uri": "https://doi.org/10.1126/scitranslmed.3001318",
+            "type": "external-article",
+            "authorLine": "M Sirota et al"
         }
     ]
 }
