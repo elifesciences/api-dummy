@@ -704,6 +704,7 @@ $app->get('/collections', function (Request $request) use ($app) {
 
     foreach ($collections as $i => $collection) {
         unset($collection['curators']);
+        unset($collection['summary']);
         unset($collection['content']);
         unset($collection['relatedContent']);
         unset($collection['podcastEpisodes']);
@@ -1691,6 +1692,7 @@ $app->get('/search', function (Request $request) use ($app) {
     foreach ($app['collections'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['curators']);
+        unset($result['summary']);
         unset($result['content']);
         unset($result['relatedContent']);
         unset($result['podcastEpisodes']);
