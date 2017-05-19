@@ -222,54 +222,64 @@
                             "text": "We estimated that people born in 1896 were shortest in Asia and in Central and Andean Latin America (Figure 1 and Figure 2). The 1896 male birth cohort on average measured only 152.9 cm (credible interval 147.9–157.9) in Laos, which is the same as a well-nourished 12.5-year boy according to international growth standards (de Onis et al., 2007), followed by Timor-Leste and Guatemala. Women born in the same year in Guatemala were on average 140.3 cm (135.8–144.8), the same as a well-nourished 10-year girl. El Salvador, Peru, Bangladesh, South Korea and Japan had the next shortest women. The tallest populations a century ago lived in Central and Northern Europe, North America and some Pacific islands. The height of men born in Sweden, Norway and the USA surpassed 171 cm, ~18–19 cm taller than men in Laos. Swedish women, with average adult height of 160.3 cm (158.2–162.4), were the tallest a century ago and 20 cm taller than women in Guatemala. Women were also taller than 158 cm in Norway, Iceland, the USA and American Samoa."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.003",
-                            "id": "fig1",
-                            "label": "Figure 1",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig1-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 2249,
-                                    "height": 2431
-                                }
-                            },
-                            "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.003",
+                                    "id": "fig1",
+                                    "label": "Figure 1",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig1-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 2249,
+                                            "height": 2431
+                                        }
+                                    },
+                                    "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.004",
-                            "id": "fig2",
-                            "label": "Figure 2",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig2-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 2249,
-                                    "height": 2431
-                                }
-                            },
-                            "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.004",
+                                    "id": "fig2",
+                                    "label": "Figure 2",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig2-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig2-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 2249,
+                                            "height": 2431
+                                        }
+                                    },
+                                    "title": "Adult height for the 1896 and 1996 birth cohorts for men.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -278,74 +288,89 @@
                             "text": "Changes in adult height over the century of analysis varied drastically across countries. Notably, although the large increases in European men’s heights in the 19th and 20th century have been highlighted, we found that the largest gains since the 1896 birth cohort occurred in South Korean women and Iranian men, who became 20.2 cm (17.5–22.7) and 16.5 cm (13.3–19.7) taller, respectively (Figure 3, Figure 4 and Figure 5). As a result, South Korean women moved from the fifth shortest to the top tertile of tallest women in the world over the course of a century. Men in South Korea also had large gains relative to other countries, by 15.2 cm (12.3–18.1). There were also large gains in height in Japan, Greenland, some countries in Southern Europe (e.g., Greece) and Central Europe (e.g., Serbia and Poland, and for women Czech Republic). In contrast, there was little gain in height in many countries in sub-Saharan Africa and South Asia."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.005",
-                            "id": "fig3",
-                            "label": "Figure 3",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig3-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 2195,
-                                    "height": 2342
-                                }
-                            },
-                            "title": "Change in adult height between the 1896 and 1996 birth cohorts."
-                        },
-                        {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.006",
-                            "id": "fig4",
-                            "label": "Figure 4",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig4-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 4404,
-                                    "height": 10344
-                                }
-                            },
-                            "title": "Height in adulthood for the 1896 and 1996 birth cohorts for men.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.005",
+                                    "id": "fig3",
+                                    "label": "Figure 3",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig3-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig3-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 2195,
+                                            "height": 2342
+                                        }
+                                    },
+                                    "title": "Change in adult height between the 1896 and 1996 birth cohorts."
                                 }
                             ]
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.007",
-                            "id": "fig5",
-                            "label": "Figure 5",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig5-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 4404,
-                                    "height": 10344
-                                }
-                            },
-                            "title": "Height in adulthood for the 1896 and 1996 birth cohorts for women.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.006",
+                                    "id": "fig4",
+                                    "label": "Figure 4",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig4-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig4-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4404,
+                                            "height": 10344
+                                        }
+                                    },
+                                    "title": "Height in adulthood for the 1896 and 1996 birth cohorts for men.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "figure",
+                            "assets": [
+                                {
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.007",
+                                    "id": "fig5",
+                                    "label": "Figure 5",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig5-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig5-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 4404,
+                                            "height": 10344
+                                        }
+                                    },
+                                    "title": "Height in adulthood for the 1896 and 1996 birth cohorts for women.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The open circle shows the adult height attained by the 1896 birth cohort and the filled circle that of the 1996 birth cohort; the length of the connecting line represents the change in height over the century of analysis. The numbers next to each circle show the country’s rank in terms of adult height for the corresponding cohort. See <a href=\"http://www.ncdrisc.org\">www.ncdrisc.org</a> for interactive version."
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -354,28 +379,33 @@
                             "text": "The pace of growth in height has not been uniform over the past century. The impressive rise in height in Japan stopped in people born after the early 1960s (Figure 6). In South Korea, the flattening began in the cohorts born in the 1980s for men and it may have just begun in women. As a result, South Korean men and women are now taller than their Japanese counterparts. The rise is continuing in other East and Southeast Asian countries like China and Thailand, with Chinese men and women having surpassed the Japanese (but not yet as tall as South Koreans). The rise in adult height also seems to have plateaued in South Asian countries like Bangladesh and India at much lower levels than in East Asia, e.g., 5–10 cm shorter than it did in Japan and South Korea."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.008",
-                            "id": "fig6",
-                            "label": "Figure 6",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig6-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 3359,
-                                    "height": 2021
-                                }
-                            },
-                            "title": "Trends in height for the adult populations of selected countries in Asia.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.008",
+                                    "id": "fig6",
+                                    "label": "Figure 6",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig6-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig6-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 3359,
+                                            "height": 2021
+                                        }
+                                    },
+                                    "title": "Trends in height for the adult populations of selected countries in Asia.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -384,28 +414,33 @@
                             "text": "There were also variations in the time course of height change across high-income western countries, with height increase having plateaued in Northern European countries like Finland and in English-speaking countries like the UK for 2–3 decades (Larnkaer et al., 2006; Schönbeck et al., 2013), followed by Eastern Europe (Figure 7). The earliest of these occurred in the USA, which was one of the tallest nations a century ago but has now fallen behind its European counterparts after having had the smallest gain in height of any high-income country (Tanner, 1981; Komlos and Lauderdale, 2007; Komlos and Baur, 2004; Sokoloff and Villaflor, 1982). In contrast, height is still increasing in some Southern European countries (e.g., Spain), and in many countries in Latin America."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.009",
-                            "id": "fig7",
-                            "label": "Figure 7",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig7-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 3359,
-                                    "height": 2021
-                                }
-                            },
-                            "title": "Trends in height for the adult populations of selected countries in Europe.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.009",
+                                    "id": "fig7",
+                                    "label": "Figure 7",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig7-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig7-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 3359,
+                                            "height": 2021
+                                        }
+                                    },
+                                    "title": "Trends in height for the adult populations of selected countries in Europe.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -414,28 +449,33 @@
                             "text": "As an exception to the steady gains in most countries, adult height decreased or at best remained the same in many countries in sub-Saharan Africa for cohorts born after the early 1960s, by around 5 cm from its peak in some countries (see for example Niger, Rwanda, Sierra Leone, and Uganda in Figure 8). More recently, the same seems to have happened for men, but not women, in some countries in Central Asia (e.g., Azerbaijan and Uzbekistan) and Middle East and North Africa (e.g., Egypt and Yemen), whereas in others (e.g., Iran) both sexes continue to grow taller."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.010",
-                            "id": "fig8",
-                            "label": "Figure 8",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig8-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 3359,
-                                    "height": 2020
-                                }
-                            },
-                            "title": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.010",
+                                    "id": "fig8",
+                                    "label": "Figure 8",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig8-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig8-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 3359,
+                                            "height": 2020
+                                        }
+                                    },
+                                    "title": "Trends in height for the adult populations of selected countries in the Middle East, North Africa, and sub-Saharan Africa.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "The solid line represents the posterior mean and the shaded area the 95% credible interval of the estimates. The points show the actual data from each country, together with its 95% confidence interval due to sampling. The solid line and shaded area show estimated height at 18 years of age, while the data points show height at the actual age of measurement. The divergence between estimates and data for earlier birth cohorts is because participants from these birth cohorts were generally older when their heights were measured."
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -448,52 +488,62 @@
                             "text": "Male and female heights were correlated across countries in 1896 as well as in 1996. Men were taller than women in every country, on average by ~11 cm in the 1896 birth cohort and ~12 cm in the 1996 birth cohort (Figure 9). In the 1896 birth cohort, the male-female height gap in countries where average height was low was slightly larger than in taller nations. In other words, at the turn of the 20th century, men seem to have had a relative advantage over women in undernourished compared to better-nourished populations. A century later, the male-female height gap is about the same throughout the height range. Changes in male and female heights over the century of analysis were also correlated, which is in contrast to low correlation between changes in male and female BMIs as reported elsewhere (NCD Risk Factor Collaboration, 2016)."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.011",
-                            "id": "fig9",
-                            "label": "Figure 9",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig9-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 2009,
-                                    "height": 587
+                            "type": "figure",
+                            "assets": [
+                                {
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.011",
+                                    "id": "fig9",
+                                    "label": "Figure 9",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig9-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig9-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 2009,
+                                            "height": 587
+                                        }
+                                    },
+                                    "title": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
                                 }
-                            },
-                            "title": "Height in adulthood for men vs. women for the 1896 and 1996 birth cohorts, and change in men’s vs. women’s heights from 1896 to 1996."
+                            ]
                         },
                         {
                             "type": "paragraph",
                             "text": "Change in population mean height was not correlated with change in mean BMI (NCD Risk Factor Collaboration, 2016) across countries for men (correlation coefficient = −0.016) and was weakly inversely correlated for women (correlation coefficient = −0.28) (Figure 10). Countries like Japan, Singapore and France had larger-than-median gains in height but little change in BMI, in contrast to places like the USA and Kiribati where height has increased less than the worldwide median while BMI has increased a great deal."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.13410.012",
-                            "id": "fig10",
-                            "label": "Figure 10",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-13410-fig10-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 2010,
-                                    "height": 875
-                                }
-                            },
-                            "title": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "Each point shows one country. BMI change was calculated for mean BMI at 45–49 years of age – an age when diseases associated with excess weight become common but weight loss due to pre-existing disease is still uncommon. BMI data were available for 1975–2014 (NCD Risk Factor Collaboration, 2016); 45–49 year olds in these years correspond to 1928–1967 birth cohorts. BMI data were from a pooled analysis of 1698 population-based measurement studies with 19.2 million participants, with details reported elsewhere (NCD Risk Factor Collaboration, 2016)."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.13410.012",
+                                    "id": "fig10",
+                                    "label": "Figure 10",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:13410/elife-13410-fig10-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-13410-fig10-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 2010,
+                                            "height": 875
+                                        }
+                                    },
+                                    "title": "Change, over the 1928–1967 birth cohorts, in mean BMI vs. in mean height.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Each point shows one country. BMI change was calculated for mean BMI at 45–49 years of age – an age when diseases associated with excess weight become common but weight loss due to pre-existing disease is still uncommon. BMI data were available for 1975–2014 (NCD Risk Factor Collaboration, 2016); 45–49 year olds in these years correspond to 1928–1967 birth cohorts. BMI data were from a pooled analysis of 1698 population-based measurement studies with 19.2 million participants, with details reported elsewhere (NCD Risk Factor Collaboration, 2016)."
+                                        }
+                                    ]
                                 }
                             ]
                         }
