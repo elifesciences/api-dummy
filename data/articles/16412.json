@@ -215,28 +215,33 @@
                             "text": "Six additional records of EVD were incorporated into the disease occurrence database: one human outbreak in the Democratic Republic of Congo (Maganga et al., 2014); two reports of infections in animals in Zambia (Ogawa et al., 2015); and three animal infections in Central African Republic(Morvan et al., 1999) (Figure 1). Of these new occurrences, two in southern Central African Republic are found in areas predicted to be at-risk by the previous model (Pigott et al., 2014), with the index case from the Democratic Republic of Congo located in close proximity (&lt;10 km) to at-risk areas. The occurrences in Zambia and northern Central African Republic lie, respectively, to the south and north of previously predicted at-risk regions."
                         },
                         {
-                            "type": "image",
-                            "doi": "10.7554/eLife.16412.002",
-                            "id": "fig1",
-                            "label": "Figure 1",
-                            "image": {
-                                "alt": "",
-                                "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif",
-                                "source": {
-                                    "mediaType": "image/jpg",
-                                    "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif/full/full/0/default.jpg",
-                                    "filename": "elife-16412-fig1-v1.jpg"
-                                },
-                                "size": {
-                                    "width": 1378,
-                                    "height": 1378
-                                }
-                            },
-                            "title": "Updated Ebola virus disease occurrence database.",
-                            "caption": [
+                            "type": "figure",
+                            "assets": [
                                 {
-                                    "type": "paragraph",
-                                    "text": "Human index cases are represented by red circles, animal occurrences in blue. New occurrence information is indicated by the black circle. The coordinates of polygon centroids are displayed for occurrences defined by an area greater than 5 km x 5 km."
+                                    "type": "image",
+                                    "doi": "10.7554/eLife.16412.002",
+                                    "id": "fig1",
+                                    "label": "Figure 1",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif",
+                                        "source": {
+                                            "mediaType": "image/jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax:16412/elife-16412-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-16412-fig1-v1.jpg"
+                                        },
+                                        "size": {
+                                            "width": 1378,
+                                            "height": 1378
+                                        }
+                                    },
+                                    "title": "Updated Ebola virus disease occurrence database.",
+                                    "caption": [
+                                        {
+                                            "type": "paragraph",
+                                            "text": "Human index cases are represented by red circles, animal occurrences in blue. New occurrence information is indicated by the black circle. The coordinates of polygon centroids are displayed for occurrences defined by an area greater than 5 km x 5 km."
+                                        }
+                                    ]
                                 }
                             ]
                         }
