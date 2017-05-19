@@ -277,6 +277,13 @@
                 }
             ],
             "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks."
+        },
+        {
+            "journal": "Science Translational Medicine",
+            "articleTitle": "Discovery and Preclinical Validation of Drug Indicatio Using Compendia of Public Gene Expression Data",
+            "uri": "https://doi.org/10.1126/scitranslmed.3001318",
+            "type": "external-article",
+            "authorLine": "M Sirota et al"
         }
     ]
 }
