@@ -1326,7 +1326,7 @@ $app->get('/people', function (Request $request) use ($app) {
 
     if (false === empty($personType)) {
         $people = array_filter($people, function ($person) use ($personType) {
-            return $personType === $person['type'];
+            return $personType === $person['type']['id'];
         });
     }
 
