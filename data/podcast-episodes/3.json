@@ -37,16 +37,6 @@
             "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.08.mp3"
         }
     ],
-    "subjects": [
-        {
-            "id": "neuroscience",
-            "name": "Neuroscience"
-        },
-        {
-            "id": "genes-chromosomes",
-            "name": "Genes chromosomes"
-        }
-    ],
     "chapters": [
         {
             "number": 1,
