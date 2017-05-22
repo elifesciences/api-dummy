@@ -1,6 +1,9 @@
 {
     "id": "jqpublic",
-    "type": "reviewing-editor",
+    "type": {
+        "id": "reviewing-editor",
+        "label": "Reviewing Editor"
+    },
     "name": {
         "preferred": "John Q. Public",
         "index": "Public, John Q."
