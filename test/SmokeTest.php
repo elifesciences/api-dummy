@@ -40,7 +40,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             $this->fail($json);
         }
 
-        $this->assertSame($statusCode, $response->getStatusCode());
+        $this->assertSame($statusCode, $response->getStatusCode(), $response->getContent());
         if (is_array($contentType)) {
             $this->assertContains($response->headers->get('Content-Type'), $contentType);
         } else {
