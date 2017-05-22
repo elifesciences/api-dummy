@@ -1,6 +1,9 @@
 {
     "id": "djones",
-    "type": "reviewing-editor",
+    "type": {
+        "id": "reviewing-editor",
+        "label": "Reviewing Editor"
+    },
     "name": {
         "preferred": "Dai Jones",
         "index": "Jones, Dai"

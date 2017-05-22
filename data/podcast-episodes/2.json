@@ -37,16 +37,6 @@
             "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.07.mp3"
         }
     ],
-    "subjects": [
-        {
-            "id": "plant-biology",
-            "name": "Plant Biology"
-        },
-        {
-            "id": "genomics-evolutionary-biology",
-            "name": "Genomics and Evolutionary Biology"
-        }
-    ],
     "chapters": [
         {
             "number": 1,
