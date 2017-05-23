@@ -153,7 +153,7 @@ $app['labs'] = function () use ($app) {
     $labs = [];
     foreach ($finder as $file) {
         $json = json_decode($file->getContents(), true);
-        $labs[(int) $json['number']] = $json;
+        $labs[$json['id']] = $json;
     }
 
     ksort($labs);
@@ -1139,13 +1139,13 @@ $app->get('/labs-posts', function (Request $request) use ($app) {
     );
 });
 
-$app->get('/labs-posts/{number}',
-    function (Request $request, int $number) use ($app) {
-        if (false === isset($app['labs'][$number])) {
+$app->get('/labs-posts/{id}',
+    function (Request $request, int $id) use ($app) {
+        if (false === isset($app['labs'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
-        $lab = $app['labs'][$number];
+        $lab = $app['labs'][$id];
 
         $accepts = [
             'application/vnd.elife.labs-post+json; version=1',
@@ -1162,7 +1162,7 @@ $app->get('/labs-posts/{number}',
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
-    })->assert('number', '[1-9][0-9]*')
+    })->assert('id', '[1-9][0-9]*')
 ;
 
 $app->get('/medium-articles', function (Request $request) use ($app) {
