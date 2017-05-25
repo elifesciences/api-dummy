@@ -172,6 +172,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights') as $file) {
+            yield $path = '/highlights/'.$file->getBasename('.json') => [
+                Request::create($path),
+                'application/vnd.elife.highlight-list+json; version=1',
+            ];
+        }
+
         yield $path = '/labs-experiments' => [
             Request::create($path),
             'application/vnd.elife.labs-experiment-list+json; version=1',

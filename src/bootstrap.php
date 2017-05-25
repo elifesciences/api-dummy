@@ -161,6 +161,20 @@ $app['experiments'] = function () use ($app) {
     return $experiments;
 };
 
+$app['highlights'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights');
+
+    $highlights = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $highlights[$file->getBasename('.json')] = $json;
+    }
+
+    ksort($highlights);
+
+    return $highlights;
+};
+
 $app['interviews'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/interviews');
 
@@ -1015,6 +1029,52 @@ $app->get('/events/{id}',
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
     });
+
+$app->get('/highlights/{list}', function (Request $request, string $list) use ($app) {
+    if (false === isset($app['highlights'][$list])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $accepts = [
+        'application/vnd.elife.highlight-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $highlights = $app['highlights'][$list];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($highlights),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $highlights = array_reverse($highlights);
+    }
+
+    $highlights = array_slice($highlights, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($highlights) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content['items'] = $highlights;
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
 
 $app->get('/interviews', function (Request $request) use ($app) {
     $accepts = [
