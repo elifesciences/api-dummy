@@ -147,18 +147,18 @@ $app['events'] = function () use ($app) {
     return $events;
 };
 
-$app['experiments'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/experiments');
+$app['labs'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/labs');
 
-    $experiments = [];
+    $labs = [];
     foreach ($finder as $file) {
         $json = json_decode($file->getContents(), true);
-        $experiments[(int) $json['number']] = $json;
+        $labs[$json['id']] = $json;
     }
 
-    ksort($experiments);
+    ksort($labs);
 
-    return $experiments;
+    return $labs;
 };
 
 $app['interviews'] = function () use ($app) {
@@ -767,7 +767,7 @@ $app->get('/community', function (Request $request) use ($app) {
     };
     $items = array_merge(
         array_map($addType('interview'), $app['interviews']),
-        array_map($addType('labs-experiment'), $app['experiments'])
+        array_map($addType('labs-post'), $app['labs'])
     );
     usort($items, function ($a, $b) {
         return $a['published'] >= $b['published'] ? -1 : 1;
@@ -1088,9 +1088,9 @@ $app->get('/interviews/{id}',
         );
     });
 
-$app->get('/labs-experiments', function (Request $request) use ($app) {
+$app->get('/labs-posts', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.labs-experiment-list+json; version=1',
+        'application/vnd.elife.labs-post-list+json; version=1',
     ];
 
     /** @var Accept $type */
@@ -1099,31 +1099,31 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     $version = (int) $type->getParameter('version');
     $type = $type->getType();
 
-    $experiments = $app['experiments'];
+    $labs = $app['labs'];
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
     $content = [
-        'total' => count($experiments),
+        'total' => count($labs),
         'items' => [],
     ];
 
     if ('desc' === $request->query->get('order', 'desc')) {
-        $experiments = array_reverse($experiments);
+        $labs = array_reverse($labs);
     }
 
-    $experiments = array_slice($experiments, ($page * $perPage) - $perPage, $perPage);
+    $labs = array_slice($labs, ($page * $perPage) - $perPage, $perPage);
 
-    if (0 === count($experiments) && $page > 1) {
+    if (0 === count($labs) && $page > 1) {
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($experiments as $i => $experiment) {
-        unset($experiment['content']);
-        unset($experiment['image']['banner']);
+    foreach ($labs as $i => $lab) {
+        unset($lab['content']);
+        unset($lab['image']['banner']);
 
-        $content['items'][] = $experiment;
+        $content['items'][] = $lab;
     }
 
     $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
@@ -1139,16 +1139,16 @@ $app->get('/labs-experiments', function (Request $request) use ($app) {
     );
 });
 
-$app->get('/labs-experiments/{number}',
-    function (Request $request, int $number) use ($app) {
-        if (false === isset($app['experiments'][$number])) {
+$app->get('/labs-posts/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['labs'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
-        $experiment = $app['experiments'][$number];
+        $lab = $app['labs'][$id];
 
         $accepts = [
-            'application/vnd.elife.labs-experiment+json; version=1',
+            'application/vnd.elife.labs-post+json; version=1',
         ];
 
         /** @var Accept $type */
@@ -1158,11 +1158,11 @@ $app->get('/labs-experiments/{number}',
         $type = $type->getType();
 
         return new Response(
-            json_encode($experiment, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
-    })->assert('number', '[1-9][0-9]*')
+    })
 ;
 
 $app->get('/medium-articles', function (Request $request) use ($app) {
@@ -1706,11 +1706,11 @@ $app->get('/search', function (Request $request) use ($app) {
         $results[] = $result;
     }
 
-    foreach ($app['experiments'] as $result) {
+    foreach ($app['labs'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
         unset($result['image']['banner']);
-        $result['type'] = 'labs-experiment';
+        $result['type'] = 'labs-post';
         $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
         $results[] = $result;
     }
@@ -1783,7 +1783,7 @@ $app->get('/search', function (Request $request) use ($app) {
         [
             'blog-article',
             'collection',
-            'labs-experiment',
+            'labs-post',
             'interview',
             'podcast-episode',
         ] as $contentType

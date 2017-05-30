@@ -1,14 +1,14 @@
 {
-    "number": 2,
+    "id": "80000002",
     "title": "Toward publishing reproducible computation with Binder",
     "published": "2016-05-13T16:25:00Z",
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
                 "filename": "ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-05/a7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
                 "filename": "ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg"
             },
             "size": {
