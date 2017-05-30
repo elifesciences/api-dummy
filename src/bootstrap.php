@@ -1140,7 +1140,7 @@ $app->get('/labs-posts', function (Request $request) use ($app) {
 });
 
 $app->get('/labs-posts/{id}',
-    function (Request $request, int $id) use ($app) {
+    function (Request $request, string $id) use ($app) {
         if (false === isset($app['labs'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
@@ -1162,7 +1162,7 @@ $app->get('/labs-posts/{id}',
             Response::HTTP_OK,
             ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
         );
-    })->assert('id', '[1-9][0-9]*')
+    })
 ;
 
 $app->get('/medium-articles', function (Request $request) use ($app) {
