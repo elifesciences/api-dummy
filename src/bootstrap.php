@@ -946,15 +946,15 @@ $app->get('/events', function (Request $request) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $eventType = $request->query->get('type', 'all');
+    $show = $request->query->get('show', 'all');
 
     $now = new DateTimeImmutable();
 
-    if ('open' === $eventType) {
+    if ('open' === $show) {
         $events = array_filter($events, function ($event) use ($now) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['ends']) > $now;
         });
-    } elseif ('closed' === $eventType) {
+    } elseif ('closed' === $show) {
         $events = array_filter($events, function ($event) use ($now) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['ends']) <= $now;
         });
