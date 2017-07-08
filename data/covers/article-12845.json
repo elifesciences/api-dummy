@@ -1,0 +1,38 @@
+{
+    "title": "A tale of two circuits",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v1.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-12845-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v1.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1894,
+            "width": 4300
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "12845",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.12845",
+        "authorLine": "M Lucila Scimone et al.",
+        "title": "Two FGFRL-Wnt circuits organize the planarian anteroposterior axis",
+        "published": "2016-04-11T00:00:00Z",
+        "versionDate": "2016-04-11T00:00:00Z",
+        "statusDate": "2016-04-11T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e12845",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/12845/elife-12845-v1.pdf",
+        "subjects": [
+            {
+                "id": "developmental-biology-and-stem-cells",
+                "name": "Developmental Biology and Stem Cells"
+            }
+        ]
+    }
+}

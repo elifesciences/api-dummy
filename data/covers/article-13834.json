@@ -1,0 +1,42 @@
+{
+    "title": "Imaging focuses on insect development",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:13834/elife-13834-fig1-v1.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-13834-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax:13834/elife-13834-fig1-v1.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1894,
+            "width": 4300
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "13834",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.13834",
+        "authorLine": "Maarten Hilbrant et al",
+        "title": "The beetle amnion and serosa functionally interact as apposed epithelia",
+        "published": "2016-01-29T00:00:00Z",
+        "versionDate": "2016-01-29T00:00:00Z",
+        "statusDate": "2016-01-29T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e13834",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/13834/elife-13834-v1.pdf",
+        "subjects": [
+            {
+                "id": "cell-biology",
+                "name": "Cell Biology"
+            },
+            {
+                "id": "developmental-biology-and-stem-cells",
+                "name": "Developmental Biology and Stem Cells"
+            }
+        ]
+    }
+}

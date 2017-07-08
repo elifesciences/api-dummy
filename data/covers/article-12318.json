@@ -1,0 +1,43 @@
+{
+    "title": "The importance of haem for ticks",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:12318/elife-12318-fig1-v1.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-12318-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax:12318/elife-12318-fig1-v1.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1894,
+            "width": 4300
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "12318",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.12318",
+        "authorLine": "Jan Perner et al.",
+        "title": "Acquisition of exogenous haem is essential for tick reproduction",
+        "published": "2016-03-07T00:00:00Z",
+        "versionDate": "2016-03-07T00:00:00Z",
+        "statusDate": "2016-03-07T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e12318",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/12318/elife-12318-v1.pdf",
+        "subjects": [
+            {
+                "id": "developmental-biology-and-stem-cells",
+                "name": "Developmental Biology and Stem Cells"
+            },
+            {
+                "id": "microbiology-and-infectious-disease",
+                "name": "Microbiology and Infectious Disease"
+            }
+
+        ]
+    }
+}
