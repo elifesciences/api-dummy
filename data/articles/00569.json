@@ -19,6 +19,10 @@
             "figuresPdf": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-figures-v1.pdf",
             "subjects": [
                 {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
                     "id": "developmental-biology-stem-cells",
                     "name": "Developmental Biology and Stem Cells"
                 },

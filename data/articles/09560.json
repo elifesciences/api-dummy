@@ -304,6 +304,10 @@
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
                 {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
                     "id": "genomics-evolutionary-biology",
                     "name": "Genomics and Evolutionary Biology"
                 }
