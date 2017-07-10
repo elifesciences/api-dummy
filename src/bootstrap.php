@@ -1608,6 +1608,7 @@ $app->get('/press-packages/{id}',
         $packages = $app['press-packages'][$id];
 
         $accepts = [
+            'application/vnd.elife.press-package+json; version=2',
             'application/vnd.elife.press-package+json; version=1',
         ];
 
@@ -1616,11 +1617,21 @@ $app->get('/press-packages/{id}',
 
         $version = (int) $type->getParameter('version');
         $type = $type->getType();
+        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+        if ($version < 2 && empty($packages['relatedContent'])) {
+            throw new UnsupportedVersion(sprintf('This press package requires version %d.', 2));
+        }
+
+        $latest = new Accept($accepts[0]);
+        if ($version < $latest->getParameter('version')) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $version);
+        }
 
         return new Response(
             json_encode($packages, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            $headers
         );
     });
 
