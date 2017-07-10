@@ -1,14 +1,14 @@
 {
-    "number": 1,
+    "id": "80000001",
     "title": "What is Manuscripts?",
     "published": "2016-01-11T16:53:00Z",
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
                 "filename": "manuscripts-elife-labs.png"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_experiment/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
                 "filename": "manuscripts-elife-labs.png"
             },
             "size": {
