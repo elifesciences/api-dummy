@@ -1,0 +1,43 @@
+{
+    "title": "Fossilised fish and cardiac evolution",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:14698/elife-14698-fig1-v1.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-14698-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax:14698/elife-14698-fig1-v1.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1535,
+            "width": 2028
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "14698",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.14698",
+        "authorLine": "Lara Maldanis et al.",
+        "title": "Heart fossilization is possible and informs the evolution of cardiac outflow tract in vertebrates",
+        "published": "2016-04-19T00:00:00Z",
+        "versionDate": "2016-04-19T00:00:00Z",
+        "statusDate": "2016-04-19T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e14698",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/14698/elife-14698-v1.pdf",
+        "subjects": [
+            {
+                "id": "ecology",
+                "name": "Ecology"
+            },
+            {
+                "id": "genomics-and-evolutionary-biology",
+                "name": "Genomics and Evolutionary Biology"
+            }
+
+        ]
+    }
+}

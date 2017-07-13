@@ -1,0 +1,42 @@
+{
+    "title": "A design manual for Ras circuits",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:12435/elife-12435-fig1-v2.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-12435-fig1-v2.tif",
+            "uri": "https://iiif.elifesciences.org/lax:12435/elife-12435-fig1-v2.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1417,
+            "width": 1551
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "12435",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.12435",
+        "authorLine": "Scott M Coyle Wendell A Lim",
+        "title": "Mapping the functional versatility and fragility of Ras GTPase signaling circuits through in vitro network reconstitution",
+        "published": "2016-01-14T00:00:00Z",
+        "versionDate": "2016-01-14T00:00:00Z",
+        "statusDate": "2016-01-14T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e12435",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/12435/elife-12435-v1.pdf",
+        "subjects": [
+            {
+                "id": "biochemistry",
+                "name": "Biochemistry"
+            },
+            {
+                "id": "genomics-evolutionary-biology",
+                "name": "Computational and Systems Biology"
+            }
+        ]
+    }
+}

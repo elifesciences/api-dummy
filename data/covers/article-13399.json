@@ -1,0 +1,43 @@
+{
+    "title": "A comprehensive view of neurogenesis",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax:13399/elife-13399-fig1-v1.tif",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-13399-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax:13399/elife-13399-fig1-v1.tif/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1772,
+            "width": 1991
+        },
+        "alt": ""
+    },
+    "item": {
+        "status": "vor",
+        "stage": "published",
+        "id": "13399",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.13399",
+        "authorLine": "Haluk Lacin, James W Truman",
+        "title": "Lineage mapping identifies molecular and architectural similarities between the larval and adult <i>Drosophila</i> central nervous system",
+        "published": "2016-03-15T00:00:00Z",
+        "versionDate": "2016-03-15T00:00:00Z",
+        "statusDate": "2016-03-15T00:00:00Z",
+        "volume": 2,
+        "elocationId": "e13399",
+        "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/13399/elife-13399-v1.pdf",
+        "subjects": [
+            {
+                "id": "developmental-biology-and-stem-cells",
+                "name": "Developmental Biology and Stem Cells"
+            },
+            {
+                "id": "neuroscience",
+                "name": "Neuroscience"
+            }
+
+        ]
+    }
+}
