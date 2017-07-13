@@ -1,15 +1,15 @@
 {
     "title": "A tale of two circuits",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v1.tif",
+        "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v2.tif",
         "source": {
             "mediaType": "image/jpeg",
-            "filename": "elife-12845-fig1-v1.tif",
-            "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v1.tif/full/full/0/default.jpg"
+            "filename": "elife-12845-fig1-v2.tif",
+            "uri": "https://iiif.elifesciences.org/lax:12845/elife-12845-fig1-v2.tif/full/full/0/default.jpg"
         },
         "size": {
-            "height": 1894,
-            "width": 4300
+            "height": 2126,
+            "width": 2095
         },
         "alt": ""
     },
