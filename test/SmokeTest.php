@@ -241,8 +241,26 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages') as $file) {
             yield $path = '/press-packages/'.$file->getBasename('.json') => [
                 Request::create($path),
-                'application/vnd.elife.press-package+json; version=1',
+                'application/vnd.elife.press-package+json; version=2',
             ];
+        }
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages') as $file) {
+            $json = json_decode($file->getContents(), true);
+            if (!empty($json['relatedContent'])) {
+                yield $path = '/press-packages/'.$file->getBasename('.json') => [
+                    Request::create($path, 'GET', [], [], [],
+                        ['HTTP_ACCEPT' => 'application/vnd.elife.press-package+json; version=1']),
+                    'application/vnd.elife.press-package+json; version=1',
+                    200,
+                ];
+            } else {
+                yield $path = '/press-packages/'.$file->getBasename('.json') => [
+                    Request::create($path, 'GET', [], [], [],
+                        ['HTTP_ACCEPT' => 'application/vnd.elife.press-package+json; version=1']),
+                    'application/problem+json',
+                    406,
+                ];
+            }
         }
 
         yield $path = '/subjects' => [

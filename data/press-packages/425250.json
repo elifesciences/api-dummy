@@ -1,0 +1,91 @@
+{
+    "id": "425250",
+    "title": "Scientists prove key aspect of evolutionary theory",
+    "published": "2016-01-26T09:00:00Z",
+    "updated": "2017-04-26T12:55:14Z",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "<b>Evolutionary theory predicts that pairs of chromosomes within asexual organisms will evolve independently of each other and become increasingly different over time in a phenomenon called the ‘Meselson effect’.</b>"
+        },
+        {
+            "type": "paragraph",
+            "text": "While this event was first predicted almost twenty years ago, evidence for it has proved elusive."
+        },
+        {
+            "type": "paragraph",
+            "text": "Now, researchers from the University of Glasgow have demonstrated the Meselson effect for the first time in any organism at a genome-wide level, studying a parasite calledTrypanosoma brucei gambiense(T.b. gambiense). Their findings, from a study funded by the Wellcome Trust, are to be published in the journal eLife. The research was conducted at the Wellcome Centre for Molecular Parasitology in the University’s Institute of Biodiversity Animal Health and Comparative Medicine."
+        },
+        {
+            "type": "paragraph",
+            "text": "T.b. gambienseis responsible for causing African sleeping sickness in humans, leading to severe symptoms including fever, headaches, extreme fatigue, and aching muscles and joints, which do not occur until weeks or sometimes even months after infection."
+        },
+        {
+            "type": "paragraph",
+            "text": "These symptoms extend to neurologic problems, such as progressive confusion and personality changes, when the infection invades the central nervous system."
+        },
+        {
+            "type": "paragraph",
+            "text": "In order to demonstrate the Meselson effect inT.b. gambiense, the research team, led by Dr. Annette Macleod, sequenced the genomes of 85 isolates of the parasite, including multiple samples from disease focus points within Guinea, Côte d’Ivoire and Cameroon, collected over fifty years from 1952 to 2004."
+        },
+        {
+            "type": "paragraph",
+            "text": "The similarity of the genomes studied from these different locations, together with a lack of recombination in the evolution of the parasite, suggests that this sub-species emerged from a single individual within the last 10,000 years."
+        },
+        {
+            "type": "paragraph",
+            "text": "“It was around this time that livestock farming was developing in West Africa, allowing the parasite, which was originally an animal organism, to ‘jump’ from one species to the other via the Tsetse fly,” says lead author Dr. Willie Weir."
+        },
+        {
+            "type": "paragraph",
+            "text": "“Since then, mutations have built up and the lack of sexual recombination inT.b. gambiensemeans that the two chromosomes in each pair have evolved independently of each other, demonstrating the Meselson effect.”"
+        },
+        {
+            "type": "paragraph",
+            "text": "Dr. Weir adds that the parasites’ inability to recombine with each other prevents genes from being exchanged between strains. This could subsequently hamper the ability of the organism to develop resistance to multiple drugs."
+        },
+        {
+            "type": "paragraph",
+            "text": "The team also uncovered evidence that the parasite uses gene conversion to compensate for its lack of sex."
+        },
+        {
+            "type": "paragraph",
+            "text": "This mechanism essentially repairs the inferior, or mutated, copy of a gene on a chromosome by ‘copying and pasting’ the superior copy from the chromosome’s partner. The future challenge will be to investigate the effectiveness of this mechanism in the long term, as evolutionary theory suggests that asexual organisms should eventually face extinction. IfT.b. gambienseshares this fate, the major cause of African sleeping sickness will be eliminated – although it is impossible to predict when this might happen."
+        },
+        {
+            "type": "paragraph",
+            "text": "##"
+        }
+    ],
+    "subjects": [
+        {
+            "id": "genomics-evolutionary-biology",
+            "name": "Genomics and Evolutionary Biology"
+        },
+        {
+            "id": "microbiology-infectious-disease",
+            "name": "Microbiology and Infectious Disease"
+        }
+    ],
+    "mediaContacts": [
+        {
+            "name": {
+                "preferred": "Emily Packer",
+                "index": "Packer, Emily"
+            },
+            "emailAddresses": [
+                "e.packer@elifesciences.org"
+            ],
+            "phoneNumbers": [
+                "+441223855373"
+            ],
+            "affiliations": [
+                {
+                    "name": [
+                        "eLife"
+                    ]
+                }
+            ]
+        }
+    ]
+}
