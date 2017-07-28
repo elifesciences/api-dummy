@@ -15,7 +15,10 @@
             "size": {
                 "width": 1800,
                 "height": 900
-            }
+            },
+            "attribution": [
+                "Illustration: Some person"
+            ]
         },
         "thumbnail": {
             "alt": "",
@@ -28,7 +31,10 @@
             "size": {
                 "width": 1800,
                 "height": 900
-            }
+            },
+            "attribution": [
+                "Illustration: Some person"
+            ]
         }
     },
     "sources": [
