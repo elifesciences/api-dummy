@@ -95,7 +95,8 @@
                             "height": 1600
                         }
                     },
-                    "title": "Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project."
+                    "title": "Manuscripts includes over 1,000 manuscript templates that help authors get started with a complex writing project.",
+                    "inline": true
                 },
                 {
                     "type": "paragraph",
