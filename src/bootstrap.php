@@ -705,7 +705,7 @@ $app->get('/collections', function (Request $request) use ($app) {
     if (false === empty($containing)) {
         $collections = array_filter($collections, function ($collection) use ($containing) {
             foreach ($collection['content'] as $item) {
-                if(in_array("{$item['type']}/{$item['id']}", $containing)) {
+                if (in_array("{$item['type']}/{$item['id']}", $containing)) {
                     return true;
                 }
             }
