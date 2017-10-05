@@ -7,6 +7,7 @@ use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use Negotiation\Accept;
 use Silex\Application;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -1993,6 +1994,35 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
         Response::HTTP_OK,
         ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
     );
+});
+
+$app->get('/oauth2/authorize', function (Request $request) {
+    $redirectUri = $request->get('redirect_uri');
+    $state = $request->get('state');
+    $code = 'code_'.$state;
+    $location = $redirectUri.'?'.http_build_query([
+        'code' => $code,
+        'state' => $state,
+    ]);
+
+    return new Response(
+        'pong',
+        Response::HTTP_FOUND,
+        [
+            'Location' => $location,
+        ]
+    );
+});
+
+$app->post('/oauth2/token', function (Request $request) {
+    $code = $request->get('code');
+
+    return new JsonResponse([
+        'access_token' => 'access_token_'.$code,
+        'token_type' => 'bearer',
+        'expires_in' => 30 * 24 * 60 * 60,
+        'scope' => '/authenticate',
+    ]);
 });
 
 $app->get('ping', function () use ($app) {
