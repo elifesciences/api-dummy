@@ -3,6 +3,7 @@
 use Crell\ApiProblem\ApiProblem;
 use eLife\DummyApi\UnsupportedVersion;
 use eLife\DummyApi\VersionedNegotiator;
+use eLife\Ping\Silex\PingControllerProvider;
 use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use Negotiation\Accept;
 use Silex\Application;
@@ -21,6 +22,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 $app = new Application();
 
 $app->register(new CorsServiceProvider(), ['cors.allowOrigin' => '*']);
+$app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
@@ -2023,17 +2025,6 @@ $app->post('/oauth2/token', function (Request $request) {
         'expires_in' => 30 * 24 * 60 * 60,
         'scope' => '/authenticate',
     ]);
-});
-
-$app->get('ping', function () use ($app) {
-    return new Response(
-        'pong',
-        Response::HTTP_OK,
-        [
-            'Cache-Control' => 'must-revalidate, no-cache, no-store, private',
-            'Content-Type' => 'text/plain; charset=UTF-8',
-        ]
-    );
 });
 
 $app->after(function (Request $request, Response $response, Application $app) {
