@@ -3,10 +3,12 @@
 use Crell\ApiProblem\ApiProblem;
 use eLife\DummyApi\UnsupportedVersion;
 use eLife\DummyApi\VersionedNegotiator;
+use eLife\Ping\Silex\PingControllerProvider;
 use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use Negotiation\Accept;
 use Silex\Application;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -20,6 +22,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 $app = new Application();
 
 $app->register(new CorsServiceProvider(), ['cors.allowOrigin' => '*']);
+$app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
@@ -2008,15 +2011,33 @@ $app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
     );
 });
 
-$app->get('ping', function () use ($app) {
+$app->get('/oauth2/authorize', function (Request $request) {
+    $redirectUri = $request->get('redirect_uri');
+    $state = $request->get('state');
+    $code = 'code_'.$state;
+    $location = $redirectUri.'?'.http_build_query([
+        'code' => $code,
+        'state' => $state,
+    ]);
+
     return new Response(
         'pong',
-        Response::HTTP_OK,
+        Response::HTTP_FOUND,
         [
-            'Cache-Control' => 'must-revalidate, no-cache, no-store, private',
-            'Content-Type' => 'text/plain; charset=UTF-8',
+            'Location' => $location,
         ]
     );
+});
+
+$app->post('/oauth2/token', function (Request $request) {
+    $code = $request->get('code');
+
+    return new JsonResponse([
+        'access_token' => 'access_token_'.$code,
+        'token_type' => 'bearer',
+        'expires_in' => 30 * 24 * 60 * 60,
+        'scope' => '/authenticate',
+    ]);
 });
 
 $app->after(function (Request $request, Response $response, Application $app) {
