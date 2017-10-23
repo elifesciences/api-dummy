@@ -273,6 +273,22 @@ $app['press-packages'] = function () use ($app) {
     return $packages;
 };
 
+$app['profiles'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/profiles');
+
+    $profiles = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $profiles[$json['id']] = $json;
+    }
+
+    uasort($profiles, function (array $a, array $b) {
+        return $a['name']['index'] <=> $b['name']['index'];
+    });
+
+    return $profiles;
+};
+
 $app['recommendations'] = function () use ($app) {
     try {
         $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/recommendations');
@@ -1638,6 +1654,75 @@ $app->get('/press-packages/{id}',
         );
     });
 
+$app->get('/profiles', function (Request $request) use ($app) {
+    $accepts = [
+        'application/vnd.elife.profile-list+json; version=1',
+    ];
+
+    /** @var Accept $type */
+    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
+
+    $profiles = $app['profiles'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($profiles),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $profiles = array_reverse($profiles);
+    }
+
+    $profiles = array_slice($profiles, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($profiles) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($profiles as $i => $profile) {
+        $content['items'][] = $profile;
+    }
+
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+});
+
+$app->get('/profiles/{id}',
+    function (Request $request, string $id) use ($app) {
+        if (false === isset($app['profiles'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $profile = $app['profiles'][$id];
+
+        $accepts = [
+            'application/vnd.elife.profile+json; version=1',
+        ];
+
+        /** @var Accept $type */
+        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
+
+        $version = (int) $type->getParameter('version');
+        $type = $type->getType();
+
+        return new Response(
+            json_encode($profile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        );
+    });
+
 $app->get('/recommendations/{contentType}/{id}', function (Request $request, string $contentType, string $id) use ($app) {
     if (false === isset($app['recommendations'][$contentType][$id])) {
         throw new NotFoundHttpException('Not found');
@@ -2024,6 +2109,9 @@ $app->post('/oauth2/token', function (Request $request) {
         'token_type' => 'bearer',
         'expires_in' => 30 * 24 * 60 * 60,
         'scope' => '/authenticate',
+        'id' => 'jcarberry',
+        'orcid' => '0000-0002-1825-0097',
+        'name' => 'Josiah Carberry',
     ]);
 });
 
