@@ -196,57 +196,57 @@ $app['interviews'] = function () use ($app) {
 };
 
 $app->get('/job-adverts', function (Request $request) use ($app) {
-  $accepts = [
+    $accepts = [
     'application/vnd.elife.job-adverts-list+json; version=1',
   ];
 
   /** @var Accept $type */
   $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
 
-  $version = (int) $type->getParameter('version');
-  $type = $type->getType();
+    $version = (int) $type->getParameter('version');
+    $type = $type->getType();
 
-  $jobAdverts = $app['job-adverts'];
+    $jobAdverts = $app['job-adverts'];
 
-  $page = $request->query->get('page', 1);
-  $perPage = $request->query->get('per-page', 10);
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
 
-  $show = $request->query->get('show', 'all');
+    $show = $request->query->get('show', 'all');
 
-  $now = new DateTimeImmutable();
+    $now = new DateTimeImmutable();
 
-  if ('open' === $show) {
-    $jobAdverts = array_filter($jobAdverts, function ($event) use ($now) {
-      return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['closingDate']) > $now;
-    });
-  } elseif ('closed' === $show) {
-    $jobAdverts = array_filter($jobAdverts, function ($event) use ($now) {
-      return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['closingDate']) <= $now;
-    });
-  }
+    if ('open' === $show) {
+        $jobAdverts = array_filter($jobAdverts, function ($event) use ($now) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['closingDate']) > $now;
+        });
+    } elseif ('closed' === $show) {
+        $jobAdverts = array_filter($jobAdverts, function ($event) use ($now) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM, $event['closingDate']) <= $now;
+        });
+    }
 
-  $content = [
+    $content = [
     'total' => count($jobAdverts),
     'items' => [],
   ];
 
-  if ('asc' === $request->query->get('order', 'desc')) {
-    $jobAdverts = array_reverse($jobAdverts);
-  }
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $jobAdverts = array_reverse($jobAdverts);
+    }
 
-  $jobAdverts = array_slice($jobAdverts, ($page * $perPage) - $perPage, $perPage);
+    $jobAdverts = array_slice($jobAdverts, ($page * $perPage) - $perPage, $perPage);
 
-  if (0 === count($jobAdverts) && $page > 1) {
-    throw new NotFoundHttpException('No page '.$page);
-  }
+    if (0 === count($jobAdverts) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
 
-  foreach ($jobAdverts as $i => $jobAdvert) {
-    $content['items'][] = $jobAdvert;
-  }
+    foreach ($jobAdverts as $i => $jobAdvert) {
+        $content['items'][] = $jobAdvert;
+    }
 
-  $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
 
-  return new Response(
+    return new Response(
     json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
     Response::HTTP_OK,
     $headers
@@ -255,23 +255,23 @@ $app->get('/job-adverts', function (Request $request) use ($app) {
 
 $app->get('/job-adverts/{id}',
   function (Request $request, string $id) use ($app) {
-    if (false === isset($app['job-adverts'][$id])) {
-      throw new NotFoundHttpException('Not found');
-    }
+      if (false === isset($app['job-adverts'][$id])) {
+          throw new NotFoundHttpException('Not found');
+      }
 
-    $jobAdverts = $app['job-adverts'][$id];
+      $jobAdverts = $app['job-adverts'][$id];
 
-    $accepts = [
+      $accepts = [
       'application/vnd.elife.job-advert+json; version=1',
     ];
 
     /** @var Accept $type */
     $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
 
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
+      $version = (int) $type->getParameter('version');
+      $type = $type->getType();
 
-    return new Response(
+      return new Response(
       json_encode($jobAdverts, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
       Response::HTTP_OK,
       ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
