@@ -1186,7 +1186,7 @@ $app->get('/interviews/{id}',
 
 $app->get('/job-adverts', function (Request $request) use ($app) {
     $accepts = [
-        'application/vnd.elife.job-adverts-list+json; version=1',
+        'application/vnd.elife.job-advert-list+json; version=1',
     ];
 
     /** @var Accept $type */
