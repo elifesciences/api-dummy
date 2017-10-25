@@ -150,6 +150,23 @@ $app['events'] = function () use ($app) {
     return $events;
 };
 
+$app['job-adverts'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/job-adverts');
+
+    $adverts = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $adverts[$json['id']] = $json;
+    }
+
+    uasort($adverts, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $adverts;
+};
+
 $app['labs'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/labs');
 
