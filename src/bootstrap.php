@@ -1,6 +1,6 @@
 <?php
 
-use Crell\ApiProblem\ApiProblem;
+use eLife\ApiProblem\Silex\ApiProblemProvider;
 use eLife\DummyApi\UnsupportedVersion;
 use eLife\DummyApi\VersionedNegotiator;
 use eLife\Ping\Silex\PingControllerProvider;
@@ -12,15 +12,18 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
+use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
 
+$app->register(new ApiProblemProvider());
 $app->register(new CorsServiceProvider(), ['cors.allowOrigin' => '*']);
 $app->register(new PingControllerProvider());
 
@@ -2233,35 +2236,14 @@ $app->after(function (Request $request, Response $response, Application $app) {
     $response->isNotModified($request);
 });
 
-$app->error(function (Throwable $e) {
-    if ($e instanceof HttpExceptionInterface) {
-        $status = $e->getStatusCode();
-        $message = $e->getMessage();
-        $extra = [];
-    } elseif ($e instanceof UnsupportedVersion) {
-        $status = Response::HTTP_NOT_ACCEPTABLE;
-        $message = $e->getMessage();
-        $extra = [];
-    } else {
-        $status = Response::HTTP_INTERNAL_SERVER_ERROR;
-        $message = 'Error';
-        $extra = [
-            'exception' => $e->getMessage(),
-            'stacktrace' => $e->getTraceAsString(),
-        ];
+$app->on(KernelEvents::EXCEPTION, function (GetResponseForExceptionEvent $event) {
+    $exception = $event->getException();
+
+    if (false === $exception instanceof UnsupportedVersion) {
+        return;
     }
 
-    $problem = new ApiProblem($message);
-
-    foreach ($extra as $key => $value) {
-        $problem[$key] = $value;
-    }
-
-    return new Response(
-        json_encode(json_decode($problem->asJson()), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
-        $status,
-        ['Content-Type' => 'application/problem+json']
-    );
+    $event->setException(new NotAcceptableHttpException($exception->getMessage(), $exception));
 });
 
 return $app;
