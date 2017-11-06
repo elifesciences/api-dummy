@@ -1,8 +1,7 @@
 <?php
 
 use eLife\ApiProblem\Silex\ApiProblemProvider;
-use eLife\DummyApi\UnsupportedVersion;
-use eLife\DummyApi\VersionedNegotiator;
+use eLife\ContentNegotiator\Silex\ContentNegotiationProvider;
 use eLife\Ping\Silex\PingControllerProvider;
 use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use Negotiation\Accept;
@@ -12,18 +11,17 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Symfony\Component\HttpKernel\KernelEvents;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Application();
 
 $app->register(new ApiProblemProvider());
+$app->register(new ContentNegotiationProvider());
 $app->register(new CorsServiceProvider(), ['cors.allowOrigin' => '*']);
 $app->register(new PingControllerProvider());
 
@@ -341,21 +339,7 @@ $app['subjects'] = function () use ($app) {
     return $subjects;
 };
 
-$app['negotiator'] = function () {
-    return new VersionedNegotiator();
-};
-
-$app->get('/annual-reports', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.annual-report-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/annual-reports', function (Request $request, Accept $type) use ($app) {
     $reports = $app['annual-reports'];
 
     $page = $request->query->get('page', 1);
@@ -382,52 +366,36 @@ $app->get('/annual-reports', function (Request $request) use ($app) {
         $content['items'][] = $report;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.annual-report-list+json; version=1'
+));
 
 $app->get('/annual-reports/{year}',
-    function (Request $request, int $year) use ($app) {
+    function (Accept $type, int $year) use ($app) {
         if (false === isset($app['annual-reports'][$year])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $report = $app['annual-reports'][$year];
 
-        $accepts = [
-            'application/vnd.elife.annual-report+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($report, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    })->assert('number', '[1-9][0-9]*')
-;
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.annual-report+json; version=1'
+))->assert('number', '[1-9][0-9]*');
 
-$app->get('/articles', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.article-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/articles', function (Request $request, Accept $type) use ($app) {
     $articles = $app['articles'];
 
     $page = $request->query->get('page', 1);
@@ -483,14 +451,16 @@ $app->get('/articles', function (Request $request) use ($app) {
         $content['items'][] = $latestVersion;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.article-list+json; version=1'
+));
 
 $app->get('/articles/{number}',
     function (Request $request, string $number) use ($app) {
@@ -508,22 +478,12 @@ $app->get('/articles/{number}',
 );
 
 $app->get('/articles/{number}/versions',
-    function (Request $request, string $number) use ($app) {
+    function (Accept $type, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
 
         $article = $app['articles'][$number];
-
-        $accepts = [
-            'application/vnd.elife.article-history+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
 
         if (!empty($article['received'])) {
             $content = [
@@ -559,10 +519,12 @@ $app->get('/articles/{number}/versions',
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
     }
-);
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.article-history+json; version=1'
+));
 
 $app->get('/articles/{number}/versions/{version}',
     function (Request $request, string $number, int $version) use ($app) {
@@ -588,59 +550,38 @@ $app->get('/articles/{number}/versions/{version}',
             ];
         }
 
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
+        $app['content_negotiator.accept']->negotiate($request, $accepts);
+        $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
         return new Response(
             json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
     }
 );
 
 $app->get('/articles/{number}/related',
-    function (Request $request, string $number) use ($app) {
+    function (Accept $type, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
 
         $article = $app['articles'][$number];
 
-        $accepts = [
-            'application/vnd.elife.article-related+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         $content = $article['relatedArticles'] ?? [];
 
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
     }
-);
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.article-related+json; version=1'
+));
 
-$app->get('/blog-articles', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.blog-article-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/blog-articles', function (Request $request, Accept $type) use ($app) {
     $articles = $app['blog-articles'];
 
     $page = $request->query->get('page', 1);
@@ -679,51 +620,36 @@ $app->get('/blog-articles', function (Request $request) use ($app) {
         $content['items'][] = $article;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.blog-article-list+json; version=1'
+));
 
 $app->get('/blog-articles/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['blog-articles'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $article = $app['blog-articles'][$id];
 
-        $accepts = [
-            'application/vnd.elife.blog-article+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($article, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.blog-article+json; version=1'
+));
 
-$app->get('/collections', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.collection-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/collections', function (Request $request, Accept $type) use ($app) {
     $collections = $app['collections'];
 
     $page = $request->query->get('page', 1);
@@ -766,51 +692,36 @@ $app->get('/collections', function (Request $request) use ($app) {
         $content['items'][] = $collection;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.collection-list+json; version=1'
+));
 
 $app->get('/collections/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['collections'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $collection = $app['collections'][$id];
 
-        $accepts = [
-            'application/vnd.elife.collection+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($collection, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.collection+json; version=1'
+));
 
-$app->get('/community', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.community-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/community', function (Request $request, Accept $type) use ($app) {
     $addType = function ($type) {
         return function ($item) use ($type) {
             $item['type'] = $type;
@@ -852,26 +763,18 @@ $app->get('/community', function (Request $request) use ($app) {
         $content['items'][] = $item;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.community-list+json; version=1'
+));
 
-$app->get('/covers', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.cover-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/covers', function (Request $request, Accept $type) use ($app) {
     $covers = $app['covers'];
 
     $useDate = $request->query->get('use-date', 'default');
@@ -939,26 +842,18 @@ $app->get('/covers', function (Request $request) use ($app) {
         $content['items'][] = $cover;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.cover-list+json; version=1'
+));
 
-$app->get('/covers/current', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.cover-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/covers/current', function (Accept $type) use ($app) {
     $covers = $app['covers'];
 
     $content = [
@@ -974,26 +869,18 @@ $app->get('/covers/current', function (Request $request) use ($app) {
         $content['items'][] = $report;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.cover-list+json; version=1'
+));
 
-$app->get('/events', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.event-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/events', function (Request $request, Accept $type) use ($app) {
     $events = $app['events'];
 
     $page = $request->query->get('page', 1);
@@ -1035,54 +922,39 @@ $app->get('/events', function (Request $request) use ($app) {
         $content['items'][] = $event;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.event-list+json; version=1'
+));
 
 $app->get('/events/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['events'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $events = $app['events'][$id];
 
-        $accepts = [
-            'application/vnd.elife.event+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($events, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.event+json; version=1'
+));
 
-$app->get('/highlights/{list}', function (Request $request, string $list) use ($app) {
+$app->get('/highlights/{list}', function (Request $request, Accept $type, string $list) use ($app) {
     if (false === isset($app['highlights'][$list])) {
         throw new NotFoundHttpException('Not found');
     }
-
-    $accepts = [
-        'application/vnd.elife.highlight-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
 
     $highlights = $app['highlights'][$list];
 
@@ -1106,26 +978,18 @@ $app->get('/highlights/{list}', function (Request $request, string $list) use ($
 
     $content['items'] = $highlights;
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=1'
+));
 
-$app->get('/interviews', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.interview-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/interviews', function (Request $request, Accept $type) use ($app) {
     $interviews = $app['interviews'];
 
     $page = $request->query->get('page', 1);
@@ -1153,51 +1017,36 @@ $app->get('/interviews', function (Request $request) use ($app) {
         $content['items'][] = $interview;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.interview-list+json; version=1'
+));
 
 $app->get('/interviews/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['interviews'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $interview = $app['interviews'][$id];
 
-        $accepts = [
-            'application/vnd.elife.interview+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($interview, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.interview+json; version=1'
+));
 
-$app->get('/job-adverts', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.job-advert-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/job-adverts', function (Request $request, Accept $type) use ($app) {
     $jobAdverts = $app['job-adverts'];
 
     $page = $request->query->get('page', 1);
@@ -1236,50 +1085,34 @@ $app->get('/job-adverts', function (Request $request) use ($app) {
         $content['items'][] = $jobAdvert;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.job-advert-list+json; version=1'
+));
 
-$app->get('/job-adverts/{id}', function (Request $request, string $id) use ($app) {
+$app->get('/job-adverts/{id}', function (Accept $type, string $id) use ($app) {
     if (false === isset($app['job-adverts'][$id])) {
         throw new NotFoundHttpException('Not found');
     }
 
     $jobAdverts = $app['job-adverts'][$id];
 
-    $accepts = [
-        'application/vnd.elife.job-advert+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
     return new Response(
         json_encode($jobAdverts, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
-        ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        ['Content-Type' => $type->getNormalizedValue()]
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.job-advert+json; version=1'
+));
 
-$app->get('/labs-posts', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.labs-post-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/labs-posts', function (Request $request, Accept $type) use ($app) {
     $labs = $app['labs'];
 
     $page = $request->query->get('page', 1);
@@ -1307,7 +1140,7 @@ $app->get('/labs-posts', function (Request $request) use ($app) {
         $content['items'][] = $lab;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     if ($request->query->get('foo')) {
         $headers['Warning'] = '299 elifesciences.org "Deprecation: `foo` query string parameter will be removed, use `bar` instead"';
@@ -1318,45 +1151,29 @@ $app->get('/labs-posts', function (Request $request) use ($app) {
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.labs-post-list+json; version=1'
+));
 
 $app->get('/labs-posts/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['labs'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $lab = $app['labs'][$id];
 
-        $accepts = [
-            'application/vnd.elife.labs-post+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    })
-;
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.labs-post+json; version=1'
+));
 
-$app->get('/medium-articles', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.medium-article-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/medium-articles', function (Request $request, Accept $type) use ($app) {
     $articles = $app['medium-articles'];
 
     $page = $request->query->get('page', 1);
@@ -1381,32 +1198,24 @@ $app->get('/medium-articles', function (Request $request) use ($app) {
         $content['items'][] = $article;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.medium-article-list+json; version=1'
+));
 
 $app->get('/metrics/{contentType}/{id}/citations',
-    function (Request $request, string $contentType, string $id) use ($app) {
+    function (Accept $type, string $contentType, string $id) use ($app) {
         if (false === isset($app['metrics'][$contentType][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
-        $accepts = [
-            'application/vnd.elife.metric-citations+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
-        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
         $content = $app['metrics'][$contentType][$id]['citations'];
 
         return new Response(
@@ -1414,23 +1223,16 @@ $app->get('/metrics/{contentType}/{id}/citations',
             Response::HTTP_OK,
             $headers
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.metric-citations+json; version=1'
+));
 
 $app->get('/metrics/{contentType}/{id}/{metric}',
-    function (Request $request, string $contentType, string $id, string $metric) use ($app) {
+    function (Request $request, Accept $type, string $contentType, string $id, string $metric) use ($app) {
         if (false === isset($app['metrics'][$contentType][$id]) || !in_array($metric, ['page-views', 'downloads'])) {
             throw new NotFoundHttpException('Not found');
         }
-
-        $accepts = [
-            'application/vnd.elife.metric-time-period+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
 
         if ('page-views' === $metric) {
             $metric = $app['metrics'][$contentType][$id]['pageViews'];
@@ -1477,26 +1279,19 @@ $app->get('/metrics/{contentType}/{id}/{metric}',
             return compact('period', 'value');
         }, array_keys($metric), array_values($metric));
 
-        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
 
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             $headers
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.metric-time-period+json; version=1'
+));
 
-$app->get('/people', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.person-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/people', function (Request $request, Accept $type) use ($app) {
     $people = $app['people'];
 
     $page = $request->query->get('page', 1);
@@ -1540,51 +1335,36 @@ $app->get('/people', function (Request $request) use ($app) {
         $content['items'][] = $person;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.person-list+json; version=1'
+));
 
 $app->get('/people/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['people'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $person = $app['people'][$id];
 
-        $accepts = [
-            'application/vnd.elife.person+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($person, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.person+json; version=1'
+));
 
-$app->get('/podcast-episodes', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.podcast-episode-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/podcast-episodes', function (Request $request, Accept $type) use ($app) {
     $episodes = $app['podcast-episodes'];
 
     $page = $request->query->get('page', 1);
@@ -1624,52 +1404,36 @@ $app->get('/podcast-episodes', function (Request $request) use ($app) {
         $content['items'][] = $episode;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.podcast-episode-list+json; version=1'
+));
 
 $app->get('/podcast-episodes/{number}',
-    function (Request $request, int $number) use ($app) {
+    function (Accept $type, int $number) use ($app) {
         if (false === isset($app['podcast-episodes'][$number])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $episode = $app['podcast-episodes'][$number];
 
-        $accepts = [
-            'application/vnd.elife.podcast-episode+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($episode, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    })->assert('number', '[1-9][0-9]*')
-;
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.podcast-episode+json; version=1'
+))->assert('number', '[1-9][0-9]*');
 
-$app->get('/press-packages', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.press-package-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/press-packages', function (Request $request, Accept $type) use ($app) {
     $packages = $app['press-packages'];
 
     $page = $request->query->get('page', 1);
@@ -1711,42 +1475,33 @@ $app->get('/press-packages', function (Request $request) use ($app) {
         $content['items'][] = $package;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.press-package-list+json; version=1'
+));
 
 $app->get('/press-packages/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['press-packages'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $packages = $app['press-packages'][$id];
 
-        $accepts = [
-            'application/vnd.elife.press-package+json; version=2',
-            'application/vnd.elife.press-package+json; version=1',
-        ];
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-        $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
-
-        if ($version < 2 && empty($packages['relatedContent'])) {
-            throw new UnsupportedVersion(sprintf('This press package requires version %d.', 2));
+        if ($type->getParameter('version') < 2 && empty($packages['relatedContent'])) {
+            throw new NotAcceptableHttpException(sprintf('This press package requires version %d.', 2));
         }
 
-        $latest = new Accept($accepts[0]);
-        if ($version < $latest->getParameter('version')) {
-            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $version);
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
         return new Response(
@@ -1754,19 +1509,13 @@ $app->get('/press-packages/{id}',
             Response::HTTP_OK,
             $headers
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.press-package+json; version=2',
+    'application/vnd.elife.press-package+json; version=1'
+));
 
-$app->get('/profiles', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.profile-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/profiles', function (Request $request, Accept $type) use ($app) {
     $profiles = $app['profiles'];
 
     $page = $request->query->get('page', 1);
@@ -1791,54 +1540,39 @@ $app->get('/profiles', function (Request $request) use ($app) {
         $content['items'][] = $profile;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.profile-list+json; version=1'
+));
 
 $app->get('/profiles/{id}',
-    function (Request $request, string $id) use ($app) {
+    function (Accept $type, string $id) use ($app) {
         if (false === isset($app['profiles'][$id])) {
             throw new NotFoundHttpException('Not found');
         }
 
         $profile = $app['profiles'][$id];
 
-        $accepts = [
-            'application/vnd.elife.profile+json; version=1',
-        ];
-
-        /** @var Accept $type */
-        $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-        $version = (int) $type->getParameter('version');
-        $type = $type->getType();
-
         return new Response(
             json_encode($profile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+            ['Content-Type' => $type->getNormalizedValue()]
         );
-    });
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.profile+json; version=1'
+));
 
-$app->get('/recommendations/{contentType}/{id}', function (Request $request, string $contentType, string $id) use ($app) {
+$app->get('/recommendations/{contentType}/{id}', function (Request $request, Accept $type, string $contentType, string $id) use ($app) {
     if (false === isset($app['recommendations'][$contentType][$id])) {
         throw new NotFoundHttpException('Not found');
     }
-
-    $accepts = [
-        'application/vnd.elife.recommendations+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
 
     $recommendations = $app['recommendations'][$contentType][$id];
 
@@ -1862,26 +1596,18 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, str
 
     $content['items'] = $recommendations;
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.recommendations+json; version=1'
+));
 
-$app->get('/search', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.search+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/search', function (Request $request, Accept $type) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
@@ -2106,26 +1832,18 @@ $app->get('/search', function (Request $request) use ($app) {
         return $result;
     }, $results);
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.search+json; version=1'
+));
 
-$app->get('/subjects', function (Request $request) use ($app) {
-    $accepts = [
-        'application/vnd.elife.subject-list+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
+$app->get('/subjects', function (Request $request, Accept $type) use ($app) {
     $subjects = $app['subjects'];
 
     $page = $request->query->get('page', 1);
@@ -2152,38 +1870,32 @@ $app->get('/subjects', function (Request $request) use ($app) {
         $content['items'][] = $subject;
     }
 
-    $headers = ['Content-Type' => sprintf('%s; version=%s', $type, $version)];
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.subject-list+json; version=1'
+));
 
-$app->get('/subjects/{id}', function (Request $request, string $id) use ($app) {
+$app->get('/subjects/{id}', function (Accept $type, string $id) use ($app) {
     if (false === isset($app['subjects'][$id])) {
         throw new NotFoundHttpException('Not found');
     }
 
     $subject = $app['subjects'][$id];
 
-    $accepts = [
-        'application/vnd.elife.subject+json; version=1',
-    ];
-
-    /** @var Accept $type */
-    $type = $app['negotiator']->getBest($request->headers->get('Accept'), $accepts);
-
-    $version = (int) $type->getParameter('version');
-    $type = $type->getType();
-
     return new Response(
         json_encode($subject, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
-        ['Content-Type' => sprintf('%s; version=%s', $type, $version)]
+        ['Content-Type' => $type->getNormalizedValue()]
     );
-});
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.subject+json; version=1'
+));
 
 $app->get('/oauth2/authorize', function (Request $request) {
     $redirectUri = $request->get('redirect_uri');
@@ -2234,16 +1946,6 @@ $app->after(function (Request $request, Response $response, Application $app) {
 
     $response->headers->set('ETag', md5($response->getContent()));
     $response->isNotModified($request);
-});
-
-$app->on(KernelEvents::EXCEPTION, function (GetResponseForExceptionEvent $event) {
-    $exception = $event->getException();
-
-    if (false === $exception instanceof UnsupportedVersion) {
-        return;
-    }
-
-    $event->setException(new NotAcceptableHttpException($exception->getMessage(), $exception));
 });
 
 return $app;
