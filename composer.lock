@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3db63a370fcb6e1e579602c143e857c5",
+    "content-hash": "dd22df2e3d59b832eb1a2803462012b4",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -109,16 +109,16 @@
         },
         {
             "name": "elife/content-negotiator",
-            "version": "dev-silex",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/content-negotiator-php.git",
-                "reference": "4b5a989fd41d996e11306db92859f8783436d8d8"
+                "reference": "82099671a3b7a716d01e36a0ff05e8317c9a3ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/4b5a989fd41d996e11306db92859f8783436d8d8",
-                "reference": "4b5a989fd41d996e11306db92859f8783436d8d8",
+                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/82099671a3b7a716d01e36a0ff05e8317c9a3ced",
+                "reference": "82099671a3b7a716d01e36a0ff05e8317c9a3ced",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +154,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences content negotiator",
-            "time": "2017-11-06T13:49:08+00:00"
+            "time": "2017-11-14T07:45:05+00:00"
         },
         {
             "name": "elife/ping",
@@ -2674,7 +2674,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "elife/content-negotiator": 20,
         "elife/api": 20,
         "elife/api-validator": 20
     },
