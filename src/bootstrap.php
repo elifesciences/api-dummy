@@ -542,10 +542,12 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=2',
                 'application/vnd.elife.article-vor+json; version=1',
             ];
         } else {
             $accepts = [
+                'application/vnd.elife.article-poa+json; version=2',
                 'application/vnd.elife.article-poa+json; version=1',
             ];
         }
@@ -639,6 +641,10 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
+        if ($type->getParameter('version') < 2 && '359325' === $id) {
+            throw new NotAcceptableHttpException('This blog article requires version 2.');
+        }
+
         return new Response(
             json_encode($article, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -646,6 +652,7 @@ $app->get('/blog-articles/{id}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.blog-article+json; version=2',
     'application/vnd.elife.blog-article+json; version=1'
 ));
 
@@ -948,6 +955,7 @@ $app->get('/events/{id}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.event+json; version=2',
     'application/vnd.elife.event+json; version=1'
 ));
 
@@ -1043,6 +1051,7 @@ $app->get('/interviews/{id}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.interview+json; version=2',
     'application/vnd.elife.interview+json; version=1'
 ));
 
@@ -1170,6 +1179,7 @@ $app->get('/labs-posts/{id}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.labs-post+json; version=2',
     'application/vnd.elife.labs-post+json; version=1'
 ));
 
@@ -1511,6 +1521,7 @@ $app->get('/press-packages/{id}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.press-package+json; version=3',
     'application/vnd.elife.press-package+json; version=2',
     'application/vnd.elife.press-package+json; version=1'
 ));

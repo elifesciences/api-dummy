@@ -9,6 +9,28 @@
             "text": "Cyanobacteria are found in huge numbers in water bodies or can form a slippery green film on rocks and pebbles. The species used in the study, <i>Synechocystis</i>, is found naturally in freshwater lakes and rivers."
         },
         {
+            "type": "profile",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/journal-cms:person/2017-10/kegley120208elife0756c.jpg",
+                "alt": "",
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/journal-cms:person/2017-10/kegley120208elife0756c.jpg/full/full/0/default.jpg",
+                    "filename": "schekman.jpg"
+                },
+                "size": {
+                    "width": 4256,
+                    "height": 2832
+                }
+            },
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Pellentesque pharetra sem in gravida iaculis. Sed leo quam, feugiat id lacus at, tincidunt hendrerit ante. Phasellus accumsan euismod elit a vulputate. Etiam lobortis, risus nec scelerisque eleifend, justo sem rutrum nulla, nec blandit velit purus aliquam nisi. Nullam sed turpis eu leo finibus aliquam in ac turpis. Morbi dictum ornare efficitur. Phasellus tortor libero, congue et congue sit amet, tempus eget justo. Morbi quis arcu eget sem tempus consectetur convallis ac metus. Etiam et consectetur massa. Sed accumsan lectus vitae metus varius pharetra."
+                }
+            ]
+        },
+        {
             "type": "paragraph",
             "text": "As photosynthesis is crucial to the survival of these bacteria, scientists have sought to understand how they sense light. Previous studies have shown that they contain photosensors and are able to perceive the position of a light source and move towards it, a phenomenon called phototaxis."
         },
