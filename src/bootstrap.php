@@ -555,6 +555,11 @@ $app->get('/articles/{number}/versions/{version}',
         $app['content_negotiator.accept']->negotiate($request, $accepts);
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
+        if ('26231' === $number && '1' === $type->getParameter('version')) {
+            $articleVersion['additionalFiles'][0]['title'] = $articleVersion['additionalFiles'][0]['label'];
+            unset($articleVersion['additionalFiles'][0]['label']);
+        }
+
         return new Response(
             json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
