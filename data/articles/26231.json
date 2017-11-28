@@ -1439,7 +1439,7 @@
           "mediaType": "application/docx",
           "doi": "10.7554/eLife.26231.017",
           "uri": "https://cdn.elifesciences.org/articles/26231/elife-26231-transrepform-v1.docx",
-          "title": "Transparent reporting form"
+          "label": "Transparent reporting form"
         }
       ],
       "pdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-v1.pdf",

@@ -6,18 +6,14 @@ use Silex\Application;
 
 trait SilexTestCase
 {
-    private $app;
-
-    /**
-     * @before
-     */
-    final public function setUpApp()
-    {
-        $this->app = require __DIR__.'/../src/validate.php';
-    }
+    private static $app;
 
     final protected function getApp() : Application
     {
-        return $this->app;
+        if (empty(self::$app)) {
+            self::$app = require __DIR__.'/../src/validate.php';
+        }
+
+        return self::$app;
     }
 }
