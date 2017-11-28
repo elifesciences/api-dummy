@@ -240,7 +240,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.job-advert-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/job-adverts') as $file) {
-            yield '/job-adverts/'.$file->getBasename('.json') => [
+            yield $path = '/job-adverts/'.$file->getBasename('.json') => [
                 $this->createRequest($path),
                 'application/vnd.elife.job-advert+json; version=1',
             ];
