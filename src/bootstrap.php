@@ -372,7 +372,21 @@ $app->get('/annotations', function (Request $request, Accept $type) use ($app) {
         'items' => [],
     ];
 
-    if ('desc' === $request->query->get('order', 'desc')) {
+    $useDate = $request->query->get('use-date', 'updated');
+
+    uasort($annotations, function (array $a, array $b) use ($useDate) {
+        if ('created' === $useDate) {
+            $aDate = $a['created'];
+            $bDate = $b['created'];
+        } else {
+            $aDate = $a['updated'] ?? $a['created'];
+            $bDate = $b['updated'] ?? $b['created'];
+        }
+
+        return DateTimeImmutable::createFromFormat(DATE_ATOM, $bDate) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $aDate);
+    });
+
+    if ('asc' === $request->query->get('order', 'desc')) {
         $annotations = array_reverse($annotations);
     }
 

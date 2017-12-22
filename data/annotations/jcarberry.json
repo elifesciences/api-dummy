@@ -48,5 +48,32 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "Rpp6JttuEeeXnRsvD_86eQ",
+        "access": "public",
+        "document": {
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "uri": "https://elifesciences.org/articles/14107"
+        },
+        "parents": [],
+        "created": "2017-09-15T15:40:52Z",
+        "highlight": "clustering are important correlates of EGFR activation"
+    },
+    {
+        "id": "g8IV4ttXEeewdPeQMRBLqQ",
+        "access": "restricted",
+        "document": {
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "uri": "https://elifesciences.org/articles/14107"
+        },
+        "parents": [],
+        "created": "2017-09-15T16:40:00Z",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Paragraph text"
+            }
+        ]
     }
 ]
