@@ -27,6 +27,18 @@ $app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
+$app['annotations'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annotations');
+
+    $annotations = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $annotations[$file->getBasename('.json')] = $json;
+    }
+
+    return $annotations;
+};
+
 $app['annual-reports'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports');
 
@@ -338,6 +350,50 @@ $app['subjects'] = function () use ($app) {
 
     return $subjects;
 };
+
+$app->get('/annotations', function (Request $request, Accept $type) use ($app) {
+    $annotations = $app['annotations'];
+
+    if (empty($request->query->get('by'))) {
+        throw new BadRequestHttpException('Invalid by parameter');
+    }
+
+    if (false === isset($annotations[$request->query->get('by')])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $annotations = $annotations[$request->query->get('by')];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $content = [
+        'total' => count($annotations),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $annotations = array_reverse($annotations);
+    }
+
+    $annotations = array_slice($annotations, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($annotations) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content['items'] = $annotations;
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.annotation-list+json; version=1'
+));
 
 $app->get('/annual-reports', function (Request $request, Accept $type) use ($app) {
     $reports = $app['annual-reports'];
@@ -1946,10 +2002,10 @@ $app->post('/oauth2/token', function (Request $request) {
 });
 
 $app->after(function (Request $request, Response $response, Application $app) {
-    if ('/ping' !== $request->getPathInfo()) {
+    /*if ('/ping' !== $request->getPathInfo()) {
         $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
         $response->headers->set('Vary', 'Accept', false);
-    }
+    }*/
 
     if ($response instanceof StreamedResponse) {
         return;
