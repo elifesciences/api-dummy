@@ -737,6 +737,7 @@ $app->get('/collections', function (Request $request, Accept $type) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
     $subjects = (array) $request->query->get('subject', []);
+    $containing = (array) $request->query->get('containing', []);
 
     if (false === empty($subjects)) {
         $collections = array_filter($collections, function ($collection) use ($subjects) {
@@ -745,6 +746,18 @@ $app->get('/collections', function (Request $request, Accept $type) use ($app) {
             }, $collection['subjects'] ?? []);
 
             return count(array_intersect($subjects, $collectionSubjects));
+        });
+    }
+
+    if (false === empty($containing)) {
+        $collections = array_filter($collections, function ($collection) use ($containing) {
+            foreach ($collection['content'] as $item) {
+                if (in_array("{$item['type']}/{$item['id']}", $containing)) {
+                    return true;
+                }
+            }
+
+            return false;
         });
     }
 
