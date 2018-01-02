@@ -59,6 +59,18 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             404,
         ];
 
+        yield $path = '/annotations' => [
+            $this->createRequest($path),
+            'application/problem+json',
+            400,
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annotations') as $file) {
+            yield $path = '/annotations?by='.$file->getBasename('.json') => [
+                $this->createRequest($path),
+                'application/vnd.elife.annotation-list+json; version=1',
+            ];
+        }
+
         yield '/annual-reports/2012 wrong version' => [
             $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=2'),
             'application/problem+json',
