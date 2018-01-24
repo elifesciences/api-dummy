@@ -1,0 +1,6 @@
+build/
+.git
+Jenkinsfile
+vendor/
+*.md
+*.sh
