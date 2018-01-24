@@ -6,7 +6,7 @@ RUN mkdir /srv/api-dummy && chown elife:elife /srv/api-dummy
 USER elife
 WORKDIR /srv/api-dummy
 COPY composer.json composer.lock /srv/api-dummy/
-RUN composer install
+RUN composer install --classmap-authoritative --no-dev
 COPY . /srv/api-dummy
 
 USER www-data
