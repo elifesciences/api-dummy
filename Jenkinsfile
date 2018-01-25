@@ -25,13 +25,13 @@ elifePipeline {
     def image
     elifeOnNode(
         {
-            stage 'Push image', {
-                checkout scm
-                image = DockerImage.elifesciences('api-dummy')
-                image.push()
-            }
-            
             elifeMainlineOnly {
+                stage 'Push image', {
+                    checkout scm
+                    image = DockerImage.elifesciences('api-dummy', commit)
+                    image.push()
+                }
+            
                 stage 'Approval', {
                     elifeGitMoveToBranch commit, 'approved'
                     image.tag('approved').push()
