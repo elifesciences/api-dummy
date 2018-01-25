@@ -30,17 +30,27 @@ elifePipeline {
                 image = DockerImage.elifesciences('api-dummy')
                 image.push()
             }
+            
+            elifeMainlineOnly {
+                stage 'Approval', {
+                    elifeGitMoveToBranch commit, 'approved'
+                    image.tag('approved').push()
+                }
+            }
         },
         'elife-libraries--ci'
     )
 
     elifeMainlineOnly {
-        stage 'Approval', {
-            elifeGitMoveToBranch commit, 'approved'
-        }
 
         stage 'Deploy on demo', {
             elifeGitMoveToBranch commit, 'master'
+            elifeOnNode(
+                {
+                    image.tag('latest').push()
+                },
+                'elife-libraries--ci'
+            )
             builderDeployRevision 'api-dummy--demo', commit
         }
     }
