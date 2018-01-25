@@ -28,7 +28,7 @@ elifePipeline {
             elifeMainlineOnly {
                 stage 'Push image', {
                     checkout scm
-                    image = DockerImage.elifesciences('api-dummy', commit)
+                    image = DockerImage.elifesciences(this, 'api-dummy', commit)
                     image.push()
                 }
             
