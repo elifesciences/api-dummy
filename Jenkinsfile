@@ -9,7 +9,7 @@ elifePipeline {
         {
             stage 'Build image', {
                 checkout scm
-                sh "docker build -t elifesciences/api-dummy:${commit} ."
+                dockerBuild 'api-dummy', commit
             }
         },
         'elife-libraries--ci'
