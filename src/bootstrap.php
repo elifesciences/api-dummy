@@ -364,6 +364,12 @@ $app->get('/annotations', function (Request $request, Accept $type) use ($app) {
 
     $annotations = $annotations[$request->query->get('by')];
 
+    if ('restricted' !== $request->query->get('access')) {
+        $annotations = array_filter($annotations, function (array $annotation) {
+            return 'public' === $annotation['access'];
+        });
+    }
+
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
