@@ -1,13 +1,11 @@
-FROM elifesciences/php_cli
-
-USER root
-RUN mkdir /srv/api-dummy && chown elife:elife /srv/api-dummy
+FROM elifesciences/php_cli:20180129144044
 
 USER elife
+RUN mkdir /srv/api-dummy
 WORKDIR /srv/api-dummy
-COPY composer.json composer.lock /srv/api-dummy/
+COPY --chown=elife:elife composer.json composer.lock /srv/api-dummy/
 RUN composer install --classmap-authoritative --no-dev
-COPY . /srv/api-dummy
+COPY --chown=elife:elife . /srv/api-dummy
 
 USER www-data
 EXPOSE 8080
