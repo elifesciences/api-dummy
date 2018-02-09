@@ -16,6 +16,14 @@ elifePipeline {
     )
 
     stage 'Project tests', {
+        elifeOnNode(
+            {
+                dockerBuildCi 'api-dummy', commit
+                dockerProjectTests 'api-dummy', commit
+            },
+            'elife-libraries--ci'
+        )
+
         lock('api-dummy--ci') {
             builderDeployRevision 'api-dummy--ci', commit
             builderProjectTests 'api-dummy--ci', '/srv/api-dummy', ['/srv/api-dummy/build/phpunit.xml']

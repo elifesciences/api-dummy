@@ -1,0 +1,18 @@
+ARG commit=latest
+FROM elifesciences/proofreader-php:latest AS proofreader
+FROM elifesciences/api-dummy:${commit}
+ENV DEBUG=1
+
+USER elife
+COPY --from=proofreader --chown=elife:elife /srv/proofreader-php /srv/proofreader-php
+RUN ln -s /srv/proofreader-php/bin/proofreader /srv/bin/proofreader
+
+RUN mkdir build && chmod 777 build
+RUN composer-install
+# COPY test/
+RUN composer-post
+# have to run also this to get composer-locator to work
+RUN composer run-script post-install-cmd
+
+USER www-data
+CMD ["/bin/bash", "project_tests.sh"]
