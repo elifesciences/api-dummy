@@ -30,7 +30,7 @@ elifePipeline {
             }
         },
         'elife-libraries--ci'
-    }
+    )
 
     elifeMainlineOnly {
         stage 'Deploy on demo', {
