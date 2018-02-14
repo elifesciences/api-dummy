@@ -11,8 +11,6 @@ RUN mkdir build && chmod 777 build
 RUN composer-install
 # COPY test/
 RUN composer-post
-# have to run also this to get composer-locator to work
-RUN composer run-script post-install-cmd
 
 USER www-data
 CMD ["/bin/bash", "project_tests.sh"]
