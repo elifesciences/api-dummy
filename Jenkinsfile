@@ -1,36 +1,24 @@
 elifePipeline {
     def commit
-    stage 'Checkout', {
-        checkout scm
-        commit = elifeGitRevision()
-    }
-
-    elifeOnNode(
-        {
-            stage 'Build image', {
-                checkout scm
-                dockerBuild 'api-dummy', commit
-            }
-        },
-        'elife-libraries--ci'
-    )
-
-    stage 'Project tests', {
-        elifeOnNode(
-            {
-                dockerBuildCi 'api-dummy', commit
-                dockerProjectTests 'api-dummy', commit
-            },
-            'elife-libraries--ci'
-        )
-    }
-
     def image
     elifeOnNode(
         {
+            stage 'Checkout', {
+                checkout scm
+                commit = elifeGitRevision()
+            }
+
+            stage 'Build image', {
+                dockerBuild 'api-dummy', commit
+            }
+
+            stage 'Project tests', {
+                dockerBuildCi 'api-dummy', commit
+                dockerProjectTests 'api-dummy', commit
+            }
+
             elifeMainlineOnly {
                 stage 'Push image', {
-                    checkout scm
                     image = DockerImage.elifesciences(this, 'api-dummy', commit)
                     image.push()
                 }
@@ -42,10 +30,9 @@ elifePipeline {
             }
         },
         'elife-libraries--ci'
-    )
+    }
 
     elifeMainlineOnly {
-
         stage 'Deploy on demo', {
             elifeGitMoveToBranch commit, 'master'
             elifeOnNode(
