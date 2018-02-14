@@ -2,7 +2,6 @@
     "name": "elife/dummy-api",
     "type": "project",
     "license": "MIT",
-
     "autoload": {
         "psr-4": {
             "eLife\\DummyApi\\": "src/"
