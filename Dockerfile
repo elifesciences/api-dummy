@@ -1,4 +1,4 @@
-FROM elifesciences/php_cli:8e6cd52684b79b923fe87f254ea0b832a085568c
+FROM elifesciences/php_cli:d83fc4714914898b0842199578e1cc88d9feab2a
 
 USER elife
 RUN mkdir /srv/api-dummy
