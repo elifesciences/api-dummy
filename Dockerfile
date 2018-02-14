@@ -6,7 +6,9 @@ RUN mkdir ${PROJECT_FOLDER}
 WORKDIR ${PROJECT_FOLDER}
 COPY --chown=elife:elife composer.json composer.lock ${PROJECT_FOLDER}/
 RUN composer-install
-COPY --chown=elife:elife . ${PROJECT_FOLDER}
+COPY --chown=elife:elife data/ ${PROJECT_FOLDER}/data
+COPY --chown=elife:elife src/ ${PROJECT_FOLDER}/src
+COPY --chown=elife:elife web/ ${PROJECT_FOLDER}/web
 RUN composer-post
 
 USER www-data

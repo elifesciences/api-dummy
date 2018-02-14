@@ -9,7 +9,8 @@ RUN ln -s /srv/proofreader-php/bin/proofreader /srv/bin/proofreader
 
 RUN mkdir build && chmod 777 build
 RUN composer-install
-# COPY test/
+COPY --chown=elife:elife test/ ${PROJECT_FOLDER}/test
+COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ${PROJECT_FOLDER}/
 RUN composer-post
 
 USER www-data
