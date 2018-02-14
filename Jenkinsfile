@@ -23,11 +23,6 @@ elifePipeline {
             },
             'elife-libraries--ci'
         )
-
-        lock('api-dummy--ci') {
-            builderDeployRevision 'api-dummy--ci', commit
-            builderProjectTests 'api-dummy--ci', '/srv/api-dummy', ['/srv/api-dummy/build/phpunit.xml']
-        }
     }
 
     def image
