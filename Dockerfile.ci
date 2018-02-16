@@ -12,6 +12,7 @@ RUN composer-install
 COPY --chown=elife:elife test/ ${PROJECT_FOLDER}/test
 COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ${PROJECT_FOLDER}/
 RUN composer-post
+# TODO: extract script into base image
 RUN mkdir build
 USER root
 RUN chown www-data:www-data build
