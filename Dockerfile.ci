@@ -7,7 +7,6 @@ USER elife
 COPY --from=proofreader --chown=elife:elife /srv/proofreader-php /srv/proofreader-php
 RUN ln -s /srv/proofreader-php/bin/proofreader /srv/bin/proofreader
 
-RUN mkdir build && chmod 777 build
 RUN composer-install
 COPY --chown=elife:elife test/ ${PROJECT_FOLDER}/test
 COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ${PROJECT_FOLDER}/
