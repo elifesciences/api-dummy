@@ -3,6 +3,11 @@ FROM elifesciences/proofreader-php:latest AS proofreader
 FROM elifesciences/api-dummy:${commit}
 ENV DEBUG=1
 
+# TODO: extract script into base image
+USER root
+RUN mkdir build
+RUN chown www-data:www-data build
+
 USER elife
 COPY --from=proofreader --chown=elife:elife /srv/proofreader-php /srv/proofreader-php
 RUN ln -s /srv/proofreader-php/bin/proofreader /srv/bin/proofreader
@@ -11,10 +16,6 @@ RUN composer-install
 COPY --chown=elife:elife test/ ${PROJECT_FOLDER}/test
 COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ${PROJECT_FOLDER}/
 RUN composer-post
-# TODO: extract script into base image
-RUN mkdir build
-USER root
-RUN chown www-data:www-data build
 
 USER www-data
 CMD ["/bin/bash", "project_tests.sh"]
