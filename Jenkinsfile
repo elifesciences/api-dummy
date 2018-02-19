@@ -34,6 +34,7 @@ elifePipeline {
 
     elifeMainlineOnly {
         stage 'Deploy on demo', {
+            checkout scm
             elifeGitMoveToBranch commit, 'master'
             elifeOnNode(
                 {
