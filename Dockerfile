@@ -1,11 +1,15 @@
-FROM elifesciences/php_cli:20180129144044
+FROM elifesciences/php_cli:d83fc4714914898b0842199578e1cc88d9feab2a
 
 USER elife
-RUN mkdir /srv/api-dummy
-WORKDIR /srv/api-dummy
-COPY --chown=elife:elife composer.json composer.lock /srv/api-dummy/
-RUN composer install --classmap-authoritative --no-dev
-COPY --chown=elife:elife . /srv/api-dummy
+ENV PROJECT_FOLDER=/srv/api-dummy
+RUN mkdir ${PROJECT_FOLDER}
+WORKDIR ${PROJECT_FOLDER}
+COPY --chown=elife:elife composer.json composer.lock ${PROJECT_FOLDER}/
+RUN composer-install
+COPY --chown=elife:elife data/ ${PROJECT_FOLDER}/data
+COPY --chown=elife:elife src/ ${PROJECT_FOLDER}/src
+COPY --chown=elife:elife web/ ${PROJECT_FOLDER}/web
+RUN composer-post
 
 USER www-data
 EXPOSE 8080
