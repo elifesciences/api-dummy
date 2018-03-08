@@ -1,5 +1,5 @@
 ARG commit=latest
-FROM elifesciences/proofreader-php:latest AS proofreader
+FROM elifesciences/proofreader-php:0.1 AS proofreader
 FROM elifesciences/api-dummy:${commit}
 ENV DEBUG=1
 
