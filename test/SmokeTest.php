@@ -32,7 +32,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
     {
         $response = $this->getApp()->handle($request);
 
-        if (in_array('--debug', $_SERVER['argv'], true) && $response->getStatusCode() === 500) {
+        if (in_array('--debug', $_SERVER['argv'], true) && 500 === $response->getStatusCode()) {
             $json = json_decode($response->getContent(), true);
             if (isset($json['exception'])) {
                 $this->fail($json['exception']);
@@ -404,7 +404,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    private function createRequest(string $uri, string $type = '*/*'): Request
+    private function createRequest(string $uri, string $type = '*/*') : Request
     {
         return Request::create($uri, 'GET', [], [], [], ['HTTP_ACCEPT' => $type]);
     }

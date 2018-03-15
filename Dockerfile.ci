@@ -1,12 +1,13 @@
 ARG commit=latest
-FROM elifesciences/proofreader-php:0.1 AS proofreader
+FROM elifesciences/proofreader-php:0.2 AS proofreader
 FROM elifesciences/api-dummy:${commit}
 ENV DEBUG=1
 
 # TODO: extract script into base image
 USER root
 RUN mkdir build
-RUN chown www-data:www-data build
+RUN chown www-data:www-data build && \
+    touch .php_cs.cache && chown www-data:www-data .php_cs.cache
 
 USER elife
 COPY --from=proofreader --chown=elife:elife /srv/proofreader-php /srv/proofreader-php

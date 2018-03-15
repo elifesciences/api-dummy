@@ -13,12 +13,12 @@ final class OAuth2Test extends PHPUnit_Framework_TestCase
     /**
      * @before
      */
-    final public function setUpApp()
+    public function setUpApp()
     {
         $this->app = require __DIR__.'/../src/bootstrap.php';
     }
 
-    final protected function getApp() : Application
+    protected function getApp() : Application
     {
         return $this->app;
     }
