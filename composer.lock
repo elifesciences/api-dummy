@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd22df2e3d59b832eb1a2803462012b4",
+    "content-hash": "f14296d9d3570ff7cb47b7128e3eacf5",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -2682,5 +2682,8 @@
     "platform": {
         "php": "^7.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.0.29"
+    }
 }
