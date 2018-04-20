@@ -8,7 +8,6 @@ USER root
 
 WORKDIR ${PROJECT_FOLDER}
 
-COPY --chown=elife:elife smoke_tests.sh .
 COPY --chown=elife:elife web/ web/
 COPY --from=build --chown=elife:elife /app/vendor/ vendor/
 COPY --chown=elife:elife data/ data/

@@ -1,22 +1,29 @@
-ARG commit=latest
+ARG image_tag=develop
 FROM elifesciences/proofreader-php:0.2 AS proofreader
-FROM elifesciences/api-dummy:${commit}
-ENV DEBUG=1
+FROM elifesciences/api-dummy_composer_dev:${image_tag} AS build
+FROM elifesciences/php_7.0_cli:656bb4bdf1e49a5e80337e2a7c4f44f10c3f52b0
 
-# TODO: extract script into base image
+ENV PROJECT_FOLDER=/srv/api-dummy
+
 USER root
-RUN mkdir build
-RUN chown www-data:www-data build && \
-    touch .php_cs.cache && chown www-data:www-data .php_cs.cache
+
+WORKDIR ${PROJECT_FOLDER}
+RUN mkdir -p build && \
+    touch .php_cs.cache && \
+    chown --recursive elife:elife . && \
+    chown www-data:www-data build .php_cs.cache
 
 USER elife
+
 COPY --from=proofreader --chown=elife:elife /srv/proofreader-php /srv/proofreader-php
 RUN ln -s /srv/proofreader-php/bin/proofreader /srv/bin/proofreader
 
-RUN composer-install
-COPY --chown=elife:elife test/ ${PROJECT_FOLDER}/test
-COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ${PROJECT_FOLDER}/
-RUN composer-post
+COPY --chown=elife:elife .php_cs phpunit.xml.dist project_tests.sh ./
+COPY --chown=elife:elife web/ web/
+COPY --chown=elife:elife test/ test/
+COPY --from=build --chown=elife:elife /app/vendor/ vendor/
+COPY --chown=elife:elife data/ data/
+COPY --chown=elife:elife src/ src/
 
 USER www-data
-CMD ["/bin/bash", "project_tests.sh"]
+CMD ["./project_tests.sh"]
