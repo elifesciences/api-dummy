@@ -11,4 +11,4 @@ RUN composer --no-interaction install ${composer_dev_arg} --ignore-platform-reqs
 COPY test/ test/
 
 RUN composer --no-interaction dump-autoload ${composer_dev_arg} --classmap-authoritative
-RUN composer --no-interaction run-script post-install-cmd
+RUN if [ '${composer_dev_arg}' = '--no-dev' ]; then composer --no-interaction run-script post-install-cmd; fi;
