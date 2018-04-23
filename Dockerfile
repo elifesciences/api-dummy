@@ -9,6 +9,7 @@ WORKDIR ${PROJECT_FOLDER}
 USER root
 RUN chown elife:elife .
 
+COPY --chown=elife:elife smoke_tests.sh ./
 COPY --chown=elife:elife web/ web/
 COPY --from=build --chown=elife:elife /app/vendor/ vendor/
 COPY --chown=elife:elife data/ data/
