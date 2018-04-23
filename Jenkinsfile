@@ -13,13 +13,7 @@ elifePipeline {
             }
 
             stage 'Project tests', {
-                try {
-                    sh "docker run --name api-dummy_tests_${commit} elifesciences/api-dummy_ci:${commit}"
-                } finally {
-                    sh "docker cp api-dummy_tests_${commit}:/srv/api-dummy/build/. build"
-                    step([$class: "JUnitResultArchiver", testResults: 'build/phpunit.xml'])
-                    sh "docker rm api-dummy_tests_${commit}"
-                }
+                dockerProjectTests 'api-dummy', commit
                 try {
                     sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml up -d"
                     sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml exec -T cli ./smoke_tests.sh"
