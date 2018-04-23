@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-proofreader src/ test/ web/
-vendor/bin/phpunit --log-junit build/phpunit.xml
+rm -f build/*.xml
 
+proofreader src/ web/
+proofreader --no-phpcpd test/
+vendor/bin/phpunit --log-junit build/phpunit.xml

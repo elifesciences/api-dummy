@@ -9,12 +9,17 @@ elifePipeline {
             }
 
             stage 'Build image', {
-                dockerBuild 'api-dummy', commit
+                sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml build"
             }
 
             stage 'Project tests', {
-                dockerBuildCi 'api-dummy', commit
                 dockerProjectTests 'api-dummy', commit
+                try {
+                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml up -d"
+                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml exec -T cli ./smoke_tests.sh"
+                } finally {
+                    sh 'docker-compose -f docker-compose.yml -f docker-compose.ci.yml down'
+                }
             }
 
             elifeMainlineOnly {
