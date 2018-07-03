@@ -1858,6 +1858,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
             'insight',
             'research-advance',
             'research-article',
+            'research-communication',
             'retraction',
             'registered-report',
             'replication-study',
