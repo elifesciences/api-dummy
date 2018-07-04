@@ -1,11 +1,11 @@
 {
     "title": "A design manual for Ras circuits",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:12435/elife-12435-fig1-v2.tif",
+        "uri": "https://iiif.elifesciences.org/lax:12435%2Felife-12435-fig1-v2.tif",
         "source": {
             "mediaType": "image/jpeg",
             "filename": "elife-12435-fig1-v2.tif",
-            "uri": "https://iiif.elifesciences.org/lax:12435/elife-12435-fig1-v2.tif/full/full/0/default.jpg"
+            "uri": "https://iiif.elifesciences.org/lax:12435%2Felife-12435-fig1-v2.tif/full/full/0/default.jpg"
         },
         "size": {
             "height": 1417,

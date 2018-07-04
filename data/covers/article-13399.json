@@ -1,11 +1,11 @@
 {
     "title": "A comprehensive view of neurogenesis",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:13399/elife-13399-fig1-v1.tif",
+        "uri": "https://iiif.elifesciences.org/lax:13399%2Felife-13399-fig1-v1.tif",
         "source": {
             "mediaType": "image/jpeg",
             "filename": "elife-13399-fig1-v1.tif",
-            "uri": "https://iiif.elifesciences.org/lax:13399/elife-13399-fig1-v1.tif/full/full/0/default.jpg"
+            "uri": "https://iiif.elifesciences.org/lax:13399%2Felife-13399-fig1-v1.tif/full/full/0/default.jpg"
         },
         "size": {
             "height": 1772,

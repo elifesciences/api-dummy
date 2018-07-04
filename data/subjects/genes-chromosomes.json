@@ -5,10 +5,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:subjects/2017-04/elife-sciences-genes-and-chromosomes-illustration.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-genes-and-chromosomes-illustration.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:subjects/2017-04/elife-sciences-genes-and-chromosomes-illustration.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-genes-and-chromosomes-illustration.jpg/full/full/0/default.jpg",
                 "filename": "elife-sciences-genes-and-chromosomes-illustration.jpg"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:subjects/2017-04/elife-sciences-genes-and-chromosomes-illustration.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-genes-and-chromosomes-illustration.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:subjects/2017-04/elife-sciences-genes-and-chromosomes-illustration.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-genes-and-chromosomes-illustration.jpg/full/full/0/default.jpg",
                 "filename": "elife-sciences-genes-and-chromosomes-illustration.jpg"
             },
             "size": {

@@ -24,10 +24,10 @@
             "type": "image",
             "image": {
                 "alt": "",
-                "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-06/orcid_id-fig.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-06%2Forcid_id-fig.png",
                 "source": {
                     "mediaType": "image/png",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-06/orcid_id-fig.png/full/full/0/default.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-06%2Forcid_id-fig.png/full/full/0/default.png",
                     "filename": "orcid_id-fig.png"
                 },
                 "size": {
