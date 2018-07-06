@@ -5,10 +5,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-01%2F0f2f45d5-manuscripts-elife-labs.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-01%2F0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
                 "filename": "manuscripts-elife-labs.png"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-01%2F0f2f45d5-manuscripts-elife-labs.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post/2016-01/0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-01%2F0f2f45d5-manuscripts-elife-labs.png/full/full/0/default.png",
                 "filename": "manuscripts-elife-labs.png"
             },
             "size": {
@@ -59,10 +59,10 @@
             "type": "image",
             "image": {
                 "alt": "",
-                "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts-figure1.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-01%2Fmanuscripts-figure1.png",
                 "source": {
                     "mediaType": "image/png",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts-figure1.png/full/full/0/default.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-01%2Fmanuscripts-figure1.png/full/full/0/default.png",
                     "filename": "manuscripts-figure1.png"
                 },
                 "size": {
@@ -84,10 +84,10 @@
                     "type": "image",
                     "image": {
                         "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts_fig2.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-01%2Fmanuscripts_fig2.png",
                         "source": {
                             "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms:content/2016-01/manuscripts_fig2.png/full/full/0/default.png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-01%2Fmanuscripts_fig2.png/full/full/0/default.png",
                             "filename": "manuscripts_fig2.png"
                         },
                         "size": {

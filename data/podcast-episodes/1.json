@@ -6,10 +6,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode/2017-04/episode-1-elife-podcast.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode/2017-04/episode-1-elife-podcast.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                 "filename": "episode-1-elife-podcast.png"
             },
             "size": {
@@ -22,10 +22,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode/2017-04/episode-1-elife-podcast.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode/2017-04/episode-1-elife-podcast.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                 "filename": "episode-1-elife-podcast.png"
             },
             "size": {
@@ -59,10 +59,10 @@
                     "image": {
                         "thumbnail":{
                             "alt": "",
-                            "uri": "https://iiif.elifesciences.org/lax:05770/elife-05770-fig1-v1.tif",
+                            "uri": "https://iiif.elifesciences.org/lax:05770%2Felife-05770-fig1-v1.tif",
                             "source": {
                                 "mediaType": "image/jpg",
-                                "uri": "https://iiif.elifesciences.org/lax:05770/elife-05770-fig1-v1.tif/full/full/0/default.jpg",
+                                "uri": "https://iiif.elifesciences.org/lax:05770%2Felife-05770-fig1-v1.tif/full/full/0/default.jpg",
                                 "filename": "elife-05770-fig1-v1.jpg"
                             },
                             "size": {
