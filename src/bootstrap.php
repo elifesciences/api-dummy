@@ -1401,12 +1401,12 @@ $app->get('/people', function (Request $request, Accept $type) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $personType = $request->query->get('type', null);
+    $personTypes = (array) $request->query->get('type', []);
     $subjects = (array) $request->query->get('subject', []);
 
-    if (false === empty($personType)) {
-        $people = array_filter($people, function ($person) use ($personType) {
-            return $person['type']['id'] === $personType;
+    if (false === empty($personTypes)) {
+        $people = array_filter($people, function ($person) use ($personTypes) {
+            return in_array($person['type']['id'], $personTypes);
         });
     }
 
