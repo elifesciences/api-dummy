@@ -4,10 +4,10 @@
         "authorLine": "Chris Stringer",
         "image": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "elife-09560-fig1-v1.jpg"
             },
             "size": {
@@ -24,10 +24,10 @@
             "image": {
                 "thumbnail": {
                     "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "source": {
                         "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "elife-09560-fig1-v1.jpg"
                     },
                     "size": {
@@ -67,10 +67,10 @@
                 "image": {
                     "thumbnail": {
                         "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                         "source": {
                             "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                             "filename": "episode-1-elife-podcast.png"
                         },
                         "size": {
@@ -98,10 +98,10 @@
         "authorLine": "Chris Stringer",
         "image": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                 "filename": "elife-09560-fig1-v1.jpg"
             },
             "size": {
@@ -118,10 +118,10 @@
             "image": {
                 "thumbnail": {
                     "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
                     "source": {
                         "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax:09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "elife-09560-fig1-v1.jpg"
                     },
                     "size": {
@@ -161,10 +161,10 @@
                 "image": {
                     "thumbnail": {
                         "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                         "source": {
                             "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
                             "filename": "episode-1-elife-podcast.png"
                         },
                         "size": {

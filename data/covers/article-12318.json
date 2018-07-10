@@ -1,11 +1,11 @@
 {
     "title": "The importance of haem for ticks",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:12318%2Felife-12318-fig1-v2.tif",
+        "uri": "https://iiif.elifesciences.org/lax/12318%2Felife-12318-fig1-v2.tif",
         "source": {
             "mediaType": "image/jpeg",
             "filename": "elife-12318-fig1-v2.tif",
-            "uri": "https://iiif.elifesciences.org/lax:12318%2Felife-12318-fig1-v2.tif/full/full/0/default.jpg"
+            "uri": "https://iiif.elifesciences.org/lax/12318%2Felife-12318-fig1-v2.tif/full/full/0/default.jpg"
         },
         "size": {
             "height": 1772,

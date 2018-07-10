@@ -1,11 +1,11 @@
 {
     "title": "<i>Botryllus schlosseri</i>",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:00569%2Felife-00569-fig1-v1.tif",
+        "uri": "https://iiif.elifesciences.org/lax/00569%2Felife-00569-fig1-v1.tif",
         "source": {
             "mediaType": "image/jpeg",
             "filename": "elife-00569-fig1-v1.tif",
-            "uri": "https://iiif.elifesciences.org/lax:00569%2Felife-00569-fig1-v1.tif/full/full/0/default.jpg"
+            "uri": "https://iiif.elifesciences.org/lax/00569%2Felife-00569-fig1-v1.tif/full/full/0/default.jpg"
         },
         "size": {
             "height": 1894,

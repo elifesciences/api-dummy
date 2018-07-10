@@ -6,10 +6,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
                 "filename": "episode-3-elife-podcast.png"
             },
             "size": {
@@ -19,10 +19,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
                 "filename": "episode-3-elife-podcast.png"
             },
             "size": {

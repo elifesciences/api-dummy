@@ -1,11 +1,11 @@
 {
     "title": "Imaging focuses on insect development",
     "image": {
-        "uri": "https://iiif.elifesciences.org/lax:13834%2Felife-13834-fig1-v2.tif",
+        "uri": "https://iiif.elifesciences.org/lax/13834%2Felife-13834-fig1-v2.tif",
         "source": {
             "mediaType": "image/jpeg",
             "filename": "elife-13834-fig1-v2.tif",
-            "uri": "https://iiif.elifesciences.org/lax:13834%2Felife-13834-fig1-v2.tif/full/full/0/default.jpg"
+            "uri": "https://iiif.elifesciences.org/lax/13834%2Felife-13834-fig1-v2.tif/full/full/0/default.jpg"
         },
         "size": {
             "height": 1417,

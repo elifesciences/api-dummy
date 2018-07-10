@@ -5,10 +5,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
                 "filename": "ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:labs_post%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2016-05%2Fa7d53a88-ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg/full/full/0/default.jpg",
                 "filename": "ucsd-researchers-make-3d-printed-blood-vessel-neworks-ultra-fast-uv-bioprinting-system-2.jpg"
             },
             "size": {
@@ -51,10 +51,10 @@
             "type": "image",
             "image": {
                 "alt": "",
-                "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-juptyer-notebook.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-juptyer-notebook.png",
                 "source": {
                     "mediaType": "image/png",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-juptyer-notebook.png/full/full/0/default.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-juptyer-notebook.png/full/full/0/default.png",
                     "filename": "binder-post-juptyer-notebook.png"
                 },
                 "size": {
@@ -71,10 +71,10 @@
             "type": "image",
             "image": {
                 "alt": "",
-                "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-github-repository.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-github-repository.png",
                 "source": {
                     "mediaType": "image/png",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-github-repository.png/full/full/0/default.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-github-repository.png/full/full/0/default.png",
                     "filename": "binder-post-github-repository.png"
                 },
                 "size": {
@@ -103,10 +103,10 @@
                     "type": "image",
                     "image": {
                         "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-binder-homepage.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-binder-homepage.png",
                         "source": {
                             "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-binder-homepage.png/full/full/0/default.png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-binder-homepage.png/full/full/0/default.png",
                             "filename": "binder-post-binder-homepage.png"
                         },
                         "size": {
@@ -131,10 +131,10 @@
                     "type": "image",
                     "image": {
                         "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-ligo-example.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-ligo-example.png",
                         "source": {
                             "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms:content%2F2016-05%2Fbinder-post-ligo-example.png/full/full/0/default.png",
+                            "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-05%2Fbinder-post-ligo-example.png/full/full/0/default.png",
                             "filename": "binder-post-ligo-example.png"
                         },
                         "size": {

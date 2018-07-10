@@ -13,10 +13,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
                 "filename": "tropical-disease-elife-collections.png"
             },
             "size": {
@@ -26,10 +26,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
                 "filename": "tropical-disease-elife-collections.png"
             },
             "size": {
@@ -60,10 +60,10 @@
         },
         "image": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2012-03%2Fkegley120208elife0213b.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
             "source": {
                 "mediaType": "image/png",
-                "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
                 "filename": "kegley120208elife0213b.jpg"
             },
             "size": {
@@ -97,10 +97,10 @@
             },
             "image": {
                 "alt": "",
-                "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2012-03%2Fkegley120208elife0213b.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
                 "source": {
                     "mediaType": "image/png",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
                     "filename": "kegley120208elife0213b.jpg"
                 },
                 "size": {
@@ -160,10 +160,10 @@
             "image": {
                 "thumbnail": {
                     "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax:05770%2Felife-05770-fig1-v1.tif",
+                    "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif",
                     "source": {
                         "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax:05770%2Felife-05770-fig1-v1.tif/full/full/0/default.jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif/full/full/0/default.jpg",
                         "filename": "elife-05770-fig1-v1.jpg"
                     },
                     "size": {
@@ -192,10 +192,10 @@
             "image": {
                 "thumbnail": {
                     "alt": "",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
                     "source": {
                         "mediaType": "image/png",
-                        "uri": "https://iiif.elifesciences.org/journal-cms:podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
                         "filename": "episode-4-elife-podcast.png"
                     },
                     "size": {

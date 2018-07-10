@@ -440,10 +440,10 @@
                                     "label": "Figure 1",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax:04395%2Felife-04395-fig1-v2.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v2.tif",
                                         "source": {
                                             "mediaType": "image/jpg",
-                                            "uri": "https://iiif.elifesciences.org/lax:04395%2Felife-04395-fig1-v2.tif/full/full/0/default.jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v2.tif/full/full/0/default.jpg",
                                             "filename": "elife-04395-fig1-v2.jpg"
                                         },
                                         "size": {
