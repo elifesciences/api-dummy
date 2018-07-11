@@ -11,11 +11,11 @@
         {
             "type": "profile",
             "image": {
-                "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2017-10%2Fkegley120208elife0756c.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2017-10%2Fkegley120208elife0756c.jpg",
                 "alt": "",
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://iiif.elifesciences.org/journal-cms:person%2F2017-10%2Fkegley120208elife0756c.jpg/full/full/0/default.jpg",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2017-10%2Fkegley120208elife0756c.jpg/full/full/0/default.jpg",
                     "filename": "schekman.jpg"
                 },
                 "size": {

@@ -5,10 +5,10 @@
     "image": {
         "banner": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg/full/full/0/default.jpg",
                 "filename": "elife-sciences-developmental-biology-and-stem-cells-illustration.jpg"
             },
             "size": {
@@ -18,10 +18,10 @@
         },
         "thumbnail": {
             "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg",
             "source": {
                 "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms:subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg/full/full/0/default.jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-developmental-biology-and-stem-cells-illustration.jpg/full/full/0/default.jpg",
                 "filename": "elife-sciences-developmental-biology-and-stem-cells-illustration.jpg"
             },
             "size": {
