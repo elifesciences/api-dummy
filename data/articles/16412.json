@@ -224,10 +224,10 @@
                                     "label": "Figure 1",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax:16412%2Felife-16412-fig1-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/16412%2Felife-16412-fig1-v1.tif",
                                         "source": {
                                             "mediaType": "image/jpg",
-                                            "uri": "https://iiif.elifesciences.org/lax:16412%2Felife-16412-fig1-v1.tif/full/full/0/default.jpg",
+                                            "uri": "https://iiif.elifesciences.org/lax/16412%2Felife-16412-fig1-v1.tif/full/full/0/default.jpg",
                                             "filename": "elife-16412-fig1-v1.jpg"
                                         },
                                         "size": {
