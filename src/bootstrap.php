@@ -146,6 +146,23 @@ $app['covers'] = function () use ($app) {
     return $covers;
 };
 
+$app['digests'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/digests');
+
+    $digests = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $digests[$json['id']] = $json;
+    }
+
+    uasort($digests, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $digests;
+};
+
 $app['events'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events');
 
@@ -979,6 +996,75 @@ $app->get('/covers/current', function (Accept $type) use ($app) {
     );
 })->before($app['negotiate.accept'](
     'application/vnd.elife.cover-list+json; version=1'
+));
+
+$app->get('/digests', function (Request $request, Accept $type) use ($app) {
+    $digests = $app['digests'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    $subjects = (array) $request->query->get('subject', []);
+
+    if (false === empty($subjects)) {
+        $digests = array_filter($digests, function ($digest) use ($subjects) {
+            $digestSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $digest['subjects'] ?? []);
+
+            return count(array_intersect($subjects, $digestSubjects));
+        });
+    }
+
+    $content = [
+        'total' => count($digests),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $digests = array_reverse($digests);
+    }
+
+    $digests = array_slice($digests, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($digests) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($digests as $i => $digest) {
+        unset($digest['content']);
+        unset($digest['relatedContent']);
+
+        $content['items'][] = $digest;
+    }
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.digest-list+json; version=1'
+));
+
+$app->get('/digests/{id}',
+    function (Accept $type, string $id) use ($app) {
+        if (false === isset($app['digests'][$id])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $digest = $app['digests'][$id];
+
+        return new Response(
+            json_encode($digest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            ['Content-Type' => $type->getNormalizedValue()]
+        );
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.digest+json; version=1'
 ));
 
 $app->get('/events', function (Request $request, Accept $type) use ($app) {

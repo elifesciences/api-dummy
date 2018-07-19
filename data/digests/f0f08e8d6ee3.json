@@ -1,0 +1,108 @@
+{
+    "id": "f0f08e8d6ee3",
+    "title": "Neighborhood watch",
+    "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+    "published": "2018-07-06T09:06:01Z",
+    "updated": "2018-07-06T16:23:24Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+            },
+            "size": {
+                "width": 1152,
+                "height": 864
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "biochemistry-chemical-biology",
+            "name": "Biochemistry and Chemical Biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Small roundworms such as <i>Caenorhabditis elegans</i> release chemical signals called ascarosides in order to communicate with other worms of the same species. Using the ascarosides, the worm can tell its friends, for example, how crowded the neighborhood is and whether there is enough food. The ascarosides thus help the worms in the population decide whether the neighborhood is good — meaning they should hang around, eat, and make babies — or whether the neighborhood is bad. If so, the worms should develop into a larval stage specialized for dispersal that will allow them to find a better neighborhood."
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                "alt": "",
+                "attribution": [
+                    "<a href=\"https://commons.wikimedia.org/wiki/File:Neighbourhood_Watch_;-%29.JPG\">UliDolbarge</a> (<a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en\">CC BY-SA 4.0</a>)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                    "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                },
+                "size": {
+                    "width": 1152,
+                    "height": 864
+                }
+            },
+            "title": "“God sees everything – the neighbors see more”"
+        },
+        {
+            "type": "paragraph",
+            "text": "Roundworms make the ascarosides by attaching a long chemical ‘side chain’ to an ascarylose sugar. Further chemical modifications allow the worms to produce different signals. In general, to signal a good neighborhood, worms attach a structure called an indole group to the ascarosides. To signal a bad neighborhood, worms make the side chain very short. But how does a worm control which ascarosides it makes?"
+        },
+        {
+            "type": "paragraph",
+            "text": "Zhou, Wang et al. now show that <i>C. elegans</i> can change the meaning of its chemical message by modifying the ascarosides that it has already produced instead of making new ones from scratch. Specifically, as their neighborhood runs out of food, <i>C. elegans</i> can use an enzyme called ACS-7 to initiate the shortening of the side chains of indole-ascarosides. The worm can thus change a favorable ascaroside signal that causes the worms to group together into an unfavorable ascaroside signal that causes the worms to enter their dispersal stage."
+        },
+        {
+            "type": "paragraph",
+            "text": "Although Zhou, Wang et al. have focused on chemical communication in <i>C. elegans</i>, the findings could easily apply to the many other species of roundworm that produce ascarosides. Knowing how worms communicate will help us to understand how worms respond to their environment. This knowledge could potentially be used to interfere with the lifecycles and survival of parasitic worm species that harm health and crops."
+        }
+    ],
+    "relatedContent": [
+        {
+            "status": "vor",
+            "id": "00569",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.00569",
+            "authorLine": "Ayelet Voskoboynik et al",
+            "title": "The genome sequence of the colonial chordate, <i>Botryllus schlosseri</i>",
+            "published": "2013-07-02T00:00:00Z",
+            "stage": "published",
+            "statusDate": "2013-07-02T00:00:00Z",
+            "volume": 2,
+            "elocationId": "e00569",
+            "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-v1.pdf",
+            "figuresPdf": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-figures-v1.pdf",
+            "subjects": [
+                {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
+                    "id": "developmental-biology-stem-cells",
+                    "name": "Developmental Biology and Stem Cells"
+                },
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "abstract": {
+                "doi": "10.7554/eLife.00569.001",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "<i>Botryllus schlosseri</i> is a colonial urochordate that follows the chordate plan of development following sexual reproduction, but invokes a stem cell-mediated budding program during subsequent rounds of asexual reproduction. As urochordates are considered to be the closest living invertebrate relatives of vertebrates, they are ideal subjects for whole genome sequence analyses. Using a novel method for high-throughput sequencing of eukaryotic genomes, we sequenced and assembled 580 Mbp of the <i>B. schlosseri</i> genome. The genome assembly is comprised of nearly 14,000 intron-containing predicted genes, and 13,500 intron-less predicted genes, 40% of which could be confidently parceled into 13 (of 16 haploid) chromosomes. A comparison of homologous genes between <i>B. schlosseri</i> and other diverse taxonomic groups revealed genomic events underlying the evolution of vertebrates and lymphoid-mediated immunity. The <i>B. schlosseri</i> genome is a community resource for studying alternative modes of reproduction, natural transplantation reactions, and stem cell-mediated regeneration."
+                    }
+                ]
+            },
+            "impactStatement": "The <i>Botryllus schlosseri</i> genome yields insights into the evolution of hematopoiesis."
+        }
+    ]
+}

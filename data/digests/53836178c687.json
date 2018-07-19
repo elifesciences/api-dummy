@@ -1,0 +1,197 @@
+{
+    "id": "53836178c687",
+    "title": "The continuing mysteries of Homo naledi",
+    "impactStatement": "More fossils and an eagerly anticipated age for this ancient human-relative suggest it’s time to rethink what we think we know about our family tree.",
+    "published": "2017-05-12T06:31:01Z",
+    "updated": "2018-06-14T21:39:20Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium/1*wVZUeULhTTv3FHoa8H4s0Q.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/1*wVZUeULhTTv3FHoa8H4s0Q.jpeg",
+                "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+            },
+            "size": {
+                "width": 1280,
+                "height": 799
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "biochemistry-chemical-biology",
+            "name": "Biochemistry and Chemical Biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Species of ancient humans and the extinct relatives of our ancestors are typically described from a limited number of fossils. However, this was not the case with <i>Homo naledi</i>. More than 1500 fossils representing at least 15 individuals of this species were unearthed from the Rising Star cave system in South Africa between 2013 and 2014. Found deep underground in the Dinaledi Chamber, the <i>H. naledi</i> fossils are the largest collection of a single species of an ancient human-relative discovered in Africa."
+        },
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium/1*wVZUeULhTTv3FHoa8H4s0Q.jpeg",
+                "alt": "",
+                "attribution": [
+                    "Wits University/John Hawks (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY 4.0</a>)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/1*wVZUeULhTTv3FHoa8H4s0Q.jpeg",
+                    "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+                },
+                "size": {
+                    "width": 1280,
+                    "height": 799
+                }
+            },
+            "title": "Homo naledi skulls from the Lesedi (left) and Dinaledi (right) Chambers."
+        },
+        {
+            "type": "paragraph",
+            "text": "After the discovery was reported, a number of questions still remained."
+        },
+        {
+            "type": "section",
+            "title": "Question 1. How old were the fossils?",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The material was undated, and predictions ranged from anywhere between 2 million years old and 100,000 years old. <i>H. naledi</i> shared several traits with the most primitive of our ancient relatives, including its small brain. As a result, many scientists guessed that <i>H. naledi</i> was an old species in our family tree, and possibly one of the earliest species to evolve in the genus Homo."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now, <a href=\"http://doi.org/10.7554/eLife.24231\">Paul Dirks and colleagues</a> report that the fossils are most likely between 236,000 and 335,000 years old. These dates are based on measuring the concentration of radioactive elements, and the damage caused by these elements (which accumulates over time), in three fossilized teeth, plus surrounding rock and sediments from the cave chamber. Importantly, the most crucial tests were carried out at independent laboratories around the world, and the scientists conducted the tests without knowing the results of the other laboratories. Dirks and colleagues took these extra steps to make sure that the results obtained were reproducible and unbiased."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The estimated dates are much more recent than many had predicted, and mean that <i>H. naledi</i> was potentially alive at the same time as the earliest members of our own species — which most likely evolved between 300,000 and 200,000 years ago. These new findings demonstrate why it can be unwise to try to predict the age of a fossil based only on its appearance, and emphasize the importance of dating specimens via independent tests."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Question 2. Why were so many fossils from a single species found at the one site, and how did they come to rest so far into the cave system?",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "Possible explanations such as <i>H. naledi</i> living in the cave or being washed in by a flood were considered but ruled out. Instead, the evidence was largely consistent with intact bodies being deliberately disposed of in the cave and then decomposing."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now, <a href=\"https://doi.org/10.7554/eLife.24232\">John Hawks and colleagues</a> report that yet more <i>H. naledi</i> fossils have been unearthed from a second chamber in the Rising Star cave system, the Lesedi Chamber. The chamber is 30 meters below the surface and there is no direct route between it and the Dinaledi Chamber. Again, the evidence is most consistent with the bodies arriving intact into the chamber, and there were no signs that the remains had been exposed to the surface environment."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Also like the Dinaledi Chamber, no remains of other ancient humans or their relatives were found in the Lesedi Chamber. In total, 133 fossils of <i>H. naledi</i> have been found in this second chamber representing at least three individuals: two adults and a juvenile. However, and as Hawks and colleagues point out, only a small volume of the chamber has been excavated so far, and so there are likely more fossils still to be found."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "The fossils in the Lesedi Chamber are similar to those found before but include intact examples of bones, like the collarbone, that were previously known only from fragments. Perhaps the most impressive among the new fossils is a relatively complete skull that is part of a partial skeleton. The skull could have housed a brain that was 9% larger than the maximum estimate calculated from the previous <i>H. naledi</i> fossils."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Though these new fossils provide us with yet more information about <i>H. naledi</i>, some questions still remain unanswered — the material from the Lesedi Chamber is undated, for example."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Question 3. Where does <i>H. naledi</i> fit within the scheme of human evolution?",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "H. naledi had an unusual mix of ancient and modern traits. For example, it had a small brain like the most ancient of human-relatives, yet its wrists looked much like those of a modern human."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Now, <a href=\"https://doi.org/10.7554/eLife.24234\">Lee Berger and colleagues</a> reconsider this question in the light of the findings reported by Dirks and colleagues and Hawks and colleagues — in particular, the suggestion that <i>H. naledi</i> potentially lived at the same time, and in the same place, as modern humans. Berger and colleagues explain that a relatively primitive species like <i>H. naledi</i> living this recently in southern Africa is at odds with previous thinking about human evolution. Indeed, all other members of our family tree known from the same time had large brains and were generally much more evolved than our most ancient relatives. However, Berger and colleagues argue that we only have an incomplete picture of our evolutionary past, and suggest that old fossils might have been assigned to the wrong species or time period."
+                },
+                {
+                    "type": "paragraph",
+                    "text": "Reassessing the old fossils might lead the scientific community to rethink what kinds of human-relative were around in southern Africa at different times, and what those ancient species were capable of. For example, archeologists had previously thought that modern humans made all the stone tools dating from around the late Middle Pleistocene found in southern Africa; however now we must consider if some of them could have been made by <i>H. naledi</i> instead."
+                }
+            ]
+        }
+    ],
+    "relatedContent": [
+        {
+            "status": "vor",
+            "stage": "published",
+            "id": "09560",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.09560",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "published": "2015-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e09560",
+            "authorLine": "Lee R Berger et al",
+            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+            "subjects": [
+                {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "abstract": {
+                "doi": "10.7554/eLife.09560.001",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "<i>Homo naledi</i> is a previously-unknown species of extinct hominin discovered within the Dinaledi Chamber of the Rising Star cave system, Cradle of Humankind, South Africa. This species is characterized by body mass and stature similar to small-bodied human populations but a small endocranial volume similar to australopiths. Cranial morphology of <i>H. naledi</i> is unique, but most similar to early <i>Homo</i> species including <i>Homo erectus</i>, <i>Homo habilis</i> or <i>Homo rudolfensis</i>. While primitive, the dentition is generally small and simple in occlusal morphology. <i>H. naledi</i> has humanlike manipulatory adaptations of the hand and wrist. It also exhibits a humanlike foot and lower limb. These humanlike aspects are contrasted in the postcrania with a more primitive or australopith-like trunk, shoulder, pelvis and proximal femur. Representing at least 15 individuals with most skeletal elements repeated multiple times, this is the largest assemblage of a single species of hominins yet discovered in Africa."
+                    }
+                ]
+            }
+        },
+        {
+            "status": "vor",
+            "stage": "published",
+            "id": "10627",
+            "version": 1,
+            "type": "insight",
+            "image": {
+                "thumbnail": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-09560-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    }
+                }
+            },
+            "doi": "10.7554/eLife.10627",
+            "title": "The many mysteries of <i>Homo naledi</i>",
+            "titlePrefix": "Title prefix",
+            "published": "2016-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e10627",
+            "authorLine": "Chris Stringer",
+            "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+        }
+    ]
+}
