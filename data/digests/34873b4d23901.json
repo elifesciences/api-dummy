@@ -1,0 +1,150 @@
+{
+    "id": "34873b4d23901",
+    "title": "Holding the focus",
+    "impactStatement": "A new open source software tool makes it possible for researchers to view cells in living animals in high detail.",
+    "stage": "preview",
+    "updated": "2018-07-30T14:01:23Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium/1*bYUvErUkNw-bG0WSG4fngA.gif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/1*bYUvErUkNw-bG0WSG4fngA.gif",
+                "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+            },
+            "size": {
+                "width": 640,
+                "height": 360
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "biochemistry-chemical-biology",
+            "name": "Biochemistry and Chemical Biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium/1*bYUvErUkNw-bG0WSG4fngA.gif",
+                "alt": "",
+                "attribution": [
+                    "Clip taken from Video 2 of <a href=\"https://doi.org/10.7554/eLife.35800\">Warren et al.</a> (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY 4.0</a>)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/1*bYUvErUkNw-bG0WSG4fngA.gif",
+                    "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+                },
+                "size": {
+                    "width": 640,
+                    "height": 360
+                }
+            },
+            "title": "Images corrected using Galene (right) show much more detail than uncorrected images (left)."
+        },
+        {
+            "type": "paragraph",
+            "text": "Species of ancient humans and the extinct relatives of our ancestors are typically described from a limited number of fossils. However, this was not the case with <i>Homo naledi</i>. More than 1500 fossils representing at least 15 individuals of this species were unearthed from the Rising Star cave system in South Africa between 2013 and 2014. Found deep underground in the Dinaledi Chamber, the <i>H. naledi</i> fossils are the largest collection of a single species of an ancient human-relative discovered in Africa."
+        },
+        {
+            "type": "paragraph",
+            "text": "High resolution microscopy makes it possible to image events happening in single cells, or even specific parts of a cell. However, small movements like those due to the heartbeat or breathing can blur the images, making it difficult to study living animals. This is particularly problematic for images that take several minutes to capture."
+        },
+        {
+            "type": "paragraph",
+            "text": "Warren et al. have now developed a new open source software tool called Galene. The tool can correct for small movements in images collected by a technique called fluorescence lifetime imaging microscopy (FLIM). As a result, clear images can be captured in situations that were not previously possible. For example, Warren et al. watched cancer cells migrating to the liver of a mouse from the spleen over 24 hours, and, using a fluorescent biosensor, showed that a repurposed drug interferes with how well the cells can attach to the liver. In addition, Warren et al. used the software to take steady 3D images of human skin in a volunteer’s arm, which could be used to study drug penetration."
+        },
+        {
+            "type": "paragraph",
+            "text": "Galene could help researchers to study a wide range of biological processes in living animals. The software can also be applied to existing data to clean up blurred images. In the future Galene could be further developed to work with the imaging techniques used during surgery. For example, surgeons could use it to help them find the edges of tumours."
+        }
+    ],
+    "relatedContent": [
+        {
+            "status": "vor",
+            "stage": "published",
+            "id": "09560",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.09560",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "published": "2015-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e09560",
+            "authorLine": "Lee R Berger et al",
+            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
+            "subjects": [
+                {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+            "abstract": {
+                "doi": "10.7554/eLife.09560.001",
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "<i>Homo naledi</i> is a previously-unknown species of extinct hominin discovered within the Dinaledi Chamber of the Rising Star cave system, Cradle of Humankind, South Africa. This species is characterized by body mass and stature similar to small-bodied human populations but a small endocranial volume similar to australopiths. Cranial morphology of <i>H. naledi</i> is unique, but most similar to early <i>Homo</i> species including <i>Homo erectus</i>, <i>Homo habilis</i> or <i>Homo rudolfensis</i>. While primitive, the dentition is generally small and simple in occlusal morphology. <i>H. naledi</i> has humanlike manipulatory adaptations of the hand and wrist. It also exhibits a humanlike foot and lower limb. These humanlike aspects are contrasted in the postcrania with a more primitive or australopith-like trunk, shoulder, pelvis and proximal femur. Representing at least 15 individuals with most skeletal elements repeated multiple times, this is the largest assemblage of a single species of hominins yet discovered in Africa."
+                    }
+                ]
+            }
+        },
+		{
+			"statusDate": "2018-07-09T00:00:00Z",
+			"id": "35800",
+			"published": "2018-07-09T00:00:00Z",
+			"subjects": [
+				{
+					"name": "Cell Biology",
+					"id": "cell-biology"
+				},
+				{
+					"name": "Computational and Systems Biology",
+					"id": "computational-systems-biology"
+				}
+			],
+			"pdf": "https://cdn.elifesciences.org/articles/35800/elife-35800-v1.pdf",
+			"type": "tools-resources",
+			"figuresPdf": "https://cdn.elifesciences.org/articles/35800/elife-35800-figures-v1.pdf",
+			"version": 1,
+			"title": "Removing physiological motion from intravital and clinical functional imaging data",
+			"doi": "10.7554/eLife.35800",
+			"versionDate": "2018-07-09T00:00:00Z",
+			"volume": 7,
+			"copyright": {
+				"license": "CC-BY-4.0",
+				"holder": "Warren et al.",
+				"statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+			},
+			"status": "vor",
+			"stage": "published",
+			"researchOrganisms": [
+				"Human",
+				"Mouse"
+			],
+			"impactStatement": "Image-based motion correction enables the use of fluorescence lifetime and other functional imaging modalities in an intravital and clinical context in the presence of physiological motion.",
+			"abstract": {
+				"content": [
+					{
+						"text": "Intravital microscopy can provide unique insights into the function of biological processes in a native context. However, physiological motion caused by peristalsis, respiration and the heartbeat can present a significant challenge, particularly for functional readouts such as fluorescence lifetime imaging (FLIM), which require longer acquisition times to obtain a quantitative readout. Here, we present and benchmark <i>Galene</i>, a versatile multi-platform software tool for image-based correction of sample motion blurring in both time resolved and conventional laser scanning fluorescence microscopy data in two and three dimensions. We show that <i>Galene</i> is able to resolve intravital FLIM-FRET images of intra-abdominal organs in murine models and NADH autofluorescence of human dermal tissue imaging subject to a wide range of physiological motions. Thus, <i>Galene</i> can enable FLIM imaging in situations where a stable imaging platform is not always possible and rescue previously discarded quantitative imaging data.",
+						"type": "paragraph"
+					}
+				],
+				"doi": "10.7554/eLife.35800.001"
+			},
+			"elocationId": "e35800",
+			"authorLine": "Sean C Warren et al."
+		}
+    ]
+}
