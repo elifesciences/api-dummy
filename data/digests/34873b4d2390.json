@@ -48,10 +48,6 @@
         },
         {
             "type": "paragraph",
-            "text": "Species of ancient humans and the extinct relatives of our ancestors are typically described from a limited number of fossils. However, this was not the case with <i>Homo naledi</i>. More than 1500 fossils representing at least 15 individuals of this species were unearthed from the Rising Star cave system in South Africa between 2013 and 2014. Found deep underground in the Dinaledi Chamber, the <i>H. naledi</i> fossils are the largest collection of a single species of an ancient human-relative discovered in Africa."
-        },
-        {
-            "type": "paragraph",
             "text": "High resolution microscopy makes it possible to image events happening in single cells, or even specific parts of a cell. However, small movements like those due to the heartbeat or breathing can blur the images, making it difficult to study living animals. This is particularly problematic for images that take several minutes to capture."
         },
         {
@@ -64,42 +60,6 @@
         }
     ],
     "relatedContent": [
-        {
-            "status": "vor",
-            "stage": "published",
-            "id": "09560",
-            "version": 1,
-            "type": "research-article",
-            "doi": "10.7554/eLife.09560",
-            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
-            "published": "2015-09-10T00:00:00Z",
-            "versionDate": "2016-03-28T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 4,
-            "elocationId": "e09560",
-            "authorLine": "Lee R Berger et al",
-            "pdf": "https://elifesciences.org/content/4/e09560.pdf",
-            "subjects": [
-                {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
-                },
-                {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
-                }
-            ],
-            "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
-            "abstract": {
-                "doi": "10.7554/eLife.09560.001",
-                "content": [
-                    {
-                        "type": "paragraph",
-                        "text": "<i>Homo naledi</i> is a previously-unknown species of extinct hominin discovered within the Dinaledi Chamber of the Rising Star cave system, Cradle of Humankind, South Africa. This species is characterized by body mass and stature similar to small-bodied human populations but a small endocranial volume similar to australopiths. Cranial morphology of <i>H. naledi</i> is unique, but most similar to early <i>Homo</i> species including <i>Homo erectus</i>, <i>Homo habilis</i> or <i>Homo rudolfensis</i>. While primitive, the dentition is generally small and simple in occlusal morphology. <i>H. naledi</i> has humanlike manipulatory adaptations of the hand and wrist. It also exhibits a humanlike foot and lower limb. These humanlike aspects are contrasted in the postcrania with a more primitive or australopith-like trunk, shoulder, pelvis and proximal femur. Representing at least 15 individuals with most skeletal elements repeated multiple times, this is the largest assemblage of a single species of hominins yet discovered in Africa."
-                    }
-                ]
-            }
-        },
 		{
 			"statusDate": "2018-07-09T00:00:00Z",
 			"id": "35800",
