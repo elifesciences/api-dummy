@@ -155,8 +155,7 @@ $app['digests'] = function () use ($app) {
         $digests[$json['id']] = $json;
     }
 
-
-    $dateFactory = function($item) {
+    $dateFactory = function ($item) {
         return DateTimeImmutable::createFromFormat(
             DATE_ATOM,
             $item['published'] ?? '2038-01-01T00:00:00Z'
