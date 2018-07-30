@@ -155,9 +155,15 @@ $app['digests'] = function () use ($app) {
         $digests[$json['id']] = $json;
     }
 
-    uasort($digests, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+
+    $dateFactory = function($item) {
+        return DateTimeImmutable::createFromFormat(
+            DATE_ATOM,
+            $item['published'] ?? '2038-01-01T00:00:00Z'
+        );
+    };
+    uasort($digests, function (array $a, array $b) use ($dateFactory) {
+        return $dateFactory($b) <=> $dateFactory($a);
     });
 
     return $digests;
