@@ -454,6 +454,9 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
     }
 
     foreach ($reports as $i => $report) {
+        if ($type->getParameter('version') < 2 && $report['year'] === 2014) {
+            throw new NotAcceptableHttpException('At least one of the annual reports in the list requires version 2.');
+        }
         unset($report['content']);
 
         $content['items'][] = $report;
@@ -467,6 +470,7 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.annual-report-list+json; version=2',
     'application/vnd.elife.annual-report-list+json; version=1'
 ));
 
@@ -478,6 +482,10 @@ $app->get('/annual-reports/{year}',
 
         $report = $app['annual-reports'][$year];
 
+        if ($type->getParameter('version') < 2 && 2014 === $year) {
+            throw new NotAcceptableHttpException('This annual report requires version 2.');
+        }
+
         return new Response(
             json_encode($report, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -485,6 +493,7 @@ $app->get('/annual-reports/{year}',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.annual-report+json; version=2',
     'application/vnd.elife.annual-report+json; version=1'
 ))->assert('number', '[1-9][0-9]*');
 
