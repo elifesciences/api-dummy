@@ -6,16 +6,16 @@
     "updated": "2018-07-30T14:01:23Z",
     "image": {
         "thumbnail": {
-            "uri": "https://iiif.elifesciences.org/medium/1*bYUvErUkNw-bG0WSG4fngA.gif",
+            "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif",
             "alt": "",
             "source": {
                 "mediaType": "image/jpeg",
-                "uri": "https://cdn-images-1.medium.com/1*bYUvErUkNw-bG0WSG4fngA.gif",
-                "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+                "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif/full/full/0/default.jpg",
+                "filename": "elife-35800-fig4-v1.jpg"
             },
             "size": {
-                "width": 640,
-                "height": 360
+                "width": 1500,
+                "height": 1303
             }
         }
     },
@@ -29,19 +29,19 @@
         {
             "type": "image",
             "image": {
-                "uri": "https://iiif.elifesciences.org/medium/1*bYUvErUkNw-bG0WSG4fngA.gif",
+                "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif",
                 "alt": "",
                 "attribution": [
                     "Clip taken from Video 2 of <a href=\"https://doi.org/10.7554/eLife.35800\">Warren et al.</a> (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY 4.0</a>)"
                 ],
                 "source": {
                     "mediaType": "image/jpeg",
-                    "uri": "https://cdn-images-1.medium.com/1*bYUvErUkNw-bG0WSG4fngA.gif",
-                    "filename": "1 wVZUeULhTTv3FHoa8H4s0Q.jpeg"
+                    "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif/full/full/0/default.jpg",
+                    "filename": "elife-35800-fig4-v1.jpg"
                 },
                 "size": {
-                    "width": 640,
-                    "height": 360
+                    "width": 1500,
+                    "height": 1303
                 }
             },
             "title": "Images corrected using Galene (right) show much more detail than uncorrected images (left)."
