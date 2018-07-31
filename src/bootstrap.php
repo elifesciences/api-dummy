@@ -454,7 +454,7 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
     }
 
     foreach ($reports as $i => $report) {
-        if ($type->getParameter('version') < 2 && $report['year'] === 2014) {
+        if ($type->getParameter('version') < 2 && 2014 === $report['year']) {
             throw new NotAcceptableHttpException('At least one of the annual reports in the list requires version 2.');
         }
         unset($report['content']);
