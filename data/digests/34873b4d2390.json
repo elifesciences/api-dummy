@@ -61,45 +61,45 @@
     ],
     "relatedContent": [
         {
+            "id": "26231",
+            "published": "2017-09-05T00:00:00Z",
+            "doi": "10.7554/eLife.26231",
+            "stage": "published",
+            "volume": 6,
             "status": "vor",
-            "elocationId": "e26231",
+            "pdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-v1.pdf",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-figures-v1.pdf",
+            "title": "Striatal fast-spiking interneurons selectively modulate circuit output and are required for habitual behavior",
+            "impactStatement": "Fast-spiking interneurons of the dorsolateral striatum are found to provide a microcircuit mechanism driving the circuit properties and behavioral adaptations that characterize habit.",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "O'Hare et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
             "authorLine": "Justin K O'Hare et al.",
+            "versionDate": "2017-09-05T00:00:00Z",
+            "type": "research-article",
+            "statusDate": "2017-09-05T00:00:00Z",
+            "subjects": [
+                {
+                    "id": "neuroscience",
+                    "name": "Neuroscience"
+                }
+            ],
             "abstract": {
                 "content": [
                     {
-                        "text": "Habit formation is a behavioral adaptation that automates routine actions. Habitual behavior correlates with broad reconfigurations of dorsolateral striatal (DLS) circuit properties that increase gain and shift pathway timing. The mechanism(s) for these circuit adaptations are unknown and could be responsible for habitual behavior. Here we find that a single class of interneuron, fast-spiking interneurons (FSIs), modulates all of these habit-predictive properties. Consistent with a role in habits, FSIs are more excitable in habitual mice compared to goal-directed and acute chemogenetic inhibition of FSIs in DLS prevents the expression of habitual lever pressing. <i>In vivo</i> recordings further reveal a previously unappreciated selective modulation of SPNs based on their firing patterns; FSIs inhibit most SPNs but paradoxically promote the activity of a subset displaying high fractions of gamma-frequency spiking. These results establish a microcircuit mechanism for habits and provide a new example of how interneurons mediate experience-dependent behavior.",
-                        "type": "paragraph"
+                        "type": "paragraph",
+                        "text": "Habit formation is a behavioral adaptation that automates routine actions. Habitual behavior correlates with broad reconfigurations of dorsolateral striatal (DLS) circuit properties that increase gain and shift pathway timing. The mechanism(s) for these circuit adaptations are unknown and could be responsible for habitual behavior. Here we find that a single class of interneuron, fast-spiking interneurons (FSIs), modulates all of these habit-predictive properties. Consistent with a role in habits, FSIs are more excitable in habitual mice compared to goal-directed and acute chemogenetic inhibition of FSIs in DLS prevents the expression of habitual lever pressing. <i>In vivo</i> recordings further reveal a previously unappreciated selective modulation of SPNs based on their firing patterns; FSIs inhibit most SPNs but paradoxically promote the activity of a subset displaying high fractions of gamma-frequency spiking. These results establish a microcircuit mechanism for habits and provide a new example of how interneurons mediate experience-dependent behavior."
                     }
                 ],
                 "doi": "10.7554/eLife.26231.001"
             },
-            "id": "26231",
-            "version": 2,
-            "figuresPdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-figures-v2.pdf",
-            "volume": 6,
             "researchOrganisms": [
                 "Mouse"
             ],
-            "type": "research-article",
-            "published": "2017-09-05T00:00:00Z",
-            "title": "Striatal fast-spiking interneurons selectively modulate circuit output and are required for habitual behavior",
-            "pdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-v2.pdf",
-            "impactStatement": "Fast-spiking interneurons of the dorsolateral striatum are found to provide a microcircuit mechanism driving the circuit properties and behavioral adaptations that characterize habit.",
-            "subjects": [
-                {
-                    "name": "Neuroscience",
-                    "id": "neuroscience"
-                }
-            ],
-            "stage": "published",
-            "versionDate": "2017-11-20T16:59:41Z",
-            "copyright": {
-                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited.",
-                "holder": "O'Hare et al.",
-                "license": "CC-BY-4.0"
-            },
-            "statusDate": "2017-09-05T00:00:00Z",
-            "doi": "10.7554/eLife.26231"
+            "elocationId": "e26231",
+            "version": 1
         }
     ]
 }
