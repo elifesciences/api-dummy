@@ -61,50 +61,45 @@
     ],
     "relatedContent": [
         {
-            "statusDate": "2018-07-09T00:00:00Z",
-            "id": "35800",
-            "published": "2018-07-09T00:00:00Z",
-            "subjects": [
-                {
-                    "name": "Cell Biology",
-                    "id": "cell-biology"
-                },
-                {
-                    "name": "Computational and Systems Biology",
-                    "id": "computational-systems-biology"
-                }
-            ],
-            "pdf": "https://cdn.elifesciences.org/articles/35800/elife-35800-v1.pdf",
-            "type": "tools-resources",
-            "figuresPdf": "https://cdn.elifesciences.org/articles/35800/elife-35800-figures-v1.pdf",
-            "version": 1,
-            "title": "Removing physiological motion from intravital and clinical functional imaging data",
-            "doi": "10.7554/eLife.35800",
-            "versionDate": "2018-07-09T00:00:00Z",
-            "volume": 7,
-            "copyright": {
-                "license": "CC-BY-4.0",
-                "holder": "Warren et al.",
-                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
-            },
             "status": "vor",
-            "stage": "published",
-            "researchOrganisms": [
-                "Human",
-                "Mouse"
-            ],
-            "impactStatement": "Image-based motion correction enables the use of fluorescence lifetime and other functional imaging modalities in an intravital and clinical context in the presence of physiological motion.",
+            "elocationId": "e26231",
+            "authorLine": "Justin K O'Hare et al.",
             "abstract": {
                 "content": [
                     {
-                        "text": "Intravital microscopy can provide unique insights into the function of biological processes in a native context. However, physiological motion caused by peristalsis, respiration and the heartbeat can present a significant challenge, particularly for functional readouts such as fluorescence lifetime imaging (FLIM), which require longer acquisition times to obtain a quantitative readout. Here, we present and benchmark <i>Galene</i>, a versatile multi-platform software tool for image-based correction of sample motion blurring in both time resolved and conventional laser scanning fluorescence microscopy data in two and three dimensions. We show that <i>Galene</i> is able to resolve intravital FLIM-FRET images of intra-abdominal organs in murine models and NADH autofluorescence of human dermal tissue imaging subject to a wide range of physiological motions. Thus, <i>Galene</i> can enable FLIM imaging in situations where a stable imaging platform is not always possible and rescue previously discarded quantitative imaging data.",
+                        "text": "Habit formation is a behavioral adaptation that automates routine actions. Habitual behavior correlates with broad reconfigurations of dorsolateral striatal (DLS) circuit properties that increase gain and shift pathway timing. The mechanism(s) for these circuit adaptations are unknown and could be responsible for habitual behavior. Here we find that a single class of interneuron, fast-spiking interneurons (FSIs), modulates all of these habit-predictive properties. Consistent with a role in habits, FSIs are more excitable in habitual mice compared to goal-directed and acute chemogenetic inhibition of FSIs in DLS prevents the expression of habitual lever pressing. <i>In vivo</i> recordings further reveal a previously unappreciated selective modulation of SPNs based on their firing patterns; FSIs inhibit most SPNs but paradoxically promote the activity of a subset displaying high fractions of gamma-frequency spiking. These results establish a microcircuit mechanism for habits and provide a new example of how interneurons mediate experience-dependent behavior.",
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.35800.001"
+                "doi": "10.7554/eLife.26231.001"
             },
-            "elocationId": "e35800",
-            "authorLine": "Sean C Warren et al."
+            "id": "26231",
+            "version": 2,
+            "figuresPdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-figures-v2.pdf",
+            "volume": 6,
+            "researchOrganisms": [
+                "Mouse"
+            ],
+            "type": "research-article",
+            "published": "2017-09-05T00:00:00Z",
+            "title": "Striatal fast-spiking interneurons selectively modulate circuit output and are required for habitual behavior",
+            "pdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-v2.pdf",
+            "impactStatement": "Fast-spiking interneurons of the dorsolateral striatum are found to provide a microcircuit mechanism driving the circuit properties and behavioral adaptations that characterize habit.",
+            "subjects": [
+                {
+                    "name": "Neuroscience",
+                    "id": "neuroscience"
+                }
+            ],
+            "stage": "published",
+            "versionDate": "2017-11-20T16:59:41Z",
+            "copyright": {
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited.",
+                "holder": "O'Hare et al.",
+                "license": "CC-BY-4.0"
+            },
+            "statusDate": "2017-09-05T00:00:00Z",
+            "doi": "10.7554/eLife.26231"
         }
     ]
 }
