@@ -83,8 +83,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         yield $path = '/annual-reports' => [
             $this->createRequest($path, 'application/vnd.elife.annual-report-list+json; version=1'),
-            'application/problem+json',
-            406,
+            'application/vnd.elife.annual-report-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports') as $file) {
             $path = '/annual-reports/'.$file->getBasename('.json');
@@ -93,18 +92,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.annual-report+json; version=2',
             ];
-            if ('2014' !== $file->getBasename('.json')) {
-                yield "{$path} version 1" => [
-                    $this->createRequest($path, 'application/vnd.elife.annual-report+json; version=1'),
-                    'application/vnd.elife.annual-report+json; version=1',
-                ];
-            } else {
-                yield "{$path} version 1" => [
-                    $this->createRequest($path, 'application/vnd.elife.annual-report+json; version=1'),
-                    'application/problem+json',
-                    406,
-                ];
-            }
+            yield "{$path} version 1" => [
+                $this->createRequest($path, 'application/vnd.elife.annual-report+json; version=1'),
+                'application/vnd.elife.annual-report+json; version=1',
+            ];
         }
 
         yield $path = '/articles' => [

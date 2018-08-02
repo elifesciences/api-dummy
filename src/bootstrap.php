@@ -459,9 +459,7 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
     }
 
     foreach ($reports as $i => $report) {
-        if ($type->getParameter('version') < 2 && empty($report['image'])) {
-            throw new NotAcceptableHttpException('At least one of the annual reports in the list requires version 2.');
-        } elseif ($type->getParameter('version') > 1) {
+        if ($type->getParameter('version') > 1) {
             unset($report['image']);
         }
 
@@ -488,9 +486,7 @@ $app->get('/annual-reports/{year}',
 
         $report = $app['annual-reports'][$year];
 
-        if ($type->getParameter('version') < 2 && empty($report['image'])) {
-            throw new NotAcceptableHttpException('This annual report requires version 2.');
-        } elseif ($type->getParameter('version') > 1) {
+        if ($type->getParameter('version') > 1) {
             unset($report['image']);
         }
 
