@@ -459,7 +459,6 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
         } elseif ($type->getParameter('version') > 1) {
             unset($report['image']);
         }
-        unset($report['content']);
 
         $content['items'][] = $report;
     }
