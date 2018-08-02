@@ -77,11 +77,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             406,
         ];
 
-        yield $path = '/annual-reports version 2' => [
+        $path = '/annual-reports';
+        yield "$path version 2" => [
             $this->createRequest($path),
             'application/vnd.elife.annual-report-list+json; version=2',
         ];
-        yield $path = '/annual-reports version 1' => [
+        yield "$path version 1" => [
             $this->createRequest($path, 'application/vnd.elife.annual-report-list+json; version=1'),
             'application/vnd.elife.annual-report-list+json; version=1',
         ];
