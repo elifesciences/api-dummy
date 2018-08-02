@@ -1,0 +1,105 @@
+{
+    "id": "34873b4d2390",
+    "title": "Holding the focus",
+    "impactStatement": "A new open source software tool makes it possible for researchers to view cells in living animals in high detail.",
+    "stage": "preview",
+    "updated": "2018-07-30T14:01:23Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif/full/full/0/default.jpg",
+                "filename": "elife-35800-fig4-v1.jpg"
+            },
+            "size": {
+                "width": 1500,
+                "height": 1303
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "biochemistry-chemical-biology",
+            "name": "Biochemistry and Chemical Biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif",
+                "alt": "",
+                "attribution": [
+                    "Clip taken from Video 2 of <a href=\"https://doi.org/10.7554/eLife.35800\">Warren et al.</a> (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY 4.0</a>)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif/full/full/0/default.jpg",
+                    "filename": "elife-35800-fig4-v1.jpg"
+                },
+                "size": {
+                    "width": 1500,
+                    "height": 1303
+                }
+            },
+            "title": "Images corrected using Galene (right) show much more detail than uncorrected images (left)."
+        },
+        {
+            "type": "paragraph",
+            "text": "High resolution microscopy makes it possible to image events happening in single cells, or even specific parts of a cell. However, small movements like those due to the heartbeat or breathing can blur the images, making it difficult to study living animals. This is particularly problematic for images that take several minutes to capture."
+        },
+        {
+            "type": "paragraph",
+            "text": "Warren et al. have now developed a new open source software tool called Galene. The tool can correct for small movements in images collected by a technique called fluorescence lifetime imaging microscopy (FLIM). As a result, clear images can be captured in situations that were not previously possible. For example, Warren et al. watched cancer cells migrating to the liver of a mouse from the spleen over 24 hours, and, using a fluorescent biosensor, showed that a repurposed drug interferes with how well the cells can attach to the liver. In addition, Warren et al. used the software to take steady 3D images of human skin in a volunteer’s arm, which could be used to study drug penetration."
+        },
+        {
+            "type": "paragraph",
+            "text": "Galene could help researchers to study a wide range of biological processes in living animals. The software can also be applied to existing data to clean up blurred images. In the future Galene could be further developed to work with the imaging techniques used during surgery. For example, surgeons could use it to help them find the edges of tumours."
+        }
+    ],
+    "relatedContent": [
+        {
+            "id": "26231",
+            "published": "2017-09-05T00:00:00Z",
+            "doi": "10.7554/eLife.26231",
+            "stage": "published",
+            "volume": 6,
+            "status": "vor",
+            "pdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-v1.pdf",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/26231/elife-26231-figures-v1.pdf",
+            "title": "Striatal fast-spiking interneurons selectively modulate circuit output and are required for habitual behavior",
+            "impactStatement": "Fast-spiking interneurons of the dorsolateral striatum are found to provide a microcircuit mechanism driving the circuit properties and behavioral adaptations that characterize habit.",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "O'Hare et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authorLine": "Justin K O'Hare et al.",
+            "versionDate": "2017-09-05T00:00:00Z",
+            "type": "research-article",
+            "statusDate": "2017-09-05T00:00:00Z",
+            "subjects": [
+                {
+                    "id": "neuroscience",
+                    "name": "Neuroscience"
+                }
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Habit formation is a behavioral adaptation that automates routine actions. Habitual behavior correlates with broad reconfigurations of dorsolateral striatal (DLS) circuit properties that increase gain and shift pathway timing. The mechanism(s) for these circuit adaptations are unknown and could be responsible for habitual behavior. Here we find that a single class of interneuron, fast-spiking interneurons (FSIs), modulates all of these habit-predictive properties. Consistent with a role in habits, FSIs are more excitable in habitual mice compared to goal-directed and acute chemogenetic inhibition of FSIs in DLS prevents the expression of habitual lever pressing. <i>In vivo</i> recordings further reveal a previously unappreciated selective modulation of SPNs based on their firing patterns; FSIs inhibit most SPNs but paradoxically promote the activity of a subset displaying high fractions of gamma-frequency spiking. These results establish a microcircuit mechanism for habits and provide a new example of how interneurons mediate experience-dependent behavior."
+                    }
+                ],
+                "doi": "10.7554/eLife.26231.001"
+            },
+            "researchOrganisms": [
+                "Mouse"
+            ],
+            "elocationId": "e26231",
+            "version": 1
+        }
+    ]
+}
