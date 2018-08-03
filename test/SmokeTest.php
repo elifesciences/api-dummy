@@ -72,18 +72,29 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
 
         yield '/annual-reports/2012 wrong version' => [
-            $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=2'),
+            $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=3'),
             'application/problem+json',
             406,
         ];
 
-        yield $path = '/annual-reports' => [
+        $path = '/annual-reports';
+        yield "$path version 2" => [
             $this->createRequest($path),
+            'application/vnd.elife.annual-report-list+json; version=2',
+        ];
+        yield "$path version 1" => [
+            $this->createRequest($path, 'application/vnd.elife.annual-report-list+json; version=1'),
             'application/vnd.elife.annual-report-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports') as $file) {
-            yield $path = '/annual-reports/'.$file->getBasename('.json') => [
+            $path = '/annual-reports/'.$file->getBasename('.json');
+
+            yield "{$path} version 2" => [
                 $this->createRequest($path),
+                'application/vnd.elife.annual-report+json; version=2',
+            ];
+            yield "{$path} version 1" => [
+                $this->createRequest($path, 'application/vnd.elife.annual-report+json; version=1'),
                 'application/vnd.elife.annual-report+json; version=1',
             ];
         }
