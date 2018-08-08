@@ -1,0 +1,95 @@
+{
+    "id": "b518a9d89f36",
+    "title": "Aspirin may prevent stroke in tuberculosis patients",
+    "impactStatement": "A preliminary study suggests that adding aspirin to existing treatments for tuberculosis brain infections may reduce strokes.",
+    "stage": "published",
+    "published": "2018-05-02T12:30:01Z",
+    "updated": "2018-05-02T12:30:01Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium/1*ZgyruxjrawsjW2Qdpb78kA.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/max/1600/1*ZgyruxjrawsjW2Qdpb78kA.jpeg",
+                "filename": "1*ZgyruxjrawsjW2Qdpb78kA.jpeg"
+            },
+            "size": {
+                "width": 1600,
+                "height": 1066
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "microbiology-infectious-disease",
+            "name": "Microbiolody and Infectious Disease"
+        }
+    ],
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "The deadliest form of tuberculosis is tuberculosis meningitis (TBM), which causes inflammation in the brain. Even with the best treatment available, about half of patients with TBM become disabled or die, often because they have a stroke. Strokes are caused by blood clots or other blockages in blood vessels in the brain. Aspirin is known to prevent blood clots and helps reduce inflammation. Some scientists wonder if it might help patients with TBM by preventing blockages in blood vessels."
+        },
+        {
+            "type": "paragraph",
+            "text": "Now, Nguyen et al. show that adding aspirin to existing TBM treatments may reduce strokes in some patients. In the experiments, 120 patients with TBM were randomly assigned to receive a low dose of aspirin (81 mg/day), a high dose of aspirin (1000mg/day), or an identical tablet that contained no medication. All the patients also took the anti-tuberculosis drugs and steroids usually used to treat the condition. Both doses of aspirin appeared to be safe. Patients who received aspirin were less likely to have a stroke or die in the first two months of treatment than patients who received the fake pill. But the difference was so small it could have been caused by chance."
+        },
+        {
+            "type": "paragraph",
+            "text": "In the 92 patients with clear evidence of tuberculosis bacteria in their brains, the benefit of aspirin was larger and unlikely to be due to chance. The benefit was greatest for those who received the higher dose of aspirin, only 10.7% of these patients died or had a stroke, compared with 14.8% of those who received a low dose of aspirin, or 34% of those who received the fake pill. Next, Nguyen et al. looked at brain fluid taken from the TBM patients before and after they received the aspirin or fake medication. The experiments showed that patients treated with high dose aspirin had much lower levels of a clot-promoting substance called thromboxane A2 and more anti-inflammatory molecules."
+        },
+        {
+            "type": "paragraph",
+            "text": "Larger studies are needed in children and adults to confirm that aspirin helps prevent strokes or death in patients with TBM. Studies are also needed on patients who have both TBM and HIV infections. But if more studies show aspirin is safe and effective, adding this medication to TBM treatment may be an inexpensive way to prevent death or disability."
+        }
+    ],
+    "relatedContent": [
+        {
+            "id": "04395",
+            "published": "2014-09-08T00:00:00Z",
+            "doi": "10.7554/eLife.04395",
+            "stage": "published",
+            "volume": 3,
+            "status": "vor",
+            "pdf": "https://cdn.elifesciences.org/articles/04395/elife-04395-v2.pdf",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/04395/elife-04395-figures-v2.pdf",
+            "title": "Mapping the zoonotic niche of Ebola virus disease in Africa",
+            "impactStatement": "Understanding where future Ebola virus outbreaks may start and the changing nature of the populations living in these places is of critical importance in helping to prepare for future outbreaks.",
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Pigott et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authorLine": "David M Pigott et al.",
+            "versionDate": "2014-09-19T00:00:00Z",
+            "type": "research-article",
+            "statusDate": "2014-09-19T00:00:00Z",
+            "subjects": [
+                {
+                    "id": "epidemiology-global-health",
+                    "name": "Epidemiology and Global Health"
+                },
+                {
+                    "id": "microbiology-infectious-disease",
+                    "name": "Microbiology and Infectious Disease"
+                }
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "type": "paragraph",
+                        "text": "Ebola virus disease (EVD) is a complex zoonosis that is highly virulent in humans. The largest recorded outbreak of EVD is ongoing in West Africa, outside of its previously reported and predicted niche. We assembled location data on all recorded zoonotic transmission to humans and Ebola virus infection in bats and primates (1976–2014). Using species distribution models, these occurrence data were paired with environmental covariates to predict a zoonotic transmission niche covering 22 countries across Central and West Africa. Vegetation, elevation, temperature, evapotranspiration, and suspected reservoir bat distributions define this relationship. At-risk areas are inhabited by 22 million people; however, the rarity of human outbreaks emphasises the very low probability of transmission to humans. Increasing population sizes and international connectivity by air since the first detection of EVD in 1976 suggest that the dynamics of human-to-human secondary transmission in contemporary outbreaks will be very different to those of the past."
+                    }
+                ],
+                "doi": "10.7554/eLife.04395.001"
+            },
+            "researchOrganisms": [
+                "Human",
+                "Virus"
+            ],
+            "elocationId": "e04395",
+            "version": 2
+        }
+    ]
+}
