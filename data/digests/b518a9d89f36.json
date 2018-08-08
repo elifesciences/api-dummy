@@ -28,6 +28,26 @@
     ],
     "content": [
         {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium/1*ZgyruxjrawsjW2Qdpb78kA.jpeg",
+                "alt": "",
+                "attribution": [
+                    "<a href=\"https://www.flickr.com/photos/jillwatson/\">Jill Watson</a> (CC BY-NC-ND 2.0)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/max/1600/1*ZgyruxjrawsjW2Qdpb78kA.jpeg",
+                    "filename": "1 ZgyruxjrawsjW2Qdpb78kA.jpeg"
+                },
+                "size": {
+                    "width": 1600,
+                    "height": 1066
+                }
+            },
+            "title": "Aspirin tablets"
+        },
+        {
             "type": "paragraph",
             "text": "The deadliest form of tuberculosis is tuberculosis meningitis (TBM), which causes inflammation in the brain. Even with the best treatment available, about half of patients with TBM become disabled or die, often because they have a stroke. Strokes are caused by blood clots or other blockages in blood vessels in the brain. Aspirin is known to prevent blood clots and helps reduce inflammation. Some scientists wonder if it might help patients with TBM by preventing blockages in blood vessels."
         },
