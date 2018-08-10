@@ -10,6 +10,11 @@ elifePipeline {
 
             stage 'Build image', {
                 sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml -f docker-compose.ci.yml build"
+                image = DockerImage.elifesciences(this, 'api-dummy', commit)
+                elifePullRequestOnly { prNumber ->
+                    // push immediately to allow downstream exploration even with automated tests failing
+                    image.tag("pr-${prNumber}").push()
+                }
             }
 
             stage 'Project tests', {
@@ -24,7 +29,6 @@ elifePipeline {
 
             elifeMainlineOnly {
                 stage 'Push image', {
-                    image = DockerImage.elifesciences(this, 'api-dummy', commit)
                     image.push()
                 }
             
