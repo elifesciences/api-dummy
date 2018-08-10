@@ -77,25 +77,28 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             406,
         ];
 
-        $path = '/annual-reports';
-        yield "$path version 2" => [
+        yield '/annual-reports version 1 deprecated' => [
+            $this->createRequest('/annual-reports', 'application/vnd.elife.annual-report+json; version=1'),
+            'application/problem+json',
+            406,
+        ];
+
+        yield '/annual-reports/2012 version 1 deprecated' => [
+            $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=1'),
+            'application/problem+json',
+            406,
+        ];
+
+        yield $path = '/annual-reports' => [
             $this->createRequest($path),
             'application/vnd.elife.annual-report-list+json; version=2',
-        ];
-        yield "$path version 1" => [
-            $this->createRequest($path, 'application/vnd.elife.annual-report-list+json; version=1'),
-            'application/vnd.elife.annual-report-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports') as $file) {
             $path = '/annual-reports/'.$file->getBasename('.json');
 
-            yield "{$path} version 2" => [
+            yield $path = '/annual-reports/'.$file->getBasename('.json') => [
                 $this->createRequest($path),
                 'application/vnd.elife.annual-report+json; version=2',
-            ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.annual-report+json; version=1'),
-                'application/vnd.elife.annual-report+json; version=1',
             ];
         }
 
