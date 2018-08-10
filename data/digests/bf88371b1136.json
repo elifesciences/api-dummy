@@ -1,0 +1,116 @@
+{
+    "id": "bf88371b1136",
+    "title": "Cold blood, complex heart",
+    "impactStatement": "Alligator hearts contain a specialized, electrically active structure previously thought to be found only in warm-blooded animals.",
+    "stage": "published",
+    "published": "2018-08-06T10:00:00Z",
+    "updated": "2018-08-07T10:00:00Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/medium/1*i6yLG0r-K4wF4gJIdl1AAQ.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://cdn-images-1.medium.com/max/2000/1*i6yLG0r-K4wF4gJIdl1AAQ.jpeg",
+                "filename": "1 i6yLG0r-K4wF4gJIdl1AAQ.jpeg"
+            },
+            "size": {
+                "width": 2000,
+                "height": 1181
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "developmental-biology",
+            "name": "Developmental biology"
+        }
+    ],
+    "content": [
+        {
+            "type": "image",
+            "image": {
+                "uri": "https://iiif.elifesciences.org/medium/1*i6yLG0r-K4wF4gJIdl1AAQ.jpeg",
+                "alt": "",
+
+                "attribution": [
+                    "<a href=\"https://en.wikipedia.org/wiki/American_alligator#/media/File:AmericanAlligator3.jpg\">Gareth Rasberry</a> (CC BY-SA 3.0)"
+                ],
+                "source": {
+                    "mediaType": "image/jpeg",
+                    "uri": "https://cdn-images-1.medium.com/max/2000/1*i6yLG0r-K4wF4gJIdl1AAQ.jpeg",
+                    "filename": "1 i6yLG0r-K4wF4gJIdl1AAQ.jpeg"
+                },
+                "size": {
+                    "width": 2000,
+                    "height": 1181
+                }
+            },
+            "title": "An American alligator"
+        },
+        {
+            "type": "paragraph",
+            "text": "Mammals and birds are referred to as ‘warm-blooded’ animals, because they maintain a constant high body temperature. This requires a lot of energy, so their bodies need to be well supplied with blood at all times. The hearts of mammals and birds contain two important structures that help them do this. The first is a full wall of muscle — called the ventricular septum — that divides the heart into left and right sides. The second is an electrical circuit made of specialized muscle cells that ensures that the heart beats fast enough by sending rapid electrical signals to the rest of the heart muscle. The circuit contains one group of cells in the ventricular septum, called the bundle of His, and another group termed the Purkinje network."
+        },
+        {
+            "type": "paragraph",
+            "text": "Reptiles, however, do not maintain high body temperatures and are instead often thought of as ‘cold-blooded’ animals. The hearts of reptiles do not need to pump blood around the body as quickly and have different structures from warm-blooded animals. For example, most reptile hearts do not have a fully developed ventricular septum. The only exceptions are crocodiles, alligators and their relatives (the ‘crocodilians’), which do."
+        },
+        {
+            "type": "paragraph",
+            "text": "Jensen, Boukens et al. therefore wanted to determine if a crocodilian heart also contained a specialized electrical circuit like those of birds and mammals. Previous studies that attempted to answer this question using only anatomical and electrical methods had yielded ambiguous results. As such, Jensen, Boukens et al. combined these methods with genetic techniques for a more detailed study."
+        },
+        {
+            "type": "paragraph",
+            "text": "First, the ventricular septum of American alligators, a species of crocodilian, was examined, and found to contain a narrow tissue structure that strongly resembled the bundle of His. Indeed, if this presumptive bundle of His was cut, the electrical circuit was broken. Additional genetic analysis of this structure confirmed that genes similar to those active in the mammalian bundle of His were also switched on in alligators. However, recordings of heart activity showed that heart rates and the spread of electrical signals were both slower in alligators than in warm-blooded animals. This suggests that, although alligators have evolved some specialized muscle cells (in the form of a bundle of His), their electrical circuit is still ‘incomplete’. The lack of a Purkinje network, for example, would explain why their heart rates remain slow like other reptiles’."
+        },
+        {
+            "type": "paragraph",
+            "text": "Together these findings add to the current understanding of how the heart works in different animals with varying requirements for energy and blood flow. Also, since crocodiles and warm-blooded birds both evolved from ancient reptiles, detailed descriptions of their heart structures could shed more light on how warm-bloodedness first developed."
+        }
+    ],
+    "relatedContent": [
+        {
+            "doi": "10.7554/eLife.00569",
+            "abstract": {
+                "doi": "10.7554/eLife.00569.001",
+                "content": [
+                    {
+                        "text": "<i>Botryllus schlosseri</i> is a colonial urochordate that follows the chordate plan of development following sexual reproduction, but invokes a stem cell-mediated budding program during subsequent rounds of asexual reproduction. As urochordates are considered to be the closest living invertebrate relatives of vertebrates, they are ideal subjects for whole genome sequence analyses. Using a novel method for high-throughput sequencing of eukaryotic genomes, we sequenced and assembled 580 Mbp of the <i>B. schlosseri</i> genome. The genome assembly is comprised of nearly 14,000 intron-containing predicted genes, and 13,500 intron-less predicted genes, 40% of which could be confidently parceled into 13 (of 16 haploid) chromosomes. A comparison of homologous genes between <i>B. schlosseri</i> and other diverse taxonomic groups revealed genomic events underlying the evolution of vertebrates and lymphoid-mediated immunity. The <i>B. schlosseri</i> genome is a community resource for studying alternative modes of reproduction, natural transplantation reactions, and stem cell-mediated regeneration.",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "stage": "published",
+            "volume": 2,
+            "pdf": "https://cdn.elifesciences.org/articles/00569/elife-00569-v1.pdf",
+            "copyright": {
+                "license": "CC-BY-3.0",
+                "holder": "Voskoboynik et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "id": "00569",
+            "version": 1,
+            "published": "2013-07-02T00:00:00Z",
+            "title": "The genome sequence of the colonial chordate, <i>Botryllus schlosseri</i>",
+            "impactStatement": "The <i>Botryllus schlosseri</i> genome yields insights into the evolution of hematopoiesis.",
+            "subjects": [
+                {
+                  "name": "Developmental Biology",
+                  "id": "developmental-biology"
+                },
+                {
+                  "name": "Genetics and Genomics",
+                  "id": "genetics-genomics"
+                }
+            ],
+            "elocationId": "e00569",
+            "versionDate": "2013-07-02T00:00:00Z",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/00569/elife-00569-figures-v1.pdf",
+            "status": "vor",
+            "statusDate": "2013-07-02T00:00:00Z",
+            "type": "research-article",
+            "authorLine": "Ayelet Voskoboynik et al."
+        }
+    ]
+}
