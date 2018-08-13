@@ -71,19 +71,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield '/annual-reports wrong version' => [
+          $this->createRequest('/annual-reports', 'application/vnd.elife.annual-report-list+json; version=1'),
+          'application/problem+json',
+          406,
+        ];
+
         yield '/annual-reports/2012 wrong version' => [
-            $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=3'),
-            'application/problem+json',
-            406,
-        ];
-
-        yield '/annual-reports version 1 deprecated' => [
-            $this->createRequest('/annual-reports', 'application/vnd.elife.annual-report+json; version=1'),
-            'application/problem+json',
-            406,
-        ];
-
-        yield '/annual-reports/2012 version 1 deprecated' => [
             $this->createRequest('/annual-reports/2012', 'application/vnd.elife.annual-report+json; version=1'),
             'application/problem+json',
             406,
