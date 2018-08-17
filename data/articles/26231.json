@@ -30,6 +30,7 @@
       ],
       "type": "research-article",
       "decisionLetter": {
+        "id": "SA1",
         "content": [
           {
             "type": "paragraph",
@@ -245,6 +246,7 @@
         ]
       },
       "authorResponse": {
+        "id": "SA2",
         "content": [
           {
             "type": "paragraph",
@@ -4786,6 +4788,10 @@
           {
             "type": "paragraph",
             "text": "Habit formation is a behavioral adaptation that automates routine actions. Habitual behavior correlates with broad reconfigurations of dorsolateral striatal (DLS) circuit properties that increase gain and shift pathway timing. The mechanism(s) for these circuit adaptations are unknown and could be responsible for habitual behavior. Here we find that a single class of interneuron, fast-spiking interneurons (FSIs), modulates all of these habit-predictive properties. Consistent with a role in habits, FSIs are more excitable in habitual mice compared to goal-directed and acute chemogenetic inhibition of FSIs in DLS prevents the expression of habitual lever pressing. <i>In vivo</i> recordings further reveal a previously unappreciated selective modulation of SPNs based on their firing patterns; FSIs inhibit most SPNs but paradoxically promote the activity of a subset displaying high fractions of gamma-frequency spiking. These results establish a microcircuit mechanism for habits and provide a new example of how interneurons mediate experience-dependent behavior."
+          },
+          {
+            "type": "paragraph",
+            "text": "Here is a link to the <a href=\"#SA1\">decision letter<a>."
           }
         ],
         "doi": "10.7554/eLife.26231.001"
