@@ -2,18 +2,5 @@
     "year": 2012,
     "uri": "http://2012.elifesciences.org/",
     "title": "The eLife Sciences 2012 Annual Report",
-    "impactStatement": "The 2012 Annual Report highlights key achievements from the year that saw eLife publish its first research articles . The Report focuses on eLife’s commitment to the highest standards in open - access publishing, the innovative editorial process and the eLife media policy, inspired by one of eLife’s earliest authors making her manuscript openly available ahead of publication.",
-    "image": {
-        "alt": "",
-        "uri": "https://iiif.elifesciences.org/journal-cms/annual_report%2F2017-04%2Fannual_report_2012.png",
-        "source": {
-            "mediaType": "image/png",
-            "uri": "https://iiif.elifesciences.org/journal-cms/annual_report%2F2017-04%2Fannual_report_2012.png/full/full/0/default.png",
-            "filename": "annual_report_2012.png"
-        },
-        "size": {
-            "width": 1800,
-            "height": 1350
-        }
-    }
+    "impactStatement": "The 2012 Annual Report highlights key achievements from the year that saw eLife publish its first research articles . The Report focuses on eLife’s commitment to the highest standards in open - access publishing, the innovative editorial process and the eLife media policy, inspired by one of eLife’s earliest authors making her manuscript openly available ahead of publication."
 }
