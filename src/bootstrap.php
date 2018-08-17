@@ -459,10 +459,6 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
     }
 
     foreach ($reports as $i => $report) {
-        if ($type->getParameter('version') > 1) {
-            unset($report['image']);
-        }
-
         $content['items'][] = $report;
     }
 
@@ -474,8 +470,7 @@ $app->get('/annual-reports', function (Request $request, Accept $type) use ($app
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.annual-report-list+json; version=2',
-    'application/vnd.elife.annual-report-list+json; version=1'
+    'application/vnd.elife.annual-report-list+json; version=2'
 ));
 
 $app->get('/annual-reports/{year}',
@@ -486,10 +481,6 @@ $app->get('/annual-reports/{year}',
 
         $report = $app['annual-reports'][$year];
 
-        if ($type->getParameter('version') > 1) {
-            unset($report['image']);
-        }
-
         return new Response(
             json_encode($report, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -497,8 +488,7 @@ $app->get('/annual-reports/{year}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.annual-report+json; version=2',
-    'application/vnd.elife.annual-report+json; version=1'
+    'application/vnd.elife.annual-report+json; version=2'
 ))->assert('number', '[1-9][0-9]*');
 
 $app->get('/articles', function (Request $request, Accept $type) use ($app) {
