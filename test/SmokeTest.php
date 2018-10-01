@@ -173,7 +173,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.collection-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
-            yield $path = '/collections/'.$file->getBasename('.json') => [
+            $path = '/collections/'.$file->getBasename('.json');
+            yield "{$path} version 2" => [
+                $this->createRequest($path),
+                'application/vnd.elife.collection+json; version=2',
+            ];
+            yield "{$path} version 1" => [
                 $this->createRequest($path),
                 'application/vnd.elife.collection+json; version=1',
             ];
@@ -241,7 +246,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
 
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights') as $file) {
-            yield $path = '/highlights/'.$file->getBasename('.json') => [
+            $path = '/highlights/'.$file->getBasename('.json');
+            yield "{$path} version 2" => [
+                $this->createRequest($path),
+                'application/vnd.elife.highlight-list+json; version=2',
+            ];
+            yield "{$path} version 1" => [
                 $this->createRequest($path),
                 'application/vnd.elife.highlight-list+json; version=1',
             ];
