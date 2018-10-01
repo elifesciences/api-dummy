@@ -832,6 +832,24 @@ $app->get('/collections/{id}',
 
         $collection = $app['collections'][$id];
 
+        if ($type->getParameter('version') < 2) {
+            foreach (['content', 'relatedContent'] as $content) {
+                if (!empty($collection[$content])) {
+                    $filteredContent = [];
+                    foreach ($collection[$content] ?? [] as $item) {
+                        if (!in_array($item['type'], ['digest', 'event'])) {
+                            $filteredContent[] = $item;
+                        }
+                    }
+                    if (!empty($filteredContent)) {
+                        $collection[$content] = $filteredContent;
+                    } else {
+                        unset($collection[$content]);
+                    }
+                }
+            }
+        }
+
         return new Response(
             json_encode($collection, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -839,7 +857,8 @@ $app->get('/collections/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.collection+json; version=2'
+    'application/vnd.elife.collection+json; version=2',
+    'application/vnd.elife.collection+json; version=1'
 ));
 
 $app->get('/community', function (Request $request, Accept $type) use ($app) {
@@ -1152,6 +1171,16 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
+    if ($type->getParameter('version') < 2) {
+        $filteredHighlights = [];
+        foreach ($highlights as $item) {
+            if ('digest' !== $item['item']) {
+                $filteredHighlights[] = $item;
+            }
+        }
+        $highlights = $filteredHighlights;
+    }
+
     $content = [
         'total' => count($highlights),
         'items' => [],
@@ -1177,7 +1206,8 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.highlight-list+json; version=2'
+    'application/vnd.elife.highlight-list+json; version=2',
+    'application/vnd.elife.highlight-list+json; version=1'
 ));
 
 $app->get('/interviews', function (Request $request, Accept $type) use ($app) {
