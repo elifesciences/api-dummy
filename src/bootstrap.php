@@ -839,7 +839,7 @@ $app->get('/collections/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.collection+json; version=1'
+    'application/vnd.elife.collection+json; version=2'
 ));
 
 $app->get('/community', function (Request $request, Accept $type) use ($app) {
@@ -1177,7 +1177,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.highlight-list+json; version=1'
+    'application/vnd.elife.highlight-list+json; version=2'
 ));
 
 $app->get('/interviews', function (Request $request, Accept $type) use ($app) {
