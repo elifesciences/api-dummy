@@ -179,7 +179,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/vnd.elife.collection+json; version=2',
             ];
             yield "{$path} version 1" => [
-                $this->createRequest($path),
+                $this->createRequest($path, 'application/vnd.elife.collection+json; version=1'),
                 'application/vnd.elife.collection+json; version=1',
             ];
         }
@@ -252,7 +252,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/vnd.elife.highlight-list+json; version=2',
             ];
             yield "{$path} version 1" => [
-                $this->createRequest($path),
+                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
                 'application/vnd.elife.highlight-list+json; version=1',
             ];
         }
