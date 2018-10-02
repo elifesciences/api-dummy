@@ -1166,20 +1166,12 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         throw new NotFoundHttpException('Not found');
     }
 
-    $highlights = $app['highlights'][$list];
+    $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
+        return $type->getParameter('version') > 1 || 'digest' !== $item['item']['type'];
+    });
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
-
-    if ($type->getParameter('version') < 2) {
-        $filteredHighlights = [];
-        foreach ($highlights as $item) {
-            if ('digest' !== $item['item']) {
-                $filteredHighlights[] = $item;
-            }
-        }
-        $highlights = $filteredHighlights;
-    }
 
     $content = [
         'total' => count($highlights),
