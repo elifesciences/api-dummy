@@ -832,26 +832,14 @@ $app->get('/collections/{id}',
 
         $collection = $app['collections'][$id];
 
-        if ($type->getParameter('version') < 2) {
-            foreach (['content', 'relatedContent'] as $content) {
-                if (!empty($collection[$content])) {
-                    $filteredContent = [];
-                    foreach ($collection[$content] ?? [] as $item) {
-                        if (!in_array($item['type'], ['digest', 'event'])) {
-                            $filteredContent[] = $item;
-                        }
-                    }
-                    if (!empty($filteredContent)) {
-                        $collection[$content] = $filteredContent;
-                    } else {
-                        unset($collection[$content]);
-                    }
-                }
-            }
+        foreach (['content', 'relatedContent'] as $content) {
+            $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
+                return $type->getParameter('version') > 1 || !in_array($item['type'], ['digest', 'event']);
+            });
         }
 
         return new Response(
-            json_encode($collection, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => $type->getNormalizedValue()]
         );
