@@ -832,13 +832,20 @@ $app->get('/collections/{id}',
 
         $collection = $app['collections'][$id];
 
+        foreach (['content', 'relatedContent'] as $content) {
+            $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
+                return $type->getParameter('version') > 1 || !in_array($item['type'], ['digest', 'event']);
+            });
+        }
+
         return new Response(
-            json_encode($collection, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
             ['Content-Type' => $type->getNormalizedValue()]
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.collection+json; version=2',
     'application/vnd.elife.collection+json; version=1'
 ));
 
@@ -1147,7 +1154,9 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         throw new NotFoundHttpException('Not found');
     }
 
-    $highlights = $app['highlights'][$list];
+    $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
+        return $type->getParameter('version') > 1 || 'digest' !== $item['item']['type'];
+    });
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
@@ -1177,6 +1186,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=2',
     'application/vnd.elife.highlight-list+json; version=1'
 ));
 

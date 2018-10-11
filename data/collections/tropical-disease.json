@@ -123,6 +123,36 @@
                     "name": "Biophysics and Structural Biology"
                 }
             ]
+        },
+        {
+            "type": "digest",
+            "id": "f0f08e8d6ee3",
+            "title": "Neighborhood watch",
+            "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+            "stage": "published",
+            "published": "2018-07-06T09:06:01Z",
+            "updated": "2018-07-06T16:23:24Z",
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                        "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                    },
+                    "size": {
+                        "width": 1152,
+                        "height": 864
+                    }
+                }
+            },
+            "subjects": [
+                {
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
+                }
+            ]
         }
     ],
     "relatedContent": [
@@ -181,6 +211,14 @@
             "elocationId": "e05770",
             "authorLine": "Vivek Malhotra, Eve Marder",
             "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
+        },
+        {
+            "type": "event",
+            "id": "2",
+            "title": "eLife Continuum webinar",
+            "published": "2016-07-01T00:00:00Z",
+            "starts": "2016-08-04T15:00:00Z",
+            "ends": "2016-08-04T16:00:00Z"
         }
     ],
     "podcastEpisodes": [
