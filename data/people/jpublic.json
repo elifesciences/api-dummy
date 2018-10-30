@@ -5,9 +5,17 @@
         "label": "Senior Editor"
     },
     "name": {
+        "givenNames": "Jane",
+        "surname": "Public",
         "preferred": "Jane Public",
         "index": "Public, Jane"
     },
+    "emailAddresses": [
+        {
+            "value": "j.public@orcid.org",
+            "access": "public"
+        }
+    ],
     "orcid": "0000-0002-1825-0097",
     "research": {
         "expertises": [
