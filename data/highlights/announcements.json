@@ -1,0 +1,58 @@
+[
+    {
+        "title": "<i>Homo naledi</i>",
+        "authorLine": "Chris Stringer",
+        "image": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+            "source": {
+                "mediaType": "image/jpg",
+                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                "filename": "elife-09560-fig1-v1.jpg"
+            },
+            "size": {
+                "width": 4194,
+                "height": 4714
+            }
+        },
+        "item": {
+            "status": "vor",
+            "stage": "published",
+            "id": "10627",
+            "version": 1,
+            "type": "insight",
+            "image": {
+                "thumbnail": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-09560-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    }
+                }
+            },
+            "doi": "10.7554/eLife.10627",
+            "title": "The many mysteries of <i>Homo naledi</i>",
+            "titlePrefix": "Title prefix",
+            "published": "2016-09-10T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e10627",
+            "authorLine": "Chris Stringer",
+            "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+        }
+    }
+]
