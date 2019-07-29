@@ -1961,6 +1961,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
             'retraction',
             'registered-report',
             'replication-study',
+            'review-article',
             'scientific-correspondence',
             'short-report',
             'tools-resources',
