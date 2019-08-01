@@ -143,6 +143,15 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/bioprotocols') as $file) {
+            $parts = explode('-', $file->getBasename('.json'));
+
+            yield $path = '/bioprotocol/'.$parts[0].'/'.$parts[1] => [
+                $this->createRequest($path, 'application/vnd.elife.bioprotocol+json; version=1'),
+                'application/vnd.elife.bioprotocol+json; version=1',
+            ];
+        }
+
         yield $path = '/blog-articles' => [
             $this->createRequest($path),
             'application/vnd.elife.blog-article-list+json; version=1',
