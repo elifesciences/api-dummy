@@ -96,6 +96,20 @@ $app['articles'] = function () use ($app) {
     return $articles;
 };
 
+$app['bioprotocols'] = function () {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/bioprotocols');
+
+    $bioprotocols = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $bioprotocols[$file->getBasename('.json')] = $json;
+    }
+
+    ksort($bioprotocols);
+
+    return $bioprotocols;
+};
+
 $app['blog-articles'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/blog-articles');
 
@@ -682,6 +696,29 @@ $app->get('/articles/{number}/related',
     }
 )->before($app['negotiate.accept'](
     'application/vnd.elife.article-related+json; version=1'
+));
+
+$app->get('/bioprotocol/{contentType}/{id}', function (Accept $type, string $contentType, string $id) use ($app) {
+    if (false === isset($app['bioprotocols']["$contentType-$id"])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $bioprotocols = $app['bioprotocols']["$contentType-$id"];
+
+    $content = [
+        'total' => count($bioprotocols),
+        'items' => $bioprotocols,
+    ];
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.bioprotocol+json; version=1'
 ));
 
 $app->get('/blog-articles', function (Request $request, Accept $type) use ($app) {
