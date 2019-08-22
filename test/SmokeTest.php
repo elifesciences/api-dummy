@@ -100,19 +100,21 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
+            $poaMinimum = 1;
+            $vorMinimum = 26231 == $file->getBasename('.json') ? 3 : 1;
 
-            yield "{$path} version 2" => [
+            yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=2',
-                    'application/vnd.elife.article-vor+json; version=2',
+                    'application/vnd.elife.article-vor+json; version=3',
                 ],
             ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.article-poa+json; version=1, application/vnd.elife.article-vor+json; version=1'),
+            yield "{$path} version lowest" => [
+                $this->createRequest($path, 'application/vnd.elife.article-poa+json; version='.$poaMinimum.', application/vnd.elife.article-vor+json; version='.$vorMinimum),
                 [
-                    'application/vnd.elife.article-poa+json; version=1',
-                    'application/vnd.elife.article-vor+json; version=1',
+                    'application/vnd.elife.article-poa+json; version='.$poaMinimum,
+                    'application/vnd.elife.article-vor+json; version='.$vorMinimum,
                 ],
             ];
 
@@ -122,18 +124,18 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
 
             $path = '/articles/'.$file->getBasename('.json').'/versions/1';
-            yield "{$path} version 2" => [
+            yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=2',
-                    'application/vnd.elife.article-vor+json; version=2',
+                    'application/vnd.elife.article-vor+json; version=3',
                 ],
             ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.article-poa+json; version=1, application/vnd.elife.article-vor+json; version=1'),
+            yield "{$path} version lowest" => [
+                $this->createRequest($path, 'application/vnd.elife.article-poa+json; version='.$poaMinimum.', application/vnd.elife.article-vor+json; version='.$vorMinimum),
                 [
-                    'application/vnd.elife.article-poa+json; version=1',
-                    'application/vnd.elife.article-vor+json; version=1',
+                    'application/vnd.elife.article-poa+json; version='.$poaMinimum,
+                    'application/vnd.elife.article-vor+json; version='.$vorMinimum,
                 ],
             ];
 

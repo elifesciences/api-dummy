@@ -652,6 +652,7 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=3',
                 'application/vnd.elife.article-vor+json; version=2',
                 'application/vnd.elife.article-vor+json; version=1',
             ];
@@ -665,9 +666,8 @@ $app->get('/articles/{number}/versions/{version}',
         $app['content_negotiator.accept']->negotiate($request, $accepts);
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
-        if ('26231' === $number && '1' === $type->getParameter('version')) {
-            $articleVersion['additionalFiles'][0]['title'] = $articleVersion['additionalFiles'][0]['label'];
-            unset($articleVersion['additionalFiles'][0]['label']);
+        if ('26231' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+            throw new NotAcceptableHttpException('This article VoR requires version 3.');
         }
 
         return new Response(
