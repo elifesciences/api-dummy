@@ -1,0 +1,157 @@
+{
+  "status": "poa",
+  "id": "45562",
+  "version": 1,
+  "type": "research-article",
+  "doi": "10.7554/eLife.45562",
+  "authorLine": "David A Rasmussen, Tania Stadler",
+  "title": "Coupling adaptive molecular evolution to phylodynamics using fitness-dependent birth-death models",
+  "published": "2019-08-14T00:00:00Z",
+  "versionDate": "2019-08-14T00:00:00Z",
+  "volume": 8,
+  "elocationId": "e45562",
+  "pdf": "https://cdn.elifesciences.org/articles/45562/elife-45562-v1.pdf",
+  "xml": "https://cdn.elifesciences.org/articles/45562/elife-45562-v1.xml",
+  "subjects": [
+    {
+      "id": "evolutionary-biology",
+      "name": "Evolutionary Biology"
+    }
+  ],
+  "researchOrganisms": [
+    "Viruses"
+  ],
+  "abstract": {
+    "content": [
+      {
+        "text": "Beneficial and deleterious mutations cause the fitness of lineages to vary across a phylogeny and thereby shape its branching structure. While standard phylogenetic models do not allow mutations to feedback and shape trees, birth-death models can account for this feedback by letting the fitness of lineages depend on their type. To date, these multi-type birth-death models have only been applied to cases where a lineage's fitness is determined by a single character state. We extend these models to track sequence evolution at multiple sites. This approach remains computationally tractable by tracking the genotype and fitness of lineages probabilistically in an approximate manner. Although approximate, we show that we can accurately estimate the fitness of lineages and site-specific mutational fitness effects from phylogenies. We apply this approach to estimate the population-level fitness effects of mutations in Ebola and influenza virus, and compare our estimates with in vitro fitness measurements for these mutations.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "copyright": {
+    "license": "CC-BY-4.0",
+    "holder": "Rasmussen & Stadler",
+    "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "authors": [
+    {
+      "affiliations": [
+        {
+          "address": {
+            "components": {
+              "country": "United States",
+              "locality": [
+                "Raleigh, 27607"
+              ]
+            },
+            "formatted": [
+              "Raleigh, 27607",
+              "United States"
+            ]
+          },
+          "name": [
+            "Department of Entomology and Plant Pathology",
+            "North Carolina State University"
+          ]
+        }
+      ],
+      "competingInterests": "The authors declare that no competing interests exist.",
+      "emailAddresses": [
+        "drasmus@ncsu.edu"
+      ],
+      "name": {
+        "index": "Rasmussen, David A",
+        "preferred": "David A Rasmussen"
+      },
+      "orcid": "0000-0001-9457-7561",
+      "type": "person"
+    },
+    {
+      "affiliations": [
+        {
+          "address": {
+            "components": {
+              "country": "Switzerland",
+              "locality": [
+                "Basel"
+              ]
+            },
+            "formatted": [
+              "Basel",
+              "Switzerland"
+            ]
+          },
+          "name": [
+            "Department of Biosystems Science and Engineering",
+            "ETH Zurich"
+          ]
+        }
+      ],
+      "competingInterests": "The authors declare that no competing interests exist.",
+      "name": {
+        "index": "Stadler, Tania",
+        "preferred": "Tania Stadler"
+      },
+      "type": "person"
+    }
+  ],
+  "reviewers": [
+    {
+      "affiliations": [
+        {
+          "address": {
+            "components": {
+              "country": "France"
+            },
+            "formatted": [
+              "France"
+            ]
+          },
+          "name": [
+            "École Normale Supérieure"
+          ]
+        }
+      ],
+      "name": {
+        "index": "Walczak, Aleksandra M",
+        "preferred": "Aleksandra M Walczak"
+      },
+      "role": "Reviewing Editor",
+      "type": "person"
+    }
+  ],
+  "funding": {
+    "awards": [
+      {
+        "awardId": "European Research Commission",
+        "id": "par-1",
+        "recipients": [
+          {
+            "name": {
+              "index": "Stadler, Tania",
+              "preferred": "Tania Stadler"
+            },
+            "type": "person"
+          }
+        ],
+        "source": {
+          "name": [
+            "Seventh Framework Programme"
+          ]
+        }
+      }
+    ],
+    "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+  },
+  "dataSets": {
+    "availability": [
+      {
+        "text": "All data and code required to reproduce our Ebola analysis in its entirety is available at https://github.com/davidrasm/Lumiere/tree/master/ebola. The sequence alignment along with the timecalibrated molecular phylogeny we used for our analysis were downloaded from https://github.com/ebov/space-time/tree/master/Data. Dataset S3 of Lee et al. 2018 was downloaded from https://www.pnas.org/highwire/filestream/822898/field_highwire_adjunct_files/3/pnas.1806133115.sd03.xlsx.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "stage": "published",
+  "statusDate": "2019-08-14T00:00:00Z"
+}
