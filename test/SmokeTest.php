@@ -262,14 +262,27 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.highlight-list+json; version=3',
             ];
-            yield "{$path} version 2" => [
-                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
-                'application/vnd.elife.highlight-list+json; version=2',
-            ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
-                'application/vnd.elife.highlight-list+json; version=1',
-            ];
+            if ('announcements' !== $file->getBasename('.json')) {
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
+                    'application/vnd.elife.highlight-list+json; version=2',
+                ];
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
+                    'application/vnd.elife.highlight-list+json; version=1',
+                ];
+            } else {
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
+                    'application/problem+json',
+                    406,
+                ];
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
+                    'application/problem+json',
+                    406,
+                ];
+            }
         }
 
         yield $path = '/interviews' => [
