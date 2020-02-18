@@ -1223,6 +1223,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=3',
     'application/vnd.elife.highlight-list+json; version=2',
     'application/vnd.elife.highlight-list+json; version=1'
 ));
