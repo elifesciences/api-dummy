@@ -1192,7 +1192,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     }
 
     $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
-        return ($type->getParameter('version') > 1 || 'digest' !== $item['item']['type']) && 
+        return ($type->getParameter('version') > 1 || 'digest' !== $item['item']['type']) &&
             ($type->getParameter('version') > 2 || 'press-package' !== $item['item']['type']);
     });
 
