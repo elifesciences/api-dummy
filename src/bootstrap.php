@@ -1192,7 +1192,8 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     }
 
     $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
-        return $type->getParameter('version') > 1 || 'digest' !== $item['item']['type'];
+        return ($type->getParameter('version') > 1 || 'digest' !== $item['item']['type']) &&
+            ($type->getParameter('version') > 2 || 'press-package' !== $item['item']['type']);
     });
 
     $page = $request->query->get('page', 1);
@@ -1223,6 +1224,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=3',
     'application/vnd.elife.highlight-list+json; version=2',
     'application/vnd.elife.highlight-list+json; version=1'
 ));
