@@ -402,6 +402,17 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield $path = '/regional-collections' => [
+            $this->createRequest($path),
+            'application/vnd.elife.regional-collection-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/regional-collections') as $file) {
+            yield $path = '/regional-collections/'.$file->getBasename('.json') => [
+                $this->createRequest($path, 'application/vnd.elife.regional-collection+json; version=1'),
+                'application/vnd.elife.regional-collection+json; version=1',
+            ];
+        }
+
         yield $path = '/subjects' => [
             $this->createRequest($path),
             'application/vnd.elife.subject-list+json; version=1',
