@@ -135,6 +135,7 @@
             "stage": "published",
             "status": "poa",
             "id": "14107",
+            "version": 1,
             "doi": "10.7554/eLife.14107",
             "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
             "published": "2016-03-28T00:00:00Z",
@@ -159,6 +160,7 @@
             "stage": "published",
             "status": "vor",
             "id": "05770",
+            "version": 1,
             "image": {
                 "thumbnail": {
                     "alt": "",
