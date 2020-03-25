@@ -1868,7 +1868,7 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
 ));
 
 $app->get('/regional-collections', function (Request $request, Accept $type) use ($app) {
-    $collections = $app['regional-collections'];
+    $regionalCollections = $app['regional-collections'];
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
@@ -1876,18 +1876,18 @@ $app->get('/regional-collections', function (Request $request, Accept $type) use
     $containing = (array) $request->query->get('containing', []);
 
     if (false === empty($subjects)) {
-        $collections = array_filter($collections, function ($collection) use ($subjects) {
-            $collectionSubjects = array_map(function (array $subject) {
+        $regionalCollections = array_filter($regionalCollections, function ($regionalCollection) use ($subjects) {
+            $regionalCollectionsSubjects = array_map(function (array $subject) {
                 return $subject['id'];
-            }, $collection['subjects'] ?? []);
+            }, $regionalCollection['subjects'] ?? []);
 
-            return count(array_intersect($subjects, $collectionSubjects));
+            return count(array_intersect($subjects, $regionalCollectionsSubjects));
         });
     }
 
     if (false === empty($containing)) {
-        $collections = array_filter($collections, function ($collection) use ($containing) {
-            foreach ($collection['content'] as $item) {
+        $regionalCollections = array_filter($regionalCollections, function ($regionalCollection) use ($containing) {
+            foreach ($regionalCollection['content'] as $item) {
                 if (in_array("{$item['type']}/{$item['id']}", $containing)) {
                     return true;
                 }
@@ -1898,29 +1898,29 @@ $app->get('/regional-collections', function (Request $request, Accept $type) use
     }
 
     $content = [
-        'total' => count($collections),
+        'total' => count($regionalCollections),
         'items' => [],
     ];
 
     if ('asc' === $request->query->get('order', 'desc')) {
-        $collections = array_reverse($collections);
+        $regionalCollections = array_reverse($regionalCollections);
     }
 
-    $collections = array_slice($collections, ($page * $perPage) - $perPage, $perPage);
+    $regionalCollections = array_slice($regionalCollections, ($page * $perPage) - $perPage, $perPage);
 
-    if (0 === count($collections) && $page > 1) {
+    if (0 === count($regionalCollections) && $page > 1) {
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($collections as $i => $collection) {
-        unset($collection['editors']);
-        unset($collection['summary']);
-        unset($collection['content']);
-        unset($collection['relatedContent']);
-        unset($collection['podcastEpisodes']);
-        unset($collection['image']['banner']);
+    foreach ($regionalCollections as $i => $regionalCollection) {
+        unset($regionalCollection['editors']);
+        unset($regionalCollection['summary']);
+        unset($regionalCollection['content']);
+        unset($regionalCollection['relatedContent']);
+        unset($regionalCollection['podcastEpisodes']);
+        unset($regionalCollection['image']['banner']);
 
-        $content['items'][] = $collection;
+        $content['items'][] = $regionalCollection;
     }
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
