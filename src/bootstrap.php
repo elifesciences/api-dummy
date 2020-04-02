@@ -374,7 +374,7 @@ $app['recommendations'] = function () use ($app) {
 };
 
 $app['promtional-collections'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/promotional-collections');
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections');
 
     $promotionalCollections = [];
     foreach ($finder as $file) {
@@ -597,8 +597,8 @@ $app->get('/articles/{number}',
 
         $latestVersion = count($app['articles'][$number]['versions']);
 
-        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', array(),
-            $request->cookies->all(), array(), $request->server->all());
+        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', [],
+            $request->cookies->all(), [], $request->server->all());
 
         return $app->handle($subRequest, HttpKernelInterface::SUB_REQUEST, false);
     }
