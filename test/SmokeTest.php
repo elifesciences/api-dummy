@@ -406,7 +406,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             $this->createRequest($path),
             'application/vnd.elife.promotional-collection-list+json; version=1',
         ];
-        foreach ((new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/promotional-collections') as $file) {
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections') as $file) {
             yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
                 $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
                 'application/vnd.elife.promotional-collection+json; version=1',
