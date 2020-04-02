@@ -373,7 +373,7 @@ $app['recommendations'] = function () use ($app) {
     return $items;
 };
 
-$app['promtional-collections'] = function () use ($app) {
+$app['promotional-collections'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections');
 
     $promotionalCollections = [];
