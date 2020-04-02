@@ -373,21 +373,21 @@ $app['recommendations'] = function () use ($app) {
     return $items;
 };
 
-$app['regional-collections'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/regional-collections');
+$app['promtional-collections'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/promotional-collections');
 
-    $collections = [];
+    $promotionalCollections = [];
     foreach ($finder as $file) {
         $json = json_decode($file->getContents(), true);
-        $collections[$json['id']] = $json;
+        $promotionalCollections[$json['id']] = $json;
     }
 
-    uasort($collections, function (array $a, array $b) {
+    uasort($promotionalCollections, function (array $a, array $b) {
         return DateTimeImmutable::createFromFormat(DATE_ATOM,
                 $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
     });
 
-    return $collections;
+    return $promotionalCollections;
 };
 
 $app['subjects'] = function () use ($app) {
@@ -1829,6 +1829,89 @@ $app->get('/profiles/{id}',
     'application/vnd.elife.profile+json; version=1'
 ));
 
+$app->get('/promotional-collections', function (Request $request, Accept $type) use ($app) {
+    $promotionalCollections = $app['promotional-collections'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+    $subjects = (array) $request->query->get('subject', []);
+    $containing = (array) $request->query->get('containing', []);
+
+    if (false === empty($subjects)) {
+        $promotionalCollections = array_filter($promotionalCollections, function ($promotionalCollection) use ($subjects) {
+            $promotionalCollectionsSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $promotionalCollection['subjects'] ?? []);
+
+            return count(array_intersect($subjects, $promotionalCollectionsSubjects));
+        });
+    }
+
+    if (false === empty($containing)) {
+        $promotionalCollections = array_filter($promotionalCollections, function ($promotionalCollection) use ($containing) {
+            foreach ($promotionalCollection['content'] as $item) {
+                if (in_array("{$item['type']}/{$item['id']}", $containing)) {
+                    return true;
+                }
+            }
+
+            return false;
+        });
+    }
+
+    $content = [
+        'total' => count($promotionalCollections),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $promotionalCollections = array_reverse($promotionalCollections);
+    }
+
+    $promotionalCollections = array_slice($promotionalCollections, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($promotionalCollections) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($promotionalCollections as $i => $promotionalCollection) {
+        unset($promotionalCollection['editors']);
+        unset($promotionalCollection['summary']);
+        unset($promotionalCollection['content']);
+        unset($promotionalCollection['relatedContent']);
+        unset($promotionalCollection['podcastEpisodes']);
+        unset($promotionalCollection['image']['banner']);
+
+        $content['items'][] = $promotionalCollection;
+    }
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.promotional-collection-list+json; version=1'
+));
+
+$app->get('/promotional-collections/{id}', function (Accept $type, string $id) use ($app) {
+    if (false === isset($app['promotional-collections'][$id])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $promotionalCollection = $app['promotional-collections'][$id];
+
+    return new Response(
+        json_encode(array_filter($promotionalCollection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        ['Content-Type' => $type->getNormalizedValue()]
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.promotional-collection+json; version=1'
+));
+
 $app->get('/recommendations/{contentType}/{id}', function (Request $request, Accept $type, string $contentType, string $id) use ($app) {
     if (false === isset($app['recommendations'][$contentType][$id])) {
         throw new NotFoundHttpException('Not found');
@@ -1865,97 +1948,6 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
     );
 })->before($app['negotiate.accept'](
     'application/vnd.elife.recommendations+json; version=1'
-));
-
-$app->get('/regional-collections', function (Request $request, Accept $type) use ($app) {
-    $regionalCollections = $app['regional-collections'];
-
-    $page = $request->query->get('page', 1);
-    $perPage = $request->query->get('per-page', 10);
-    $subjects = (array) $request->query->get('subject', []);
-    $containing = (array) $request->query->get('containing', []);
-
-    if (false === empty($subjects)) {
-        $regionalCollections = array_filter($regionalCollections, function ($regionalCollection) use ($subjects) {
-            $regionalCollectionsSubjects = array_map(function (array $subject) {
-                return $subject['id'];
-            }, $regionalCollection['subjects'] ?? []);
-
-            return count(array_intersect($subjects, $regionalCollectionsSubjects));
-        });
-    }
-
-    if (false === empty($containing)) {
-        $regionalCollections = array_filter($regionalCollections, function ($regionalCollection) use ($containing) {
-            foreach ($regionalCollection['content'] as $item) {
-                if (in_array("{$item['type']}/{$item['id']}", $containing)) {
-                    return true;
-                }
-            }
-
-            return false;
-        });
-    }
-
-    $content = [
-        'total' => count($regionalCollections),
-        'items' => [],
-    ];
-
-    if ('asc' === $request->query->get('order', 'desc')) {
-        $regionalCollections = array_reverse($regionalCollections);
-    }
-
-    $regionalCollections = array_slice($regionalCollections, ($page * $perPage) - $perPage, $perPage);
-
-    if (0 === count($regionalCollections) && $page > 1) {
-        throw new NotFoundHttpException('No page '.$page);
-    }
-
-    foreach ($regionalCollections as $i => $regionalCollection) {
-        unset($regionalCollection['editors']);
-        unset($regionalCollection['summary']);
-        unset($regionalCollection['content']);
-        unset($regionalCollection['relatedContent']);
-        unset($regionalCollection['podcastEpisodes']);
-        unset($regionalCollection['image']['banner']);
-
-        $content['items'][] = $regionalCollection;
-    }
-
-    $headers = ['Content-Type' => $type->getNormalizedValue()];
-
-    return new Response(
-        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
-        Response::HTTP_OK,
-        $headers
-    );
-})->before($app['negotiate.accept'](
-    'application/vnd.elife.regional-collection-list+json; version=1'
-));
-
-$app->get('/regional-collections/{id}',
-    function (Accept $type, string $id) use ($app) {
-        if (false === isset($app['regional-collections'][$id])) {
-            throw new NotFoundHttpException('Not found');
-        }
-
-        $collection = $app['regional-collections'][$id];
-
-        foreach (['content', 'relatedContent'] as $content) {
-            $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
-                return $type->getParameter('version') > 1 || !in_array($item['type'], ['digest', 'event']);
-            });
-        }
-
-        return new Response(
-            json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
-            Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
-        );
-    }
-)->before($app['negotiate.accept'](
-    'application/vnd.elife.regional-collection+json; version=1'
 ));
 
 $app->get('/search', function (Request $request, Accept $type) use ($app) {
