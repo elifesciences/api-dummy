@@ -37,16 +37,6 @@
             }
         }
     },
-    "subjects": [
-        {
-            "id": "epidemiology-global-health",
-            "name": "Epidemiology and Global Health"
-        },
-        {
-            "id": "microbiology-infectious-disease",
-            "name": "Microbiology and Infectious Disease"
-        }
-    ],
     "content": [
         {
             "type": "blog-article",
@@ -88,101 +78,6 @@
                 {
                     "id": "biochemistry-chemical-biology",
                     "name": "Biochemistry and Chemical Biology"
-                }
-            ]
-        }
-    ],
-    "relatedContent": [
-        {
-            "type": "research-article",
-            "stage": "published",
-            "status": "poa",
-            "id": "14107",
-            "version": 1,
-            "doi": "10.7554/eLife.14107",
-            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
-            "published": "2016-03-28T00:00:00Z",
-            "versionDate": "2016-03-28T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 5,
-            "elocationId": "e14107",
-            "authorLine": "Yongjian Huang et al",
-            "subjects": [
-                {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
-                },
-                {
-                    "id": "biophysics-structural-biology",
-                    "name": "Biophysics and Structural Biology"
-                }
-            ]
-        },
-        {
-            "type": "editorial",
-            "stage": "published",
-            "status": "vor",
-            "id": "05770",
-            "version": 1,
-            "image": {
-                "thumbnail": {
-                    "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif",
-                    "source": {
-                        "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif/full/full/0/default.jpg",
-                        "filename": "elife-05770-fig1-v1.jpg"
-                    },
-                    "size": {
-                        "width": 2740,
-                        "height": 3877
-                    }
-                }
-            },
-            "doi": "10.7554/eLife.05770",
-            "title": "The pleasure of publishing",
-            "published": "2015-01-06T00:00:00Z",
-            "versionDate": "2016-03-28T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 5,
-            "elocationId": "e05770",
-            "authorLine": "Vivek Malhotra, Eve Marder",
-            "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
-        },
-        {
-            "type": "event",
-            "id": "2",
-            "title": "eLife Continuum webinar",
-            "published": "2016-07-01T00:00:00Z",
-            "starts": "2016-08-04T15:00:00Z",
-            "ends": "2016-08-04T16:00:00Z"
-        }
-    ],
-    "podcastEpisodes": [
-        {
-            "number": 4,
-            "title": "September 2013",
-            "impactStatement": "In this episode of the eLife podcast we discuss how flatworms can grow new heads and tails, how photosynthesis has evolved over time, social interactions between mice, the properties of undead cells, and interactions between steroids and genes.",
-            "published": "2013-08-21T12:54:08Z",
-            "image": {
-                "thumbnail": {
-                    "alt": "",
-                    "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
-                    "source": {
-                        "mediaType": "image/png",
-                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
-                        "filename": "episode-4-elife-podcast.png"
-                    },
-                    "size": {
-                        "width": 1800,
-                        "height": 900
-                    }
-                }
-            },
-            "sources": [
-                {
-                    "mediaType": "audio/mpeg",
-                    "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
                 }
             ]
         }
