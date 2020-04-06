@@ -580,8 +580,8 @@ $app->get('/articles/{number}',
 
         $latestVersion = count($app['articles'][$number]['versions']);
 
-        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', array(),
-            $request->cookies->all(), array(), $request->server->all());
+        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', [],
+            $request->cookies->all(), [], $request->server->all());
 
         return $app->handle($subRequest, HttpKernelInterface::SUB_REQUEST, false);
     }
