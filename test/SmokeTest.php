@@ -165,7 +165,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.blog-article+json; version=2',
             ];
-            if ('359325' !== $file->getBasename('.json')) {
+            if (!in_array($file->getBasename('.json'), ['359325', '378207'])) {
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.blog-article+json; version=1'),
                     'application/vnd.elife.blog-article+json; version=1',
