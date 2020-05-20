@@ -650,6 +650,7 @@ $app->get('/articles/{number}/versions',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.article-history+json; version=2',
     'application/vnd.elife.article-history+json; version=1'
 ));
 
@@ -669,12 +670,14 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=4',
                 'application/vnd.elife.article-vor+json; version=3',
                 'application/vnd.elife.article-vor+json; version=2',
                 'application/vnd.elife.article-vor+json; version=1',
             ];
         } else {
             $accepts = [
+                'application/vnd.elife.article-poa+json; version=3',
                 'application/vnd.elife.article-poa+json; version=2',
                 'application/vnd.elife.article-poa+json; version=1',
             ];
@@ -683,7 +686,7 @@ $app->get('/articles/{number}/versions/{version}',
         $app['content_negotiator.accept']->negotiate($request, $accepts);
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
-        if ('26231' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+        if (in_array($number, ['15691', '26231']) && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
             throw new NotAcceptableHttpException('This article VoR requires version 3.');
         }
 
@@ -2291,6 +2294,105 @@ $app->after(function (Request $request, Response $response, Application $app) {
 
     $response->headers->set('ETag', md5($response->getContent()));
     $response->isNotModified($request);
+});
+
+$app->after(function (Request $request, Response $response, Application $app) {
+    $content = json_decode($response->getContent(), true);
+    $accept = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
+    if ($accept instanceof Accept) {
+        $type = $accept->getType();
+        $version = $accept->getParameter('version');
+
+        if ('application/vnd.elife.article-list+json' === $type && $version < 2) {
+            $content['items'] = array_map(function ($article) {
+                if (!empty($article['abstract']['content'])) {
+                    $abstract = [];
+                    foreach ($article['abstract']['content'] as $item) {
+                        if ('paragraph' === $item['type']) {
+                            $abstract[] = $item;
+                        } elseif ('section' === $item['type']) {
+                            foreach ($item['content'] as $k => $sectionItem) {
+                                if (0 === $k) {
+                                    $sectionItem['text'] = '<b>' . $item['title'] . '</b>: ' . $sectionItem['text'];
+                                }
+                                $abstract[] = $sectionItem;
+                            }
+                        }
+                    }
+                    $article['abstract']['content'] = $abstract;
+                }
+
+                return $article;
+            }, $content['items']);
+            $response->setContent(json_encode($content));
+        } elseif (
+            'application/vnd.elife.article-vor+json' === $type && $version < 4 ||
+            'application/vnd.elife.article-poa+json' === $type && $version < 3
+        ) {
+            if (!empty($content['abstract']['content'])) {
+                $abstract = [];
+                foreach ($content['abstract']['content'] as $item) {
+                    if ('paragraph' === $item['type']) {
+                        $abstract[] = $item;
+                    } elseif ('section' === $item['type']) {
+                        foreach ($item['content'] as $k => $sectionItem) {
+                            if (0 === $k) {
+                                $sectionItem['text'] = '<b>' . $item['title'] . '</b>: ' . $sectionItem['text'];
+                            }
+                            $abstract[] = $sectionItem;
+                        }
+                    }
+                }
+                $content['abstract']['content'] = $abstract;
+                $response->setContent(json_encode($content));
+            }
+        }
+    } elseif (
+        isset($content['status']) &&
+        in_array($content['status'], ['vor', 'poa']) &&
+        !empty($content['abstract']['content'])
+    ) {
+        if ('vor' === $content['status']) {
+            $accepts = [
+                'application/vnd.elife.article-vor+json; version=4',
+                'application/vnd.elife.article-vor+json; version=3',
+                'application/vnd.elife.article-vor+json; version=2',
+                'application/vnd.elife.article-vor+json; version=1',
+            ];
+        } else {
+            $accepts = [
+                'application/vnd.elife.article-poa+json; version=3',
+                'application/vnd.elife.article-poa+json; version=2',
+                'application/vnd.elife.article-poa+json; version=1',
+            ];
+        }
+
+        $app['content_negotiator.accept']->negotiate($request, $accepts);
+        $accept = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
+        $type = $accept->getType();
+        $version = $accept->getParameter('version');
+
+        if (
+            'application/vnd.elife.article-vor+json' === $type && $version < 4 ||
+            'application/vnd.elife.article-poa+json' === $type && $version < 3
+        ) {
+            $abstract = [];
+            foreach ($content['abstract']['content'] as $item) {
+                if ('paragraph' === $item['type']) {
+                    $abstract[] = $item;
+                } elseif ('section' === $item['type']) {
+                    foreach ($item['content'] as $k => $sectionItem) {
+                        if (0 === $k) {
+                            $sectionItem['text'] = '<b>' . $item['title'] . '</b>: ' . $sectionItem['text'];
+                        }
+                        $abstract[] = $sectionItem;
+                    }
+                }
+            }
+            $content['abstract']['content'] = $abstract;
+            $response->setContent(json_encode($content));
+        }
+    }
 });
 
 return $app;
