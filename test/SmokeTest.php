@@ -94,14 +94,42 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield '/articles wrong version' => [
+            $this->createRequest('/annual-reports', 'application/vnd.elife.article-list+json; version=1'),
+            'application/problem+json',
+            406,
+        ];
+
+        yield '/articles/15691 wrong version' => [
+            $this->createRequest('/articles/15691', 'application/vnd.elife.article-vor+json; version=3'),
+            'application/problem+json',
+            406,
+        ];
+
+        yield '/articles/15691/versions wrong version' => [
+            $this->createRequest('articles/15691/versions', 'application/vnd.elife.article-history+json; version=1'),
+            'application/problem+json',
+            406,
+        ];
+
         yield $path = '/articles' => [
             $this->createRequest($path),
-            'application/vnd.elife.article-list+json; version=1',
+            'application/vnd.elife.article-list+json; version=2',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
             $poaMinimum = 1;
-            $vorMinimum = in_array($file->getBasename('.json'), ['15691', '26231']) ? 3 : 1;
+            switch ($file->getBasename('.json')) {
+                case '15691':
+                    $vorMinimum = 4;
+                    break;
+                case '26231':
+                    $vorMinimum = 3;
+                    break;
+                default:
+                    $vorMinimum = 1;
+            }
+            $historyMinimun = '15691' === $file->getBasename('.json') ? 2 : 1;
 
             yield "{$path} version highest" => [
                 $this->createRequest($path),
@@ -118,12 +146,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
             ];
 
-            yield $path = '/articles/'.$file->getBasename('.json').'/versions' => [
+            $path = '/articles/'.$file->getBasename('.json').'/versions';
+            yield "{$path} version highest" => [
                 $this->createRequest($path),
-                [
-                    'application/vnd.elife.article-history+json; version=2',
-                    'application/vnd.elife.article-history+json; version=1',
-                ],
+                'application/vnd.elife.article-history+json; version=2',
+            ];
+            yield "{$path} version lowest" => [
+                $this->createRequest($path, 'application/vnd.elife.article-history+json; version='.$historyMinimun),
+                'application/vnd.elife.article-history+json; version='.$historyMinimun,
             ];
 
             $path = '/articles/'.$file->getBasename('.json').'/versions/1';
@@ -144,7 +174,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
 
             yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
                 $this->createRequest($path),
-                'application/vnd.elife.article-related+json; version=1',
+                'application/vnd.elife.article-related+json; version=2',
             ];
         }
 
@@ -188,8 +218,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
             $path = '/collections/'.$file->getBasename('.json');
-            yield "{$path} version 2" => [
+            yield "{$path} version 3" => [
                 $this->createRequest($path),
+                'application/vnd.elife.collection+json; version=3',
+            ];
+            yield "{$path} version 2" => [
+                $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
                 'application/vnd.elife.collection+json; version=2',
             ];
             yield "{$path} version 1" => [
@@ -198,18 +232,28 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
-        yield $path = '/community' => [
+        $path = '/community';
+        yield "{$path} version 2" => [
             $this->createRequest($path),
+            'application/vnd.elife.community-list+json; version=2',
+        ];
+        yield "{$path} version 1" => [
+            $this->createRequest($path, 'application/vnd.elife.community-list+json; version=1'),
             'application/vnd.elife.community-list+json; version=1',
         ];
 
-        yield $path = '/covers' => [
+        $path = '/covers';
+        yield "{$path} version 2" => [
             $this->createRequest($path),
+            'application/vnd.elife.cover-list+json; version=2',
+        ];
+        yield "{$path} version 1" => [
+            $this->createRequest($path, 'application/vnd.elife.cover-list+json; version=1'),
             'application/vnd.elife.cover-list+json; version=1',
         ];
         yield $path = '/covers?start-date=2017-01-01&end-date=2017-01-01' => [
             $this->createRequest($path),
-            'application/vnd.elife.cover-list+json; version=1',
+            'application/vnd.elife.cover-list+json; version=2',
         ];
         yield $path = '/covers?start-date=2017-02-29' => [
             $this->createRequest($path),
@@ -226,8 +270,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/problem+json',
             400,
         ];
-        yield $path = '/covers/current' => [
+
+        $path = '/covers/current';
+        yield "{$path} version 2" => [
             $this->createRequest($path),
+            'application/vnd.elife.cover-list+json; version=2',
+        ];
+        yield "{$path} version 1" => [
+            $this->createRequest($path, 'application/vnd.elife.cover-list+json; version=1'),
             'application/vnd.elife.cover-list+json; version=1',
         ];
 
@@ -236,8 +286,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.digest-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/digests') as $file) {
-            yield $path = '/digests/'.$file->getBasename('.json') => [
+            $path = '/digests/'.$file->getBasename('.json');
+
+            yield "{$path} version 2" => [
                 $this->createRequest($path),
+                'application/vnd.elife.digest+json; version=2',
+            ];
+            yield "{$path} version 1" => [
+                $this->createRequest($path, 'application/vnd.elife.digest+json; version=1'),
                 'application/vnd.elife.digest+json; version=1',
             ];
         }
@@ -261,8 +317,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
 
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights') as $file) {
             $path = '/highlights/'.$file->getBasename('.json');
-            yield "{$path} version 3" => [
+
+            yield "{$path} version 4" => [
                 $this->createRequest($path),
+                'application/vnd.elife.highlight-list+json; version=4',
+            ];
+            yield "{$path} version 3" => [
+                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=3'),
                 'application/vnd.elife.highlight-list+json; version=3',
             ];
             yield "{$path} version 2" => [
@@ -358,8 +419,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.podcast-episode-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/podcast-episodes') as $file) {
-            yield $path = '/podcast-episodes/'.$file->getBasename('.json') => [
+            $path = '/podcast-episodes/'.$file->getBasename('.json');
+            yield "{$path} version 2" => [
                 $this->createRequest($path),
+                'application/vnd.elife.podcast-episode+json; version=2',
+            ];
+            yield "{$path} version 1" => [
+                $this->createRequest($path, 'application/vnd.elife.podcast-episode+json; version=1'),
                 'application/vnd.elife.podcast-episode+json; version=1',
             ];
         }
@@ -369,10 +435,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.press-package-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages') as $file) {
-            $path = $path = '/press-packages/'.$file->getBasename('.json');
-
-            yield "{$path} version 3" => [
+            $path = '/press-packages/'.$file->getBasename('.json');
+            yield "{$path} version 4" => [
                 $this->createRequest($path),
+                'application/vnd.elife.press-package+json; version=4',
+            ];
+            yield "{$path} version 3" => [
+                $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
                 'application/vnd.elife.press-package+json; version=3',
             ];
             yield "{$path} version 2" => [
@@ -410,7 +479,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.promotional-collection-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections') as $file) {
-            yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
+            $path = '/promotional-collections/'.$file->getBasename('.json');
+
+            yield "{$path} version 2" => [
+                $this->createRequest($path),
+                'application/vnd.elife.promotional-collection+json; version=2',
+            ];
+            yield "{$path} version 1" => [
                 $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
                 'application/vnd.elife.promotional-collection+json; version=1',
             ];
@@ -427,21 +502,27 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield '/search wrong version' => [
+            $this->createRequest('/search', 'application/vnd.elife.search+json; version=1'),
+            'application/problem+json',
+            406,
+        ];
+
         yield $path = '/search' => [
             $this->createRequest($path),
-            'application/vnd.elife.search+json; version=1',
+            'application/vnd.elife.search+json; version=2',
         ];
         yield $path = '/search?for=cell' => [
             $this->createRequest($path),
-            'application/vnd.elife.search+json; version=1',
+            'application/vnd.elife.search+json; version=2',
         ];
         yield $path = '/search?subject[]=cell-biology' => [
             $this->createRequest($path),
-            'application/vnd.elife.search+json; version=1',
+            'application/vnd.elife.search+json; version=2',
         ];
         yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
             $this->createRequest($path),
-            'application/vnd.elife.search+json; version=1',
+            'application/vnd.elife.search+json; version=2',
         ];
         yield $path = '/search?start-date=2017-02-29' => [
             $this->createRequest($path),
