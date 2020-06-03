@@ -683,7 +683,11 @@ $app->get('/articles/{number}/versions/{version}',
         $app['content_negotiator.accept']->negotiate($request, $accepts);
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
-        if ('26231' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+        if ('36258' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 2) {
+            throw new NotAcceptableHttpException('This article PoA requires version 2.');
+        }
+
+        if (in_array($number, ['26231', '36258']) && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
             throw new NotAcceptableHttpException('This article VoR requires version 3.');
         }
 
