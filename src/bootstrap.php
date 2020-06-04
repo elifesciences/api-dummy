@@ -800,7 +800,7 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
-        if ($type->getParameter('version') < 2 && '359325' === $id) {
+        if ($type->getParameter('version') < 2 && in_array($id, ['359325', '369365'])) {
             throw new NotAcceptableHttpException('This blog article requires version 2.');
         }
 
