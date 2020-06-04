@@ -356,6 +356,23 @@ $app['recommendations'] = function () use ($app) {
     return $items;
 };
 
+$app['promotional-collections'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections');
+
+    $promotionalCollections = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $promotionalCollections[$json['id']] = $json;
+    }
+
+    uasort($promotionalCollections, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
+    });
+
+    return $promotionalCollections;
+};
+
 $app['subjects'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects');
 
@@ -563,8 +580,8 @@ $app->get('/articles/{number}',
 
         $latestVersion = count($app['articles'][$number]['versions']);
 
-        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', array(),
-            $request->cookies->all(), array(), $request->server->all());
+        $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', [],
+            $request->cookies->all(), [], $request->server->all());
 
         return $app->handle($subRequest, HttpKernelInterface::SUB_REQUEST, false);
     }
@@ -762,7 +779,7 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
-        if ($type->getParameter('version') < 2 && '359325' === $id) {
+        if ($type->getParameter('version') < 2 && in_array($id, ['359325', '369365'])) {
             throw new NotAcceptableHttpException('This blog article requires version 2.');
         }
 
@@ -1175,7 +1192,8 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     }
 
     $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
-        return $type->getParameter('version') > 1 || 'digest' !== $item['item']['type'];
+        return ($type->getParameter('version') > 1 || 'digest' !== $item['item']['type']) &&
+            ($type->getParameter('version') > 2 || 'press-package' !== $item['item']['type']);
     });
 
     $page = $request->query->get('page', 1);
@@ -1206,6 +1224,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=3',
     'application/vnd.elife.highlight-list+json; version=2',
     'application/vnd.elife.highlight-list+json; version=1'
 ));
@@ -1755,6 +1774,89 @@ $app->get('/profiles/{id}',
     }
 )->before($app['negotiate.accept'](
     'application/vnd.elife.profile+json; version=1'
+));
+
+$app->get('/promotional-collections', function (Request $request, Accept $type) use ($app) {
+    $promotionalCollections = $app['promotional-collections'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+    $subjects = (array) $request->query->get('subject', []);
+    $containing = (array) $request->query->get('containing', []);
+
+    if (false === empty($subjects)) {
+        $promotionalCollections = array_filter($promotionalCollections, function ($promotionalCollection) use ($subjects) {
+            $promotionalCollectionsSubjects = array_map(function (array $subject) {
+                return $subject['id'];
+            }, $promotionalCollection['subjects'] ?? []);
+
+            return count(array_intersect($subjects, $promotionalCollectionsSubjects));
+        });
+    }
+
+    if (false === empty($containing)) {
+        $promotionalCollections = array_filter($promotionalCollections, function ($promotionalCollection) use ($containing) {
+            foreach ($promotionalCollection['content'] as $item) {
+                if (in_array("{$item['type']}/{$item['id']}", $containing)) {
+                    return true;
+                }
+            }
+
+            return false;
+        });
+    }
+
+    $content = [
+        'total' => count($promotionalCollections),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $promotionalCollections = array_reverse($promotionalCollections);
+    }
+
+    $promotionalCollections = array_slice($promotionalCollections, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($promotionalCollections) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($promotionalCollections as $i => $promotionalCollection) {
+        unset($promotionalCollection['editors']);
+        unset($promotionalCollection['summary']);
+        unset($promotionalCollection['content']);
+        unset($promotionalCollection['relatedContent']);
+        unset($promotionalCollection['podcastEpisodes']);
+        unset($promotionalCollection['image']['banner']);
+
+        $content['items'][] = $promotionalCollection;
+    }
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.promotional-collection-list+json; version=1'
+));
+
+$app->get('/promotional-collections/{id}', function (Accept $type, string $id) use ($app) {
+    if (false === isset($app['promotional-collections'][$id])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $promotionalCollection = $app['promotional-collections'][$id];
+
+    return new Response(
+        json_encode(array_filter($promotionalCollection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        ['Content-Type' => $type->getNormalizedValue()]
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.promotional-collection+json; version=1'
 ));
 
 $app->get('/recommendations/{contentType}/{id}', function (Request $request, Accept $type, string $contentType, string $id) use ($app) {

@@ -165,7 +165,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.blog-article+json; version=2',
             ];
-            if ('359325' !== $file->getBasename('.json')) {
+            if (!in_array($file->getBasename('.json'), ['359325', '369365'])) {
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.blog-article+json; version=1'),
                     'application/vnd.elife.blog-article+json; version=1',
@@ -258,8 +258,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
 
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights') as $file) {
             $path = '/highlights/'.$file->getBasename('.json');
-            yield "{$path} version 2" => [
+            yield "{$path} version 3" => [
                 $this->createRequest($path),
+                'application/vnd.elife.highlight-list+json; version=3',
+            ];
+            yield "{$path} version 2" => [
+                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
                 'application/vnd.elife.highlight-list+json; version=2',
             ];
             yield "{$path} version 1" => [
@@ -373,6 +377,17 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield $path = '/profiles/'.$file->getBasename('.json') => [
                 $this->createRequest($path),
                 'application/vnd.elife.profile+json; version=1',
+            ];
+        }
+
+        yield $path = '/promotional-collections' => [
+            $this->createRequest($path),
+            'application/vnd.elife.promotional-collection-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections') as $file) {
+            yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
+                $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
+                'application/vnd.elife.promotional-collection+json; version=1',
             ];
         }
 

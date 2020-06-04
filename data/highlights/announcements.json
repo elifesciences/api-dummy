@@ -54,5 +54,22 @@
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
         }
+    },
+    {
+        "title": "New species of human relative discovered in South African cave",
+        "item": {
+            "type": "press-package",
+            "id": "250425",
+            "title": "New species of human relative discovered in South African cave",
+            "impactStatement": "The discovery of a new species of human relative was announced today (Sept. 10) by the University of the Witwatersrand (Wits University), the National Geographic Society and the South African Department of Science and Technology/ National Research Foundation (DST/NRF). Besides shedding light on the origins and diversity of our genus, the new species, <i>Homo naledi</i>, appears to have intentionally deposited bodies of its dead in a remote cave chamber, a behaviour previously thought limited to humans.",
+            "published": "2015-09-10T13:45:00Z",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ]
+        }
+
     }
 ]

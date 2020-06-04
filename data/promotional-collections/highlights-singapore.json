@@ -1,0 +1,85 @@
+{
+    "id": "highlights-singapore",
+    "title": "Highlights from Singapore",
+    "impactStatement": "A selection of research from scientists based in institutions in Singapore.",
+    "summary": [
+        {
+            "type": "paragraph",
+            "text": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal."
+        }
+    ],
+    "published": "2020-01-20T11:19:26Z",
+    "image": {
+        "banner": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
+        }
+    },
+    "content": [
+        {
+            "type": "blog-article",
+            "id": "359325",
+            "title": "Media coverage: Slime can see",
+            "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
+            "published": "2016-07-08T08:33:25Z",
+            "subjects": [
+                {
+                    "id": "biophysics-structural-biology",
+                    "name": "Biophysics and Structural Biology"
+                }
+            ]
+        },
+        {
+            "type": "digest",
+            "id": "f0f08e8d6ee3",
+            "title": "Neighborhood watch",
+            "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+            "stage": "published",
+            "published": "2018-07-06T09:06:01Z",
+            "updated": "2018-07-06T16:23:24Z",
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                        "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                    },
+                    "size": {
+                        "width": 1152,
+                        "height": 864
+                    }
+                }
+            },
+            "subjects": [
+                {
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
+                }
+            ]
+        }
+    ]
+}
