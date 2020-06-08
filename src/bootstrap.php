@@ -261,23 +261,6 @@ $app['interviews'] = function () use ($app) {
     return $interviews;
 };
 
-$app['medium-articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/medium-articles');
-
-    $articles = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $articles[] = $json;
-    }
-
-    usort($articles, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
-
-    return $articles;
-};
-
 $app['metrics'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics');
 
@@ -1434,42 +1417,6 @@ $app->get('/labs-posts/{id}',
 )->before($app['negotiate.accept'](
     'application/vnd.elife.labs-post+json; version=2',
     'application/vnd.elife.labs-post+json; version=1'
-));
-
-$app->get('/medium-articles', function (Request $request, Accept $type) use ($app) {
-    $articles = $app['medium-articles'];
-
-    $page = $request->query->get('page', 1);
-    $perPage = $request->query->get('per-page', 10);
-
-    $content = [
-        'total' => count($articles),
-        'items' => [],
-    ];
-
-    if ('asc' === $request->query->get('order', 'desc')) {
-        $articles = array_reverse($articles);
-    }
-
-    $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
-
-    if (0 === count($articles) && $page > 1) {
-        throw new NotFoundHttpException('No page '.$page);
-    }
-
-    foreach ($articles as $i => $article) {
-        $content['items'][] = $article;
-    }
-
-    $headers = ['Content-Type' => $type->getNormalizedValue()];
-
-    return new Response(
-        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
-        Response::HTTP_OK,
-        $headers
-    );
-})->before($app['negotiate.accept'](
-    'application/vnd.elife.medium-article-list+json; version=1'
 ));
 
 $app->get('/metrics/{contentType}/{id}/citations',
