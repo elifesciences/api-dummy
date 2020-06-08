@@ -317,11 +317,6 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
-        yield $path = '/medium-articles' => [
-            $this->createRequest($path),
-            'application/vnd.elife.medium-article-list+json; version=1',
-        ];
-
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics') as $file) {
             $parts = explode('-', $file->getBasename('.json'));
 
