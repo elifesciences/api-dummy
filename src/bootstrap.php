@@ -1404,6 +1404,10 @@ $app->get('/labs-posts/{id}',
 
         $lab = $app['labs'][$id];
 
+        if ($type->getParameter('version') < 2 && '80000003' === $id) {
+            throw new NotAcceptableHttpException('This labs post requires version 2.');
+        }
+
         return new Response(
             json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
