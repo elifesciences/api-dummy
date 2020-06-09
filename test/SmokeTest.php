@@ -100,8 +100,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
-            $poaMinimum = 1;
-            $vorMinimum = 26231 == $file->getBasename('.json') ? 3 : 1;
+            $poaMinimum = '36258' === $file->getBasename('.json') ? 2 : 1;
+            $vorMinimum = in_array($file->getBasename('.json'), ['26231', '36258']) ? 3 : 1;
 
             yield "{$path} version highest" => [
                 $this->createRequest($path),
