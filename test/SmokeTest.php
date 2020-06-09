@@ -165,7 +165,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.blog-article+json; version=2',
             ];
-            if (!in_array($file->getBasename('.json'), ['359325', '369365'])) {
+            if (!in_array($file->getBasename('.json'), ['359325', '369365', '378207'])) {
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.blog-article+json; version=1'),
                     'application/vnd.elife.blog-article+json; version=1',
@@ -311,16 +311,19 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.labs-post+json; version=2',
             ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.labs-post+json; version=1'),
-                'application/vnd.elife.labs-post+json; version=1',
-            ];
+            if ('80000003' !== $file->getBasename('.json')) {
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.labs-post+json; version=1'),
+                    'application/vnd.elife.labs-post+json; version=1',
+                ];
+            } else {
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.labs-post+json; version=1'),
+                    'application/problem+json',
+                    406,
+                ];
+            }
         }
-
-        yield $path = '/medium-articles' => [
-            $this->createRequest($path),
-            'application/vnd.elife.medium-article-list+json; version=1',
-        ];
 
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics') as $file) {
             $parts = explode('-', $file->getBasename('.json'));
