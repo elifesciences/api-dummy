@@ -101,13 +101,23 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
             $poaMinimum = '36258' === $file->getBasename('.json') ? 2 : 1;
-            $vorMinimum = in_array($file->getBasename('.json'), ['26231', '36258']) ? 3 : 1;
+            switch ($file->getBasename('.json')) {
+                case '15691':
+                    $vorMinimum = 4;
+                    break;
+                case '26231':
+                case '36258':
+                    $vorMinimum = 3;
+                    break;
+                default:
+                    $vorMinimum = 1;
+            }
 
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
-                    'application/vnd.elife.article-poa+json; version=2',
-                    'application/vnd.elife.article-vor+json; version=3',
+                    'application/vnd.elife.article-poa+json; version=3',
+                    'application/vnd.elife.article-vor+json; version=4',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -127,8 +137,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
-                    'application/vnd.elife.article-poa+json; version=2',
-                    'application/vnd.elife.article-vor+json; version=3',
+                    'application/vnd.elife.article-poa+json; version=3',
+                    'application/vnd.elife.article-vor+json; version=4',
                 ],
             ];
             yield "{$path} version lowest" => [
