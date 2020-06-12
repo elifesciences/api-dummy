@@ -94,15 +94,6 @@
                     "name": "Genomics and Evolutionary Biology"
                 }
             ],
-            "abstract": {
-                "doi": "10.7554/eLife.00569.001",
-                "content": [
-                    {
-                        "type": "paragraph",
-                        "text": "<i>Botryllus schlosseri</i> is a colonial urochordate that follows the chordate plan of development following sexual reproduction, but invokes a stem cell-mediated budding program during subsequent rounds of asexual reproduction. As urochordates are considered to be the closest living invertebrate relatives of vertebrates, they are ideal subjects for whole genome sequence analyses. Using a novel method for high-throughput sequencing of eukaryotic genomes, we sequenced and assembled 580 Mbp of the <i>B. schlosseri</i> genome. The genome assembly is comprised of nearly 14,000 intron-containing predicted genes, and 13,500 intron-less predicted genes, 40% of which could be confidently parceled into 13 (of 16 haploid) chromosomes. A comparison of homologous genes between <i>B. schlosseri</i> and other diverse taxonomic groups revealed genomic events underlying the evolution of vertebrates and lymphoid-mediated immunity. The <i>B. schlosseri</i> genome is a community resource for studying alternative modes of reproduction, natural transplantation reactions, and stem cell-mediated regeneration."
-                    }
-                ]
-            },
             "impactStatement": "The <i>Botryllus schlosseri</i> genome yields insights into the evolution of hematopoiesis."
         }
     ]
