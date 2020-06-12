@@ -261,23 +261,6 @@ $app['interviews'] = function () use ($app) {
     return $interviews;
 };
 
-$app['medium-articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/medium-articles');
-
-    $articles = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $articles[] = $json;
-    }
-
-    usort($articles, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
-
-    return $articles;
-};
-
 $app['metrics'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics');
 
@@ -586,7 +569,7 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.article-list+json; version=2'
+    'application/vnd.elife.article-list+json; version=1'
 ));
 
 $app->get('/articles/{number}',
@@ -608,10 +591,6 @@ $app->get('/articles/{number}/versions',
     function (Accept $type, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
-        }
-
-        if ('15691' === $number && $type->getParameter('version') < 2) {
-            throw new NotAcceptableHttpException('This article history requires version 2.');
         }
 
         $article = $app['articles'][$number];
@@ -654,7 +633,6 @@ $app->get('/articles/{number}/versions',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.article-history+json; version=2',
     'application/vnd.elife.article-history+json; version=1'
 ));
 
@@ -694,8 +672,12 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article VoR requires version 4.');
         }
 
-        if ('26231' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+        if (in_array($number, ['26231', '36258']) && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
             throw new NotAcceptableHttpException('This article VoR requires version 3.');
+        }
+
+        if ('36258' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 2) {
+            throw new NotAcceptableHttpException('This article PoA requires version 2.');
         }
 
         return new Response(
@@ -723,7 +705,6 @@ $app->get('/articles/{number}/related',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.article-related+json; version=2',
     'application/vnd.elife.article-related+json; version=1'
 ));
 
@@ -808,7 +789,7 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
-        if ($type->getParameter('version') < 2 && '359325' === $id) {
+        if ($type->getParameter('version') < 2 && in_array($id, ['359325', '369365', '378207'])) {
             throw new NotAcceptableHttpException('This blog article requires version 2.');
         }
 
@@ -911,7 +892,6 @@ $app->get('/collections/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.collection+json; version=3',
     'application/vnd.elife.collection+json; version=2',
     'application/vnd.elife.collection+json; version=1'
 ));
@@ -966,7 +946,6 @@ $app->get('/community', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.community-list+json; version=2',
     'application/vnd.elife.community-list+json; version=1'
 ));
 
@@ -1046,7 +1025,6 @@ $app->get('/covers', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.cover-list+json; version=2',
     'application/vnd.elife.cover-list+json; version=1'
 ));
 
@@ -1074,7 +1052,6 @@ $app->get('/covers/current', function (Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.cover-list+json; version=2',
     'application/vnd.elife.cover-list+json; version=1'
 ));
 
@@ -1144,7 +1121,6 @@ $app->get('/digests/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.digest+json; version=2',
     'application/vnd.elife.digest+json; version=1'
 ));
 
@@ -1258,7 +1234,6 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.highlight-list+json; version=4',
     'application/vnd.elife.highlight-list+json; version=3',
     'application/vnd.elife.highlight-list+json; version=2',
     'application/vnd.elife.highlight-list+json; version=1'
@@ -1439,6 +1414,10 @@ $app->get('/labs-posts/{id}',
 
         $lab = $app['labs'][$id];
 
+        if ($type->getParameter('version') < 2 && '80000003' === $id) {
+            throw new NotAcceptableHttpException('This labs post requires version 2.');
+        }
+
         return new Response(
             json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -1448,42 +1427,6 @@ $app->get('/labs-posts/{id}',
 )->before($app['negotiate.accept'](
     'application/vnd.elife.labs-post+json; version=2',
     'application/vnd.elife.labs-post+json; version=1'
-));
-
-$app->get('/medium-articles', function (Request $request, Accept $type) use ($app) {
-    $articles = $app['medium-articles'];
-
-    $page = $request->query->get('page', 1);
-    $perPage = $request->query->get('per-page', 10);
-
-    $content = [
-        'total' => count($articles),
-        'items' => [],
-    ];
-
-    if ('asc' === $request->query->get('order', 'desc')) {
-        $articles = array_reverse($articles);
-    }
-
-    $articles = array_slice($articles, ($page * $perPage) - $perPage, $perPage);
-
-    if (0 === count($articles) && $page > 1) {
-        throw new NotFoundHttpException('No page '.$page);
-    }
-
-    foreach ($articles as $i => $article) {
-        $content['items'][] = $article;
-    }
-
-    $headers = ['Content-Type' => $type->getNormalizedValue()];
-
-    return new Response(
-        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
-        Response::HTTP_OK,
-        $headers
-    );
-})->before($app['negotiate.accept'](
-    'application/vnd.elife.medium-article-list+json; version=1'
 ));
 
 $app->get('/metrics/{contentType}/{id}/citations',
@@ -1707,7 +1650,6 @@ $app->get('/podcast-episodes/{number}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.podcast-episode+json; version=2',
     'application/vnd.elife.podcast-episode+json; version=1'
 ))->assert('number', '[1-9][0-9]*');
 
@@ -1789,7 +1731,6 @@ $app->get('/press-packages/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.press-package+json; version=4',
     'application/vnd.elife.press-package+json; version=3',
     'application/vnd.elife.press-package+json; version=2',
     'application/vnd.elife.press-package+json; version=1'
@@ -1929,7 +1870,6 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
         ['Content-Type' => $type->getNormalizedValue()]
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.promotional-collection+json; version=2',
     'application/vnd.elife.promotional-collection+json; version=1'
 ));
 
@@ -2207,7 +2147,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.search+json; version=2'
+    'application/vnd.elife.search+json; version=1'
 ));
 
 $app->get('/subjects', function (Request $request, Accept $type) use ($app) {

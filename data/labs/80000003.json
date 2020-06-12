@@ -1,0 +1,210 @@
+{
+    "id": "80000003",
+    "title": "Community first: An evolution in the approach to open publishing infrastructure with Libero",
+    "published": "2018-12-05T12:30:00Z",
+    "image": {
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2018-12%2Fimg_6164_1.jpg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2018-12%2Fimg_6164_1.jpg/full/full/0/default.jpg",
+                "filename": "img_6164_1.jpg"
+            },
+            "size": {
+                "width": 4032,
+                "height": 2470
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            }
+        }
+    },
+    "impactStatement": "Paul Shannon, Head of Technology, shares highlights from eLife’s journey in creating the Libero community.",
+    "content": [
+        {
+            "text": "Last month, eLife announced a new formal partnership with three organisations to develop the latest version of Libero. Digirati, Hindawi and the Collaborative Knowledge Foundation (Coko) have all signed a Memorandum of Understanding with eLife, emphasising their willingness to contribute to Libero through discussion, documentation, advocacy and by writing software.",
+            "type": "paragraph"
+        },
+        {
+            "text": "All four organisations have nominated representatives for a steering committee, a Product Special Interest Group (SIG) and a Technology SIG. Together, they will work towards a minimum viable product version of Libero that will allow a simple journal to publish its articles, whilst providing a platform that can be extended so that larger, more complex journals can also publish their articles using the software. Following that, they will each work to grow the community and use Libero in their own organisations and/or with new and existing partners.",
+            "type": "paragraph"
+        },
+        {
+            "text": "The journey to this point was quite long and took a lot of effort from some dedicated people, so we thought we should share some insights and highlights of that journey to help others who are looking to do the same with their own communities.",
+            "type": "paragraph"
+        },
+        {
+            "type": "figshare",
+            "id": "8210360",
+            "title": "Shared Open Source Infrastructure with the Libero Community",
+            "width": 568,
+            "height": 426
+        },
+        {
+            "type": "section",
+            "title": "Beginning with early feedback",
+            "content": [
+                {
+                    "text": "Having a commitment from a growing and diverse set of organisations was a significant step in the evolution of the community that started with the release of Libero (then called Continuum) in 2016. The code was made open on GitHub and the team behind it at the time broadcast a webinar introducing the world to its features and concepts, with instructions on how to get involved. This generated a lot of interest from publishers as it was a good, viable alternative to using a third-party vendor system – in fact, one of the primary reasons eLife started the project was because we wanted to move from a vendor to our own platform earlier that year. Interest in the use of the software, though, didn’t result in code contributions or any wider use, although some teams had tried.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "June 2017 saw the launch of the next iteration of the Libero platform, with a more modular architecture and reusable, state-of-the-art, accessible front-end patterns that let anyone recreate the user-driven, user-research-backed experience of the eLife journal website. Interest was renewed and, with the code already in the open, we expected more reuse and forthcoming contributions. This time, however, the Technology and Product Teams at eLife spent more time listening to the emerging community. We visited other publishers’ technology teams, listened to production and publishing staff and took note of the issues that prevented others from reusing the software easily.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Defining improvement",
+            "content": [
+                {
+                    "text": "Information gathered during various ad-hoc sessions was discussed with eLife’s early community partner, Digirati, to try and identify themes. It was clear that there were areas we could all address, but we needed to talk to more people first and start a community-driven approach.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "We discovered four areas that needed attention:",
+                    "type": "paragraph"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "An improved developer experience",
+                        "A more flexible data model",
+                        "Easier deployment and maintenance",
+                        "More open discussion and decision making"
+                    ],
+                    "prefix": "bullet"
+                },
+                {
+                    "text": "eLife joined with Digirati and organised a workshop in London, along with interested publishers and technologists from The BMJ and Hindawi, in February this year. The session was incredibly useful – it was held over four hours at the Foundling Museum, where two separate groups discussed possible technologies, the differences in data models, the diverse set of publishing processes in the industry and detail on the methods the community could use for helping to arrive at important decisions.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "“Open, open-source”",
+            "content": [
+                {
+                    "text": "Decision making around Libero had previously been undertaken at eLife through in-person meetings, emails and on Slack. The conversation hadn’t then been made open even when the result had. Sometimes the decision itself wasn’t clear from the outcome, so it was difficult for other organisations to see why a certain part of Libero worked the way it did. This made it hard to justify to other organisations that had to make minor changes in order to adopt Libero, and also exposed the need for a more diverse set of opinions when deciding how Libero should work.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "We had been working with Coko on PubSweet and xPub for a few months at that time and began to develop ways for more open decision making there, which we thought would work well with Libero. Discussion at the London Libero meeting suggested that an open chat channel where initial ideas could be discussed, followed by a Request for Comments (RFC) on GitHub, would be a good way to gather community consensus on larger issues.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Developer experience, deployment and maintenance",
+            "content": [
+                {
+                    "text": "The previous version of Libero relied on a single tool for development, used both on your laptop and for deployment to a server. This was useful at eLife, as the team were all used to the tool, but it made it more difficult to adopt elsewhere. Since that tool was created, however, the technology around the continuous delivery of software had improved, and options such as containerisation (with Docker) and serverless architectures were now viable options. After consulting with Digirati, and an exploration by its team into using Docker with the existing infrastructure, it was obvious this was a good step forward. We are also able to provide semantically versioned releases of the applications and libraries using these tools, which will minimise maintenance for future service providers and self-hosting publishers alike.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "To find out the best way to deploy the various parts of Libero, our Software Engineer in Tools and Infrastructure, Giorgio Sironi, <a href=\"https://github.com/libero/community/issues/13\">conducted an analysis of the tools on offer</a>. This was one of the early RFCs that was quickly discussed and adopted, meaning existing and new contributors had confidence that we’d chosen the best available product for our needs. As a good example of the decision-making process, this was then ratified and recorded as <a href=\"https://github.com/libero/community/blob/develop/doc/adr/0002-continuously-delivery-travis-ci.md\">an architectural decision record in the GitHub repository</a>, so we can refer back to it and supercede it should our needs change.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Having these types of processes and tools decided early meant we could approach service providers and have meaningful conversations about what hosting and maintaining instances of Libero would entail. We approached Unicon and Catalyst Europe for advice after a referral from Scott Wilson from <a href=\"https://www.cetis.org.uk/\">Cetis LLP</a> and <a href=\"http://oss-watch.ac.uk/about/staff\">OSSWatch</a>, and they were pleased with the approach we’d taken and gave us some great insight into how service providers that work with other open-source platforms could adopt Libero. That was really valuable as it meant we had another set of diverse opinions on running the software while the key decisions on its architecture and tooling were being solidified.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Flexible data models",
+            "content": [
+                {
+                    "text": "eLife’s articles are all represented in JATS XML, an XML format used to describe scientific literature published online. Since this is an internationally defined technical standard, the use of the eLife data model should be reusable across multiple publishers. However, having explored different examples of publisher articles represented in XML, we found that there are many different forms and lots of publisher archives are difficult to change or update, so having a data model that isn’t fixed is preferable. Although eLife co-leads the <a href=\"http://jats4r.org\">JATS4R</a> effort to provide recommendations to reduce the variation, this group is still relatively young and has, as yet, not covered enough ground.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "We compared implementations of JATS and also considered lighter forms of content, such as editorials and blog posts, that publishers might want to have presented in Libero too. With all these ideas in mind, and by listening to our colleagues and partners in the publishing teams, we proposed a data model that is flexible and extensible but has a strict way of validating the actual content through a technology called RelaxNG.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "The Libero data model can, therefore, define a core set of elements that almost all articles will need (for example, title, abstract and author), which can also be extended and overridden to allow for the subtle differences that each publisher needs to represent their content. New elements can also be added through extensions, so definitions that some people use can still be shared, yet they don’t have to be enforced on those that don’t use them (plain-language summaries or IIIF images, for example). Since the Libero format is natively XML, you can easily use existing tag sets like JATS, thereby promoting the reuse, sharing and extension of internationally recognised data models.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Software is about people",
+            "content": [
+                {
+                    "text": "This new approach of talking and listening to the community first has been the most fruitful for Libero and embodies what open-source software is all about. The ideas around data models and ease of software deployment were all made better by our community, and the generous sharing of data has helped on the technical side too.",
+                    "type": "paragraph"
+                },
+                {
+                    "type": "image",
+                    "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/labs-post-content%2F2018-12%2Fimg_6153-2-.jpg",
+                        "size": {
+                            "width": 3024,
+                            "height": 2940
+                        },
+                        "source": {
+                            "uri": "https://iiif.elifesciences.org/journal-cms/labs-post-content%2F2018-12%2Fimg_6153-2-.jpg/full/full/0/default.jpg",
+                            "filename": "img_6153-2-.jpg",
+                            "mediaType": "image/jpeg"
+                        },
+                        "focalPoint": {
+                            "x": 50,
+                            "y": 50
+                        }
+                    },
+                    "title": "Libero Sprint, August 2018",
+                    "inline": true
+                },
+                {
+                    "text": "We wanted to ensure we could use an established governance model for open-source software development that puts the community at the heart of the project. The discussion at the <a href=\"https://elifesciences.org/inside-elife/7ccd9e42/in-technology-a-summary-of-the-libero-community-sprint\">Libero Sprint</a> in August 2018 was the genesis for governance ideas. Having early consensus on how the project should be governed was important – it increased engagement from contributors because they had a clear understanding of how they could use and contribute to Libero.<br /><br />We discussed licensing and the ability to use the platform for commercial gain, both now and in the future, and how to ensure that the platform always remains as free, open-source software. To ease administration and decision making in the community we discussed the possibility of assigning ownership to a single organisation. We explored the involvement of a foundation for this, either a new one or an existing one such as the Apache Foundation or the Apereo Foundation, but decided that eLife was well placed to act as project lead. With further exploration of existing open-source governance models we decided that something based on a ’benevolent dictatorship’ model would suit the community, because eLife was able to commit the time and people whereas other contributors could not make as large or as full-time a commitment, but were keen for development to progress unimpeded.<br /><br />To ensure that others have a way to influence eLife (as project lead) we decided to support the model with the formation of a <a href=\"https://libero.pub/governance/steering-committee.html\">steering committee</a> for core contributors/organisations who are transparent about their involvement through the signing of a Memorandum of Understanding with us. We continued our discussion into the realms of code ownership and copyright too, eventually proposing and investigating the use of a Contributor License Agreement (CLA). Exploring a robust CLA was also a suggestion from our conversation with Scott Wilson: he reminded us that they can be used to ensure the license is kept open and to give contributors the right to attribution. Our CLA is derived from the Fiduciary License Agreement created by the Free Software Foundation Europe (FSFE) and, with help from their team, we created the Libero CLA for both individuals and entities. Our CLAs, like those from the FSFE, are available for re-use under a CC-BY-SA license at <a href=\"https://libero.pub/governance/cla/\">https://libero.pub/governance/cla/</a> or <a href=\"http://contributoragreements.org\">http://contributoragreements.org</a>.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Once our ideas were being formed we spoke to Julian Tenney from the University of Nottingham and creator of the <a href=\"https://www.xerte.org.uk\">Xerte project</a>. Xerte provides tools for e-learning authors and started in Julian’s department at the university. Once it had gathered users and grown beyond the university Julian thought it would be useful to have a foundation administer the project. He worked with the Apereo Foundation and had to add some new elements to their project community before it was suitable for adoption by the foundation. His insight and tips on how to structure various aspects of the community, and his feedback on our ideas, were extremely valuable and gave us confidence that we still had this as a future option for Libero. Taking ideas from the structure of projects at foundations like Apereo has been useful in ensuring the Libero community is prepared for the growth and expansion that we would like to see.<br /><br />All the conversations around governance were really focused and clear, which resulted in a governance document at <a href=\"https://libero.pub/governance/\">https://libero.pub/governance/</a> that describes our approach in detail.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "An inclusive community",
+            "content": [
+                {
+                    "text": "One of <a href=\"https://opensource.org/osd\">the tenets of open-source software</a> is that it does not discriminate against any persons, groups or fields of endeavour. This is why we like the permissive MIT licence: it does not restrict the use of the software we build. We also want our community to be inclusive so, at a fundamental level, we wanted to convey our intention to foster an open and welcoming environment where contributors can feel safe to get involved in any way they wish by adopting a <a href=\"https://libero.pub/code-of-conduct/\">code of conduct</a>. We also detail clear reporting procedures with support representatives from two organisations. On top of that, we have found simple ways for anyone to contribute, regardless of their expertise and background. The community has been a good example of contributions that are not just in the form of software or documentation, but also ideas, conversations, support and advice. We hope this will continue as more people discover the vibrant community in our <a href=\"https://join.slack.com/t/libero-community/shared_invite/enQtNDc1MTUzMTM5MDQwLWE0YTZkYmVkMThhYWI1NTgzOWZkNjU2ZDgyNTRjZmJlZGRlOWFiYmNlZmE4MjZiMjRiNmM3ZDgzMmJjZjJhNjc\">Slack channel</a>, community repos or around the code itself.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Future community developments",
+            "content": [
+                {
+                    "text": "Our next steps are to grow the community and we welcome anyone who is interested. We will be actively looking for feedback once our minimum viable product is ready early next year. You can <a href=\"https://libero.pub/join-slack/\">join the conversation</a> in the meantime, as we’ll be iteratively developing all parts of the platform, and you can follow progress on <a href=\"https://github.com/orgs/libero/projects/1\">the Libero work-in-progress board</a>.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "We welcome comments, questions and feedback. Please annotate publicly on the article or contact us at innovation [at] elifesciences [dot] org.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "For the latest in innovation, eLife Labs and new open-source tools, sign up for our technology and innovation newsletter. You can also follow @eLifeInnovation on Twitter.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Do you have an idea or innovation to share? Send a short outline for a Labs blogpost to innovation [at] elifesciences [dot] org.",
+                    "type": "paragraph"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,431 @@
+{
+    "id": "378207",
+    "title": "eLife Community Ambassadors: 243 volunteers join the programme in 2019",
+    "published": "2019-04-12T11:33:56Z",
+    "impactStatement": "Diverse researchers from across the world are joining forces to promote responsible behaviours in science.",
+    "content": [
+        {
+            "text": "A new cohort of eLife Community Ambassadors joins the efforts of our Early-Career Advisory Group (ECAG) to help promote greater openness, collaboration, improved reproducibility, diversity and funding access in life sciences and biomedicine.",
+            "type": "paragraph"
+        },
+        {
+            "text": "As an ECAG member who’s overseen the recruitment process, Hedyeh Ebrahimi, Tehran University of Medical Sciences, Iran, said:",
+            "type": "paragraph"
+        },
+        {
+            "text": "“We worked hard to invite researchers from all corners of the world, all specialisms and a variety of circumstances. I’m very pleased to welcome such a strong and diverse group of scientists to the programme this year.”",
+            "type": "paragraph"
+        },
+        {
+            "type": "google-map",
+            "id": "13cEQIsP3F9-iEVDDgradCs2Z9F-ODLyx",
+            "title": "eLife Community Ambassadors 2019"
+        },
+        {
+            "text": "With 117 women and 126 men, based around the entire globe, from Australia to Venezuela, and from the AIDS Research Institute in Spain to Zagazig University in Egypt, researchers will join forces to promote progressive changes in academic culture across a number of key themes.",
+            "type": "paragraph"
+        },
+        {
+            "type": "image",
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png",
+                "size": {
+                    "width": 650,
+                    "height": 300
+                },
+                "source": {
+                    "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png/full/full/0/default.jpg",
+                    "filename": "ambassador_medley1_6.jpg",
+                    "mediaType": "image/jpeg"
+                },
+                "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                }
+            },
+            "title": "Nnaemeka Nnadi (left), Ziva Pogacar (right)"
+        },
+        {
+            "text": "Tracey Weissgerber, Mayo Clinic, United States, QUEST, Charité - Universitätsmedizin Berlin and Berlin Institute of Health, Germany, a member of the eLife ECAG, said:",
+            "type": "paragraph"
+        },
+        {
+            "text": "&quot;This year we’ve created a variety of new training opportunities that are designed to help participants learn about responsible scientific practices. This will equip Ambassadors to improve their own research, while advocating for greater transparency, rigor, collaboration, and inclusiveness in the scientific community.”",
+            "type": "paragraph"
+        },
+        {
+            "type": "section",
+            "title": "Meet eLife Community Ambassadors 2019:",
+            "content": [
+                {
+                    "type": "section",
+                    "title": "Africa",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Chiraz Belhamel</strong>, University of Bejaia, Algeria",
+                                "<strong>Salem Mohamed</strong>, Zagazig University, Egypt",
+                                "<strong>Mohamed Solayman</strong>, Ain Shams University, Egypt",
+                                "<strong>Yaw Bediako</strong>, West African Centre for Cell Biology of Infectious Pathogens, University of Ghana, Ghana",
+                                "<strong>Virginia Gichuru</strong>, Pwani University, Kenya",
+                                "<strong>Caleb Kibet</strong>, International Center of Insect Physiology and Ecology, Kenya",
+                                "<strong>Allan Onyango</strong>, Kenyatta University, Kenya",
+                                "<strong>Mohamed Sylla</strong>, Women Deliver, Mali",
+                                "<strong>Lamiae Amallah</strong>, Mohammed First University, Morocco",
+                                "<strong>AbdulAziz Ascandari</strong>, Rabat Medical and Pharmacy School, Morocco",
+                                "<strong>Chaimae Samtal</strong>, University of Sidi Mohamed Ben Abdellah, Morocco",
+                                "<strong>Oluwatosin Leshi</strong>, University of Ibadan, Nigeria",
+                                "<strong>Nnaemeka Nnadi</strong>, Plateau State University, Bokkos, Nigeria",
+                                "<strong>Abidah Tukur</strong>, Bayero University, Kano, Nigeria",
+                                "<strong>Azeez Adeboye</strong>, University of Fort Hare, South Africa",
+                                "<strong>Fiona Mumoki</strong>, University of Pretoria, South Africa",
+                                "<strong>Lyndon Zass</strong>, Center For Proteomic and Genomic Research, South Africa",
+                                "<strong>Aneth Mwakilili</strong>, University of Dar es Salaam/Swedish University of Agricultural Sciences, Tanzania",
+                                "<strong>Clifford Tarimo</strong>, Dar es Salaam Institute of Technology, Tanzania"
+                            ],
+                            "prefix": "bullet"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "<strong>Asia</strong>",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Senjuti Saha</strong>, Child Health Research Foundation, Bangladesh",
+                                "<strong>Chee Chua</strong>, Renji-Med X Clinical Stem Cell Research Center, Shanghai Jiao Tong University School of Medicine affiliated Renji Hospital, China",
+                                "<strong>Jeffrey Erlich</strong>, New York University, Shanghai, China",
+                                "<strong>Yuting Ma</strong>, Suzhou Institute of Systems Medicine, Chinese Academy of Medical Sciences, China",
+                                "<strong>Gaurav Zinta</strong>, Shanghai Center for Plant Stress Biology (PSC), China",
+                                "<strong>Xiaoqiang Zhu</strong>, The University of Hong Kong, Hong Kong",
+                                "<strong>Shaina Huang</strong>, The University of Hong Kong, Hong Kong",
+                                "<strong>Shawn Tan</strong>, The University of Hong Kong, Hong Kong",
+                                "<strong>Avinanda Banerjee</strong>, Institute for Stem Cell Biology and Regenerative Medicine, India",
+                                "<strong>Sveta Chakrabarti</strong>, Indian Institute of Science, India",
+                                "<strong>Kamini Gautam</strong>, Institute for Stem Cell Biology and Regenerative Medicine, India",
+                                "<strong>Arup Ghosh</strong>, Institute of Life Sciences, India",
+                                "<strong>Rintu Kutum</strong>, Institute of Genomics and Integrative Biology, India",
+                                "<strong>Gyan Mishra</strong>, Institute of Life Sciences, India",
+                                "<strong>Aditi Mishra</strong>, National Centre for Biological Sciences, India",
+                                "<strong>Dipika Mishra</strong>, National Institute of Science Education and Research, India",
+                                "<strong>Chaitra Prabhakara</strong>, National Centre for Biological Sciences, India",
+                                "<strong>Paramdeep Singh</strong>, Guru Gobind Singh (GGS) Medical College and Hospital, Baba Farid University of Health Sciences, India",
+                                "<strong>Reeteka Sud</strong>, National Institute of Mental Health and Neurosciences, India",
+                                "<strong>Karunesh Tiwari</strong>, Babu Banarasi Das University, India",
+                                "<strong>Aalok Varma</strong>, National Center for Biological Sciences (NCBS), India",
+                                "<strong>Kaivalya Walavalkar</strong>, National Center for Biological Sciences (NCBS), India",
+                                "<strong>Damar Susilaradeya</strong>, University of Indonesia, Indonesia",
+                                "<strong>Tracy Audisio</strong>, Okinawa Institute of Science and Technology Graduate University, Japan",
+                                "<strong>Thin Htun</strong>, Immunology Frontier Research Center, Osaka University, Japan",
+                                "<strong>Raj Malinda</strong>, National Institute for Basic Biology, Japan",
+                                "<strong>Darya Stepanenko</strong>, Okinawa Institute of Science and Technology, Japan",
+                                "<strong>Binod Rayamajhee</strong>, Kathmandu Research Institute for Biological Sciences (KRIBS), Nepal",
+                                "<strong>Boon Chin Tan</strong>, University of Malaya, Malaysia",
+                                "<strong>Muhammad Iqbal</strong>, Center of Excellence in Molecular Biology, University of the Punjab, Pakistan",
+                                "<strong>Muhammad Kamran</strong>, Medical and Science Research Center, University of Nizwa, Oman, Oman",
+                                "<strong>Clement Tsui</strong>, Sidra Medicine, Qatar",
+                                "<strong>Tuan Tran</strong>, Nanyang Technological University, Singapore",
+                                "<strong>Mahantesh Biradar</strong>, Institute of Biomedical Sciences, Academia Sinica, Taiwan"
+                            ],
+                            "prefix": "bullet"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "Europe",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Klea Troka</strong>, University of Medicine, Tirana, Albania",
+                                "<strong>Hermann Agis</strong>, Medical University of Vienna, University Clinic of Dentistry, Austria",
+                                "<strong>Feyza Arslan</strong>, IST Austria, Austria",
+                                "<strong>Esteban Gurzov</strong>, Universite Libre de Bruxelles, Belgium",
+                                "<strong>Mansour Haidar</strong>, Hasselt University, Belgium",
+                                "<strong>Marko Curkovic</strong>, University Psychiatric Hospital Vrapce Zagreb, Croatia",
+                                "<strong>Nikica Darabos</strong>, University Split, Croatia",
+                                "<strong>Tomislav Mestrovic</strong>, University Centre Varazdin, Croatia",
+                                "<strong>Michael Owen</strong>, The European Research Center for Life Science, Advanced Materials and Nanotechnology (CEITEC- MU), Czech Republic",
+                                "<strong>Dragana Vukic</strong>, Central European Institute of Technology, Czech Republic",
+                                "<strong>Ding He</strong>, University of Copenhagen, Denmark",
+                                "<strong>Francesco Baschieri</strong>, Gustave Roussy Institute, France",
+                                "<strong>Ghita Ghislat</strong>, Centre National de la Recherche Scientifique (CNRS), France",
+                                "<strong>Pablo Saez</strong>, Institut Curie, France",
+                                "<strong>Julie Shapiro</strong>, Institut National de la Santé et Recherche Médicale, France",
+                                "<strong>Surabhi Sonam</strong>, Institut Jacques Monod, France",
+                                "<strong>Lin Wang</strong>, Institute Pasteur, France",
+                                "<strong>Susann Auer</strong>, Technische Universität Dresden, Germany",
+                                "<strong>Gabriela Contreras</strong>, Heidelberg University, Germany",
+                                "<strong>Iuliia Ferling</strong>, Hans Knöll Institute, Germany",
+                                "<strong>Michael Fletcher</strong>, German National Cancer Research Centre (DKFZ), Germany",
+                                "<strong>Priya Gurumoorthy</strong>, MPI Biophysical Chemistry, Germany",
+                                "<strong>Paraskevi Kritsiligkou</strong>, German National Cancer Research Center (DKFZ), Germany",
+                                "<strong>Hung Lo</strong>, Neuroscience Research Center, Charité, Universitätsmedizin Berlin, Germany",
+                                "<strong>Mariella Paul</strong>, Max Planck Institute for Human Cognitive and Brain Sciences, Germany",
+                                "<strong>Nuno Raimundo</strong>, University Medical Center Goettingen, Germany",
+                                "<strong>Nico Riedel</strong>, Berlin Institute of Health, Germany",
+                                "<strong>Samantha Seah</strong>, EMBL Heidelberg, Germany",
+                                "<strong>Chao Sun</strong>, Max Planck Institute for Brain Research, Germany",
+                                "<strong>Guillaume Lobet</strong>, Forschungszentrum Jülich, Germany/Belgium",
+                                "<strong>Dimitrios Paraskevis</strong>, National and Kapodistrian University of Athens, Greece",
+                                "<strong>Emma Dorris</strong>, University College Dublin, Ireland",
+                                "<strong>Omar Mamad</strong>, Trinity College Institute of Neuroscience, Ireland",
+                                "<strong>Stephanie McKenna</strong>, University College Dublin, Ireland",
+                                "<strong>Alberto Antonietti,</strong> Politecnico di Milano, Italy",
+                                "<strong>Aziz Khan</strong>, University of Oslo, Norway",
+                                "<strong>Santosh Phuyal</strong>, University of Oslo, Norway",
+                                "<strong>Paweł Niewiadomski,</strong> University of Warsaw, Poland",
+                                "<strong>Sara Ettamimi</strong>, CCMAR Ualg, Portugal",
+                                "<strong>Cristina Ferrás</strong>, University of Porto, Portugal",
+                                "<strong>Malgorzata Gazda</strong>, Centro de Investigação em Biodiversidade e Recursos Genéticos (CIBIO), Portugal",
+                                "<strong>Mafalda Pimentel</strong>, Instituto de Medicina Molecular, Portugal",
+                                "<strong>Alina Martynova</strong>, Pacific State Medical University, Russia",
+                                "<strong>Aleksei Tikhonov</strong>, Engelhardt Institute of Molecular Biology, Russian Academy of Sciences, Russia",
+                                "<strong>Mairi Brittan</strong>, University of Edinburgh, Scotland",
+                                "<strong>Sofia Araújo</strong>, University of Barcelona, Spain",
+                                "<strong>Macarena Gomez de Salazar,</strong> IDIBELL, Spain",
+                                "<strong>Elena Gómez-Díaz</strong>, Institute of Parasitology and Biomedicine Lopez-Neyra (IPBLN), Spain",
+                                "<strong>Peter Kidibule</strong>, Universidad Autonoma de Madrid, Spain",
+                                "<strong>Estefania Mancini</strong>, Centre Regulacio Genomica (CRG), Spain",
+                                "<strong>Verónica Miguel</strong>, Centro de Biología Molecular Severo Ochoa (CBMSO), Spain",
+                                "<strong>Freddy Monteiro</strong>, Center for Research in Agricultural Genomics, Spain",
+                                "<strong>Julia Prado</strong>, AIDS Research Institute (IrsiCaixa), Spain",
+                                "<strong>Amey Redkar</strong>, University of Cordoba, Spain",
+                                "<strong>Patricia Resa-Infante</strong>, IrsiCaixa Foundation, Spain",
+                                "<strong>Elisa Floriddia</strong>, Karolinska Institutet, Sweden",
+                                "<strong>Renuka Kudva</strong>, Stockholm University, Sweden",
+                                "<strong>Maliheh Mehrshad</strong>, Uppsala University, Sweden",
+                                "<strong>Galina Limorenko</strong>, École Polytechnique Fédérale Lausanne, Switzerland",
+                                "<strong>Rita Mateus</strong>, University of Geneva, Switzerland",
+                                "<strong>Sundar Naganathan</strong>, École Polytechnique Fédérale Lausanne, Switzerland",
+                                "<strong>Mohamed Alimohamed</strong>, University Medical Center Groningen, The Netherlands",
+                                "<strong>Bente Benedict</strong>, Netherlands Cancer Institute, The Netherlands",
+                                "<strong>Dani Bodor</strong>, Hubrecht Institute, The Netherlands",
+                                "<strong>Vera-Marie Dunlock</strong>, Radboud Institute for Molecular Life Sciences, The Netherlands",
+                                "<strong>Peter Linders</strong>, Radboud Institute for Molecular Life Sciences, The Netherlands",
+                                "<strong>Freyja Olafsdottir</strong>, Donders Institute for Neuroscience, Radboud University, The Netherlands",
+                                "<strong>Laurent Paardekooper</strong>, Radboud Institute for Molecular Life Sciences, The Netherlands",
+                                "<strong>Ziva Pogacar</strong>, Netherlands Cancer Institute, The Netherlands",
+                                "<strong>Guido van Mierlo</strong>, Radboud Institute for Molecular Life Sciences, The Netherlands",
+                                "<strong>Marije Verhage</strong>, Vrije Universiteit Amsterdam, The Netherlands",
+                                "<strong>Jorieke Weiden</strong>, Radboud Institute for Molecular Life Sciences, The Netherlands",
+                                "<strong>Sara Ahrabi</strong>, UCL Cancer Institute, United Kingdom",
+                                "<strong>Ana Baburamani,</strong> Kings College London, United Kingdom",
+                                "<strong>Myriam Chimen</strong>, University of Birmingham, United Kingdom",
+                                "<strong>Ewoud Compeer</strong>, University of Oxford, United Kingdom",
+                                "<strong>Rachel Eyre</strong>, University of Manchester, United Kingdom",
+                                "<strong>Emily Furlong</strong>, University of Oxford, United Kingdom",
+                                "<strong>Christoffer Gahnstrom</strong>, University College London, United Kingdom",
+                                "<strong>Aga Gambus</strong>, University of Birmingham, United Kingdom",
+                                "<strong>Pawel Grzechnik</strong>, University of Birmingham, United Kingdom",
+                                "<strong>Eilis Hannon</strong>, University of Exeter, United Kingdom",
+                                "<strong>Collins Hodoli</strong>, Cranfield University, United Kingdom",
+                                "<strong>Juniper Kiss</strong>, University of Exeter, United Kingdom",
+                                "<strong>Darius Köster</strong>, University of Warwick, United Kingdom",
+                                "<strong>Melanie Krause,</strong> MRC Laboratory for Molecular Cell Biology, United Kingdom",
+                                "<strong>Tai-Ying Lee</strong>, University of Oxford, United Kingdom",
+                                "<strong>Milena Marinković</strong>, Living Systems Institute, University of Exeter, United Kingdom",
+                                "<strong>Laura Mears</strong>, University of Southampton, United Kingdom",
+                                "<strong>Ella Mercer</strong>, University of Edinburgh, United Kingdom",
+                                "<strong>Pleasantine Mill</strong>, MRC Human Genetics Unit, United Kingdom",
+                                "<strong>Juan Quintana</strong>, University of Dundee, United Kingdom",
+                                "<strong>Vikash Singh</strong>, University of Cambridge, United Kingdom",
+                                "<strong>Zakir Tnimov</strong>, MRC Laboratory of Molecular Biology, United Kingdom",
+                                "<strong>Alison Twelvetrees</strong>, University of Sheffield, United Kingdom",
+                                "<strong>Alex van Vliet</strong>, The Francis Crick Institute, United Kingdom",
+                                "<strong>Zidan Yang</strong>, University College London, United Kingdom",
+                                "<strong>Lida Zoupi</strong>, University of Edinburgh/MRC Centre for Regenerative Medicine, United Kingdom"
+                            ],
+                            "prefix": "bullet"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "<strong>Latin America</strong>",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Hugo Carignano</strong>, Centro de Investigaciones en Ciencias Veterinarias y Agronómicas (CICVyA) - INTA, Argentina, Argentina",
+                                "<strong>Omar Coso</strong>, University of Buenos Aires / IFIBYNE UBA CONICET, Argentina",
+                                "<strong>Humberto Debat</strong>, National Institute of Agricultural Technology (IPAVE-CIAP-INTA), Argentina",
+                                "<strong>Cristian Sandoval</strong>, Universidad de La Frontera, Chile",
+                                "<strong>Fernando Valiente</strong>, Universidad de Chile, Chile",
+                                "<strong>Yila de la Guardia</strong>, INDICASAT AIP, Panama",
+                                "<strong>Maria Francia</strong>, Institut Pasteur, Uruguay",
+                                "<strong>Martín Graña</strong>, Institut Pasteur Montevideo, Uruguay",
+                                "<strong>Eduardo Rodríguez-Román</strong>, Instituto Venezolano de Investigaciones Científicas, Venezuela"
+                            ],
+                            "prefix": "bullet"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "<strong>North America</strong>",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Emilio Alarcon</strong>, University of Ottawa Heart Institute, Canada",
+                                "<strong>Michele Ardolino</strong>, University of Ottawa, Canada",
+                                "<strong>Melissa Armstrong</strong>, University of British Columbia, Canada",
+                                "<strong>Neha Bhutani</strong>, McGill University, Canada",
+                                "<strong>Rohan Dandage</strong>, Laval University, Canada",
+                                "<strong>Sejal Davla</strong>, McGill University, Canada",
+                                "<strong>Sreeparna Pradhan</strong>, McGill University, Canada",
+                                "<strong>Chinmaya Sadangi</strong>, University of Toronto, Canada",
+                                "<strong>Maximilian Touzel</strong>, University of Montreal, Canada",
+                                "<strong>Clarice Aiello</strong>, Stanford University, United States",
+                                "<strong>Gulcan Akgul</strong>, University of Connecticut, Storrs, United States",
+                                "<strong>Ashley Albright</strong>, University of California Berkeley, United States",
+                                "<strong>Bradly Alicea</strong>, OpenWorm Foundation, United States",
+                                "<strong>Nicholas Asby</strong>, University of Chicago, United States",
+                                "<strong>Ulrike Boehm</strong>, Janelia Research Campus, United States",
+                                "<strong>John Burns</strong>, Lamont-Doherty Earth Observatory of Columbia University, United States",
+                                "<strong>Luke Chao</strong>, Massachusetts General Hospital, United States",
+                                "<strong>Yen-Chung Chen</strong>, New York University, United States",
+                                "<strong>Yu-Chieh Chen</strong>, University of California, Riverside, United States",
+                                "<strong>Natalie Clark,</strong> Iowa State University, United States",
+                                "<strong>Nsa Dada</strong>, US Centers for Disease Control and Prevention, United States",
+                                "<strong>Lylah Deady</strong>, University of Washington, United States",
+                                "<strong>Asmaa Elkenawi</strong>, Moffitt Cancer Center, United States",
+                                "<strong>Jason Fernandes</strong>, University of California, SC, United States",
+                                "<strong>Esteban Fernandez-Juricic</strong>, Purdue University, United States",
+                                "<strong>Romain Franconville</strong>, Janelia Research Campus, United States",
+                                "<strong>Debnath Ghosal</strong>, California Institute of Technology, United States",
+                                "<strong>Ryan Gray</strong>, University of Texas at Austin, United States",
+                                "<strong>Nele Haelterman</strong>, Baylor College of Medicine, United States",
+                                "<strong>Sarah Hainer</strong>, University of Pittsburgh, United States",
+                                "<strong>Amanda Hurley</strong>, University of Wisconsin, United States",
+                                "<strong>Latifa Jackson</strong>, Howard University, United States",
+                                "<strong>Nafisa Jadavji</strong>, Midwestern University, United States",
+                                "<strong>Prateek Jain</strong>, University of North Carolina, Chapel Hill, United States",
+                                "<strong>Hossein Khiabanian</strong>, Rutgers University, United States",
+                                "<strong>Maiko Kitaoka</strong>, University of California, Berkeley, United States",
+                                "<strong>Arpita Kulkarni</strong>, Harvard University, United States",
+                                "<strong>Grant Kusick</strong>, Johns Hopkins University, United States",
+                                "<strong>Charalampos Lazaris</strong>, University of Southern California, United States",
+                                "<strong>Kif Liakath-Ali</strong>, Stanford University, United States",
+                                "<strong>Gabriel Lozano Betancourt,</strong> University of Wisconsin-Madison, United States",
+                                "<strong>Anne Martin</strong>, University of Oregon, United States",
+                                "<strong>Marilena Melas</strong>, USC Norris Comprehensive Cancer Center, United States",
+                                "<strong>Biswapriya Misra</strong>, Wake Forest University School of Medicine, United States",
+                                "<strong>Stephanie Moon</strong>, University of Colorado, Boulder, United States",
+                                "<strong>Amreen Mughal</strong>, University of Vermont, United States",
+                                "<strong>Bhavik Nathwani</strong>, Dana-Farber Cancer Institute, United States",
+                                "<strong>John Nicoludis</strong>, University of California, San Francisco, United States",
+                                "<strong>Guy Nir</strong>, Harvard Medical School, United States",
+                                "<strong>Anzela Niraula</strong>, University of Washington, United States",
+                                "<strong>Jean-Paul Noel</strong>, New York University, United States",
+                                "<strong>Stephanie Olivier-Van Stichelen</strong>, Medical College of Wisconsin, United States",
+                                "<strong>Mischa Olson</strong>, Cornell University, United States",
+                                "<strong>Loukia Parisiadou</strong>, Northwestern University, United States",
+                                "<strong>Rajendhran Rajakumar</strong>, Harvard Medical School, United States",
+                                "<strong>Theo Sanderson</strong>, Google, United States",
+                                "<strong>Sarvenaz Sarabipour</strong>, Johns Hopkins University, United States",
+                                "<strong>Anand Saran</strong>, University of Kansas Medical Center, United States",
+                                "<strong>Nicholas Leigh </strong>, Harvard University, United States",
+                                "<strong>Aparna Shah</strong>, Johns Hopkins University, United States",
+                                "<strong>Shankar Shakya</strong>, Oregon State University, United States",
+                                "<strong>Huanan Shi,</strong> Baylor College of Medicine, United States",
+                                "<strong>Krishna Shrinivas</strong>, Massachusetts Institute of Technology, United States",
+                                "<strong>Megan Sperry</strong>, University of Pennsylvania, United States",
+                                "<strong>Alexandra Stolyarova</strong>, University of California, Los Angeles, United States",
+                                "<strong>Michael Sumner</strong>, Northwestern University, United States",
+                                "<strong>Xinchen Wang</strong>, Columbia University, United States",
+                                "<strong>Sithara Wijeratne</strong>, Harvard Medical School and Massachusetts General Hospital, United States",
+                                "<strong>Eleonora Zakharian</strong>, University of Illinois at Peoria, United States",
+                                "<strong>Albert Cardona</strong>, University of Cambridge, United States/United Kingdom"
+                            ],
+                            "prefix": "bullet"
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "title": "<strong>Oceania</strong>",
+                    "content": [
+                        {
+                            "type": "list",
+                            "items": [
+                                "<strong>Sharon Brennan-Olsen</strong>, University of Melbourne, Australia",
+                                "<strong>Bruna Contro de Godoy</strong>, Australian National University, Australia",
+                                "<strong>Stephen Fairweather</strong>, Australian National University, Australia",
+                                "<strong>Diep Ganguly</strong>, Australian National University, Australia",
+                                "<strong>Haifei Hu</strong>, The University of Western Australia, Australia",
+                                "<strong>Kartik Iyer</strong>, The University of Queensland, Australia",
+                                "<strong>Helen Jiao</strong>, University of Melbourne, Australia",
+                                "<strong>Md Arifuzzaman Khan</strong>, The University of Queensland, Australia",
+                                "<strong>Nichollas Scott</strong>, University of Melbourne, Australia",
+                                "<strong>Anton Nathanson</strong>, UNSW Sydney, Australia",
+                                "<strong>Paula Sanz-Leon</strong>, QIMR Berghofer, Australia",
+                                "<strong>Dianne van der Wal</strong>, Australian Red Cross Blood Service, Australia",
+                                "<strong>Michael Bartlett</strong>, Scion, New Zealand",
+                                "<strong>David Eccles</strong>, Malaghan Institute of Medical Research, New Zealand"
+                            ],
+                            "prefix": "bullet"
+                        },
+                        {
+                            "type": "image",
+                            "image": {
+                                "alt": "",
+                                "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_image_2_6.png",
+                                "size": {
+                                    "width": 650,
+                                    "height": 300
+                                },
+                                "source": {
+                                    "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_image_2_6.png/full/full/0/default.jpg",
+                                    "filename": "ambassador_image_2_6.jpg",
+                                    "mediaType": "image/jpeg"
+                                },
+                                "focalPoint": {
+                                    "x": 50,
+                                    "y": 50
+                                }
+                            },
+                            "title": "Zidan Yang (left), Esteban Fernandez-Juricic (right)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "title": "Programme Associates",
+            "content": [
+                {
+                    "text": "Individuals outside active research, who represent like-minded organisations and are keen to support eLife Ambassadors with their resources and expertise, have been invited to contribute to to the programme as Ambassadors Associates.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Adriana Bankston (<a href=\"http://www.futureofresearch.org/\">Future of Research</a>, USA) and Natalia Bielczyk (<a href=\"https://www.ohbmtrainees.com/\">Organization for Human Brain Mapping Student and Postdoc Special Interest Group</a>, and <a href=\"https://stichting-solaris.github.io/\">Stichting Solaris Onderzoek en Ontwikkeling</a>, the Netherlands) will support the Ambassadors with their background in career development and mentoring for early career scientists.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Samantha Hindle (<a href=\"https://www.biorxiv.org/\">bioRxiv</a>, USA) and Daniela Saderi (Mozilla Fellow and Project Lead at <a href=\"https://www.authorea.com/inst/14743-prereview\">PREreview</a>, USA), former eLife Ambassadors themselves, will now support the volunteers in promoting wider adoption and use of preprints.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Huajin Wang (University Libraries, Carnegie Mellon University, USA) will support the Ambassadors with expertise in <a href=\"https://huajinw.github.io/home/\">research data management and reuse.</a>",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Steven Burgess (a Postdoctoral Fellow at the University of Illinois at Urbana-Champaign, USA), the founder of <a href=\"https://ecrlife.org\">ecrLife.org</a>, while an active researcher, he joins the Ambassadors Associates this year to continue as the blog’s editor.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "For the latest developments in this year’s Ambassador programme and other opportunities for early-career researchers, sign up to the <a href=\"https://crm.elifesciences.org/crm/community-news\">eLife Early-Career Community newsletter</a> and follow <a href=\"https://twitter.com/elifecommunity\">@eLifeCommunity</a> on Twitter.",
+                    "type": "paragraph"
+                }
+            ]
+        }
+    ]
+}
