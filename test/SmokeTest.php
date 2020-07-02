@@ -139,7 +139,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
 
             $path = '/articles/'.$file->getBasename('.json').'/versions/1';
-            yield "{$path} wrong version highest" => [
+            yield "{$path} wrong version" => [
                 $this->createRequest($path, 'application/vnd.elife.article-poa+json; version=1, application/vnd.elife.article-vor+json; version=1'),
                 'application/problem+json',
                 406,
