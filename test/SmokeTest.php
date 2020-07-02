@@ -28,7 +28,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
      * @test
      * @dataProvider requestProvider
      */
-    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200)
+    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200, string $warning = null)
     {
         $response = $this->getApp()->handle($request);
 
@@ -48,6 +48,11 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
         if (strpos('+json', $response->headers->get('Content-Type'))) {
             $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
+        }
+        if ($warning) {
+            $this->assertSame($warning, $response->headers->get('Warning'));
+        } else {
+            $this->assertEmpty($response->headers->get('Warning'));
         }
     }
 
