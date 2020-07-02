@@ -51,7 +51,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
         if (is_array($warning) && isset($warning[$response->headers->get('Content-Type')])) {
             $this->assertSame($warning[$response->headers->get('Content-Type')], $response->headers->get('Warning'));
-        } elseif (is_string($warning) && !empty($warning)) {
+        } elseif (is_string($warning)) {
             $this->assertSame($warning, $response->headers->get('Warning'));
         } else {
             $this->assertNull($response->headers->get('Warning'));
