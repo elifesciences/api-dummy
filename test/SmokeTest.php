@@ -162,7 +162,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-vor+json; version='.$vorMinimum => '299 elifesciences.org "Deprecation: Support for version '.$vorMinimum.' will be removed"',
-                ]
+                ],
             ];
 
             yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
