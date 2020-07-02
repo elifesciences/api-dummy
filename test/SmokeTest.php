@@ -133,6 +133,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     'application/vnd.elife.article-poa+json; version='.$poaMinimum,
                     'application/vnd.elife.article-vor+json; version='.$vorMinimum,
                 ],
+                200,
+                [
+                    'application/vnd.elife.article-vor+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                ],
             ];
 
             yield $path = '/articles/'.$file->getBasename('.json').'/versions' => [
