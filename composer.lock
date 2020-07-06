@@ -1144,12 +1144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "690a1f201fc26d27132b9eb5c867519c540063bb"
+                "reference": "d974e5bb7ea511e5d015d8475ddb7d02336408cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/690a1f201fc26d27132b9eb5c867519c540063bb",
-                "reference": "690a1f201fc26d27132b9eb5c867519c540063bb",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/d974e5bb7ea511e5d015d8475ddb7d02336408cc",
+                "reference": "d974e5bb7ea511e5d015d8475ddb7d02336408cc",
                 "shasum": ""
             },
             "conflict": {
@@ -1161,7 +1161,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2020-06-12T10:51:02+00:00"
+            "time": "2020-06-25T06:07:30+00:00"
         },
         {
             "name": "elife/api-validator",

@@ -28,7 +28,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
      * @test
      * @dataProvider requestProvider
      */
-    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200)
+    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200, $warning = [])
     {
         $response = $this->getApp()->handle($request);
 
@@ -48,6 +48,11 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
         if (strpos('+json', $response->headers->get('Content-Type'))) {
             $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
+        }
+        if (!empty($warning[$response->headers->get('Content-Type')])) {
+            $this->assertSame($warning[$response->headers->get('Content-Type')], $response->headers->get('Warning'));
+        } else {
+            $this->assertNull($response->headers->get('Warning'));
         }
     }
 
@@ -100,7 +105,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
-            $poaMinimum = '36258' === $file->getBasename('.json') ? 2 : 1;
+            $poaMinimum = 2;
             switch ($file->getBasename('.json')) {
                 case '15691':
                     $vorMinimum = 4;
@@ -110,7 +115,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $vorMinimum = 3;
                     break;
                 default:
-                    $vorMinimum = 1;
+                    $vorMinimum = 2;
             }
 
             yield "{$path} version highest" => [
@@ -126,6 +131,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     'application/vnd.elife.article-poa+json; version='.$poaMinimum,
                     'application/vnd.elife.article-vor+json; version='.$vorMinimum,
                 ],
+                200,
+                [
+                    'application/vnd.elife.article-vor+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                ],
             ];
 
             yield $path = '/articles/'.$file->getBasename('.json').'/versions' => [
@@ -134,6 +143,11 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
 
             $path = '/articles/'.$file->getBasename('.json').'/versions/1';
+            yield "{$path} wrong version" => [
+                $this->createRequest($path, 'application/vnd.elife.article-poa+json; version=1, application/vnd.elife.article-vor+json; version=1'),
+                'application/problem+json',
+                406,
+            ];
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
@@ -146,6 +160,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 [
                     'application/vnd.elife.article-poa+json; version='.$poaMinimum,
                     'application/vnd.elife.article-vor+json; version='.$vorMinimum,
+                ],
+                200,
+                [
+                    'application/vnd.elife.article-vor+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
                 ],
             ];
 
@@ -394,6 +412,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $this->createRequest($path, 'application/vnd.elife.press-package+json; version=1'),
                     'application/vnd.elife.press-package+json; version=1',
                     200,
+                    [
+                        'application/vnd.elife.press-package+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
                 ];
             } else {
                 yield "{$path} version 1" => [

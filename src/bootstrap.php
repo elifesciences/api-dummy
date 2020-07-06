@@ -655,18 +655,18 @@ $app->get('/articles/{number}/versions/{version}',
                 'application/vnd.elife.article-vor+json; version=4',
                 'application/vnd.elife.article-vor+json; version=3',
                 'application/vnd.elife.article-vor+json; version=2',
-                'application/vnd.elife.article-vor+json; version=1',
             ];
         } else {
             $accepts = [
                 'application/vnd.elife.article-poa+json; version=3',
                 'application/vnd.elife.article-poa+json; version=2',
-                'application/vnd.elife.article-poa+json; version=1',
             ];
         }
 
         $app['content_negotiator.accept']->negotiate($request, $accepts);
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
+
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
 
         if ('15691' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 4) {
             throw new NotAcceptableHttpException('This article VoR requires version 4.');
@@ -676,14 +676,14 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article VoR requires version 3.');
         }
 
-        if ('36258' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 2) {
-            throw new NotAcceptableHttpException('This article PoA requires version 2.');
+        if ('vor' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
         return new Response(
             json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 );
