@@ -32,5 +32,32 @@
             ]
         },
         "status": "poa"
+    },
+    {
+        "id": "55774",
+        "stage": "published",
+        "version": 2,
+        "type": "research-article",
+        "doi": "10.7554/eLife.55774",
+        "title": "Alcids ‘fly’ at efficient Strouhal numbers in both air and water but vary stroke velocity and angle",
+        "volume": 9,
+        "elocationId": "e55774",
+        "published": "2020-06-30T00:00:00Z",
+        "versionDate": "2020-07-02T15:11:47Z",
+        "statusDate": "2020-07-02T15:11:47Z",
+        "authorLine": "Anthony B Lapsansky et al.",
+        "pdf": "https://cdn.elifesciences.org/articles/55774/elife-55774-v2.pdf",
+        "subjects": [
+            {
+                "id": "ecology",
+                "name": "Ecology"
+            },
+            {
+                "id": "evolutionary-biology",
+                "name": "Evolutionary Biology"
+            }
+        ],
+        "status": "vor",
+        "impactStatement": "Four species of seabird produce efficient propulsive wakes while flying in the air and while swimming underwater suggesting that selection has optimized these species for locomotion in remarkably different fluids."
     }
 ]
