@@ -1,0 +1,36 @@
+[
+    {
+        "id": "53433",
+        "stage": "published",
+        "version": 1,
+        "type": "research-article",
+        "doi": "10.7554/eLife.53433",
+        "title": "Eco-evolutionary dynamics of nested Darwinian populations and the emergence of community-level heredity",
+        "volume": 9,
+        "elocationId": "e53433",
+        "published": "2020-07-07T00:00:00Z",
+        "versionDate": "2020-07-07T00:00:00Z",
+        "statusDate": "2020-07-07T00:00:00Z",
+        "authorLine": "Guilhem Doulcier et al.",
+        "pdf": "https://cdn.elifesciences.org/articles/53433/elife-53433-v1.pdf",
+        "subjects": [
+            {
+                "id": "ecology",
+                "name": "Ecology"
+            },
+            {
+                "id": "evolutionary-biology",
+                "name": "Evolutionary Biology"
+            }
+        ],
+        "abstract": {
+            "content": [
+                {
+                    "text": "Interactions among microbial cells can generate new chemistries and functions, but exploitation requires establishment of communities that reliably recapitulate community-level phenotypes. Using mechanistic mathematical models, we show how simple manipulations to population structure can exogenously impose Darwinian-like properties on communities. Such scaffolding causes communities to participate directly in the process of evolution by natural selection and drives the evolution of cell-level interactions to the point where, despite underlying stochasticity, derived communities give rise to offspring communities that faithfully re-establish parental phenotype. The mechanism is akin to a developmental process (<i>developmental correction</i>) that arises from density dependent interactions among cells. Knowledge of ecological factors affecting evolution of developmental correction has implications for understanding the evolutionary origin of major egalitarian transitions, symbioses, and for top-down engineering of microbial communities.",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        "status": "poa"
+    }
+]
