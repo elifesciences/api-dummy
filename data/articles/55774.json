@@ -1,0 +1,3050 @@
+{
+    "received": "2020-02-05",
+    "accepted": "2020-06-20",
+    "versions": [
+        {
+            "status": "poa",
+            "id": "55774",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.55774",
+            "authorLine": "Anthony Lapsansky et al.",
+            "title": "Alcids 'fly' at efficient Strouhal numbers in both air and water but vary stroke velocity and angle",
+            "published": "2020-06-30T00:00:00Z",
+            "versionDate": "2020-06-30T00:00:00Z",
+            "volume": 9,
+            "elocationId": "e55774",
+            "pdf": "https://cdn.elifesciences.org/articles/55774/elife-55774-v1.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/55774/elife-55774-v1.xml",
+            "subjects": [
+                {
+                    "id": "ecology",
+                    "name": "Ecology"
+                },
+                {
+                    "id": "evolutionary-biology",
+                    "name": "Evolutionary Biology"
+                }
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "text": "Birds that use their wings for 'flight' in both air and water are expected to fly poorly in each fluid relative to single-fluid specialists; i.e., these jacks-of-all-trades should be the masters of none. Alcids exhibit exceptional dive performance while retaining aerial flight. We hypothesized that alcids maintain efficient Strouhal numbers and stroke velocities across air and water, allowing them to mitigate the costs of their 'fluid generalism'. We show that alcids cruise at Strouhal numbers between 0.10 and 0.40 – on par with single-fluid specialists – in both air and water but flap their wings ~50% slower in water. Thus, these species either contract their muscles at inefficient velocities or maintain a two-geared muscle system, highlighting a clear cost to using the same morphology for locomotion in two fluids. Additionally, alcids varied stroke-plane angle between air and water and chord angle during aquatic flight, expanding their performance envelope.",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Lapsansky et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authors": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Missoula"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Missoula",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "Department of Biological Sciences",
+                                "University of Montana"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared.",
+                    "emailAddresses": [
+                        "anthony.lapsansky@umontana.edu"
+                    ],
+                    "name": {
+                        "index": "Lapsansky, Anthony",
+                        "preferred": "Anthony Lapsansky"
+                    },
+                    "orcid": "0000-0001-7530-7830",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Homer"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Homer",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "ZatzWorks Inc"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "Daniel Zatz, is affiliated with ZatzWorks Inc. The author has no financial interests to declare.",
+                    "name": {
+                        "index": "Zatz, Daniel",
+                        "preferred": "Daniel Zatz"
+                    },
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Missoula"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Missoula",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "Department of Biological Sciences",
+                                "University of Montana"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared.",
+                    "name": {
+                        "index": "Tobalske, Bret W",
+                        "preferred": "Bret W Tobalske"
+                    },
+                    "type": "person"
+                }
+            ],
+            "reviewers": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom"
+                                },
+                                "formatted": [
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "Royal Veterinary College University of London"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Bomphrey, Richard",
+                        "preferred": "Richard Bomphrey"
+                    },
+                    "role": "Reviewing Editor",
+                    "type": "person"
+                }
+            ],
+            "ethics": [
+                {
+                    "text": "Animal experimentation: All work was approved by the University of Montana's Institutional Animal Care and Use Committee (AUP 004-19BTDBS-020419). Work at the Alaska SeaLife Center was performed with approval from the animal husbandry and research staff.",
+                    "type": "paragraph"
+                }
+            ],
+            "funding": {
+                "awards": [
+                    {
+                        "awardId": "EFRI 1935216",
+                        "id": "par-1",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Tobalske, Bret W",
+                                    "preferred": "Bret W Tobalske"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/100000001",
+                            "name": [
+                                "National Science Foundation"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "CMMI 1234737",
+                        "id": "par-2",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Tobalske, Bret W",
+                                    "preferred": "Bret W Tobalske"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/100000001",
+                            "name": [
+                                "National Science Foundation"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "NA",
+                        "id": "par-3",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Lapsansky, Anthony",
+                                    "preferred": "Anthony Lapsansky"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "name": [
+                                "Drollinger-Dial Family Charitable Foundation"
+                            ]
+                        }
+                    }
+                ],
+                "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+            },
+            "additionalFiles": [
+                {
+                    "caption": [
+                        {
+                            "text": "Any figure supplements, source code, source data, videos or supplementary files associated with this article are contained within this zip.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-55774-supp-v1.zip",
+                    "id": "SD1-data",
+                    "label": "All additional files",
+                    "mediaType": "application/zip",
+                    "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-supp-v1.zip"
+                }
+            ],
+            "dataSets": {
+                "availability": [
+                    {
+                        "text": "All data are available at the following link: https://github.com/alapsansky/Lapsansky_Zatz_Tobalske_eLife_2020",
+                        "type": "paragraph"
+                    }
+                ],
+                "used": [
+                    {
+                        "authors": [
+                            {
+                                "name": "Taylor",
+                                "type": "group"
+                            },
+                            {
+                                "name": "Nudds",
+                                "type": "group"
+                            },
+                            {
+                                "name": "Thomas",
+                                "type": "group"
+                            }
+                        ],
+                        "date": "2003",
+                        "details": "www.nature.com",
+                        "id": "dataset1",
+                        "title": "Flying and swimming animals cruise at a Strouhal number tuned for high power efficiency",
+                        "uri": "https://www.nature.com/articles/nature02000"
+                    }
+                ]
+            },
+            "stage": "published",
+            "statusDate": "2020-06-30T00:00:00Z"
+        },
+        {
+            "status": "vor",
+            "id": "55774",
+            "version": 2,
+            "type": "research-article",
+            "doi": "10.7554/eLife.55774",
+            "authorLine": "Anthony B Lapsansky et al.",
+            "title": "Alcids ‘fly’ at efficient Strouhal numbers in both air and water but vary stroke velocity and angle",
+            "published": "2020-06-30T00:00:00Z",
+            "volume": 9,
+            "elocationId": "e55774",
+            "pdf": "https://cdn.elifesciences.org/articles/55774/elife-55774-v2.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/55774/elife-55774-v2.xml",
+            "subjects": [
+                {
+                    "id": "ecology",
+                    "name": "Ecology"
+                },
+                {
+                    "id": "evolutionary-biology",
+                    "name": "Evolutionary Biology"
+                }
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "text": "Birds that use their wings for ‘flight’ in both air and water are expected to fly poorly in each fluid relative to single-fluid specialists; that is, these jacks-of-all-trades should be the masters of none. Alcids exhibit exceptional dive performance while retaining aerial flight. We hypothesized that alcids maintain efficient Strouhal numbers and stroke velocities across air and water, allowing them to mitigate the costs of their ‘fluid generalism’. We show that alcids cruise at Strouhal numbers between 0.10 and 0.40 – on par with single-fluid specialists – in both air and water but flap their wings ~ 50% slower in water. Thus, these species either contract their muscles at inefficient velocities or maintain a two-geared muscle system, highlighting a clear cost to using the same morphology for locomotion in two fluids. Additionally, alcids varied stroke-plane angle between air and water and chord angle during aquatic flight, expanding their performance envelope.",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Lapsansky et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authors": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Missoula"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Missoula",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "Field Research Station at Fort Missoula, Division of Biological Sciences, University of Montana"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Conceptualization, Data curation, Formal analysis, Investigation, Visualization, Methodology, Writing - original draft, Project administration",
+                    "emailAddresses": [
+                        "anthony.lapsansky@umontana.edu"
+                    ],
+                    "name": {
+                        "index": "Lapsansky, Anthony B",
+                        "preferred": "Anthony B Lapsansky"
+                    },
+                    "orcid": "0000-0001-7530-7830",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Homer"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Homer",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "ZatzWorks Inc"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "is affiliated with ZatzWorks Inc. The author has no financial interests to declare.",
+                    "contribution": "Resources, Data curation, Investigation, Writing - review and editing",
+                    "name": {
+                        "index": "Zatz, Daniel",
+                        "preferred": "Daniel Zatz"
+                    },
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Missoula"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Missoula",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "Field Research Station at Fort Missoula, Division of Biological Sciences, University of Montana"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Conceptualization, Resources, Supervision, Methodology, Writing - review and editing",
+                    "name": {
+                        "index": "Tobalske, Bret W",
+                        "preferred": "Bret W Tobalske"
+                    },
+                    "type": "person"
+                }
+            ],
+            "reviewers": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom"
+                                },
+                                "formatted": [
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "Royal Veterinary College University of London"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Bomphrey, Richard",
+                        "preferred": "Richard Bomphrey"
+                    },
+                    "role": "Reviewing Editor",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom"
+                                },
+                                "formatted": [
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "University of St Andrews"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Rutz, Christian",
+                        "preferred": "Christian Rutz"
+                    },
+                    "role": "Senior Editor",
+                    "type": "person"
+                }
+            ],
+            "ethics": [
+                {
+                    "text": "Animal experimentation: All work was approved by the University of Montana's Institutional Animal Care and Use Committee (AUP 004-19BTDBS-020419). Work at the Alaska SeaLife Center was performed with approval from the animal husbandry and research staff.",
+                    "type": "paragraph"
+                }
+            ],
+            "funding": {
+                "awards": [
+                    {
+                        "awardId": "EFRI 1935216",
+                        "id": "fund1",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Tobalske, Bret W",
+                                    "preferred": "Bret W Tobalske"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/100000001",
+                            "name": [
+                                "National Science Foundation"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "CMMI 1234737",
+                        "id": "fund2",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Tobalske, Bret W",
+                                    "preferred": "Bret W Tobalske"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/100000001",
+                            "name": [
+                                "National Science Foundation"
+                            ]
+                        }
+                    },
+                    {
+                        "id": "fund3",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Lapsansky, Anthony",
+                                    "preferred": "Anthony Lapsansky"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "name": [
+                                "Drollinger-Dial Family Charitable Foundation"
+                            ]
+                        }
+                    }
+                ],
+                "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+            },
+            "additionalFiles": [
+                {
+                    "caption": [
+                        {
+                            "text": "Calculated body lengths were used to convert from units of species-specific body length to metric units. Average culmen length was calculated as the mean of all values present in the <i>Birds of North America</i> entry (<a href=\"#bib30\">Rodewald, 2015</a>) for adult birds (males and females) of that species. Multiple birds were digitized in some photographs. See Materials and methods for details.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-55774-supp1-v2.docx",
+                    "id": "supp1",
+                    "label": "Supplementary file 1",
+                    "mediaType": "application/docx",
+                    "title": "Average culmen length, asset numbers, and calculated body length during flight for each of four species of alcid.",
+                    "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-supp1-v2.docx"
+                },
+                {
+                    "filename": "elife-55774-transrepform-v2.docx",
+                    "id": "transrepform",
+                    "label": "Transparent reporting form",
+                    "mediaType": "application/docx",
+                    "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-transrepform-v2.docx"
+                }
+            ],
+            "dataSets": {
+                "availability": [
+                    {
+                        "text": "All data are available at the following link: <a href=\"https://github.com/alapsansky/Lapsansky_Zatz_Tobalske_eLife_2020\">https://github.com/alapsansky/Lapsansky_Zatz_Tobalske_eLife_2020</a> (copy archived at <a href=\"https://github.com/elifesciences-publications/Lapsansky_Zatz_Tobalske_eLife_2020\">https://github.com/elifesciences-publications/Lapsansky_Zatz_Tobalske_eLife_2020</a>).",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "impactStatement": "Four species of seabird produce efficient propulsive wakes while flying in the air and while swimming underwater suggesting that selection has optimized these species for locomotion in remarkably different fluids.",
+            "keywords": [
+                "flight",
+                "swimming",
+                "locomotion",
+                "muscle efficiency",
+                "strouhal number",
+                "wing"
+            ],
+            "body": [
+                {
+                    "content": [
+                        {
+                            "text": "The ‘jack of all trades’ concept – the idea that the ability to function in multiple environments can only be achieved by sacrificing maximal performance (<a href=\"#bib21\">MacArthur, 1972</a>) – is commonly invoked in discussing the locomotor performance of wing-propelled diving birds (<a href=\"#bib8\">Elliott et al., 2013</a>; <a href=\"#bib35\">Simpson, 1946</a>; <a href=\"#bib37\">Stettenheim, 1959</a>; <a href=\"#bib38\">Storer, 1960</a>; <a href=\"#bib40\">Thaxter et al., 2010</a>). These species, which include some or all members of the alcids (<i>Alcidae</i>), ducks (<i>Anatidae</i>), petrels and shearwaters (<i>Procellariidae</i>), dippers (<i>Cinclus</i>), and the penguins (<i>Spheniscidae</i>), use their wings to propel themselves underwater. Wing-propelled diving birds which have retained their ability to fly in the air – hereafter, ‘dual-medium’ species (sensu <a href=\"#bib17\">Kovacs and Meyers, 2000</a>) – are fluid generalists. These animals use the same locomotor apparatus to ‘fly’ in both air and water, and are, therefore, expected to fly poorly relative to strictly aerial and strictly aquatic fliers in each environment.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Interestingly, birds in the family Alcidae (puffins, murres, and their relatives) seem to contradict the notion of a trade-off between aerial and aquatic flight performance. As with many dual-medium birds, alcids have high wing-loading (the ratio of body mass to wing area), and therefore display poor maneuverability in aerial flight relative to non-diving birds (<a href=\"#bib26\">Ortega-Jimenez et al., 2011</a>; <a href=\"#bib34\">Shepard et al., 2019</a>). However, the wing-loadings of alcids and other dual-medium birds are nearly indistinguishable from those of volant birds which use their feet for aquatic locomotion (based on data from <a href=\"#bib1\">Alerstam et al., 2007</a>; <a href=\"#bib3\">Bruderer et al., 2010</a>; <a href=\"#bib36\">Spear and Ainley, 1997</a>), indicating that high wing-loading is likely the result of selection by the aquatic environment for large body sizes or low buoyancy (<a href=\"#bib27\">Ponganis, 2015</a>), rather than a trade-off specific to dual-medium flight. The current records for the depth and duration of a single dive by an alcid are 210 m and 224 s, respectively, held by the ~1 kg thick-billed murre (<i>Uria lomvia,</i> Linnaeus 1758), making this alcid, on a mass-specific basis, the deepest and longest-duration diver on earth (<a href=\"#bib5\">Croll et al., 1992</a>). When corrected for body size, alcids exhibit dive durations and depths far greater than even penguins (<a href=\"#bib11\">Halsey et al., 2006</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "One possible explanation for the aquatic performance of alcids is that they have mitigated the costs of dual-medium flight. Specifically, by maintaining efficient Strouhal numbers (<i>St</i>) and stroke velocities across air and water, birds in the family Alcidae may lessen the perceivable differences between aerial and aquatic flight, thereby reducing the costs of fluid generalism.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "To swim or fly, an animal must impart momentum to the surrounding fluid. Strouhal number (<i>St</i> = <i>fAU<sup>−1</sup></i>, where <i>f</i> is wingbeat frequency, <i>A</i> is wing excursion, and <i>U</i> is forward speed) describes the pattern of vortices shed into the fluid wake by a flapping foil as it imparts that momentum (<a href=\"#bib44\">Triantafyllou et al., 1993</a>). Extensive research has determined that peak efficiency (in terms of the power required to flap a foil relative to the thrust output to the fluid) for a simple heaving and pitching foil occurs at around 0.2 &lt; <i>St</i> &lt; 0.4 (<a href=\"#bib2\">Anderson et al., 1998</a>; <a href=\"#bib43\">Triantafyllou et al., 1991</a>; <a href=\"#bib44\">Triantafyllou et al., 1993</a>). Most flapping and swimming animals studied to date fall within or near that range, with the previously studied, strictly aerial birds exhibiting 0.12 &lt; <i>St</i> &lt; 0.47 during cruising flight (<a href=\"#bib39\">Taylor et al., 2003</a>). That most species fall near the efficient range of <i>St</i> suggests that natural selection has tuned the kinematics of animals to fly and swim efficiently (<a href=\"#bib24\">Nudds et al., 2004</a>; <a href=\"#bib39\">Taylor et al., 2003</a>). Thus, alcids could achieve efficient fluid wake production in both air and water by maintaining 0.2 &lt; <i>St</i> &lt; 0.4, and efficiency on par with previously studied single-media species by maintaining 0.12 &lt; <i>St</i> &lt; 0.47, but the ‘jack of all trades’ concept suggests that they may unable to do so given the substantial differences in density and viscosity between the two fluids.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Stroke velocity describes the speed at which the wing is swept through its arc during either the downstroke or the upstroke of the wing. This parameter is likely important in determining the cost of locomotion given that it should be proportional to the contractile velocity of the major flight muscles, the pectoralis and the supracoracoideus (<a href=\"#bib12\">Hamilton, 2006</a>; <a href=\"#bib42\">Tobalske and Dial, 1994</a>; <a href=\"#bib41\">Tobalske et al., 1999</a>). Muscles fibers of a given fiber type and myosin isoform are most efficient at converting metabolic power into mechanical power over a narrow range of contractile velocities (<a href=\"#bib10\">Goldspink, 1977</a>; <a href=\"#bib13\">He et al., 2000</a>; <a href=\"#bib29\">Reggiani et al., 1997</a>; <a href=\"#bib32\">Rome et al., 1988</a>). Thus, it would behoove alcids to operate the fibers in their flight muscles at the contractile velocity which maximizes muscle efficiency, and for that velocity to be shared across aerial and aquatic flight. Otherwise, alcids could maintain two populations of fibers – an aerial set and an aquatic set – but this would add mass to the animal, increasing the cost of aerial flight (<a href=\"#bib6\">Ellington, 1984a</a>). Previous research has demonstrated that diving alcids maintain stroke velocities within a narrow range across dive depths, despite large variations in buoyancy, suggesting that they are responsive to the challenge of maintaining contractile velocity (<a href=\"#bib46\">Watanuki and Sato, 2008</a>; <a href=\"#bib45\">Watanuki et al., 2006</a>). Although researchers have not yet examined myosin isoforms in alcids, the two species of alcids for which histochemical data are available possess only ‘fast’ muscle fibers (<a href=\"#bib17\">Kovacs and Meyers, 2000</a>; <a href=\"#bib22\">Meyers et al., 1992</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Recently, <a href=\"#bib16\">Kikuchi et al., 2015</a> measured the kinematics of flying and diving rhinoceros auklets (<i>Cerorhinca monocerata</i>) using a combination of videography and accelerometry. The authors used bootstrapping to coalesce measurements from various individuals to determine the range of <i>St</i> exhibited by this species. The results of this study strongly suggest that this small alcid maintains optimal <i>St</i> in air and water. We wanted to extend this work to determine if individuals tune their kinematics to match optimal <i>St</i> on a per-flight basis. Alternatively, it is possible that the average kinematics of this species are simply centered between 0.2 &lt; <i>St</i> &lt; 0.4. These authors also suggest, based on wingbeat frequency, that stroke velocities of rhinoceros auklets are lower in water, but were unable to statistically compare stroke velocities during aerial versus aquatic flight. While wingbeat frequencies are different between aquatic and aerial flight (~2–4 Hz versus 7–11 Hz, respectively), wingbeat amplitude may vary between the two environments, allowing for similar stroke velocities.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "To improve understanding of potential evolutionary trade-offs between aerial and aquatic flight, we tested whether alcids exhibit efficient <i>St</i> and maintain consistent stroke velocities when flying in water and air. We used videography to measure the wing kinematics of four species of alcids from three genera. These species differ substantially in body mass (450 g to 1 kg) and represent opposite branches of the alcid phylogeny. In addition to <i>St</i> and stroke velocity, we report a variety of kinematic parameters, including stroke-plane and chord angles relative to the body to contrast how the flight apparatus is used in air versus water and during horizontal versus descending aquatic flight. We hypothesized that alcids maintain efficient <i>St</i> and consistent stroke velocities across air and water, which would allow this group to mitigate the costs of fluid generalism (<a href=\"#fig1\">Figure 1</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "The wings drawn with the thin black line indicate the position at the start of downstroke in air (top) and water (bottom, with blue shading). The wings drawn with the dashed line indicate the position at the end of downstroke in air and water. β was measured using the wingtip in aerial flight and the wrist in aquatic flight. ∝ was measured at mid-upstroke and mid-downstroke (wing drawn with thick black line) during aquatic flight.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig1",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig1-v2.tif",
+                                        "size": {
+                                            "width": 1785,
+                                            "height": 3601
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig1-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig1-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 1",
+                                    "title": "Measurements of stroke-plane angle (β) and chord angle (∝).",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        }
+                    ],
+                    "id": "s1",
+                    "title": "Introduction",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "Strouhal numbers (<i>St</i>) for horizontal aquatic flights averaged 0.18 ± 0.02 for common murres, 0.13 ± 0.01 for horned puffins, 0.15 ± 0.01 for pigeon guillemots, and 0.15 ± 0.02 for tufted puffins (<a href=\"#fig2\">Figure 2</a>, blue points). <i>St</i> for descending aquatic flights were significantly greater than those for horizontal aquatic flights (<i>F<sub>1,27</sub></i> = 145.6, η<sup>2</sup> = 0.729, p-value = 2.18e-12) with a relatively minor but significant interaction between species and the type of aquatic flight (<i>F<sub>3,27</sub></i> = 3.59, η<sup>2</sup> = 0.054, p-value = 0.0264). Within-species <i>post hoc</i> tests indicated that all species exhibited greater <i>St</i> during descending aquatic flights relative to horizontal aquatic flights (p = 0.0478, 4.19e-04, 9.17e-07, 5.72e-07; for species in alphabetical order). <i>St</i> for descending aquatic flights averaged 0.24 ± 0.01 for flights of common murres, 0.21 ± 0.04 for horned puffins, 0.29 ± 0.06 for pigeon guillemots, and 0.29 ± 0.03 for tufted puffins (<a href=\"#fig2\">Figure 2</a>, green points).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "Each hatch mark on the x-axis indicates a unique flight. The darker shaded section indicates 0.2 &lt; <i>St</i> &lt; 0.4, in which propulsive efficiency is predicted to peak, and the lighter shaded region indicates 0.12 &lt; <i>St </i>&lt; 0.47, which is the range of St exhibited during cruising flight of strictly aerial birds reported in <a href=\"#bib39\">Taylor et al., 2003</a>. Points indicate <i>St</i> for horizontal aquatic flights (blue), descending aquatic flights (green), aerial flights based on ground speed (dark red), and aerial flights calculated using the range of cruising speeds of that species reported in the literature (light red). Each flight is represented by the mean <i>St</i> for that flight ± s.d., except for <i>St</i> calculated for aerial flights based on airspeed, for which we chose not to indicate a central tendency.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig2",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig2-v2.tif",
+                                        "size": {
+                                            "width": 7945,
+                                            "height": 3249
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig2-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig2-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 2",
+                                    "sourceData": [
+                                        {
+                                            "filename": "elife-55774-fig2-data1-v2.xlsx",
+                                            "id": "fig2sdata1",
+                                            "label": "Figure 2—source data 1",
+                                            "mediaType": "application/xlsx",
+                                            "title": "Strouhal numbers of four species of alcid in aerial and aquatic flight.",
+                                            "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-fig2-data1-v2.xlsx"
+                                        }
+                                    ],
+                                    "title": "Strouhal numbers (<i>St</i>) of four species of alcid in aerial and aquatic flight.",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "text": "<i>St</i> for aerial flights based on the ground speed of the birds averaged 0.17 ± 0.02 for common murres, 0.22 ± 0.14 for horned puffins, 0.49 ± 0.06 for pigeon guillemots, and 0.27 ± 0.02 for tufted puffins (<a href=\"#fig2\">Figure 2</a>, dark red points). Except for the flights of common murres, all birds appeared to be flying in considerable wind based on the size of the waves on the surface of the water. Thus, we also calculated <i>St</i> for aerial flights based on the airspeed characteristic of each species as reported in <a href=\"#bib36\">Spear and Ainley, 1997</a> (see Materials and methods for details). When estimated from the range of measured cruising flight speeds, <i>St</i> for aerial flights ranged from 0.12 to 0.25 for flights of common murres, 0.13 to 0.27 for horned puffins, 0.18 to 0.27 for pigeon guillemots, and 0.16 to 0.25 for tufted puffins (<a href=\"#fig2\">Figure 2</a>, light red lines).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Downstroke velocities were significantly greater during aerial flights than during aquatic flights for all four species (<i>t-Value =</i> 8.10, 11.5, 6.04, 25.9; <i>df =</i> 16.5, 19.0, 9.48, 16.5; p-values <i>= </i>3.80e-07, 5.19e-10, 1.55e-04, 8.56e-15; for species in alphabetical order; <a href=\"#fig3\">Figure 3</a>). The same was true for upstroke velocities (<i>t-Value =</i> 10.5, 16.0, 6.83, 26.4; <i>df =</i> 15.0, 18.8, 9.18, 16.1; p-values <i>= </i>2.67e-08, 2.13e-12, 6.97e-05, 1.09e-14; for species in alphabetical order; <a href=\"#fig3\">Figure 3</a>). Wingbeat amplitudes were greater during aquatic flights across species (<i>F<sub>1,71</sub></i> = 162.4, η<sup>2</sup> = 0.597, p-value&lt;2.2e-16; <a href=\"#fig4\">Figure 4</a>) with a relatively minor but significant interaction between species and fluid (<i>F<sub>3,71</sub></i> = 3.52, η<sup>2</sup> = 0.039, p-value=0.019). Within-species <i>post hoc</i> tests indicated that all four species exhibited significantly greater wingbeat amplitudes during aquatic flight relative to aerial flight (p-values<i>=</i>1.93e-06,&lt;1.0e-08, 3.29e-04, 2.36e-05). Stroke durations were often 2-3X greater in water as compared to air, as indicated by the differences in wingbeat frequency (<a href=\"#fig4\">Figure 4</a>), leading to significant differences in stroke velocities between fluids.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "Stroke velocity was significantly greater during aerial flights (red) than during aquatic flights (blue) for each of the four species for both downstroke (t-Value = 8.10, 11.5, 6.04, 25.9; df = 16.5, 19.0, 9.48, 16.5; p-values = 3.80e-07, 5.19e-10, 1.55e-04, 8.56e-15; for species in alphabetical order) and upstroke (t-Value = 10.5, 16.0, 6.83, 26.4; df = 15.0, 18.8, 9.18, 16.1; p-values = 2.67e-08, 2.13e-12, 6.97e-05, 1.09e-14; for species in alphabetical order). The central line in each box marks the median, while the upper and lower margins of the box indicate the quartile range. The entire range of values lie between the whiskers.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig3",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig3-v2.tif",
+                                        "size": {
+                                            "width": 1074,
+                                            "height": 2126
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig3-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig3-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 3",
+                                    "sourceData": [
+                                        {
+                                            "filename": "elife-55774-fig3-data1-v2.xlsx",
+                                            "id": "fig3sdata1",
+                                            "label": "Figure 3—source data 1",
+                                            "mediaType": "application/xlsx",
+                                            "title": "Stroke velocities of four species of alcid in aerial and aquatic flight.",
+                                            "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-fig3-data1-v2.xlsx"
+                                        }
+                                    ],
+                                    "title": "Stroke velocities of four species of alcid in aerial and aquatic flight.",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "id": "fig4",
+                                    "image": {
+                                        "alt": "",
+                                        "attribution": [
+                                            "Artwork by Emily Moore"
+                                        ],
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig4-v2.tif",
+                                        "size": {
+                                            "width": 1251,
+                                            "height": 2362
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig4-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig4-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 4",
+                                    "title": "Wingbeat amplitude and frequency of four species of alcid in aerial and aquatic flight.",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "text": "When horizontal and descending aquatic flights are grouped together, stroke-plane angle (β) was significantly lower (the top of stroke plane is rotated more caudally) during aerial flights relative to aquatic flights (<i>F<sub>1,47</sub></i> = 41.3, η<sup>2</sup> = 0.422, p = 6.14e-08; <a href=\"#fig5\">Figure 5</a>). Across species, stroke-plane angle averaged 79 ± 7 deg for aerial flights, 92 ± 7 deg for horizontal aquatic flights, and 93 ± 12 deg for descending aquatic flights. Within aquatic flights, there was no significant relationship between stroke-plane angle and angle of descent (<i>F<sub>1,27</sub></i> = 0.0755, η<sup>2</sup> = 0.002, p = 0.786; <a href=\"#fig5\">Figure 5</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "β was significantly lower (the top of the stroke plane was rotated more caudally) during aerial flights relative to aquatic flights (<i>F<sub>1,47</sub></i> = 41.3, η<sup>2</sup> = 0.422, p = 6.14e-08). Within aquatic flights, there was no consistent relationship between β and the angle of descent (<i>F<sub>1,27</sub></i> = 0.0755, η<sup>2</sup> = 0.002, p = 0.786). Jitter was added to the points representing aerial flights and horizontal aquatic flights (descent angle = 0) to increase visibility.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig5",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig5-v2.tif",
+                                        "size": {
+                                            "width": 2131,
+                                            "height": 1474
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig5-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig5-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 5",
+                                    "sourceData": [
+                                        {
+                                            "filename": "elife-55774-fig5-data1-v2.xlsx",
+                                            "id": "fig5sdata1",
+                                            "label": "Figure 5—source data 1",
+                                            "mediaType": "application/xlsx",
+                                            "title": "Stroke-plane angle of four species of alcid in aerial and aquatic flight.",
+                                            "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-fig5-data1-v2.xlsx"
+                                        }
+                                    ],
+                                    "title": "Stroke-plane angle (β) of four species of alcid in aerial and aquatic flight.",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "text": "There was a significant relationship between chord angle (α) and angle of descent for upstroke (<i>F<sub>1,30</sub></i> = 55.7, η<sup>2</sup> = 0.458, p = 2.55e-08; <a href=\"#fig6\">Figure 6</a>) and downstroke (<i>F<sub>1,27</sub></i> = 8.17, η<sup>2</sup> = 0.122, p = 8.11e-03; <a href=\"#fig6\">Figure 6</a>). However, a significant crossed interaction between species and angle of descent for downstroke chord angle (<i>F<sub>3,27</sub></i> = 7.68, η<sup>2</sup> = 0.343, p = 7.26e-4), indicates that the main effect of angle of descent on chord angle during downstroke is uninterpretable (i.e. the response depends on the species; <a href=\"#fig6\">Figure 6</a>). However, alcids significantly increased chord angle (thus, the degree of supination) during upstroke as a function of angle of descent.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "α increased with the angle of descent for upstroke (<i>F<sub>1,30</sub></i> = 55.7, η<sup>2</sup> = 0.458, p = 2.55e-08) and downstroke (<i>F<sub>1,27</sub></i> = 8.17, η<sup>2</sup> = 0.122, p = 8.11e-03). However, a significant crossed interaction between species and angle of descent for downstroke chord angle (<i>F<sub>3,27</sub></i> = 7.68, η<sup>2</sup> = 0.343, p = 7.26e-4), indicates that the main effect of angle of descent on chord angle during downstroke is uninterpretable (i.e. the response depends on the species). Jitter was added to the points representing horizontal aquatic flights (descent angle = 0) to make all points visible.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig6",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig6-v2.tif",
+                                        "size": {
+                                            "width": 1954,
+                                            "height": 2083
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-fig6-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-55774-fig6-v2.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 6",
+                                    "sourceData": [
+                                        {
+                                            "filename": "elife-55774-fig6-data1-v2.xlsx",
+                                            "id": "fig6sdata1",
+                                            "label": "Figure 6—source data 1",
+                                            "mediaType": "application/xlsx",
+                                            "title": "Chord angle versus descent angle for aquatic flights of four species of alcids.",
+                                            "uri": "https://cdn.elifesciences.org/articles/55774/elife-55774-fig6-data1-v2.xlsx"
+                                        }
+                                    ],
+                                    "title": "Chord angle (α) versus descent angle for aquatic flights of four species of alcids.",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        }
+                    ],
+                    "id": "s2",
+                    "title": "Results",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "Alcids achieve efficient wake production based on <i>St</i> during both aerial flight (based on airspeed) and during aquatic flight. While <i>St</i> for horizontal aquatic flights often fell below <i>St</i> = 0.2 (<a href=\"#fig2\">Figure 2</a>, blue points), all measured values overlapped with the range for the cruising aerial flight of strictly aerial birds reported in the literature (<a href=\"#bib39\">Taylor et al., 2003</a>). Because stroke velocities were substantially different between air and water (<a href=\"#fig3\">Figure 3</a>), the use of efficient <i>St</i> seems to come at a cost to the contractile efficiency of the primary flight muscles. Alternatively, aerial and aquatic flight may be powered by different sets of muscles, as discussed below.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "We interpret the relatively low values of <i>St</i> during horizontal aquatic flight to be a consequence of buoyancy. While swimming horizontally, alcids must counteract buoyancy as it attempts to pull them toward their dorsal side. Buoyancy is especially strong at shallow depths, as air volumes compress with depth (<a href=\"#bib47\">Wilson et al., 1992</a>). To compensate for buoyancy during horizontal aquatic flight, alcids in this study seemed to produce quick, low excursion wingbeats with near-horizontal chord angles (α) on the upstroke (<a href=\"#fig6\">Figure 6</a>). Given that the upstroke produces negative heave (ventrally directed acceleration) in swimming alcids (<a href=\"#bib45\">Watanuki et al., 2006</a>), these kinematics seem to be a strategy used to counteract the strong, dorsally oriented buoyancy experienced during horizontal swimming at shallow depths. In contrast, descending alcids must counteract buoyancy as it attempts to resist their forward motion and are, therefore, not required to produce negative heave via the upstroke. Still, all values of <i>St</i> for horizontal aquatic flight overlapped with the range reported for strictly aerial birds in aerial flight – 0.12 &lt; <i>St</i> &lt; 0.47 – (Figure 1), suggesting that alcids produce wakes of similar efficiency to their fully aerial relatives even while fighting buoyancy.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "From previous research, the precise range of <i>St</i> values which confer optimal propulsive efficiency (the proportion of total mechanical energy expended that contributes to useful work) depends somewhat on the kinematics of the flapping foil, but departures from that range can have substantial effects (<a href=\"#bib2\">Anderson et al., 1998</a>; <a href=\"#bib28\">Read et al., 2003</a>). Data comparing <i>St</i> to propulsive efficiency in animals are limited, but <a href=\"#bib31\">Rohr and Fish, 2004</a> report that a relatively minor shift in <i>St</i> in cetaceans (e.g. from 0.25 to 0.35 in <i>Pseudorca crassidens</i>) can reduce propulsive efficiency by 5–10% (<a href=\"#bib31\">Rohr and Fish, 2004</a>). The paucity of data for animals swimming and flying outside the optimal range of <i>St</i> may be due to the challenge of eliciting inefficient kinematics from animals. Alternatively, because translational velocity is partially determined by wing excursion and frequency, the convergence of <i>St</i> on some range of values may be inevitable. The latter seems unlikely, however, as trout adhere to a narrow range of <i>St</i> despite experimentally-induced disruptions to their kinematics (<a href=\"#bib25\">Nudds et al., 2014</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "One limitation of this study is that recordings of aquatic flight were made at shallow depths. However, previous work has indicated that velocity (<a href=\"#bib19\">Lovvorn et al., 2004</a>; <a href=\"#bib46\">Watanuki and Sato, 2008</a>; <a href=\"#bib45\">Watanuki et al., 2006</a>), wingbeat frequency (<a href=\"#bib45\">Watanuki et al., 2006</a>), and wing excursion (<a href=\"#bib16\">Kikuchi et al., 2015</a>) of descending birds remain within a narrow range across depths, suggesting that our results apply to wild alcids. Average velocity and wingbeat frequency of common murres during swimming in this study were 1.63 m s<sup>−1</sup> and 2.4 Hz, respectively, whereas <a href=\"#bib45\">Watanuki et al., 2006</a> report 1.61 m s<sup>−1</sup> and 2.6 Hz for wild birds (<a href=\"#bib45\">Watanuki et al., 2006</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "In moving between air and water, alcids must cope with a dramatic shift to the forces exerted upon them. For example, a bird in aerial flight must counteract the downward pull of gravity, whereas the same bird in shallow water must counteract the upward pull of buoyancy. Recent work with robotics has revealed that a simple shift in stroke-plane angle (β, <a href=\"#fig1\">Figure 1</a>) can allow for both aerial and aquatic propulsion from the same wing (<a href=\"#bib15\">Izraelevitz et al., 2018</a>). The authors of this study point to alcids as their inspiration for exploring stroke-plane angle in a hybrid, flapping wing, but, to our knowledge, our result is the first to confirm that β varies as predicted by <a href=\"#bib15\">Izraelevitz et al., 2018</a> as dual-medium birds transition between air and water.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The stroke plane is rotated to a greater degree during aerial flight to values that are consistent with strictly aerial fliers (<a href=\"#fig5\">Figure 5</a>; <a href=\"#bib41\">Tobalske et al., 1999</a>). In other words, during the aerial downstroke, while the wing is being depressed alcids also draw the wing forward. To reset the position, alcids elevate and retract the wing during the aerial upstroke. According to <a href=\"#bib15\">Izraelevitz et al., 2018</a>, this stroke-plane angle helps create the vertical force needed to counteract gravity in air. In water, wherein a bird is actually pulled up by buoyancy rather than down by gravity, the top of the stroke plane rotates cranially (<a href=\"#fig5\">Figure 5</a>), allowing the bird to orient net force production to counteract drag (<a href=\"#bib15\">Izraelevitz et al., 2018</a>). Thus, alcids shift stroke-plane angle to cope with the shift in external forces between air and water.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "We found no significant relationship between the angle of descent and stroke-plane angle, suggesting that – while stroke-plane angle varies between air and water – alcids do not seem to further modify β to fine-tune the direction of their force output (<a href=\"#fig5\">Figure 5</a>). Instead, alcids appear to change the orientation of their force output during aquatic flight, at least in part, by increasing upstroke chord angle (α) with angle of descent (<a href=\"#fig6\">Figure 6</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "While amplitude was greater in water for all species (<a href=\"#fig4\">Figure 4</a>), as expected, stroke durations were dramatically shorter, causing stroke velocities in aerial flight to be ~2X faster than those during aquatic flight (<a href=\"#fig3\">Figure 3</a>). The work of <a href=\"#bib16\">Kikuchi et al., 2015</a> suggest a similar result for rhinoceros auklets; however, they report nearly equal wingbeat amplitudes across fluids (87 deg in water, 88 deg in air). Our results may differ because we measured wingbeat amplitude in different ways. <a href=\"#bib16\">Kikuchi et al., 2015</a> relied on the vertical extent of the wingtip in aerial flight and the estimated half-wingspan. Based on our observations, the excursion of the wingtip may not be a reliable measure for inferring contractile velocity. This is because the distal feathers bend considerably during the end of each half-stroke in air, increasing the perceived wingbeat amplitude. This means that stroke velocity measured via the wingtip in aerial flight is not comparable to that measured at the wrist during aquatic flight.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Assuming stroke velocity is proportional to contractile velocity of the major wing muscles, the pectoralis and supracoracoideus, alcids either contract these muscles at inefficient velocities in one or both fluids or maintain a two-geared system – with one set of muscle fibers used for aquatic flight and another for aerial flight. This is because muscle fibers of a given fiber type and myosin isoform are most efficient over a narrow range of contractile velocities (<a href=\"#bib10\">Goldspink, 1977</a>; <a href=\"#bib13\">He et al., 2000</a>; <a href=\"#bib29\">Reggiani et al., 1997</a>; <a href=\"#bib32\">Rome et al., 1988</a>). Alcids have exceptionally long sterna, perhaps allowing for regional specializations in the pectoralis and supracoracoideus (<a href=\"#bib12\">Hamilton, 2006</a>; <a href=\"#bib17\">Kovacs and Meyers, 2000</a>; <a href=\"#bib37\">Stettenheim, 1959</a>). Alternatively, Kovacs and Meyers indicate that the latissimus dorsi caudalis, which is enlarged in alcids, is positioned to retract the wing as occurs during the aquatic downstroke. Thus, alcids may rely on different muscles for powering the downstroke in each fluid (<a href=\"#bib17\">Kovacs and Meyers, 2000</a>). Additionally, previous histology research has documented two, ‘fast’ fiber-types in the muscles (both with fast myosin but differing slightly in oxidative and glycolytic capacities) of Atlantic puffins (<a href=\"#bib17\">Kovacs and Meyers, 2000</a>). These lines of evidence suggest the presence of a two-geared flight system, the number of myosin isoforms in these muscles in alcids or their contractile properties remain unknown.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "By maintaining a two-geared system, alcids would avoid the costs of inefficient muscle contractions but would have increased aerial flight costs due to the additional mass of the ‘aquatic gear’ (<a href=\"#bib7\">Ellington, 1984b</a>). In contrast, maintaining the ‘aerial gear’ may actually benefit aquatic performance, as muscle represents a vital oxygen storage site to diving animals (<a href=\"#bib27\">Ponganis, 2015</a>). Consistent with this hypothesis, the metabolic rate of common murres is high in aerial flight but low in aquatic flight (<a href=\"#bib8\">Elliott et al., 2013</a>). Future research should test whether the pectoralis and supracoracoideus muscles contract at different speeds in aerial and aquatic flight and explore in more detail the variation in myosin composition of those muscles to test for a two-geared system. It would be especially interesting to explore the presence of a two-geared system in dippers (genus <i>Cinclus</i>) – the only dual-medium passerine birds – given that passerines often express only one myosin isoform (<a href=\"#bib33\">Rosser et al., 1996</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "Alcids cruised within the efficient range of <i>St</i> in both aerial flight and aquatic flight, suggesting that selection has optimized these species for locomotion in remarkably different fluids. However, alcids flapped their wings at two discrete sets of stroke velocities according to fluid medium, indicating that they either contract their muscles at inefficient velocities in one or both fluids or maintain a two-geared muscle system, with one set of muscle fibers used in air and another in water. In addition, stroke-plane (β) and chord (α) angles appear to be important in allowing alcids to shift the orientation of their force output between media and among descent angles in water. Future research should explore the potential of a two-geared muscle system in dual-medium birds by examining myosin isoforms in alcids and other species and test for functional and regional specializations in the flight apparatus across dual-medium birds.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s3-1",
+                            "title": "Conclusion",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "s3",
+                    "title": "Discussion",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Study animals were common murres (<i>Uria aalge,</i> Pontoppidan 1763), pigeon guillemots (<i>Cepphus Columba,</i> Pallas 1811), horned puffins (<i>Fratercula corniculata,</i> Naumann 1821), and tufted puffins (<i>Fratercula corniculate</i>, Pallas 1769).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "Filming of aquatic flight was performed at the Alaska SeaLife Center in Seward, Alaska. The Alaska SeaLife Center contains an outdoor aviary exhibit with a large area for aerial flight (approximately 20 m wide X 20 m long X 8–10 m tall) over a 397,500-liter saltwater tank. The surface of the water measures approximately 10.5 m X 11 m and is approximately 6.5 m deep at its deepest point. The southern edge of the tank is inset with a large glass viewing window approximately 3.5 m wide which extends from ~2 m above the waterline to the floor of the tank. The glass of the viewing window varies from ~6.5 cm to ~25.0 cm thick from the waterline to the floor of the tank. At the time of this study, the exhibit contained 12 horned puffins, 10 tufted puffins, 4 pigeon guillemots, and 6 common murres. Individuals of each species of alcid regularly swam past the viewing window. Birds opted either to swim parallel to the water’s surface and at depths of 0.5–3 m, presumably for transportation around the tank, or to descend to the bottom of the tank. Given the clear contrasts between these two behaviors, we differentiate between horizontal (trajectory &lt;10 deg) and descending aquatic flight (trajectory <span class=\"underline\">&gt;</span>20 deg). The birds swam on their own volition and selected their own swimming speeds and descent angles.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "Videos of aquatic flight of all four species were taken using a GoPro Hero6 Black (GoPro, Inc, San Mateo, California, USA) at 119.88 fps and a shutter speed of 1/480 s in the ‘Linear View’ mode (<a href=\"#video1\">Video 1</a>, bottom panel), which removes the ‘fisheye’ distortion common to action cameras (Tyson Hedrick, pers. comm.). The camera was positioned on a tripod and leveled using a bubble-type level embedded in the tripod. Because birds chose when and where to dive, swimming bouts were sampled opportunistically. The camera was triggered <i>via</i> a GoPro Smart Remote (GoPro, Inc, San Mateo, California, USA) when we noticed a bird about to initiate a dive or swim past the viewing window. The camera was positioned approximately 1 m below the waterline; thus, all analyzed dives were between 0 to 3 m deep.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "id": "video1",
+                                            "label": "Video 1",
+                                            "title": "Aerial and aquatic flight of the Common murre, <i>Uria aalge</i>.",
+                                            "type": "video",
+                                            "height": 1080,
+                                            "width": 1920,
+                                            "image": "https://cdn.elifesciences.org/articles/55774/elife-55774-video1.jpg",
+                                            "sources": [
+                                                {
+                                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/395/26a57463ae6798837f7835b9d64e42f2424ba2fe/elife-55774-video1.mp4"
+                                                },
+                                                {
+                                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/395/26a57463ae6798837f7835b9d64e42f2424ba2fe/elife-55774-video1.webm"
+                                                },
+                                                {
+                                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/395/26a57463ae6798837f7835b9d64e42f2424ba2fe/elife-55774-video1.ogv"
+                                                }
+                                            ],
+                                            "placeholder": {
+                                                "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-video1.jpg",
+                                                "alt": "",
+                                                "size": {
+                                                    "width": 1920,
+                                                    "height": 1080
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://iiif.elifesciences.org/lax:55774%2Felife-55774-video1.jpg/full/full/0/default.jpg",
+                                                    "filename": "elife-55774-video1.jpg"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "text": "Videos of common murres, horned puffins, and tufted puffins in aerial flight were recorded using a Red DSMC2 with a Helium 8K S35 sensor (Red Digital Cinema, Irvine, California, USA) at 29.97 or 59.94 fps and an auto shutter (<a href=\"#video1\">Video 1</a>, top panel). The camera was attached to a Cineflex gyro-stabilizated system (General Dynamics Global Imaging Technologies, General Dynamics Corporation, West Falls Church, Virginia, United States) mounted underneath a helicopter and recorded video of birds cruising over open water in Kachemak Bay, Alaska. Videos of pigeon guillemots in <i>aerial flight</i> were recorded from land at Monterey Bay, California using a Fastec Ts5 (Fastec Imaging, San Diego, California, USA) at 239.76 fps and a shutter speed of 1/960 s. The birds flew on their own volition and selected their own speeds.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-1",
+                            "title": "Study area and animals",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "We performed kinematic analyses using MATLAB (2018a &amp; b, MathWorks, Inc, Natick, Massachusetts, USA) using the DLTdv6 digitization tool described in <a href=\"#bib14\">Hedrick, 2008</a> with additional analyses performed using MATLAB and IGOR Pro (v. 6.01, Wavemetrics, Inc, Beaverton, OR). Over 45,000 points were hand-digitized for this study.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-2",
+                            "title": "Kinematic analyses",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "We gathered data on wing excursion, wingbeat frequency (Hz), bird-centered chord angle (∝) and stroke-plane angle (β), and translational velocity (body lengths s<sup>−1</sup>) from flights of birds made perpendicular to the camera view (<a href=\"#fig1\">Figure 1</a>). We were stringent in this assessment, selecting less than 5% of all video recordings for analysis. Still, due to the nature of the cosine law, even if birds were swimming 20° off from perpendicular it would only impact our estimates of relevant kinematic parameters by about 6%. Because animals are only expected to exhibit efficient <i>St</i> during cruising locomotion, the flight velocity of each animal was first visualized to ensure that the animal did not consistently accelerate or decelerate during a flight prior to its inclusion in our dataset.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "For both aerial and aquatic flights, we digitized the eye, tip of the tail, and either the wrist (aquatic flight) or wingtip (aerial flight). The digitized points were analyzed in MATLAB using a custom script. For aquatic flights, the code first computed the angle between the bird’s mean path and the waterline. If the bird was descending (trajectory &gt;20 deg from horizontal), the code rotated, <i>via</i> a 2D Euler-angle rotation matrix, the digitized points about that angle so that the x- and y-axes were parallel and perpendicular to the bird’s swimming direction, respectively. For horizontal aerial and aquatic flights (trajectory &lt;10 deg from horizontal), we assumed that the x- and y-axes were aligned with the bird’s direction and, therefore, did not transform the digitized points.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "To convert the linear variables to a consistent set of units, we used the body length of the bird in each frame, as determined by the distance between the eye and the distal tip of the tail in each frame. This method of calibration accounts for variability in the distance between the camera and the bird as well as any distortion of the image created as the light passed from the water to the camera. We chose to use the entire length of the body for calibration, rather than some smaller anatomical length (e.g. culmen), as both the eye and tail were highly conspicuous in all frames of the recorded videos. Visual inspection of the aquatic data revealed pronounced head movement (relative to the body) in sync with the wingbeat cycle (i.e. body length varied with position in the stroke cycle) (<a href=\"#bib18\">Lapsansky and Tobalske, 2019</a>). Because of this, we smoothed the raw body-length data using the ‘smoothingspline’ method of fitting in MATLAB and a smoothing parameter of 1e-04 to account for the head movement of the bird. To account for digitization error of the anatomical landmarks themselves, we smoothed the kinematic data using the same ‘smoothingspline’ method of fitting in MATLAB using a smoothing parameter of 0.01, based on <a href=\"#bib4\">Clifton and Biewener, 2018</a>.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "For aerial flights, we computed wing excursion based on the elevation of the wingtip, relative to the average elevation of the eye and tail, and the wingbeat frequency as the number of complete wingbeats divided by the total duration of those wingbeats for each flight. Bird-centered stroke-plane angle was calculated as the angle between the vector describing the path of the wingtip between its minimum and maximum elevation relative to the direction the bird was traveling (<a href=\"#fig1\">Figure 1</a>). We were unable to measure airspeed of alcids in aerial flight without disturbing their motion. Luckily, however, flight speeds of three of these species and their relatives have previously recorded in the wild (<a href=\"#bib36\">Spear and Ainley, 1997</a>). <a href=\"#bib36\">Spear and Ainley, 1997</a> categorized alcids as medium (tufted puffins, pigeon guillemots, and rhinoceros auklets) and large (common murres) (<a href=\"#bib36\">Spear and Ainley, 1997</a>). To capture the full range of airspeeds exhibited by each species, we assumed alcids to have flown at the mean airspeed observed for birds of that size class flying in a crosswind ±1.96 * standard deviation of that measure (i.e. 95% prediction interval). Thus, we assumed medium alcids in our study (tufted puffins, pigeon guillemots, and horned puffins) to have flown at airspeeds between 13.95 m s<sup>−1</sup> and 18.65 m s<sup>−1</sup> and large alcids (common murres) to have flown at airspeeds between 13.32 m s<sup>−1</sup> and 24.68 m s<sup>−1</sup>. We also computed <i>St</i> based on ground speed by comparing the movement of flying alcids to stationary objects (e.g. rocks, floating debris, standing waves) in each video. We did not measure chord angle for aerial flights given the low frame rates of our aerial videos for three species. Each perpendicular aerial flight (totaling n = 18) is represented by between 4 and 46 complete wingbeats (median: 15).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "For aquatic flights, wing excursion was calculated as the difference between the maximum and minimum elevation of the wrist for a given wingbeat, relative to the average elevation of the eye and tail. If anything, this is a slight underestimate of wing excursion, as the hand-wing sometimes appeared to exhibit slightly greater excursions than the wrist (<span class=\"underline\">&lt;</span>10%). However, we chose to digitize the wrist as it was consistently visible in all videos. Frequency was the inverse of the duration of each wingbeat. Chord angle was the angle at mid-stroke between the position vector running from the wingtip to the wrist and that running from the tail to the eye. Stroke-plane angle was calculated as the angle between the bird-centered position vector describing the path of the wrist between its minimum and maximum elevation relative to the direction the bird was traveling. For aquatic flights, used the position of the tail to calculate velocity, as our previous work has demonstrated that the head is an unreliable indicator of overall body motion in swimming alcids (<a href=\"#bib18\">Lapsansky and Tobalske, 2019</a>). Details of the velocity calculation, including how we corrected for the effects of pitching in our calculation, are described in more detail in <a href=\"#bib18\">Lapsansky and Tobalske, 2019</a>. The velocity due to pitching of the body was typically &lt;5% of the translational velocity. Each perpendicular aquatic flight (n = 35; 24 horizontal and 11 descending) is represented by the values for between 1 and 6 complete wingbeats (median: 3).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "To convert the final wing excursion and velocity data from body lengths to meters (for ease of comparison), we measured the length of the culmen relative to the length of the body (eye-to-tail) of 15 individuals of each species engaged in aerial flight in high-resolution images gathered from the Macaulay Library at the Cornell Lab of Ornithology. We used these data to convert from body lengths to meters for individuals in our study. The average culmen length used in this analysis (averaged from values in the Birds of North America online <a href=\"#bib30\">Rodewald, 2015</a>), calculated species-specific body length, and the asset numbers for the photographs are included in the supplement (<a href=\"#supp1\">Supplementary file 1</a>). Given that <i>St</i> is dimensionless, our method of converting to metric units only affects our calculations of <i>St</i> based on the airspeed reported in <a href=\"#bib36\">Spear and Ainley, 1997</a>.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "In addition to comparing <i>St</i> of alcids to the theoretical efficient range of 0.2 &lt; <i>St</i> &lt; 0.4, we also compare these data to the range for birds in cruising flight (0.12 &lt; <i>St</i> &lt; 0.47) reported in <a href=\"#bib39\">Taylor et al., 2003</a>.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-3",
+                            "title": "Flights perpendicular to the camera view",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "Stroke velocity (deg s<sup>−1</sup>) was calculated from flights made parallel to the camera view. Thus, flights were selected for analysis when birds appeared to fly horizontally and straight at or straight away from the camera (±10 deg). For all flights (n = 80), we digitized the wrist and the shoulder of each bird at the maximum and minimum elevation of each wingbeat to calculate wingbeat amplitude (deg). Stroke velocity was computed as the change in angle (deg) over the duration (sec) of the stroke. For aquatic flights, this computation was performed on a stroke-by-stroke basis. For aerial flights of common murres, horned puffins, and tufted puffins, the relatively slow frame rate meant that computing the duration of each individual stroke would provide only a coarse measurement of stroke duration. Thus, we opted to compute stroke duration for flights of these species as 0.5 * the inverse of the wingbeat frequency of that flight. We validated this approximation by computing stroke duration via both methods for the aerial flight of pigeon guillemots, finding no significant differences between the two calculations (Upstroke: <i>t-Stat</i> = 1.67, <i>Cohen’s d</i> = 0.037, p=0.10, <i>n</i> = 70 half-strokes; Downstroke: <i>t-Stat</i> = 0.71, p=0.48, <i>Cohen’s d</i> = 0.019, <i>n</i> = 70 half-strokes; paired t-tests). While the frame rate was relatively low for aerial flights of common murres, horned puffins, and tufted puffins (29.97 or 59.94 fps), the long exposure of the video (auto-shutter) made it relatively easy to locate the top and bottom of each stroke, as the wing briefly pauses before the turnaround. Each parallel aquatic flight is represented by between 2 and 11 complete wingbeats (median: 4) and each parallel aerial flight by between 3 and 18 complete wingbeats (median: 12).",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-4",
+                            "title": "Flights parallel to the camera view",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "We plotted data using the Gramm Toolbox from <a href=\"#bib23\">Morel, 2018</a> in MATLAB and edited plots for visibility in Adobe Illustrator version 24.1.3 (Adobe Inc, San Jose, California, USA). Statistical analyses were performed using R version 3.6.3 (R Foundation for Statistical Computing, Vienna, Austria). To investigate the effect of each fluid (i.e. air or water) and type of aquatic flight (i.e. horizontal or descending) on <i>St</i> and kinematic parameters we built linear models (function <i>lm</i> in package ‘stats’) (e.g. <i>ln(KinematicVariable)~Species * Fluid</i>) and assessed the significance of the fixed effects using a type I ANOVA (function <i>anova</i> in package ‘stats’). If the interaction between species and fluid was found to be insignificant, it was removed from the model and the model was fit again with only the main effects. To ensure normality and homoscedasticity of the residuals for each model, we log-transformed numerical data and systematically checked the diagnostic plots. We tested for the presence of outliers after each model fit using the function ‘outlierTest’ from the R package <i>car</i> and excluded significant outliers from analyses (<a href=\"#bib9\">Fox and Weisberg, 2019</a>). We report eta-squared (η<sup>2</sup>) calculated by the function <i>eta_sq</i> from the R package ‘sjstats’ (<a href=\"#bib20\">Lüdecke, 2020</a>). Pairwise <i>post hoc</i> tests (for within-species differences between air and water) were performed using the <i>TukeyHSD</i> function in R and p-values for each within species comparison are reported in alphabetical order by species name.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "The stroke velocity data displayed a significant departure from homoscedasticity due to unequal variances among species. Thus, we tested for differences in stroke velocities (both upstroke and downstroke) within each species using the R function <i>t.test</i> (with <i>var.equal = FALSE</i>) and a Bonferroni-corrected critical p-value of 0.0125 (p=0.05/4 species) to account for multiple testing.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "For all statistical analyses, we treated flights as independent and used the average value of the kinematic parameter exhibited for that flight for testing (rather than analyzing each wingbeat as independent). For <i>St</i>, we propagated the standard deviation in wing excursion through to calculate the standard deviation in <i>St.</i> We report means ± s.d. unless otherwise specified.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-5",
+                            "title": "Data visualization and statistical analyses",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "s4",
+                    "title": "Materials and methods",
+                    "type": "section"
+                }
+            ],
+            "references": [
+                {
+                    "articleTitle": "Flight speeds among bird species: allometric and phylogenetic effects",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Alerstam, T",
+                                "preferred": "T Alerstam"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Rosén, M",
+                                "preferred": "M Rosén"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bäckman, J",
+                                "preferred": "J Bäckman"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ericson, PG",
+                                "preferred": "PG Ericson"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hellgren, O",
+                                "preferred": "O Hellgren"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2007",
+                    "doi": "10.1371/journal.pbio.0050197",
+                    "id": "bib1",
+                    "journal": "PLOS Biology",
+                    "pages": "e197",
+                    "pmid": 17645390,
+                    "type": "journal",
+                    "volume": "5"
+                },
+                {
+                    "articleTitle": "Oscillating foils of high propulsive efficiency",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Anderson, JM",
+                                "preferred": "JM Anderson"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Streitlien, K",
+                                "preferred": "K Streitlien"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Barrett, DS",
+                                "preferred": "DS Barrett"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Triantafyllou, MS",
+                                "preferred": "MS Triantafyllou"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1998",
+                    "doi": "10.1017/S0022112097008392",
+                    "id": "bib2",
+                    "journal": "Journal of Fluid Mechanics",
+                    "pages": {
+                        "first": "41",
+                        "last": "72",
+                        "range": "41–72"
+                    },
+                    "type": "journal",
+                    "volume": "360"
+                },
+                {
+                    "articleTitle": "Wing-beat characteristics of birds recorded with tracking radar and cine Camera",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Bruderer, B",
+                                "preferred": "B Bruderer"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Peter, D",
+                                "preferred": "D Peter"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Boldt, A",
+                                "preferred": "A Boldt"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Liechti, F",
+                                "preferred": "F Liechti"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2010",
+                    "doi": "10.1111/j.1474-919X.2010.01014.x",
+                    "id": "bib3",
+                    "journal": "Ibis",
+                    "pages": {
+                        "first": "272",
+                        "last": "291",
+                        "range": "272–291"
+                    },
+                    "type": "journal",
+                    "volume": "152"
+                },
+                {
+                    "articleTitle": "Foot-propelled swimming kinematics and turning strategies in common loons",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Clifton, GT",
+                                "preferred": "GT Clifton"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Biewener, AA",
+                                "preferred": "AA Biewener"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2018",
+                    "doi": "10.1242/jeb.168831",
+                    "id": "bib4",
+                    "journal": "The Journal of Experimental Biology",
+                    "pages": "jeb168831",
+                    "pmid": 30127080,
+                    "type": "journal",
+                    "volume": "221"
+                },
+                {
+                    "articleTitle": "Foraging behavior and physiological adaptation for diving in Thick-Billed murres",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Croll, DA",
+                                "preferred": "DA Croll"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Gaston, AJ",
+                                "preferred": "AJ Gaston"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Burger, AE",
+                                "preferred": "AE Burger"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Konnoff, D",
+                                "preferred": "D Konnoff"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1992",
+                    "doi": "10.2307/1938746",
+                    "id": "bib5",
+                    "journal": "Ecology",
+                    "pages": {
+                        "first": "344",
+                        "last": "356",
+                        "range": "344–356"
+                    },
+                    "type": "journal",
+                    "volume": "73"
+                },
+                {
+                    "articleTitle": "The aerodynamics of hovering insect flight III Kinematics",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Ellington, CP",
+                                "preferred": "CP Ellington"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1984",
+                    "discriminator": "a",
+                    "doi": "10.1098/rstb.1984.0051",
+                    "id": "bib6",
+                    "journal": "The Royal Society",
+                    "pages": "0051",
+                    "type": "journal",
+                    "volume": "305"
+                },
+                {
+                    "articleTitle": "The aerodynamics of hovering insect flight VI Lift and power requirements",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Ellington, CP",
+                                "preferred": "CP Ellington"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1984",
+                    "discriminator": "b",
+                    "doi": "10.1098/rstb.1984.0054",
+                    "id": "bib7",
+                    "journal": "Philosophical Transactions of the Royal Society of London. B, Biological Sciences",
+                    "pages": {
+                        "first": "145",
+                        "last": "181",
+                        "range": "145–181"
+                    },
+                    "type": "journal",
+                    "volume": "305"
+                },
+                {
+                    "articleTitle": "High flight costs, but low dive costs, in auks support the biomechanical hypothesis for flightlessness in penguins",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Elliott, KH",
+                                "preferred": "KH Elliott"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ricklefs, RE",
+                                "preferred": "RE Ricklefs"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Gaston, AJ",
+                                "preferred": "AJ Gaston"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hatch, SA",
+                                "preferred": "SA Hatch"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Speakman, JR",
+                                "preferred": "JR Speakman"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Davoren, GK",
+                                "preferred": "GK Davoren"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2013",
+                    "doi": "10.1073/pnas.1304838110",
+                    "id": "bib8",
+                    "journal": "PNAS",
+                    "pages": {
+                        "first": "9380",
+                        "last": "9384",
+                        "range": "9380–9384"
+                    },
+                    "pmid": 23690614,
+                    "type": "journal",
+                    "volume": "110"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Fox, J",
+                                "preferred": "J Fox"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Weisberg, S",
+                                "preferred": "S Weisberg"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "A R Companion to Applied Regression",
+                    "date": "2019",
+                    "id": "bib9",
+                    "publisher": {
+                        "name": [
+                            "SAGE"
+                        ]
+                    },
+                    "type": "book"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Goldspink, G",
+                                "preferred": "G Goldspink"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Scale Effects in Animal Locomotion",
+                    "chapterTitle": "Mechanics and energetics of muscle in animals of different sizes, with particular reference to the muscle fibre composition of vertebrate muscle",
+                    "date": "1977",
+                    "editors": [
+                        {
+                            "name": {
+                                "index": "Pedly, T. J",
+                                "preferred": "T. J Pedly"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "id": "bib10",
+                    "pages": {
+                        "first": "27",
+                        "last": "55",
+                        "range": "27–55"
+                    },
+                    "publisher": {
+                        "name": [
+                            "The University of Chicago Press"
+                        ]
+                    },
+                    "type": "book-chapter"
+                },
+                {
+                    "articleTitle": "A phylogenetic analysis of the allometry of diving",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Halsey, LG",
+                                "preferred": "LG Halsey"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Butler, PJ",
+                                "preferred": "PJ Butler"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Blackburn, TM",
+                                "preferred": "TM Blackburn"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2006",
+                    "doi": "10.1086/499439",
+                    "id": "bib11",
+                    "journal": "The American Naturalist",
+                    "pages": {
+                        "first": "276",
+                        "last": "287",
+                        "range": "276–287"
+                    },
+                    "pmid": 16670986,
+                    "type": "journal",
+                    "volume": "167"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Hamilton, JL",
+                                "preferred": "JL Hamilton"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2006",
+                    "id": "bib12",
+                    "publisher": {
+                        "name": [
+                            "Brown University Division of Biology and Medicine"
+                        ]
+                    },
+                    "title": "Alcid swimming: kinematics Muscle Activity Patterns and Pelagic Diving Behavior",
+                    "type": "software",
+                    "uri": "http://library.avemaria.edu/title/alcid-swimming-kinematics-muscle-activity-patterns-and-pelagic-diving-behavior/oclc/549692365"
+                },
+                {
+                    "articleTitle": "ATP consumption and efficiency of human single muscle fibers with different myosin isoform composition",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "He, ZH",
+                                "preferred": "ZH He"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bottinelli, R",
+                                "preferred": "R Bottinelli"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Pellegrino, MA",
+                                "preferred": "MA Pellegrino"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ferenczi, MA",
+                                "preferred": "MA Ferenczi"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Reggiani, C",
+                                "preferred": "C Reggiani"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2000",
+                    "doi": "10.1016/S0006-3495(00)76349-1",
+                    "id": "bib13",
+                    "journal": "Biophysical Journal",
+                    "pages": {
+                        "first": "945",
+                        "last": "961",
+                        "range": "945–961"
+                    },
+                    "pmid": 10920025,
+                    "type": "journal",
+                    "volume": "79"
+                },
+                {
+                    "articleTitle": "Software techniques for two- and three-dimensional kinematic measurements of biological and biomimetic systems",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Hedrick, TL",
+                                "preferred": "TL Hedrick"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2008",
+                    "doi": "10.1088/1748-3182/3/3/034001",
+                    "id": "bib14",
+                    "journal": "Bioinspiration & Biomimetics",
+                    "pages": "034001",
+                    "pmid": 18591738,
+                    "type": "journal",
+                    "volume": "3"
+                },
+                {
+                    "articleTitle": "Optimized kinematics enable both aerial and aquatic propulsion from a single three-dimensional flapping wing",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Izraelevitz, JS",
+                                "preferred": "JS Izraelevitz"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Kotidis, M",
+                                "preferred": "M Kotidis"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Triantafyllou, MS",
+                                "preferred": "MS Triantafyllou"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2018",
+                    "doi": "10.1103/PhysRevFluids.3.073102",
+                    "id": "bib15",
+                    "journal": "Physical Review Fluids",
+                    "pages": {
+                        "first": "1",
+                        "last": "25",
+                        "range": "1–25"
+                    },
+                    "type": "journal",
+                    "volume": "3"
+                },
+                {
+                    "articleTitle": "Strouhal number for flying and swimming in rhinoceros auklets <i>Cerorhinca monocerata</i>",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Kikuchi, DM",
+                                "preferred": "DM Kikuchi"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Watanuki, Y",
+                                "preferred": "Y Watanuki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Sato, N",
+                                "preferred": "N Sato"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hoshina, K",
+                                "preferred": "K Hoshina"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Takahashi, A",
+                                "preferred": "A Takahashi"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Watanabe, YY",
+                                "preferred": "YY Watanabe"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2015",
+                    "doi": "10.1111/jav.00642",
+                    "id": "bib16",
+                    "journal": "Journal of Avian Biology",
+                    "pages": {
+                        "first": "406",
+                        "last": "411",
+                        "range": "406–411"
+                    },
+                    "type": "journal",
+                    "volume": "46"
+                },
+                {
+                    "articleTitle": "Anatomy and histochemistry of flight muscles in a wing-propelled diving bird, the Atlantic Puffin, Fratercula arctica",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Kovacs, CE",
+                                "preferred": "CE Kovacs"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Meyers, RA",
+                                "preferred": "RA Meyers"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2000",
+                    "doi": "10.1002/(SICI)1097-4687(200005)244:2<109::AID-JMOR2>3.0.CO;2-0",
+                    "id": "bib17",
+                    "journal": "Journal of Morphology",
+                    "pages": {
+                        "first": "109",
+                        "last": "125",
+                        "range": "109–125"
+                    },
+                    "pmid": 10761049,
+                    "type": "journal",
+                    "volume": "244"
+                },
+                {
+                    "articleTitle": "Upstroke-based acceleration and head stabilization are the norm for the wing-propelled swimming of alcid seabirds",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Lapsansky, AB",
+                                "preferred": "AB Lapsansky"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Tobalske, BW",
+                                "preferred": "BW Tobalske"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "doi": "10.1242/jeb.201285",
+                    "id": "bib18",
+                    "journal": "The Journal of Experimental Biology",
+                    "pages": "jeb201285",
+                    "pmid": 31160426,
+                    "type": "journal",
+                    "volume": "222"
+                },
+                {
+                    "articleTitle": "Stroke patterns and regulation of swim speed and energy cost in free-ranging brünnich's guillemots",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Lovvorn, JR",
+                                "preferred": "JR Lovvorn"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Watanuki, Y",
+                                "preferred": "Y Watanuki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Kato, A",
+                                "preferred": "A Kato"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Naito, Y",
+                                "preferred": "Y Naito"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Liggins, GA",
+                                "preferred": "GA Liggins"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2004",
+                    "doi": "10.1242/jeb.01331",
+                    "id": "bib19",
+                    "journal": "Journal of Experimental Biology",
+                    "pages": {
+                        "first": "4679",
+                        "last": "4695",
+                        "range": "4679–4695"
+                    },
+                    "pmid": 15579562,
+                    "type": "journal",
+                    "volume": "207"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Lüdecke, D",
+                                "preferred": "D Lüdecke"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2020",
+                    "id": "bib20",
+                    "publisher": {
+                        "name": [
+                            "Github"
+                        ]
+                    },
+                    "source": "Github",
+                    "title": "Collection of Convenient Functions for Common Statistical Computations",
+                    "type": "software",
+                    "uri": "https://strengejacke.github.io/sjstats/",
+                    "version": "1.5.1"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "MacArthur, RH",
+                                "preferred": "RH MacArthur"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Geographical Ecology: Patterns in the Distribution of Species",
+                    "date": "1972",
+                    "id": "bib21",
+                    "publisher": {
+                        "name": [
+                            "Princeton University Press"
+                        ]
+                    },
+                    "type": "book"
+                },
+                {
+                    "articleTitle": "Underwater locomotion and musculoskeletal organization in some wing-propelled diving birds",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Meyers, RA",
+                                "preferred": "RA Meyers"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Fisher, K",
+                                "preferred": "K Fisher"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Goslow, L",
+                                "preferred": "L Goslow"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Jr., GEG",
+                                "preferred": "GEG Jr."
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1992",
+                    "id": "bib22",
+                    "journal": "In Society of Integrative And Comparative Biology",
+                    "pages": "157A",
+                    "type": "journal",
+                    "volume": "59"
+                },
+                {
+                    "articleTitle": "Gramm: grammar of graphics plotting in matlab",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Morel, P",
+                                "preferred": "P Morel"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2018",
+                    "doi": "10.21105/joss.00568",
+                    "id": "bib23",
+                    "journal": "The Journal of Open Source Software",
+                    "pages": "568",
+                    "type": "journal",
+                    "volume": "3"
+                },
+                {
+                    "articleTitle": "Tuning of strouhal number for high propulsive efficiency accurately predicts how wingbeat frequency and stroke amplitude relate and scale with size and flight speed in birds",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Nudds, RL",
+                                "preferred": "RL Nudds"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Taylor, GK",
+                                "preferred": "GK Taylor"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Thomas, ALR",
+                                "preferred": "ALR Thomas"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2004",
+                    "doi": "10.1098/rspb.2004.2838",
+                    "id": "bib24",
+                    "journal": "Proceedings of the Royal Society of London. Series B: Biological Sciences",
+                    "pages": {
+                        "first": "2071",
+                        "last": "2076",
+                        "range": "2071–2076"
+                    },
+                    "type": "journal",
+                    "volume": "271"
+                },
+                {
+                    "articleTitle": "Rainbow trout provide the first experimental evidence for adherence to a distinct strouhal number during animal oscillatory propulsion",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Nudds, RL",
+                                "preferred": "RL Nudds"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "John, EL",
+                                "preferred": "EL John"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Keen, AN",
+                                "preferred": "AN Keen"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Shiels, HA",
+                                "preferred": "HA Shiels"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2014",
+                    "doi": "10.1242/jeb.102236",
+                    "id": "bib25",
+                    "journal": "Journal of Experimental Biology",
+                    "pages": {
+                        "first": "2244",
+                        "last": "2249",
+                        "range": "2244–2249"
+                    },
+                    "pmid": 25141343,
+                    "type": "journal",
+                    "volume": "217"
+                },
+                {
+                    "articleTitle": "Maximum Load-Carrying During Takeoff of Leach's Storm-Petrel <i>Oceanodroma leucorhoa</i> and Cassin's Auklet <i>Ptychoramphus aleuticus</i>",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Ortega-Jimenez, VM",
+                                "preferred": "VM Ortega-Jimenez"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Alvarez-Borrego, S",
+                                "preferred": "S Alvarez-Borrego"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Arriaga-Ramirez, S",
+                                "preferred": "S Arriaga-Ramirez"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bridge, ES",
+                                "preferred": "ES Bridge"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Renner, M",
+                                "preferred": "M Renner"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2011",
+                    "doi": "10.1675/063.034.0113",
+                    "id": "bib26",
+                    "journal": "Waterbirds",
+                    "pages": {
+                        "first": "102",
+                        "last": "106",
+                        "range": "102–106"
+                    },
+                    "type": "journal",
+                    "volume": "34"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Ponganis, PJ",
+                                "preferred": "PJ Ponganis"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Diving Physiology of Marine Mammals and Seabirds",
+                    "date": "2015",
+                    "doi": "10.1017/CBO9781139045490",
+                    "id": "bib27",
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "Cambridge, UK"
+                                ]
+                            },
+                            "formatted": [
+                                "Cambridge, UK"
+                            ]
+                        },
+                        "name": [
+                            "Cambridge University Press"
+                        ]
+                    },
+                    "type": "book"
+                },
+                {
+                    "articleTitle": "Forces on oscillating foils for propulsion and maneuvering",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Read, DA",
+                                "preferred": "DA Read"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hover, FS",
+                                "preferred": "FS Hover"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Triantafyllou, MS",
+                                "preferred": "MS Triantafyllou"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2003",
+                    "doi": "10.1016/S0889-9746(02)00115-9",
+                    "id": "bib28",
+                    "journal": "Journal of Fluids and Structures",
+                    "pages": {
+                        "first": "163",
+                        "last": "183",
+                        "range": "163–183"
+                    },
+                    "type": "journal",
+                    "volume": "17"
+                },
+                {
+                    "articleTitle": "Chemo-mechanical energy transduction in relation to myosin isoform composition in skeletal muscle fibres of the rat",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Reggiani, C",
+                                "preferred": "C Reggiani"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Potma, EJ",
+                                "preferred": "EJ Potma"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bottinelli, R",
+                                "preferred": "R Bottinelli"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Canepari, M",
+                                "preferred": "M Canepari"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Pellegrino, MA",
+                                "preferred": "MA Pellegrino"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Stienen, GJ",
+                                "preferred": "GJ Stienen"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1997",
+                    "doi": "10.1111/j.1469-7793.1997.449bk.x",
+                    "id": "bib29",
+                    "journal": "The Journal of Physiology",
+                    "pages": {
+                        "first": "449",
+                        "last": "460",
+                        "range": "449–460"
+                    },
+                    "pmid": 9263923,
+                    "type": "journal",
+                    "volume": "502"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Rodewald, P",
+                                "preferred": "P Rodewald"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2015",
+                    "id": "bib30",
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "Ithica, New York"
+                                ]
+                            },
+                            "formatted": [
+                                "Ithica, New York"
+                            ]
+                        },
+                        "name": [
+                            "Cornell Laboratory of Ornithology"
+                        ]
+                    },
+                    "source": "The Birds of North America: https://birdsna.org",
+                    "title": "The Birds of North America: https://birdsna.org",
+                    "type": "report"
+                },
+                {
+                    "articleTitle": "Strouhal numbers and optimization of swimming by odontocete cetaceans",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Rohr, JJ",
+                                "preferred": "JJ Rohr"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Fish, FE",
+                                "preferred": "FE Fish"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2004",
+                    "doi": "10.1242/jeb.00948",
+                    "id": "bib31",
+                    "journal": "Journal of Experimental Biology",
+                    "pages": {
+                        "first": "1633",
+                        "last": "1642",
+                        "range": "1633–1642"
+                    },
+                    "pmid": 15073196,
+                    "type": "journal",
+                    "volume": "207"
+                },
+                {
+                    "articleTitle": "Why animals have different muscle fibre types",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Rome, LC",
+                                "preferred": "LC Rome"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Funke, RP",
+                                "preferred": "RP Funke"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Alexander, RM",
+                                "preferred": "RM Alexander"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Lutz, G",
+                                "preferred": "G Lutz"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Aldridge, H",
+                                "preferred": "H Aldridge"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Scott, F",
+                                "preferred": "F Scott"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Freadman, M",
+                                "preferred": "M Freadman"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1988",
+                    "doi": "10.1038/335824a0",
+                    "id": "bib32",
+                    "journal": "Nature",
+                    "pages": {
+                        "first": "824",
+                        "last": "827",
+                        "range": "824–827"
+                    },
+                    "pmid": 3185712,
+                    "type": "journal",
+                    "volume": "335"
+                },
+                {
+                    "articleTitle": "Heterogeneity of myosin heavy-chain expression in fast-twitch fiber types of mature avian pectoralis muscle",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Rosser, BWC",
+                                "preferred": "BWC Rosser"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Waldbillig, DM",
+                                "preferred": "DM Waldbillig"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Wick, M",
+                                "preferred": "M Wick"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bandman, E",
+                                "preferred": "E Bandman"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1996",
+                    "doi": "10.1139/o96-078",
+                    "id": "bib33",
+                    "journal": "Biochemistry and Cell Biology",
+                    "pages": {
+                        "first": "715",
+                        "last": "728",
+                        "range": "715–728"
+                    },
+                    "type": "journal",
+                    "volume": "74"
+                },
+                {
+                    "articleTitle": "Wind prevents cliff-breeding birds from accessing nests through loss of flight control",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Shepard, E",
+                                "preferred": "E Shepard"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Cole, EL",
+                                "preferred": "EL Cole"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Neate, A",
+                                "preferred": "A Neate"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Lempidakis, E",
+                                "preferred": "E Lempidakis"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ross, A",
+                                "preferred": "A Ross"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "doi": "10.7554/eLife.43842",
+                    "id": "bib34",
+                    "journal": "eLife",
+                    "pages": "e43842",
+                    "pmid": 31188128,
+                    "type": "journal",
+                    "volume": "8"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Simpson, GG",
+                                "preferred": "GG Simpson"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1946",
+                    "id": "bib35",
+                    "publisher": {
+                        "name": [
+                            "American Museum of Natural History"
+                        ]
+                    },
+                    "title": "Fossil penguins Bulletin of the American Museum of Natural History",
+                    "type": "software",
+                    "uri": "http://hdl.handle.net/2246/392",
+                    "version": "v. 87"
+                },
+                {
+                    "articleTitle": "Flight speed of seabirds in relation to wind speed and direction",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Spear, LB",
+                                "preferred": "LB Spear"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ainley, DG",
+                                "preferred": "DG Ainley"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1997",
+                    "doi": "10.1111/j.1474-919X.1997.tb04621.x",
+                    "id": "bib36",
+                    "journal": "Ibis",
+                    "pages": {
+                        "first": "234",
+                        "last": "251",
+                        "range": "234–251"
+                    },
+                    "type": "journal",
+                    "volume": "139"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Stettenheim, P",
+                                "preferred": "P Stettenheim"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Adaptations for Underwater Swimming in the Common Murre (Uria Aalge)",
+                    "date": "1959",
+                    "id": "bib37",
+                    "publisher": {
+                        "name": [
+                            "University of Michigan"
+                        ]
+                    },
+                    "type": "book"
+                },
+                {
+                    "articleTitle": "Evolution in the diving birds",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Storer, R",
+                                "preferred": "R Storer"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "conference": {
+                        "name": [
+                            "Proceedings of the XII International Ornithological Congress"
+                        ]
+                    },
+                    "date": "1960",
+                    "id": "bib38",
+                    "pages": {
+                        "first": "694",
+                        "last": "707",
+                        "range": "694–707"
+                    },
+                    "type": "conference-proceeding"
+                },
+                {
+                    "articleTitle": "Flying and swimming animals cruise at a strouhal number tuned for high power efficiency",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Taylor, GK",
+                                "preferred": "GK Taylor"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Nudds, RL",
+                                "preferred": "RL Nudds"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Thomas, AL",
+                                "preferred": "AL Thomas"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2003",
+                    "doi": "10.1038/nature02000",
+                    "id": "bib39",
+                    "journal": "Nature",
+                    "pages": {
+                        "first": "707",
+                        "last": "711",
+                        "range": "707–711"
+                    },
+                    "pmid": 14562101,
+                    "type": "journal",
+                    "volume": "425"
+                },
+                {
+                    "articleTitle": "Influence of wing loading on the trade-off between pursuit-diving and flight in common guillemots and razorbills",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Thaxter, CB",
+                                "preferred": "CB Thaxter"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Wanless, S",
+                                "preferred": "S Wanless"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Daunt, F",
+                                "preferred": "F Daunt"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Harris, MP",
+                                "preferred": "MP Harris"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Benvenuti, S",
+                                "preferred": "S Benvenuti"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Watanuki, Y",
+                                "preferred": "Y Watanuki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Grémillet, D",
+                                "preferred": "D Grémillet"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hamer, KC",
+                                "preferred": "KC Hamer"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2010",
+                    "doi": "10.1242/jeb.037390",
+                    "id": "bib40",
+                    "journal": "Journal of Experimental Biology",
+                    "pages": {
+                        "first": "1018",
+                        "last": "1025",
+                        "range": "1018–1025"
+                    },
+                    "pmid": 20228337,
+                    "type": "journal",
+                    "volume": "213"
+                },
+                {
+                    "articleTitle": "Kinematics of flap-bounding flight in the zebra finch over a wide range of speeds",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Tobalske, BW",
+                                "preferred": "BW Tobalske"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Peacock, WL",
+                                "preferred": "WL Peacock"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Dial, KP",
+                                "preferred": "KP Dial"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1999",
+                    "id": "bib41",
+                    "journal": "The Journal of Experimental Biology",
+                    "pages": {
+                        "first": "1725",
+                        "last": "1739",
+                        "range": "1725–1739"
+                    },
+                    "pmid": 10359676,
+                    "type": "journal",
+                    "volume": "202"
+                },
+                {
+                    "articleTitle": "Neuromuscular control and kinematics of intermitent flight in budgerigars (Melopisttacus undulatus)",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Tobalske, B",
+                                "preferred": "B Tobalske"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Dial, K",
+                                "preferred": "K Dial"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1994",
+                    "id": "bib42",
+                    "journal": "The Journal of Experimental Biology",
+                    "pages": {
+                        "first": "1",
+                        "last": "18",
+                        "range": "1–18"
+                    },
+                    "pmid": 9317204,
+                    "type": "journal",
+                    "volume": "187"
+                },
+                {
+                    "articleTitle": "Wake mechanics for thrust generation in oscillating foils",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Triantafyllou, MS",
+                                "preferred": "MS Triantafyllou"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Triantafyllou, GS",
+                                "preferred": "GS Triantafyllou"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Gopalkrishnan, R",
+                                "preferred": "R Gopalkrishnan"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1991",
+                    "doi": "10.1063/1.858173",
+                    "id": "bib43",
+                    "journal": "Physics of Fluids A: Fluid Dynamics",
+                    "pages": {
+                        "first": "2835",
+                        "last": "2837",
+                        "range": "2835–2837"
+                    },
+                    "type": "journal",
+                    "volume": "3"
+                },
+                {
+                    "articleTitle": "Optimal thrust development in oscillating foils with application to fish propulsion",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Triantafyllou, GS",
+                                "preferred": "GS Triantafyllou"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Triantafyllou, MS",
+                                "preferred": "MS Triantafyllou"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Grosenbaugh, MA",
+                                "preferred": "MA Grosenbaugh"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1993",
+                    "doi": "10.1006/jfls.1993.1012",
+                    "id": "bib44",
+                    "journal": "Journal of Fluids and Structures",
+                    "pages": {
+                        "first": "205",
+                        "last": "224",
+                        "range": "205–224"
+                    },
+                    "type": "journal",
+                    "volume": "7"
+                },
+                {
+                    "articleTitle": "Swim speeds and stroke patterns in wing-propelled divers: a comparison among alcids and a penguin",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Watanuki, Y",
+                                "preferred": "Y Watanuki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Wanless, S",
+                                "preferred": "S Wanless"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Harris, M",
+                                "preferred": "M Harris"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Lovvorn, JR",
+                                "preferred": "JR Lovvorn"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Miyazaki, M",
+                                "preferred": "M Miyazaki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Tanaka, H",
+                                "preferred": "H Tanaka"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Sato, K",
+                                "preferred": "K Sato"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2006",
+                    "doi": "10.1242/jeb.02128",
+                    "id": "bib45",
+                    "journal": "Journal of Experimental Biology",
+                    "pages": {
+                        "first": "1217",
+                        "last": "1230",
+                        "range": "1217–1230"
+                    },
+                    "pmid": 16547294,
+                    "type": "journal",
+                    "volume": "209"
+                },
+                {
+                    "articleTitle": "Dive angle, swim speed and wing stroke during shallow and deep Dives in common murres and Rhinoceros auklets",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Watanuki, Y",
+                                "preferred": "Y Watanuki"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Sato, K",
+                                "preferred": "K Sato"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2008",
+                    "doi": "10.2326/1347-0558(2008)7[15:DASSAW]2.0.CO;2",
+                    "id": "bib46",
+                    "journal": "Ornithological Science",
+                    "pages": {
+                        "first": "15",
+                        "last": "28",
+                        "range": "15–28"
+                    },
+                    "type": "journal",
+                    "volume": "7"
+                },
+                {
+                    "articleTitle": "Diving birds in cold water: do archimedes and Boyle determine energetic costs?",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Wilson, RP",
+                                "preferred": "RP Wilson"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Hustler, K",
+                                "preferred": "K Hustler"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ryan, PG",
+                                "preferred": "PG Ryan"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Burger, AE",
+                                "preferred": "AE Burger"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Noldeke, EC",
+                                "preferred": "EC Noldeke"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "1992",
+                    "doi": "10.1086/285409",
+                    "id": "bib47",
+                    "journal": "The American Naturalist",
+                    "pages": {
+                        "first": "179",
+                        "last": "200",
+                        "range": "179–200"
+                    },
+                    "type": "journal",
+                    "volume": "140"
+                }
+            ],
+            "acknowledgements": [
+                {
+                    "text": "This work was made possible by the Alaska SeaLife Center and its excellent support staff. We are grateful to Art Woods, Mark Mainwaring, Hila Chase, and Erin Keller for providing comments on an early version of this manuscript. We thank Romain Boisseau for advice on the statistical analyses. Finally, we thank Christian Rutz and Richard Bomphrey for their comments, which greatly improved the quality of this manuscript.",
+                    "type": "paragraph"
+                }
+            ],
+            "decisionLetter": {
+                "content": [
+                    {
+                        "text": "<b>Acceptance summary:</b>",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "The challenging measurements the authors have taken make a valuable contribution to the field. Their analyses raise many interesting questions that can be tested in the near future, regarding the kinematic and anatomical changes that are required for the transition from air to water and back again at the species level (evolutionary change) and at the individual level (instantaneous behavioural change).",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "<b>Decision letter after peer review:</b>",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "Thank you for submitting your article \"Alcids 'fly' at efficient Strouhal numbers in both air and water but vary stroke velocity and angle\" for consideration by <i>eLife</i>. Your article has been reviewed by two peer reviewers, one of whom is a member of our Board of Reviewing Editors, and the evaluation has been overseen by Christian Rutz as the Senior Editor. The reviewers have opted to remain anonymous.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "The reviewers have discussed their reviews with one another and the Guest Editor has drafted this decision letter, to help you prepare a revised submission.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "We would like to draw your attention to changes in our revision policy that we have made in response to COVID-19 (https://elifesciences.org/articles/57162). Specifically, we are asking editors to accept without delay manuscripts that they judge can stand as <i>eLife</i> papers without additional data, even if they feel that they would make the manuscript stronger. Thus the revisions requested below only address clarity and presentation. However, the points have been deemed essential prior to acceptance.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "Summary:",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "The reviewers agreed that this manuscript presents interesting new data and conclusions on a topic that is of active interest; it makes a useful contribution. The manuscript comprises impressive scope and a large amount of careful work. The data are collected from free-living animals, which is difficult, and very important for our understanding of real animal locomotion. The laboratory-like facility in Alaska for underwater filming of captive birds is a wonderful resource and its use is allied with filming of free flying pigeon guillemots from land in Monterey and following murres and puffins with a helicopter. Data are presented in clear, convincing and attractive figures. The manuscript raises interesting hypotheses for further work, including regional specialisation of muscles inserting on the sternum that are recruited differentially when the stroke angle changes between media. Currently, however, the paper requires some work before being of publishable standard.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "Essential revisions:",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "1) We request that the statistics and reporting of the statistical model outputs are strengthened. The statistical analyses are under-reported and the approach not justified satisfactorily.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– All statistical information should be given for all tests. The value of the test statistic (t , F etc.) and an effect size (for example, r2 or partial eta) must be stated, as well as the corresponding p-value.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– The statistical output for the species (random effect) needs to be given and a robust justification for including species as a random effect. Species is surely a fixed effect.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– When testing for differences between angular velocity in downstroke and upstroke (as illustrated in Figure 3), and wingbeat amplitude, and wingbeat frequency (Figure 4), it would be more proper to conduct a single test than multiple t-tests (i.e., Kinematics variable = fluid medium * species). If the interaction term is not significant, it can be removed from the model and the model run again with the main effects only. A similar approach to the chord angle with depth data would allow the authors to conclude for certain that the downstroke chord angle increase with descent angle is due to the tufted puffin data only. Post hoc tests may be used to identify which groups are responsible for any differences detected.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– Multiple statistical tests are conducted. There needs to be a justification of why the p-value is not adjusted accordingly (for example, HSD or Bonferroni correction).",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "2) Please confirm that the birds are in a cruising flight/swim. The <i>St</i> concept holds only in cruising flight/swimming, so a statistical comparison of the velocities at the beginning and end of each analysed clip is required to ensure that this is the case. This should be done for flight swimming data. In the absence of actual velocities pixels/s can be used as the metric.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "3) Please reduce the amount of speculative and discursive text. The paper is very strong without some of the sections that overreach. This means:",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– reducing parts of the Introduction dealing with the jack of all trades contradictions (although we suspect some will need to remain to show the existing dogma, providing context for the new work);",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– stating the interesting hypotheses raised for future work succinctly, since the current work does not provide any direct support with which to test them (muscle fibre types; attachment points; gearing).",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "– Introduction: It is well established which wing shape(s) provide the most efficient flight. Birds that utilise both water and air for transport have very different wing shapes to those of aerial birds. The trade-off is already very evident. Further, high-speed aerial flight is not always the most energy efficient way to cover distance – it is more likely the best option for a bird with short wings of low area: i.e. high wing loading. A brief comment should be added on trade-offs in wing shape for air and water specialists: specifically, the consequences/result of high wing loading.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "4) Add a comment on the robustness of <i>St</i> to large changes in kinematics and what it means for an animal, energetically (since metabolic cost is the price they pay), to be in the high or low region of the 'efficient zone'. Discuss whether speed is a physical consequence of f*a (rather than a third independently selected parameter) leading to an inevitable convergence on a <i>St</i> number range.",
+                        "type": "paragraph"
+                    }
+                ],
+                "description": [
+                    {
+                        "text": "In the interests of transparency, eLife publishes the most substantive revision requests and the accompanying author responses.",
+                        "type": "paragraph"
+                    }
+                ],
+                "doi": "10.7554/eLife.55774.sa1",
+                "id": "sa1"
+            },
+            "authorResponse": {
+                "content": [
+                    {
+                        "content": [
+                            {
+                                "text": "Essential revisions:",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "1) We request that the statistics and reporting of the statistical model outputs are strengthened. The statistical analyses are under-reported and the approach not justified satisfactorily.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– All statistical information should be given for all tests. The value of the test statistic (t , F etc.) and an effect size (for example, r2 or partial eta) must be stated, as well as the corresponding p-value.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– The statistical output for the species (random effect) needs to be given and a robust justification for including species as a random effect. Species is surely a fixed effect.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– When testing for differences between angular velocity in downstroke and upstroke (as illustrated in Figure 3), and wingbeat amplitude, and wingbeat frequency (Figure 4), it would be more proper to conduct a single test than multiple t-tests (i.e., Kinematics variable = fluid medium * species). If the interaction term is not significant, it can be removed from the model and the model run again with the main effects only. A similar approach to the chord angle with depth data would allow the authors to conclude for certain that the downstroke chord angle increase with descent angle is due to the tufted puffin data only. Post hoc tests may be used to identify which groups are responsible for any differences detected.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– Multiple statistical tests are conducted. There needs to be a justification of why the p-value is not adjusted accordingly (for example, HSD or Bonferroni correction).",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "These are all fair critiques and we have done our best to correct these issues.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "We report proper statistics for each model. We also removed a number of significance tests, as many were unneeded for testing our hypotheses.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "When testing for significant differences in kinematic parameters across species, we specify our models as <i>Kinematic variable = Species * Condition</i>. Thus, both species and condition are treated as fixed effects now. Because we have an unbalanced design (fewer descending flights than horizontal, for example), the order of the variables unfortunately matters. Based on the book “Practical Regression and ANOVA using R” by Julian Faraway, specifying our models with <i>Species</i> first allows us to determine if the relationship between <i>Kinematic variable</i> and <i>Condition</i> is significant, after accounting for the variation due to <i>Species</i>. In other words, the ANOVA function compares the model <i>Kinematic variable = Species</i> to the model <i>Kinematic variable = Species + Condition,</i> and then <i>Kinematic variable = Species + Condition</i> to <i>Kinematic variable = Species + Condition + Species:Condition.</i>",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "If you disagree with this method of testing, we are happy to change things!",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "Within species tests are now performed using either the TukeyHSD() function or a Bonferroni-corrected p-value. Details are included in the text.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "2) Please confirm that the birds are in a cruising flight/swim. The St concept holds only in cruising flight/swimming, so a statistical comparison of the velocities at the beginning and end of each analysed clip is required to ensure that this is the case. This should be done for flight swimming data. In the absence of actual velocities pixels/s can be used as the metric.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "This is a great point! The translational velocity in swimming is naturally pulsatile, so the speeds will not be perfectly consistent, but you are correct that they should not exhibit any trends among wingbeats. Before including flights in the data set, we plotted the velocity (in body lengths per second) to verify that the animal was not consistently accelerating or decelerating. We forgot to mention this in the original text. It has been added now.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "When looking at the per-wingbeat data contained in the file ‘AquaticKinData_perp.xlsx’ on the GitHub page, you can see that the velocity (in body lengths per second) does not vary more than ~1 bl s<sup>-1</sup> between the wingbeat at the start of the run and the wingbeat at the end.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "For aerial flights, the ground velocity was determined based on an object or standing wave under the bird, which quickly disappears from view as the camera follows the animal. We mainly discuss Strouhal number in air relative to average air speed of the species, given that we could not measure the air speed of the bird, and point out the issues with our ground speed measures. We could try to measure ground speed at the beginning and end of each flight, but it would not tell us about the consistency of the animal’s air speed. However, because the birds were flying over open water, we are reasonably justified in assuming that they were cruising.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "3) Please reduce the amount of speculative and discursive text. The paper is very strong without some of the sections that overreach. This means:",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– reducing parts of the Introduction dealing with the jack of all trades contradictions (although we suspect some will need to remain to show the existing dogma, providing context for the new work);",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– stating the interesting hypotheses raised for future work succinctly, since the current work does not provide any direct support with which to test them (muscle fibre types; attachment points; gearing).",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "– Introduction: It is well established which wing shape(s) provide the most efficient flight. Birds that utilise both water and air for transport have very different wing shapes to those of aerial birds. The trade-off is already very evident. Further, high-speed aerial flight is not always the most energy efficient way to cover distance – it is more likely the best option for a bird with short wings of low area: i.e. high wing loading. A brief comment should be added on trade-offs in wing shape for air and water specialists: specifically, the consequences/result of high wing loading.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "The text has been trimmed considerably, including over 1000 words trimmed from the original Discussion.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "With specific reference to the original submission, we agree that our statement was vague and, therefore, sounded suspicious. We were attempting to point out that a trade-off in flight performance caused by using the wings for locomotion in two media is not well-established, but our phrasing made it seem that we were arguing against an aerial-terrestrial trade-off altogether. Hopefully, the revised text is clearer.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "On wing shapes of wing-propelled diving birds, more research is needed to adequately test whether they have different wing shapes compared with foot-propelled diving birds. Based on wing measurements from the sources mentioned in the introduction, the wing shapes (at least in the parameters typically measured) of alcids and Anatidae, including many foot-propelled diving ducks, ‘non-diving’ ducks, and geese, overlap entirely. Shearwaters, which routinely dive down to 60 m (Croll and Tershy, 2012) [deeper than most alcids], have very different wing shapes from most diving birds, as do boobies and gannets. These data have not been rigorously analyzed, so most of discussion related to the wing shapes of diving birds has been removed from the paper. But until this question has been addressed with multivariate data, in a phylogenetic context, we feel caution precludes describing the wings of wing-propelled divers as being different in shape from those of other flying birds.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "4) Add a comment on the robustness of St to large changes in kinematics and what it means for an animal, energetically (since metabolic cost is the price they pay), to be in the high or low region of the 'efficient zone'. Discuss whether speed is a physical consequence of f*a (rather than a third independently selected parameter) leading to an inevitable convergence on a St number range.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "Good point! We added a paragraph in the subsection “Flights perpendicular to the camera view” to discuss these topics.",
+                        "type": "paragraph"
+                    }
+                ],
+                "doi": "10.7554/eLife.55774.sa2",
+                "id": "sa2"
+            },
+            "stage": "published",
+            "statusDate": "2020-07-02T15:11:47Z",
+            "versionDate": "2020-07-02T15:11:47Z"
+        }
+    ]
+}

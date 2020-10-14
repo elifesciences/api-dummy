@@ -1,0 +1,301 @@
+{
+    "received": "2019-11-07",
+    "accepted": "2020-06-12",
+    "versions": [
+        {
+            "status": "poa",
+            "id": "53433",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.53433",
+            "authorLine": "Guilhem Doulcier et al.",
+            "title": "Eco-evolutionary dynamics of nested Darwinian populations and the emergence of community-level heredity",
+            "published": "2020-07-07T00:00:00Z",
+            "versionDate": "2020-07-07T00:00:00Z",
+            "volume": 9,
+            "elocationId": "e53433",
+            "pdf": "https://cdn.elifesciences.org/articles/53433/elife-53433-v1.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/53433/elife-53433-v1.xml",
+            "subjects": [
+                {
+                    "id": "ecology",
+                    "name": "Ecology"
+                },
+                {
+                    "id": "evolutionary-biology",
+                    "name": "Evolutionary Biology"
+                }
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "text": "Interactions among microbial cells can generate new chemistries and functions, but exploitation requires establishment of communities that reliably recapitulate community-level phenotypes. Using mechanistic mathematical models, we show how simple manipulations to population structure can exogenously impose Darwinian-like properties on communities. Such scaffolding causes communities to participate directly in the process of evolution by natural selection and drives the evolution of cell-level interactions to the point where, despite underlying stochasticity, derived communities give rise to offspring communities that faithfully re-establish parental phenotype. The mechanism is akin to a developmental process (<i>developmental correction</i>) that arises from density dependent interactions among cells. Knowledge of ecological factors affecting evolution of developmental correction has implications for understanding the evolutionary origin of major egalitarian transitions, symbioses, and for top-down engineering of microbial communities.",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Doulcier et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authors": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "France",
+                                    "locality": [
+                                        "Paris"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Paris",
+                                    "France"
+                                ]
+                            },
+                            "name": [
+                                "Laboratoire de Génétique de l'Evolution, CNRS UMR 8231",
+                                "École supérieure de physique et de chimie industrielle de la ville de Paris, PSL University"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared.",
+                    "emailAddresses": [
+                        "guilhem.doulcier@ens.fr"
+                    ],
+                    "name": {
+                        "index": "Doulcier, Guilhem",
+                        "preferred": "Guilhem Doulcier"
+                    },
+                    "orcid": "0000-0003-3720-9089",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "France",
+                                    "locality": [
+                                        "Paris"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Paris",
+                                    "France"
+                                ]
+                            },
+                            "name": [
+                                "Center for Interdisciplinary Research in Biology(CIRB)",
+                                "Collège de France"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared.",
+                    "name": {
+                        "index": "Lambert, Amaury",
+                        "preferred": "Amaury Lambert"
+                    },
+                    "orcid": "0000-0002-7248-9955",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "France",
+                                    "locality": [
+                                        "Paris"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Paris",
+                                    "France"
+                                ]
+                            },
+                            "name": [
+                                "Institut de Biologie de l'´Ecole Normale Sup´erieure",
+                                "École Normale Supérieure"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared.",
+                    "name": {
+                        "index": "De Monte, Silvia",
+                        "preferred": "Silvia De Monte"
+                    },
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "Germany",
+                                    "locality": [
+                                        "Plön"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Plön",
+                                    "Germany"
+                                ]
+                            },
+                            "name": [
+                                "Department of Microbial Population Biology",
+                                "Max Planck Institute for Evolutionary Biology"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "Paul B Rainey, PBR is a founder of MilliDrop InstrumentsReviewing editor, <i>eLife</i>.",
+                    "name": {
+                        "index": "Rainey, Paul B",
+                        "preferred": "Paul B Rainey"
+                    },
+                    "orcid": "0000-0003-0879-5795",
+                    "type": "person"
+                }
+            ],
+            "reviewers": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States"
+                                },
+                                "formatted": [
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "Fred Hutchinson Cancer Research Center"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Shou, Wenying",
+                        "preferred": "Wenying Shou"
+                    },
+                    "role": "Reviewing Editor",
+                    "type": "person"
+                }
+            ],
+            "funding": {
+                "awards": [
+                    {
+                        "awardId": "ANR-10-IDEX-001-02",
+                        "id": "par-1",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Doulcier, Guilhem",
+                                    "preferred": "Guilhem Doulcier"
+                                },
+                                "type": "person"
+                            },
+                            {
+                                "name": {
+                                    "index": "Rainey, Paul B",
+                                    "preferred": "Paul B Rainey"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/501100001665",
+                            "name": [
+                                "Agence Nationale de la Recherche"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "ANR-10-LABX-54",
+                        "id": "par-2",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "De Monte, Silvia",
+                                    "preferred": "Silvia De Monte"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/501100001665",
+                            "name": [
+                                "Agence Nationale de la Recherche"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "ANR-11-IDEX-0001-02",
+                        "id": "par-3",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "De Monte, Silvia",
+                                    "preferred": "Silvia De Monte"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/501100001665",
+                            "name": [
+                                "Agence Nationale de la Recherche"
+                            ]
+                        }
+                    },
+                    {
+                        "id": "par-4",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Rainey, Paul B",
+                                    "preferred": "Paul B Rainey"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/501100004189",
+                            "name": [
+                                "Max-Planck-Gesellschaft"
+                            ]
+                        }
+                    }
+                ],
+                "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+            },
+            "additionalFiles": [
+                {
+                    "caption": [
+                        {
+                            "text": "Any figure supplements, source code, source data, videos or supplementary files associated with this article are contained within this zip.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-53433-supp-v1.zip",
+                    "id": "SD1-data",
+                    "label": "All additional files",
+                    "mediaType": "application/zip",
+                    "uri": "https://cdn.elifesciences.org/articles/53433/elife-53433-supp-v1.zip"
+                }
+            ],
+            "dataSets": {
+                "availability": [
+                    {
+                        "text": "The source code for all simulations and figures in the manuscript isavailable as a zip file uploaded with the manuscript and in a public gitrepository (https://gitlab.com/ecoevomath/estaudel).",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "stage": "published",
+            "statusDate": "2020-07-07T00:00:00Z"
+        }
+    ]
+}
