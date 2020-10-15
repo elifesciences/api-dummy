@@ -8,17 +8,19 @@
             "id": "04395",
             "version": 1,
             "type": "research-article",
-            "socialImage": {
-                "alt": "",
-                "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v1.tif",
-                "source": {
-                    "mediaType": "image/jpg",
-                    "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v1.tif/full/full/0/default.jpg",
-                    "filename": "elife-04395-fig1-v1.jpg"
-                },
-                "size": {
-                    "width": 4194,
-                    "height": 4714
+            "image": {
+                "social": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/04395%2Felife-04395-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-04395-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    }
                 }
             },
             "doi": "10.7554/eLife.04395",

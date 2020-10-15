@@ -21,19 +21,19 @@
                         "width": 4194,
                         "height": 4714
                     }
-                }
-            },
-            "socialImage": {
-                "alt": "",
-                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                "source": {
-                    "mediaType": "image/jpg",
-                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                    "filename": "elife-09560-fig1-v1.jpg"
                 },
-                "size": {
-                    "width": 4194,
-                    "height": 4714
+                "social": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-09560-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    }
                 }
             },
             "doi": "10.7554/eLife.10627",
