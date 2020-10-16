@@ -557,6 +557,10 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
         unset($latestVersion['acknowledgements']);
         unset($latestVersion['appendices']);
         unset($latestVersion['image']['banner']);
+        unset($latestVersion['image']['social']);
+        if (empty($latestVersion['image'])) {
+            unset($latestVersion['image']);
+        }
 
         $content['items'][] = $latestVersion;
     }
@@ -667,6 +671,10 @@ $app->get('/articles/{number}/versions/{version}',
         $type = $request->attributes->get(ContentNegotiationProvider::ATTRIBUTE_ACCEPT);
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ('04395' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 3) {
+            throw new NotAcceptableHttpException('This article PoA requires version 3.');
+        }
 
         if ('15691' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 4) {
             throw new NotAcceptableHttpException('This article VoR requires version 4.');
@@ -1963,6 +1971,10 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         unset($result['acknowledgements']);
         unset($result['appendices']);
         unset($result['image']['banner']);
+        unset($result['image']['social']);
+        if (empty($result['image'])) {
+            unset($result['image']);
+        }
 
         if ('published' === $useDate) {
             $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
