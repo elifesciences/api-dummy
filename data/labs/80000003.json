@@ -19,6 +19,23 @@
                 "x": 50,
                 "y": 50
             }
+        },
+        "social": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2018-12%2Fimg_6164_1.jpg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/labs_experiment%2F2018-12%2Fimg_6164_1.jpg/full/full/0/default.jpg",
+                "filename": "img_6164_1.jpg"
+            },
+            "size": {
+                "width": 4032,
+                "height": 2470
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            }
         }
     },
     "impactStatement": "Paul Shannon, Head of Technology, shares highlights from eLife’s journey in creating the Libero community.",

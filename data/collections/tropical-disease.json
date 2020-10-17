@@ -36,6 +36,19 @@
                 "width": 1800,
                 "height": 861
             }
+        },
+        "social": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
         }
     },
     "subjects": [
