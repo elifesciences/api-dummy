@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1886b8dddace8cca9391ad94ee2351e9",
+    "content-hash": "f2dda36f333cec74c5b373fd4456bd0f",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -1140,16 +1140,16 @@
         },
         {
             "name": "elife/api",
-            "version": "dev-magazine-social-media-image-compiled",
+            "version": "dev-social-image-complete-compiled",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "3f4acdc78db7b054fd0f5196953006bf610c2360"
+                "reference": "ad49c7a21f6411e9be5e9d8407020091d1bfbc06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/3f4acdc78db7b054fd0f5196953006bf610c2360",
-                "reference": "3f4acdc78db7b054fd0f5196953006bf610c2360",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/ad49c7a21f6411e9be5e9d8407020091d1bfbc06",
+                "reference": "ad49c7a21f6411e9be5e9d8407020091d1bfbc06",
                 "shasum": ""
             },
             "conflict": {
@@ -1161,7 +1161,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2020-10-16T19:30:10+00:00"
+            "time": "2020-10-17T15:44:12+00:00"
         },
         {
             "name": "elife/api-validator",
