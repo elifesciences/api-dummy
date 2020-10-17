@@ -105,8 +105,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles') as $file) {
             $path = '/articles/'.$file->getBasename('.json');
-            $poaMinimum = 2;
             switch ($file->getBasename('.json')) {
+                case '04395':
+                    $poaMinimum = 3;
                 case '15691':
                     $vorMinimum = 4;
                     break;
@@ -115,6 +116,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $vorMinimum = 3;
                     break;
                 default:
+                    $poaMinimum = 2;
                     $vorMinimum = 2;
             }
 
