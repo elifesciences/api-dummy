@@ -28,19 +28,6 @@
                 "width": 7016,
                 "height": 2082
             }
-        },
-        "social": {
-            "alt": "",
-            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-biochemistry-illustration.jpg",
-            "source": {
-                "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-biochemistry-illustration.jpg/full/full/0/default.jpg",
-                "filename": "elife-sciences-biochemistry-illustration.jpg"
-            },
-            "size": {
-                "width": 7016,
-                "height": 2082
-            }
         }
     }
 }
