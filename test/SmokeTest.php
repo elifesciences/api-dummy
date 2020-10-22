@@ -108,6 +108,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             switch ($file->getBasename('.json')) {
                 case '04395':
                     $poaMinimum = 3;
+                    break;
                 case '15691':
                     $vorMinimum = 4;
                     break;
