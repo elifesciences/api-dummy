@@ -3,6 +3,21 @@
     "title": "eLife Community Ambassadors: 243 volunteers join the programme in 2019",
     "published": "2019-04-12T11:33:56Z",
     "impactStatement": "Diverse researchers from across the world are joining forces to promote responsible behaviours in science.",
+    "image": {
+        "social": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png",
+            "size": {
+                "width": 650,
+                "height": 300
+            },
+            "source": {
+                "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png/full/full/0/default.jpg",
+                "filename": "ambassador_medley1_6.jpg",
+                "mediaType": "image/jpeg"
+            }
+        }
+    },
     "content": [
         {
             "text": "A new cohort of eLife Community Ambassadors joins the efforts of our Early-Career Advisory Group (ECAG) to help promote greater openness, collaboration, improved reproducibility, diversity and funding access in life sciences and biomedicine.",

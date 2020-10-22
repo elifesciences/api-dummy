@@ -29,6 +29,19 @@
                 "width": 1800,
                 "height": 900
             }
+        },
+        "social": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-3-elife-podcast.png",
+                "filename": "episode-3-elife-podcast.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 900
+            }
         }
     },
     "sources": [

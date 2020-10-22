@@ -4,6 +4,21 @@
     "published": "2017-01-01T00:00:00Z",
     "starts": "2018-08-04T15:00:00Z",
     "ends": "2018-08-04T16:00:00Z",
+    "image": {
+        "social": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png",
+            "size": {
+                "width": 650,
+                "height": 300
+            },
+            "source": {
+                "uri": "https://iiif.elifesciences.org/journal-cms/blog-article-content%2F2019-04%2Fambassador_medley1_6.png/full/full/0/default.jpg",
+                "filename": "ambassador_medley1_6.jpg",
+                "mediaType": "image/jpeg"
+            }
+        }
+    },
     "content": [
         {
             "type": "paragraph",

@@ -39,6 +39,19 @@
             "attribution": [
                 "Image credit: Dr. Juan Jung"
             ]
+        },
+        "social": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2017-05%2Fhegde.jpg",
+            "alt": "Ramanath Hegde",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2017-05%2Fhegde.jpg/full/full/0/default.jpg",
+                "filename": "hegde.jpg"
+            },
+            "size": {
+                "width": 1696,
+                "height": 1152
+            }
         }
     },
     "content": [
