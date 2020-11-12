@@ -13,9 +13,12 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 $app = require __DIR__.'/bootstrap.php';
 
 $app['message-validator'] = function (Application $app) {
+    $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
+    $path = dirname(dirname($reflection->getFileName())).'/elife/api/dist/model';
+
     return new FakeHttpsMessageValidator(
         new JsonMessageValidator(
-            new PathBasedSchemaFinder(ComposerLocator::getPath('elife/api').'/dist/model'),
+            new PathBasedSchemaFinder($path),
             new Validator()
         )
     );

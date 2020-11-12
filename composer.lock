@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f14296d9d3570ff7cb47b7128e3eacf5",
+    "content-hash": "4fc078a631e2f5f4d6315b2af951b82c",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -1169,12 +1169,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-validator-php.git",
-                "reference": "4a3d68807949ae02603936d514cc4cd13db42820"
+                "reference": "b87e36a48be01b1c466c506d7024f5558974245a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/4a3d68807949ae02603936d514cc4cd13db42820",
-                "reference": "4a3d68807949ae02603936d514cc4cd13db42820",
+                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/b87e36a48be01b1c466c506d7024f5558974245a",
+                "reference": "b87e36a48be01b1c466c506d7024f5558974245a",
                 "shasum": ""
             },
             "require": {
@@ -1205,7 +1205,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API validator",
-            "time": "2018-03-15T10:16:56+00:00"
+            "time": "2020-03-05T04:54:17+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1330,44 +1330,6 @@
                 "schema"
             ],
             "time": "2017-02-22T03:28:16+00:00"
-        },
-        {
-            "name": "mindplay/composer-locator",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mindplay-dk/composer-locator.git",
-                "reference": "24c960f014904c35ce89b77fc4118903c34b3fe6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mindplay-dk/composer-locator/zipball/24c960f014904c35ce89b77fc4118903c34b3fe6",
-                "reference": "24c960f014904c35ce89b77fc4118903c34b3fe6",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1",
-                "php": ">= 5.4"
-            },
-            "require-dev": {
-                "composer/composer": "^1"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "mindplay\\composer_locator\\Plugin"
-            },
-            "autoload": {
-                "classmap": [
-                    "src/ComposerLocator.php",
-                    "src/Plugin.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Locates Composer package root folders by package name",
-            "time": "2016-06-07T14:40:59+00:00"
         },
         {
             "name": "myclabs/deep-copy",
