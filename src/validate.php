@@ -1,5 +1,6 @@
 <?php
 
+use Composer\Autoload\ClassLoader;
 use eLife\ApiValidator\MessageValidator\FakeHttpsMessageValidator;
 use eLife\ApiValidator\MessageValidator\JsonMessageValidator;
 use eLife\ApiValidator\SchemaFinder\PathBasedSchemaFinder;
@@ -15,7 +16,7 @@ $app = require __DIR__.'/bootstrap.php';
 $app['message-validator'] = function (Application $app) {
     return new FakeHttpsMessageValidator(
         new JsonMessageValidator(
-            new PathBasedSchemaFinder(ComposerLocator::getPath('elife/api').'/dist/model'),
+            new PathBasedSchemaFinder(dirname((new ReflectionClass(ClassLoader::class))->getFileName(), 2).'/elife/api/dist/model'),
             new Validator()
         )
     );
