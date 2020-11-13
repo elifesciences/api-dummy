@@ -1,5 +1,6 @@
 <?php
 
+use Composer\Autoload\ClassLoader;
 use eLife\ApiValidator\MessageValidator\FakeHttpsMessageValidator;
 use eLife\ApiValidator\MessageValidator\JsonMessageValidator;
 use eLife\ApiValidator\SchemaFinder\PathBasedSchemaFinder;
@@ -13,12 +14,9 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 $app = require __DIR__.'/bootstrap.php';
 
 $app['message-validator'] = function (Application $app) {
-    $reflection = new \ReflectionClass(\Composer\Autoload\ClassLoader::class);
-    $path = dirname(dirname($reflection->getFileName())).'/elife/api/dist/model';
-
     return new FakeHttpsMessageValidator(
         new JsonMessageValidator(
-            new PathBasedSchemaFinder($path),
+            new PathBasedSchemaFinder(dirname((new ReflectionClass(ClassLoader::class))->getFileName(), 2).'/elife/api/dist/model'),
             new Validator()
         )
     );
