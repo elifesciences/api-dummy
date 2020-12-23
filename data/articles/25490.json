@@ -1,0 +1,4842 @@
+{
+  "received": "2017-01-27",
+  "versions": [
+    {
+      "status": "vor",
+      "id": "25490",
+      "version": 1,
+      "type": "research-article",
+      "doi": "10.7554/eLife.25490",
+      "authorLine": "Carl A Morrow et al.",
+      "title": "Inter-Fork Strand Annealing causes genomic deletions during the termination of DNA replication",
+      "published": "2017-06-06T00:00:00Z",
+      "versionDate": "2017-06-06T00:00:00Z",
+      "volume": 6,
+      "elocationId": "e25490",
+      "pdf": "https://cdn.elifesciences.org/articles/25490/elife-25490-v1.pdf",
+      "xml": "https://cdn.elifesciences.org/articles/25490/elife-25490-v1.xml",
+      "figuresPdf": "https://cdn.elifesciences.org/articles/25490/elife-25490-figures-v1.pdf",
+      "subjects": [
+        {
+          "id": "chromosomes-gene-expression",
+          "name": "Chromosomes and Gene Expression"
+        }
+      ],
+      "researchOrganisms": [
+        "<i>S. pombe</i>"
+      ],
+      "abstract": {
+        "content": [
+          {
+            "text": "Problems that arise during DNA replication can drive genomic alterations that are instrumental in the development of cancers and many human genetic disorders. Replication fork barriers are a commonly encountered problem, which can cause fork collapse and act as hotspots for replication termination. Collapsed forks can be rescued by homologous recombination, which restarts replication. However, replication restart is relatively slow and, therefore, replication termination may frequently occur by an active fork converging on a collapsed fork. We find that this type of non-canonical fork convergence in fission yeast is prone to trigger deletions between repetitive DNA sequences via a mechanism we call Inter-Fork Strand Annealing (IFSA) that depends on the recombination proteins Rad52, Exo1 and Mus81, and is countered by the FANCM-related DNA helicase Fml1. Based on our findings, we propose that IFSA is a potential threat to genomic stability in eukaryotes.",
+            "type": "paragraph"
+          }
+        ],
+        "doi": "10.7554/eLife.25490.001"
+      },
+      "copyright": {
+        "license": "CC-BY-4.0",
+        "holder": "Morrow et al.",
+        "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+      },
+      "authors": [
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "CAM, Formal analysis, Investigation, Methodology, Writing—review and editing",
+          "name": {
+            "index": "Morrow, Carl A",
+            "preferred": "Carl A Morrow"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "MON, Formal analysis, Investigation, Methodology, Writing—review and editing",
+          "name": {
+            "index": "Nguyen, Michael O",
+            "preferred": "Michael O Nguyen"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "AF, Investigation, Writing—review and editing",
+          "name": {
+            "index": "Fower, Andrew",
+            "preferred": "Andrew Fower"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "INW, Investigation, Writing—review and editing",
+          "name": {
+            "index": "Wong, Io Nam",
+            "preferred": "Io Nam Wong"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "FO, Formal analysis, Supervision, Investigation, Methodology, Writing—review and editing",
+          "name": {
+            "index": "Osman, Fekret",
+            "preferred": "Fekret Osman"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "CB, Investigation, Writing—review and editing",
+          "name": {
+            "index": "Bryer, Claire",
+            "preferred": "Claire Bryer"
+          },
+          "type": "person"
+        },
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United Kingdom",
+                  "locality": [
+                    "Oxford"
+                  ]
+                },
+                "formatted": [
+                  "Oxford",
+                  "United Kingdom"
+                ]
+              },
+              "name": [
+                "Department of Biochemistry",
+                "University of Oxford"
+              ]
+            }
+          ],
+          "competingInterests": "The authors declare that no competing interests exist.",
+          "contribution": "MCW, Conceptualization, Formal analysis, Supervision, Funding acquisition, Methodology, Writing—original draft, Writing—review and editing",
+          "emailAddresses": [
+            "matthew.whitby@bioch.ox.ac.uk"
+          ],
+          "name": {
+            "index": "Whitby, Matthew C",
+            "preferred": "Matthew C Whitby"
+          },
+          "orcid": "0000-0003-0951-3374",
+          "type": "person"
+        }
+      ],
+      "reviewers": [
+        {
+          "affiliations": [
+            {
+              "address": {
+                "components": {
+                  "country": "United States"
+                },
+                "formatted": [
+                  "United States"
+                ]
+              },
+              "name": [
+                "University of California, Davis"
+              ]
+            }
+          ],
+          "name": {
+            "index": "Kowalczykowski, Stephen C",
+            "preferred": "Stephen C Kowalczykowski"
+          },
+          "role": "Reviewing Editor",
+          "type": "person"
+        }
+      ],
+      "funding": {
+        "awards": [
+          {
+            "awardId": "090767/Z/09/Z",
+            "id": "par-1",
+            "recipients": [
+              {
+                "name": {
+                  "index": "Whitby, Matthew C",
+                  "preferred": "Matthew C Whitby"
+                },
+                "type": "person"
+              }
+            ],
+            "source": {
+              "funderId": "10.13039/100010269",
+              "name": [
+                "Wellcome"
+              ]
+            }
+          },
+          {
+            "id": "par-2",
+            "recipients": [
+              {
+                "name": {
+                  "index": "Whitby, Matthew C",
+                  "preferred": "Matthew C Whitby"
+                },
+                "type": "person"
+              }
+            ],
+            "source": {
+              "name": [
+                "EP Abraham Cephalosporin Trust Fund"
+              ]
+            }
+          }
+        ],
+        "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+      },
+      "additionalFiles": [
+        {
+          "doi": "10.7554/eLife.25490.014",
+          "filename": "elife-25490-supp1-v1.docx",
+          "id": "SD5-data",
+          "label": "Supplementary file 1",
+          "mediaType": "application/docx",
+          "title": "<i>Schizosaccharomyces pombe</i> strains.",
+          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-supp1-v1.docx"
+        },
+        {
+          "doi": "10.7554/eLife.25490.015",
+          "filename": "elife-25490-supp2-v1.docx",
+          "id": "SD6-data",
+          "label": "Supplementary file 2",
+          "mediaType": "application/docx",
+          "title": "Oligonucleotides.",
+          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-supp2-v1.docx"
+        }
+      ],
+      "impactStatement": "The discovery of a mechanism that causes DNA deletions during non-canonical DNA replication termination is described.",
+      "keywords": [
+        "DNA replication",
+        "homologous recombination",
+        "Rad52",
+        "replication fork collapse",
+        "replication fork barrier",
+        "Mus81"
+      ],
+      "body": [
+        {
+          "content": [
+            {
+              "text": "Eukaryotic DNA replication initiates at multiple origin sites along each chromosome and terminates when replication forks (RFs) from adjacent origins converge. DNA lesions in the template strands, and physical barriers, such as tightly bound proteins, threaten this seamless progression from initiation to termination by impeding RFs and precipitating their collapse (<a href=\"#bib5\">Berti and Vindigni, 2016</a>; <a href=\"#bib29\">Lambert and Carr, 2013</a>). RF collapse involves either remodelling or disassembly of the replisome, and can occur with or without DNA breakage (<a href=\"#bib5\">Berti and Vindigni, 2016</a>; <a href=\"#bib9\">Carr et al., 2011</a>; <a href=\"#bib14\">Dungrawala et al., 2015</a>). Regardless of its precise form, collapse renders the fork incompetent for further DNA synthesis. In such cases, DNA replication, initiated from a downstream origin, can ensure that genome duplication is completed (<a href=\"#bib35\">Mayle et al., 2015</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>; <a href=\"#bib71\">Yekezare et al., 2013</a>). However, to guard against the possibility that this second RF may also fail, cells deploy homologous recombination (HR) enzymes to the collapsed fork, which can restart replication (<a href=\"#bib28\">Lambert et al., 2010</a>; <a href=\"#bib39\">Mohebi et al., 2015</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>; <a href=\"#bib70\">Yeeles et al., 2013</a>). This so-called recombination-dependent replication (RDR) helps ensure that DNA is fully replicated prior to sister chromatid segregation, thereby avoiding mitotic catastrophes.",
+              "type": "paragraph"
+            },
+            {
+              "text": "The Rad52 protein plays a pivotal role in processing collapsed RFs in both yeast and humans (<a href=\"#bib7\">Bhowmick et al., 2016</a>; <a href=\"#bib28\">Lambert et al., 2010</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>; <a href=\"#bib53\">Sotiriou et al., 2016</a>; <a href=\"#bib58\">Symington et al., 2014</a>). In yeast, Rad52 mediates the nucleation of the Rad51 recombination protein onto single-stranded (ss) DNA at collapsed forks, which in turn catalyzes strand invasion of homologous DNA to form a displacement (D) loop, at which replication proteins can reassemble to restart DNA synthesis (<a href=\"#bib2\">Anand et al., 2013</a>; <a href=\"#bib58\">Symington et al., 2014</a>). In addition to aiding Rad51’s nucleation onto DNA, Rad52 is also able to anneal complementary ssDNAs coated in Replication protein A (RPA) (<a href=\"#bib40\">Mortensen et al., 1996</a>; <a href=\"#bib49\">Reddy et al., 1997</a>; <a href=\"#bib51\">Shinohara et al., 1998</a>; <a href=\"#bib56\">Sugiyama et al., 1998</a>). This activity promotes several different HR pathways, including a Rad51-independent mode of replication restart (<a href=\"#bib2\">Anand et al., 2013</a>; <a href=\"#bib58\">Symington et al., 2014</a>). Indeed, Rad51-independent RDR, catalysed by Rad52, appears to be the major pathway in human cells for processing collapsed RFs under conditions of replication stress, and during mitotic prophase (<a href=\"#bib7\">Bhowmick et al., 2016</a>; <a href=\"#bib53\">Sotiriou et al., 2016</a>). In contrast, yeast mostly use Rad51-dependent RDR, with the Rad52-only pathway seemingly employed as a less efficient alternative (<a href=\"#bib2\">Anand et al., 2013</a>; <a href=\"#bib28\">Lambert et al., 2010</a>).",
+              "type": "paragraph"
+            },
+            {
+              "text": "RDR can initiate from a collapsed fork where the DNA is either broken or remains intact. Where broken, the exposed DNA is typically resected by a nuclease to generate a ssDNA tail onto which first RPA and then Rad52 loads, leading to a version of RDR called break-induced replication (BIR) (<a href=\"#bib2\">Anand et al., 2013</a>). However, where the collapsed RF remains unbroken, restart is thought to involve its regression, where the parental DNA strands re-anneal and cause the nascent strands to unwind and base-pair with each other, forming a free double-stranded end (<a href=\"#bib3\">Atkinson and McGlynn, 2009</a>; <a href=\"#bib57\">Sun et al., 2008</a>). Nucleolytic resection of this end generates the requisite ssDNA tail onto which the recombination proteins can load and drive the restart process (<a href=\"#bib5\">Berti and Vindigni, 2016</a>).",
+              "type": "paragraph"
+            },
+            {
+              "text": "In yeast, the loading of Rad52 at DSBs and collapsed RFs takes approximately 10 min, but DNA synthesis takes even longer to start (<a href=\"#bib22\">Hicks et al., 2011</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>). This means that DNA replication will frequently complete by an active fork, initiated from a downstream replication origin, converging on a collapsed fork (<a href=\"#bib42\">Nguyen et al., 2015</a>). Completing DNA replication in this manner is thought to be desirable, because it prevents the risk of chromosomal rearrangements and copy-number variations (CNVs), which can be caused by the restart process inadvertently recombining repetitive DNA elements both at, and downstream of, the collapsed fork (<a href=\"#bib35\">Mayle et al., 2015</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>). However, it is unknown whether this type of replication termination, where an active fork converges on a collapsed fork, can itself cause genome instability.",
+              "type": "paragraph"
+            },
+            {
+              "text": "In this study we show that convergence of an active fork with a collapsed fork can result in surprisingly high rates of inter-DNA repeat recombination leading to genomic deletions. Three key recombination proteins that drive deletion formation, including Rad52, are identified, as well as one that actively suppresses it. We propose a mechanism to explain how the deletions are formed, and speculate that it may be responsible for some of the CNVs that give rise to disease in humans.",
+              "type": "paragraph"
+            }
+          ],
+          "id": "s1",
+          "title": "Introduction",
+          "type": "section"
+        },
+        {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "To investigate how RF collapse influences inter-repeat recombination, we used the site-specific RF barrier <i>RTS1</i> to block forks at the <i>ade6</i> locus on chromosome 3 in fission yeast. <i>RTS1</i> is a unidirectional barrier, formed by a myb domain-containing DNA binding protein called Rtf1 (<a href=\"#bib61\">Vengrova et al., 2002</a>). Due to the position of flanking replication origins, the direction of replication at the <i>ade6</i> locus is strongly polarized in the telomere to centromere direction (<a href=\"#fig1\">Figure 1A</a>). Consequently only one orientation of <i>RTS1</i> blocks RFs at this site, and this is referred to as the active orientation (AO). The opposite orientation, that does not block RFs, is called the inactive orientation (IO). By live cell imaging, we have shown that recombination protein foci are recruited to <i>RTS1</i>-AO within approximately 10 min of RF blockage (<a href=\"#bib42\">Nguyen et al., 2015</a>). DNA repeat recombination is measured in cells where <i>RTS1</i> is flanked by a pair of directly oriented <i>ade6<sup>-</sup></i> heteroalleles approximately 6 kb apart, which recombine to give either an <i>ade6<sup>+</sup></i> gene conversion or deletion (<a href=\"#fig1\">Figure 1A</a>). With <i>RTS1</i>-AO we observe a &gt; 50 fold increase in inter-repeat recombination compared to cells without <i>RTS1</i> or with <i>RTS1</i>-IO, and the ratio of deletions and gene conversions is approximately 40:60 (<a href=\"#fig1\">Figure 1B</a>) (<a href=\"#bib42\">Nguyen et al., 2015</a>). The major recombination proteins Rad51 and Rad52 are both required for gene conversion, whereas Rad52 can form approximately 40–50% of deletions without Rad51 (<a href=\"#bib1\">Ahn et al., 2005</a>; <a href=\"#bib32\">Lorenz et al., 2009</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>; <a href=\"#bib57\">Sun et al., 2008</a>).",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>) Schematic showing the location of <i>RTS1</i>, <i>ade6<sup>-</sup></i> direct repeats, sites of DNA spacer insertion, nearby replication origins, and products of inter-repeat recombination. Asterisks indicate the position of point mutations in the <i>ade6</i> alleles. (<b>B</b> to <b>C</b>) Mean frequency of Ade+ gene conversions and deletions in wild-type cells with <i>RTS1</i>-IO or -AO and different length telomere- and centromere-proximal DNA spacers. Error bars represent 1 SD.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.002",
+                      "id": "fig1",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig1-v1.tif",
+                        "size": {
+                          "width": 1498,
+                          "height": 3152
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig1-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig1-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 1",
+                      "sourceData": [
+                        {
+                          "doi": "10.7554/eLife.25490.003",
+                          "filename": "elife-25490-fig1-data1-v1.docx",
+                          "id": "SD1-data",
+                          "label": "Figure 1—source data 1",
+                          "mediaType": "application/docx",
+                          "title": "Effect of inter-repeat distance on the frequency of <i>RTS1</i>-AO-induced direct repeat recombination.",
+                          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-fig1-data1-v1.docx"
+                        }
+                      ],
+                      "title": "The effect of inter-DNA repeat distance on RF barrier-induced recombination.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                }
+              ],
+              "id": "s2-1",
+              "title": "Experimental system",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "To investigate how the proximity of DNA repeats to the site of RF collapse influences inter-repeat recombination, we systematically added increasing lengths of spacer DNAs either side of <i>RTS1</i>-AO to expand the distance between the <i>ade6<sup>-</sup></i> heteroalleles (<a href=\"#fig1\">Figure 1A</a>). Modest increases in inter-repeat recombination were observed with the addition of 0.5 and 1 kb spacers on the telomere-proximal side of <i>RTS1</i>-AO, whereas 4 and 8 kb spacers resulted in a 4- and 10-fold reduction, respectively (<a href=\"#fig1\">Figure 1B</a>). This reduction in inter-repeat recombination is consistent with ChIP data showing that Rad52 enrichment on DNA extends only up to ~2 kb behind RFs blocked at <i>RTS1</i> (<a href=\"#bib60\">Tsang et al., 2014</a>). In stark contrast, the addition of DNA spacers on the centromere-proximal side of <i>RTS1</i>-AO resulted in a dramatic increase in inter-repeat recombination, rising from an ~1.9 fold increase, with a 1 kb spacer, to ~5.4 fold with a 5 kb spacer (<a href=\"#fig1\">Figure 1C</a>). Importantly, no increase in spontaneous inter-repeat recombination was observed with the 5 kb spacer (<a href=\"#SD1-data\">Figure 1—source data 1</a>). Crucially, most of the extra recombinants (~90%) were Rad51-independent deletions, which depended on Rad52 (<a href=\"#fig2\">Figure 2</a>). Indeed the frequency of these deletions increased by ~10 fold with the addition of the 5 kb spacer (<a href=\"#fig1\">Figure 1C</a>). Henceforth, we will refer to these extra deletions, which are observed when DNA spacers are inserted on the centromere-proximal side of <i>RTS1</i>-AO, as spacer-dependent deletions (SDDs).",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "Mean frequency of Ade+ gene conversions and deletions in wild-type, <i>rad51</i>∆ and <i>rad51</i>∆ <i>rad52</i>∆ strains containing <i>RTS1</i>-AO with a 5 kb centromere-proximal DNA spacer. Significant fold changes compared to the wild-type strain are indicated (***p&lt;0.001). Error bars represent 1 SD.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.004",
+                      "id": "fig2",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig2-v1.tif",
+                        "size": {
+                          "width": 1187,
+                          "height": 875
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig2-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig2-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 2",
+                      "sourceData": [
+                        {
+                          "doi": "10.7554/eLife.25490.005",
+                          "filename": "elife-25490-fig2-data1-v1.docx",
+                          "id": "SD2-data",
+                          "label": "Figure 2—source data 1",
+                          "mediaType": "application/docx",
+                          "title": "Frequency of <i>RTS1</i>-AO-induced direct repeat recombination in wild-type, <i>rad51</i>∆ and <i>rad51</i>∆ <i>rad52</i>∆ strains with an extra 5 kb DNA spacer between the repeats.",
+                          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-fig2-data1-v1.docx"
+                        }
+                      ],
+                      "title": "DNA spacer-dependent deletions depend on Rad52 but not Rad51.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                }
+              ],
+              "id": "s2-2",
+              "title": "Increasing the distance between DNA repeats can dramatically increase the frequency of deletions",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "Data, from live cell imaging experiments, show that both the occurrence and duration of Rad52 foci at <i>RTS1</i>-AO are restricted by RF convergence (<a href=\"#bib42\">Nguyen et al., 2015</a>). Indeed, ~40% of cells fail to show a Rad52 focus at <i>RTS1</i>-AO during their cell cycle due to the centromere-proximal RF converging on the blocked fork prior to Rad52 recruitment (<a href=\"#bib42\">Nguyen et al., 2015</a>). Deletion of the closest major replication origin (<i>ori1253</i>), on the centromere-proximal side of <i>RTS1</i>-AO (<a href=\"#fig1\">Figure 1A</a>), results in the incoming RF having to travel from a more distant origin in most cells, allowing more time for replication restart (<a href=\"#bib42\">Nguyen et al., 2015</a>). Indeed, deletion of <i>ori1253</i> results in: (1) almost all cells exhibiting a Rad52 focus at <i>RTS1</i>-AO (<a href=\"#bib42\">Nguyen et al., 2015</a>); (2) a &gt; 2 fold increase in inter-repeat recombination in strains with no additional DNA spacer (<a href=\"#fig3\">Figure 3A</a>); and (3) a greater number of forks restarting and moving away from <i>RTS1</i>-AO, as evidenced by increased template switching downstream of the barrier (<a href=\"#bib42\">Nguyen et al., 2015</a>). Crucially, the increased frequency of SDDs, observed in strains containing the 5 kb DNA spacer, is reduced by ~2.3 fold (p=&lt;0.001) when <i>ori1253</i> is deleted (<a href=\"#fig3\">Figure 3A</a>), suggesting that RF convergence is necessary for the increase.",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>) Mean frequency of Ade+ gene conversions and deletions in wild-type and <i>ori1253</i>∆ strains containing <i>RTS1</i>-AO with and without a 5 kb centromere-proximal DNA spacer. The effect of deleting <i>rad51</i> on the frequency of recombinants in a <i>ori1253</i>∆ strain with a 5 kb centromere-proximal DNA spacer is also shown. (<b>B</b>) Effect of a <i>Ter2/3</i> barrier downstream of <i>RTS1</i>-AO on the frequency of Ade+ gene conversions and deletions in wild-type strains with and without a 5 kb centromere-proximal DNA spacer. Significant fold changes compared to the equivalent wild-type strain are indicated (***p&lt;0.001). Error bars represent 1 SD.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.006",
+                      "id": "fig3",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig3-v1.tif",
+                        "size": {
+                          "width": 1709,
+                          "height": 919
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig3-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig3-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 3",
+                      "sourceData": [
+                        {
+                          "doi": "10.7554/eLife.25490.007",
+                          "filename": "elife-25490-fig3-data1-v1.docx",
+                          "id": "SD3-data",
+                          "label": "Figure 3—source data 1",
+                          "mediaType": "application/docx",
+                          "title": "Effect of delaying fork convergence on the frequency of <i>RTS1</i>-AO-induced direct repeat recombination with and without an extra 5 kb DNA spacer between the repeats.",
+                          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-fig3-data1-v1.docx"
+                        }
+                      ],
+                      "title": "Deletion of the downstream replication origin <i>ori1253</i>, or introduction of a <i>Ter2/3</i> barrier downstream of <i>RTS1</i>-AO, reduces the frequency of SDDs.",
+                      "type": "image"
+                    },
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>) Schematic showing the position of the <i>Ter2/3</i> replication fork barrier downstream of <i>RTS1</i>-AO on chromosome 3. For the live cell imaging experiments, in <b>B</b>) and <b>C</b>), a <i>lacO</i> array is also inserted downstream of <i>RTS1</i>-AO to enable tracking of the locus, in cells expressing LacI-tdKatushka2, by time-lapse fluorescent microscopy. Rad52 is tagged with yellow fluorescent protein (YFP) and forms nuclear foci that mark sites of recombination activity. Co-localization of a Rad52-YFP focus with a <i>lacO</i>-LacI-tdKatushka2 focus indicates recombination activity at <i>RTS1</i> (<a href=\"#bib42\">Nguyen et al., 2015</a>). (<b>B</b>) Representative stills taken from a time-lapse movie of a wild-type cell showing a pair of daughter cells (outlined by white dashed lines) each with a Rad52-YFP focus. In the right-hand cell the Rad52-YFP focus co-localizes with a <i>lacO</i>-LacI-tdKatushka2 focus that marks the position of <i>RTS1</i>-AO in the nucleus. The scale bar represents 1 µm. (<b>C</b>) The effect of <i>Ter2/3</i> on the percentage of cells with a Rad52-YFP focus co-localizing with a <i>lacO</i>-LacI-tdKatushka2 focus in the first 90 min period post-anaphase. S-phase starts 10–15 min after anaphase (<a href=\"#bib42\">Nguyen et al., 2015</a>). Delaying the incoming fork, by inserting a <i>Ter2/3</i> barrier downstream of <i>RTS1</i>-AO, provides more time for Rad52 recruitment to the RF blocked at <i>RTS1</i>, as evidenced by the greater percentage of cells with a Rad52-YFP focus co-localizing with a <i>lacO</i>-LacI-tdKatushka2 focus. This result indicates that RF convergence and termination at <i>RTS1</i>-AO prevents Rad52 recruitment, and agrees with the finding of a previous experiment where incoming replication was delayed by deleting <i>ori1253</i> (<a href=\"#bib42\">Nguyen et al., 2015</a>). The strain with no <i>Ter2/3</i> is MCW6556 (n = 123) and the strain with <i>Ter2/3</i> is MCW7304 (n = 44).",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.008",
+                      "id": "fig3s1",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig3-figsupp1-v1.tif",
+                        "size": {
+                          "width": 2081,
+                          "height": 1409
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig3-figsupp1-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig3-figsupp1-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 3—figure supplement 1",
+                      "title": "The effect of delaying the incoming RF, with a <i>Ter2/3</i> barrier, on recruitment of Rad52 to <i>RTS1</i>.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                },
+                {
+                  "text": "To verify that delaying the incoming RF results in a reduction in SDDs, we placed tandem repeats of three <i>Ter2/3</i> barriers downstream of <i>RTS1</i>-AO to block the incoming fork (<a href=\"#fig3s1\">Figure 3—figure supplement 1</a>). <i>Ter2/3</i> is a unidirectional barrier but, unlike <i>RTS1</i>, it does not trigger recombination (<a href=\"#bib38\">Mizuno et al., 2013</a>). First, we determined what affect <i>Ter2/3</i> has on Rad52 focus co-localization with <i>RTS1</i>-AO (<a href=\"#fig3s1\">Figure 3—figure supplement 1</a>). Similar to deleting <i>ori1253</i>, <i>Ter2/3</i> increased both the occurrence and duration of Rad52 foci at the barrier (<a href=\"#fig3s1\">Figure 3—figure supplement 1</a>, and data not shown). Next, we determined whether <i>Ter2/3</i> affected the frequency of inter-repeat recombination induced by <i>RTS1</i>-AO (<a href=\"#fig3\">Figure 3B</a>). With no additional DNA spacer between the repeats, the inclusion of <i>Ter2/3</i> downstream of <i>RTS1</i>-AO resulted in ~1.4 fold increase in gene conversions (p=&lt;0.001) and ~1.9 fold increase in deletions (p=&lt;0.001). However, the elevated frequency of SDDs, observed with the additional 5 kb DNA spacer, was reduced by ~1.6 fold (p=&lt;0.001) (<a href=\"#fig3\">Figure 3B</a>).",
+                  "type": "paragraph"
+                },
+                {
+                  "text": "The aforementioned data show that delaying the incoming RF, either by deleting <i>ori1253</i> or adding <i>Ter2/3</i>, suppresses SDDs, despite overall recombination activity at <i>RTS1</i>-AO increasing. This strongly indicates that SDDs are promoted by RF convergence rather than replication restart. If true, we reasoned that reducing the efficiency of replication restart should counteract the effect of <i>ori1253</i> deletion in suppressing SDDs. As Rad51 is needed for efficient replication restart (<a href=\"#bib28\">Lambert et al., 2010</a>), we determined what effect its mutation has on SDDs in an <i>ori1253</i>∆ background (<a href=\"#fig3\">Figure 3A</a>). In accordance with our prediction, a <i>rad51</i>∆ mutant suppressed the reduction in SDDs observed when <i>ori1253</i> is deleted. These data provide further support for the notion that RF convergence at <i>RTS1</i>-AO is needed to promote SDDs.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s2-3",
+              "title": "RF convergence is needed for SDDs",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "To identify recombination proteins that either promote or prevent deletion formation during RF convergence, we investigated candidates including Exonuclease 1 (Exo1), Mus81-Eme1 and Fml1. Exo1 promotes recombination by catalyzing 5´ to 3´ DNA strand resection (<a href=\"#bib24\">Keijzers et al., 2016</a>), and its loss results in a ~2.5 fold reduction in gene conversions, and a ~2 fold reduction in deletions, in strains with <i>RTS1</i>-AO and no additional DNA spacer (<a href=\"#fig4\">Figure 4A</a>) (<a href=\"#bib47\">Osman et al., 2016</a>). Its loss also causes a similar reduction in gene conversions (~2.2 fold) when the centromere-proximal 5 kb spacer is added (<a href=\"#fig4\">Figure 4A</a>). However, SDDs are reduced by ~4.2 fold, indicating that DNA resection plays an especially important role in their formation (<a href=\"#fig4\">Figure 4A</a>).",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>–<b>C</b>) Mean frequency of Ade+ gene conversions and deletions in wild-type and mutant strains containing <i>RTS1</i>-AO with and without a centromere-proximal DNA spacer as indicated. Significant fold changes compared to the equivalent wild-type strain are indicated (*p&lt;0.05, **p&lt;0.01, ***p&lt;0.001). Error bars represent 1 SD.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.009",
+                      "id": "fig4",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig4-v1.tif",
+                        "size": {
+                          "width": 2354,
+                          "height": 929
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig4-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig4-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 4",
+                      "sourceData": [
+                        {
+                          "doi": "10.7554/eLife.25490.010",
+                          "filename": "elife-25490-fig4-data1-v1.docx",
+                          "id": "SD4-data",
+                          "label": "Figure 4—source data 1",
+                          "mediaType": "application/docx",
+                          "title": "Frequency of <i>RTS1</i>-AO-induced direct repeat recombination in wild-type, <i>exo1</i>∆, <i>mus81</i>∆ and <i>fml1</i>∆ strains with and without an extra DNA spacer between the repeats.",
+                          "uri": "https://cdn.elifesciences.org/articles/25490/elife-25490-fig4-data1-v1.docx"
+                        }
+                      ],
+                      "title": "SDDs depend on Exo1 and Mus81, but are suppressed by Fml1.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                },
+                {
+                  "text": "The heterodimeric structure-specific DNA endonuclease Mus81-Eme1 can cleave both stalled RFs and recombination intermediates, including D-loops and Holliday junctions (<a href=\"#bib45\">Osman and Whitby, 2007</a>; <a href=\"#bib48\">Rass, 2013</a>; <a href=\"#bib64\">West et al., 2015</a>). However, a <i>mus81</i>∆ mutant has little or no effect on the frequency of inter-repeat recombination, induced by RF blockage at <i>RTS1</i>-AO, when there is no additional DNA spacer between the repeats (<a href=\"#fig4\">Figure 4B</a>). In contrast, loss of <i>mus81</i> causes a &gt; 2 fold reduction in SDDs in strains with either a 2 or 5 kb centromere-proximal spacer DNA (<a href=\"#fig4\">Figure 4B</a>), indicating that Mus81-Eme1 specifically promotes SDDs.",
+                  "type": "paragraph"
+                },
+                {
+                  "text": "Fml1 is a member of a conserved family of DNA helicases, which includes human FANCM, that have been implicated in processing stalled RFs and D-loops (<a href=\"#bib67\">Whitby, 2010</a>; <a href=\"#bib68\">Xue et al., 2015</a>). In fission yeast, Fml1 promotes Rad51-dependent gene conversion in response to RF blockage at <i>RTS1</i>-AO, but has little effect on the frequency of DNA deletions when there is no additional DNA spacer between the repeats (<a href=\"#fig4\">Figure 4C</a>) (<a href=\"#bib57\">Sun et al., 2008</a>). In contrast, loss of <i>fml1</i> causes a ~2.7 fold increase in SDDs over the wild-type level, in strains with a 2 kb centromere-proximal DNA spacer (<a href=\"#fig4\">Figure 4C</a>), indicating that Fml1 limits SDDs.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s2-4",
+              "title": "Factors that promote or prevent SDDs",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "Rad52 can repair DSBs by catalyzing single-strand annealing (SSA) between directly oriented repeats and, in so-doing, causes DNA deletions (<a href=\"#bib6\">Bhargava et al., 2016</a>). However, in wild-type cells, RFs blocked at <i>RTS1</i>-AO are not broken (<a href=\"#bib37\">Mizuno et al., 2009</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>). Moreover, expansion of the inter-repeat distance does not increase SSA. On the contrary, it results in a greater proportion of DSBs being repaired by gene conversion (<a href=\"#bib17\">Fishman-Lobell et al., 1992</a>; <a href=\"#bib50\">Schildkraut et al., 2005</a>). We propose a new model, called Inter-Fork Strand Annealing (IFSA), to explain how Rad52 could promote deletions in the absence of RF breakage (<a href=\"#fig5\">Figure 5</a>). Following RF blockage and collapse at <i>RTS1</i>-AO, the fork regresses exposing a DNA end that is resected by Exo1 (<a href=\"#fig5\">Figure 5</a>, step 2). Resection generates a ssDNA tail, incorporating the <i>ade6<sup>-</sup></i> repeat on the telomere proximal side of the barrier, which Rad52 binds to (<a href=\"#fig5\">Figure 5</a>, step 3). During RF convergence, Rad52 inadvertently anneals its <i>ade6</i> repeat to the complementary ssDNA of the other <i>ade6</i> repeat that is exposed in the lagging strand gap of the incoming fork (<a href=\"#fig5\">Figure 5</a>, step 4). Strand annealing would be aided by the DNA repeats being closely juxtaposed in three-dimensional space, which may be facilitated by the addition of the DNA spacer. Inter-fork strand annealing establishes a connection between the two RFs bounded by three/four-way DNA junctions at either end of the annealed DNA. Appropriate cleavage of this ‘IFSA junction’ by Mus81-Eme1 would generate one intact sister chromatid and one with the DNA repeat region deleted (<a href=\"#fig5\">Figure 5</a>, steps 4 and 5). In vitro, Fml1 can catalyse RF regression (<a href=\"#bib41\">Nandi and Whitby, 2012</a>; <a href=\"#bib57\">Sun et al., 2008</a>), and also re-set regressed forks (our unpublished data). Therefore, it may limit deletion formation by modulating the extent of RF regression (<a href=\"#fig5\">Figure 5</a>, step 4). Alternatively it might unwind the annealed strands prior to IFSA junction cleavage (<a href=\"#fig5\">Figure 5</a>, step 4).",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "See main text for details.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.011",
+                      "id": "fig5",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig5-v1.tif",
+                        "size": {
+                          "width": 2108,
+                          "height": 590
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig5-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig5-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 5",
+                      "title": "IFSA model.",
+                      "type": "image"
+                    },
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>) IFSA initiated from an unwound nascent leading strand. Step 1: RF collapses following stalling at a RFB. Step 2: A DNA helicase unwinds the nascent leading strand at a repetitive DNA sequence. Step 3: The unwound nascent leading strand is bound by RPA followed by Rad52. Step 4: Rad52 anneals the nascent leading strand to a complementary repeat sequence exposed in the lagging strand gap of the incoming RF. Steps 4–5: Mus81-Eme1 cleaves both RFs generating one full-length sister chromatid, containing single-strand gaps, and one shortened sister chromatid with a 3’ and 5’ flap. Note that the 5’ flap can anneal to the nascent strand causing the formation of a longer 3’ flap. Step 6: Gap filling, flap removal and ligation of strand nicks, results in one intact full-length sister chromatid and one lacking a DNA repeat and the inter-repeat region. (<b>B</b>) IFSA by annealing between lagging strand gaps. Step 1: Following RF collapse at the RFB, Exo1 degrades the lagging nascent strand exposing ssDNA at a repetitive sequence, which is bound by RPA and Rad52. Step 2: As the incoming RF converges on the collapsed fork, it comes into close proximity with the ssDNA bound by Rad52. Step 3: Rad52 anneals its bound ssDNA to the complementary ssDNA exposed in the lagging strand gap of the incoming fork. Steps 3–4: Mus81-Eme1 cleaves the DNA junctions at either end of the annealed region to resolve the sister chromatids into full-length and shortened forms. As with the other versions of the IFSA model, it is expected that gap filling, flap removal and ligation of strand nicks will be needed to convert the products of Mus81 cleavage into intact sister chromatids. DNA repeats are marked in yellow.",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.012",
+                      "id": "fig5s1",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig5-figsupp1-v1.tif",
+                        "size": {
+                          "width": 2358,
+                          "height": 1350
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig5-figsupp1-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig5-figsupp1-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 5—figure supplement 1",
+                      "title": "Alternative models for IFSA.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                },
+                {
+                  "text": "Whilst we favour the idea that RF regression is key to converting the stalled fork into a substrate for recombination, there are alternative ways by which IFSA may initiate (<a href=\"#fig5s1\">Figure 5—figure supplement 1</a>). For example, instead of RF regression, the leading nascent DNA strand may simply be unwound to generate a 3’-ended ssDNA tail that Rad52 binds (<a href=\"#fig5s1\">Figure 5—figure supplement 1A</a>). Alternatively, Exo1 may expand the lagging strand gap at the stalled fork, exposing ssDNA, which again could be bound by Rad52. IFSA may then occur through annealing of the lagging strand gaps (<a href=\"#fig5s1\">Figure 5—figure supplement 1B</a>).",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s2-5",
+              "title": "A new model: Inter-Fork Strand Annealing",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "Based on previous in vitro experiments, we knew that Mus81-Eme1 had the potential to cleave the different versions of the IFSA junction in the manner predicted by our models (<a href=\"#fig5\">Figure 5</a> and <a href=\"#fig5s1\">Figure 5—figure supplement 1</a>) (<a href=\"#bib66\">Whitby et al., 2003</a>). To confirm this for the junction predicted by our favoured model (<a href=\"#fig5\">Figure 5</a>), we established an in vitro reaction using purified recombinant Mus81-Eme1 and a synthetic IFSA junction. Native gel analysis of the reaction products showed that Mus81-Eme1 could indeed resolve an IFSA junction into two nicked/gapped linear duplex DNA products, whereas a catalytically inactive mutant could not (<a href=\"#fig6\">Figure 6A</a>). Mapping the cleavage sites on a denaturing gel showed that Mus81-Eme1 made incisions in strand 1 close to both four-way DNA junction points, which are consistent with those predicted by our model (<a href=\"#fig6\">Figure 6B and C</a>). An additional minor cleavage site in strand 2 was also detected (<a href=\"#fig6\">Figure 6B and C</a>).",
+                  "type": "paragraph"
+                },
+                {
+                  "assets": [
+                    {
+                      "caption": [
+                        {
+                          "text": "(<b>A</b>) Native gel analysis of Mus81-Eme1 cleavage reactions with wild-type (wt) and catalytically inactive (DD) enzyme. The schematics show the IFSA junction and cleavage products. The asterisks indicate the position of the 5′-end <sup>32</sup>P label. (<b>B</b>) Denaturing gel analysis of Mus81-Eme1 cleavage reactions to map the sites of strand cleavage by reference to a G and A Maxam-Gilbert sequencing ladder of the relevant labelled strand. (<b>C</b>) Schematic showing the sites of strand cleavage (arrows).",
+                          "type": "paragraph"
+                        }
+                      ],
+                      "doi": "10.7554/eLife.25490.013",
+                      "id": "fig6",
+                      "image": {
+                        "alt": "",
+                        "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig6-v1.tif",
+                        "size": {
+                          "width": 2224,
+                          "height": 1130
+                        },
+                        "source": {
+                          "mediaType": "image/jpeg",
+                          "uri": "https://iiif.elifesciences.org/lax:25490%2Felife-25490-fig6-v1.tif/full/full/0/default.jpg",
+                          "filename": "elife-25490-fig6-v1.jpg"
+                        }
+                      },
+                      "label": "Figure 6",
+                      "title": "Cleavage of a model IFSA junction by Mus81-Eme1.",
+                      "type": "image"
+                    }
+                  ],
+                  "type": "figure"
+                }
+              ],
+              "id": "s2-6",
+              "title": "Mus81-Eme1 resolves a model IFSA junction",
+              "type": "section"
+            }
+          ],
+          "id": "s2",
+          "title": "Results",
+          "type": "section"
+        },
+        {
+          "content": [
+            {
+              "text": "We have shown that non-canonical RF convergence, involving a regular fork converging on a collapsed fork, can promote recombination between DNA repeats that flank the site of replication termination by a process we call IFSA, which involves Rad52-mediated strand annealing between the two RFs. Previously, we, and others, have reported that RDR, promoted by fork collapse at the <i>RTS1</i> barrier, generates chromosomal rearrangements and CNVs, both during the act of restarting replication, and from the increase in template switching associated with the restarted fork (<a href=\"#bib1\">Ahn et al., 2005</a>; <a href=\"#bib28\">Lambert et al., 2010</a>, <a href=\"#bib27\">2005</a>; <a href=\"#bib37\">Mizuno et al., 2009</a>, <a href=\"#bib38\">2013</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>). However, IFSA is distinct from previously described forms of <i>RTS1</i>-induced recombination due to its dependence on RF convergence. Indeed, this requirement contrasts markedly with RDR-associated template switching, which is constrained by RF convergence (<a href=\"#bib35\">Mayle et al., 2015</a>; <a href=\"#bib42\">Nguyen et al., 2015</a>). It is also distinct from other types of replication slippage event, which typically envisage the ‘slippage’ occurring between DNA repeats at the same RF rather than between converging RFs (<a href=\"#bib33\">Lovett, 2004</a>).",
+              "type": "paragraph"
+            },
+            {
+              "text": "Through the application of microarray and next-generation sequencing technologies, there has been a growing appreciation of the prominent role that CNVs play in human genetic diversity and disease (<a href=\"#bib54\">Stankiewicz and Lupski, 2010</a>). For example, chromosomal deletions arising in germ cells have been linked to a variety of genetic disorders, including complex syndromes such as autism and schizophrenia, whilst their occurrence in somatic cells has been associated with cancer (<a href=\"#bib4\">Beroukhim et al., 2010</a>; <a href=\"#bib11\">Chen et al., 2010</a>; <a href=\"#bib25\">Kim et al., 2013</a>; <a href=\"#bib62\">Watson et al., 2014</a>). The formation of CNVs and other types of structural variants (SVs) in humans has been attributed to three main types of mechanism: non-allelic homologous recombination (NAHR); non-homologous end joining (NHEJ); and replication based mechanisms, such as fork stalling and template switching (FoSTeS), and microhomology-mediated break-induced replication (MMBIR) (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>). The class of mechanism responsible for any given CNV or SV is typically inferred by characterization of the breakpoint junctions, with the presence of long stretches of homologous sequence signifying NAHR, little or no homology indicating NHEJ, and microhomology, together with a short inserted sequence, pointing towards a replication based mechanism (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>; <a href=\"#bib63\">Weckselblatt and Rudd, 2015</a>).",
+              "type": "paragraph"
+            },
+            {
+              "text": "In our experimental system, IFSA occurs between directly orientated DNA repeats that share ~1.7 kb of almost perfect homology and, as such, would be classed as a type of NAHR. NAHR is generally thought to occur when ectopic homologous sequences (typically low-copy repeats that are &gt;10 kb in size and share &gt;95–97% sequence identity) are inadvertently aligned during Rad51 family recombinase-mediated DSB repair, in which intermediates are resolved to give a crossover outcome (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>; <a href=\"#bib11\">Chen et al., 2010</a>). Indeed the majority of recurrent SVs, associated with known genomic disorders, are most likely formed during the repair of meiotic DSBs (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>; <a href=\"#bib11\">Chen et al., 2010</a>). Could IFSA be responsible for a subset of SVs that have been attributed to homology-directed DSB repair? The following observations encourage us to think that it might. Firstly, the principle players that direct IFSA in <i>S. pombe</i>, Rad52 and Mus81, are not only conserved in humans but also act in the same pathway to process collapsed RFs and, therefore, are likely to be present at sites of non-canonical RF convergence (<a href=\"#bib7\">Bhowmick et al., 2016</a>; <a href=\"#bib53\">Sotiriou et al., 2016</a>). Secondly, many of the documented SVs are simple deletions formed by recombination between either low-copy repeats, or far more abundant transposon sequences, such as long interspersed nuclear elements (LINEs) and Alu elements (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>; <a href=\"#bib18\">Flynn et al., 2014</a>; <a href=\"#bib26\">Kim et al., 2016</a>; <a href=\"#bib55\">Startek et al., 2015</a>). Collectively, these repetitive sequences make up ~50% of the human genome and, therefore, there are likely to be occasions when non-canonical RF convergence occurs in the vicinity of sites that can be annealed. Thirdly, inter-repeat recombination is implicated in the formation of a growing number of disease-associated non-recurrent SVs, including those where there is no enrichment for the PRDM9 meiotic DSB hotspot motif (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>). This highlights the possibility that some SVs, associated with DNA repeats, are formed by mechanisms other than Rad51 family recombinase-mediated meiotic DSB repair. Indeed, it has been proposed that many of the non-recurrent SVs that are associated with Alu elements are formed by FoSTeS or MMBIR, since these elements can share as little as 75% identity and the SV breakpoint junctions often exhibit only microhomology (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>). Currently, we do not know what tolerance IFSA has for divergent repeat sequences and, therefore, it is unclear whether it could contribute to deletions formed between Alu elements, such as those responsible for the genetic disorders neurofibromatosis type one and autosomal-dominant spastic paraplegia 4 (<a href=\"#bib8\">Boone et al., 2014</a>; <a href=\"#bib23\">Hsiao et al., 2015</a>). However, in a DSB-induced chromosomal translocation assay in mouse cells, SSA accounted for 85% of translocations when identical Alu elements were adjacent to the DSBs, but only 4% when the Alu elements diverged by 20% (<a href=\"#bib15\">Elliott et al., 2005</a>). Whether IFSA is similarly affected by divergence of DNA repeat sequences remains to be determined.",
+              "type": "paragraph"
+            },
+            {
+              "text": "In mammals, the average distance between active replication origins during S phase is ~150 kb (<a href=\"#bib59\">Takebayashi et al., 2017</a>) and, therefore, this would limit the size of chromosomal deletions that IFSA could generate if it only occurs during RF convergence. However, we suspect that IFSA might act between any collapsed and active RF that share a repetitive sequence, as long as they are in close proximity with each other (e.g. RFs in the same replication factory). If true, this would provide additional scope for generating larger deletions and even other types of SV. For example, strand annealing between RFs travelling in the same direction through inverted repeats could result in the formation of an additional acentric or dicentric chromosome, with the former predisposed to micronuclei formation (<a href=\"#bib16\">Fenech et al., 2011</a>), and the latter capable of causing breakage-fusion-bridge (BFB) cycles (<a href=\"#bib34\">Matsui et al., 2013</a>). Both of these events are thought to drive tumorigenesis, either by promoting chromothripsis (in the case of micronuclei formation), or by oncogene amplification (in the case of BFB cycles) (<a href=\"#bib31\">Leibowitz et al., 2015</a>; <a href=\"#bib34\">Matsui et al., 2013</a>).",
+              "type": "paragraph"
+            },
+            {
+              "text": "In some respects, IFSA is reminiscent of models, such as FoSTeS and MMBIR, that have been proposed to explain stress-induced gene amplification in bacteria, and various complex non-recurrent genome rearrangements in humans, which similarly invoke the concept of strand annealing between RFs, where one of the two RFs is stalled or broken (<a href=\"#bib21\">Hastings et al., 2009</a>; <a href=\"#bib30\">Lee et al., 2007</a>; <a href=\"#bib52\">Slack et al., 2006</a>). In the case of MMBIR, it has also been suggested that Rad52 promotes the strand annealing step (<a href=\"#bib21\">Hastings et al., 2009</a>). However, the genomic rearrangements that these models describe are characterised by microhomology (typically 2–33 bp in humans) at the breakpoint junctions rather than the ~1.7 kb regions of homology used in our experimental system (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>). Moreover, FoSTeS and MMBIR depend on template switching events, which can prime DNA synthesis and lead to the copying of nearby genomic sequences that are found inserted at the breakpoint junctions (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>). In contrast, our model for IFSA does not invoke a requirement for DNA synthesis following strand annealing. However, it has been suggested that FoSTeS/MMBIR may also account for many simple non-recurrent SVs, including interstitial deletions (<a href=\"#bib10\">Carvalho and Lupski, 2016</a>; <a href=\"#bib21\">Hastings et al., 2009</a>). Such deletions could also be formed during DSB repair by so-called microhomology-mediated end joining (MMEJ – also known as alternative end joining) (<a href=\"#bib21\">Hastings et al., 2009</a>). Indeed, in one study of somatic SVs in multiple cancer types, 41% of deletions were attributed to MMEJ based on the presence of between 2–40 bp of microhomology at their breakpoint junctions (<a href=\"#bib69\">Yang et al., 2013</a>). Whilst we have not demonstrated that IFSA can function when there is only microhomology shared between the converging RFs, we suspect that it might be responsible for some of the deletions documented in cancer genomes, which have hitherto been attributed to MMEJ or FoSTeS/MMBIR. Our suspicion is based on: (1) knowledge that the genomic regions marking the boundaries of somatic CNVs found in many cancers tend to be replicated at the same time and share a long-range interaction (<a href=\"#bib12\">De and Michor, 2011</a>); (2) reports that Rad52 promotes DSB repair by MMEJ in fission yeast, and during antibody class-switch recombination in mouse B cells (<a href=\"#bib13\">Decottignies, 2007</a>; <a href=\"#bib72\">Zan et al., 2017</a>), albeit the same may not be true in budding yeast (<a href=\"#bib36\">Meyer et al., 2015</a>). If Rad52 is capable of annealing DNA strands that share only microhomology at a DSB, then it might also be able to do the same to strands exposed during non-canonical RF convergence.",
+              "type": "paragraph"
+            },
+            {
+              "text": "Our discovery that non-canonical RF convergence can result in chromosomal deletions by IFSA highlights a potential novel risk to genomic stability. However, whether it is likely to be a significant contributor to pathogenic CNVs in humans will depend on how efficiently it can operate when sequence homology between the converging RFs is limited. Finally, it is interesting to speculate on whether IFSA might serve a beneficial function to the cell similar to SSA, which promotes cell survival by repairing DSBs at the expense of generating DNA deletions (<a href=\"#bib6\">Bhargava et al., 2016</a>). In this regard, we imagine that IFSA may aid the termination of DNA replication at specific problem sites, enabling sister chromatids to segregate successfully during mitosis. This possibility warrants investigation in future studies.",
+              "type": "paragraph"
+            }
+          ],
+          "id": "s3",
+          "title": "Discussion",
+          "type": "section"
+        },
+        {
+          "content": [
+            {
+              "content": [
+                {
+                  "text": "<i>Schizosaccharomyces pombe</i> strains and PCR primers used for this study are listed in <a href=\"#SD5-data\">Supplementary files 1</a> and <a href=\"#SD6-data\">2</a>, respectively. Plasmids pCB29, pCB31, pCB33, pAF6 and pAF7 were used for the construction of strains with <i>RTS1-AO</i> flanked by a direct repeat of <i>ade6-L469</i> and <i>ade6-M375</i> with varying sized DNA spacers between <i>RTS1-AO</i> and <i>ade6-M375</i>. They are derivatives of pCB24, which in turn is a derivative of pFOX2 (<a href=\"#bib43\">Osman et al., 2000</a>) containing <i>RTS1-AO</i> inserted at its SalI site. <i>RTS1-AO</i> was amplified from pMW700 (<a href=\"#bib1\">Ahn et al., 2005</a>) using PCR primers oMW1556 and oMW1557. pCB29 contains a ~0.5 kb DNA spacer, amplified from pACYC184 using PCR primers oMW1558 and oMW1560, and inserted between the SpeI and XmaI sites in pCB24. pCB31 and pCB33 were constructed in the same way as pCB29 but with ~1 kb and ~2 kb DNA spacers, respectively. These DNA spacers were amplified from pACYC184 using primer oMW1558 with either oMW1561 (1 kb) or oMW1562 (2 kb). pAF6 was also constructed in the same way as pCB29, but its DNA spacer is ~8 kb and was amplified from Bacteriophage Lambda DNA (New England BioLabs UK Ltd) using primers oMW1643 and oMW1644. pAF7 is a derivative of pAF6 with the ~3.9 kb SexAI fragment within the ~8 kb DNA spacer removed. Plasmids pAF8, pAF10, pAF11, pAF12 and pAF13 were used for the construction of strains with <i>RTS1-AO</i> flanked by a direct repeat of <i>ade6-L469</i> and <i>ade6-M375</i> with varying sized DNA spacers between <i>RTS1-AO</i> and <i>ade6-L469</i>. pAF8 was made by first amplifying a ~1 kb fragment from Lambda DNA using oMW1700 and oMW1701, and then inserting this at the PvuII site closest to <i>his3</i> in pCB24. pAF10, pAF11, pAF12 and pAF13 are all derivatives of pAF8 with the ~1 kb spacer DNA replaced with a larger sized spacer amplified from Lambda DNA. These larger DNA spacers were amplified using primer oMW1700 together with one of the following primers: oMW1712 (2 kb DNA spacer); oMW1713 (3 kb DNA spacer); oMW1714 (4 kb DNA spacer); and oMW1715 (5 kb DNA spacer). pAF16 was used for the construction of strains with <i>RTS1-IO</i> flanked by a direct repeat of <i>ade6-L469</i> and <i>ade6-M375</i> with a ~5 kb DNA spacer between <i>RTS1-IO</i> and <i>ade6-L469</i>. It was made by excising <i>RTS1</i> from pAF13 by SalI digestion, and then reinserting it in the opposite orientation. Strains containing the <i>ade6<sup>-</sup></i> direct repeat flanking <i>RTS1</i>, with the various sized DNA spacers, were constructed by transforming the appropriate BlpI-linearized plasmid (i.e. pAF16, pCB24 or pCB24 derivative) into a <i>ade6-M375</i> strain (<a href=\"#bib43\">Osman et al., 2000</a>). pCB41 is a derivative of pAG25 (<a href=\"#bib20\">Goldstein and McCusker, 1999</a>) used for the targeted insertion of 3 tandem repeats of the ribosomal DNA fork barrier <i>Ter2</i>/3 (<a href=\"#bib38\">Mizuno et al., 2013</a>) between <i>srk1</i> and <i>SPCC1322−09</i> ~10 kb upstream of <i>ade6-L469</i>. All plasmids were verified by DNA sequencing. All strains were verified by confirming genetic markers through a combination of phenotypic tests, assessing auxotrophy, prototrophy, antibiotic resistance and genotoxin sensitivity, and physical analysis of the DNA by PCR, DNA sequencing and Southern blotting as necessary.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s4-1",
+              "title": "Yeast strains, plasmids and PCR primers",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "Direct repeat recombination was assayed by measuring the frequency of Ade<sup>+</sup> recombinants as described (<a href=\"#bib46\">Osman and Whitby, 2009</a>). Between 3 to 10 colonies were assayed in each experiment, with experiments repeated at least three times to achieve a minimum sample size as calculated using the Power calculation <i>n</i> = <i>f</i>(<i>α</i>,<i>β</i>)(2 <i>s</i><sup>2</sup>/<i>δ</i><sup>2</sup>) where <i>α</i> = 0.05; <i>β</i> = 0.1; <i>s</i> = 40; and <i>δ</i> = 50. Strains being directly compared were analysed at the same time in parallel experiments. Statistical analysis of the recombination data was performed in SPSS Statistics Version 22 (IBM, Armonk, NY). Each data set was tested for normal distribution using a Shapiro-Wilk test, rejecting the null hypothesis (H<sub>0</sub>; ‘data fits a normal distribution’) at an α-level of p&lt;0.05. Several data sets did not conform to a normal distribution and, therefore, all comparisons were done using a two-tailed, two independent sample Wilcoxon rank-sum test (also known as the Mann-Whitney U test). This test is non-parametric and does not depend on data sets being normally distributed. Relevant <i>p</i> values are given in <a href=\"#SD1-data\">Figure 1—source data 1</a>, <a href=\"#SD2-data\">Figure 2—source data 1</a>, <a href=\"#SD3-data\">Figure 3—source data 1</a> and <a href=\"#SD4-data\">Figure 4—source data 1</a>.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s4-2",
+              "title": "Recombination assays",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "Live cell imaging and image analysis of Rad52-YFP and LacI-tdKatushka2 foci has been described previously (<a href=\"#bib42\">Nguyen et al., 2015</a>). The data for each strain in <a href=\"#fig3s1\">Figure 3—﻿figure supplement 1</a> is derived from at least two independent cell cultures.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s4-3",
+              "title": "Microscopy and image analysis",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "The IFSA junction was made by annealing oligonucleotides oMW305, oMW306, oMW416, oMW417 and oMW421 using a previously described protocol (<a href=\"#bib65\">Whitby and Dixon, 1998</a>). The junction was labelled with <sup>32</sup>P at the 5´-terminus of one of its component oligonucleotides using polynucleotide kinase.",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s4-4",
+              "title": "Synthetic IFSA junction",
+              "type": "section"
+            },
+            {
+              "content": [
+                {
+                  "text": "<i>S. pombe</i> Mus81-Eme1 and Mus81<sup>DD</sup>-Eme1 were purified using an established protocol (<a href=\"#bib19\">Gaskell et al., 2007</a>). Cleavage reactions, and their analysis by native (10% polyacrylamide) and denaturing (15% polyacrylamide) PAGE, have been described previously (<a href=\"#bib19\">Gaskell et al., 2007</a>; <a href=\"#bib44\">Osman et al., 2003</a>). The reaction buffer contained 25 mM Tris-HCl (pH 8.0), 1 mM dithiothreitol, 100 µg/ml bovine serum albumin, 6% glycerol and 10 mM MgCl<sub>2</sub>. Reactions were started by the addition of protein and were incubated at 30°C for 30 min. Reactions were stopped by the addition of one-fifth volume of stop mix (2.5% SDS, 200 mM EDTA and 10 mg/ml proteinase K) and further incubation at 30°C for 15 min to deproteinize the mixture. Reaction products were processed and run on native and denaturing gels as described (<a href=\"#bib19\">Gaskell et al., 2007</a>; <a href=\"#bib44\">Osman et al., 2003</a>). When mapping cleavage sites on denaturing gels, reaction products were run alongside a Maxam-Gilbert G + A sequencing ladder of the relevant labeled oligonucleotide. A 1.5-base allowance was made to compensate for the nucleoside eliminated in the sequencing reaction. Gels were dried on 3 MM Whatman paper and analyzed with a Fuji FLA3000 PhosphorImager (Fujifilm Corp., Japan).",
+                  "type": "paragraph"
+                }
+              ],
+              "id": "s4-5",
+              "title": "In vitro cleavage assays",
+              "type": "section"
+            }
+          ],
+          "id": "s4",
+          "title": "Materials and methods",
+          "type": "section"
+        }
+      ],
+      "references": [
+        {
+          "articleTitle": "Replication fork blockage by <i>RTS1</i> at an ectopic site promotes recombination in fission yeast",
+          "authors": [
+            {
+              "name": {
+                "index": "Ahn, JS",
+                "preferred": "JS Ahn"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2005",
+          "doi": "10.1038/sj.emboj.7600670",
+          "id": "bib1",
+          "journal": "The EMBO Journal",
+          "pages": {
+            "first": "2011",
+            "last": "2023",
+            "range": "2011–2023"
+          },
+          "pmid": 15889146,
+          "type": "journal",
+          "volume": "24"
+        },
+        {
+          "articleTitle": "Break-induced DNA replication",
+          "authors": [
+            {
+              "name": {
+                "index": "Anand, RP",
+                "preferred": "RP Anand"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lovett, ST",
+                "preferred": "ST Lovett"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Haber, JE",
+                "preferred": "JE Haber"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1101/cshperspect.a010397",
+          "id": "bib2",
+          "journal": "Cold Spring Harbor Perspectives in Biology",
+          "pages": "a010397",
+          "pmid": 23881940,
+          "type": "journal",
+          "volume": "5"
+        },
+        {
+          "articleTitle": "Replication fork reversal and the maintenance of genome stability",
+          "authors": [
+            {
+              "name": {
+                "index": "Atkinson, J",
+                "preferred": "J Atkinson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "McGlynn, P",
+                "preferred": "P McGlynn"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2009",
+          "doi": "10.1093/nar/gkp244",
+          "id": "bib3",
+          "journal": "Nucleic Acids Research",
+          "pages": {
+            "first": "3475",
+            "last": "3492",
+            "range": "3475–3492"
+          },
+          "pmid": 19406929,
+          "type": "journal",
+          "volume": "37"
+        },
+        {
+          "articleTitle": "The landscape of somatic copy-number alteration across human cancers",
+          "authors": [
+            {
+              "name": {
+                "index": "Beroukhim, R",
+                "preferred": "R Beroukhim"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mermel, CH",
+                "preferred": "CH Mermel"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Porter, D",
+                "preferred": "D Porter"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Wei, G",
+                "preferred": "G Wei"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Raychaudhuri, S",
+                "preferred": "S Raychaudhuri"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Donovan, J",
+                "preferred": "J Donovan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Barretina, J",
+                "preferred": "J Barretina"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Boehm, JS",
+                "preferred": "JS Boehm"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Dobson, J",
+                "preferred": "J Dobson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Urashima, M",
+                "preferred": "M Urashima"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mc Henry, KT",
+                "preferred": "KT Mc Henry"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Pinchback, RM",
+                "preferred": "RM Pinchback"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ligon, AH",
+                "preferred": "AH Ligon"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Cho, YJ",
+                "preferred": "YJ Cho"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Haery, L",
+                "preferred": "L Haery"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Greulich, H",
+                "preferred": "H Greulich"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Reich, M",
+                "preferred": "M Reich"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Winckler, W",
+                "preferred": "W Winckler"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lawrence, MS",
+                "preferred": "MS Lawrence"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Weir, BA",
+                "preferred": "BA Weir"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tanaka, KE",
+                "preferred": "KE Tanaka"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chiang, DY",
+                "preferred": "DY Chiang"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Bass, AJ",
+                "preferred": "AJ Bass"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Loo, A",
+                "preferred": "A Loo"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hoffman, C",
+                "preferred": "C Hoffman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Prensner, J",
+                "preferred": "J Prensner"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Liefeld, T",
+                "preferred": "T Liefeld"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gao, Q",
+                "preferred": "Q Gao"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Yecies, D",
+                "preferred": "D Yecies"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Signoretti, S",
+                "preferred": "S Signoretti"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Maher, E",
+                "preferred": "E Maher"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kaye, FJ",
+                "preferred": "FJ Kaye"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sasaki, H",
+                "preferred": "H Sasaki"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tepper, JE",
+                "preferred": "JE Tepper"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Fletcher, JA",
+                "preferred": "JA Fletcher"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tabernero, J",
+                "preferred": "J Tabernero"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Baselga, J",
+                "preferred": "J Baselga"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tsao, MS",
+                "preferred": "MS Tsao"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Demichelis, F",
+                "preferred": "F Demichelis"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rubin, MA",
+                "preferred": "MA Rubin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Janne, PA",
+                "preferred": "PA Janne"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Daly, MJ",
+                "preferred": "MJ Daly"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Nucera, C",
+                "preferred": "C Nucera"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Levine, RL",
+                "preferred": "RL Levine"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ebert, BL",
+                "preferred": "BL Ebert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gabriel, S",
+                "preferred": "S Gabriel"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rustgi, AK",
+                "preferred": "AK Rustgi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Antonescu, CR",
+                "preferred": "CR Antonescu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ladanyi, M",
+                "preferred": "M Ladanyi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Letai, A",
+                "preferred": "A Letai"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Garraway, LA",
+                "preferred": "LA Garraway"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Loda, M",
+                "preferred": "M Loda"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Beer, DG",
+                "preferred": "DG Beer"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "True, LD",
+                "preferred": "LD True"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Okamoto, A",
+                "preferred": "A Okamoto"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Pomeroy, SL",
+                "preferred": "SL Pomeroy"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Singer, S",
+                "preferred": "S Singer"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Golub, TR",
+                "preferred": "TR Golub"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lander, ES",
+                "preferred": "ES Lander"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Getz, G",
+                "preferred": "G Getz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sellers, WR",
+                "preferred": "WR Sellers"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Meyerson, M",
+                "preferred": "M Meyerson"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2010",
+          "doi": "10.1038/nature08822",
+          "id": "bib4",
+          "journal": "Nature",
+          "pages": {
+            "first": "899",
+            "last": "905",
+            "range": "899–905"
+          },
+          "pmid": 20164920,
+          "type": "journal",
+          "volume": "463"
+        },
+        {
+          "articleTitle": "Replication stress: getting back on track",
+          "authors": [
+            {
+              "name": {
+                "index": "Berti, M",
+                "preferred": "M Berti"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Vindigni, A",
+                "preferred": "A Vindigni"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1038/nsmb.3163",
+          "id": "bib5",
+          "journal": "Nature Structural and Molecular Biology",
+          "pages": {
+            "first": "103",
+            "last": "109",
+            "range": "103–109"
+          },
+          "pmid": 26840898,
+          "type": "journal",
+          "volume": "23"
+        },
+        {
+          "articleTitle": "Regulation of single-strand annealing and its role in genome maintenance",
+          "authors": [
+            {
+              "name": {
+                "index": "Bhargava, R",
+                "preferred": "R Bhargava"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Onyango, DO",
+                "preferred": "DO Onyango"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Stark, JM",
+                "preferred": "JM Stark"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1016/j.tig.2016.06.007",
+          "id": "bib6",
+          "journal": "Trends in Genetics",
+          "pages": {
+            "first": "566",
+            "last": "575",
+            "range": "566–575"
+          },
+          "pmid": 27450436,
+          "type": "journal",
+          "volume": "32"
+        },
+        {
+          "articleTitle": "RAD52 facilitates mitotic DNA synthesis following replication stress",
+          "authors": [
+            {
+              "name": {
+                "index": "Bhowmick, R",
+                "preferred": "R Bhowmick"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Minocherhomji, S",
+                "preferred": "S Minocherhomji"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hickson, ID",
+                "preferred": "ID Hickson"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1016/j.molcel.2016.10.037",
+          "id": "bib7",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "1117",
+            "last": "1126",
+            "range": "1117–1126"
+          },
+          "pmid": 27984745,
+          "type": "journal",
+          "volume": "64"
+        },
+        {
+          "articleTitle": "The Alu-rich genomic architecture of SPAST predisposes to diverse and functionally distinct disease-associated CNV alleles",
+          "authors": [
+            {
+              "name": {
+                "index": "Boone, PM",
+                "preferred": "PM Boone"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Yuan, B",
+                "preferred": "B Yuan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Campbell, IM",
+                "preferred": "IM Campbell"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Scull, JC",
+                "preferred": "JC Scull"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Withers, MA",
+                "preferred": "MA Withers"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Baggett, BC",
+                "preferred": "BC Baggett"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Beck, CR",
+                "preferred": "CR Beck"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Shaw, CJ",
+                "preferred": "CJ Shaw"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Stankiewicz, P",
+                "preferred": "P Stankiewicz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Moretti, P",
+                "preferred": "P Moretti"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Goodwin, WE",
+                "preferred": "WE Goodwin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hein, N",
+                "preferred": "N Hein"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Fink, JK",
+                "preferred": "JK Fink"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Seong, MW",
+                "preferred": "MW Seong"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Seo, SH",
+                "preferred": "SH Seo"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Park, SS",
+                "preferred": "SS Park"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Karbassi, ID",
+                "preferred": "ID Karbassi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Batish, SD",
+                "preferred": "SD Batish"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ordóñez-Ugalde, A",
+                "preferred": "A Ordóñez-Ugalde"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Quintáns, B",
+                "preferred": "B Quintáns"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sobrido, MJ",
+                "preferred": "MJ Sobrido"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Stemmler, S",
+                "preferred": "S Stemmler"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2014",
+          "doi": "10.1016/j.ajhg.2014.06.014",
+          "id": "bib8",
+          "journal": "The American Journal of Human Genetics",
+          "pages": {
+            "first": "143",
+            "last": "161",
+            "range": "143–161"
+          },
+          "pmid": 25065914,
+          "type": "journal",
+          "volume": "95"
+        },
+        {
+          "articleTitle": "DNA replication: failures and inverted fusions",
+          "authors": [
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Paek, AL",
+                "preferred": "AL Paek"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Weinert, T",
+                "preferred": "T Weinert"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2011",
+          "doi": "10.1016/j.semcdb.2011.10.008",
+          "id": "bib9",
+          "journal": "Seminars in Cell and Developmental Biology",
+          "pages": {
+            "first": "866",
+            "last": "874",
+            "range": "866–874"
+          },
+          "pmid": 22020070,
+          "type": "journal",
+          "volume": "22"
+        },
+        {
+          "articleTitle": "Mechanisms underlying structural variant formation in genomic disorders",
+          "authors": [
+            {
+              "name": {
+                "index": "Carvalho, CM",
+                "preferred": "CM Carvalho"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1038/nrg.2015.25",
+          "id": "bib10",
+          "journal": "Nature Reviews Genetics",
+          "pages": {
+            "first": "224",
+            "last": "238",
+            "range": "224–238"
+          },
+          "pmid": 26924765,
+          "type": "journal",
+          "volume": "17"
+        },
+        {
+          "articleTitle": "Genomic rearrangements in inherited disease and cancer",
+          "authors": [
+            {
+              "name": {
+                "index": "Chen, JM",
+                "preferred": "JM Chen"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Cooper, DN",
+                "preferred": "DN Cooper"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Férec, C",
+                "preferred": "C Férec"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kehrer-Sawatzki, H",
+                "preferred": "H Kehrer-Sawatzki"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Patrinos, GP",
+                "preferred": "GP Patrinos"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2010",
+          "doi": "10.1016/j.semcancer.2010.05.007",
+          "id": "bib11",
+          "journal": "Seminars in Cancer Biology",
+          "pages": {
+            "first": "222",
+            "last": "233",
+            "range": "222–233"
+          },
+          "pmid": 20541013,
+          "type": "journal",
+          "volume": "20"
+        },
+        {
+          "articleTitle": "DNA replication timing and long-range DNA interactions predict mutational landscapes of cancer genomes",
+          "authors": [
+            {
+              "name": {
+                "index": "De, S",
+                "preferred": "S De"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Michor, F",
+                "preferred": "F Michor"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2011",
+          "doi": "10.1038/nbt.2030",
+          "id": "bib12",
+          "journal": "Nature Biotechnology",
+          "pages": {
+            "first": "1103",
+            "last": "1108",
+            "range": "1103–1108"
+          },
+          "pmid": 22101487,
+          "type": "journal",
+          "volume": "29"
+        },
+        {
+          "articleTitle": "Microhomology-mediated end joining in fission yeast is repressed by pku70 and relies on genes involved in homologous recombination",
+          "authors": [
+            {
+              "name": {
+                "index": "Decottignies, A",
+                "preferred": "A Decottignies"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2007",
+          "doi": "10.1534/genetics.107.071621",
+          "id": "bib13",
+          "journal": "Genetics",
+          "pages": {
+            "first": "1403",
+            "last": "1415",
+            "range": "1403–1415"
+          },
+          "pmid": 17483423,
+          "type": "journal",
+          "volume": "176"
+        },
+        {
+          "articleTitle": "The replication checkpoint prevents two types of fork collapse without regulating replisome stability",
+          "authors": [
+            {
+              "name": {
+                "index": "Dungrawala, H",
+                "preferred": "H Dungrawala"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rose, KL",
+                "preferred": "KL Rose"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Bhat, KP",
+                "preferred": "KP Bhat"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mohni, KN",
+                "preferred": "KN Mohni"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Glick, GG",
+                "preferred": "GG Glick"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Couch, FB",
+                "preferred": "FB Couch"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Cortez, D",
+                "preferred": "D Cortez"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1016/j.molcel.2015.07.030",
+          "id": "bib14",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "998",
+            "last": "1010",
+            "range": "998–1010"
+          },
+          "pmid": 26365379,
+          "type": "journal",
+          "volume": "59"
+        },
+        {
+          "articleTitle": "Chromosomal translocation mechanisms at intronic alu elements in mammalian cells",
+          "authors": [
+            {
+              "name": {
+                "index": "Elliott, B",
+                "preferred": "B Elliott"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Richardson, C",
+                "preferred": "C Richardson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Jasin, M",
+                "preferred": "M Jasin"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2005",
+          "doi": "10.1016/j.molcel.2005.02.028",
+          "id": "bib15",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "885",
+            "last": "894",
+            "range": "885–894"
+          },
+          "pmid": 15780943,
+          "type": "journal",
+          "volume": "17"
+        },
+        {
+          "articleTitle": "Molecular mechanisms of micronucleus, nucleoplasmic bridge and nuclear bud formation in mammalian and human cells",
+          "authors": [
+            {
+              "name": {
+                "index": "Fenech, M",
+                "preferred": "M Fenech"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kirsch-Volders, M",
+                "preferred": "M Kirsch-Volders"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Natarajan, AT",
+                "preferred": "AT Natarajan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Surralles, J",
+                "preferred": "J Surralles"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Crott, JW",
+                "preferred": "JW Crott"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Parry, J",
+                "preferred": "J Parry"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Norppa, H",
+                "preferred": "H Norppa"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Eastmond, DA",
+                "preferred": "DA Eastmond"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tucker, JD",
+                "preferred": "JD Tucker"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Thomas, P",
+                "preferred": "P Thomas"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2011",
+          "doi": "10.1093/mutage/geq052",
+          "id": "bib16",
+          "journal": "Mutagenesis",
+          "pages": {
+            "first": "125",
+            "last": "132",
+            "range": "125–132"
+          },
+          "pmid": 21164193,
+          "type": "journal",
+          "volume": "26"
+        },
+        {
+          "articleTitle": "Two alternative pathways of double-strand break repair that are kinetically separable and independently modulated",
+          "authors": [
+            {
+              "name": {
+                "index": "Fishman-Lobell, J",
+                "preferred": "J Fishman-Lobell"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rudin, N",
+                "preferred": "N Rudin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Haber, JE",
+                "preferred": "JE Haber"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1992",
+          "doi": "10.1128/MCB.12.3.1292",
+          "id": "bib17",
+          "journal": "Molecular and Cellular Biology",
+          "pages": {
+            "first": "1292",
+            "last": "1303",
+            "range": "1292–1303"
+          },
+          "pmid": 1545810,
+          "type": "journal",
+          "volume": "12"
+        },
+        {
+          "articleTitle": "Comprehensive analysis of pathogenic deletion variants in Fanconi anemia genes",
+          "authors": [
+            {
+              "name": {
+                "index": "Flynn, EK",
+                "preferred": "EK Flynn"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kamat, A",
+                "preferred": "A Kamat"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lach, FP",
+                "preferred": "FP Lach"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Donovan, FX",
+                "preferred": "FX Donovan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kimble, DC",
+                "preferred": "DC Kimble"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Narisu, N",
+                "preferred": "N Narisu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sanborn, E",
+                "preferred": "E Sanborn"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Boulad, F",
+                "preferred": "F Boulad"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Davies, SM",
+                "preferred": "SM Davies"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Harris, RE",
+                "preferred": "RE Harris"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "MacMillan, ML",
+                "preferred": "ML MacMillan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Wagner, JE",
+                "preferred": "JE Wagner"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Smogorzewska, A",
+                "preferred": "A Smogorzewska"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Auerbach, AD",
+                "preferred": "AD Auerbach"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ostrander, EA",
+                "preferred": "EA Ostrander"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chandrasekharappa, SC",
+                "preferred": "SC Chandrasekharappa"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chandrasekharappa, SC",
+                "preferred": "SC Chandrasekharappa"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2014",
+          "doi": "10.1002/humu.22680",
+          "id": "bib18",
+          "journal": "Human Mutation",
+          "pages": "n/a–1353",
+          "pmid": 25168418,
+          "type": "journal",
+          "volume": "35"
+        },
+        {
+          "articleTitle": "Mus81 cleavage of Holliday junctions: a failsafe for processing meiotic recombination intermediates?",
+          "authors": [
+            {
+              "name": {
+                "index": "Gaskell, LJ",
+                "preferred": "LJ Gaskell"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gilbert, RJ",
+                "preferred": "RJ Gilbert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2007",
+          "doi": "10.1038/sj.emboj.7601645",
+          "id": "bib19",
+          "journal": "The EMBO Journal",
+          "pages": {
+            "first": "1891",
+            "last": "1901",
+            "range": "1891–1901"
+          },
+          "pmid": 17363897,
+          "type": "journal",
+          "volume": "26"
+        },
+        {
+          "articleTitle": "Three new dominant drug resistance cassettes for gene disruption in <i>Saccharomyces cerevisiae</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Goldstein, AL",
+                "preferred": "AL Goldstein"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "McCusker, JH",
+                "preferred": "JH McCusker"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1999",
+          "doi": "10.1002/(SICI)1097-0061(199910)15:14<1541::AID-YEA476>3.0.CO;2-K",
+          "id": "bib20",
+          "journal": "Yeast",
+          "pages": {
+            "first": "1541",
+            "last": "1553",
+            "range": "1541–1553"
+          },
+          "pmid": 10514571,
+          "type": "journal",
+          "volume": "15"
+        },
+        {
+          "articleTitle": "A microhomology-mediated break-induced replication model for the origin of human copy number variation",
+          "authors": [
+            {
+              "name": {
+                "index": "Hastings, PJ",
+                "preferred": "PJ Hastings"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ira, G",
+                "preferred": "G Ira"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2009",
+          "doi": "10.1371/journal.pgen.1000327",
+          "id": "bib21",
+          "journal": "PLoS Genetics",
+          "pages": "e1000327",
+          "pmid": 19180184,
+          "type": "journal",
+          "volume": "5"
+        },
+        {
+          "articleTitle": "Real-time analysis of double-strand DNA break repair by homologous recombination",
+          "authors": [
+            {
+              "name": {
+                "index": "Hicks, WM",
+                "preferred": "WM Hicks"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Yamaguchi, M",
+                "preferred": "M Yamaguchi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Haber, JE",
+                "preferred": "JE Haber"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2011",
+          "doi": "10.1073/pnas.1019660108",
+          "id": "bib22",
+          "journal": "PNAS",
+          "pages": {
+            "first": "3108",
+            "last": "3115",
+            "range": "3108–3115"
+          },
+          "pmid": 21292986,
+          "type": "journal",
+          "volume": "108"
+        },
+        {
+          "articleTitle": "Decoding NF1 intragenic copy-number variations",
+          "authors": [
+            {
+              "name": {
+                "index": "Hsiao, MC",
+                "preferred": "MC Hsiao"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Piotrowski, A",
+                "preferred": "A Piotrowski"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Callens, T",
+                "preferred": "T Callens"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Fu, C",
+                "preferred": "C Fu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Wimmer, K",
+                "preferred": "K Wimmer"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Claes, KB",
+                "preferred": "KB Claes"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Messiaen, L",
+                "preferred": "L Messiaen"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1016/j.ajhg.2015.06.002",
+          "id": "bib23",
+          "journal": "The American Journal of Human Genetics",
+          "pages": {
+            "first": "238",
+            "last": "249",
+            "range": "238–249"
+          },
+          "pmid": 26189818,
+          "type": "journal",
+          "volume": "97"
+        },
+        {
+          "articleTitle": "Exonuclease 1 and its versatile roles in DNA repair",
+          "authors": [
+            {
+              "name": {
+                "index": "Keijzers, G",
+                "preferred": "G Keijzers"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Liu, D",
+                "preferred": "D Liu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rasmussen, LJ",
+                "preferred": "LJ Rasmussen"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1080/10409238.2016.1215407",
+          "id": "bib24",
+          "journal": "Critical Reviews in Biochemistry and Molecular Biology",
+          "pages": {
+            "first": "440",
+            "last": "451",
+            "range": "440–451"
+          },
+          "pmid": 27494243,
+          "type": "journal",
+          "volume": "51"
+        },
+        {
+          "articleTitle": "Functional genomic analysis of chromosomal aberrations in a compendium of 8000 cancer genomes",
+          "authors": [
+            {
+              "name": {
+                "index": "Kim, TM",
+                "preferred": "TM Kim"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Xi, R",
+                "preferred": "R Xi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Luquette, LJ",
+                "preferred": "LJ Luquette"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Park, RW",
+                "preferred": "RW Park"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Johnson, MD",
+                "preferred": "MD Johnson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Park, PJ",
+                "preferred": "PJ Park"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1101/gr.140301.112",
+          "id": "bib25",
+          "journal": "Genome Research",
+          "pages": {
+            "first": "217",
+            "last": "227",
+            "range": "217–227"
+          },
+          "pmid": 23132910,
+          "type": "journal",
+          "volume": "23"
+        },
+        {
+          "articleTitle": "Structural variation of alu element and human disease",
+          "authors": [
+            {
+              "name": {
+                "index": "Kim, S",
+                "preferred": "S Kim"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Cho, CS",
+                "preferred": "CS Cho"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Han, K",
+                "preferred": "K Han"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lee, J",
+                "preferred": "J Lee"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.5808/GI.2016.14.3.70",
+          "id": "bib26",
+          "journal": "Genomics and Informatics",
+          "pages": {
+            "first": "70",
+            "last": "77",
+            "range": "70–77"
+          },
+          "pmid": 27729835,
+          "type": "journal",
+          "volume": "14"
+        },
+        {
+          "articleTitle": "Gross chromosomal rearrangements and elevated recombination at an inducible site-specific replication fork barrier",
+          "authors": [
+            {
+              "name": {
+                "index": "Lambert, S",
+                "preferred": "S Lambert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Watson, A",
+                "preferred": "A Watson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sheedy, DM",
+                "preferred": "DM Sheedy"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Martin, B",
+                "preferred": "B Martin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2005",
+          "doi": "10.1016/j.cell.2005.03.022",
+          "id": "bib27",
+          "journal": "Cell",
+          "pages": {
+            "first": "689",
+            "last": "702",
+            "range": "689–702"
+          },
+          "pmid": 15935756,
+          "type": "journal",
+          "volume": "121"
+        },
+        {
+          "articleTitle": "Homologous recombination restarts blocked replication forks at the expense of genome rearrangements by template exchange",
+          "authors": [
+            {
+              "name": {
+                "index": "Lambert, S",
+                "preferred": "S Lambert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mizuno, K",
+                "preferred": "K Mizuno"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Blaisonneau, J",
+                "preferred": "J Blaisonneau"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Martineau, S",
+                "preferred": "S Martineau"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chanet, R",
+                "preferred": "R Chanet"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Fréon, K",
+                "preferred": "K Fréon"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Murray, JM",
+                "preferred": "JM Murray"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Baldacci, G",
+                "preferred": "G Baldacci"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2010",
+          "doi": "10.1016/j.molcel.2010.07.015",
+          "id": "bib28",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "346",
+            "last": "359",
+            "range": "346–359"
+          },
+          "pmid": 20705238,
+          "type": "journal",
+          "volume": "39"
+        },
+        {
+          "articleTitle": "Impediments to replication fork movement: stabilisation, reactivation and genome instability",
+          "authors": [
+            {
+              "name": {
+                "index": "Lambert, S",
+                "preferred": "S Lambert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1007/s00412-013-0398-9",
+          "id": "bib29",
+          "journal": "Chromosoma",
+          "pages": {
+            "first": "33",
+            "last": "45",
+            "range": "33–45"
+          },
+          "pmid": 23446515,
+          "type": "journal",
+          "volume": "122"
+        },
+        {
+          "articleTitle": "A DNA replication mechanism for generating nonrecurrent rearrangements associated with genomic disorders",
+          "authors": [
+            {
+              "name": {
+                "index": "Lee, JA",
+                "preferred": "JA Lee"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carvalho, CM",
+                "preferred": "CM Carvalho"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2007",
+          "doi": "10.1016/j.cell.2007.11.037",
+          "id": "bib30",
+          "journal": "Cell",
+          "pages": {
+            "first": "1235",
+            "last": "1247",
+            "range": "1235–1247"
+          },
+          "pmid": 18160035,
+          "type": "journal",
+          "volume": "131"
+        },
+        {
+          "articleTitle": "Chromothripsis: a new mechanism for rapid karyotype evolution",
+          "authors": [
+            {
+              "name": {
+                "index": "Leibowitz, ML",
+                "preferred": "ML Leibowitz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Zhang, CZ",
+                "preferred": "CZ Zhang"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Pellman, D",
+                "preferred": "D Pellman"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1146/annurev-genet-120213-092228",
+          "id": "bib31",
+          "journal": "Annual Review of Genetics",
+          "pages": {
+            "first": "183",
+            "last": "211",
+            "range": "183–211"
+          },
+          "pmid": 26442848,
+          "type": "journal",
+          "volume": "49"
+        },
+        {
+          "articleTitle": "Fbh1 limits Rad51-dependent recombination at blocked replication forks",
+          "authors": [
+            {
+              "name": {
+                "index": "Lorenz, A",
+                "preferred": "A Lorenz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Folkyte, V",
+                "preferred": "V Folkyte"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sofueva, S",
+                "preferred": "S Sofueva"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2009",
+          "doi": "10.1128/MCB.00471-09",
+          "id": "bib32",
+          "journal": "Molecular and Cellular Biology",
+          "pages": {
+            "first": "4742",
+            "last": "4756",
+            "range": "4742–4756"
+          },
+          "pmid": 19546232,
+          "type": "journal",
+          "volume": "29"
+        },
+        {
+          "articleTitle": "Encoded errors: mutations and rearrangements mediated by misalignment at repetitive DNA sequences",
+          "authors": [
+            {
+              "name": {
+                "index": "Lovett, ST",
+                "preferred": "ST Lovett"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2004",
+          "doi": "10.1111/j.1365-2958.2004.04076.x",
+          "id": "bib33",
+          "journal": "Molecular Microbiology",
+          "pages": {
+            "first": "1243",
+            "last": "1253",
+            "range": "1243–1253"
+          },
+          "pmid": 15165229,
+          "type": "journal",
+          "volume": "52"
+        },
+        {
+          "articleTitle": "Gene amplification: mechanisms and involvement in cancer",
+          "authors": [
+            {
+              "name": {
+                "index": "Matsui, A",
+                "preferred": "A Matsui"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ihara, T",
+                "preferred": "T Ihara"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Suda, H",
+                "preferred": "H Suda"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mikami, H",
+                "preferred": "H Mikami"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Semba, K",
+                "preferred": "K Semba"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1515/bmc-2013-0026",
+          "id": "bib34",
+          "journal": "BioMolecular Concepts",
+          "pages": {
+            "first": "567",
+            "last": "582",
+            "range": "567–582"
+          },
+          "pmid": 25436757,
+          "type": "journal",
+          "volume": "4"
+        },
+        {
+          "articleTitle": "DNA REPAIR. Mus81 and converging forks limit the mutagenicity of replication fork breakage",
+          "authors": [
+            {
+              "name": {
+                "index": "Mayle, R",
+                "preferred": "R Mayle"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Campbell, IM",
+                "preferred": "IM Campbell"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Beck, CR",
+                "preferred": "CR Beck"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Yu, Y",
+                "preferred": "Y Yu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Wilson, M",
+                "preferred": "M Wilson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Shaw, CA",
+                "preferred": "CA Shaw"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Bjergbaek, L",
+                "preferred": "L Bjergbaek"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ira, G",
+                "preferred": "G Ira"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1126/science.aaa8391",
+          "id": "bib35",
+          "journal": "Science",
+          "pages": {
+            "first": "742",
+            "last": "747",
+            "range": "742–747"
+          },
+          "pmid": 26273056,
+          "type": "journal",
+          "volume": "349"
+        },
+        {
+          "articleTitle": "DNA polymerases δ and λ cooperate in repairing double-strand breaks by microhomology-mediated end-joining in <i>Saccharomyces cerevisiae</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Meyer, D",
+                "preferred": "D Meyer"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Fu, BX",
+                "preferred": "BX Fu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Heyer, WD",
+                "preferred": "WD Heyer"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1073/pnas.1507833112",
+          "id": "bib36",
+          "journal": "PNAS",
+          "pages": {
+            "first": "E6907",
+            "last": "E6916",
+            "range": "E6907–E6916"
+          },
+          "pmid": 26607450,
+          "type": "journal",
+          "volume": "112"
+        },
+        {
+          "articleTitle": "Nearby inverted repeats fuse to generate acentric and dicentric palindromic chromosomes by a replication template exchange mechanism",
+          "authors": [
+            {
+              "name": {
+                "index": "Mizuno, K",
+                "preferred": "K Mizuno"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lambert, S",
+                "preferred": "S Lambert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Baldacci, G",
+                "preferred": "G Baldacci"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Murray, JM",
+                "preferred": "JM Murray"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2009",
+          "doi": "10.1101/gad.1863009",
+          "id": "bib37",
+          "journal": "Genes and Development",
+          "pages": {
+            "first": "2876",
+            "last": "2886",
+            "range": "2876–2886"
+          },
+          "pmid": 20008937,
+          "type": "journal",
+          "volume": "23"
+        },
+        {
+          "articleTitle": "Recombination-restarted replication makes inverted chromosome fusions at inverted repeats",
+          "authors": [
+            {
+              "name": {
+                "index": "Mizuno, K",
+                "preferred": "K Mizuno"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Miyabe, I",
+                "preferred": "I Miyabe"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Schalbetter, SA",
+                "preferred": "SA Schalbetter"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Murray, JM",
+                "preferred": "JM Murray"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1038/nature11676",
+          "id": "bib38",
+          "journal": "Nature",
+          "pages": {
+            "first": "246",
+            "last": "249",
+            "range": "246–249"
+          },
+          "pmid": 23178809,
+          "type": "journal",
+          "volume": "493"
+        },
+        {
+          "articleTitle": "Checkpoints are blind to replication restart and recombination intermediates that result in gross chromosomal rearrangements",
+          "authors": [
+            {
+              "name": {
+                "index": "Mohebi, S",
+                "preferred": "S Mohebi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mizuno, K",
+                "preferred": "K Mizuno"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Watson, A",
+                "preferred": "A Watson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Murray, JM",
+                "preferred": "JM Murray"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1038/ncomms7357",
+          "id": "bib39",
+          "journal": "Nature Communications",
+          "pages": "6357",
+          "pmid": 25721418,
+          "type": "journal",
+          "volume": "6"
+        },
+        {
+          "articleTitle": "DNA strand annealing is promoted by the yeast Rad52 protein",
+          "authors": [
+            {
+              "name": {
+                "index": "Mortensen, UH",
+                "preferred": "UH Mortensen"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Bendixen, C",
+                "preferred": "C Bendixen"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sunjevaric, I",
+                "preferred": "I Sunjevaric"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rothstein, R",
+                "preferred": "R Rothstein"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1996",
+          "doi": "10.1073/pnas.93.20.10729",
+          "id": "bib40",
+          "journal": "PNAS",
+          "pages": {
+            "first": "10729",
+            "last": "10734",
+            "range": "10729–10734"
+          },
+          "pmid": 8855248,
+          "type": "journal",
+          "volume": "93"
+        },
+        {
+          "articleTitle": "The ATPase activity of Fml1 is essential for its roles in homologous recombination and DNA repair",
+          "authors": [
+            {
+              "name": {
+                "index": "Nandi, S",
+                "preferred": "S Nandi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2012",
+          "doi": "10.1093/nar/gks715",
+          "id": "bib41",
+          "journal": "Nucleic Acids Research",
+          "pages": {
+            "first": "9584",
+            "last": "9595",
+            "range": "9584–9595"
+          },
+          "pmid": 22844101,
+          "type": "journal",
+          "volume": "40"
+        },
+        {
+          "articleTitle": "Recombination occurs within minutes of replication blockage by <i>RTS1</i> producing restarted forks that are prone to collapse",
+          "authors": [
+            {
+              "name": {
+                "index": "Nguyen, MO",
+                "preferred": "MO Nguyen"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Jalan, M",
+                "preferred": "M Jalan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Morrow, CA",
+                "preferred": "CA Morrow"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.7554/eLife.04539",
+          "id": "bib42",
+          "journal": "eLife",
+          "pages": "e04539",
+          "pmid": 25806683,
+          "type": "journal",
+          "volume": "4"
+        },
+        {
+          "articleTitle": "The genetic control of spontaneous and UV-induced mitotic intrachromosomal recombination in the fission yeast <i>Schizosaccharomyces pombe</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Adriance, M",
+                "preferred": "M Adriance"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "McCready, S",
+                "preferred": "S McCready"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2000",
+          "doi": "10.1007/s002940000145",
+          "id": "bib43",
+          "journal": "Current Genetics",
+          "pages": {
+            "first": "113",
+            "last": "125",
+            "range": "113–125"
+          },
+          "pmid": 11057444,
+          "type": "journal",
+          "volume": "38"
+        },
+        {
+          "articleTitle": "Generating crossovers by resolution of nicked Holliday junctions: a role for Mus81-Eme1 in meiosis",
+          "authors": [
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Dixon, J",
+                "preferred": "J Dixon"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Doe, CL",
+                "preferred": "CL Doe"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2003",
+          "doi": "10.1016/S1097-2765(03)00343-5",
+          "id": "bib44",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "761",
+            "last": "774",
+            "range": "761–774"
+          },
+          "pmid": 14527420,
+          "type": "journal",
+          "volume": "12"
+        },
+        {
+          "articleTitle": "Exploring the roles of Mus81-Eme1/Mms4 at perturbed replication forks",
+          "authors": [
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2007",
+          "doi": "10.1016/j.dnarep.2007.02.019",
+          "id": "bib45",
+          "journal": "DNA Repair",
+          "pages": {
+            "first": "1004",
+            "last": "1017",
+            "range": "1004–1017"
+          },
+          "pmid": 17409028,
+          "type": "journal",
+          "volume": "6"
+        },
+        {
+          "articleTitle": "Monitoring homologous recombination following replication fork perturbation in the fission yeast <i>Schizosaccharomyces pombe</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2009",
+          "doi": "10.1007/978-1-60327-815-7_31",
+          "id": "bib46",
+          "journal": "Methods in Molecular Biology",
+          "pages": {
+            "first": "535",
+            "last": "552",
+            "range": "535–552"
+          },
+          "pmid": 19563128,
+          "type": "journal",
+          "volume": "521"
+        },
+        {
+          "articleTitle": "The RecQ DNA helicase Rqh1 constrains Exonuclease 1-dependent recombination at stalled replication forks",
+          "authors": [
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ahn, JS",
+                "preferred": "JS Ahn"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lorenz, A",
+                "preferred": "A Lorenz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1038/srep22837",
+          "id": "bib47",
+          "journal": "Scientific Reports",
+          "pages": "22837",
+          "pmid": 26957021,
+          "type": "journal",
+          "volume": "6"
+        },
+        {
+          "articleTitle": "Resolving branched DNA intermediates with structure-specific nucleases during replication in eukaryotes",
+          "authors": [
+            {
+              "name": {
+                "index": "Rass, U",
+                "preferred": "U Rass"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1007/s00412-013-0431-z",
+          "id": "bib48",
+          "journal": "Chromosoma",
+          "pages": {
+            "first": "499",
+            "last": "515",
+            "range": "499–515"
+          },
+          "pmid": 24008669,
+          "type": "journal",
+          "volume": "122"
+        },
+        {
+          "articleTitle": "Human Rad52 protein promotes single-strand DNA annealing followed by branch migration",
+          "authors": [
+            {
+              "name": {
+                "index": "Reddy, G",
+                "preferred": "G Reddy"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Golub, EI",
+                "preferred": "EI Golub"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Radding, CM",
+                "preferred": "CM Radding"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1997",
+          "doi": "10.1016/S0027-5107(97)00057-2",
+          "id": "bib49",
+          "journal": "Mutation Research/Fundamental and Molecular Mechanisms of Mutagenesis",
+          "pages": {
+            "first": "53",
+            "last": "59",
+            "range": "53–59"
+          },
+          "pmid": 9219578,
+          "type": "journal",
+          "volume": "377"
+        },
+        {
+          "articleTitle": "Gene conversion and deletion frequencies during double-strand break repair in human cells are controlled by the distance between direct repeats",
+          "authors": [
+            {
+              "name": {
+                "index": "Schildkraut, E",
+                "preferred": "E Schildkraut"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Miller, CA",
+                "preferred": "CA Miller"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Nickoloff, JA",
+                "preferred": "JA Nickoloff"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2005",
+          "doi": "10.1093/nar/gki295",
+          "id": "bib50",
+          "journal": "Nucleic Acids Research",
+          "pages": {
+            "first": "1574",
+            "last": "1580",
+            "range": "1574–1580"
+          },
+          "pmid": 15767282,
+          "type": "journal",
+          "volume": "33"
+        },
+        {
+          "articleTitle": "Rad52 forms ring structures and co-operates with RPA in single-strand DNA annealing",
+          "authors": [
+            {
+              "name": {
+                "index": "Shinohara, A",
+                "preferred": "A Shinohara"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Shinohara, M",
+                "preferred": "M Shinohara"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ohta, T",
+                "preferred": "T Ohta"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Matsuda, S",
+                "preferred": "S Matsuda"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ogawa, T",
+                "preferred": "T Ogawa"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1998",
+          "doi": "10.1046/j.1365-2443.1998.00176.x",
+          "id": "bib51",
+          "journal": "Genes to Cells",
+          "pages": {
+            "first": "145",
+            "last": "156",
+            "range": "145–156"
+          },
+          "pmid": 9619627,
+          "type": "journal",
+          "volume": "3"
+        },
+        {
+          "articleTitle": "On the mechanism of gene amplification induced under stress in <i>Escherichia coli</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Slack, A",
+                "preferred": "A Slack"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Thornton, PC",
+                "preferred": "PC Thornton"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Magner, DB",
+                "preferred": "DB Magner"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rosenberg, SM",
+                "preferred": "SM Rosenberg"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hastings, PJ",
+                "preferred": "PJ Hastings"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2006",
+          "doi": "10.1371/journal.pgen.0020048",
+          "id": "bib52",
+          "journal": "PLoS Genetics",
+          "pages": "e48",
+          "pmid": 16604155,
+          "type": "journal",
+          "volume": "2"
+        },
+        {
+          "articleTitle": "Mammalian RAD52 functions in Break-Induced replication repair of collapsed DNA replication forks",
+          "authors": [
+            {
+              "name": {
+                "index": "Sotiriou, SK",
+                "preferred": "SK Sotiriou"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kamileri, I",
+                "preferred": "I Kamileri"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lugli, N",
+                "preferred": "N Lugli"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Evangelou, K",
+                "preferred": "K Evangelou"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Da-Ré, C",
+                "preferred": "C Da-Ré"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Huber, F",
+                "preferred": "F Huber"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Padayachy, L",
+                "preferred": "L Padayachy"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tardy, S",
+                "preferred": "S Tardy"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Nicati, NL",
+                "preferred": "NL Nicati"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Barriot, S",
+                "preferred": "S Barriot"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ochs, F",
+                "preferred": "F Ochs"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lukas, C",
+                "preferred": "C Lukas"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lukas, J",
+                "preferred": "J Lukas"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gorgoulis, VG",
+                "preferred": "VG Gorgoulis"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Scapozza, L",
+                "preferred": "L Scapozza"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Halazonetis, TD",
+                "preferred": "TD Halazonetis"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2016",
+          "doi": "10.1016/j.molcel.2016.10.038",
+          "id": "bib53",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "1127",
+            "last": "1134",
+            "range": "1127–1134"
+          },
+          "pmid": 27984746,
+          "type": "journal",
+          "volume": "64"
+        },
+        {
+          "articleTitle": "Structural variation in the human genome and its role in disease",
+          "authors": [
+            {
+              "name": {
+                "index": "Stankiewicz, P",
+                "preferred": "P Stankiewicz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lupski, JR",
+                "preferred": "JR Lupski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2010",
+          "doi": "10.1146/annurev-med-100708-204735",
+          "id": "bib54",
+          "journal": "Annual Review of Medicine",
+          "pages": {
+            "first": "437",
+            "last": "455",
+            "range": "437–455"
+          },
+          "pmid": 20059347,
+          "type": "journal",
+          "volume": "61"
+        },
+        {
+          "articleTitle": "Genome-wide analyses of LINE-LINE-mediated nonallelic homologous recombination",
+          "authors": [
+            {
+              "name": {
+                "index": "Startek, M",
+                "preferred": "M Startek"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Szafranski, P",
+                "preferred": "P Szafranski"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gambin, T",
+                "preferred": "T Gambin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Campbell, IM",
+                "preferred": "IM Campbell"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hixson, P",
+                "preferred": "P Hixson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Shaw, CA",
+                "preferred": "CA Shaw"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Stankiewicz, P",
+                "preferred": "P Stankiewicz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gambin, A",
+                "preferred": "A Gambin"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1093/nar/gku1394",
+          "id": "bib55",
+          "journal": "Nucleic Acids Research",
+          "pages": {
+            "first": "2188",
+            "last": "2198",
+            "range": "2188–2198"
+          },
+          "pmid": 25613453,
+          "type": "journal",
+          "volume": "43"
+        },
+        {
+          "articleTitle": "DNA annealing by RAD52 protein is stimulated by specific interaction with the complex of replication protein A and single-stranded DNA",
+          "authors": [
+            {
+              "name": {
+                "index": "Sugiyama, T",
+                "preferred": "T Sugiyama"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "New, JH",
+                "preferred": "JH New"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kowalczykowski, SC",
+                "preferred": "SC Kowalczykowski"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1998",
+          "doi": "10.1073/pnas.95.11.6049",
+          "id": "bib56",
+          "journal": "PNAS",
+          "pages": {
+            "first": "6049",
+            "last": "6054",
+            "range": "6049–6054"
+          },
+          "pmid": 9600915,
+          "type": "journal",
+          "volume": "95"
+        },
+        {
+          "articleTitle": "The FANCM ortholog Fml1 promotes recombination at stalled replication forks and limits crossing over during DNA double-strand break repair",
+          "authors": [
+            {
+              "name": {
+                "index": "Sun, W",
+                "preferred": "W Sun"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Nandi, S",
+                "preferred": "S Nandi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ahn, JS",
+                "preferred": "JS Ahn"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Jakovleska, J",
+                "preferred": "J Jakovleska"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lorenz, A",
+                "preferred": "A Lorenz"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2008",
+          "doi": "10.1016/j.molcel.2008.08.024",
+          "id": "bib57",
+          "journal": "Molecular Cell",
+          "pages": {
+            "first": "118",
+            "last": "128",
+            "range": "118–128"
+          },
+          "pmid": 18851838,
+          "type": "journal",
+          "volume": "32"
+        },
+        {
+          "articleTitle": "Mechanisms and regulation of mitotic recombination in <i>Saccharomyces cerevisiae</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Symington, LS",
+                "preferred": "LS Symington"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rothstein, R",
+                "preferred": "R Rothstein"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lisby, M",
+                "preferred": "M Lisby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2014",
+          "doi": "10.1534/genetics.114.166140",
+          "id": "bib58",
+          "journal": "Genetics",
+          "pages": {
+            "first": "795",
+            "last": "835",
+            "range": "795–835"
+          },
+          "pmid": 25381364,
+          "type": "journal",
+          "volume": "198"
+        },
+        {
+          "articleTitle": "Anatomy of mammalian replication domains",
+          "authors": [
+            {
+              "name": {
+                "index": "Takebayashi, SI",
+                "preferred": "SI Takebayashi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ogata, M",
+                "preferred": "M Ogata"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Okumura, K",
+                "preferred": "K Okumura"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2017",
+          "doi": "10.3390/genes8040110",
+          "id": "bib59",
+          "journal": "Genes",
+          "pages": "110",
+          "pmid": 28350365,
+          "type": "journal",
+          "volume": "8"
+        },
+        {
+          "articleTitle": "The extent of error-prone replication restart by homologous recombination is controlled by Exo1 and checkpoint proteins",
+          "authors": [
+            {
+              "name": {
+                "index": "Tsang, E",
+                "preferred": "E Tsang"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Miyabe, I",
+                "preferred": "I Miyabe"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Iraqui, I",
+                "preferred": "I Iraqui"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Zheng, J",
+                "preferred": "J Zheng"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lambert, SA",
+                "preferred": "SA Lambert"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Carr, AM",
+                "preferred": "AM Carr"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2014",
+          "doi": "10.1242/jcs.152678",
+          "id": "bib60",
+          "journal": "Journal of Cell Science",
+          "pages": {
+            "first": "2983",
+            "last": "2994",
+            "range": "2983–2994"
+          },
+          "pmid": 24806966,
+          "type": "journal",
+          "volume": "127"
+        },
+        {
+          "articleTitle": "<i>RTS1</i>-an eukaryotic terminator of replication",
+          "authors": [
+            {
+              "name": {
+                "index": "Vengrova, S",
+                "preferred": "S Vengrova"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Codlin, S",
+                "preferred": "S Codlin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Dalgaard, JZ",
+                "preferred": "JZ Dalgaard"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2002",
+          "doi": "10.1016/S1357-2725(02)00040-7",
+          "id": "bib61",
+          "journal": "The International Journal of Biochemistry and Cell Biology",
+          "pages": {
+            "first": "1031",
+            "last": "1034",
+            "range": "1031–1034"
+          },
+          "pmid": 12009298,
+          "type": "journal",
+          "volume": "34"
+        },
+        {
+          "articleTitle": "The genetics of microdeletion and microduplication syndromes: an update",
+          "authors": [
+            {
+              "name": {
+                "index": "Watson, CT",
+                "preferred": "CT Watson"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Marques-Bonet, T",
+                "preferred": "T Marques-Bonet"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sharp, AJ",
+                "preferred": "AJ Sharp"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Mefford, HC",
+                "preferred": "HC Mefford"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2014",
+          "doi": "10.1146/annurev-genom-091212-153408",
+          "id": "bib62",
+          "journal": "Annual Review of Genomics and Human Genetics",
+          "pages": {
+            "first": "215",
+            "last": "244",
+            "range": "215–244"
+          },
+          "pmid": 24773319,
+          "type": "journal",
+          "volume": "15"
+        },
+        {
+          "articleTitle": "Human structural variation: mechanisms of chromosome rearrangements",
+          "authors": [
+            {
+              "name": {
+                "index": "Weckselblatt, B",
+                "preferred": "B Weckselblatt"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Rudd, MK",
+                "preferred": "MK Rudd"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1016/j.tig.2015.05.010",
+          "id": "bib63",
+          "journal": "Trends in Genetics",
+          "pages": {
+            "first": "587",
+            "last": "599",
+            "range": "587–599"
+          },
+          "pmid": 26209074,
+          "type": "journal",
+          "volume": "31"
+        },
+        {
+          "articleTitle": "Resolution of recombination intermediates: mechanisms and regulation",
+          "authors": [
+            {
+              "name": {
+                "index": "West, SC",
+                "preferred": "SC West"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Blanco, MG",
+                "preferred": "MG Blanco"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chan, YW",
+                "preferred": "YW Chan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Matos, J",
+                "preferred": "J Matos"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sarbajna, S",
+                "preferred": "S Sarbajna"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Wyatt, HD",
+                "preferred": "HD Wyatt"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1101/sqb.2015.80.027649",
+          "id": "bib64",
+          "journal": "Cold Spring Harbor Symposia on Quantitative Biology",
+          "pages": {
+            "first": "103",
+            "last": "109",
+            "range": "103–109"
+          },
+          "pmid": 26370409,
+          "type": "journal",
+          "volume": "80"
+        },
+        {
+          "articleTitle": "Substrate specificity of the SpCCE1 Holliday junction resolvase of <i>Schizosaccharomyces pombe</i>",
+          "authors": [
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Dixon, J",
+                "preferred": "J Dixon"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "1998",
+          "doi": "10.1074/jbc.273.52.35063",
+          "id": "bib65",
+          "journal": "Journal of Biological Chemistry",
+          "pages": {
+            "first": "35063",
+            "last": "35073",
+            "range": "35063–35073"
+          },
+          "pmid": 9857040,
+          "type": "journal",
+          "volume": "273"
+        },
+        {
+          "articleTitle": "Cleavage of model replication forks by fission yeast Mus81-Eme1 and budding yeast Mus81-Mms4",
+          "authors": [
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Osman, F",
+                "preferred": "F Osman"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Dixon, J",
+                "preferred": "J Dixon"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2003",
+          "doi": "10.1074/jbc.M210006200",
+          "id": "bib66",
+          "journal": "Journal of Biological Chemistry",
+          "pages": {
+            "first": "6928",
+            "last": "6935",
+            "range": "6928–6935"
+          },
+          "pmid": 12473680,
+          "type": "journal",
+          "volume": "278"
+        },
+        {
+          "articleTitle": "The FANCM family of DNA helicases/translocases",
+          "authors": [
+            {
+              "name": {
+                "index": "Whitby, MC",
+                "preferred": "MC Whitby"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2010",
+          "doi": "10.1016/j.dnarep.2009.12.012",
+          "id": "bib67",
+          "journal": "DNA Repair",
+          "pages": {
+            "first": "224",
+            "last": "236",
+            "range": "224–236"
+          },
+          "pmid": 20117061,
+          "type": "journal",
+          "volume": "9"
+        },
+        {
+          "articleTitle": "Functions and regulation of the multitasking FANCM family of DNA motor proteins",
+          "authors": [
+            {
+              "name": {
+                "index": "Xue, X",
+                "preferred": "X Xue"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Sung, P",
+                "preferred": "P Sung"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Zhao, X",
+                "preferred": "X Zhao"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2015",
+          "doi": "10.1101/gad.266593.115",
+          "id": "bib68",
+          "journal": "Genes and Development",
+          "pages": {
+            "first": "1777",
+            "last": "1788",
+            "range": "1777–1788"
+          },
+          "pmid": 26341555,
+          "type": "journal",
+          "volume": "29"
+        },
+        {
+          "articleTitle": "Diverse mechanisms of somatic structural variations in human cancer genomes",
+          "authors": [
+            {
+              "name": {
+                "index": "Yang, L",
+                "preferred": "L Yang"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Luquette, LJ",
+                "preferred": "LJ Luquette"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gehlenborg, N",
+                "preferred": "N Gehlenborg"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Xi, R",
+                "preferred": "R Xi"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Haseley, PS",
+                "preferred": "PS Haseley"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Hsieh, CH",
+                "preferred": "CH Hsieh"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Zhang, C",
+                "preferred": "C Zhang"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Ren, X",
+                "preferred": "X Ren"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Protopopov, A",
+                "preferred": "A Protopopov"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Chin, L",
+                "preferred": "L Chin"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Kucherlapati, R",
+                "preferred": "R Kucherlapati"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Lee, C",
+                "preferred": "C Lee"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Park, PJ",
+                "preferred": "PJ Park"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1016/j.cell.2013.04.010",
+          "id": "bib69",
+          "journal": "Cell",
+          "pages": {
+            "first": "919",
+            "last": "929",
+            "range": "919–929"
+          },
+          "pmid": 23663786,
+          "type": "journal",
+          "volume": "153"
+        },
+        {
+          "articleTitle": "Rescuing stalled or damaged replication forks",
+          "authors": [
+            {
+              "name": {
+                "index": "Yeeles, JT",
+                "preferred": "JT Yeeles"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Poli, J",
+                "preferred": "J Poli"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Marians, KJ",
+                "preferred": "KJ Marians"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Pasero, P",
+                "preferred": "P Pasero"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1101/cshperspect.a012815",
+          "id": "bib70",
+          "journal": "Cold Spring Harbor Perspectives in Biology",
+          "pages": "a012815",
+          "pmid": 23637285,
+          "type": "journal",
+          "volume": "5"
+        },
+        {
+          "articleTitle": "Controlling DNA replication origins in response to DNA damage - inhibit globally, activate locally",
+          "authors": [
+            {
+              "name": {
+                "index": "Yekezare, M",
+                "preferred": "M Yekezare"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Gómez-González, B",
+                "preferred": "B Gómez-González"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Diffley, JF",
+                "preferred": "JF Diffley"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2013",
+          "doi": "10.1242/jcs.096701",
+          "id": "bib71",
+          "journal": "Journal of Cell Science",
+          "pages": {
+            "first": "1297",
+            "last": "1306",
+            "range": "1297–1306"
+          },
+          "pmid": 23645160,
+          "type": "journal",
+          "volume": "126"
+        },
+        {
+          "articleTitle": "Rad52 competes with Ku70/Ku86 for binding to S-region DSB ends to modulate antibody class-switch DNA recombination",
+          "authors": [
+            {
+              "name": {
+                "index": "Zan, H",
+                "preferred": "H Zan"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Tat, C",
+                "preferred": "C Tat"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Qiu, Z",
+                "preferred": "Z Qiu"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Taylor, JR",
+                "preferred": "JR Taylor"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Guerrero, JA",
+                "preferred": "JA Guerrero"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Shen, T",
+                "preferred": "T Shen"
+              },
+              "type": "person"
+            },
+            {
+              "name": {
+                "index": "Casali, P",
+                "preferred": "P Casali"
+              },
+              "type": "person"
+            }
+          ],
+          "date": "2017",
+          "doi": "10.1038/ncomms14244",
+          "id": "bib72",
+          "journal": "Nature Communications",
+          "pages": "14244",
+          "pmid": 28176781,
+          "type": "journal",
+          "volume": "8"
+        }
+      ],
+      "acknowledgements": [
+        {
+          "text": "We thank Joe Park for assistance with some of the recombination assays.",
+          "type": "paragraph"
+        }
+      ],
+      "decisionLetter": {
+        "content": [
+          {
+            "text": "Thank you for submitting your article \"Inter-fork Strand Annealing causes genomic deletions during the termination of DNA replication\" for consideration by <i>eLife</i>. Your article has been reviewed by three peer reviewers, and the evaluation has been overseen by a Reviewing Editor and Kevin Struhl as the Senior Editor.",
+            "type": "paragraph"
+          },
+          {
+            "text": "The reviewers have discussed the reviews with one another and the Reviewing Editor has drafted this decision to help you prepare a revised submission.",
+            "type": "paragraph"
+          },
+          {
+            "text": "In this study, the authors investigate the mechanism of replication restart by homologous recombination in fission yeast. A directional replication fork barrier, RTS1, had been shown to stimulate recombination between repeat sequences located close to RTS1. Here, the authors investigated the effect of increasing the distance between repeats, either before or after RTS1 (RTS1 is inserted between direct repeats of ade6). Having the RFB in the \"active\" orientation stimulates inter-repeat recombination. Placing a spacer sequence between the repeats, especially past the RFB, increases recombination events, particularly those occurring by a mechanism that requires Rad52 but is independent of Rad51. Deletion formation was also suppressed in exo1 and mus81 mutants. The requirement for Mus81 supports the idea that deletions do not result from fork collapse and SSA. This spacer effect appears to depend on the probability that a converging fork will encounter the stalled fork. Genetic requirements suggest a model coined inter-fork strand annealing (IFSA) accounts for the spacer effect. One appealing aspect of the model is that it involves Rad52 annealing activity without suggesting that Rad52 promotes strand invasion.",
+            "type": "paragraph"
+          },
+          {
+            "text": "It is becoming increasingly apparent that problems arising during DNA replication are potent drivers of genomic instability. Here the authors identify a mechanism for deletion formation at stalled forks that is distinct from SSA and relies on Rad52, Exo1 and Mus81. Given the current interest in how Rad52 and Mus81 facilitate replication fork restart in mammalian cells, the findings will be of interest to a wide audience.",
+            "type": "paragraph"
+          },
+          {
+            "text": "Overall, the work represents a significant contribution and should be published in <i>eLife</i>. No additional experiments are required. However, the authors need to revise the manuscript to correct the following limitations of the manuscript:",
+            "type": "paragraph"
+          },
+          {
+            "text": "1) The authors need to tone-down the discussion about IFSA being a \"new mechanism\": their statements to that effect are over-stated, and they disregard work on strand annealing during DNA replication in bacteria. The model is, in fact, a replication-slippage model that has been discussed for decades, with the added – important – feature that the target is in a separate replication fork. The authors need to credit prior precedents while acknowledging the novel aspects that implicate two replication forks.",
+            "type": "paragraph"
+          },
+          {
+            "text": "2) Related to the model, as indicated, the single-strand derives from a resected regressed fork. However, an alternative, which they should acknowledge, is that the nascent 3' strand is simply unwound by helicases from the template.",
+            "type": "paragraph"
+          },
+          {
+            "text": "3) The text from subsection “RF convergence is needed for DNA spacer-dependent deletions” is difficult to follow, and it needs to be rewritten to make their argument clearer.",
+            "type": "paragraph"
+          },
+          {
+            "text": "4) It is difficult to guess whether IFSA might account for any genome instability under normal growth conditions – the authors need to address the frequency of physiological occurrence of IFSA. As far as the reviewers know, e.g., there are no orphan examples of natural or genotoxin-induced CNVs that are explained by IFSA. Hence, the authors need to discuss whether IFSA might explain a significant class of CNVs, natural or genotoxin-induced, or any other common genomic rearrangement.",
+            "type": "paragraph"
+          }
+        ],
+        "description": [
+          {
+            "text": "In the interests of transparency, eLife includes the editorial decision letter and accompanying author responses. A lightly edited version of the letter sent to the authors after peer review is shown, indicating the most substantive concerns; minor comments are not usually included.",
+            "type": "paragraph"
+          }
+        ],
+        "doi": "10.7554/eLife.25490.016",
+        "id": "SA1"
+      },
+      "authorResponse": {
+        "content": [
+          {
+            "text": "<i>1) The authors need to tone-down the discussion about IFSA being a \"new mechanism\": their statements to that effect are over-stated, and they disregard work on strand annealing during DNA replication in bacteria. The model is, in fact, a replication-slippage model that has been discussed for decades, with the added – important – feature that the target is in a separate replication fork. The authors need to credit prior precedents while acknowledging the novel aspects that implicate two replication forks.</i>",
+            "type": "paragraph"
+          },
+          {
+            "text": "We have re-written and expanded the Discussion to better acknowledge current understanding of the different mechanisms that can give rise to genomic deletions and other structural variants. In doing so, we have removed all mention of IFSA being a “new/novel mechanism”, and made reference to previous replication slippage models, as well as other replication-based mechanisms such as FoSTeS and MMBIR.",
+            "type": "paragraph"
+          },
+          {
+            "text": "<i>2) Related to the model, as indicated, the single-strand derives from a resected regressed fork. However, an alternative, which they should acknowledge, is that the nascent 3' strand is simply unwound by helicases from the template.</i>",
+            "type": "paragraph"
+          },
+          {
+            "text": "We have included two alternative models for IFSA in addition to the model presented in <a href=\"#fig5\">Figure 5</a> (Results, subsection “A new model: Inter-Fork Strand Annealing” and <a href=\"#fig5s1\">Figure 5—figure supplement 1A and 1B</a>). One model depicts the nascent 3' strand being unwound, and the other shows how annealing between lagging strand gaps could result in deletions.",
+            "type": "paragraph"
+          },
+          {
+            "text": "<i>3) The text from subsection “RF convergence is needed for DNA spacer-dependent deletions” is difficult to follow, and it needs to be rewritten to make their argument clearer.</i>",
+            "type": "paragraph"
+          },
+          {
+            "text": "We have completely re-written and extended this section to make the arguments about fork convergence clearer (Results, subsection “RF convergence is needed for SDDs”).",
+            "type": "paragraph"
+          },
+          {
+            "text": "<i>4) It is difficult to guess whether IFSA might account for any genome instability under normal growth conditions – the authors need to address the frequency of physiological occurrence of IFSA. As far as the reviewers know, e.g., there are no orphan examples of natural or genotoxin-induced CNVs that are explained by IFSA. Hence, the authors need to discuss whether IFSA might explain a significant class of CNVs, natural or genotoxin-induced, or any other common genomic rearrangement.</i>",
+            "type": "paragraph"
+          },
+          {
+            "text": "We have extended the Discussion to include more about the potential frequency and relevance of IFSA to the formation of chromosomal deletions and other structural variants in humans.",
+            "type": "paragraph"
+          }
+        ],
+        "doi": "10.7554/eLife.25490.017",
+        "id": "SA2"
+      },
+      "stage": "published",
+      "statusDate": "2017-06-06T00:00:00Z"
+    }
+  ],
+  "accepted": "2017-05-22"
+}
