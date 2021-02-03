@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fc078a631e2f5f4d6315b2af951b82c",
+    "content-hash": "7353a17a3b76fb66ef33b2575a713be9",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -1140,16 +1140,16 @@
         },
         {
             "name": "elife/api",
-            "version": "dev-master",
+            "version": "dev-revert-doi-social-image-required-bug-compiled",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "c0454e4f28df49bff3327c096795f5d56db5e54e"
+                "reference": "80aee6ac3a36fac122b3cc9da640e96a439e60d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/c0454e4f28df49bff3327c096795f5d56db5e54e",
-                "reference": "c0454e4f28df49bff3327c096795f5d56db5e54e",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/80aee6ac3a36fac122b3cc9da640e96a439e60d6",
+                "reference": "80aee6ac3a36fac122b3cc9da640e96a439e60d6",
                 "shasum": ""
             },
             "conflict": {
@@ -1161,7 +1161,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2020-10-22T15:51:49+00:00"
+            "time": "2021-02-02T15:43:30+00:00"
         },
         {
             "name": "elife/api-validator",
@@ -2645,12 +2645,12 @@
             "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
                 "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
                 "shasum": ""
             },
