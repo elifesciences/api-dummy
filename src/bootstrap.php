@@ -557,7 +557,6 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
         unset($latestVersion['acknowledgements']);
         unset($latestVersion['appendices']);
         unset($latestVersion['image']['banner']);
-        unset($latestVersion['image']['social']);
         if (empty($latestVersion['image'])) {
             unset($latestVersion['image']);
         }
@@ -1982,7 +1981,6 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         unset($result['acknowledgements']);
         unset($result['appendices']);
         unset($result['image']['banner']);
-        unset($result['image']['social']);
         if (empty($result['image'])) {
             unset($result['image']);
         }
