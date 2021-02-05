@@ -1144,12 +1144,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "c0454e4f28df49bff3327c096795f5d56db5e54e"
+                "reference": "99dd9b00404b94838d2e860d310abba968e06ce2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/c0454e4f28df49bff3327c096795f5d56db5e54e",
-                "reference": "c0454e4f28df49bff3327c096795f5d56db5e54e",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/99dd9b00404b94838d2e860d310abba968e06ce2",
+                "reference": "99dd9b00404b94838d2e860d310abba968e06ce2",
                 "shasum": ""
             },
             "conflict": {
@@ -1161,7 +1161,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2020-10-22T15:51:49+00:00"
+            "time": "2021-02-05T05:50:27+00:00"
         },
         {
             "name": "elife/api-validator",
@@ -2645,12 +2645,12 @@
             "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bb2d123231c095735130cc8f6d31385a44c7b308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bb2d123231c095735130cc8f6d31385a44c7b308",
                 "reference": "bb2d123231c095735130cc8f6d31385a44c7b308",
                 "shasum": ""
             },
