@@ -9,6 +9,7 @@ USER root
 WORKDIR ${PROJECT_FOLDER}
 RUN mkdir -p build && \
     chown --recursive elife:elife . && \
+    chown www-data:www-data build
 
 USER elife
 
