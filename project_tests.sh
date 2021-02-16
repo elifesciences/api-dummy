@@ -3,6 +3,6 @@ set -e
 
 rm -f build/*.xml
 
-proofreader src/ web/
-proofreader --no-phpcpd test/
+vendor/bin/phpcs --standard=phpcs.xml.dist --warning-severity=0 -p src/ web/
+vendor/bin/phpcs --standard=phpcs.xml.dist --warning-severity=0 -p test/
 vendor/bin/phpunit --log-junit build/phpunit.xml
