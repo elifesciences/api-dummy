@@ -17,6 +17,19 @@
                 "width": 1500,
                 "height": 1303
             }
+        },
+        "social": {
+            "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/lax:35800/elife-35800-fig4-v1.tif/full/full/0/default.jpg",
+                "filename": "elife-35800-fig4-v1.jpg"
+            },
+            "size": {
+                "width": 1500,
+                "height": 1303
+            }
         }
     },
     "subjects": [
