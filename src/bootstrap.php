@@ -655,6 +655,7 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=5',
                 'application/vnd.elife.article-vor+json; version=4',
                 'application/vnd.elife.article-vor+json; version=3',
                 'application/vnd.elife.article-vor+json; version=2',

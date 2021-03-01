@@ -349,10 +349,11 @@
                }
             ],
             "date":"2020",
-            "details":"Journal of Allergy and Clinical Immunology, 10.1016/j.jaci.2020.10.040",
+            "doi":"10.1016/j.jaci.2020.10.040",
+            "journal":"Journal of Allergy and Clinical Immunology",
             "id":"bib1",
-            "title":"Systemic and mucosal antibody responses specific to SARS-CoV-2 during mild versus severe COVID-19",
-            "type":"unknown"
+            "articleTitle":"Systemic and mucosal antibody responses specific to SARS-CoV-2 during mild versus severe COVID-19",
+            "type":"journal"
          },
          {
             "authors":[
@@ -512,10 +513,11 @@
                }
             ],
             "date":"2020",
-            "details":"New England Journal of Medicine, 10.1056/NEJMoa2029849",
+            "doi":"10.1056/NEJMoa2029849",
+            "journal":"New England Journal of Medicine",
             "id":"bib2",
-            "title":"SARS-CoV-2 neutralizing antibody LY-CoV555 in outpatients with Covid-19",
-            "type":"unknown"
+            "articleTitle":"SARS-CoV-2 neutralizing antibody LY-CoV555 in outpatients with Covid-19",
+            "type":"journal"
          },
          {
             "articleTitle":"An mRNA vaccine against SARS-CoV-2 — preliminary report",
@@ -2379,10 +2381,11 @@
                }
             ],
             "date":"2020",
-            "details":"New England Journal of Medicine, 10.1056/NEJMoa2031304",
+            "doi":"10.1056/NEJMoa2031304",
+            "journal":"New England Journal of Medicine",
             "id":"bib9",
-            "title":"A randomized trial of convalescent plasma in Covid-19 severe pneumonia",
-            "type":"unknown"
+            "articleTitle":"A randomized trial of convalescent plasma in Covid-19 severe pneumonia",
+            "type":"journal"
          },
          {
             "authors":[
@@ -2563,10 +2566,11 @@
                }
             ],
             "date":"2020",
-            "details":"New England Journal of Medicine, 10.1056/NEJMoa2027906",
+            "doi":"10.1056/NEJMoa2027906",
+            "journal":"New England Journal of Medicine",
             "id":"bib10",
-            "title":"Safety and immunogenicity of two RNA-Based Covid-19 vaccine candidates",
-            "type":"unknown"
+            "articleTitle":"Safety and immunogenicity of two RNA-Based Covid-19 vaccine candidates",
+            "type":"journal"
          },
          {
             "articleTitle":"Enhanced SARS-CoV-2 neutralization by dimeric IgA",
@@ -3121,10 +3125,11 @@
                }
             ],
             "date":"2020",
-            "details":"New England Journal of Medicine, 10.1056/NEJMc2032195",
+            "doi":"10.1056/NEJMc2032195",
+            "journal":"New England Journal of Medicine",
             "id":"bib13",
-            "title":"Durability of responses after SARS-CoV-2 mRNA-1273 vaccination",
-            "type":"unknown"
+            "articleTitle":"Durability of responses after SARS-CoV-2 mRNA-1273 vaccination",
+            "type":"journal"
          },
          {
             "articleTitle":"Structural basis of a shared antibody response to SARS-CoV-2",

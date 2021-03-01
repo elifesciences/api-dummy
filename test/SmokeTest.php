@@ -117,6 +117,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 case '36258':
                     $vorMinimum = 3;
                     break;
+                case '64496':
+                    $vorMinimum = 5;
+                    break;
                 default:
                     $poaMinimum = 2;
                     $vorMinimum = 2;
@@ -126,7 +129,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=4',
+                    'application/vnd.elife.article-vor+json; version=5',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -156,7 +159,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=4',
+                    'application/vnd.elife.article-vor+json; version=5',
                 ],
             ];
             yield "{$path} version lowest" => [
