@@ -108,21 +108,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             switch ($file->getBasename('.json')) {
                 case '04395':
                     $poaMinimum = 3;
-                    $vorMinimum = 4;
-                    break;
-                case '15691':
-                    $vorMinimum = 4;
                     break;
                 case '26231':
-                case '36258':
-                    $vorMinimum = 3;
-                    break;
                 case '64496':
                     $vorMinimum = 5;
                     break;
                 default:
                     $poaMinimum = 2;
-                    $vorMinimum = 2;
+                    $vorMinimum = 4;
             }
 
             yield "{$path} version highest" => [
@@ -140,7 +133,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
                 200,
                 [
-                    'application/vnd.elife.article-vor+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=4' => '299 elifesciences.org "Deprecation: Support for version 4 will be removed"',
                 ],
             ];
 
@@ -170,7 +163,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
                 200,
                 [
-                    'application/vnd.elife.article-vor+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=4' => '299 elifesciences.org "Deprecation: Support for version 4 will be removed"',
                 ],
             ];
 
