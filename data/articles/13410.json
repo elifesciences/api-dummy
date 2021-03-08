@@ -29,7 +29,7 @@
                     "people": [
                         {
                             "name": {
-                                "preferred": "Bentham James",
+                                "preferred": "James Bentham",
                                 "index": "Bentham, James"
                             },
                             "affiliations": [
@@ -50,7 +50,7 @@
                         },
                         {
                             "name": {
-                                "preferred": "Di Cesare Mariachiara",
+                                "preferred": "Mariachiara Di Cesare",
                                 "index": "Di Cesare, Mariachiara"
                             },
                             "affiliations": [
@@ -84,7 +84,7 @@
                         },
                         {
                             "name": {
-                                "preferred": "Stevens Gretchen A",
+                                "preferred": "Gretchen A Stevens",
                                 "index": "Stevens, Gretchen A"
                             },
                             "affiliations": [
@@ -105,7 +105,7 @@
                         },
                         {
                             "name": {
-                                "preferred": "Zhou Bin",
+                                "preferred": "Bin Zhou",
                                 "index": "Zhou, Bin"
                             },
                             "affiliations": [
@@ -126,7 +126,7 @@
                         },
                         {
                             "name": {
-                                "preferred": "Bixby Honor",
+                                "preferred": "Honor Bixby",
                                 "index": "Bixby, Honor"
                             },
                             "affiliations": [
