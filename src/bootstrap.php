@@ -1980,8 +1980,14 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $results = [];
 
     foreach ($app['articles'] as $result) {
-        $result = $result['versions'][count($result['versions']) - 1];
-        $result['_search'] = strtolower(json_encode($result));
+        $latest = null;
+        foreach ($result['versions'] as $articleVersion) {
+            if (isset($articleVersion['version']) && (!$latest || $latest['version'] < $articleVersion['version'])) {
+                $latest = $articleVersion;
+            }
+        }
+        $result = $latest;
+        $result['_search'] = strtolower(json_encode($latest));
 
         unset($result['issue']);
         unset($result['copyright']);

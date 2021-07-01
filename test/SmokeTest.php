@@ -137,8 +137,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
             ];
 
-            yield $path = '/articles/'.$file->getBasename('.json').'/versions' => [
+            $path = '/articles/'.$file->getBasename('.json').'/versions';
+            yield $path => [
                 $this->createRequest($path),
+                'application/vnd.elife.article-history+json; version=2',
+            ];
+            yield "{$path} version 1" => [
+                $this->createRequest($path, 'application/vnd.elife.article-history+json; version=1'),
                 'application/vnd.elife.article-history+json; version=1',
             ];
 
