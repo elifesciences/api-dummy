@@ -59,7 +59,11 @@ $app['articles'] = function () use ($app) {
     $articles = [];
     foreach ($finder as $file) {
         $json = json_decode($file->getContents(), true);
-        $articles[$json['versions'][0]['id']] = $json;
+        foreach ($json['versions'] as $version) {
+            if (isset($version['id'])) {
+                $articles[$version['id']] = $json;
+            }
+        }
     }
 
     uasort($articles, function (array $article1, array $article2) {
@@ -74,14 +78,14 @@ $app['articles'] = function () use ($app) {
         ];
 
         foreach ($article1['versions'] as $version) {
-            if (null === $article1Dates[$version['status']]) {
+            if (isset($version['version']) && null === $article1Dates[$version['status']]) {
                 $article1Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $version['published']);
             }
         }
 
         foreach ($article2['versions'] as $version) {
-            if (null === $article2Dates[$version['status']]) {
+            if (isset($version['version']) && null === $article2Dates[$version['status']]) {
                 $article2Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $version['published']);
             }
@@ -581,7 +585,12 @@ $app->get('/articles/{number}',
             throw new NotFoundHttpException('Article not found');
         }
 
-        $latestVersion = count($app['articles'][$number]['versions']);
+        $latestVersion = 1;
+        foreach ($app['articles'][$number]['versions'] as $version) {
+            if (isset($version['version']) && $version['version'] > $latestVersion) {
+                $latestVersion = $version['version'];
+            }
+        }
 
         $subRequest = Request::create('/articles/'.$number.'/versions/'.$latestVersion, 'GET', [],
             $request->cookies->all(), [], $request->server->all());
@@ -607,26 +616,30 @@ $app->get('/articles/{number}/versions',
 
         $content['versions'] = [];
         foreach ($article['versions'] as $articleVersion) {
-            unset($articleVersion['issue']);
-            unset($articleVersion['copyright']);
-            unset($articleVersion['authors']);
-            unset($articleVersion['researchOrganisms']);
-            unset($articleVersion['keywords']);
-            unset($articleVersion['digest']);
-            unset($articleVersion['body']);
-            unset($articleVersion['decisionLetter']);
-            unset($articleVersion['authorResponse']);
-            unset($articleVersion['reviewers']);
-            unset($articleVersion['references']);
-            unset($articleVersion['ethics']);
-            unset($articleVersion['funding']);
-            unset($articleVersion['additionalFiles']);
-            unset($articleVersion['dataSets']);
-            unset($articleVersion['acknowledgements']);
-            unset($articleVersion['appendices']);
-            unset($articleVersion['image']['banner']);
+            if ($type->getParameter('version') > 1 || !empty($articleVersion['version'])) {
+                if (!empty($articleVersion['version'])) {
+                    unset($articleVersion['issue']);
+                    unset($articleVersion['copyright']);
+                    unset($articleVersion['authors']);
+                    unset($articleVersion['researchOrganisms']);
+                    unset($articleVersion['keywords']);
+                    unset($articleVersion['digest']);
+                    unset($articleVersion['body']);
+                    unset($articleVersion['decisionLetter']);
+                    unset($articleVersion['authorResponse']);
+                    unset($articleVersion['reviewers']);
+                    unset($articleVersion['references']);
+                    unset($articleVersion['ethics']);
+                    unset($articleVersion['funding']);
+                    unset($articleVersion['additionalFiles']);
+                    unset($articleVersion['dataSets']);
+                    unset($articleVersion['acknowledgements']);
+                    unset($articleVersion['appendices']);
+                    unset($articleVersion['image']['banner']);
+                }
 
-            $content['versions'][] = $articleVersion;
+                $content['versions'][] = $articleVersion;
+            }
         }
 
         return new Response(
@@ -636,6 +649,7 @@ $app->get('/articles/{number}/versions',
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.article-history+json; version=2',
     'application/vnd.elife.article-history+json; version=1'
 ));
 
@@ -647,11 +661,18 @@ $app->get('/articles/{number}/versions/{version}',
 
         $article = $app['articles'][$number];
 
-        if (false === isset($article['versions'][$version - 1])) {
+        $found = false;
+        foreach ($article['versions'] as $articleVersion) {
+            if (!$found && isset($articleVersion['version']) && $version === $articleVersion['version']) {
+                $found = $articleVersion;
+            }
+        }
+
+        if (false === $found) {
             throw new NotFoundHttpException('Version not found');
         }
 
-        $articleVersion = $article['versions'][$version - 1];
+        $articleVersion = $found;
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
@@ -1959,8 +1980,14 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $results = [];
 
     foreach ($app['articles'] as $result) {
-        $result = $result['versions'][count($result['versions']) - 1];
-        $result['_search'] = strtolower(json_encode($result));
+        $latest = null;
+        foreach ($result['versions'] as $articleVersion) {
+            if (isset($articleVersion['version']) && (!$latest || $latest['version'] < $articleVersion['version'])) {
+                $latest = $articleVersion;
+            }
+        }
+        $result = $latest;
+        $result['_search'] = strtolower(json_encode($latest));
 
         unset($result['issue']);
         unset($result['copyright']);
