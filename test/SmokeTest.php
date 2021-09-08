@@ -153,7 +153,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=5',
+                    'application/vnd.elife.article-vor+json; version=6',
                 ],
             ];
             yield "{$path} version lowest" => [
