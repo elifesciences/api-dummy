@@ -62,6 +62,6 @@ foreach ($history['versions'] as $k => $version) {
 $data = json_encode($history, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
 $fs = new Filesystem();
-$dataFile = realpath(__DIR__).'/../data/articles/'.$articleId.'.json';
+$dataFile = __DIR__.'/../data/articles/'.$articleId.'.json';
 $fs->touch($dataFile);
 $fs->dumpFile($dataFile, $data.PHP_EOL);
