@@ -165,7 +165,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
                 200,
                 [
-                    'application/vnd.elife.article-vor+json; version=4' => '299 elifesciences.org "Deprecation: Support for version 4 will be removed"',
+                    'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=5' => '299 elifesciences.org "Deprecation: Support for version 5 will be removed"',
                 ],
             ];
 
