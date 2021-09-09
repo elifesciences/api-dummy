@@ -1,0 +1,67 @@
+#!/usr/bin/env php
+<?php
+
+use eLife\ApiClient\ApiClient\ArticlesClient;
+use eLife\ApiClient\HttpClient\Guzzle6HttpClient;
+use eLife\ApiClient\Result;
+use GuzzleHttp\Client;
+use GuzzleHttp\Promise\Utils;
+use Symfony\Component\Filesystem\Filesystem;
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+if (empty($argv[1]) || !preg_match('/[0-9]{5}/', $argv[1])) {
+    throw new InvalidArgumentException(sprintf('Article ID expected: %s given', empty($argv[1]) ? 'none' : $argv[1]));
+}
+
+$guzzle = new Client([
+    'base_uri' => 'https://prod--gateway.elifesciences.org/',
+]);
+
+$client = new Guzzle6HttpClient($guzzle);
+
+$articlesClient = new ArticlesClient($client);
+
+$articleId = $argv[1];
+
+$history = [];
+
+$versions = Utils::all(
+    $articlesClient->getArticleHistory([], $articleId)
+        ->then(function (Result $result) use (&$history) {
+            $history = $result->toArray();
+            return $history['versions'];
+        })
+        ->then(function (array $versions) {
+            return array_filter($versions, function (array $version) {
+                return !empty($version['version']);
+            });
+        })
+        ->then(function (array $versions) use ($articleId, $articlesClient) {
+            return array_map(function (array $version) use ($articleId, $articlesClient) {
+                return $articlesClient->getArticleVersion([], $articleId, $version['version'])
+                    ->then(function (Result $result) {
+                        return $result->toArray();
+                    })->wait();
+            }, $versions);
+        })
+        ->wait()
+)->wait();
+
+$indexVersions = [];
+foreach ($versions as $version) {
+    $indexVersions[$version['version']] = $version;
+}
+
+foreach ($history['versions'] as $k => $version) {
+    if (!empty($version['version'])) {
+        $history['versions'][$k] = $indexVersions[$version['version']];
+    }
+}
+
+$data = json_encode($history, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+$fs = new Filesystem();
+$dataFile = __DIR__.'/../data/articles/'.$articleId.'.json';
+$fs->touch($dataFile);
+$fs->dumpFile($dataFile, $data.PHP_EOL);
