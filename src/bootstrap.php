@@ -695,6 +695,14 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article PoA requires version 3.');
         }
 
+        if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [2])) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
+        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [5])) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
         return new Response(
             json_encode($articleVersion, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
