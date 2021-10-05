@@ -1,0 +1,11 @@
+{
+    "id": "ejones",
+    "type": {
+        "id": "ethics-committee",
+        "label": "Ethics Committee"
+    },
+    "name": {
+        "preferred": "Eve Jones",
+        "index": "Jones, Eve"
+    }
+}
