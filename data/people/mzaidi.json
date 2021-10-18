@@ -1,0 +1,36 @@
+{
+    "id": "mzaidi",
+    "type": {
+        "id": "ethics-committee",
+        "label": "Ethics Committee"
+    },
+    "name": {
+        "surname": "Zaidi",
+        "givenNames": "Mone",
+        "preferred": "Mone Zaidi",
+        "index": "Zaidi, Mone"
+    },
+    "image": {
+        "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2021-10%2Fmone-zaidi_0.jpg",
+        "alt": "",
+        "source": {
+            "mediaType": "image/jpeg",
+            "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2021-10%2Fmone-zaidi_0.jpg/full/full/0/default.jpg",
+            "filename": "mone-zaidi_0.jpg"
+        },
+        "size": {
+            "width": 1023,
+            "height": 577
+        },
+        "focalPoint": {
+            "x": 50,
+            "y": 50
+        }
+    },
+    "profile": [
+        {
+            "text": "Mone Zaidi is one of eLife’s <a href=\"https://elifesciences.org/about/people/medicine\">Deputy Editors in Medicine</a>, helping to lead expert review of translational research and clinical studies. He is Professor of Medicine and of Pharmacological Sciences, and Director of the Center for Translational Medicine and Pharmacology at the Icahn School of Medicine at Mount Sinai, New York. Mone’s research focuses on understanding mechanisms underpinning osteoporosis and obesity as a prelude for new therapies. He is a passionate advocate for ensuring integrity and transparency in biomedical research. He is an elected member of the Association of American Physicians, Association of Professors of Medicine, and American Society for Clinical Investigation, and an elected fellow of the American Association for the Advancement of Science.",
+            "type": "paragraph"
+        }
+    ]
+}

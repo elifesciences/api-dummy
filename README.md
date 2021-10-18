@@ -13,3 +13,12 @@ cd /srv/api-dummy
 ```
 
 The above command should result in a data fixture for article 09560 being created at `/srv/api-dummy/data/articles/09560.json`
+
+## Run locally
+
+```$sh
+cd /srv/api-dummy
+php -S localhost:5001 ./web/index.php
+```
+
+Then visit [http://localhost:5001/articles](http://localhost:5001/articles) in your browser.
