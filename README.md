@@ -21,4 +21,4 @@ cd /srv/api-dummy
 php -S localhost:5001 ./web/index.php
 ```
 
-The visit [http://localhost:5001/articles](http://localhost:5001/articles) in a browser.
+Then visit [http://localhost:5001/articles](http://localhost:5001/articles) in your browser.
