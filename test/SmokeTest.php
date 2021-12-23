@@ -2,12 +2,12 @@
 
 namespace test\eLife\DummyApi;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Traversable;
 
-final class SmokeTest extends PHPUnit_Framework_TestCase
+final class SmokeTest extends TestCase
 {
     use SilexTestCase;
 
