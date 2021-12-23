@@ -1,16 +1,7 @@
 version: '3'
 
 services:
-    composer:
-        volumes:
-            - ./composer.json:/app/composer.json
-            - ./composer.lock:/app/composer.lock
-            - vendor:/app/vendor
     cli:
+        command: php -S 0.0.0.0:8080 -t web/ -d opcache.enable=0
         volumes:
             - ./:/srv/api-dummy
-            - /srv/api-dummy/build
-            - vendor:/srv/api-dummy/vendor
-
-volumes:
-    vendor:
