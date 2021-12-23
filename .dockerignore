@@ -4,3 +4,4 @@ docker-compose*.yml
 .gitignore
 Jenkinsfile
 vendor/
+Makefile
