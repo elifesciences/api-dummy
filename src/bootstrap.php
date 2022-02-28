@@ -517,6 +517,7 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
 
     if ($request->query->has('subject')) {
         $articles = array_filter($articles, function (array $article) use ($request) : bool {
+            // @FIXME: improve this so that latest version works regardless of order in array.
             $latestVersion = $article['versions'][count($article['versions']) - 1];
 
             return count(array_intersect((array) $request->query->get('subject'), array_map(function (array $subject) {
