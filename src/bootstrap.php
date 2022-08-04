@@ -114,6 +114,23 @@ $app['bioprotocols'] = function () {
     return $bioprotocols;
 };
 
+$app['reviewed-preprints'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/reviewed-preprints');
+
+    $preprints = [];
+    foreach ($finder as $file) {
+        $json = json_decode($file->getContents(), true);
+        $preprints[$json['id']] = $json;
+    }
+
+    uasort($preprints, function (array $a, array $b) {
+        return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+    });
+
+    return $preprints;
+};
+
 $app['blog-articles'] = function () use ($app) {
     $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/blog-articles');
 
@@ -2017,6 +2034,13 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $results[] = $result;
     }
 
+    foreach ($app['reviewed-preprints'] as $result) {
+        $result['_search'] = strtolower(json_encode($result));
+        //TODO: Not sure about which date to take!
+        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
+        $results[] = $result;
+    }
+
     foreach ($app['blog-articles'] as $result) {
         $result['_search'] = strtolower(json_encode($result));
         unset($result['content']);
@@ -2132,6 +2156,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
             'labs-post',
             'interview',
             'podcast-episode',
+            'reviewed-preprints',
         ] as $contentType
     ) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
@@ -2199,6 +2224,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.search+json; version=2',
     'application/vnd.elife.search+json; version=1'
 ));
 
