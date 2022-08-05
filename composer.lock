@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1c915c570f68ee3b098826111a3701a",
+    "content-hash": "02f4e9e3e78025739097881d34453ec3",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -59,6 +59,31 @@
                 "xml"
             ],
             "time": "2018-11-24T19:56:22+00:00"
+        },
+        {
+            "name": "elife/api",
+            "version": "dev-feature/reviewed-preprint-compiled",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elifesciences/api-raml.git",
+                "reference": "384e6352516c0cdc890db611edbcd284647f919b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/384e6352516c0cdc890db611edbcd284647f919b",
+                "reference": "384e6352516c0cdc890db611edbcd284647f919b",
+                "shasum": ""
+            },
+            "conflict": {
+                "justinrainbow/json-schema": "<3.0.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "eLife Sciences API specification",
+            "time": "2022-08-05T06:25:21+00:00"
         },
         {
             "name": "elife/api-problem",
@@ -544,6 +569,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2020-10-24T10:57:07+00:00"
         },
         {
@@ -852,12 +878,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Ctype\\": ""
-                }
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -924,12 +950,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Mbstring\\": ""
-                }
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1055,12 +1081,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Php70\\": ""
                 },
+                "files": [
+                    "bootstrap.php"
+                ],
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1312,12 +1338,12 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "lib/Assert/functions.php"
-                ],
                 "psr-4": {
                     "Assert\\": "lib/Assert"
-                }
+                },
+                "files": [
+                    "lib/Assert/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1465,31 +1491,6 @@
                 "instantiate"
             ],
             "time": "2015-06-14T21:17:01+00:00"
-        },
-        {
-            "name": "elife/api",
-            "version": "2.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74",
-                "reference": "fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74",
-                "shasum": ""
-            },
-            "conflict": {
-                "justinrainbow/json-schema": "<3.0.0"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "eLife Sciences API specification",
-            "time": "2021-10-05T12:24:35+00:00"
         },
         {
             "name": "elife/api-client",
@@ -3797,6 +3798,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "elife/api": 20,
         "elife/api-client": 20,
         "elife/api-validator": 20
     },
