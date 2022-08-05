@@ -2224,7 +2224,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
-//    'application/vnd.elife.search+json; version=2', TODO: somehow doesn't allow the tests pass! Need to discuss.
+    'application/vnd.elife.search+json; version=2',
     'application/vnd.elife.search+json; version=1'
 ));
 
