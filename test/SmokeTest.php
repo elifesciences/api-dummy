@@ -477,7 +477,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.search+json; version=1',
         ];
         yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
-            $this->createRequest($path,'application/vnd.elife.search+json; version=1'),
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=1'),
             'application/vnd.elife.search+json; version=1',
         ];
         yield $path = '/search?start-date=2017-02-29' => [
