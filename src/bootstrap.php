@@ -114,8 +114,8 @@ $app['bioprotocols'] = function () {
     return $bioprotocols;
 };
 
-$app['reviewed-preprints'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/reviewed-preprints');
+$app['reviewed-preprint'] = function () use ($app) {
+    $finder = (new Finder())->files()->name('*.json')->in(__DIR__ . '/../data/reviewed-preprint');
 
     $preprints = [];
     foreach ($finder as $file) {
@@ -2034,11 +2034,22 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $results[] = $result;
     }
 
-    foreach ($app['reviewed-preprints'] as $result) {
-        $result['_search'] = strtolower(json_encode($result));
-        //TODO: Not sure about which date to take!
-        $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
-        $results[] = $result;
+    $contentTypes = [
+        'blog-article',
+        'collection',
+        'labs-post',
+        'interview',
+        'podcast-episode',
+    ];
+
+    if ($type->getParameter('version') === "2") {
+        foreach ($app['reviewed-preprint'] as $result) {
+            $result['_search'] = strtolower(json_encode($result));
+            //TODO: Not sure about which date to take!
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
+            $results[] = $result;
+        }
+        $contentTypes[] = 'reviewed-preprint';
     }
 
     foreach ($app['blog-articles'] as $result) {
@@ -2149,16 +2160,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         }));
     }
 
-    foreach (
-        [
-            'blog-article',
-            'collection',
-            'labs-post',
-            'interview',
-            'podcast-episode',
-            'reviewed-preprints',
-        ] as $contentType
-    ) {
+    foreach ($contentTypes as $contentType) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
             return $contentType === $result['type'];
         }));
