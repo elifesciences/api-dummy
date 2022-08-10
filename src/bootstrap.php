@@ -18,8 +18,9 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$dataDir = __DIR__.'/../data';
-$dataCheck = true;
+$dataDirSet = getenv('DATA_FOLDER');
+$dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
+$dataCheck = !((bool) $dataDirSet);
 
 $app = new Application();
 
