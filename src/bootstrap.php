@@ -31,30 +31,38 @@ $app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
-$app['annotations'] = function () use ($app, $dataDir, $dataCheck) {
-    $annotations = [];
+$grabData = function (string $subFolder, callable $prepareData) use ($dataDir, $dataCheck) {
+    $data = [];
 
     try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annotations');
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/'.$subFolder);
 
-        foreach ($finder as $file) {
-            $json = json_decode($file->getContents(), true);
-            $annotations[$file->getBasename('.json')] = $json;
-        }
+        $data = $prepareData($finder);
     } catch (Throwable $e) {
         if ($dataCheck) {
             throw $e;
         }
     };
 
-    return $annotations;
+    return $data;
 };
 
-$app['annual-reports'] = function () use ($app, $dataDir, $dataCheck) {
-    $reports = [];
+$app['annotations'] = function () use ($grabData) {
+    return $grabData('annotations', function (Finder $finder) {
+        $annotations = [];
 
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annual-reports');
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $annotations[$file->getBasename('.json')] = $json;
+        }
+
+        return $annotations;
+    });
+};
+
+$app['annual-reports'] = function () use ($grabData) {
+    return $grabData('annual-reports', function (Finder $finder) {
+        $reports = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -62,20 +70,14 @@ $app['annual-reports'] = function () use ($app, $dataDir, $dataCheck) {
         }
 
         ksort($reports);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $reports;
+        return $reports;
+    });
 };
 
-$app['articles'] = function () use ($app, $dataDir, $dataCheck) {
-    $articles = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/articles');
+$app['articles'] = function () use ($grabData) {
+    return $grabData('articles', function (Finder $finder) {
+        $articles = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -116,20 +118,14 @@ $app['articles'] = function () use ($app, $dataDir, $dataCheck) {
 
             return $article1Date <=> $article2Date;
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $articles;
+        return $articles;
+    });
 };
 
-$app['bioprotocols'] = function () use ($dataDir, $dataCheck) {
-    $bioprotocols = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/bioprotocols');
+$app['bioprotocols'] = function () use ($grabData) {
+    return $grabData('bioprotocols', function (Finder $finder) {
+        $bioprotocols = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -137,20 +133,14 @@ $app['bioprotocols'] = function () use ($dataDir, $dataCheck) {
         }
 
         ksort($bioprotocols);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $bioprotocols;
+        return $bioprotocols;
+    });
 };
 
-$app['blog-articles'] = function () use ($app, $dataDir, $dataCheck) {
-    $articles = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/blog-articles');
+$app['blog-articles'] = function () use ($grabData) {
+    return $grabData('blog-articles', function (Finder $finder) {
+        $articles = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -161,20 +151,14 @@ $app['blog-articles'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $articles;
+        return $articles;
+    });
 };
 
-$app['collections'] = function () use ($app, $dataDir, $dataCheck) {
-    $collections = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/collections');
+$app['collections'] = function () use ($grabData) {
+    return $grabData('collections', function (Finder $finder) {
+        $collections = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -185,20 +169,14 @@ $app['collections'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $collections;
+        return $collections;
+    });
 };
 
-$app['covers'] = function () use ($app, $dataDir, $dataCheck) {
-    $covers = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/covers');
+$app['covers'] = function () use ($grabData) {
+    return $grabData('covers', function (Finder $finder) {
+        $covers = [];
 
         foreach ($finder as $file) {
             $covers[] = json_decode($file->getContents(), true);
@@ -208,20 +186,14 @@ $app['covers'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $a['item']['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $b['item']['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $covers;
+        return $covers;
+    });
 };
 
-$app['digests'] = function () use ($app, $dataDir, $dataCheck) {
-    $digests = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/digests');
+$app['digests'] = function () use ($grabData) {
+    return $grabData('digests', function (Finder $finder) {
+        $digests = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -237,20 +209,14 @@ $app['digests'] = function () use ($app, $dataDir, $dataCheck) {
         uasort($digests, function (array $a, array $b) use ($dateFactory) {
             return $dateFactory($b) <=> $dateFactory($a);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $digests;
+        return $digests;
+    });
 };
 
-$app['events'] = function () use ($app, $dataDir, $dataCheck) {
-    $events = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/events');
+$app['events'] = function () use ($grabData) {
+    return $grabData('events', function (Finder $finder) {
+        $events = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -261,20 +227,14 @@ $app['events'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['starts']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $events;
+        return $events;
+    });
 };
 
-$app['job-adverts'] = function () use ($app, $dataDir, $dataCheck) {
-    $adverts = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/job-adverts');
+$app['job-adverts'] = function () use ($grabData) {
+    return $grabData('job-adverts', function (Finder $finder) {
+        $adverts = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -285,20 +245,14 @@ $app['job-adverts'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $adverts;
+        return $adverts;
+    });
 };
 
-$app['labs'] = function () use ($app, $dataDir, $dataCheck) {
-    $labs = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/labs');
+$app['labs'] = function () use ($grabData) {
+    return $grabData('labs', function (Finder $finder) {
+        $labs = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -306,20 +260,14 @@ $app['labs'] = function () use ($app, $dataDir, $dataCheck) {
         }
 
         ksort($labs);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $labs;
+        return $labs;
+    });
 };
 
-$app['highlights'] = function () use ($app, $dataDir, $dataCheck) {
-    $highlights = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/highlights');
+$app['highlights'] = function () use ($grabData) {
+    return $grabData('highlights', function (Finder $finder) {
+        $highlights = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -327,20 +275,14 @@ $app['highlights'] = function () use ($app, $dataDir, $dataCheck) {
         }
 
         ksort($highlights);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $highlights;
+        return $highlights;
+    });
 };
 
-$app['interviews'] = function () use ($app, $dataDir, $dataCheck) {
-    $interviews = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/interviews');
+$app['interviews'] = function () use ($grabData) {
+    return $grabData('interviews', function (Finder $finder) {
+        $interviews = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -351,20 +293,14 @@ $app['interviews'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $interviews;
+        return $interviews;
+    });
 };
 
-$app['metrics'] = function () use ($app, $dataDir, $dataCheck) {
-    $items = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/metrics');
+$app['metrics'] = function () use ($grabData) {
+    return $grabData('metrics', function (Finder $finder) {
+        $items = [];
 
         foreach ($finder as $file) {
             $name = explode('-', $file->getBasename('.json'));
@@ -372,20 +308,14 @@ $app['metrics'] = function () use ($app, $dataDir, $dataCheck) {
             $json = json_decode($file->getContents(), true);
             $items[$name[0]][$name[1]] = $json;
         }
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $items;
+        return $items;
+    });
 };
 
-$app['people'] = function () use ($app, $dataDir, $dataCheck) {
-    $people = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/people');
+$app['people'] = function () use ($grabData) {
+    return $grabData('people', function (Finder $finder) {
+        $people = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -395,20 +325,14 @@ $app['people'] = function () use ($app, $dataDir, $dataCheck) {
         uasort($people, function (array $a, array $b) {
             return $a['name']['index'] <=> $b['name']['index'];
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $people;
+        return $people;
+    });
 };
 
-$app['podcast-episodes'] = function () use ($app, $dataDir, $dataCheck) {
-    $episodes = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/podcast-episodes');
+$app['podcast-episodes'] = function () use ($grabData) {
+    return $grabData('podcast-episodes', function (Finder $finder) {
+        $episodes = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -416,20 +340,14 @@ $app['podcast-episodes'] = function () use ($app, $dataDir, $dataCheck) {
         }
 
         ksort($episodes);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $episodes;
+        return $episodes;
+    });
 };
 
-$app['press-packages'] = function () use ($app, $dataDir, $dataCheck) {
-    $packages = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/press-packages');
+$app['press-packages'] = function () use ($grabData) {
+    return $grabData('press-packages', function (Finder $finder) {
+        $packages = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -440,20 +358,14 @@ $app['press-packages'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $packages;
+        return $packages;
+    });
 };
 
-$app['profiles'] = function () use ($app, $dataDir, $dataCheck) {
-    $profiles = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/profiles');
+$app['profiles'] = function () use ($grabData) {
+    return $grabData('profiles', function (Finder $finder) {
+        $profiles = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -463,20 +375,14 @@ $app['profiles'] = function () use ($app, $dataDir, $dataCheck) {
         uasort($profiles, function (array $a, array $b) {
             return $a['name']['index'] <=> $b['name']['index'];
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    };
 
-    return $profiles;
+        return $profiles;
+    });
 };
 
-$app['recommendations'] = function () use ($app, $dataDir, $dataCheck) {
-    $recommendations = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/recommendations');
+$app['recommendations'] = function () use ($grabData) {
+    return $grabData('recommendations', function (Finder $finder) {
+        $recommendations = [];
 
         foreach ($finder as $file) {
             $name = explode('-', $file->getBasename('.json'));
@@ -484,20 +390,14 @@ $app['recommendations'] = function () use ($app, $dataDir, $dataCheck) {
             $json = json_decode($file->getContents(), true);
             $recommendations[$name[0]][$name[1]] = $json;
         }
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    }
 
-    return $recommendations;
+        return $recommendations;
+    });
 };
 
-$app['promotional-collections'] = function () use ($app, $dataDir, $dataCheck) {
-    $promotionalCollections = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/promotional-collections');
+$app['promotional-collections'] = function () use ($grabData) {
+    return $grabData('promotional-collections', function (Finder $finder) {
+        $promotionalCollections = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -508,16 +408,13 @@ $app['promotional-collections'] = function () use ($app, $dataDir, $dataCheck) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
                     $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
         });
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    }
 
-    return $promotionalCollections;
+        return $promotionalCollections;
+    });
 };
 
-$app['subjects'] = function () use ($app, $dataDir, $dataCheck) {
+$app['subjects'] = function () use ($grabData) {
+    return $grabData('subjects', function (Finder $finder) {});
     $subjects = [];
 
     try {
