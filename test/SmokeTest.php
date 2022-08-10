@@ -495,6 +495,14 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/problem+json',
             400,
         ];
+        yield $path = '/reviewed-preprint' => [
+            $this->createRequest($path),
+            'application/vnd.elife.reviewed-preprint-list+json; version=1'
+        ];
+        yield $path = '/reviewed-preprint/19561' => [
+            $this->createRequest($path),
+            'application/vnd.elife.reviewed-preprint+json; version=1'
+        ];
     }
 
     /**
@@ -504,11 +512,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
     {
         $request = $this->createRequest('/search?type[]=reviewed-preprint', 'application/vnd.elife.search+json;version=2');
         $response = $this->getApp()->handle($request);
-        $content = json_decode($response->getContent(), true);
-        $this->assertEquals(19560, $content['items'][0]['id']);
-        foreach ($content['items'] as $item) {
-            $this->assertEquals("reviewed-preprint", $item['type']);
-        }
+        $this->assertContains('"id": "19560"', $response->getContent());
     }
 
     /**

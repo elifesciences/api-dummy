@@ -597,6 +597,58 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
     'application/vnd.elife.article-list+json; version=1'
 ));
 
+$app->get('/reviewed-preprint', function(Request $request, Accept $type) use ($app){
+    $reviewedPreprints = $app['reviewed-preprint'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $reviewedPreprints = array_reverse($reviewedPreprints);
+    }
+
+    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reviewedPreprints) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content = [
+        'total' => count($reviewedPreprints),
+        'items' => []
+    ];
+
+    foreach ($reviewedPreprints as $id => $item) {
+        $content['items'][] = $item;
+    }
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.reviewed-preprint-list+json;version=1'
+));
+
+$app->get('/reviewed-preprint/{id}', function(Accept $type, $id) use ($app) {
+    if (false === isset($app['reviewed-preprint'][$id])) {
+        throw new NotFoundHttpException('Reviewed Preprint not found');
+    }
+
+    $content = $app['reviewed-preprint'][$id];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        ['Content-Type' => $type->getNormalizedValue()]
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.reviewed-preprint+json;version=1'
+));
+
 $app->get('/articles/{number}',
     function (Request $request, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
