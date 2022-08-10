@@ -414,11 +414,8 @@ $app['promotional-collections'] = function () use ($grabData) {
 };
 
 $app['subjects'] = function () use ($grabData) {
-    return $grabData('subjects', function (Finder $finder) {});
-    $subjects = [];
-
-    try {
-        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/subjects');
+    return $grabData('subjects', function (Finder $finder) {
+        $subjects = [];
 
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -426,13 +423,9 @@ $app['subjects'] = function () use ($grabData) {
         }
 
         ksort($subjects);
-    } catch (Throwable $e) {
-        if ($dataCheck) {
-            throw $e;
-        }
-    }
 
-    return $subjects;
+        return $subjects;
+    });
 };
 
 $app->get('/annotations', function (Request $request, Accept $type) use ($app) {
