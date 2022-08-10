@@ -18,6 +18,8 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
+$dataDir = __DIR__.'/../data';
+
 $app = new Application();
 
 $app->register(new ApiProblemProvider());
@@ -27,8 +29,8 @@ $app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
-$app['annotations'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annotations');
+$app['annotations'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annotations');
 
     $annotations = [];
     foreach ($finder as $file) {
@@ -39,8 +41,8 @@ $app['annotations'] = function () use ($app) {
     return $annotations;
 };
 
-$app['annual-reports'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/annual-reports');
+$app['annual-reports'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annual-reports');
 
     $reports = [];
     foreach ($finder as $file) {
@@ -53,8 +55,8 @@ $app['annual-reports'] = function () use ($app) {
     return $reports;
 };
 
-$app['articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/articles');
+$app['articles'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/articles');
 
     $articles = [];
     foreach ($finder as $file) {
@@ -101,7 +103,7 @@ $app['articles'] = function () use ($app) {
 };
 
 $app['bioprotocols'] = function () {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/bioprotocols');
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/bioprotocols');
 
     $bioprotocols = [];
     foreach ($finder as $file) {
@@ -114,8 +116,8 @@ $app['bioprotocols'] = function () {
     return $bioprotocols;
 };
 
-$app['blog-articles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/blog-articles');
+$app['blog-articles'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/blog-articles');
 
     $articles = [];
     foreach ($finder as $file) {
@@ -131,8 +133,8 @@ $app['blog-articles'] = function () use ($app) {
     return $articles;
 };
 
-$app['collections'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections');
+$app['collections'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/collections');
 
     $collections = [];
     foreach ($finder as $file) {
@@ -148,8 +150,8 @@ $app['collections'] = function () use ($app) {
     return $collections;
 };
 
-$app['covers'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/covers');
+$app['covers'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/covers');
 
     $covers = [];
     foreach ($finder as $file) {
@@ -164,8 +166,8 @@ $app['covers'] = function () use ($app) {
     return $covers;
 };
 
-$app['digests'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/digests');
+$app['digests'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/digests');
 
     $digests = [];
     foreach ($finder as $file) {
@@ -186,8 +188,8 @@ $app['digests'] = function () use ($app) {
     return $digests;
 };
 
-$app['events'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/events');
+$app['events'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/events');
 
     $events = [];
     foreach ($finder as $file) {
@@ -203,8 +205,8 @@ $app['events'] = function () use ($app) {
     return $events;
 };
 
-$app['job-adverts'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/job-adverts');
+$app['job-adverts'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/job-adverts');
 
     $adverts = [];
     foreach ($finder as $file) {
@@ -220,8 +222,8 @@ $app['job-adverts'] = function () use ($app) {
     return $adverts;
 };
 
-$app['labs'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/labs');
+$app['labs'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/labs');
 
     $labs = [];
     foreach ($finder as $file) {
@@ -234,8 +236,8 @@ $app['labs'] = function () use ($app) {
     return $labs;
 };
 
-$app['highlights'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/highlights');
+$app['highlights'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/highlights');
 
     $highlights = [];
     foreach ($finder as $file) {
@@ -248,8 +250,8 @@ $app['highlights'] = function () use ($app) {
     return $highlights;
 };
 
-$app['interviews'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/interviews');
+$app['interviews'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/interviews');
 
     $interviews = [];
     foreach ($finder as $file) {
@@ -265,8 +267,8 @@ $app['interviews'] = function () use ($app) {
     return $interviews;
 };
 
-$app['metrics'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/metrics');
+$app['metrics'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/metrics');
 
     $items = [];
     foreach ($finder as $file) {
@@ -279,8 +281,8 @@ $app['metrics'] = function () use ($app) {
     return $items;
 };
 
-$app['people'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/people');
+$app['people'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/people');
 
     $people = [];
     foreach ($finder as $file) {
@@ -295,8 +297,8 @@ $app['people'] = function () use ($app) {
     return $people;
 };
 
-$app['podcast-episodes'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/podcast-episodes');
+$app['podcast-episodes'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/podcast-episodes');
 
     $episodes = [];
     foreach ($finder as $file) {
@@ -309,8 +311,8 @@ $app['podcast-episodes'] = function () use ($app) {
     return $episodes;
 };
 
-$app['press-packages'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages');
+$app['press-packages'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/press-packages');
 
     $packages = [];
     foreach ($finder as $file) {
@@ -326,8 +328,8 @@ $app['press-packages'] = function () use ($app) {
     return $packages;
 };
 
-$app['profiles'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/profiles');
+$app['profiles'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/profiles');
 
     $profiles = [];
     foreach ($finder as $file) {
@@ -342,9 +344,9 @@ $app['profiles'] = function () use ($app) {
     return $profiles;
 };
 
-$app['recommendations'] = function () use ($app) {
+$app['recommendations'] = function () use ($app, $dataDir) {
     try {
-        $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/recommendations');
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/recommendations');
     } catch (Throwable $e) {
         $finder = [];
     }
@@ -360,8 +362,8 @@ $app['recommendations'] = function () use ($app) {
     return $items;
 };
 
-$app['promotional-collections'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections');
+$app['promotional-collections'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/promotional-collections');
 
     $promotionalCollections = [];
     foreach ($finder as $file) {
@@ -377,8 +379,8 @@ $app['promotional-collections'] = function () use ($app) {
     return $promotionalCollections;
 };
 
-$app['subjects'] = function () use ($app) {
-    $finder = (new Finder())->files()->name('*.json')->in(__DIR__.'/../data/subjects');
+$app['subjects'] = function () use ($app, $dataDir) {
+    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/subjects');
 
     $subjects = [];
     foreach ($finder as $file) {
