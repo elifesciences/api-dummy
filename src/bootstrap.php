@@ -19,6 +19,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 require_once __DIR__.'/../vendor/autoload.php';
 
 $dataDir = __DIR__.'/../data';
+$dataCheck = true;
 
 $app = new Application();
 
@@ -29,366 +30,509 @@ $app->register(new PingControllerProvider());
 
 $app['cors-enabled']($app);
 
-$app['annotations'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annotations');
-
+$app['annotations'] = function () use ($app, $dataDir, $dataCheck) {
     $annotations = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $annotations[$file->getBasename('.json')] = $json;
-    }
+
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annotations');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $annotations[$file->getBasename('.json')] = $json;
+        }
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $annotations;
 };
 
-$app['annual-reports'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annual-reports');
-
+$app['annual-reports'] = function () use ($app, $dataDir, $dataCheck) {
     $reports = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $reports[$json['year']] = $json;
-    }
 
-    ksort($reports);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/annual-reports');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $reports[$json['year']] = $json;
+        }
+
+        ksort($reports);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $reports;
 };
 
-$app['articles'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/articles');
-
+$app['articles'] = function () use ($app, $dataDir, $dataCheck) {
     $articles = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        foreach ($json['versions'] as $version) {
-            if (isset($version['id'])) {
-                $articles[$version['id']] = $json;
-            }
-        }
-    }
 
-    uasort($articles, function (array $article1, array $article2) {
-        $article1Dates = [
-            'poa' => null,
-            'vor' => null,
-        ];
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/articles');
 
-        $article2Dates = [
-            'poa' => null,
-            'vor' => null,
-        ];
-
-        foreach ($article1['versions'] as $version) {
-            if (isset($version['version']) && null === $article1Dates[$version['status']]) {
-                $article1Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
-                    $version['published']);
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            foreach ($json['versions'] as $version) {
+                if (isset($version['id'])) {
+                    $articles[$version['id']] = $json;
+                }
             }
         }
 
-        foreach ($article2['versions'] as $version) {
-            if (isset($version['version']) && null === $article2Dates[$version['status']]) {
-                $article2Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
-                    $version['published']);
+        uasort($articles, function (array $article1, array $article2) {
+            $article1Dates = [
+                'poa' => null,
+                'vor' => null,
+            ];
+
+            $article2Dates = [
+                'poa' => null,
+                'vor' => null,
+            ];
+
+            foreach ($article1['versions'] as $version) {
+                if (isset($version['version']) && null === $article1Dates[$version['status']]) {
+                    $article1Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
+                        $version['published']);
+                }
             }
+
+            foreach ($article2['versions'] as $version) {
+                if (isset($version['version']) && null === $article2Dates[$version['status']]) {
+                    $article2Dates[$version['status']] = DateTimeImmutable::createFromFormat(DATE_ATOM,
+                        $version['published']);
+                }
+            }
+
+            $article1Date = $article1Dates['vor'] ?? $article1Dates['poa'];
+            $article2Date = $article2Dates['vor'] ?? $article2Dates['poa'];
+
+            return $article1Date <=> $article2Date;
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
         }
-
-        $article1Date = $article1Dates['vor'] ?? $article1Dates['poa'];
-        $article2Date = $article2Dates['vor'] ?? $article2Dates['poa'];
-
-        return $article1Date <=> $article2Date;
-    });
+    };
 
     return $articles;
 };
 
-$app['bioprotocols'] = function () {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/bioprotocols');
-
+$app['bioprotocols'] = function () use ($dataDir, $dataCheck) {
     $bioprotocols = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $bioprotocols[$file->getBasename('.json')] = $json;
-    }
 
-    ksort($bioprotocols);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/bioprotocols');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $bioprotocols[$file->getBasename('.json')] = $json;
+        }
+
+        ksort($bioprotocols);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $bioprotocols;
 };
 
-$app['blog-articles'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/blog-articles');
-
+$app['blog-articles'] = function () use ($app, $dataDir, $dataCheck) {
     $articles = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $articles[$json['id']] = $json;
-    }
 
-    uasort($articles, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/blog-articles');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $articles[$json['id']] = $json;
+        }
+
+        uasort($articles, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $articles;
 };
 
-$app['collections'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/collections');
-
+$app['collections'] = function () use ($app, $dataDir, $dataCheck) {
     $collections = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $collections[$json['id']] = $json;
-    }
 
-    uasort($collections, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/collections');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $collections[$json['id']] = $json;
+        }
+
+        uasort($collections, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $collections;
 };
 
-$app['covers'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/covers');
-
+$app['covers'] = function () use ($app, $dataDir, $dataCheck) {
     $covers = [];
-    foreach ($finder as $file) {
-        $covers[] = json_decode($file->getContents(), true);
-    }
 
-    uasort($covers, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                $a['item']['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $b['item']['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/covers');
+
+        foreach ($finder as $file) {
+            $covers[] = json_decode($file->getContents(), true);
+        }
+
+        uasort($covers, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $a['item']['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $b['item']['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $covers;
 };
 
-$app['digests'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/digests');
-
+$app['digests'] = function () use ($app, $dataDir, $dataCheck) {
     $digests = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $digests[$json['id']] = $json;
-    }
 
-    $dateFactory = function (array $item) : DateTimeImmutable {
-        return DateTimeImmutable::createFromFormat(
-            DATE_ATOM,
-            $item['published'] ?? '2038-01-01T00:00:00Z'
-        );
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/digests');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $digests[$json['id']] = $json;
+        }
+
+        $dateFactory = function (array $item) : DateTimeImmutable {
+            return DateTimeImmutable::createFromFormat(
+                DATE_ATOM,
+                $item['published'] ?? '2038-01-01T00:00:00Z'
+            );
+        };
+        uasort($digests, function (array $a, array $b) use ($dateFactory) {
+            return $dateFactory($b) <=> $dateFactory($a);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
     };
-    uasort($digests, function (array $a, array $b) use ($dateFactory) {
-        return $dateFactory($b) <=> $dateFactory($a);
-    });
 
     return $digests;
 };
 
-$app['events'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/events');
-
+$app['events'] = function () use ($app, $dataDir, $dataCheck) {
     $events = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $events[$json['id']] = $json;
-    }
 
-    uasort($events, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['starts']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/events');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $events[$json['id']] = $json;
+        }
+
+        uasort($events, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['starts']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['starts']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $events;
 };
 
-$app['job-adverts'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/job-adverts');
-
+$app['job-adverts'] = function () use ($app, $dataDir, $dataCheck) {
     $adverts = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $adverts[$json['id']] = $json;
-    }
 
-    uasort($adverts, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/job-adverts');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $adverts[$json['id']] = $json;
+        }
+
+        uasort($adverts, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $adverts;
 };
 
-$app['labs'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/labs');
-
+$app['labs'] = function () use ($app, $dataDir, $dataCheck) {
     $labs = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $labs[$json['id']] = $json;
-    }
 
-    ksort($labs);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/labs');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $labs[$json['id']] = $json;
+        }
+
+        ksort($labs);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $labs;
 };
 
-$app['highlights'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/highlights');
-
+$app['highlights'] = function () use ($app, $dataDir, $dataCheck) {
     $highlights = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $highlights[$file->getBasename('.json')] = $json;
-    }
 
-    ksort($highlights);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/highlights');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $highlights[$file->getBasename('.json')] = $json;
+        }
+
+        ksort($highlights);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $highlights;
 };
 
-$app['interviews'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/interviews');
-
+$app['interviews'] = function () use ($app, $dataDir, $dataCheck) {
     $interviews = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $interviews[$json['id']] = $json;
-    }
 
-    uasort($interviews, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-            $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/interviews');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $interviews[$json['id']] = $json;
+        }
+
+        uasort($interviews, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $interviews;
 };
 
-$app['metrics'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/metrics');
-
+$app['metrics'] = function () use ($app, $dataDir, $dataCheck) {
     $items = [];
-    foreach ($finder as $file) {
-        $name = explode('-', $file->getBasename('.json'));
 
-        $json = json_decode($file->getContents(), true);
-        $items[$name[0]][$name[1]] = $json;
-    }
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/metrics');
+
+        foreach ($finder as $file) {
+            $name = explode('-', $file->getBasename('.json'));
+
+            $json = json_decode($file->getContents(), true);
+            $items[$name[0]][$name[1]] = $json;
+        }
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $items;
 };
 
-$app['people'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/people');
-
+$app['people'] = function () use ($app, $dataDir, $dataCheck) {
     $people = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $people[$json['id']] = $json;
-    }
 
-    uasort($people, function (array $a, array $b) {
-        return $a['name']['index'] <=> $b['name']['index'];
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/people');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $people[$json['id']] = $json;
+        }
+
+        uasort($people, function (array $a, array $b) {
+            return $a['name']['index'] <=> $b['name']['index'];
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $people;
 };
 
-$app['podcast-episodes'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/podcast-episodes');
-
+$app['podcast-episodes'] = function () use ($app, $dataDir, $dataCheck) {
     $episodes = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $episodes[(int) $json['number']] = $json;
-    }
 
-    ksort($episodes);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/podcast-episodes');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $episodes[(int) $json['number']] = $json;
+        }
+
+        ksort($episodes);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $episodes;
 };
 
-$app['press-packages'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/press-packages');
-
+$app['press-packages'] = function () use ($app, $dataDir, $dataCheck) {
     $packages = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $packages[$json['id']] = $json;
-    }
 
-    uasort($packages, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/press-packages');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $packages[$json['id']] = $json;
+        }
+
+        uasort($packages, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $packages;
 };
 
-$app['profiles'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/profiles');
-
+$app['profiles'] = function () use ($app, $dataDir, $dataCheck) {
     $profiles = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $profiles[$json['id']] = $json;
-    }
 
-    uasort($profiles, function (array $a, array $b) {
-        return $a['name']['index'] <=> $b['name']['index'];
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/profiles');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $profiles[$json['id']] = $json;
+        }
+
+        uasort($profiles, function (array $a, array $b) {
+            return $a['name']['index'] <=> $b['name']['index'];
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    };
 
     return $profiles;
 };
 
-$app['recommendations'] = function () use ($app, $dataDir) {
+$app['recommendations'] = function () use ($app, $dataDir, $dataCheck) {
+    $recommendations = [];
+
     try {
         $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/recommendations');
+
+        foreach ($finder as $file) {
+            $name = explode('-', $file->getBasename('.json'));
+
+            $json = json_decode($file->getContents(), true);
+            $recommendations[$name[0]][$name[1]] = $json;
+        }
     } catch (Throwable $e) {
-        $finder = [];
+        if ($dataCheck) {
+            throw $e;
+        }
     }
 
-    $items = [];
-    foreach ($finder as $file) {
-        $name = explode('-', $file->getBasename('.json'));
-
-        $json = json_decode($file->getContents(), true);
-        $items[$name[0]][$name[1]] = $json;
-    }
-
-    return $items;
+    return $recommendations;
 };
 
-$app['promotional-collections'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/promotional-collections');
-
+$app['promotional-collections'] = function () use ($app, $dataDir, $dataCheck) {
     $promotionalCollections = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $promotionalCollections[$json['id']] = $json;
-    }
 
-    uasort($promotionalCollections, function (array $a, array $b) {
-        return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
-    });
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/promotional-collections');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $promotionalCollections[$json['id']] = $json;
+        }
+
+        uasort($promotionalCollections, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['updated'] ?? $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['updated'] ?? $a['published']);
+        });
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    }
 
     return $promotionalCollections;
 };
 
-$app['subjects'] = function () use ($app, $dataDir) {
-    $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/subjects');
-
+$app['subjects'] = function () use ($app, $dataDir, $dataCheck) {
     $subjects = [];
-    foreach ($finder as $file) {
-        $json = json_decode($file->getContents(), true);
-        $subjects[$json['id']] = $json;
-    }
 
-    ksort($subjects);
+    try {
+        $finder = (new Finder())->files()->name('*.json')->in($dataDir.'/subjects');
+
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $subjects[$json['id']] = $json;
+        }
+
+        ksort($subjects);
+    } catch (Throwable $e) {
+        if ($dataCheck) {
+            throw $e;
+        }
+    }
 
     return $subjects;
 };
