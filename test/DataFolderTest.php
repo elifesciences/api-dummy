@@ -18,6 +18,14 @@ final class DataFolderTest extends PHPUnit_Framework_TestCase
         putenv('DATA_FOLDER=test/data1');
     }
 
+    /**
+     * @after
+     */
+    public function unsetDataFolder()
+    {
+        putenv('DATA_FOLDER');
+    }
+
     public function requestProvider() : Traversable
     {
         yield $path = '/' => [
