@@ -14,7 +14,7 @@
     },
     "require": {
         "php": "^7.0",
-        "elife/api": "dev-feat/reviewed-preprint#4cf23303e93990dfc32e404cf136e62f296e1b5a",
+        "elife/api": "dev-feature/reviewed-preprint",
         "elife/api-problem": "^1.0",
         "elife/content-negotiator": "^1.0",
         "elife/ping": "^1.0",
