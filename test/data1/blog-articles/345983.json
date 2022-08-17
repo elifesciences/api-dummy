@@ -1,0 +1,45 @@
+{
+    "id": "345983",
+    "title": "More eLife authors are linking submissions to their ORCID iDs",
+    "impactStatement": "eLife sees positive results of requiring corresponding authors to register and link their profiles to their ORCID iDs",
+    "published": "2016-06-09T15:15:10Z",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "An ORCID iD provides a persistent digital identifier to uniquely identify researchers and unambiguously link them with their research outputs, which in turn helps to improve the discoverability of their work."
+        },
+        {
+            "type": "paragraph",
+            "text": "The overall number of ORCID iDs nearly doubled over the course of 2015. At present there are more than 2.2 million researchers with ORCID iDs."
+        },
+        {
+            "type": "paragraph",
+            "text": "In January, eLife was among a group of journals and publishers to pledge in an open letter that we would require corresponding authors to obtain or link to their existing ORCID iDs."
+        },
+        {
+            "type": "paragraph",
+            "text": "eLife started asking corresponding authors to obtain or link to an ORCID iD during the full submission process on January 7, although we first enabled single sign on with ORCID in December 2013. Since January, there have been about 500 new ORCID iDs per month on average linked to an eLife profile (see figure below)."
+        },
+        {
+            "type": "image",
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-06%2Forcid_id-fig.png",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/content%2F2016-06%2Forcid_id-fig.png/full/full/0/default.png",
+                    "filename": "orcid_id-fig.png"
+                },
+                "size": {
+                    "width": 865,
+                    "height": 649
+                }
+            },
+            "title": "Increase in the number of eLife profiles linked to an ORCID iD"
+        },
+        {
+            "type": "paragraph",
+            "text": "We continue to encourage contributing authors to obtain an ORCID iD, and we encourage other journals and publishers to join us in this initiative."
+        }
+    ]
+}
