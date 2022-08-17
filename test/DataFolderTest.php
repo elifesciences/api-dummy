@@ -10,20 +10,27 @@ final class DataFolderTest extends PHPUnit_Framework_TestCase
 {
     use SilexTestCase;
 
+    private $dataFolder;
+
     /**
      * @before
      */
     public function setDataFolder()
     {
+        $this->dataFolder = getenv('DATA_FOLDER');
         putenv('DATA_FOLDER=test/data1');
     }
 
     /**
      * @after
      */
-    public function unsetDataFolder()
+    public function resetDataFolder()
     {
-        putenv('DATA_FOLDER');
+        if (is_string($this->dataFolder)) {
+            putenv("DATA_FOLDER=$this->dataFolder");
+        } else {
+            putenv('DATA_FOLDER');
+        }
     }
 
     public function requestProvider() : Traversable
