@@ -15,6 +15,8 @@ services:
             dockerfile: Dockerfile
             args:
                 image_tag: ${IMAGE_TAG}
+        environment:
+            DATA_FOLDER: ${DATA_FOLDER}
         image: elifesciences/api-dummy:${IMAGE_TAG}
         ports:
             - "8080:8080"
