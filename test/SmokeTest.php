@@ -404,6 +404,17 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield $path = '/reviewed-preprints' => [
+            $this->createRequest($path),
+            'application/vnd.elife.reviewed-preprint-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/reviewed-preprints') as $file) {
+            yield $path = '/reviewed-preprints/'.$file->getBasename('.json') => [
+                $this->createRequest($path, 'application/vnd.elife.reviewed-preprint+json; version=1'),
+                'application/vnd.elife.reviewed-preprint+json; version=1',
+            ];
+        }
+
         yield $path = '/subjects' => [
             $this->createRequest($path),
             'application/vnd.elife.subject-list+json; version=1',
@@ -448,14 +459,6 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             $this->createRequest($path),
             'application/problem+json',
             400,
-        ];
-        yield $path = '/reviewed-preprint' => [
-            $this->createRequest($path),
-            'application/vnd.elife.reviewed-preprint-list+json; version=1'
-        ];
-        yield $path = '/reviewed-preprint/19561' => [
-            $this->createRequest($path),
-            'application/vnd.elife.reviewed-preprint+json; version=1'
         ];
     }
 

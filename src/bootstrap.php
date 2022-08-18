@@ -156,8 +156,8 @@ $app['blog-articles'] = function () use ($grabData) {
     });
 };
 
-$app['reviewed-preprint'] = function () use ($grabData) {
-    return $grabData('reviewed-preprint', function (Finder $finder) {
+$app['reviewed-preprints'] = function () use ($grabData) {
+    return $grabData('reviewed-preprints', function (Finder $finder) {
         $preprints = [];
         foreach ($finder as $file) {
             $json = json_decode($file->getContents(), true);
@@ -166,7 +166,7 @@ $app['reviewed-preprint'] = function () use ($grabData) {
 
         uasort($preprints, function (array $a, array $b) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
+                    $b['statusDate']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['statusDate']);
         });
 
         return $preprints;
