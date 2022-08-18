@@ -2001,8 +2001,8 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
     'application/vnd.elife.recommendations+json; version=1'
 ));
 
-$app->get('/reviewed-preprint', function(Request $request, Accept $type) use ($app){
-    $reviewedPreprints = $app['reviewed-preprint'];
+$app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($app){
+    $reviewedPreprints = $app['reviewed-preprints'];
 
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
@@ -2037,12 +2037,12 @@ $app->get('/reviewed-preprint', function(Request $request, Accept $type) use ($a
     'application/vnd.elife.reviewed-preprint-list+json;version=1'
 ));
 
-$app->get('/reviewed-preprint/{id}', function(Accept $type, $id) use ($app) {
-    if (false === isset($app['reviewed-preprint'][$id])) {
-        throw new NotFoundHttpException('Reviewed Preprint not found');
+$app->get('/reviewed-preprints/{id}', function(Accept $type, $id) use ($app) {
+    if (false === isset($app['reviewed-preprints'][$id])) {
+        throw new NotFoundHttpException('Reviewed preprint not found');
     }
 
-    $content = $app['reviewed-preprint'][$id];
+    $content = $app['reviewed-preprints'][$id];
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
@@ -2132,7 +2132,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     ];
 
     if ($type->getParameter('version') === "2") {
-        foreach ($app['reviewed-preprint'] as $result) {
+        foreach ($app['reviewed-preprints'] as $result) {
             $result['_search'] = strtolower(json_encode($result));
             //TODO: Not sure about which date to take!
             $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
