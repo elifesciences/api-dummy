@@ -2022,8 +2022,10 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         'items' => []
     ];
 
-    foreach ($reviewedPreprints as $id => $item) {
-        $content['items'][] = $item;
+    foreach ($reviewedPreprints as $id => $reviewedPreprint) {
+        unset($reviewedPreprint['indexContent']);
+
+        $content['items'][] = $reviewedPreprint;
     }
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
@@ -2134,8 +2136,9 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     if ($type->getParameter('version') === "2") {
         foreach ($app['reviewed-preprints'] as $result) {
             $result['_search'] = strtolower(json_encode($result));
-            //TODO: Not sure about which date to take!
-            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
+            unset($result['indexContent']);
+            $result['type'] = 'reviewed-preprint';
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate']);
             $results[] = $result;
         }
         $contentTypes[] = 'reviewed-preprint';
