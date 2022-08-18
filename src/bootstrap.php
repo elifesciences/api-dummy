@@ -156,6 +156,23 @@ $app['blog-articles'] = function () use ($grabData) {
     });
 };
 
+$app['reviewed-preprints'] = function () use ($grabData) {
+    return $grabData('reviewed-preprints', function (Finder $finder) {
+        $preprints = [];
+        foreach ($finder as $file) {
+            $json = json_decode($file->getContents(), true);
+            $preprints[$json['id']] = $json;
+        }
+
+        uasort($preprints, function (array $a, array $b) {
+            return DateTimeImmutable::createFromFormat(DATE_ATOM,
+                    $b['statusDate']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['statusDate']);
+        });
+
+        return $preprints;
+    });
+};
+
 $app['collections'] = function () use ($grabData) {
     return $grabData('collections', function (Finder $finder) {
         $collections = [];
@@ -1984,6 +2001,60 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
     'application/vnd.elife.recommendations+json; version=1'
 ));
 
+$app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($app){
+    $reviewedPreprints = $app['reviewed-preprints'];
+
+    $page = $request->query->get('page', 1);
+    $perPage = $request->query->get('per-page', 10);
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $reviewedPreprints = array_reverse($reviewedPreprints);
+    }
+
+    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reviewedPreprints) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    $content = [
+        'total' => count($reviewedPreprints),
+        'items' => []
+    ];
+
+    foreach ($reviewedPreprints as $id => $reviewedPreprint) {
+        unset($reviewedPreprint['indexContent']);
+
+        $content['items'][] = $reviewedPreprint;
+    }
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.reviewed-preprint-list+json;version=1'
+));
+
+$app->get('/reviewed-preprints/{id}', function(Accept $type, $id) use ($app) {
+    if (false === isset($app['reviewed-preprints'][$id])) {
+        throw new NotFoundHttpException('Reviewed preprint not found');
+    }
+
+    $content = $app['reviewed-preprints'][$id];
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        ['Content-Type' => $type->getNormalizedValue()]
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.reviewed-preprint+json;version=1'
+));
+
 $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
@@ -2052,6 +2123,25 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         }
 
         $results[] = $result;
+    }
+
+    $contentTypes = [
+        'blog-article',
+        'collection',
+        'labs-post',
+        'interview',
+        'podcast-episode',
+    ];
+
+    if ($type->getParameter('version') === "2") {
+        foreach ($app['reviewed-preprints'] as $result) {
+            $result['_search'] = strtolower(json_encode($result));
+            unset($result['indexContent']);
+            $result['type'] = 'reviewed-preprint';
+            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate']);
+            $results[] = $result;
+        }
+        $contentTypes[] = 'reviewed-preprint';
     }
 
     foreach ($app['blog-articles'] as $result) {
@@ -2162,15 +2252,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         }));
     }
 
-    foreach (
-        [
-            'blog-article',
-            'collection',
-            'labs-post',
-            'interview',
-            'podcast-episode',
-        ] as $contentType
-    ) {
+    foreach ($contentTypes as $contentType) {
         $allTypes[$contentType] = count(array_filter($results, function ($result) use ($contentType) {
             return $contentType === $result['type'];
         }));
@@ -2236,6 +2318,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.search+json; version=2',
     'application/vnd.elife.search+json; version=1'
 ));
 
