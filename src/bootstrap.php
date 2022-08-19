@@ -1116,7 +1116,7 @@ $app->get('/covers/current', function (Accept $type) use ($app) {
         'items' => [],
     ];
 
-    $covers = array_slice(array_reverse($covers), 0, 3);
+    $covers = array_slice(array_reverse($covers), 0, 4);
 
     foreach ($covers as $i => $report) {
         unset($report['content']);
