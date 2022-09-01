@@ -1,0 +1,29 @@
+{
+  "id": "29561",
+  "doi": "10.7554/eLife.29561",
+  "status": "reviewed",
+  "authorLine": "Yongjian Huang",
+  "title": "An example of a Reviewed preprint",
+  "indexContent": "An example of a Reviewed preprint that is not yet vor",
+  "titlePrefix": "Title prefix",
+  "stage": "published",
+  "published": "2022-08-01T00:00:00Z",
+  "reviewedDate": "2022-08-01T00:00:00Z",
+  "statusDate": "2022-08-01T00:00:00Z",
+  "volume": 4,
+  "elocationId": "e29561",
+  "pdf": "https://elifesciences.org/content/4/e29561.pdf",
+  "subjects": [
+    {
+      "id": "biochemistry",
+      "name": "Biochemistry"
+    },
+    {
+      "id": "biophysics-structural-biology",
+      "name": "Biophysics and Structural Biology"
+    }
+  ],
+  "curationLabels": [
+    "Ground-breaking"
+  ]
+}

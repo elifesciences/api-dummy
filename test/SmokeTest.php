@@ -4,57 +4,11 @@ namespace test\eLife\DummyApi;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\Finder\Finder;
-use Symfony\Component\HttpFoundation\Request;
 use Traversable;
 
 final class SmokeTest extends PHPUnit_Framework_TestCase
 {
     use SilexTestCase;
-
-    /**
-     * @test
-     */
-    public function it_can_be_pinged()
-    {
-        $response = $this->getApp()->handle(Request::create('/ping'));
-
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertSame('pong', $response->getContent());
-        $this->assertSame('text/plain; charset=UTF-8', $response->headers->get('Content-Type'));
-        $this->assertSame('must-revalidate, no-cache, no-store, private', $response->headers->get('Cache-Control'));
-    }
-
-    /**
-     * @test
-     * @dataProvider requestProvider
-     */
-    public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200, $warning = [])
-    {
-        $response = $this->getApp()->handle($request);
-
-        if (in_array('--debug', $_SERVER['argv'], true) && 500 === $response->getStatusCode()) {
-            $json = json_decode($response->getContent(), true);
-            if (isset($json['exception'])) {
-                $this->fail($json['exception']);
-            }
-            $this->fail($json);
-        }
-
-        $this->assertSame($statusCode, $response->getStatusCode(), $response->getContent());
-        if (is_array($contentType)) {
-            $this->assertContains($response->headers->get('Content-Type'), $contentType);
-        } else {
-            $this->assertSame($contentType, $response->headers->get('Content-Type'));
-        }
-        if (strpos('+json', $response->headers->get('Content-Type'))) {
-            $this->assertTrue(is_array(json_decode($response->getContent(), true)), 'Does not contain a JSON response');
-        }
-        if (!empty($warning[$response->headers->get('Content-Type')])) {
-            $this->assertSame($warning[$response->headers->get('Content-Type')], $response->headers->get('Warning'));
-        } else {
-            $this->assertNull($response->headers->get('Warning'));
-        }
-    }
 
     public function requestProvider() : Traversable
     {
@@ -450,6 +404,17 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        yield $path = '/reviewed-preprints' => [
+            $this->createRequest($path),
+            'application/vnd.elife.reviewed-preprint-list+json; version=1',
+        ];
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/reviewed-preprints') as $file) {
+            yield $path = '/reviewed-preprints/'.$file->getBasename('.json') => [
+                $this->createRequest($path, 'application/vnd.elife.reviewed-preprint+json; version=1'),
+                'application/vnd.elife.reviewed-preprint+json; version=1',
+            ];
+        }
+
         yield $path = '/subjects' => [
             $this->createRequest($path),
             'application/vnd.elife.subject-list+json; version=1',
@@ -460,21 +425,24 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/vnd.elife.subject+json; version=1',
             ];
         }
-
+        yield $path = '/search?type[]=reviewed-preprint' => [
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=2'),
+            'application/vnd.elife.search+json; version=2'
+        ];
         yield $path = '/search' => [
-            $this->createRequest($path),
-            'application/vnd.elife.search+json; version=1',
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=1'),
+            'application/vnd.elife.search+json; version=1'
         ];
         yield $path = '/search?for=cell' => [
-            $this->createRequest($path),
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=1'),
             'application/vnd.elife.search+json; version=1',
         ];
         yield $path = '/search?subject[]=cell-biology' => [
-            $this->createRequest($path),
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=1'),
             'application/vnd.elife.search+json; version=1',
         ];
         yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
-            $this->createRequest($path),
+            $this->createRequest($path, 'application/vnd.elife.search+json; version=1'),
             'application/vnd.elife.search+json; version=1',
         ];
         yield $path = '/search?start-date=2017-02-29' => [
@@ -494,8 +462,25 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    private function createRequest(string $uri, string $type = '*/*') : Request
+    /**
+     * @test
+     */
+    public function search_v2_has_reviewed_preprint()
     {
-        return Request::create($uri, 'GET', [], [], [], ['HTTP_ACCEPT' => $type]);
+        $request = $this->createRequest('/search?type[]=reviewed-preprint', 'application/vnd.elife.search+json;version=2');
+        $response = $this->getApp()->handle($request);
+        $this->assertContains('"id": "09560"', $response->getContent());
+    }
+
+    /**
+     * @test
+     */
+    public function search_v1_does_not_have_reviewed_preprint()
+    {
+        $request = $this->createRequest('/search?type[]=reviewed-preprint', 'application/vnd.elife.search+json; version=1');
+        $response = $this->getApp()->handle($request);
+        $content = json_decode($response->getContent(), true);
+        $this->assertArrayNotHasKey("reviewed-preprint", $content['types']);
+        $this->assertEquals(0, $content['total']);
     }
 }

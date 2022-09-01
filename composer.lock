@@ -544,6 +544,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2020-10-24T10:57:07+00:00"
         },
         {
@@ -852,12 +853,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Ctype\\": ""
-                }
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -924,12 +925,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Mbstring\\": ""
-                }
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1055,12 +1056,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
                 "psr-4": {
                     "Symfony\\Polyfill\\Php70\\": ""
                 },
+                "files": [
+                    "bootstrap.php"
+                ],
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1312,12 +1313,12 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "lib/Assert/functions.php"
-                ],
                 "psr-4": {
                     "Assert\\": "lib/Assert"
-                }
+                },
+                "files": [
+                    "lib/Assert/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1468,16 +1469,16 @@
         },
         {
             "name": "elife/api",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74"
+                "reference": "e4289c613c57a3262df05269b18c16cb1de0ba75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74",
-                "reference": "fbfd26f96e1f8d5bd80c4bf7314665fe5de5fa74",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/e4289c613c57a3262df05269b18c16cb1de0ba75",
+                "reference": "e4289c613c57a3262df05269b18c16cb1de0ba75",
                 "shasum": ""
             },
             "conflict": {
@@ -1489,7 +1490,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2021-10-05T12:24:35+00:00"
+            "time": "2022-08-18T09:00:05+00:00"
         },
         {
             "name": "elife/api-client",
