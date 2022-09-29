@@ -1109,14 +1109,12 @@ $app->get('/covers', function (Request $request, Accept $type) use ($app) {
 ));
 
 $app->get('/covers/current', function (Accept $type) use ($app) {
-    $covers = $app['covers'];
+    $covers = array_slice(array_reverse($app['covers']), 0, 4);
 
     $content = [
         'total' => count($covers),
         'items' => [],
     ];
-
-    $covers = array_slice(array_reverse($covers), 0, 4);
 
     foreach ($covers as $i => $report) {
         unset($report['content']);
