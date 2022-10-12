@@ -2089,6 +2089,13 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
                 $latest = $articleVersion;
             }
         }
+        if ($type->getParameter('version') === "2" && isset($app['reviewed-preprints'][$latest['id']])) {
+            $reviewedPreprint = $app['reviewed-preprints'][$latest['id']];
+            $latest['reviewedDate'] = $reviewedPreprint['reviewedDate'];
+            if (!empty($reviewedPreprint['curationLabels'])) {
+                $latest['curationLabels'] = $reviewedPreprint['curationLabels'];
+            }
+        }
         $result = $latest;
         $result['_search'] = strtolower(json_encode($latest));
 
@@ -2133,11 +2140,13 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
 
     if ($type->getParameter('version') === "2") {
         foreach ($app['reviewed-preprints'] as $result) {
-            $result['_search'] = strtolower(json_encode($result));
-            unset($result['indexContent']);
-            $result['type'] = 'reviewed-preprint';
-            $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate']);
-            $results[] = $result;
+            if (!isset($app['articles'][$result['id']])) {
+                $result['_search'] = strtolower(json_encode($result));
+                unset($result['indexContent']);
+                $result['type'] = 'reviewed-preprint';
+                $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['statusDate']);
+                $results[] = $result;
+            }
         }
         $contentTypes[] = 'reviewed-preprint';
     }
@@ -2226,6 +2235,26 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         ];
     });
 
+    $articlesT = [
+        'correction',
+        'editorial',
+        'feature',
+        'insight',
+        'research-advance',
+        'research-article',
+        'research-communication',
+        'retraction',
+        'registered-report',
+        'replication-study',
+        'review-article',
+        'scientific-correspondence',
+        'short-report',
+        'tools-resources',
+    ];
+
+    if ($type->getParameter('version') === "2") {
+        $allTypeKeys[] = 'reviewed-preprint';
+    }
     $allTypes = [];
     foreach (
         [
