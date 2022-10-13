@@ -1,0 +1,75 @@
+{
+    "title": "Tropical disease",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax/15278%2Felife-15278-fig1-v1.jpg",
+        "filename": "elife-15278-fig1-v1.jpg",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-15278-fig1-v1.jpg",
+            "uri": "https://iiif.elifesciences.org/lax/15278%2Felife-15278-fig1-v1.jpg/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1829,
+            "width": 2460
+        },
+        "alt": ""
+    },
+    "item": {
+        "id": "tropical-disease",
+        "type": "collection",
+        "title": "Tropical disease",
+        "subTitle": "A selection of papers",
+        "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness.",
+        "published": "2022-09-16T11:19:26Z",
+        "image": {
+            "thumbnail": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                    "filename": "tropical-disease-elife-collections.png"
+                },
+                "size": {
+                    "width": 1800,
+                    "height": 861
+                }
+            }
+        },
+        "subjects": [
+            {
+                "id": "epidemiology-global-health",
+                "name": "Epidemiology and Global Health"
+            },
+            {
+                "id": "microbiology-infectious-disease",
+                "name": "Microbiology and Infectious Disease"
+            }
+        ],
+        "selectedCurator": {
+            "id": "pjha",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
+            "name": {
+                "preferred": "Prabhat Jha",
+                "index": "Jha, Prabhat"
+            },
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                    "filename": "kegley120208elife0213b.jpg"
+                },
+                "size": {
+                    "width": 4256,
+                    "height": 2832
+                }
+            },
+            "etAl": true
+        }
+    }
+}
