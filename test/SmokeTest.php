@@ -469,7 +469,11 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
     {
         $request = $this->createRequest('/search?type[]=reviewed-preprint', 'application/vnd.elife.search+json;version=2');
         $response = $this->getApp()->handle($request);
-        $this->assertContains('"id": "09560"', $response->getContent());
+        $this->assertContains('"id": "29561"', $response->getContent());
+        // Should be removed as there is an article with same id.
+        $this->assertNotContains('"id": "09560"', $response->getContent());
+        $content = json_decode($response->getContent(), true);
+        $this->assertEquals(1, $content['total']);
     }
 
     /**
