@@ -9,5 +9,10 @@
   "published": "2022-06-26T00:00:00Z",
   "reviewedDate": "2022-09-06T00:00:00Z",
   "statusDate": "2022-09-06T00:00:00Z",
-  "subjects": []
+  "subjects": [
+    {
+      "id": "cell-biology",
+      "name": "Cell Biology"
+    }
+  ]
 }

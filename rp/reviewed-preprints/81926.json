@@ -9,5 +9,10 @@
   "published": "2022-07-28T00:00:00Z",
   "reviewedDate": "2022-09-05T00:00:00Z",
   "statusDate": "2022-09-05T00:00:00Z",
-  "subjects": []
+  "subjects": [
+    {
+      "id":"stem-cells-regenerative-medicine",
+      "name":"Stem Cells and Regenerative Medicine"
+    }
+  ]
 }
