@@ -166,7 +166,7 @@ $app['reviewed-preprints'] = function () use ($grabData) {
 
         uasort($preprints, function (array $a, array $b) {
             return DateTimeImmutable::createFromFormat(DATE_ATOM,
-                    $b['statusDate']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['statusDate']);
+                    $b['published']) <=> DateTimeImmutable::createFromFormat(DATE_ATOM, $a['published']);
         });
 
         return $preprints;
@@ -2089,7 +2089,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
                 $latest = $articleVersion;
             }
         }
-        if ($type->getParameter('version') === "2" && isset($app['reviewed-preprints'][$latest['id']])) {
+        if ($type->getParameter('version') === '2' && isset($app['reviewed-preprints'][$latest['id']])) {
             $reviewedPreprint = $app['reviewed-preprints'][$latest['id']];
             $latest['reviewedDate'] = $reviewedPreprint['reviewedDate'];
             if (!empty($reviewedPreprint['curationLabels'])) {
@@ -2138,7 +2138,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         'podcast-episode',
     ];
 
-    if ($type->getParameter('version') === "2") {
+    if ($type->getParameter('version') === '2') {
         foreach ($app['reviewed-preprints'] as $result) {
             if (!isset($app['articles'][$result['id']])) {
                 $result['_search'] = strtolower(json_encode($result));
@@ -2235,7 +2235,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         ];
     });
 
-    $articlesT = [
+    $allTypeKeys = [
         'correction',
         'editorial',
         'feature',
@@ -2252,27 +2252,12 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         'tools-resources',
     ];
 
-    if ($type->getParameter('version') === "2") {
+    if ($type->getParameter('version') === '2') {
         $allTypeKeys[] = 'reviewed-preprint';
     }
     $allTypes = [];
     foreach (
-        [
-            'correction',
-            'editorial',
-            'feature',
-            'insight',
-            'research-advance',
-            'research-article',
-            'research-communication',
-            'retraction',
-            'registered-report',
-            'replication-study',
-            'review-article',
-            'scientific-correspondence',
-            'short-report',
-            'tools-resources',
-        ] as $articleType
+      $allTypeKeys as $articleType
     ) {
         $allTypes[$articleType] = count(array_filter($results, function ($result) use ($articleType) {
             return $articleType === $result['type'];
