@@ -2005,10 +2005,6 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    if ('desc' === $request->query->get('order', 'desc')) {
-        $reviewedPreprints = array_reverse($reviewedPreprints);
-    }
-
     $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($reviewedPreprints) && $page > 1) {
@@ -2019,6 +2015,10 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         'total' => count($reviewedPreprints),
         'items' => []
     ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $reviewedPreprints = array_reverse($reviewedPreprints);
+    }
 
     foreach ($reviewedPreprints as $id => $reviewedPreprint) {
         unset($reviewedPreprint['indexContent']);
