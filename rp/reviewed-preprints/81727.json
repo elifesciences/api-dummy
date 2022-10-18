@@ -1,0 +1,20 @@
+{
+  "id": "81727",
+  "doi": "10.1101/2022.07.21.500925",
+  "pdf": "https://www.biorxiv.org/content/10.1101/2022.07.21.500925v1.full.pdf",
+  "status": "reviewed",
+  "authorLine": "Phuong T. Nguyen, Hai M. Nguyen ... Vladimir Yarov-Yarovoy",
+  "title": "Computational design of peptides to target Na<sub>V</sub>1.7 channel with high potency and selectivity for the treatment of pain",
+  "indexContent": "",
+  "stage": "published",
+  "published": "2022-10-20T03:00:00Z",
+  "reviewedDate": "2022-10-20T03:00:00Z",
+  "versionDate": "2022-10-20T03:00:00Z",
+  "statusDate": "2022-10-20T03:00:00Z",
+  "subjects": [
+    {
+      "id": "structural-biology-molecular-biophysics",
+      "name": "Structural Biology and Molecular Biophysics"
+    }
+  ]
+}
