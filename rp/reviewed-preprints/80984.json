@@ -1,0 +1,24 @@
+{
+  "id": "80984",
+  "doi": "10.1101/2022.06.30.498369",
+  "pdf": "https://www.biorxiv.org/content/10.1101/2022.06.30.498369v1.full.pdf",
+  "status": "reviewed",
+  "authorLine": "Carine M. Marshall, Veronica L. Thompson ... Stacey L. Harmer",
+  "title": "The circadian clock controls temporal and spatial patterns of floral development in sunflower",
+  "indexContent": "",
+  "stage": "published",
+  "published": "2022-10-20T03:00:00Z",
+  "reviewedDate": "2022-10-20T03:00:00Z",
+  "versionDate": "2022-10-20T03:00:00Z",
+  "statusDate": "2022-10-20T03:00:00Z",
+  "subjects": [
+    {
+      "id": "developmental-biology",
+      "name": "Developmental Biology"
+    },
+    {
+      "id": "plant-biology",
+      "name": "Plant Biology"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "81274",
+  "doi": "10.1101/2020.07.27.223354",
+  "pdf": "https://www.biorxiv.org/content/10.1101/2020.07.27.223354v2.full.pdf",
+  "status": "reviewed",
+  "authorLine": "Valentin Quiniou, Pierre Barennes ... David Klatzmann",
+  "title": "Human thymopoiesis produces polyspecific CD8<sup>+</sup> α/β T cells responding to multiple viral antigens",
+  "indexContent": "",
+  "stage": "published",
+  "published": "2022-10-20T03:00:00Z",
+  "reviewedDate": "2022-10-20T03:00:00Z",
+  "versionDate": "2022-10-20T03:00:00Z",
+  "statusDate": "2022-10-20T03:00:00Z",
+  "subjects": [
+    {
+      "id": "immunology-inflammation",
+      "name": "Immunology and Inflammation"
+    }
+  ]
+}
