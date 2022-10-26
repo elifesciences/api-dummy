@@ -487,4 +487,19 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         $this->assertArrayNotHasKey("reviewed-preprint", $content['types']);
         $this->assertEquals(0, $content['total']);
     }
+
+    /**
+     * @test
+     */
+    public function covers_may_have_impact_statement()
+    {
+        $request = $this->createRequest('/covers/current', 'application/vnd.elife.cover-list+json; version=1');
+        $response = $this->getApp()->handle($request);
+        $content = json_decode($response->getContent(), true);
+        $cover1 = $content['items'][0];
+        $this->assertArrayHasKey('impactStatement', $cover1);
+
+        $cover2 = $content['items'][1];
+        $this->assertArrayNotHasKey('impactStatement', $cover2);
+    }
 }
