@@ -500,6 +500,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('impactStatement', $cover1);
 
         $cover2 = $content['items'][1];
-        $this->assertArrayNotHasKey('impactStatement', $cover2);
+        $this->assertArrayHasKey('impactStatement', $cover2);
+        $this->assertNull($cover2['impactStatement']);
     }
 }
