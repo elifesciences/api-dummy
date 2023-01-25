@@ -22,7 +22,9 @@ $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
 $dataCheck = !((bool) $dataDirSet);
 
-$app = new Application();
+$app = new Application([
+    'debug' => true
+]);
 
 $app->register(new ApiProblemProvider());
 $app->register(new ContentNegotiationProvider());
@@ -731,8 +733,8 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=7',
                 'application/vnd.elife.article-vor+json; version=6',
-                'application/vnd.elife.article-vor+json; version=5',
             ];
         } else {
             $accepts = [
