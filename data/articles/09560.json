@@ -8021,17 +8021,6 @@
                     "type": "paragraph"
                 }
             ],
-            "editorEvaluation": {
-                "id": "sa0",
-                "doi": "10.7554/eLife.09560.sa0",
-                "content": [
-                    {
-                        "type": "paragraph",
-                        "text": "Collagen is a major component of extracellular matrix. The authors have identified a high-affinity inhibitory collagen receptor LAIR-1 and a soluble decoy receptor LAIR-2 (with even higher binding affinity to collagen), which can be therapeutically targeted to block tumor progression. Dr Meyaard and colleagues have also generated a dimeric LAIR-2 human IgG1 Fc fusion protein NC410 for therapeutic use. With humanized mouse models engrafted with functional human immune systems (PBMC), they have explored the anti-cancer efficacy of NC410 and revealed its impact on modulating immune responses. Furthermore, they extended this study to identify biomarkers of predictive value for NC410-based anti-cancer therapy."
-                    }
-                ],
-                "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
-            },
             "elifeAssessment": {
                 "title": "eLife assessment",
                 "id": "sa0",
@@ -8043,50 +8032,6 @@
                     }
                 ],
                 "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
-            },
-            "decisionLetter": {
-                "content": [
-                    {
-                        "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife.</i> Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "Given the importance and sheer number of hominin remains, the fossils from the Dinaledi cave should be described and published imminently. This will allow direct assess to the material to other researchers where appropriate. Besides a general agreement among the reviewers for publication, they ask for several essential revisions.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "1) The reviewers are surprised to not see an in-depth comparison of <i>H. naledi</i> to <i>H. floresiensis</i>, especially where combinations of small teeth and small brains are concerned. It should be easy, e.g., to add the published <i>H. floresiensis</i> measurements to <a href=\"#fig7\">Figure 7</a>. The authors allude to material attributed to <i>‘Homo gautengensis’</i> and perhaps a short discussion or reiteration of their views about the validity of that species is needed.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "2) The reviewers would ask the authors to remove superfluous text and concentrate on the main finding and description. This includes the first and last paragraphs. (“Our view of human evolution ... ancient hominins.”) (“Decades of work remain to expand the window into our origins...”) Both do not add any essential information to the manuscript.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "3) The statement that “At this time, this evidence does not permit us to resolve the relationships between <i>H. naledi</i> and these other species” is rather confusing. Certainly more remains or a direct date would not change that situation; instead in depth morphometric or cladistics analysis are needed to conclude whether the Dinaledi remains indeed represent a new hominin taxon.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "4) The authors should add a summary table of traits, perhaps adapted from the one they previously used for cladistic assessment.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "In addition, please note that Chris Stringer has provided an annotated PDF with minor comments for your consideration.",
-                        "type": "paragraph"
-                    }
-                ],
-                "description": [
-                    {
-                        "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent (see <a href=\"http://elifesciences.org/review-process\">review process</a>). Similarly, the author response typically shows only responses to the major concerns raised by the reviewers.",
-                        "type": "paragraph"
-                    }
-                ],
-                "doi": "10.7554/eLife.09560.030",
-                "id": "SA1"
             },
             "publicReviews": [
                 {
