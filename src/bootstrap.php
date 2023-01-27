@@ -22,7 +22,7 @@ $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
 $dataCheck = !((bool) $dataDirSet);
 
-$app = new Application();
+$app = new Application(['debug' => true]);
 
 $app->register(new ApiProblemProvider());
 $app->register(new ContentNegotiationProvider());
@@ -748,6 +748,10 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('04395' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 3) {
             throw new NotAcceptableHttpException('This article PoA requires version 3.');
+        }
+
+        if ('09560' === $number && 'voa' === $articleVersion['status'] && $type->getParameter('version') < 7) {
+            throw new NotAcceptableHttpException('This article VOR requires version 7.');
         }
 
         if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [2])) {
