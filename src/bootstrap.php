@@ -750,15 +750,15 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article PoA requires version 3.');
         }
 
-        if ('09560' === $number && 'voa' === $articleVersion['status'] && $type->getParameter('version') < 7) {
-            throw new NotAcceptableHttpException('This article VOR requires version 7.');
+        if ('09560' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 7) {
+            throw new NotAcceptableHttpException('This article VoR requires version 7.');
         }
 
         if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [2])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
-        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [5])) {
+        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [6])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 

@@ -87,7 +87,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=5' => '299 elifesciences.org "Deprecation: Support for version 5 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
                 ],
             ];
 
@@ -123,7 +123,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=5' => '299 elifesciences.org "Deprecation: Support for version 5 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
                 ],
             ];
 
