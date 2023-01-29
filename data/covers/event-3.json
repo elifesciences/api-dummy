@@ -18,8 +18,8 @@
         "type": "event",
         "id": "3",
         "title": "Some future webinar",
-        "published": "2017-01-01T00:00:00Z",
-        "starts": "2099-08-04T15:00:00Z",
-        "ends": "2099-08-04T16:00:00Z"
+        "published": "2120-01-01T00:00:00Z",
+        "starts": "2199-08-04T15:00:00Z",
+        "ends": "2199-08-04T16:00:00Z"
     }
 }
