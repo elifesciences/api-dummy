@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c4ef1273e5eb816c9321fdfbab21039",
+    "content-hash": "2c26b249a92b0a54cf566b266ae154ee",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -928,12 +928,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1434,12 +1434,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Assert\\": "lib/Assert"
-                },
                 "files": [
                     "lib/Assert/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1590,16 +1590,16 @@
         },
         {
             "name": "elife/api",
-            "version": "2.13.0",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "b0fcfa2b76b61b71ab830bcd41929f1758375851"
+                "reference": "b9857d750b2cf0497649cd25f45e4dfd7cb96d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/b0fcfa2b76b61b71ab830bcd41929f1758375851",
-                "reference": "b0fcfa2b76b61b71ab830bcd41929f1758375851",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/b9857d750b2cf0497649cd25f45e4dfd7cb96d48",
+                "reference": "b9857d750b2cf0497649cd25f45e4dfd7cb96d48",
                 "shasum": ""
             },
             "conflict": {
@@ -1611,7 +1611,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2022-11-30T12:56:45+00:00"
+            "time": "2023-01-27T21:08:21+00:00"
         },
         {
             "name": "elife/api-client",
