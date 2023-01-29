@@ -732,7 +732,6 @@ $app->get('/articles/{number}/versions/{version}',
         if ('vor' === $articleVersion['status']) {
             $accepts = [
                 'application/vnd.elife.article-vor+json; version=6',
-                'application/vnd.elife.article-vor+json; version=5',
             ];
         } else {
             $accepts = [
