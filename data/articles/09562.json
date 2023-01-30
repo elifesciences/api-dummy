@@ -4,18 +4,18 @@
     "versions": [
         {
             "status": "vor",
-            "id": "09560",
+            "id": "09562",
             "version": 1,
             "type": "research-article",
-            "doi": "10.7554/eLife.09560",
+            "doi": "10.7554/eLife.09562",
             "authorLine": "Lee R Berger, John Hawks ... Bernhard Zipfel",
             "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
             "published": "2015-09-10T00:00:00Z",
             "versionDate": "2015-09-10T00:00:00Z",
             "volume": 4,
-            "elocationId": "e09560",
-            "pdf": "https://cdn.elifesciences.org/articles/09560/elife-09560-v1.pdf",
-            "xml": "https://cdn.elifesciences.org/articles/09560/elife-09560-v1.xml",
+            "elocationId": "RPe09562",
+            "pdf": "https://cdn.elifesciences.org/articles/09562/elife-09562-v1.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/09562/elife-09562-v1.xml",
             "subjects": [
                 {
                     "id": "evolutionary-biology",
@@ -29,7 +29,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.09560.001"
+                "doi": "10.7554/eLife.09562.001"
             },
             "copyright": {
                 "license": "CC-BY-4.0",
@@ -2469,12 +2469,12 @@
                             "type": "paragraph"
                         }
                     ],
-                    "doi": "10.7554/eLife.09560.028",
-                    "filename": "elife-09560-supp1-v1.docx",
+                    "doi": "10.7554/eLife.09562.028",
+                    "filename": "elife-09562-supp1-v1.docx",
                     "id": "SD1-data",
                     "label": "Supplementary file 1",
                     "mediaType": "application/docx",
-                    "uri": "https://cdn.elifesciences.org/articles/09560/elife-09560-supp1-v1.docx"
+                    "uri": "https://cdn.elifesciences.org/articles/09562/elife-09562-supp1-v1.docx"
                 },
                 {
                     "caption": [
@@ -2483,12 +2483,12 @@
                             "type": "paragraph"
                         }
                     ],
-                    "doi": "10.7554/eLife.09560.029",
-                    "filename": "elife-09560-supp2-v1.docx",
+                    "doi": "10.7554/eLife.09562.029",
+                    "filename": "elife-09562-supp2-v1.docx",
                     "id": "SD2-data",
                     "label": "Supplementary file 2",
                     "mediaType": "application/docx",
-                    "uri": "https://cdn.elifesciences.org/articles/09560/elife-09560-supp2-v1.docx"
+                    "uri": "https://cdn.elifesciences.org/articles/09562/elife-09562-supp2-v1.docx"
                 }
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
@@ -2517,7 +2517,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.09560.002"
+                "doi": "10.7554/eLife.09562.002"
             },
             "body": [
                 {
@@ -2535,19 +2535,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.003",
+                                    "doi": "10.7554/eLife.09562.003",
                                     "id": "fig1",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig1-v1.tif",
                                         "size": {
                                             "width": 4194,
                                             "height": 4714
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig1-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig1-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 1",
@@ -2647,19 +2647,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.019",
+                                                    "doi": "10.7554/eLife.09562.019",
                                                     "id": "fig2",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig2-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig2-v1.tif",
                                                         "size": {
                                                             "width": 2750,
                                                             "height": 2095
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig2-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig2-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig2-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig2-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 2",
@@ -2689,19 +2689,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.005",
+                                                    "doi": "10.7554/eLife.09562.005",
                                                     "id": "fig3",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig3-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig3-v1.tif",
                                                         "size": {
                                                             "width": 1415,
                                                             "height": 1388
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig3-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig3-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig3-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig3-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 3",
@@ -2720,19 +2720,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.006",
+                                                    "doi": "10.7554/eLife.09562.006",
                                                     "id": "fig4",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig4-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig4-v1.tif",
                                                         "size": {
                                                             "width": 2750,
                                                             "height": 2022
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig4-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig4-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig4-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig4-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 4",
@@ -2751,19 +2751,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.007",
+                                                    "doi": "10.7554/eLife.09562.007",
                                                     "id": "fig5",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig5-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig5-v1.tif",
                                                         "size": {
                                                             "width": 1415,
                                                             "height": 1415
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig5-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig5-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig5-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig5-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 5",
@@ -2786,19 +2786,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.008",
+                                                    "doi": "10.7554/eLife.09562.008",
                                                     "id": "fig6",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig6-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig6-v1.tif",
                                                         "size": {
                                                             "width": 2750,
                                                             "height": 1782
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig6-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig6-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig6-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig6-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 6",
@@ -2817,19 +2817,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.009",
+                                                    "doi": "10.7554/eLife.09562.009",
                                                     "id": "fig7",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig7-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig7-v1.tif",
                                                         "size": {
                                                             "width": 2750,
                                                             "height": 1835
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig7-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig7-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig7-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig7-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 7",
@@ -2848,19 +2848,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.010",
+                                                    "doi": "10.7554/eLife.09562.010",
                                                     "id": "fig8",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig8-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig8-v1.tif",
                                                         "size": {
                                                             "width": 1415,
                                                             "height": 2055
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig8-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig8-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig8-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig8-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 8",
@@ -2879,19 +2879,19 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.09560.011",
+                                                    "doi": "10.7554/eLife.09562.011",
                                                     "id": "fig9",
                                                     "image": {
                                                         "alt": "",
-                                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig9-v1.tif",
+                                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig9-v1.tif",
                                                         "size": {
                                                             "width": 1415,
                                                             "height": 1122
                                                         },
                                                         "source": {
                                                             "mediaType": "image/jpeg",
-                                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig9-v1.tif/full/full/0/default.jpg",
-                                                            "filename": "elife-09560-fig9-v1.jpg"
+                                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig9-v1.tif/full/full/0/default.jpg",
+                                                            "filename": "elife-09562-fig9-v1.jpg"
                                                         }
                                                     },
                                                     "label": "Figure 9",
@@ -2950,7 +2950,7 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.012",
+                                    "doi": "10.7554/eLife.09562.012",
                                     "footnotes": [
                                         {
                                             "id": "tblfn1",
@@ -3028,7 +3028,7 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.013",
+                                    "doi": "10.7554/eLife.09562.013",
                                     "footnotes": [
                                         {
                                             "text": [
@@ -3189,7 +3189,7 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.014",
+                                    "doi": "10.7554/eLife.09562.014",
                                     "footnotes": [
                                         {
                                             "text": [
@@ -3219,19 +3219,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.015",
+                                    "doi": "10.7554/eLife.09562.015",
                                     "id": "fig10",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig10-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig10-v1.tif",
                                         "size": {
                                             "width": 2750,
                                             "height": 2085
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig10-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig10-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig10-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig10-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 10",
@@ -3254,19 +3254,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.016",
+                                    "doi": "10.7554/eLife.09562.016",
                                     "id": "fig11",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig11-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig11-v1.tif",
                                         "size": {
                                             "width": 2750,
                                             "height": 1108
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig11-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig11-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig11-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig11-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 11",
@@ -3297,19 +3297,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.017",
+                                    "doi": "10.7554/eLife.09562.017",
                                     "id": "fig12",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig12-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig12-v1.tif",
                                         "size": {
                                             "width": 2750,
                                             "height": 2040
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig12-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig12-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig12-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig12-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 12",
@@ -3352,19 +3352,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.018",
+                                    "doi": "10.7554/eLife.09562.018",
                                     "id": "fig13",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig13-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig13-v1.tif",
                                         "size": {
                                             "width": 1415,
                                             "height": 1388
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig13-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig13-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig13-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig13-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 13",
@@ -3422,19 +3422,19 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.09560.004",
+                                    "doi": "10.7554/eLife.09562.004",
                                     "id": "fig14",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig14-v1.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig14-v1.tif",
                                         "size": {
                                             "width": 4204,
                                             "height": 1289
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig14-v1.tif/full/full/0/default.jpg",
-                                            "filename": "elife-09560-fig14-v1.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig14-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-09562-fig14-v1.jpg"
                                         }
                                     },
                                     "label": "Figure 14",
@@ -3633,19 +3633,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.020",
+                                            "doi": "10.7554/eLife.09562.020",
                                             "id": "fig15",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig15-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig15-v1.tif",
                                                 "size": {
                                                     "width": 707,
                                                     "height": 631
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig15-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig15-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig15-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig15-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 15",
@@ -3668,19 +3668,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.021",
+                                            "doi": "10.7554/eLife.09562.021",
                                             "id": "fig16",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig16-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig16-v1.tif",
                                                 "size": {
                                                     "width": 2750,
                                                     "height": 981
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig16-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig16-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig16-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig16-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 16",
@@ -3714,19 +3714,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.022",
+                                            "doi": "10.7554/eLife.09562.022",
                                             "id": "fig17",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig17-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig17-v1.tif",
                                                 "size": {
                                                     "width": 2989,
                                                     "height": 662
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig17-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig17-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig17-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig17-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 17",
@@ -3749,19 +3749,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.023",
+                                            "doi": "10.7554/eLife.09562.023",
                                             "id": "fig18",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig18-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig18-v1.tif",
                                                 "size": {
                                                     "width": 2989,
                                                     "height": 689
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig18-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig18-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig18-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig18-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 18",
@@ -3791,19 +3791,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.024",
+                                            "doi": "10.7554/eLife.09562.024",
                                             "id": "fig19",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig19-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig19-v1.tif",
                                                 "size": {
                                                     "width": 2989,
                                                     "height": 805
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig19-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig19-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig19-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig19-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 19",
@@ -3822,19 +3822,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.025",
+                                            "doi": "10.7554/eLife.09562.025",
                                             "id": "fig20",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig20-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig20-v1.tif",
                                                 "size": {
                                                     "width": 2750,
                                                     "height": 991
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig20-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig20-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig20-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig20-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 20",
@@ -3857,19 +3857,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.026",
+                                            "doi": "10.7554/eLife.09562.026",
                                             "id": "fig21",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig21-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig21-v1.tif",
                                                 "size": {
                                                     "width": 3158,
                                                     "height": 685
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig21-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig21-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig21-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig21-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 21",
@@ -3892,19 +3892,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.09560.027",
+                                            "doi": "10.7554/eLife.09562.027",
                                             "id": "fig22",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig22-v1.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig22-v1.tif",
                                                 "size": {
                                                     "width": 1415,
                                                     "height": 860
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig22-v1.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-09560-fig22-v1.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax/09562%2Felife-09562-fig22-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-09562-fig22-v1.jpg"
                                                 }
                                             },
                                             "label": "Figure 22",
@@ -8021,49 +8021,94 @@
                     "type": "paragraph"
                 }
             ],
-            "decisionLetter": {
+            "elifeAssessment": {
+                "title": "eLife assessment",
+                "id": "sa0",
+                "doi": "10.7554/eLife.09562.sa00",
                 "content": [
                     {
-                        "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife.</i> Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "Given the importance and sheer number of hominin remains, the fossils from the Dinaledi cave should be described and published imminently. This will allow direct assess to the material to other researchers where appropriate. Besides a general agreement among the reviewers for publication, they ask for several essential revisions.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "1) The reviewers are surprised to not see an in-depth comparison of <i>H. naledi</i> to <i>H. floresiensis</i>, especially where combinations of small teeth and small brains are concerned. It should be easy, e.g., to add the published <i>H. floresiensis</i> measurements to <a href=\"#fig7\">Figure 7</a>. The authors allude to material attributed to <i>‘Homo gautengensis’</i> and perhaps a short discussion or reiteration of their views about the validity of that species is needed.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "2) The reviewers would ask the authors to remove superfluous text and concentrate on the main finding and description. This includes the first and last paragraphs. (“Our view of human evolution ... ancient hominins.”) (“Decades of work remain to expand the window into our origins...”) Both do not add any essential information to the manuscript.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "3) The statement that “At this time, this evidence does not permit us to resolve the relationships between <i>H. naledi</i> and these other species” is rather confusing. Certainly more remains or a direct date would not change that situation; instead in depth morphometric or cladistics analysis are needed to conclude whether the Dinaledi remains indeed represent a new hominin taxon.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "4) The authors should add a summary table of traits, perhaps adapted from the one they previously used for cladistic assessment.",
-                        "type": "paragraph"
-                    },
-                    {
-                        "text": "In addition, please note that Chris Stringer has provided an annotated PDF with minor comments for your consideration.",
-                        "type": "paragraph"
+                        "type": "paragraph",
+                        "text": "Collagen is a major component of extracellular matrix. The authors have identified a high-affinity inhibitory collagen receptor LAIR-1 and a soluble decoy receptor LAIR-2 (with even higher binding affinity to collagen), which can be therapeutically targeted to block tumor progression. Dr Meyaard and colleagues have also generated a dimeric LAIR-2 human IgG1 Fc fusion protein NC410 for therapeutic use. With humanized mouse models engrafted with functional human immune systems (PBMC), they have explored the anti-cancer efficacy of NC410 and revealed its impact on modulating immune responses. Furthermore, they extended this study to identify biomarkers of predictive value for NC410-based anti-cancer therapy."
                     }
                 ],
-                "description": [
+                "scietyUri": "https://sciety.org/articles/activity/10.1101/2020.11.21.391326"
+            },
+            "publicReviews": [
+                {
+                    "title": "Reviewer #1 (public review)",
+                    "id": "SA21",
+                    "doi": "10.7554/eLife.09562.230",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                        },
+                        {
+                            "type": "box",
+                            "title": "Box 2",
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+                        }
+                    ]
+                },
+                {
+                    "title": "Reviewer #2 (public review)",
+                    "id": "SA22",
+                    "doi": "10.7554/eLife.09562.330",
+                    "content": [
+                        {
+                            "type": "paragraph",
+                            "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                        },
+                        {
+                            "type": "box",
+                            "title": "Box 2",
+                            "content": [
+                                {
+                                    "type": "paragraph",
+                                    "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                                }
+                            ]
+                        },
+                        {
+                            "type": "paragraph",
+                            "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
+                        }
+                    ]
+                }
+            ],
+            "recommendationsForAuthors": {
+                "title": "Recommendations for authors",
+                "id": "SA11",
+                "doi": "10.7554/eLife.09562.130",
+                "content": [
                     {
-                        "text": "eLife posts the editorial decision letter and author response on a selection of the published articles (subject to the approval of the authors). An edited version of the letter sent to the authors after peer review is shown, indicating the substantive concerns or comments; minor concerns are not usually shown. Reviewers have the opportunity to discuss the decision before the letter is sent (see <a href=\"http://elifesciences.org/review-process\">review process</a>). Similarly, the author response typically shows only responses to the major concerns raised by the reviewers.",
-                        "type": "paragraph"
+                        "type": "paragraph",
+                        "text": "Thank you for submitting your work entitled “A new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa” for peer review at <i>eLife</i>."
+                    },
+                    {
+                        "type": "box",
+                        "title": "Box 2",
+                        "content": [
+                            {
+                                "type": "paragraph",
+                                "text": "Your submission has been favorably evaluated by Ian Baldwin (Senior editor), two guest Reviewing editors (Johannes Krause and Nicholas Conard), and two peer reviewers. One of the two peer reviewers, Chris Stringer, has agreed to share his identity, and Johannes Krause has drafted this decision to help you prepare a revised submission."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "The authors describe a large collection of recently discovered hominin fossils from the Dinaledi Chamber in the Rising Star cave system in South Africa. Based on their initial assessment they argue that the fossil remains derive from a single homogenous hominin group and present a new taxon that they call <i>Homo naledi</i>."
                     }
-                ],
-                "doi": "10.7554/eLife.09560.030",
-                "id": "SA1"
+                ]
             },
             "authorResponse": {
                 "content": [
@@ -8124,7 +8169,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.09560.031",
+                "doi": "10.7554/eLife.09562.031",
                 "id": "SA2"
             },
             "stage": "published",

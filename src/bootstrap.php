@@ -750,7 +750,7 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article PoA requires version 3.');
         }
 
-        if ('09560' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 7) {
+        if ('09562' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 7) {
             throw new NotAcceptableHttpException('This article VoR requires version 7.');
         }
 
