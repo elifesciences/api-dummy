@@ -65,7 +65,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     break;
                 default:
                     $poaMinimum = 2;
-                    $vorMinimum = 5;
+                    $vorMinimum = 6;
             }
 
             yield "{$path} version highest" => [
@@ -84,7 +84,6 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=5' => '299 elifesciences.org "Deprecation: Support for version 5 will be removed"',
                 ],
             ];
 
