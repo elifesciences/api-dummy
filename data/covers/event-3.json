@@ -1,0 +1,26 @@
+{
+    "title": "Some future webinar",
+    "impactStatement": "eLife Editor-in-Chief Michael Eisen and our Deputy Editors answer your questions on eLife's new publishing model in a webinar on January, 26.",
+    "image": {
+        "uri": "https://iiif.elifesciences.org/lax/15278%2Felife-15278-fig1-v1.jpg",
+        "filename": "elife-15278-fig1-v1.jpg",
+        "source": {
+            "mediaType": "image/jpeg",
+            "filename": "elife-15278-fig1-v1.jpg",
+            "uri": "https://iiif.elifesciences.org/lax/15278%2Felife-15278-fig1-v1.jpg/full/full/0/default.jpg"
+        },
+        "size": {
+            "height": 1829,
+            "width": 2460
+        },
+        "alt": ""
+    },
+    "item": {
+        "type": "event",
+        "id": "3",
+        "title": "Some future webinar",
+        "published": "2017-01-01T00:00:00Z",
+        "starts": "2099-08-04T15:00:00Z",
+        "ends": "2099-08-04T16:00:00Z"
+    }
+}
