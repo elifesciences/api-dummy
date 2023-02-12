@@ -107,6 +107,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/problem+json',
                 406,
             ];
+
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
