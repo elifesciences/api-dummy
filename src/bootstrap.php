@@ -22,7 +22,9 @@ $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
 $dataCheck = !((bool) $dataDirSet);
 
-$app = new Application();
+$app = new Application([
+    'debug' => true
+]);
 
 $app->register(new ApiProblemProvider());
 $app->register(new ContentNegotiationProvider());
