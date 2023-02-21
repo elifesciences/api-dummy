@@ -63,6 +63,9 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 case '04395':
                     $poaMinimum = 3;
                     break;
+                case '09562':
+                    $vorMinimum = 7;
+                    break;
                 default:
                     $poaMinimum = 2;
                     $vorMinimum = 6;
@@ -72,7 +75,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=6',
+                    'application/vnd.elife.article-vor+json; version=7',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -84,6 +87,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
                 ],
             ];
 
@@ -103,11 +107,12 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/problem+json',
                 406,
             ];
+
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
                     'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=6',
+                    'application/vnd.elife.article-vor+json; version=7',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -119,7 +124,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 200,
                 [
                     'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=5' => '299 elifesciences.org "Deprecation: Support for version 5 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
                 ],
             ];
 
