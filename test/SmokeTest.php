@@ -64,6 +64,7 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $poaMinimum = 3;
                     break;
                 case '09562':
+                case '1234567890':
                     $vorMinimum = 7;
                     break;
                 default:

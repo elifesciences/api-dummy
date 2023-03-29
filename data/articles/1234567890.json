@@ -6,25 +6,29 @@
             "status": "preprint",
             "description": "This manuscript was published as a preprint.",
             "uri": "https://doi.org/10.1101/2021.11.09.467796",
-            "date": "2023-02-15T00:00:00Z"
+            "date": "2023-02-15T00:00:00Z",
+            "published": "2016-03-28T00:00:00Z"
         },
         {
             "status": "preprint",
             "description": "This manuscript was published as a reviewed preprint.",
             "uri": "https://doi.org/10.7554/eLife.1234567890.1",
-            "date": "2023-04-15T00:00:00Z"
+            "date": "2023-04-15T00:00:00Z",
+            "published": "2016-03-28T00:00:00Z"
         },
         {
             "status": "preprint",
             "description": "The reviewed preprint was revised.",
             "uri": "https://doi.org/10.7554/eLife.1234567890.2",
-            "date": "2023-09-10T00:00:00Z"
+            "date": "2023-09-10T00:00:00Z",
+            "published": "2016-03-28T00:00:00Z"
         },
         {
             "status": "preprint",
             "description": "The reviewed preprint was revised.",
             "uri": "https://doi.org/10.7554/eLife.1234567890.3",
-            "date": "2023-11-10T00:00:00Z"
+            "date": "2023-11-10T00:00:00Z",
+            "published": "2016-03-28T00:00:00Z"
         },
         {
             "status": "vor",
@@ -34,6 +38,7 @@
             "doi": "10.7554/eLife.1234567890",
             "authorLine": "Frederick Peter Atherden III, Melissa Harrison ... Cornel West Jnr",
             "title": "eLife kitchen sink 3.0",
+            "published": "2016-03-28T00:00:00Z",
             "volume": 12,
             "elocationId": "RP1234567890",
             "pdf": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-v1.pdf",
@@ -193,7 +198,7 @@
                     "competingInterests": "No competing interests declared",
                     "contribution": "Conceptualization, Resources, Supervision, Funding acquisition, Validation, Writing – review and editing",
                     "emailAddresses": [
-                        "...@elifesciences.org"
+                        "test@elifesciences.org"
                     ],
                     "equalContributionGroups": [
                         1
@@ -209,7 +214,7 @@
                     "competingInterests": "No competing interests declared",
                     "contribution": "Resources, Methodology, Group atuhor contributions may break-down contribution per author in some cases",
                     "emailAddresses": [
-                        "...@elifesciences.org"
+                        "test@elifesciences.org"
                     ],
                     "name": "Example Group author",
                     "people": [
