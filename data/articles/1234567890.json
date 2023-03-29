@@ -1,0 +1,2716 @@
+{
+    "received": null,
+    "accepted": null,
+    "versions": [
+        {
+            "status": "preprint",
+            "description": "This manuscript was published as a preprint.",
+            "uri": "https://doi.org/10.1101/2021.11.09.467796",
+            "date": "2023-02-15T00:00:00Z"
+        },
+        {
+            "status": "preprint",
+            "description": "This manuscript was published as a reviewed preprint.",
+            "uri": "https://doi.org/10.7554/eLife.1234567890.1",
+            "date": "2023-04-15T00:00:00Z"
+        },
+        {
+            "status": "preprint",
+            "description": "The reviewed preprint was revised.",
+            "uri": "https://doi.org/10.7554/eLife.1234567890.2",
+            "date": "2023-09-10T00:00:00Z"
+        },
+        {
+            "status": "preprint",
+            "description": "The reviewed preprint was revised.",
+            "uri": "https://doi.org/10.7554/eLife.1234567890.3",
+            "date": "2023-11-10T00:00:00Z"
+        },
+        {
+            "status": "vor",
+            "id": "1234567890",
+            "version": 1,
+            "type": "research-article",
+            "doi": "10.7554/eLife.1234567890",
+            "authorLine": "Frederick Peter Atherden III, Melissa Harrison ... Cornel West Jnr",
+            "title": "eLife kitchen sink 3.0",
+            "volume": 12,
+            "elocationId": "RP1234567890",
+            "pdf": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-v1.pdf",
+            "xml": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-v1.xml",
+            "figuresPdf": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-figures-v1.pdf",
+            "subjects": [
+                {
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
+                },
+                {
+                    "id": "chromosomes-gene-expression",
+                    "name": "Chromosomes and Gene Expression"
+                }
+            ],
+            "researchOrganisms": [
+                "Human",
+                "Mouse"
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "content": [
+                            {
+                                "text": "Since 2015, the World <i>Health</i> Organisation (WHO) <sup>a</sup><sub>b</sub>...  <math id=\"infm1\"> <mi>P</mi> <mi>P</mi> <mi>V</mi> <mi/> <mo>=</mo> <mi/> <mfrac> <mrow> <mi>T</mi> <mi>P</mi> </mrow> <mrow> <mi>T</mi> <mi>P</mi> <mi/> <mo>+</mo> <mi/> <mi>F</mi> <mi>P</mi> </mrow> </mfrac> </math>",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs1",
+                        "title": "Background:",
+                        "type": "section"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "We <b>conducted</b> a stepped-wedge ...",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs2",
+                        "title": "Methods:",
+                        "type": "section"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "A total <a href=\"https://elifesciences.org/\">sample</a> of 3019 participants ...",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs3",
+                        "title": "Results:",
+                        "type": "section"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "Our findings do not provide evidence ...",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs4",
+                        "title": "Conclusions:",
+                        "type": "section"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "Funded by the Dutch Postcode Lottery in the Netherlands ...",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs5",
+                        "title": "Funding:",
+                        "type": "section"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "<a href=\"https://clinicaltrials.gov/show/NCT02909218\">NCT02909218</a> and                          <a href=\"http://www.chictr.org.cn/showprojen.aspx?proj=9639\">ChiCTR-IOR-14005319</a>.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "id": "abs6",
+                        "title": "Clinical trial number:",
+                        "type": "section"
+                    }
+                ]
+            },
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Atherden et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authors": [
+                {
+                    "additionalInformation": [
+                        "Author order was decided on a coin toss."
+                    ],
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom",
+                                    "locality": [
+                                        "Cambridge"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Cambridge",
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "The department of production, eLife Sciences"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "is a member of some group, and has shares in some company. No other competing interests to declare",
+                    "contribution": "Conceptualization, Data curation, Formal analysis, Validation, Investigation, Visualization, Methodology, Writing - original draft",
+                    "emailAddresses": [
+                        "f.atherden@elifesciences.org"
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "name": {
+                        "index": "Atherden, Frederick Peter, III",
+                        "preferred": "Frederick Peter Atherden III"
+                    },
+                    "orcid": "0000-0002-6048-1470",
+                    "type": "person"
+                },
+                {
+                    "additionalInformation": [
+                        "Author order was decided on a coin toss."
+                    ],
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom",
+                                    "locality": [
+                                        "Cambridge"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Cambridge",
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "The department of production, eLife Sciences"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Conceptualization, Resources, Supervision, Funding acquisition, Validation, Writing – review and editing",
+                    "emailAddresses": [
+                        "...@elifesciences.org"
+                    ],
+                    "equalContributionGroups": [
+                        1
+                    ],
+                    "name": {
+                        "index": "Harrison, Melissa",
+                        "preferred": "Melissa Harrison"
+                    },
+                    "orcid": "0000-0002-4932-938X",
+                    "type": "person"
+                },
+                {
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Resources, Methodology, Group atuhor contributions may break-down contribution per author in some cases",
+                    "emailAddresses": [
+                        "...@elifesciences.org"
+                    ],
+                    "name": "Example Group author",
+                    "people": [
+                        {
+                            "affiliations": [
+                                {
+                                    "address": {
+                                        "components": {
+                                            "country": "United Kingdom",
+                                            "locality": [
+                                                "Cambridge"
+                                            ]
+                                        },
+                                        "formatted": [
+                                            "Cambridge",
+                                            "United Kingdom"
+                                        ]
+                                    },
+                                    "name": [
+                                        "eLife"
+                                    ]
+                                }
+                            ],
+                            "name": {
+                                "index": "Gilbert, James",
+                                "preferred": "James Gilbert"
+                            },
+                            "orcid": "0000-1002-4932-938X",
+                            "type": "person"
+                        }
+                    ],
+                    "type": "group"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom",
+                                    "locality": [
+                                        "Cambridge"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Cambridge",
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "The department of production, eLife Sciences"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Resources, Supervision, Writing – review and editing, Free text contribution",
+                    "deceased": true,
+                    "equalContributionGroups": [
+                        2
+                    ],
+                    "name": {
+                        "index": "Claus, Santa",
+                        "preferred": "Santa Claus"
+                    },
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Bethesda"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Bethesda",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "JATS4R"
+                            ]
+                        }
+                    ],
+                    "competingInterests": "No competing interests declared",
+                    "contribution": "Resources, Supervision, Writing – review and editing, Free text contribution",
+                    "equalContributionGroups": [
+                        2
+                    ],
+                    "name": {
+                        "index": "West, Cornel, Jnr",
+                        "preferred": "Cornel West Jnr"
+                    },
+                    "type": "person"
+                },
+                {
+                    "onBehalfOf": "on behalf of whoever finds this interesting",
+                    "type": "on-behalf-of"
+                }
+            ],
+            "reviewers": [
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United States",
+                                    "locality": [
+                                        "Berkeley"
+                                    ]
+                                },
+                                "formatted": [
+                                    "Berkeley",
+                                    "United States"
+                                ]
+                            },
+                            "name": [
+                                "University of California, Berkeley"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Eisen, Mike",
+                        "preferred": "Mike Eisen"
+                    },
+                    "role": "Senior Editor",
+                    "type": "person"
+                },
+                {
+                    "affiliations": [
+                        {
+                            "address": {
+                                "components": {
+                                    "country": "United Kingdom"
+                                },
+                                "formatted": [
+                                    "United Kingdom"
+                                ]
+                            },
+                            "name": [
+                                "Imperial College London"
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "index": "Helaine, Sophie",
+                        "preferred": "Sophie Helaine"
+                    },
+                    "role": "Reviewing Editor",
+                    "type": "person"
+                }
+            ],
+            "ethics": [
+                {
+                    "text": "Human subjects: If Research Ethics Committee and Institutional Review Board approval was required for this article the details would be listed here.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Animal subjects: If there were animal subjects involved in the study the approval number for the research along with protocol approval would be listed here.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "If this article was part of a clinical trial and the article didn't have a structured abstract, the Clinical trial registry and ID would be listed here, for example:",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Clinical trial Registry: EudraCT.",
+                    "type": "paragraph"
+                },
+                {
+                    "text": "Registration ID: EudraCT2004-000446-20.",
+                    "type": "paragraph"
+                }
+            ],
+            "funding": {
+                "awards": [
+                    {
+                        "awardId": "DA037327",
+                        "id": "fund1",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Atherden, Frederick",
+                                    "preferred": "Frederick Atherden"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "funderId": "10.13039/100000002",
+                            "name": [
+                                "National Institutes of Health"
+                            ]
+                        }
+                    },
+                    {
+                        "awardId": "00000000001",
+                        "id": "fund2",
+                        "recipients": [
+                            {
+                                "name": {
+                                    "index": "Atherden, Frederick",
+                                    "preferred": "Frederick Atherden"
+                                },
+                                "type": "person"
+                            }
+                        ],
+                        "source": {
+                            "name": [
+                                "eLife Sciences"
+                            ]
+                        }
+                    }
+                ],
+                "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+            },
+            "additionalFiles": [
+                {
+                    "caption": [
+                        {
+                            "text": "A file containing underlying data.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-supp1-v1.csv",
+                    "id": "supp1",
+                    "label": "Supplementary file 1",
+                    "mediaType": "application/csv",
+                    "title": "This is the title of the supplementary file 1 (<a href=\"#bib14\">Srinivasan, 2019</a>).",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-supp1-v1.csv"
+                },
+                {
+                    "filename": "elife-1234567890-audio1-v1.wav",
+                    "id": "audio1",
+                    "label": "Audio file 1",
+                    "mediaType": "audio/x-wav",
+                    "title": "This is a title for an audio file.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-audio1-v1.wav"
+                },
+                {
+                    "filename": "elife-1234567890-data1-v1.xlsx",
+                    "id": "sdata1",
+                    "label": "Source data 1",
+                    "mediaType": "application/xlsx",
+                    "title": "This is the title of the source data that is not attached to a specific figure, but to the article as a whole.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-data1-v1.xlsx"
+                },
+                {
+                    "filename": "elife-1234567890-code1-v1.zip",
+                    "id": "scode1",
+                    "label": "Source code 1",
+                    "mediaType": "application/zip",
+                    "title": "This is the title of the source code that is not attached to a specific figure, but to the article as a whole.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-code1-v1.zip"
+                },
+                {
+                    "filename": "elife-1234567890-repstand1-v1.pdf",
+                    "id": "repstand1",
+                    "label": "Reporting standard 1",
+                    "mediaType": "application/pdf",
+                    "title": "CONSORT checklist.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-repstand1-v1.pdf"
+                },
+                {
+                    "filename": "elife-1234567890-mdarchecklist1-v1.pdf",
+                    "id": "mdar",
+                    "label": "MDAR checklist",
+                    "mediaType": "application/pdf",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-mdarchecklist1-v1.pdf"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source data caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-data1-v1.docx",
+                    "id": "app3fig1sdata1",
+                    "label": "Appendix 3—figure 1—source data 1",
+                    "mediaType": "application/docx",
+                    "title": "Source data title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-data1-v1.docx"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source data caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-data2-v1.zip",
+                    "id": "app3fig1sdata2",
+                    "label": "Appendix 3—figure 1—source data 2",
+                    "mediaType": "application/zip",
+                    "title": "Source data title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-data2-v1.zip"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source code caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-code1-v1.zip",
+                    "id": "app3fig1scode1",
+                    "label": "Appendix 3—figure 1—source code 1",
+                    "mediaType": "application/zip",
+                    "title": "Source code title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-code1-v1.zip"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source data caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-figsupp1-data1-v1.docx",
+                    "id": "app3fig1s1sdata1",
+                    "label": "Appendix 3—figure 1—figure supplement 1—source data 1",
+                    "mediaType": "application/docx",
+                    "title": "Source data title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsupp1-data1-v1.docx"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source data caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-figsup1-data2-v1.zip",
+                    "id": "app3fig1s1sdata2",
+                    "label": "Appendix 3—figure 1—figure supplement 1—source data 2",
+                    "mediaType": "application/zip",
+                    "title": "Source data title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsup1-data2-v1.zip"
+                },
+                {
+                    "caption": [
+                        {
+                            "text": "Source code caption.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "filename": "elife-1234567890-app3-fig1-figsup1-code1-v1.zip",
+                    "id": "app3fig1s1scode1",
+                    "label": "Appendix 3—figure 1—figure supplement 1—source code 1",
+                    "mediaType": "application/zip",
+                    "title": "Source code title.",
+                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsup1-code1-v1.zip"
+                }
+            ],
+            "dataSets": {
+                "availability": [
+                    {
+                        "text": "Sequencing data have been deposited in GEO under accession code GSE143275 (<a href=\"#bib5\">Hao et al., 2020</a>). We also used some data from Dryad (<a href=\"#bib8\">Kok et al., 2015</a>). All other data generated or analysed during this study are included in the manuscript and supporting files. MATLAB scripts used to generate Figures 1-3 are available at <a href=\"https://github.com/wyartlab/Cantaut-Belarif-et-al.-2020\">GitHub</a> (copy archived at <a href=\"#bib1\">Cantaut-Belarif et al., 2020</a>).",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "impactStatement": "This is an impact statement <i>i</i><sup>a</sup><sub>b</sub>.",
+            "keywords": [
+                "flight",
+                "swimming",
+                "locomotion",
+                "muscle efficiency",
+                "strouhal number",
+                "wing"
+            ],
+            "digest": {
+                "content": [
+                    {
+                        "text": "This is a digest.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "It will consist of multiple paragraphs.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "No links, citations etc. will appear here.",
+                        "type": "paragraph"
+                    }
+                ]
+            },
+            "body": [
+                {
+                    "content": [
+                        {
+                            "text": "Lorem <b>ipsum</b> <i>dolor</i> <sup>sit</sup> <sub>amet</sub>, <span class=\"small-caps\">consectetur</span> <span class=\"monospace\">adipiscing</span> elit. <span class=\"underline\">In</span> maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc. Mauris quis iaculis diam (see Appendix 1) Etiam nec blandit ipsum, venenatis ornare libero. Aliquam sed tincidunt nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vehicula varius placerat. Maecenas sed dictum eros, eu consequat eros (<a href=\"#bib1\">Cantaut-Belarif et al., 2020</a>) nulla a sodales tellus (see Results). Nunc id eros quis neque vehicula accumsan. Fusce a dolor non ligula euismod semper. Aoin tempor dolor nec sapien ornare, sed volutpat libero cursus. Duis at tempus lacus. Vestibulum dapibus sem sit amet sapien pulvinar, nec vestibulum est pulvinar (<a href=\"#bib2\">Feyerabend, 2010</a>; <a href=\"#fig1\">Figure 1</a>; <a href=\"#fig1s1\">Figure 1—figure supplement 1</a>; <a href=\"#fig1video1\">Figure 2—video 1</a>).",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "(<b>A, B</b>) Dependence of CME on Hip1R. (<b>A</b>) Simulation varying number of Hip1R. (<b>B</b>) Hip1R knockdown inhibits CME (transferrin uptake) in HeLa cells... (<b>C, D</b>) Capping actin filaments inhibits CME. (<b>C</b>) Simulation. (<b>D</b>) Slower assembly and disassembly of endogenous dynamin2-GFP at sites of endocytosis in SK-MEL-2 cells treated with different concentrations of Cytochalasin D. (<b>E, F</b>) Endocytic actin filaments bend at sites of mammalian endocytosis, tested by cryo-electron tomography of intact mammalian cells. (<b>G, H</b>) Mammalian CME is sensitive to Arp2/3 complex activity, revealed by treating SK-MEL-2 cells expressing endogenous clathrin and dynamin2 fluorescent tags with the Arp2/3 complex inhibitor CK-666 (<a href=\"#bib2\">Feyerabend, 2010</a>; <a href=\"#fig1sdata1\">Figure 1—source data 1</a>; <a href=\"#fig1sdata2\">Figure 1—source data 2</a>; <a href=\"#fig1scode1\">Figure 1—source code 1</a>).",
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "text": "We use the following model (<a href=\"#equ1\">Equation 1</a>) to represent the dynamics of a population of cells in which the transcription factors NANOG and GATA6 mutually repress each other through extracellular growth factor signaling:",
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "id": "equ1",
+                                            "label": "(1)",
+                                            "mathml": "<math>\n<mstyle displaystyle=\"true\" scriptlevel=\"0\">\n<mrow>\n<mi>d</mi>\n<mtext> </mtext>\n<mo>=</mo>\n<mtext> </mtext>\n<msqrt>\n<msup>\n<mrow>\n<mo>(</mo>\n<mfrac>\n<mrow>\n<mi>P</mi>\n<mi>r</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mi>i</mi>\n<mi>c</mi>\n<mi>t</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi mathvariant=\"bold-italic\">i</mi>\n<mtext> </mtext>\n</mrow>\n</msub>\n<mo>−</mo>\n<mtext> </mtext>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n<mrow>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n</mfrac>\n<mo>)</mo>\n</mrow>\n<mrow>\n<mn>2</mn>\n</mrow>\n</msup>\n</msqrt>\n</mrow>\n</mstyle>\n</math>",
+                                            "type": "mathml"
+                                        }
+                                    ],
+                                    "id": "fig1",
+                                    "image": {
+                                        "alt": "",
+                                        "attribution": [
+                                            "© 2004, American Society for Cell Biology, All Rights Reserved. Panel B is reproduced from <a href=\"#bib15\">World Health Organization, 2015</a> with permission. It is not covered by the CC-BY 4.0 licence and further reproduction of this panel would need permission from the copyright holder.",
+                                            "© 2014, copyright holder. Panel D is reproduced from <a href=\"#bib15\">World Health Organization, 2015</a> published under a <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">Creative Commons Attribution License (CC BY-NC-ND 4.0)</a>"
+                                        ],
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-v1.tif",
+                                        "size": {
+                                            "width": 840,
+                                            "height": 634
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-fig1-v1.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 1",
+                                    "sourceData": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source data caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-data1-v1.docx",
+                                            "id": "fig1sdata1",
+                                            "label": "Figure 1—source data 1",
+                                            "mediaType": "application/docx",
+                                            "title": "Source data title.",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-data1-v1.docx"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source data caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-data2-v1.zip",
+                                            "id": "fig1sdata2",
+                                            "label": "Figure 1—source data 2",
+                                            "mediaType": "application/zip",
+                                            "title": "Source data title (<a href=\"#bib15\">World Health Organization, 2015</a>).",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-data2-v1.zip"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source code caption <a href=\"#bib15\">World Health Organization, 2015</a>.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-code1-v1.zip",
+                                            "id": "fig1scode1",
+                                            "label": "Figure 1—source code 1",
+                                            "mediaType": "application/zip",
+                                            "title": "Source code title.",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-code1-v1.zip"
+                                        }
+                                    ],
+                                    "title": "Figure title (<a href=\"#bib15\">World Health Organization, 2015</a>; <a href=\"#bib18\">Himmelstein et al., 2016</a>).",
+                                    "type": "image"
+                                },
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "(<b>A, B</b>) Dependence of CME on Hip1R. (<b>A</b>) Simulation varying number of Hip1R. (<b>B</b>) Hip1R knockdown inhibits CME (transferrin uptake) in HeLa cells... (<b>C, D</b>) Capping actin filaments inhibits CME. (<b>C</b>) Simulation. (<b>D</b>) Slower assembly and disassembly of endogenous dynamin2-GFP at sites of endocytosis in SK-MEL-2 cells treated with different concentrations of Cytochalasin D. (<b>E, F</b>) Endocytic actin filaments bend at sites of mammalian endocytosis, tested by cryo-electron tomography of intact mammalian cells. (<b>G, H</b>) Mammalian CME is sensitive to Arp2/3 complex activity, revealed by treating SK-MEL-2 cells expressing endogenous clathrin and dynamin2 fluorescent tags with the Arp2/3 complex inhibitor CK-666 (<a href=\"#fig1s1sdata1\">Figure 1—figure supplement 1—source data 1</a>; <a href=\"#fig1s1sdata2\">Figure 1—figure supplement 1—source data 2</a>; <a href=\"#fig1s1scode1\">Figure 1—figure supplement 1—source code 1</a>).",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig1s1",
+                                    "image": {
+                                        "alt": "",
+                                        "attribution": [
+                                            "© 2004, American Society for Cell Biology, All Rights Reserved. Panel B is reproduced from <a href=\"#bib15\">World Health Organization, 2015</a> with permission. It is not covered by the CC-BY 4.0 licence and further reproduction of this panel would need permission from the copyright holder.",
+                                            "© 2014, copyright holder. Panel D is reproduced from <a href=\"#bib15\">World Health Organization, 2015</a> published under a <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">Creative Commons Attribution License (CC BY-NC-ND 4.0)</a>"
+                                        ],
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-figsupp1-v1.tif",
+                                        "size": {
+                                            "width": 441,
+                                            "height": 145
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-figsupp1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-fig1-figsupp1-v1.jpg"
+                                        }
+                                    },
+                                    "label": "Figure 1—figure supplement 1",
+                                    "sourceData": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source data caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-figsupp1-data1-v1.docx",
+                                            "id": "fig1s1sdata1",
+                                            "label": "Figure 1—figure supplement 1—source data 1",
+                                            "mediaType": "application/docx",
+                                            "title": "Source data title.",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-figsupp1-data1-v1.docx"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source data caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-figsupp1-data2-v1.zip",
+                                            "id": "fig1s1sdata2",
+                                            "label": "Figure 1—figure supplement 1—source data 2",
+                                            "mediaType": "application/zip",
+                                            "title": "Source data title.",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-figsupp1-data2-v1.zip"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "Source code caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "filename": "elife-1234567890-fig1-figsupp1-code1-v1.zip",
+                                            "id": "fig1s1scode1",
+                                            "label": "Figure 1—figure supplement 1—source code 1",
+                                            "mediaType": "application/zip",
+                                            "title": "Source code title.",
+                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-figsupp1-code1-v1.zip"
+                                        }
+                                    ],
+                                    "title": "Figure supplement title.",
+                                    "type": "image"
+                                },
+                                {
+                                    "attribution": [
+                                        "© 2004, American Society for Cell Biology, All Rights Reserved. video is reproduced from  with permission. It is not covered by the CC-BY 4.0 licence and further reproduction of this panel would need permission from the copyright holder."
+                                    ],
+                                    "caption": [
+                                        {
+                                            "text": "First 100 s of representative ... Scale bar, 20 µm.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "fig1video1",
+                                    "label": "Figure 1—video 1",
+                                    "title": "TIRF force reconstitution assay of wild-type vinculin ABD.",
+                                    "type": "video",
+                                    "height": 720,
+                                    "width": 1280,
+                                    "image": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-fig1-video1.jpg",
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-fig1-video1.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-fig1-video1.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-fig1-video1.ogv"
+                                        }
+                                    ],
+                                    "placeholder": {
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-video1.jpg",
+                                        "alt": "",
+                                        "size": {
+                                            "width": 1280,
+                                            "height": 720
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-fig1-video1.jpg/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-fig1-video1.jpg"
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc (<a href=\"#C1\">Chemical structure 1</a>; <a href=\"#S1\">Scheme 1</a>).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "To a solution of 5-methylthiazol-2-amine (1) (0.5 g; 4.39 mmol) in xylene (10 ml) was added 2, 2-dimethyl-4H-1, 3-dioxin-4-one (2) (685 mg; 4.83 mmol). <a href=\"#bib3\">Galkin et al., 2010a</a>. The mixture was stirred for 12 hr at 135°C, then cooled to room temperature. The solution was filtered and washed with petroleum ether, after filtration, the solid was used directly without purification (3) (0.73 g; 3.69 mmol, 84%). <sup>1</sup>H NMR (400 MHz, DMSO-<i>d</i><sub>6</sub>) δ 11.95 (s, 1H), 7.13 (s, 1H), 3.66 (s, 2H), 2.34 (s, 3H), 2.19 (s, 3H); <sup>13</sup>C NMR (101 MHz, DMSO-<i>d</i><sub>6</sub>) δ 202.68, 165.26, 156.30, 135.18, 126.70, 51.22, 30.70, 11.53; HRMS (<i>m/z</i>): [M+H]<sup>+</sup> calculated for C<sub>8</sub>H<sub>11</sub>N<sub>2</sub>O<sub>2</sub>S, 199.0530; found, 199.0548.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "C1",
+                                            "image": {
+                                                "alt": "",
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-C1-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 1778,
+                                                    "height": 726
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-C1-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-C1-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Chemical structure 1",
+                                            "title": "Synthesis of N-(5-methylthiazol-2-yl)−3-oxobutanamide (3).",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "id": "S1",
+                                            "image": {
+                                                "alt": "",
+                                                "attribution": [
+                                                    "Image credit - Ms. Claus."
+                                                ],
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-scheme1-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 1799,
+                                                    "height": 320
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-scheme1-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-scheme1-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Scheme 1",
+                                            "title": "General procedure A.",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "content": [
+                                        {
+                                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit in <a href=\"#video1\">Video 1</a>. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc.",
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "assets": [
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "First 100 s of representative ... Scale bar, 20 µm.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "id": "video1",
+                                                    "label": "Video 1",
+                                                    "title": "TIRF force reconstitution assay of wild-type vinculin ABD.",
+                                                    "type": "video",
+                                                    "height": 720,
+                                                    "width": 1280,
+                                                    "image": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-video1.jpg",
+                                                    "sources": [
+                                                        {
+                                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-video1.mp4"
+                                                        },
+                                                        {
+                                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-video1.webm"
+                                                        },
+                                                        {
+                                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-video1.ogv"
+                                                        }
+                                                    ],
+                                                    "placeholder": {
+                                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-video1.jpg",
+                                                        "alt": "",
+                                                        "size": {
+                                                            "width": 1280,
+                                                            "height": 720
+                                                        },
+                                                        "source": {
+                                                            "mediaType": "image/jpeg",
+                                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-video1.jpg/full/full/0/default.jpg",
+                                                            "filename": "elife-1234567890-video1.jpg"
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "type": "figure"
+                                        }
+                                    ],
+                                    "id": "s1-1-1",
+                                    "title": "Section level 3",
+                                    "type": "section"
+                                }
+                            ],
+                            "id": "s1-1",
+                            "title": "Section level 2",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "s1",
+                    "title": "Introduction",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "... (<a href=\"#bib3\">Galkin et al., 2010a</a>; <a href=\"#bib4\">Galkin et al., 2010b</a>) ... <a href=\"#bib2\">Feyerabend, 2010</a>.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "<a href=\"#bib5\">Hao et al., 2020</a>; <a href=\"#bib16\">Zok, 2020</a>; <a href=\"#bib17\">Zurray, 2019</a> lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc.",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s2-1",
+                            "title": "Section level 2",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "Lorem ipsum <a href=\"#bib6\">Harmon, 2019</a> dolor sit amet, consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "content": [
+                                        {
+                                            "text": "Lorem ipsum dolor sit amet, <a href=\"#bib8\">Kok et al., 2015</a> consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc.",
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "content": [
+                                                {
+                                                    "text": "Lorem ipsum dolor sit <a href=\"#bib7\">Hogarth et al., 2012</a> amet, consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc.",
+                                                    "type": "paragraph"
+                                                },
+                                                {
+                                                    "content": [
+                                                        {
+                                                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus, turpis ut molestie bibendum, arcu dolor facilisis erat, eu rhoncus libero magna ac nunc <a href=\"#table1\">Table 1</a>.",
+                                                            "type": "paragraph"
+                                                        },
+                                                        {
+                                                            "assets": [
+                                                                {
+                                                                    "caption": [
+                                                                        {
+                                                                            "text": "This is the caption: A table containing interesting formating that is large enough to require landscape orientation in the PDF.",
+                                                                            "type": "paragraph"
+                                                                        }
+                                                                    ],
+                                                                    "footnotes": [
+                                                                        {
+                                                                            "text": [
+                                                                                {
+                                                                                    "text": "Footnotes not linked to content within the table text are usually to define abbreviations. For example:",
+                                                                                    "type": "paragraph"
+                                                                                },
+                                                                                {
+                                                                                    "text": "WT, wild type.",
+                                                                                    "type": "paragraph"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "id": "table1-fn1",
+                                                                            "label": "<sup>*</sup>",
+                                                                            "text": [
+                                                                                {
+                                                                                    "text": "Footnotes can be used to highlight properties of data reported in a table such as statistical significance. They are separate from the table caption and appear afterwards. They are hyperlinked to allow easy navigation. Footnotes in tables use the same standard set of symbols used for authors footnotes (<a href=\"#bib10\">Paciência, 2019</a>).",
+                                                                                    "type": "paragraph"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "id": "table1-fn2",
+                                                                            "label": "<sup>†</sup>",
+                                                                            "text": [
+                                                                                {
+                                                                                    "text": "Atoms: Cα, N, C, O.",
+                                                                                    "type": "paragraph"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "id": "table1",
+                                                                    "label": "Table 1",
+                                                                    "sourceData": [
+                                                                        {
+                                                                            "caption": [
+                                                                                {
+                                                                                    "text": "Each data point was performed in duplicate and is shown separately.",
+                                                                                    "type": "paragraph"
+                                                                                }
+                                                                            ],
+                                                                            "filename": "elife-1234567890-table1-data1-v1.xlsx",
+                                                                            "id": "table1sdata1",
+                                                                            "label": "Table 1—source data 1",
+                                                                            "mediaType": "application/xlsx",
+                                                                            "title": "Representative curves of steady-state kinetic analyses for each IGF1R protein characterized.",
+                                                                            "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-table1-data1-v1.xlsx"
+                                                                        }
+                                                                    ],
+                                                                    "tables": [
+                                                                        "<table>\n<thead>\n<tr>\n<th colspan=\"3\" rowspan=\"2\"> </th>\n<th align=\"center\" colspan=\"8\">GLV<i>s</i> (percent IS plant<sup>-1</sup>)</th>\n<th align=\"center\" colspan=\"17\">TPS10 products (percent IS plant<sup>-1</sup>)</th>\n<th align=\"center\" colspan=\"10\">Non-target volatiles (percent IS plant<sup>-1</sup>)</th>\n</tr>\n<tr>\n<th align=\"center\" colspan=\"8\">(<i>Z</i>)-Hexen-3-ol</th>\n<th align=\"center\" colspan=\"10\">TAB</th><th align=\"center\" colspan=\"7\">TBF</th>\n<th align=\"center\" colspan=\"6\">α-Duprezianene</th>\n<th align=\"center\" colspan=\"4\">Germacrene A</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><b>Genotype</b></td>\n<td><b>Day n</b></td>\n<td><b>Night n</b></td>\n<td colspan=\"3\"><b>Day</b></td>\n<td colspan=\"5\"><b>Night</b></td>\n<td colspan=\"4\"><b>Day</b></td>\n<td colspan=\"6\"><b>Night</b></td>\n<td colspan=\"4\"><b>Day</b></td>\n<td colspan=\"3\"><b>Night</b></td>\n<td colspan=\"3\"><b>Day</b></td>\n<td colspan=\"3\"><b>Night</b></td>\n<td colspan=\"3\"><b>Day</b></td>\n<td><b>Night</b></td>\n</tr>\n<tr>\n<td><b>WT</b><sup>*</sup></td>\n<td>8</td><td>8 (<a href=\"#bib9\">Onoda, 2015</a>)</td>\n<td>0.99%</td>\n<td>±</td>\n<td>0.99%</td>\n<td style=\"background-color: #90caf9;\">7.96%</td>\n<td>±</td>\n<td>4.25%</td>\n<td rowspan=\"2\" valign=\"middle\"><span style=\"color: #366BFB;\">}</span></td>\n<td rowspan=\"2\" valign=\"middle\"><b><span style=\"color: #9C27B0;\">a</span></b></td>\n<td>0.37%</td>\n<td>±</td>\n<td>0.29%</td>\n<td><span style=\"color: #D50000;\">b</span></td>\n<td colspan=\"3\">—</td>\n<td> </td>\n<td rowspan=\"3\" valign=\"middle\">}</td>\n<td rowspan=\"2\" valign=\"bottom\"><b>a</b><sub><b>TPS</b></sub></td>\n<td colspan=\"3\">—</td>\n<td><b>a</b></td>\n<td colspan=\"3\">—</td>\n<td>2.13%</td>\n<td>±</td>\n<td>0.85%</td>\n<td>0.96%</td>\n<td>±</td>\n<td>0.42%</td>\n<td>1.68%</td>\n<td>±</td>\n<td>0.98%</td>\n<td>—</td>\n</tr>\n<tr>\n<td><b><i>TPS10</i></b></td>\n<td><span class=\"monospace\">0.17/0.21 (0.16/0.19)</span></td>\n<td><i>7</i>7</td>\n<td>2.37%</td>\n<td>±</td>\n<td>1.55%</td>\n<td>2.84%</td>\n<td>±</td>\n<td>0.63%</td>\n<td>18.97%</td>\n<td>±</td>\n<td>6.03%</td>\n<td><b>b</b></td>\n<td>0.94% (<a href=\"#bib10\">Paciência, 2019</a>)</td>\n<td>±</td>\n<td>0.53%</td>\n<td rowspan=\"3\" valign=\"middle\">}</td>\n<td>9.34%<a href=\"#table1-fn2\"><sup>†</sup></a></td>\n<td>±</td>\n<td>3.44%</td>\n<td><b>b</b></td>\n<td>0.20%</td>\n<td>±</td>\n<td>0.20%</td>\n<td>9.47%</td>\n<td>±</td>\n<td>5.26%</td>\n<td>0.94%</td>\n<td>±</td>\n<td>0.26%</td>\n<td>2.78%</td>\n<td>±</td>\n<td>1.52%</td>\n<td>—</td>\n</tr>\n<tr>\n<td><b><i>lox2/3</i></b></td>\n<td>7</td>\n<td>8</td>\n<td>0.13%</td>\n<td>±</td>\n<td>0.13%</td>\n<td>1.06%</td>\n<td>±</td>\n<td>0.64%</td>\n<td rowspan=\"2\" valign=\"middle\">}</td>\n<td rowspan=\"2\" valign=\"middle\"><b>b</b><sub><b>lox</b></sub></td>\n<td colspan=\"3\">—</td>\n<td><b>a</b></td>\n<td>0.15%</td>\n<td>±</td>\n<td>0.15%</td>\n<td rowspan=\"2\"><b>b</b><sub><b>TPS</b></sub></td>\n<td colspan=\"3\">—</td>\n<td><b>a</b></td>\n<td colspan=\"3\">—</td>\n<td>2.75%</td>\n<td>±</td>\n<td>1.12%</td>\n<td>0.60%</td>\n<td>±</td>\n<td>0.19%</td>\n<td>1.68%</td>\n<td>±</td>\n<td>1.49%</td>\n<td>—</td>\n</tr>\n<tr>\n<td><b><i>lox2/3</i>x<i>TPS10</i></b></td>\n<td>7</td>\n<td>7</td>\n<td>0.07%</td>\n<td>±</td>\n<td>0.07%</td>\n<td>1.24%</td>\n<td>±</td>\n<td>0.84%</td>\n<td>7.39%</td>\n<td>±</td>\n<td>2.56%</td>\n<td><b>b</b></td>\n<td>2.08%</td>\n<td>±</td>\n<td>0.84%</td>\n<td> </td>\n<td>4.47%</td>\n<td>±</td>\n<td>1.70%</td>\n<td><b>b</b></td>\n<td>0.40%</td>\n<td>±</td>\n<td>0.40%</td>\n<td>3.02%</td>\n<td>±</td>\n<td>1.42%</td>\n<td>0.73%</td>\n<td>±</td>\n<td>0.31%</td>\n<td>0.66%</td>\n<td>±</td>\n<td>0.37%</td>\n<td>—</td>\n</tr>\n</tbody>\n</table>"
+                                                                    ],
+                                                                    "title": "This is the title.",
+                                                                    "type": "table"
+                                                                }
+                                                            ],
+                                                            "type": "figure"
+                                                        }
+                                                    ],
+                                                    "id": "s2-2-1-1-1",
+                                                    "title": "Section level 5",
+                                                    "type": "section"
+                                                }
+                                            ],
+                                            "id": "s2-2-1-1",
+                                            "title": "Section level 4",
+                                            "type": "section"
+                                        }
+                                    ],
+                                    "id": "s2-2-1",
+                                    "title": "Section level 3",
+                                    "type": "section"
+                                }
+                            ],
+                            "id": "s2-2",
+                            "title": "Section level 2",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "s2",
+                    "title": "Results",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "... <span style=\"color: #366BFB;\">Here is another example of coloured text</span>.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The function of the Discussion is to interpret your results in light of what was already known about the subject of the investigation, and to explain our new understanding of the problem after taking your results into consideration (<a href=\"#bib11\">R Development Core Team, 2017</a>; <a href=\"#bib1\">Cantaut-Belarif et al., 2020</a>; <a href=\"#bib4\">Galkin et al., 2010b</a>; <a href=\"#box1\">Box 1</a>). The Discussion will always connect to the Introduction by way of the question(s) or hypotheses you posed and the literature you cited, but it does not simply repeat or rearrange the Introduction (<a href=\"#supp1\">Supplementary file 1</a>). Instead, it tells how your study has moved us forward from the place you left us at the end of the Introduction as in <a href=\"#bib11\">R Development Core Team, 2017</a>; <a href=\"#box1fig1\">Box 1—figure 1</a>.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "assets": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "This is a caption (<a href=\"#bib12\">Richter, 2013</a>).",
+                                                    "type": "paragraph"
+                                                },
+                                                {
+                                                    "text": "This is a second paragraph in a caption.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "box1fig1",
+                                            "image": {
+                                                "alt": "",
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-box1-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 857,
+                                                    "height": 524
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-box1-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-box1-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Box 1—figure 1",
+                                            "title": "This is a title.",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "text": "...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "items": [
+                                        [
+                                            {
+                                                "text": "'Contamination'",
+                                                "type": "paragraph"
+                                            },
+                                            {
+                                                "items": [
+                                                    [
+                                                        {
+                                                            "text": "Cell line <sup>superscript</sup><sub>subscript</sub> &amp; p&lt;0.001",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            "text": "<i>C. elegans</i>",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ]
+                                                ],
+                                                "prefix": "roman-lower",
+                                                "type": "list"
+                                            }
+                                        ]
+                                    ],
+                                    "prefix": "number",
+                                    "type": "list"
+                                },
+                                {
+                                    "text": "...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "id": "equ100000000",
+                                    "mathml": "<math>\n<mi>P</mi>\n<mi>P</mi>\n<mi>V</mi>\n<mi/>\n<mo>=</mo>\n<mi/>\n<mfrac>\n<mrow>\n<mi>T</mi>\n<mi>P</mi>\n</mrow>\n<mrow>\n<mi>T</mi>\n<mi>P</mi>\n<mi/>\n<mo>+</mo>\n<mi/>\n<mi>F</mi>\n<mi>P</mi>\n</mrow>\n</mfrac>\n</math>",
+                                    "type": "mathml"
+                                },
+                                {
+                                    "text": "where each term above describes the rate of events that change the epidemic state: Births ( <math id=\"infm2\"> <mi>B</mi> </math> ), loss of maternally derived protection after MAB vaccination (<a href=\"#bib13\">Spangler, 2014</a>).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "text": "...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "items": [
+                                        [
+                                            {
+                                                "text": "'Contamination'",
+                                                "type": "paragraph"
+                                            },
+                                            {
+                                                "items": [
+                                                    [
+                                                        {
+                                                            "text": "Cell line <sup>superscript</sup><sub>subscript</sub> &amp; p&lt;0.001",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    [
+                                                        {
+                                                            "text": "<i>C. elegans</i> (<a href=\"#bib13\">Spangler, 2014</a>)",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ]
+                                                ],
+                                                "prefix": "roman-upper",
+                                                "type": "list"
+                                            }
+                                        ]
+                                    ],
+                                    "prefix": "none",
+                                    "type": "list"
+                                },
+                                {
+                                    "text": "...",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "box1",
+                            "label": "Box 1",
+                            "title": "What can you do now? (<a href=\"#bib15\">World Health Organization, 2015</a>)",
+                            "type": "box"
+                        }
+                    ],
+                    "id": "s3",
+                    "title": "Discussion",
+                    "type": "section"
+                },
+                {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "Here is some code:",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "code": "for i in `ls | grep accepted_hits.bam`; do \necho ${i} \nmodule load anaconda",
+                                    "type": "code"
+                                }
+                            ],
+                            "id": "s4-1",
+                            "title": "Code example",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "id": "equ2",
+                                    "label": "(2)",
+                                    "mathml": "<math>\n<msubsup>\n<mrow>\n<mi>K</mi>\n</mrow>\n<mrow>\n<mi>d</mi>\n</mrow>\n<mrow>\n<mi mathvariant=\"normal\">I</mi>\n<mi mathvariant=\"normal\">g</mi>\n<mi mathvariant=\"normal\">a</mi>\n<mi mathvariant=\"normal\">A</mi>\n<mo>-</mo>\n<mi mathvariant=\"normal\">R</mi>\n<mi mathvariant=\"normal\">c</mi>\n<mi mathvariant=\"normal\">s</mi>\n<mi mathvariant=\"normal\">F</mi>\n</mrow>\n</msubsup>\n<mi mathvariant=\"normal\"/>\n<mo>=</mo>\n<mi mathvariant=\"normal\"/>\n<mfrac>\n<mrow>\n<mfenced close=\"]\" open=\"[\" separators=\"|\">\n<mrow>\n<mi mathvariant=\"normal\">I</mi>\n<mi mathvariant=\"normal\">g</mi>\n<mi mathvariant=\"normal\">a</mi>\n<mi mathvariant=\"normal\">A</mi>\n</mrow>\n</mfenced>\n<mo>[</mo>\n<mi mathvariant=\"normal\">R</mi>\n<mi mathvariant=\"normal\">c</mi>\n<mi mathvariant=\"normal\">s</mi>\n<mi mathvariant=\"normal\">F</mi>\n<mo>]</mo>\n</mrow>\n<mrow>\n<mo>[</mo>\n<mi mathvariant=\"normal\">I</mi>\n<mi mathvariant=\"normal\">g</mi>\n<mi mathvariant=\"normal\">a</mi>\n<mi mathvariant=\"normal\">A</mi>\n<mo>-</mo>\n<mi mathvariant=\"normal\">R</mi>\n<mi mathvariant=\"normal\">c</mi>\n<mi mathvariant=\"normal\">s</mi>\n<mi mathvariant=\"normal\">F</mi>\n<mo>]</mo>\n</mrow>\n</mfrac>\n</math>",
+                                    "type": "mathml"
+                                },
+                                {
+                                    "text": "...  <math id=\"infm3\"> <mstyle displaystyle=\"true\" scriptlevel=\"0\"> <mrow> <mrow> <mo>[</mo> <mi>A</mi> <mo>]</mo> </mrow> <mo>∼</mo> <msqrt> <mfrac> <msup> <mi>F</mi> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msup> <mrow> <msub> <mi>k</mi> <mrow> <mi>m</mi> <mi>D</mi> <mi>H</mi> <mi>F</mi> <mi>R</mi> </mrow> </msub> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msubsup> </mrow> </mfrac> </msqrt> </mrow> </mstyle> </math>  ...                       <math id=\"infm4\"> <mrow> <mi>ν</mi> <mo>≪</mo> <mi>X</mi> </mrow> </math>  ...                       <math id=\"infm5\"> <mrow> <mi>ν</mi> <mo>≪</mo> <mi>G</mi> </mrow> </math>  ...",
+                                    "type": "paragraph"
+                                }
+                            ],
+                            "id": "s4-2",
+                            "title": "Formula",
+                            "type": "section"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "... <span class=\"sequence\"><b>C</b>TAGTCTCGAGATCTCCATGTTTACTTATACAGCTCATCCATGCC</span> ...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "items": [
+                                        [
+                                            {
+                                                "text": "<span class=\"sequence\"><span class=\"underline\">C</span>TAGTCTCGAGATCTCCATGTTTACTTATACAGCTCATCCATGCC</span>",
+                                                "type": "paragraph"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "text": "<span class=\"sequence\"><i>C</i>TAGTCTCGAGATCTCCATGTTTACTTA<span style=\"color: #9C27B0;\">CGAGATCTCCATGTTTACTTATA</span>GCC</span>",
+                                                "type": "paragraph"
+                                            }
+                                        ]
+                                    ],
+                                    "prefix": "number",
+                                    "type": "list"
+                                },
+                                {
+                                    "text": "Adding this paragraph here would split this list.",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "items": [
+                                        [
+                                            {
+                                                "text": "<span class=\"sequence\"><sup>C</sup><sub>T</sub>TAGTCT<span style=\"color: #D50000;\">CGAGATCTCCATGTTTACTTATA</span>CAGCTCATCCATGCC</span>",
+                                                "type": "paragraph"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "text": "<span class=\"sequence\">CTAGTCTCGAGATCTCCATGTTTACTTATACAGCTCATCCATGCC</span>",
+                                                "type": "paragraph"
+                                            }
+                                        ]
+                                    ],
+                                    "prefix": "number",
+                                    "type": "list"
+                                }
+                            ],
+                            "id": "s4-3",
+                            "title": "Gene sequences",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "s4",
+                    "title": "Materials and methods",
+                    "type": "section"
+                }
+            ],
+            "references": [
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Cantaut-Belarif, Y",
+                                "preferred": "Cantaut-Belarif Y"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Orts Del'Immagine, A",
+                                "preferred": "Orts Del'Immagine A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Penru, M",
+                                "preferred": "Penru M"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Pézeron, G",
+                                "preferred": "Pézeron G"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Wyart, C",
+                                "preferred": "Wyart C"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bardet, P-L",
+                                "preferred": "Bardet P-L"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2020",
+                    "id": "bib1",
+                    "publisher": {
+                        "name": [
+                            "Software Heritage"
+                        ]
+                    },
+                    "source": "Software Heritage",
+                    "title": "MATLAB scripts for Adrenergic activation modulates the signal from the Reissner fiber to cerebrospinal fluid-contacting neurons during development",
+                    "type": "software",
+                    "uri": "https://archive.softwareheritage.org/swh:1:dir:1f91fb94fed0c4a03fc9056163b442f9f9b9abd1;origin=https://github.com/wyartlab/Cantaut-Belarif-et-al.-2020;visit=swh:1:snp:2e499081fea02d16adea6449c5637a879ce0c7da;anchor=swh:1:rev:3396034de4726cb8c895a6e43bbc3d774b726fcb"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Feyerabend, PK",
+                                "preferred": "Feyerabend PK"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Against Method",
+                    "date": "2010",
+                    "edition": "4th Edition",
+                    "id": "bib2",
+                    "isbn": "978-1-84467-442-8",
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "London"
+                                ]
+                            },
+                            "formatted": [
+                                "London"
+                            ]
+                        },
+                        "name": [
+                            "Verso"
+                        ]
+                    },
+                    "type": "book"
+                },
+                {
+                    "articleTitle": "Opening of tandem calponin homology domains regulates their affinity for F-actin",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Galkin, VE",
+                                "preferred": "Galkin VE"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Orlova, A",
+                                "preferred": "Orlova A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Salmazo, A",
+                                "preferred": "Salmazo A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Djinovic-Carugo, K",
+                                "preferred": "Djinovic-Carugo K"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Egelman, EH",
+                                "preferred": "Egelman EH"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2010",
+                    "discriminator": "a",
+                    "doi": "10.1038/nsmb.1789",
+                    "id": "bib3",
+                    "journal": "Nature Structural & Molecular Biology",
+                    "pages": {
+                        "first": "614",
+                        "last": "616",
+                        "range": "614–616"
+                    },
+                    "pmid": 20383143,
+                    "type": "journal",
+                    "volume": "17"
+                },
+                {
+                    "articleTitle": "Structural polymorphism in F-actin",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Galkin, VE",
+                                "preferred": "Galkin VE"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Schröder, GF",
+                                "preferred": "Schröder GF"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Orlova, A",
+                                "preferred": "Orlova A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Egelman, EH",
+                                "preferred": "Egelman EH"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2010",
+                    "discriminator": "b",
+                    "doi": "10.1038/nsmb.1930",
+                    "id": "bib4",
+                    "journal": "Nature Structural & Molecular Biology",
+                    "pages": {
+                        "first": "1318",
+                        "last": "1323",
+                        "range": "1318–1323"
+                    },
+                    "pmid": 20935633,
+                    "type": "journal",
+                    "volume": "17"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Hao, Q",
+                                "preferred": "Hao Q"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Prasanth, KV",
+                                "preferred": "Prasanth KV"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Sun, Q",
+                                "preferred": "Sun Q"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "dataId": "GSE143275",
+                    "date": "2020",
+                    "id": "bib5",
+                    "source": "NCBI Gene Expression Omnibus",
+                    "title": "poly A+ RNA sequencing of cell cycle-synchronized RNA from U2OS cells",
+                    "type": "data",
+                    "uri": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE143275"
+                },
+                {
+                    "accessed": "2019-01-01",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Harmon, A",
+                                "preferred": "Harmon A"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "id": "bib6",
+                    "title": "James Watson had a chance to salvage his reputation on race. He made things worse",
+                    "type": "web",
+                    "uri": "https://www.nytimes.com/2019/01/01/science/watson-dna-genetics-race.html",
+                    "website": "The New York Times"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Hogarth, KM",
+                                "preferred": "Hogarth KM"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Jaroszz, J",
+                                "preferred": "Jaroszz J"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Butler, P",
+                                "preferred": "Butler P"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "bookTitle": "Applied Radiological Anatomy",
+                    "chapterTitle": "The skull and brain",
+                    "date": "2012",
+                    "doi": "10.1017/CBO9780511977930.001",
+                    "edition": "2nd Edition",
+                    "editors": [
+                        {
+                            "name": {
+                                "index": "Butler, P",
+                                "preferred": "Butler P"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Mitchell, A",
+                                "preferred": "Mitchell A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Healy, JC",
+                                "preferred": "Healy JC"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "id": "bib7",
+                    "isbn": "978-0-511-97793-0",
+                    "pages": {
+                        "first": "1",
+                        "last": "32",
+                        "range": "1–32"
+                    },
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "Cambridge"
+                                ]
+                            },
+                            "formatted": [
+                                "Cambridge"
+                            ]
+                        },
+                        "name": [
+                            "Cambridge University Press"
+                        ]
+                    },
+                    "type": "book-chapter"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Kok, K",
+                                "preferred": "Kok K"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Ay, A",
+                                "preferred": "Ay A"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Li, L",
+                                "preferred": "Li L"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2015",
+                    "doi": "10.5061/dryad.cv323",
+                    "id": "bib8",
+                    "source": "Dryad Digital Repository",
+                    "title": "Genome-wide errant targeting by Hairy",
+                    "type": "data",
+                    "uri": "https://doi.org/10.5061/dryad.cv323"
+                },
+                {
+                    "country": "Japan",
+                    "date": "2015",
+                    "id": "bib9",
+                    "inventors": [
+                        {
+                            "name": {
+                                "index": "Onoda, T",
+                                "preferred": "Onoda T"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "number": "2015087996",
+                    "patentType": "World Intellectual Property Organization",
+                    "title": "Imidazopyridine Derivative",
+                    "type": "patent",
+                    "uri": "https://patents.google.com/patent/WO2015087996A1/en"
+                },
+                {
+                    "articleTitle": "Mating avoidance in female olive baboons (<i>Papio anubis</i>) infected by Treponema pallidum",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Paciência, F",
+                                "preferred": "Paciência F"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "id": "bib10",
+                    "journal": "Science Advances",
+                    "pages": "In press",
+                    "type": "journal"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": "R Development Core Team",
+                            "type": "group"
+                        }
+                    ],
+                    "date": "2017",
+                    "id": "bib11",
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "Vienna, Austria"
+                                ]
+                            },
+                            "formatted": [
+                                "Vienna, Austria"
+                            ]
+                        },
+                        "name": [
+                            "R Foundation for Statistical Computing"
+                        ]
+                    },
+                    "title": "R: a language and environment for statistical computing",
+                    "type": "software",
+                    "uri": "http://www.r-project.org/",
+                    "version": "3.3.2"
+                },
+                {
+                    "author": {
+                        "name": {
+                            "index": "Richter, DJ",
+                            "preferred": "Richter DJ"
+                        },
+                        "type": "person"
+                    },
+                    "date": "2013",
+                    "id": "bib12",
+                    "publisher": {
+                        "name": [
+                            "University of California, Berkeley"
+                        ]
+                    },
+                    "title": "The Gene Content of Diverse Choanoflagellates Illuminates Animal Origins",
+                    "type": "thesis",
+                    "uri": "https://escholarship.org/uc/item/7xc2p94p"
+                },
+                {
+                    "articleTitle": "Automated hypothesis generation based on mining scientific literature",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Spangler, S",
+                                "preferred": "Spangler S"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "conference": {
+                        "name": [
+                            "Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+                        ]
+                    },
+                    "date": "2014",
+                    "doi": "10.1145/2623330.2623667",
+                    "id": "bib13",
+                    "pages": {
+                        "first": "1877",
+                        "last": "1886",
+                        "range": "1877–1886"
+                    },
+                    "type": "conference-proceeding",
+                    "uri": "https://doi.org/10.1145/2623330.2623667"
+                },
+                {
+                    "articleTitle": "A multiphase theory for spreadingmicrobial swarms and films",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Srinivasan, S",
+                                "preferred": "Srinivasan S"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "doi": "10.7554/eLife.42697",
+                    "id": "bib14",
+                    "journal": "eLife",
+                    "pages": "e42697",
+                    "pmid": 31038122,
+                    "type": "journal",
+                    "volume": "8"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": "World Health Organization",
+                            "type": "group"
+                        }
+                    ],
+                    "date": "2015",
+                    "id": "bib15",
+                    "publisher": {
+                        "address": {
+                            "components": {
+                                "locality": [
+                                    "Geneva"
+                                ]
+                            },
+                            "formatted": [
+                                "Geneva"
+                            ]
+                        },
+                        "name": [
+                            "World Health Organization"
+                        ]
+                    },
+                    "source": "World Malaria Report 2015",
+                    "title": "World Malaria Report 2015",
+                    "type": "report",
+                    "uri": "http://www.who.int/malaria/publications/world-malaria-report-2015/en/"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Zok, K",
+                                "preferred": "Zok K"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2020",
+                    "id": "bib16",
+                    "source": "GSAID's EpiFlu",
+                    "title": "EpiCoV",
+                    "type": "data",
+                    "uri": "https://www.gisaid.org/"
+                },
+                {
+                    "articleTitle": "Gender and international diversity improves equity in peer review",
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Zurray, D",
+                                "preferred": "Zurray D"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2019",
+                    "doi": "10.1101/400515",
+                    "id": "bib17",
+                    "source": "bioRxiv",
+                    "type": "preprint",
+                    "uri": "https://doi.org/10.1101/400515"
+                },
+                {
+                    "authors": [
+                        {
+                            "name": {
+                                "index": "Himmelstein, D",
+                                "preferred": "Himmelstein D"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Bastian, F",
+                                "preferred": "Bastian F"
+                            },
+                            "type": "person"
+                        },
+                        {
+                            "name": {
+                                "index": "Baranzini, S",
+                                "preferred": "Baranzini S"
+                            },
+                            "type": "person"
+                        }
+                    ],
+                    "date": "2016",
+                    "doi": "10.5281/zenodo.47157",
+                    "id": "bib18",
+                    "publisher": {
+                        "name": [
+                            "Zenodo"
+                        ]
+                    },
+                    "source": "Zenodo",
+                    "title": "Dhimmel/Bgee V1.0: Anatomy-Specific Gene Expression In Humans From Bgee",
+                    "type": "software",
+                    "uri": "https://doi.org/10.5281/zenodo.47157"
+                }
+            ],
+            "appendices": [
+                {
+                    "content": [
+                        {
+                            "assets": [
+                                {
+                                    "id": "app1keyresource",
+                                    "label": "Appendix 1—key resources table",
+                                    "tables": [
+                                        "<table>\n<thead>\n<tr>\n<th>Reagent type <br/>(species) or resource</th>\n<th>Designation</th>\n<th>Source or reference</th>\n<th>Identifiers</th>\n<th>Additional <br/>information</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>gene (<i>Drosophila melanogaster</i>)</td>\n<td>nito</td>\n<td>NA</td>\n<td>FLYB:FBgn0027548</td>\n<td> </td>\n</tr>\n<tr>\n<td>gene (<i>D. melanogaster</i>)</td>\n<td>Sxl</td>\n<td>NA</td>\n<td>FLYB:FBgn0264270</td>\n<td> </td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>MTD-Gal4</td>\n<td>Bloomington Drosophila Stock Center</td>\n<td>BDSC:31777; FLYB:FBtp0001612; RRID:<a href=\"https://identifiers.org/RRID/RRID:BDSC_31777\">BDSC_31777</a></td>\n<td>FlyBase symbol: P{GAL4-nos.NGT}</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>ap-Gal4</td>\n<td>Bloomington Drosophila Stock Center</td>\n<td>BDSC:3041; FLYB:FBti0002785; RRID:<a href=\"https://identifiers.org/RRID/RRID:BDSC_3041\">BDSC_3041</a></td>\n<td>FlyBase symbol: P{GawB}ap[md544]</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>nub-Gal4</td>\n<td>PMID:20798049</td>\n<td>FLYB:FBti0016825</td>\n<td>FlyBase symbol: P{GawB}nubbin-AC-62</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>dome-Gal4</td>\n<td>PMID:12403714</td>\n<td>FLYB:FBti0022298</td>\n<td>FlyBase symbol: P{GawB}dome[PG14]</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>UAS-2xEYFP</td>\n<td>PMID:12324968</td>\n<td>FLYB:FBtp0016537</td>\n<td>FlyBase symbol: P{UAS-2xEYFP}</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>nito[HP25329]</td>\n<td>Bloomington Drosophila Stock Center</td>\n<td>BDSC:22092; FLYB:FBal0238892; RRID:<a href=\"https://identifiers.org/RRID/RRID:BDSC_22092\">BDSC_22092</a></td>\n<td>Genotype: w[1118]; P{w[+mC]=EPg}nito[HP25329]/CyO</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>nito[1]</td>\n<td>this paper</td>\n<td> </td>\n<td>Progenitor = nito[HP25329]; imprecise excision; lethal</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>nito shRNA (HMJ02081)</td>\n<td>Bloomington Drosophila Stock Center</td>\n<td>TRiP:HMJ02081; BDSC:56852; RRID:<a href=\"https://identifiers.org/RRID/RRID:BDSC_56852\">BDSC_56852</a></td>\n<td>FlyBase symbol: P{TRiP.HMJ02081}attP40</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>nito dsRNA (VDRC 20942)</td>\n<td>Vienna Drosophila RNAi Center</td>\n<td>VDRC:20942</td>\n<td> </td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>FRT[G13]</td>\n<td>Bloomington Drosophila Stock Center</td>\n<td>BDSC:1956; FLYB:FBti0001247</td>\n<td>FlyBase symbol: P{FRT(whs)}G13</td>\n</tr>\n<tr>\n<td>genetic reagent (<i>D. melanogaster</i>)</td>\n<td>\"y w hsflp; ubiGFP FRT[G13]\"</td>\n<td>PMID:18160348</td>\n<td> </td>\n<td> </td>\n</tr>\n<tr>\n<td>cell line (<i>D. melanogaster</i>)</td>\n<td>S2</td>\n<td>other</td>\n<td>FLYB:FBtc0000181; RRID:<a href=\"https://identifiers.org/RRID/RRID:CVCL_Z992\">CVCL_Z992</a></td>\n<td>Cell line maintained in N. Perrimon lab; FlyBase symbol: S2-DRSC.</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-Nito</td>\n<td>this paper</td>\n<td> </td>\n<td>Rabbit polyclonal; against aa 479-500; used YZ3137 (1:500)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-alpha-Spectrin (mouse monoclonal)</td>\n<td>Developmental Studies Hybridoma Bank</td>\n<td>DSHB:3A9; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_528473\">AB_528473</a></td>\n<td>(1:10)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-Vasa (rabbit polyclonal)</td>\n<td>Santa Cruz Biotechnology</td>\n<td>Santa Cruz:sc-30210; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_793874\">AB_793874</a></td>\n<td>(1:250)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-Sxl (mouse monoclonal)</td>\n<td>Developmental Studies Hybridoma Bank</td>\n<td>DSHB:M18; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_528464\">AB_528464</a></td>\n<td>(1:10)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-GFP (rabbit polyclonal)</td>\n<td>Molecular Probes</td>\n<td>Molecular Probes:A-6455; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_221570\">AB_221570</a></td>\n<td>(1:1000)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-GFP (mouse monoclonal)</td>\n<td>Molecular Probes</td>\n<td>Molecular Probes:A-11120; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_221568\">AB_221568</a></td>\n<td>(1:200)</td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>anti-HA (rat monoclonal)</td>\n<td>Roche</td>\n<td>Roche:3F10; RRID:<a href=\"https://identifiers.org/RRID/RRID:AB_2314622\">AB_2314622</a></td>\n<td> </td>\n</tr>\n<tr>\n<td>antibody</td>\n<td>Alexa 488- or 555- secondaries</td>\n<td>Molecular Probes</td>\n<td> </td>\n<td>(1:1000)</td>\n</tr>\n<tr>\n<td>other</td>\n<td>DAPI stain</td>\n<td>Molecular Probes</td>\n<td> </td>\n<td>(1:1000)</td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>pAGW (Gateway vector)</td>\n<td>Drosophila Genomics Resource Center</td>\n<td>DGRC:1071</td>\n<td> </td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>pAHW (Gateway vector)</td>\n<td>Drosophila Genomics Resource Center</td>\n<td>DGRC:1095 (<a href=\"#bib11\">R Development Core Team, 2017</a>)</td>\n<td> </td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>GH11110 (cDNA)</td>\n<td>Drosophila Genomics Resource Center</td>\n<td>DGRC:5666</td>\n<td> </td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>GFP-Nito (plasmid)</td>\n<td>this paper</td>\n<td> </td>\n<td>Progenitors: GH11110 (cDNA); Gateway vector pAGW</td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>HA-Sxl (plasmid)</td>\n<td>PMID:16207758</td>\n<td> </td>\n<td>Progentiors: PCR, UAS-Sxl flies; Gateway vector pAHW</td>\n</tr>\n<tr>\n<td>recombinant DNA reagent</td>\n<td>GFP-Sxl (plasmid)</td>\n<td>PMID:16207758</td>\n<td> </td>\n<td>Progentiors: PCR, UAS-Sxl flies; Gateway vector pAGW</td>\n</tr>\n</tbody>\n</table>"
+                                    ],
+                                    "type": "table"
+                                }
+                            ],
+                            "type": "figure"
+                        }
+                    ],
+                    "id": "appendix-1",
+                    "title": "Appendix 1"
+                },
+                {
+                    "content": [
+                        {
+                            "content": [
+                                {
+                                    "text": "... <a href=\"#app2fig1\">Appendix 2—figure 1</a> ...",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "If there is a caption to accompany the title it would display here (<a href=\"#bib5\">Hao et al., 2020</a>).",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "app2fig1",
+                                            "image": {
+                                                "alt": "",
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 441,
+                                                    "height": 145
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app2-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Appendix 2—figure 1",
+                                            "title": "Figure added to demonstrate that not only paragaphs but other forms of content may be included as a child of the boxed-text.",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "id": "app2scheme1",
+                                            "image": {
+                                                "alt": "",
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-scheme1-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 441,
+                                                    "height": 145
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-scheme1-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app2-scheme1-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Appendix 2—scheme 1",
+                                            "title": "Scheme title.",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "id": "app2C1",
+                                            "image": {
+                                                "alt": "",
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-chem1-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 441,
+                                                    "height": 145
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app2-chem1-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app2-chem1-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Appendix 2—chemical structure 1",
+                                            "title": "Chemical structure title.",
+                                            "type": "image"
+                                        }
+                                    ],
+                                    "type": "figure"
+                                },
+                                {
+                                    "content": [
+                                        {
+                                            "text": "... <a href=\"#equ696\">Equation 1</a>",
+                                            "type": "paragraph"
+                                        },
+                                        {
+                                            "id": "equ696",
+                                            "label": "(1)",
+                                            "mathml": "<math>\n<mrow>\n<mi>ϕ</mi>\n<mo>=</mo>\n<msup>\n<mi>e</mi>\n<mrow>\n<mo>−</mo>\n<mfrac>\n<mrow>\n<mi>z</mi>\n<mi>F</mi>\n<mi>V</mi>\n</mrow>\n<mrow>\n<mi>n</mi>\n<mi>R</mi>\n<mi>T</mi>\n</mrow>\n</mfrac>\n</mrow>\n</msup>\n</mrow>\n</math>",
+                                            "type": "mathml"
+                                        },
+                                        {
+                                            "content": [
+                                                {
+                                                    "text": "...",
+                                                    "type": "paragraph"
+                                                },
+                                                {
+                                                    "content": [
+                                                        {
+                                                            "text": "...<a href=\"#bib5\">Hao et al., 2020</a>... <a href=\"#bib5\">Hao et al., 2020</a>...",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "id": "app2s3",
+                                                    "title": "Appendix heading level 3",
+                                                    "type": "section"
+                                                }
+                                            ],
+                                            "id": "app2s2-1",
+                                            "title": "Appendix heading level 2",
+                                            "type": "section"
+                                        }
+                                    ],
+                                    "id": "app2s2",
+                                    "title": "Appendix heading level 1",
+                                    "type": "section"
+                                }
+                            ],
+                            "id": "app2s1",
+                            "title": "Negotiation",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "appendix-2",
+                    "title": "Appendix 2"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "...",
+                            "type": "paragraph"
+                        },
+                        {
+                            "content": [
+                                {
+                                    "text": "... <a href=\"#app3fig1\">Appendix 3—figure 1</a> (<a href=\"#app3fig1sdata1\">Appendix 3—figure 1—source data 1</a>; <a href=\"#app3fig1sdata2\">Appendix 3—figure 1—source data 2</a>; <a href=\"#app3fig1scode1\">Appendix 3—figure 1—source code 1</a>).",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "assets": [
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "(<b>A, B</b>) Dependence of CME on Hip1R. (<b>A</b>) Simulation varying number of Hip1R. (<b>B</b>) Hip1R knockdown inhibits CME (transferrin uptake) in HeLa cells. (<b>C, D</b>) Capping actin filaments inhibits CME. (<b>C</b>) Simulation. (<b>D</b>) Slower assembly and disassembly of endogenous dynamin2-GFP at sites of endocytosis in SK-MEL-2 cells treated with different concentrations of Cytochalasin D. (<b>E, F</b>) Endocytic actin filaments bend at sites of mammalian endocytosis, tested by cryo-electron tomography of intact mammalian cells. (<b>G, H</b>) Mammalian CME is sensitive to Arp2/3 complex activity, revealed by treating SK-MEL-2 cells expressing endogenous clathrin and dynamin2 fluorescent tags with the Arp2/3 complex inhibitor CK-666 (<a href=\"#app3fig1s1\">Appendix 3—figure 1—figure supplement 1</a>).",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "app3fig1",
+                                            "image": {
+                                                "alt": "",
+                                                "attribution": [
+                                                    "© 2004, American Society for Cell Biology, All Rights Reserved. Panel B is reproduced from  with permission. It is not covered by the CC-BY 4.0 licence and further reproduction of this panel would need permission from the copyright holder.",
+                                                    "© 2014, copyright holder. Panel D is reproduced from ... published under a <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">Creative Commons Attribution License (CC BY-NC-ND 4.0)</a>"
+                                                ],
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-v1.tif",
+                                                "size": {
+                                                    "width": 1407,
+                                                    "height": 914
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app3-fig1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Appendix 3—figure 1",
+                                            "sourceData": [
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source data caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-data1-v1.docx",
+                                                    "id": "app3fig1sdata1",
+                                                    "label": "Appendix 3—figure 1—source data 1",
+                                                    "mediaType": "application/docx",
+                                                    "title": "Source data title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-data1-v1.docx"
+                                                },
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source data caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-data2-v1.zip",
+                                                    "id": "app3fig1sdata2",
+                                                    "label": "Appendix 3—figure 1—source data 2",
+                                                    "mediaType": "application/zip",
+                                                    "title": "Source data title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-data2-v1.zip"
+                                                },
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source code caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-code1-v1.zip",
+                                                    "id": "app3fig1scode1",
+                                                    "label": "Appendix 3—figure 1—source code 1",
+                                                    "mediaType": "application/zip",
+                                                    "title": "Source code title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-code1-v1.zip"
+                                                }
+                                            ],
+                                            "title": "Figure title.",
+                                            "type": "image"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "(<b>A, B</b>) Dependence of CME on Hip1R. (<b>A</b>) Simulation varying number of Hip1R. (<b>B</b>) Hip1R knockdown inhibits CME (transferrin uptake) in HeLa cells. (<b>C, D</b>) Capping actin filaments inhibits CME. (<b>C</b>) Simulation. (<b>D</b>) Slower assembly and disassembly of endogenous dynamin2-GFP at sites of endocytosis in SK-MEL-2 cells treated with different concentrations of Cytochalasin D. (<b>E, F</b>) Endocytic actin filaments bend at sites of mammalian endocytosis, tested by cryo-electron tomography of intact mammalian cells. (<b>G, H</b>) Mammalian CME is sensitive to Arp2/3 complex activity, revealed by treating SK-MEL-2 cells expressing endogenous clathrin and dynamin2 fluorescent tags with the Arp2/3 complex inhibitor CK-666.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "app3fig1s1",
+                                            "image": {
+                                                "alt": "",
+                                                "attribution": [
+                                                    "© 2004, American Society for Cell Biology, All Rights Reserved. Panel B is reproduced from  with permission. It is not covered by the CC-BY 4.0 licence and further reproduction of this panel would need permission from the copyright holder.",
+                                                    "© 2014, copyright holder. Panel D is reproduced from ... published under a <a href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\">Creative Commons Attribution License (CC BY-NC-ND 4.0)</a>"
+                                                ],
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-figsupp1-v1.tif",
+                                                "size": {
+                                                    "width": 1409,
+                                                    "height": 889
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-figsupp1-v1.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app3-fig1-figsupp1-v1.jpg"
+                                                }
+                                            },
+                                            "label": "Appendix 3—figure 1—figure supplement 1",
+                                            "sourceData": [
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source data caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-figsupp1-data1-v1.docx",
+                                                    "id": "app3fig1s1sdata1",
+                                                    "label": "Appendix 3—figure 1—figure supplement 1—source data 1",
+                                                    "mediaType": "application/docx",
+                                                    "title": "Source data title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsupp1-data1-v1.docx"
+                                                },
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source data caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-figsup1-data2-v1.zip",
+                                                    "id": "app3fig1s1sdata2",
+                                                    "label": "Appendix 3—figure 1—figure supplement 1—source data 2",
+                                                    "mediaType": "application/zip",
+                                                    "title": "Source data title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsup1-data2-v1.zip"
+                                                },
+                                                {
+                                                    "caption": [
+                                                        {
+                                                            "text": "Source code caption.",
+                                                            "type": "paragraph"
+                                                        }
+                                                    ],
+                                                    "filename": "elife-1234567890-app3-fig1-figsup1-code1-v1.zip",
+                                                    "id": "app3fig1s1scode1",
+                                                    "label": "Appendix 3—figure 1—figure supplement 1—source code 1",
+                                                    "mediaType": "application/zip",
+                                                    "title": "Source code title.",
+                                                    "uri": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-figsup1-code1-v1.zip"
+                                                }
+                                            ],
+                                            "title": "Figure supplement title.",
+                                            "type": "image"
+                                        },
+                                        {
+                                            "caption": [
+                                                {
+                                                    "text": "First 100 s of representative ... Scale bar, 20 µm.",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            "id": "app3fig1video1",
+                                            "label": "Appendix 3—figure 1—video 1",
+                                            "title": "TIRF force reconstitution assay of wild-type vinculin ABD.",
+                                            "type": "video",
+                                            "height": 282,
+                                            "width": 734,
+                                            "image": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-app3-fig1-video1.jpg",
+                                            "sources": [
+                                                {
+                                                    "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-app3-fig1-video1.mp4"
+                                                },
+                                                {
+                                                    "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-app3-fig1-video1.webm"
+                                                },
+                                                {
+                                                    "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                                    "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-app3-fig1-video1.ogv"
+                                                }
+                                            ],
+                                            "placeholder": {
+                                                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-video1.jpg",
+                                                "alt": "",
+                                                "size": {
+                                                    "width": 734,
+                                                    "height": 282
+                                                },
+                                                "source": {
+                                                    "mediaType": "image/jpeg",
+                                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-app3-fig1-video1.jpg/full/full/0/default.jpg",
+                                                    "filename": "elife-1234567890-app3-fig1-video1.jpg"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "type": "figure"
+                                }
+                            ],
+                            "id": "s9",
+                            "title": "Section title",
+                            "type": "section"
+                        }
+                    ],
+                    "id": "appendix-3",
+                    "title": "Appendix 3"
+                }
+            ],
+            "acknowledgements": [
+                {
+                    "text": "The authors extend their sincere appreciation to ...",
+                    "type": "paragraph"
+                }
+            ],
+            "elifeAssessment": {
+                "content": [
+                    {
+                        "text": "This is an Evaluation summary, which is a summary of the article provided by the BRE. It will only contain one or more paragraphs, no figures, tables or videos. This work is a <a href=\"https://elifesciences.org/\">compelling</a>, <a href=\"https://elifesciences.org/\">noteworthy</a> study.",
+                        "type": "paragraph"
+                    }
+                ],
+                "doi": "10.7554/eLife.1234567890.4.sa0",
+                "id": "sa0",
+                "scietyUri": "https://sciety.org/articles/activity/10.1101/2021.11.09.467796",
+                "title": "eLife assessment"
+            },
+            "recommendationsForAuthors": {
+                "content": [
+                    {
+                        "text": "Recommendations for edits to the initial preprint, based on the reviewers' comments.",
+                        "type": "paragraph"
+                    }
+                ],
+                "doi": "10.7554/eLife.1234567890.4.sa6",
+                "id": "sa6",
+                "title": "Recommendations for authors"
+            },
+            "authorResponse": {
+                "content": [
+                    {
+                        "text": "We thank the reviewers for the positive assessment of our work and their insightful remarks. Please find below a point-by-point response to each comment.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "Reviewer #1 (Evidence, reproducibility and clarity):",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "Scheckel et al. report a large dataset on cell type-specific translational profiling of PrD-associated molecular alterations in a mouse model thorough RiboTRAP and ribosome profiling approaches. They report a more severe alteration in the translatome specifically in astrocyte and microglia as compared to neuronal populations. This highlights that changes in these two cell classes might have a predominant role in the pathology of PrD.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "Data and the methods are presented such that they can be reproduced. The data analysis section of the manuscript could be further elaborated. In particular, it could be clarified which/how comparisons with existing dataset have been performed. Statistical analysis description is sometimes missing (e.g. Figure 6E, not clear what the stars on top of the bars stands for, which test was performed and the significance). Moreover, the section of the Materials and methods regarding the western blots presented in Figure 6 appear to be missing.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "Figure 6E shows the output (log2 fold change) of DESeq2. Genes with a Benjamini-Hochberg adjusted p value &lt; 0.05 (also derived from DESeq2) are marked with an asterisk. We have added this information to the legend, as well as methods regarding western blots.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "content": [
+                            {
+                                "text": "The reviewers have discussed the reviews with one another and the Reviewing Editor has drafted this decision to help you prepare a revised submission.",
+                                "type": "paragraph"
+                            },
+                            {
+                                "text": "You need to make sure the XML structure you create works on the display of the PMC platform and also that there is enough information contained within the tagging to generate a typeset PDF from the XML with no additional information provided.",
+                                "type": "paragraph"
+                            }
+                        ],
+                        "type": "excerpt"
+                    },
+                    {
+                        "text": "In response to this comment, we validated the XML against the DTD (JATS 1) each time we made an update. We also regularly used the PMC validator to check our decisions against display on the PMC site, see <a href=\"#sa7fig1\">Author response image 1.</a>, <a href=\"#sa5video1\">Author response video 1</a> and <a href=\"#sa7table1\">Author response table 1</a>.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "assets": [
+                            {
+                                "caption": [
+                                    {
+                                        "text": "Single figure: The header of an eLife article example on the HTML page.",
+                                        "type": "paragraph"
+                                    }
+                                ],
+                                "id": "sa7fig1",
+                                "image": {
+                                    "alt": "",
+                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa5-fig1-v1.tif",
+                                    "size": {
+                                        "width": 588,
+                                        "height": 419
+                                    },
+                                    "source": {
+                                        "mediaType": "image/jpeg",
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa5-fig1-v1.tif/full/full/0/default.jpg",
+                                        "filename": "elife-1234567890-sa5-fig1-v1.jpg"
+                                    }
+                                },
+                                "label": "Author response image 1",
+                                "type": "image"
+                            }
+                        ],
+                        "type": "figure"
+                    },
+                    {
+                        "assets": [
+                            {
+                                "caption": [
+                                    {
+                                        "text": "Author response table",
+                                        "type": "paragraph"
+                                    }
+                                ],
+                                "id": "sa7table1",
+                                "label": "Author response table 1",
+                                "tables": [
+                                    "<table>\n<thead>\n<tr>\n<th>Sample</th>\n<th>Same</th>\n<th>Difference more than 10%</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>DKO1.cell.1</td>\n<td>77.00%</td>\n<td>6.90%</td>\n</tr>\n<tr>\n<td>DKO1.cell.2</td>\n<td>78.80%</td>\n<td>7.20%</td>\n</tr>\n<tr>\n<td>DKO1.cell.3</td>\n<td>79.10%</td>\n<td>6.70%</td>\n</tr>\n<tr>\n<td>DKO1.exo.1</td>\n<td>78.90%</td>\n<td>6.50%</td>\n</tr>\n<tr>\n<td>DKO1.exo.2</td>\n<td>80.00%</td>\n<td>5.80%</td>\n</tr>\n<tr>\n<td>DKO1.exo.3</td>\n<td>86.80%</td>\n<td>2.30%</td>\n</tr>\n<tr>\n<td>DKS8.cell.1</td>\n<td>77.30%</td>\n<td>7.80%</td>\n</tr>\n<tr>\n<td>DKS8.cell.2</td>\n<td>79.70%</td>\n<td>6.70%</td>\n</tr>\n</tbody>\n</table>"
+                                ],
+                                "type": "table"
+                            }
+                        ],
+                        "type": "figure"
+                    },
+                    {
+                        "assets": [
+                            {
+                                "id": "sa5video1",
+                                "label": "Author response video 1",
+                                "title": "Caption and/or a title is required for all author response assets.",
+                                "type": "video",
+                                "height": 282,
+                                "width": 734,
+                                "image": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-sa5-video1.jpg",
+                                "sources": [
+                                    {
+                                        "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                        "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa5-video1.mp4"
+                                    },
+                                    {
+                                        "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                        "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa5-video1.webm"
+                                    },
+                                    {
+                                        "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                        "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa5-video1.ogv"
+                                    }
+                                ],
+                                "placeholder": {
+                                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa5-video1.jpg",
+                                    "alt": "",
+                                    "size": {
+                                        "width": 734,
+                                        "height": 282
+                                    },
+                                    "source": {
+                                        "mediaType": "image/jpeg",
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa5-video1.jpg/full/full/0/default.jpg",
+                                        "filename": "elife-1234567890-sa5-video1.jpg"
+                                    }
+                                }
+                            }
+                        ],
+                        "type": "figure"
+                    },
+                    {
+                        "text": "However, some decisions required some communication with PMC to discuss whether any of our updates could be accomodated by them - during this review we aimed to reduce the complexity of the XML structure and remove all  formatting and bioler plate text required for a PDF display format. We also produced buisness rules {Insert table} order to produce rules for the production systems and the website to follow. These buisness rules also informed the basis for a set of Schematron rules for our references.",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "Adding some MathML to the sub-article. <math id=\"sa7m1\"> <mstyle displaystyle=\"true\" scriptlevel=\"0\"> <mrow> <msup> <mi>F</mi> <mrow> <mi>A</mi> <mi>B</mi> </mrow> </msup> <mo>∼</mo> <mfrac> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>A</mi> <mi>B</mi> </mrow> </msubsup> <msqrt> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msubsup> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>B</mi> <mi>B</mi> </mrow> </msubsup> </msqrt> </mfrac> <msqrt> <msup> <mi>F</mi> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msup> <msup> <mi>F</mi> <mrow> <mi>B</mi> <mi>B</mi> </mrow> </msup> </msqrt> </mrow> </mstyle> </math>",
+                        "type": "paragraph"
+                    },
+                    {
+                        "text": "May also contain a formula as a block",
+                        "type": "paragraph"
+                    },
+                    {
+                        "id": "sa7equ1",
+                        "label": "(1)",
+                        "mathml": "<math>\n<mstyle displaystyle=\"true\" scriptlevel=\"0\">\n<mrow>\n<mi>d</mi>\n<mtext> </mtext>\n<mo>=</mo>\n<mtext> </mtext>\n<msqrt>\n<msup>\n<mrow>\n<mo>(</mo>\n<mfrac>\n<mrow>\n<mi>P</mi>\n<mi>r</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mi>i</mi>\n<mi>c</mi>\n<mi>t</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi mathvariant=\"bold-italic\">i</mi>\n<mtext> </mtext>\n</mrow>\n</msub>\n<mo>−</mo>\n<mtext> </mtext>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n<mrow>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n</mfrac>\n<mo>)</mo>\n</mrow>\n<mrow>\n<mn>2</mn>\n</mrow>\n</msup>\n</msqrt>\n</mrow>\n</mstyle>\n</math>",
+                        "type": "mathml"
+                    },
+                    {
+                        "items": [
+                            [
+                                {
+                                    "text": "'Contamination'",
+                                    "type": "paragraph"
+                                },
+                                {
+                                    "items": [
+                                        [
+                                            {
+                                                "text": "Cell line <sup>superscript</sup><sub>subscript</sub> &amp; p&lt;0.001",
+                                                "type": "paragraph"
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                "text": "<i>C. elegans</i> is ...",
+                                                "type": "paragraph"
+                                            }
+                                        ]
+                                    ],
+                                    "prefix": "number",
+                                    "type": "list"
+                                }
+                            ]
+                        ],
+                        "prefix": "roman-upper",
+                        "type": "list"
+                    }
+                ],
+                "doi": "10.7554/eLife.1234567890.4.sa7",
+                "id": "sa7"
+            },
+            "publicReviews": [
+                {
+                    "content": [
+                        {
+                            "text": "This paper combines two complementary approaches, translating ribosome affinity purification (TRAP) and ribosome profiling, to provide the first quantitative insight into the impact of PrP<sup>Sc</sup> on cell type-specific translation. Surprisingly few translational changes were detected in neurons. In contrast, substantial alterations to translation were evident in astrocytes and microglia prior to manifestation of prion disease features, suggesting that aberrant translation in these cell types may be a primary driver of neurodegeneration.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The reviewers have discussed the reviews with one another and the Reviewing Editor has drafted this decision to help you prepare a revised submission.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "You need to make sure the XML structure you create works on the display of the PMC platform and also that there is enough information contained within the tagging to generate a typeset PDF from the XML with no additional information provided. See <a href=\"#sa1fig1\">Review image 1.</a>, <a href=\"#sa1table1\">Review table 1</a> and <a href=\"#sa1video1\">Review video 1</a>.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "Single figure: The header of an eLife article example on the HTML page.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "sa1fig1",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa1-fig1-v1.tif",
+                                        "size": {
+                                            "width": 632,
+                                            "height": 216
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa1-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-sa1-fig1-v1.jpg"
+                                        }
+                                    },
+                                    "label": "Review image 1",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "Review table.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "sa1table1",
+                                    "label": "Review table 1",
+                                    "tables": [
+                                        "<table>\n<thead>\n<tr>\n<th>Sample</th>\n<th>Same</th>\n<th>Difference more than 10%</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>DKO1.cell.1</td>\n<td>77.00%</td>\n<td>6.90%</td>\n</tr>\n<tr>\n<td>DKO1.cell.2</td>\n<td>78.80%</td>\n<td>7.20%</td>\n</tr>\n<tr>\n<td>DKO1.cell.3</td>\n<td>79.10%</td>\n<td>6.70%</td>\n</tr>\n<tr>\n<td>DKO1.exo.1</td>\n<td>78.90%</td>\n<td>6.50%</td>\n</tr>\n<tr>\n<td>DKO1.exo.2</td>\n<td>80.00%</td>\n<td>5.80%</td>\n</tr>\n<tr>\n<td>DKO1.exo.3</td>\n<td>86.80%</td>\n<td>2.30%</td>\n</tr>\n<tr>\n<td>DKS8.cell.1</td>\n<td>77.30%</td>\n<td>7.80%</td>\n</tr>\n<tr>\n<td>DKS8.cell.2</td>\n<td>79.70%</td>\n<td>6.70%</td>\n</tr>\n</tbody>\n</table>"
+                                    ],
+                                    "type": "table"
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "id": "sa1video1",
+                                    "label": "Review video 1",
+                                    "title": "Caption and/or a title is required.",
+                                    "type": "video",
+                                    "height": 282,
+                                    "width": 734,
+                                    "image": "https://continuumtest-cdn.elifesciences.org/articles/1234567890/elife-1234567890-sa1-video1.jpg",
+                                    "sources": [
+                                        {
+                                            "mediaType": "video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/mp4/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa1-video1.mp4"
+                                        },
+                                        {
+                                            "mediaType": "video/webm; codecs=\"vp8.0, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/webm/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa1-video1.webm"
+                                        },
+                                        {
+                                            "mediaType": "video/ogg; codecs=\"theora, vorbis\"",
+                                            "uri": "https://static-movie-usa.glencoesoftware.com/ogv/10.7554/108/eeab4f6093c4424f05ffeccb6d1213e503e333d3/elife-1234567890-sa1-video1.ogv"
+                                        }
+                                    ],
+                                    "placeholder": {
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa1-video1.jpg",
+                                        "alt": "",
+                                        "size": {
+                                            "width": 734,
+                                            "height": 282
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa1-video1.jpg/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-sa1-video1.jpg"
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "figure"
+                        },
+                        {
+                            "text": "Adding some MathML to the sub-article. <math id=\"sa1m1\"> <mstyle displaystyle=\"true\" scriptlevel=\"0\"> <mrow> <msup> <mi>F</mi> <mrow> <mi>A</mi> <mi>B</mi> </mrow> </msup> <mo>∼</mo> <mfrac> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>A</mi> <mi>B</mi> </mrow> </msubsup> <msqrt> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msubsup> <msubsup> <mi>k</mi> <mrow> <mi>f</mi> </mrow> <mrow> <mi>B</mi> <mi>B</mi> </mrow> </msubsup> </msqrt> </mfrac> <msqrt> <msup> <mi>F</mi> <mrow> <mi>A</mi> <mi>A</mi> </mrow> </msup> <msup> <mi>F</mi> <mrow> <mi>B</mi> <mi>B</mi> </mrow> </msup> </msqrt> </mrow> </mstyle> </math>",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "May also contain a formula as a block",
+                            "type": "paragraph"
+                        },
+                        {
+                            "id": "sa1equ1",
+                            "label": "(1)",
+                            "mathml": "<math>\n<mstyle displaystyle=\"true\" scriptlevel=\"0\">\n<mrow>\n<mi>d</mi>\n<mtext> </mtext>\n<mo>=</mo>\n<mtext> </mtext>\n<msqrt>\n<msup>\n<mrow>\n<mo>(</mo>\n<mfrac>\n<mrow>\n<mi>P</mi>\n<mi>r</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mi>i</mi>\n<mi>c</mi>\n<mi>t</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi mathvariant=\"bold-italic\">i</mi>\n<mtext> </mtext>\n</mrow>\n</msub>\n<mo>−</mo>\n<mtext> </mtext>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n<mrow>\n<mi>O</mi>\n<mi>b</mi>\n<mi>s</mi>\n<mi>e</mi>\n<mi>r</mi>\n<mi>v</mi>\n<mi>e</mi>\n<mi>d</mi>\n<mtext> </mtext>\n<mi>c</mi>\n<mi>o</mi>\n<mi>u</mi>\n<mi>n</mi>\n<msub>\n<mi>t</mi>\n<mrow>\n<mi>i</mi>\n</mrow>\n</msub>\n</mrow>\n</mfrac>\n<mo>)</mo>\n</mrow>\n<mrow>\n<mn>2</mn>\n</mrow>\n</msup>\n</msqrt>\n</mrow>\n</mstyle>\n</math>",
+                            "type": "mathml"
+                        },
+                        {
+                            "items": [
+                                [
+                                    {
+                                        "text": "'Contamination'",
+                                        "type": "paragraph"
+                                    },
+                                    {
+                                        "items": [
+                                            [
+                                                {
+                                                    "text": "Cell line <sup>superscript</sup><sub>subscript</sub> &amp; p&lt;0.001",
+                                                    "type": "paragraph"
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    "text": "<i>C. elegans</i>",
+                                                    "type": "paragraph"
+                                                }
+                                            ]
+                                        ],
+                                        "prefix": "roman-lower",
+                                        "type": "list"
+                                    }
+                                ]
+                            ],
+                            "prefix": "number",
+                            "type": "list"
+                        }
+                    ],
+                    "doi": "10.7554/eLife.1234567890.4.sa1",
+                    "id": "sa1",
+                    "title": "Reviewer #1 (public review)"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "Each reviewer's report is included as a separate sub-article. This will usually mean three reviews, though more or fewer are permitted. Reviews may be published anonymously.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Review assets are ordered sequentially across all the separate reviews, so the second image will be called <a href=\"#sa2fig1\">Review image 2</a> regardless of which reviews it appears in.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "assets": [
+                                {
+                                    "caption": [
+                                        {
+                                            "text": "Another review illustrative image.",
+                                            "type": "paragraph"
+                                        }
+                                    ],
+                                    "id": "sa2fig1",
+                                    "image": {
+                                        "alt": "",
+                                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa2-fig1-v1.tif",
+                                        "size": {
+                                            "width": 441,
+                                            "height": 145
+                                        },
+                                        "source": {
+                                            "mediaType": "image/jpeg",
+                                            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/lax:1234567890%2Felife-1234567890-sa2-fig1-v1.tif/full/full/0/default.jpg",
+                                            "filename": "elife-1234567890-sa2-fig1-v1.jpg"
+                                        }
+                                    },
+                                    "label": "Review image 2",
+                                    "type": "image"
+                                }
+                            ],
+                            "type": "figure"
+                        }
+                    ],
+                    "doi": "10.7554/eLife.1234567890.4.sa2",
+                    "id": "sa2",
+                    "title": "Reviewer #2 (public review)"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "Each reviewer's report is included as a separate sub-article. This will usually mean three reviews, though more or fewer are permitted. Reviews may be published anonymously.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "doi": "10.7554/eLife.1234567890.4.sa3",
+                    "id": "sa3",
+                    "title": "Reviewer #3 (public review)"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "This is the public review reached by consensus.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "doi": "10.7554/eLife.1234567890.4.sa4",
+                    "id": "sa4",
+                    "title": "Consensus public review"
+                },
+                {
+                    "content": [
+                        {
+                            "text": "This is a joint public review, meaning there wasn't quite consensus.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "doi": "10.7554/eLife.1234567890.4.sa5",
+                    "id": "sa5",
+                    "title": "Joint public review"
+                }
+            ],
+            "stage": "preview"
+        }
+    ]
+}
