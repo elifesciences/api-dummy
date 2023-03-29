@@ -10,13 +10,29 @@ use Symfony\Component\Filesystem\Filesystem;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-if (empty($argv[1]) || !preg_match('/[0-9]{5}/', $argv[1])) {
+if (empty($argv[1]) || !preg_match('/[a-z0-9-]+/', $argv[1])) {
     throw new InvalidArgumentException(sprintf('Article ID expected: %s given', empty($argv[1]) ? 'none' : $argv[1]));
 }
 
-$guzzle = new Client([
-    'base_uri' => 'https://prod--gateway.elifesciences.org/',
-]);
+if (!empty($argv[2]) && !in_array($argv[2], ['prod', 'continuumtest'])) {
+    throw new InvalidArgumentException(sprintf('Gateway expected: %s given', $argv[2]));
+}
+
+$gateway = $argv[2] ?? 'prod';
+
+$api_key = $argv[3] ?? null;
+
+$config = [
+    'base_uri' => 'https://'.$gateway.'--gateway.elifesciences.org/',
+];
+
+if (!empty($api_key)) {
+    $config['headers'] = [
+        'Authorization' => $api_key,
+    ];
+}
+
+$guzzle = new Client($config);
 
 $client = new Guzzle6HttpClient($guzzle);
 
