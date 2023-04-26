@@ -1,0 +1,26 @@
+{
+  "id": "85111",
+  "doi": "10.7554/eLife.85111",
+  "status": "reviewed",
+  "authorLine": "Rebecca Jordan, Georg B. Keller",
+  "title": "The locus coeruleus broadcasts prediction errors across the cortex to promote sensorimotor plasticity",
+  "indexContent": "The locus coeruleus broadcasts prediction errors across the cortex to promote sensorimotor plasticity",
+  "titlePrefix": "Title prefix",
+  "stage": "published",
+  "published": "2022-07-03T00:00:00Z",
+  "reviewedDate": "2022-07-03T00:00:00Z",
+  "versionDate": "2023-04-25T00:00:00Z",
+  "statusDate": "2023-04-25T00:00:00Z",
+  "volume": 4,
+  "elocationId": "e85111",
+  "pdf": "https://elifesciences.org/content/4/e85111.pdf",
+  "subjects": [
+    {
+      "id": "neuroscience",
+      "name": "Neuroscience"
+    }
+  ],
+  "curationLabels": [
+    "Ground-breaking"
+  ]
+}
