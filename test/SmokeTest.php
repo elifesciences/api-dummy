@@ -358,28 +358,20 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.press-package-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/press-packages') as $file) {
-            $path = $path = '/press-packages/'.$file->getBasename('.json');
+            $path = '/press-packages/'.$file->getBasename('.json');
 
-            yield "{$path} version 3" => [
+            yield "{$path} version 4" => [
                 $this->createRequest($path),
-                'application/vnd.elife.press-package+json; version=3',
+                'application/vnd.elife.press-package+json; version=4',
             ];
-            yield "{$path} version 2" => [
-                $this->createRequest($path, 'application/vnd.elife.press-package+json; version=2'),
-                'application/vnd.elife.press-package+json; version=2',
-            ];
-            if (!empty(json_decode($file->getContents(), true)['relatedContent'])) {
-                yield "{$path} version 1" => [
-                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=1'),
-                    'application/vnd.elife.press-package+json; version=1',
-                    200,
-                    [
-                        'application/vnd.elife.press-package+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
-                    ],
+            if ('6b266861' !== $file->getBasename('.json')) {
+                yield "{$path} version 3" => [
+                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
+                    'application/vnd.elife.press-package+json; version=3',
                 ];
             } else {
-                yield "{$path} version 1" => [
-                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=1'),
+                yield "{$path} version 3" => [
+                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
                     'application/problem+json',
                     406,
                 ];

@@ -1,0 +1,135 @@
+{
+    "id": "6b266861",
+    "title": "Water warming study shows unexpected impact on fish size",
+    "published": "2023-05-09T09:35:52Z",
+    "impactStatement": "A unique 24-year study of freshwater fish exposed to warm water pollution finds changes in growth rates, death rates and size, but not all in line with expectations.",
+    "content": [
+        {
+            "text": "The theory that water-breathing animals such as fish will shrink due to global warming has been called into question by a study published today in eLife.",
+            "type": "paragraph"
+        },
+        {
+            "type": "image",
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/for-the-press-content%2F2023-05%2Fimage-20230509104752-1.jpeg",
+                "size": {
+                    "width": 1024,
+                    "height": 707
+                },
+                "source": {
+                    "uri": "https://iiif.elifesciences.org/journal-cms/for-the-press-content%2F2023-05%2Fimage-20230509104752-1.jpeg/full/full/0/default.jpg",
+                    "filename": "image-20230509104752-1.jpeg",
+                    "mediaType": "image/jpeg"
+                },
+                "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                }
+            },
+            "title": "A Eurasian perch (Perca fluviatilis). Image credit: Karel Jakubec (public domain)",
+            "inline": true
+        },
+        {
+            "text": "The study found that warm water pollution increased growth rates but also death rates, resulting in a population of younger, but larger fish. The finding is at odds in part with general predictions of the effect of warming on natural ecosystems and highlights that these need to be tested in large-scale experiments.",
+            "type": "paragraph"
+        },
+        {
+            "text": "As aquatic ecosystems become warmer, it is predicted that animals such as fish will grow faster at a young age but reach smaller body sizes as adults. This pattern has mainly been observed in small-scale experiments, and although some studies have tested this prediction in natural environments, these have mostly been carried out on fish species subjected to fishing, where the process of fishing itself can influence growth rates and body size.",
+            "type": "paragraph"
+        },
+        {
+            "text": "“Studies into the effects of warming waters on fish from large-scale, semi-controlled experiments in natural settings are rare, yet they can provide unique insights,” says lead author Max Lindmark, researcher at the Swedish University of Agricultural Sciences, Department of Aquatic Resources, Lysekil, Sweden. “We used a unique study system to investigate how warm water pollution has changed the death rates, growth rates and size of fish over many generations.”",
+            "type": "paragraph"
+        },
+        {
+            "text": "The team carried out their study in an enclosed coastal bay that has received cooling water from a nuclear power plant, making it 5–10°C warmer than the surrounding waters. They compared the fish species Eurasian perch from the enclosed bay and from a reference area in the adjacent archipelago over a 24-year time period. They combined data on catches with measurements of the fishes’ length-at-age (back-calculated throughout their life from “age rings” in hard structures), and then analysed these using statistical models to investigate how the warm water pollution affected the age and size of the fish populations, as well as their growth and death rates.",
+            "type": "paragraph"
+        },
+        {
+            "text": "While the researchers found statistically notable differences in estimated growth rates, death rates and sizes of the fish populations between the heated and reference areas, not all of these changes were as they expected. Although female perch in the warm area grew faster, as the team anticipated, they continued to do so throughout life. These fish therefore reached a large size-at-age – approximately 7–11% larger in the heated area at any age, when compared with the reference area. Moreover, the authors say the increase in growth rate of younger fish due to warm water was so pronounced that even if death rates were higher because of warming, and resulted in a younger overall population of fish, the average size and relative abundance of larger fish was still higher in the heated area. This trend conflicts with the prediction that global warming would shrink fish over time, especially the large and old ones. In essence, ecosystem warming instead led to younger, but larger fish in this study.",
+            "type": "paragraph"
+        },
+        {
+            "text": "“Our study provides strong evidence for warming-induced differences in growth and death rates among a natural population of an unexploited temperate fish species exposed to 5–10°C water temperature increases for more than two decades. These effects largely, but not completely, counteract each other – while the fish are younger, they are also larger on average,” says co-author Malin Karlsson, Water Manager at the Department of Nature and Environment, County Administrative board of Västmanland, Sweden.",
+            "type": "paragraph"
+        },
+        {
+            "text": "“These findings highlight that generalised predictions based on theories such as the temperature-size rule may have limited use for predicting changes at a population level, and that both death rates and growth rates are important when studying temperature effects,” concludes senior author Anna Gårdmark, Professor at the Swedish University of Agricultural Sciences, Department of Aquatic Resources, Uppsala, Sweden. “Although we only studied a single species, this unique climate change experiment suggests the effects of heating at the scale of a whole ecosystem, making its findings highly relevant in the context of global warming.”",
+            "type": "paragraph"
+        }
+    ],
+    "relatedContent": [
+        {
+            "id": "87714",
+            "doi": "10.1101/2023.03.08.531698",
+            "status": "reviewed",
+            "authorLine": "Bhagyshree Jamge, Zdravko J. Lorković ... Frédéric Berger",
+            "title": "Histone variants shape the chromatin states in Arabidopsis",
+            "published": "2023-05-18T03:00:00Z",
+            "reviewedDate": "2023-05-18T03:00:00Z",
+            "versionDate": "2023-05-18T03:00:00Z",
+            "statusDate": "2023-05-18T03:00:00Z",
+            "stage": "published",
+            "subjects": [
+                {
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
+                }
+            ]
+        }
+    ],
+    "subjects": [
+        {
+            "id": "ecology",
+            "name": "Ecology"
+        }
+    ],
+    "mediaContacts": [
+        {
+            "name": {
+                "preferred": "Emily Packer",
+                "index": "Packer, Emily"
+            },
+            "emailAddresses": [
+                "e.packer@elifesciences.org"
+            ],
+            "phoneNumbers": [
+                "+441223855373"
+            ],
+            "affiliations": [
+                {
+                    "name": [
+                        "eLife"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": {
+                "preferred": "George Litchfield",
+                "index": "Litchfield, George"
+            },
+            "emailAddresses": [
+                "g.litchfield@elifesciences.org"
+            ],
+            "affiliations": [
+                {
+                    "name": [
+                        "eLife"
+                    ]
+                }
+            ]
+        }
+    ],
+    "about": [
+        {
+            "type": "paragraph",
+            "text": "eLife transforms research communication to create a future where a diverse, global community of scientists and researchers produces open and trusted results for the benefit of all. Independent, not-for-profit and supported by funders, we improve the way science is practised and shared. In support of our goal, we’ve launched a new publishing model that ends the accept/reject decision after peer review. Instead, papers invited for review will be published as a Reviewed Preprint that contains public peer reviews and an eLife assessment. We also continue to publish research that was accepted after peer review as part of our traditional process. eLife receives financial support and strategic guidance from the <a href=\"https://www.hhmi.org/\">Howard Hughes Medical Institute</a>, <a href=\"https://kaw.wallenberg.org/en\">Knut and Alice Wallenberg Foundation</a>, the <a href=\"https://www.mpg.de/en\">Max Planck Society</a> and <a href=\"https://wellcome.org/\">Wellcome</a>. Learn more at <a href=\"https://elifesciences.org/about\">https://elifesciences.org/about</a>."
+        },
+        {
+            "type": "paragraph",
+            "text": "To read the latest Ecology research published in eLife, visit<a href=\"https://elifesciences.org/subjects/ecology\"> https://elifesciences.org/subjects/ecology</a>."
+        }
+    ]
+}

@@ -1806,12 +1806,8 @@ $app->get('/press-packages/{id}',
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-        if ($type->getParameter('version') < 2 && empty($packages['relatedContent'])) {
-            throw new NotAcceptableHttpException(sprintf('This press package requires version %d.', 2));
-        }
-
-        if ($type->getParameter('version') < 2) {
-            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        if ($type->getParameter('version') < 4 && '6b266861' === $id) {
+            throw new NotAcceptableHttpException('This press package requires version 4.');
         }
 
         return new Response(
@@ -1821,9 +1817,8 @@ $app->get('/press-packages/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.press-package+json; version=3',
-    'application/vnd.elife.press-package+json; version=2',
-    'application/vnd.elife.press-package+json; version=1'
+    'application/vnd.elife.press-package+json; version=4',
+    'application/vnd.elife.press-package+json; version=3'
 ));
 
 $app->get('/profiles', function (Request $request, Accept $type) use ($app) {
