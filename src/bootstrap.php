@@ -2009,12 +2009,6 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
-
-    if (0 === count($reviewedPreprints) && $page > 1) {
-        throw new NotFoundHttpException('No page '.$page);
-    }
-
     $content = [
         'total' => count($reviewedPreprints),
         'items' => []
@@ -2022,6 +2016,12 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
 
     if ('asc' === $request->query->get('order', 'desc')) {
         $reviewedPreprints = array_reverse($reviewedPreprints);
+    }
+
+    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reviewedPreprints) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
     }
 
     foreach ($reviewedPreprints as $id => $reviewedPreprint) {
