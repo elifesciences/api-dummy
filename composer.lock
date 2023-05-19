@@ -1496,12 +1496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "9e75c115027ec397e46c6fe19a387ac566110abe"
+                "reference": "34314971eba05389ee768307fe0842af80dd9fff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/9e75c115027ec397e46c6fe19a387ac566110abe",
-                "reference": "9e75c115027ec397e46c6fe19a387ac566110abe",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/34314971eba05389ee768307fe0842af80dd9fff",
+                "reference": "34314971eba05389ee768307fe0842af80dd9fff",
                 "shasum": ""
             },
             "conflict": {
@@ -1517,7 +1517,7 @@
                 "issues": "https://github.com/elifesciences/api-raml/issues",
                 "source": "https://github.com/elifesciences/api-raml/tree/compiled-reviewed-preprint-expand-support"
             },
-            "time": "2023-05-18T20:14:00+00:00"
+            "time": "2023-05-19T12:36:39+00:00"
         },
         {
             "name": "elife/api-client",

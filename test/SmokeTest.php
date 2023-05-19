@@ -364,16 +364,29 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $this->createRequest($path),
                 'application/vnd.elife.press-package+json; version=4',
             ];
-            if ('6b266861' !== $file->getBasename('.json')) {
-                yield "{$path} version 3" => [
-                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
-                    'application/vnd.elife.press-package+json; version=3',
-                ];
-            } else {
+            if ('6b266861' === $file->getBasename('.json')) {
                 yield "{$path} version 3" => [
                     $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
                     'application/problem+json',
                     406,
+                ];
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=2'),
+                    'application/problem+json',
+                    406,
+                ];
+            } else {
+                yield "{$path} version 3" => [
+                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
+                    'application/vnd.elife.press-package+json; version=3',
+                ];
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=2'),
+                    'application/vnd.elife.press-package+json; version=2',
+                    200,
+                    [
+                        'application/vnd.elife.press-package+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    ],
                 ];
             }
         }
