@@ -370,22 +370,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     'application/problem+json',
                     406,
                 ];
-                yield "{$path} version 2" => [
-                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=2'),
-                    'application/problem+json',
-                    406,
-                ];
             } else {
                 yield "{$path} version 3" => [
                     $this->createRequest($path, 'application/vnd.elife.press-package+json; version=3'),
                     'application/vnd.elife.press-package+json; version=3',
-                ];
-                yield "{$path} version 2" => [
-                    $this->createRequest($path, 'application/vnd.elife.press-package+json; version=2'),
-                    'application/vnd.elife.press-package+json; version=2',
                     200,
                     [
-                        'application/vnd.elife.press-package+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                        'application/vnd.elife.press-package+json; version=3' => '299 elifesciences.org "Deprecation: Support for version 3 will be removed"',
                     ],
                 ];
             }
