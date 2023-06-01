@@ -669,6 +669,10 @@ $app->get('/articles/{number}/versions',
             ];
         }
 
+        if (!empty($article['sentForReview'])) {
+            $content['sentForReview'] = $article['sentForReview'];
+        }
+
         $content['versions'] = [];
         foreach ($article['versions'] as $articleVersion) {
             if ($type->getParameter('version') > 1 || !empty($articleVersion['version'])) {
