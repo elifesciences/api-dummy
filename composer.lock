@@ -1608,12 +1608,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "9ea9beea4c3aa148cf9f5e643016c0787c75b8cc"
+                "reference": "319cace6f9f34e9866e5fe73641372e54188939b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/9ea9beea4c3aa148cf9f5e643016c0787c75b8cc",
-                "reference": "9ea9beea4c3aa148cf9f5e643016c0787c75b8cc",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/319cace6f9f34e9866e5fe73641372e54188939b",
+                "reference": "319cace6f9f34e9866e5fe73641372e54188939b",
                 "shasum": ""
             },
             "conflict": {
@@ -1625,7 +1625,11 @@
                 "MIT"
             ],
             "description": "eLife Sciences API specification",
-            "time": "2023-07-17T14:01:47+00:00"
+            "support": {
+                "issues": "https://github.com/elifesciences/api-raml/issues",
+                "source": "https://github.com/elifesciences/api-raml/tree/compiled-version-doi"
+            },
+            "time": "2023-07-19T18:15:37+00:00"
         },
         {
             "name": "elife/api-client",
@@ -3961,5 +3965,5 @@
     "platform-overrides": {
         "php": "7.0.29"
     },
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
