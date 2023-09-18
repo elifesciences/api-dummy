@@ -10,7 +10,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-if (empty($argv[1]) || !preg_match('/[0-9]{5}/', $argv[1])) {
+if (empty($argv[1]) || !preg_match('/[0-9]{5,}/', $argv[1])) {
     throw new InvalidArgumentException(sprintf('Article ID expected: %s given', empty($argv[1]) ? 'none' : $argv[1]));
 }
 
