@@ -1,0 +1,313 @@
+{
+    "id": "with-reviewed-preprint",
+    "title": "reviewed preprints",
+    "subTitle": "A selection of papers",
+    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness.",
+    "summary": [
+        {
+            "type": "paragraph",
+            "text": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal."
+        }
+    ],
+    "published": "2015-09-16T11:19:26Z",
+    "image": {
+        "banner": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
+        },
+        "social": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.png",
+                "filename": "tropical-disease-elife-collections.png"
+            },
+            "size": {
+                "width": 1800,
+                "height": 861
+            }
+        }
+    },
+    "subjects": [
+        {
+            "id": "epidemiology-global-health",
+            "name": "Epidemiology and Global Health"
+        },
+        {
+            "id": "microbiology-infectious-disease",
+            "name": "Microbiology and Infectious Disease"
+        }
+    ],
+    "selectedCurator": {
+        "id": "pjha",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
+        "name": {
+            "preferred": "Prabhat Jha",
+            "index": "Jha, Prabhat"
+        },
+        "image": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                "filename": "kegley120208elife0213b.jpg"
+            },
+            "size": {
+                "width": 4256,
+                "height": 2832
+            }
+        },
+        "etAl": true
+    },
+    "curators": [
+        {
+            "id": "bcooper",
+            "type": {
+                "id": "reviewing-editor",
+                "label": "Reviewing Editor"
+            },
+            "name": {
+                "preferred": "Ben Cooper",
+                "index": "Cooper, Ben"
+            }
+        },
+        {
+            "id": "pjha",
+            "type": {
+                "id": "senior-editor",
+                "label": "Senior Editor"
+            },
+            "name": {
+                "preferred": "Prabhat Jha",
+                "index": "Jha, Prabhat"
+            },
+            "image": {
+                "alt": "",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
+                "source": {
+                    "mediaType": "image/png",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                    "filename": "kegley120208elife0213b.jpg"
+                },
+                "size": {
+                    "width": 4256,
+                    "height": 2832
+                }
+            }
+        }
+    ],
+    "content": [
+        {
+            "type": "reviewed-preprint",
+            "id": "19560",
+            "doi": "10.7554/eLife.19560",
+            "status": "reviewed",
+            "authorLine": "Lee R Berger, John Hawks ... Scott A Williams",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "indexContent": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "titlePrefix": "Title prefix",
+            "stage": "published",
+            "published": "2022-08-01T00:00:00Z",
+            "reviewedDate": "2022-08-01T00:00:00Z",
+            "versionDate": "2022-08-05T00:00:00Z",
+            "statusDate": "2022-08-01T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e19560",
+            "pdf": "https://elifesciences.org/content/4/e19560.pdf",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "curationLabels": [
+                "Ground-breaking",
+                "Convincing"
+            ],
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
+        },
+        {
+            "type": "blog-article",
+            "id": "359325",
+            "title": "Media coverage: Slime can see",
+            "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
+            "published": "2016-07-08T08:33:25Z",
+            "subjects": [
+                {
+                    "id": "biophysics-structural-biology",
+                    "name": "Biophysics and Structural Biology"
+                }
+            ]
+        },
+        {
+            "type": "digest",
+            "id": "f0f08e8d6ee3",
+            "title": "Neighborhood watch",
+            "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
+            "stage": "published",
+            "published": "2018-07-06T09:06:01Z",
+            "updated": "2018-07-06T16:23:24Z",
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
+                        "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                    },
+                    "size": {
+                        "width": 1152,
+                        "height": 864
+                    }
+                }
+            },
+            "subjects": [
+                {
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
+                }
+            ]
+        }
+    ],
+    "relatedContent": [
+        {
+            "type": "research-article",
+            "stage": "published",
+            "status": "poa",
+            "id": "14107",
+            "version": 1,
+            "doi": "10.7554/eLife.14107",
+            "title": "Molecular basis for multimerization in the activation of the epidermal growth factor",
+            "published": "2016-03-28T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e14107",
+            "authorLine": "Yongjian Huang, Shashank Bharill ... John Kuriyan",
+            "subjects": [
+                {
+                    "id": "biochemistry",
+                    "name": "Biochemistry"
+                },
+                {
+                    "id": "biophysics-structural-biology",
+                    "name": "Biophysics and Structural Biology"
+                }
+            ]
+        },
+        {
+            "type": "editorial",
+            "stage": "published",
+            "status": "vor",
+            "id": "05770",
+            "version": 1,
+            "image": {
+                "thumbnail": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif",
+                    "source": {
+                        "mediaType": "image/jpg",
+                        "uri": "https://iiif.elifesciences.org/lax/05770%2Felife-05770-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "elife-05770-fig1-v1.jpg"
+                    },
+                    "size": {
+                        "width": 2740,
+                        "height": 3877
+                    }
+                }
+            },
+            "doi": "10.7554/eLife.05770",
+            "title": "The pleasure of publishing",
+            "published": "2015-01-06T00:00:00Z",
+            "versionDate": "2016-03-28T00:00:00Z",
+            "statusDate": "2016-03-28T00:00:00Z",
+            "volume": 5,
+            "elocationId": "e05770",
+            "authorLine": "Vivek Malhotra, Eve Marder",
+            "impactStatement": "When assessing manuscripts eLife editors look for a combination of rigour and insight, along with results and ideas that make other researchers think differently about their subject."
+        },
+        {
+            "type": "event",
+            "id": "2",
+            "title": "eLife Continuum webinar",
+            "published": "2016-07-01T00:00:00Z",
+            "starts": "2016-08-04T15:00:00Z",
+            "ends": "2016-08-04T16:00:00Z"
+        }
+    ],
+    "podcastEpisodes": [
+        {
+            "number": 4,
+            "title": "September 2013",
+            "impactStatement": "In this episode of the eLife podcast we discuss how flatworms can grow new heads and tails, how photosynthesis has evolved over time, social interactions between mice, the properties of undead cells, and interactions between steroids and genes.",
+            "published": "2013-08-21T12:54:08Z",
+            "image": {
+                "thumbnail": {
+                    "alt": "",
+                    "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
+                    "source": {
+                        "mediaType": "image/png",
+                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-4-elife-podcast.png",
+                        "filename": "episode-4-elife-podcast.png"
+                    },
+                    "size": {
+                        "width": 1800,
+                        "height": 900
+                    }
+                }
+            },
+            "sources": [
+                {
+                    "mediaType": "audio/mpeg",
+                    "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.09.mp3"
+                }
+            ]
+        }
+    ]
+}
