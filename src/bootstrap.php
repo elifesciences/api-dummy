@@ -966,6 +966,9 @@ $app->get('/collections/{id}',
         }
 
         $collection = $app['collections'][$id];
+        if ($type->getParameter('version') < 3 && in_array($id, ['with-reviewed-preprint'])) {
+            throw new NotAcceptableHttpException('This reviewed-preprint requires version 3.');
+        }
 
         foreach (['content', 'relatedContent'] as $content) {
             $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
@@ -980,8 +983,8 @@ $app->get('/collections/{id}',
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.collection+json; version=2',
-    'application/vnd.elife.collection+json; version=1'
+    'application/vnd.elife.collection+json; version=3',
+    'application/vnd.elife.collection+json; version=2'
 ));
 
 $app->get('/community', function (Request $request, Accept $type) use ($app) {

@@ -174,14 +174,18 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
             $path = '/collections/'.$file->getBasename('.json');
-            yield "{$path} version 2" => [
-                $this->createRequest($path),
-                'application/vnd.elife.collection+json; version=2',
-            ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.collection+json; version=1'),
-                'application/vnd.elife.collection+json; version=1',
-            ];
+
+            if ('with-reviewed-preprint' === $file->getBasename('.json')) {
+                yield "{$path} version 3" => [
+                    $this->createRequest($path),
+                    'application/vnd.elife.collection+json; version=3',
+                ];
+            } else {
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
+                    'application/vnd.elife.collection+json; version=2',
+                ];
+            }
         }
 
         yield $path = '/community' => [
