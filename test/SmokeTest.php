@@ -185,11 +185,6 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
                     'application/vnd.elife.collection+json; version=2',
                 ];
-
-                yield "{$path} version 1" => [
-                    $this->createRequest($path, 'application/vnd.elife.collection+json; version=1'),
-                    'application/vnd.elife.collection+json; version=1',
-                ];
             }
         }
 

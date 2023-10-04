@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "412182ad400302d982413ba4a523f52c",
+    "content-hash": "e1b4d266767e06c4220667f55c8ada46",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -1604,16 +1604,16 @@
         },
         {
             "name": "elife/api",
-            "version": "dev-collection-rp",
+            "version": "2.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "08c0f258cfbf9bdf24185fa0636261919ee42cf2"
+                "reference": "bff36c4414476ae92d1932a9a7692a9056453b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/08c0f258cfbf9bdf24185fa0636261919ee42cf2",
-                "reference": "08c0f258cfbf9bdf24185fa0636261919ee42cf2",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/bff36c4414476ae92d1932a9a7692a9056453b68",
+                "reference": "bff36c4414476ae92d1932a9a7692a9056453b68",
                 "shasum": ""
             },
             "conflict": {
@@ -1627,9 +1627,9 @@
             "description": "eLife Sciences API specification",
             "support": {
                 "issues": "https://github.com/elifesciences/api-raml/issues",
-                "source": "https://github.com/elifesciences/api-raml/tree/collection-rp"
+                "source": "https://github.com/elifesciences/api-raml/tree/2.23.0"
             },
-            "time": "2023-10-02T14:07:14+00:00"
+            "time": "2023-10-04T12:47:29+00:00"
         },
         {
             "name": "elife/api-client",
@@ -3952,7 +3952,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "elife/api": 20,
         "elife/api-client": 20,
         "elife/api-validator": 20
     },

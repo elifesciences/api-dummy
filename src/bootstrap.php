@@ -22,7 +22,7 @@ $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
 $dataCheck = !((bool) $dataDirSet);
 
-$app = new Application(['debug'=>true]);
+$app = new Application();
 
 $app->register(new ApiProblemProvider());
 $app->register(new ContentNegotiationProvider());
@@ -984,8 +984,7 @@ $app->get('/collections/{id}',
     }
 )->before($app['negotiate.accept'](
     'application/vnd.elife.collection+json; version=3',
-    'application/vnd.elife.collection+json; version=2',
-    'application/vnd.elife.collection+json; version=1'
+    'application/vnd.elife.collection+json; version=2'
 ));
 
 $app->get('/community', function (Request $request, Accept $type) use ($app) {
