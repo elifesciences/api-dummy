@@ -876,14 +876,20 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
-        if ($type->getParameter('version') < 2 && in_array($id, ['359325', '369365', '378207'])) {
-            throw new NotAcceptableHttpException('This blog article requires version 2.');
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if (in_array($id, ['359325', '369365', '378207'])) {
+                throw new NotAcceptableHttpException('This blog article requires version 2.');
+            }
         }
 
         return new Response(
             json_encode($article, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -971,10 +977,10 @@ $app->get('/collections/{id}',
 
         if ($type->getParameter('version') < 3) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
-        }
 
-        if ($type->getParameter('version') < 3 && 'with-reviewed-preprint' === $id) {
-            throw new NotAcceptableHttpException('This collection requires version 3.');
+            if ('with-reviewed-preprint' === $id) {
+                throw new NotAcceptableHttpException('This collection requires version 3.');
+            }
         }
 
         return new Response(
@@ -1510,14 +1516,20 @@ $app->get('/labs-posts/{id}',
 
         $lab = $app['labs'][$id];
 
-        if ($type->getParameter('version') < 2 && '80000003' === $id) {
-            throw new NotAcceptableHttpException('This labs post requires version 2.');
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if ('80000003' === $id) {
+                throw new NotAcceptableHttpException('This labs post requires version 2.');
+            }
         }
 
         return new Response(
             json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1816,10 +1828,10 @@ $app->get('/press-packages/{id}',
 
         if ($type->getParameter('version') < 4) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
-        }
 
-        if ($type->getParameter('version') < 4 && '6b266861' === $id) {
-            throw new NotAcceptableHttpException('This press package requires version 4.');
+            if ('6b266861' === $id) {
+                throw new NotAcceptableHttpException('This press package requires version 4.');
+            }
         }
 
         return new Response(
@@ -1966,10 +1978,10 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
 
     if ($type->getParameter('version') < 2) {
         $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
-    }
 
-    if ($type->getParameter('version') < 2 && 'highlights-japan' === $id) {
-        throw new NotAcceptableHttpException('This promotional collection requires version 2.');
+        if ('highlights-japan' === $id) {
+            throw new NotAcceptableHttpException('This promotional collection requires version 2.');
+        }
     }
 
     return new Response(
