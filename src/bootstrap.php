@@ -966,14 +966,21 @@ $app->get('/collections/{id}',
         }
 
         $collection = $app['collections'][$id];
-        if ($type->getParameter('version') < 3 && in_array($id, ['with-reviewed-preprint'])) {
-            throw new NotAcceptableHttpException('This reviewed-preprint requires version 3.');
+
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 3) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
+        if ($type->getParameter('version') < 3 && 'with-reviewed-preprint' === $id) {
+            throw new NotAcceptableHttpException('This collection requires version 3.');
         }
 
         return new Response(
             json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1955,10 +1962,20 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
 
     $promotionalCollection = $app['promotional-collections'][$id];
 
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    if ($type->getParameter('version') < 2) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
+
+    if ($type->getParameter('version') < 2 && 'highlights-japan' === $id) {
+        throw new NotAcceptableHttpException('This promotional collection requires version 2.');
+    }
+
     return new Response(
         json_encode(array_filter($promotionalCollection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
-        ['Content-Type' => $type->getNormalizedValue()]
+        $headers
     );
 })->before($app['negotiate.accept'](
     'application/vnd.elife.promotional-collection+json; version=2',

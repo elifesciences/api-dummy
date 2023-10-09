@@ -175,15 +175,24 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
             $path = '/collections/'.$file->getBasename('.json');
 
+            yield "{$path} version 3" => [
+                $this->createRequest($path),
+                'application/vnd.elife.collection+json; version=3',
+            ];
             if ('with-reviewed-preprint' === $file->getBasename('.json')) {
-                yield "{$path} version 3" => [
-                    $this->createRequest($path),
-                    'application/vnd.elife.collection+json; version=3',
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
+                    'application/problem+json',
+                    406,
                 ];
             } else {
                 yield "{$path} version 2" => [
                     $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
                     'application/vnd.elife.collection+json; version=2',
+                    200,
+                    [
+                        'application/vnd.elife.collection+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    ],
                 ];
             }
         }
@@ -402,15 +411,26 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.promotional-collection-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections') as $file) {
+            $path = '/promotional-collections/'.$file->getBasename('.json');
+
+            yield "{$path} version 2" => [
+                $this->createRequest($path),
+                'application/vnd.elife.promotional-collection+json; version=2',
+            ];
             if ('highlights-japan' === $file->getBasename('.json')) {
-                yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
-                    $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=2'),
-                    'application/vnd.elife.promotional-collection+json; version=2',
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
+                    'application/problem+json',
+                    406,
                 ];
             } else {
-                yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
+                yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
                     'application/vnd.elife.promotional-collection+json; version=1',
+                    200,
+                    [
+                        'application/vnd.elife.promotional-collection+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
                 ];
             }
         }
