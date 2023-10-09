@@ -22,7 +22,7 @@ $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
 $dataCheck = !((bool) $dataDirSet);
 
-$app = new Application();
+$app = new Application(['debug' => true]);
 
 $app->register(new ApiProblemProvider());
 $app->register(new ContentNegotiationProvider());
@@ -1967,7 +1967,7 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
         ['Content-Type' => $type->getNormalizedValue()]
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.promotional-collection+json; version=1'
+    'application/vnd.elife.promotional-collection+json; version=2'
 ));
 
 $app->get('/recommendations/{contentType}/{id}', function (Request $request, Accept $type, string $contentType, string $id) use ($app) {

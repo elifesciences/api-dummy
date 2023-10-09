@@ -112,6 +112,21 @@
             ]
         },
         {
+            "type": "reviewed-preprint",
+            "status": "reviewed",
+            "stage": "published",
+            "id": "89763",
+            "title": " Pleiotropic effects of trisomy and pharmacologic modulation on structural, functional, molecular, and genetic systems in a Down syndrome mouse model ",
+            "impactStatement": " Pleiotropic effects of trisomy and pharmacologic modulation on structural, functional, molecular, and genetic systems in a Down syndrome mouse model ",
+            "published": "2016-07-08T08:33:25Z",
+            "subjects": [
+                {
+                    "id": "biophysics-structural-biology",
+                    "name": "Biophysics and Structural Biology"
+                }
+            ]
+        },
+        {
             "type": "digest",
             "id": "f0f08e8d6ee3",
             "title": "Neighborhood watch",
