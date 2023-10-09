@@ -970,12 +970,6 @@ $app->get('/collections/{id}',
             throw new NotAcceptableHttpException('This reviewed-preprint requires version 3.');
         }
 
-        foreach (['content', 'relatedContent'] as $content) {
-            $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
-                return $type->getParameter('version') > 1 || !in_array($item['type'], ['digest', 'event']);
-            });
-        }
-
         return new Response(
             json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
@@ -1967,7 +1961,8 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
         ['Content-Type' => $type->getNormalizedValue()]
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.promotional-collection+json; version=2'
+    'application/vnd.elife.promotional-collection+json; version=2',
+    'application/vnd.elife.promotional-collection+json; version=1'
 ));
 
 $app->get('/recommendations/{contentType}/{id}', function (Request $request, Accept $type, string $contentType, string $id) use ($app) {
