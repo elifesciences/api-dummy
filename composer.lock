@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1b4d266767e06c4220667f55c8ada46",
+    "content-hash": "ffad52c06b7f22ee1fb9caa5aa3aa267",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -1604,16 +1604,16 @@
         },
         {
             "name": "elife/api",
-            "version": "2.23.0",
+            "version": "2.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "bff36c4414476ae92d1932a9a7692a9056453b68"
+                "reference": "84d590f2593deee7d17f87b9bd4308c8e2f5b4dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/bff36c4414476ae92d1932a9a7692a9056453b68",
-                "reference": "bff36c4414476ae92d1932a9a7692a9056453b68",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/84d590f2593deee7d17f87b9bd4308c8e2f5b4dd",
+                "reference": "84d590f2593deee7d17f87b9bd4308c8e2f5b4dd",
                 "shasum": ""
             },
             "conflict": {
@@ -1627,9 +1627,9 @@
             "description": "eLife Sciences API specification",
             "support": {
                 "issues": "https://github.com/elifesciences/api-raml/issues",
-                "source": "https://github.com/elifesciences/api-raml/tree/2.23.0"
+                "source": "https://github.com/elifesciences/api-raml/tree/2.25.0"
             },
-            "time": "2023-10-04T12:47:29+00:00"
+            "time": "2023-10-10T13:58:24+00:00"
         },
         {
             "name": "elife/api-client",

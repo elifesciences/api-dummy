@@ -158,6 +158,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.blog-article+json; version=1'),
                     'application/vnd.elife.blog-article+json; version=1',
+                    200,
+                    [
+                        'application/vnd.elife.blog-article+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
                 ];
             } else {
                 yield "{$path} version 1" => [
@@ -175,15 +179,24 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/collections') as $file) {
             $path = '/collections/'.$file->getBasename('.json');
 
+            yield "{$path} version 3" => [
+                $this->createRequest($path),
+                'application/vnd.elife.collection+json; version=3',
+            ];
             if ('with-reviewed-preprint' === $file->getBasename('.json')) {
-                yield "{$path} version 3" => [
-                    $this->createRequest($path),
-                    'application/vnd.elife.collection+json; version=3',
+                yield "{$path} version 2" => [
+                    $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
+                    'application/problem+json',
+                    406,
                 ];
             } else {
                 yield "{$path} version 2" => [
                     $this->createRequest($path, 'application/vnd.elife.collection+json; version=2'),
                     'application/vnd.elife.collection+json; version=2',
+                    200,
+                    [
+                        'application/vnd.elife.collection+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                    ],
                 ];
             }
         }
@@ -246,6 +259,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 1" => [
                 $this->createRequest($path, 'application/vnd.elife.event+json; version=1'),
                 'application/vnd.elife.event+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.event+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                ],
             ];
         }
 
@@ -258,10 +275,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 2" => [
                 $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
                 'application/vnd.elife.highlight-list+json; version=2',
-            ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
-                'application/vnd.elife.highlight-list+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.highlight-list+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                ],
             ];
         }
 
@@ -279,6 +296,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 1" => [
                 $this->createRequest($path, 'application/vnd.elife.interview+json; version=1'),
                 'application/vnd.elife.interview+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.interview+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                ],
             ];
         }
 
@@ -308,6 +329,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.labs-post+json; version=1'),
                     'application/vnd.elife.labs-post+json; version=1',
+                    200,
+                    [
+                        'application/vnd.elife.labs-post+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
                 ];
             } else {
                 yield "{$path} version 1" => [
@@ -402,10 +427,28 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             'application/vnd.elife.promotional-collection-list+json; version=1',
         ];
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/promotional-collections') as $file) {
-            yield $path = '/promotional-collections/'.$file->getBasename('.json') => [
-                $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
-                'application/vnd.elife.promotional-collection+json; version=1',
+            $path = '/promotional-collections/'.$file->getBasename('.json');
+
+            yield "{$path} version 2" => [
+                $this->createRequest($path),
+                'application/vnd.elife.promotional-collection+json; version=2',
             ];
+            if ('highlights-japan' === $file->getBasename('.json')) {
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
+                    'application/problem+json',
+                    406,
+                ];
+            } else {
+                yield "{$path} version 1" => [
+                    $this->createRequest($path, 'application/vnd.elife.promotional-collection+json; version=1'),
+                    'application/vnd.elife.promotional-collection+json; version=1',
+                    200,
+                    [
+                        'application/vnd.elife.promotional-collection+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
+                ];
+            }
         }
 
         yield $path = '/reviewed-preprints' => [
@@ -431,28 +474,39 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
 
         foreach ([2, 1] as $version) {
+            $warning = 1 === $version ? [
+                'application/vnd.elife.search+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+            ] : [];
             yield $path = '/search?type[]=reviewed-preprint' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
-                [],
+                $warning,
                 1 === $version ? 0 : null,
             ];
             yield $path = '/search' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?for=cell' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?subject[]=cell-biology' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
         }
         yield $path = '/search?start-date=2017-02-29' => [

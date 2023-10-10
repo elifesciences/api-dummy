@@ -24,7 +24,7 @@
         "symfony/http-kernel": "^3.1"
     },
     "require-dev": {
-        "elife/api": "2.23.0",
+        "elife/api": "^2.25",
         "elife/api-client": "^1.0@dev",
         "elife/api-validator": "^1.0@dev",
         "guzzlehttp/guzzle": "^6.0",

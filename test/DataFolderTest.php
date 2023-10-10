@@ -75,6 +75,10 @@ final class DataFolderTest extends PHPUnit_Framework_TestCase
                 yield "{$path} version 1" => [
                     $this->createRequest($path, 'application/vnd.elife.blog-article+json; version=1'),
                     'application/vnd.elife.blog-article+json; version=1',
+                    200,
+                    [
+                        'application/vnd.elife.blog-article+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                    ],
                 ];
             } else {
                 yield "{$path} version 1" => [
