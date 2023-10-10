@@ -1282,10 +1282,16 @@ $app->get('/events/{id}',
 
         $events = $app['events'][$id];
 
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
         return new Response(
             json_encode($events, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1325,6 +1331,10 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
+    if ($type->getParameter('version') < 3) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
+
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
@@ -1332,8 +1342,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     );
 })->before($app['negotiate.accept'](
     'application/vnd.elife.highlight-list+json; version=3',
-    'application/vnd.elife.highlight-list+json; version=2',
-    'application/vnd.elife.highlight-list+json; version=1'
+    'application/vnd.elife.highlight-list+json; version=2'
 ));
 
 $app->get('/interviews', function (Request $request, Accept $type) use ($app) {
@@ -1387,10 +1396,16 @@ $app->get('/interviews/{id}',
 
         $interview = $app['interviews'][$id];
 
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
         return new Response(
             json_encode($interview, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -2023,6 +2038,10 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
+    if ($type->getParameter('version') < 2) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
+
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
@@ -2337,7 +2356,6 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         usort($results, function (array $a, array $b) {
             return $b['_sort_date'] <=> $a['_sort_date'];
         });
-    } else {
     }
 
     if ('asc' === $request->query->get('order', 'desc')) {
@@ -2357,6 +2375,10 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     }, $results);
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    if ($type->getParameter('version') < 2) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
@@ -2455,11 +2477,6 @@ $app->post('/oauth2/token', function (Request $request) {
 });
 
 $app->after(function (Request $request, Response $response, Application $app) {
-    /*if ('/ping' !== $request->getPathInfo()) {
-        $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
-        $response->headers->set('Vary', 'Accept', false);
-    }*/
-
     if ($response instanceof StreamedResponse) {
         return;
     }

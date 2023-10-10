@@ -259,6 +259,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 1" => [
                 $this->createRequest($path, 'application/vnd.elife.event+json; version=1'),
                 'application/vnd.elife.event+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.event+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                ],
             ];
         }
 
@@ -271,10 +275,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 2" => [
                 $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=2'),
                 'application/vnd.elife.highlight-list+json; version=2',
-            ];
-            yield "{$path} version 1" => [
-                $this->createRequest($path, 'application/vnd.elife.highlight-list+json; version=1'),
-                'application/vnd.elife.highlight-list+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.highlight-list+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
+                ],
             ];
         }
 
@@ -292,6 +296,10 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version 1" => [
                 $this->createRequest($path, 'application/vnd.elife.interview+json; version=1'),
                 'application/vnd.elife.interview+json; version=1',
+                200,
+                [
+                    'application/vnd.elife.interview+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+                ],
             ];
         }
 
@@ -466,28 +474,39 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
         }
 
         foreach ([2, 1] as $version) {
+            $warning = 1 === $version ? [
+                'application/vnd.elife.search+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
+            ] : [];
             yield $path = '/search?type[]=reviewed-preprint' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
-                [],
+                $warning,
                 1 === $version ? 0 : null,
             ];
             yield $path = '/search' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?for=cell' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?subject[]=cell-biology' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
             yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
+                200,
+                $warning,
             ];
         }
         yield $path = '/search?start-date=2017-02-29' => [
