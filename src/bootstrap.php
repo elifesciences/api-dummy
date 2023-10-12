@@ -779,18 +779,26 @@ $app->get('/articles/{number}/related',
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
-
         $article = $app['articles'][$number];
-
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
         $content = $article['relatedArticles'] ?? [];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if ('13410' === $number) {
+                throw new NotAcceptableHttpException('This blog article requires version 2.');
+            }
+        }
 
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.article-related+json; version=2',
     'application/vnd.elife.article-related+json; version=1'
 ));
 
