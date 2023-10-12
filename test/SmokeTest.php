@@ -130,8 +130,21 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
 
             yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
                 $this->createRequest($path),
-                'application/vnd.elife.article-related+json; version=1',
+                'application/vnd.elife.article-related+json; version=2',
             ];
+
+            if ('13410' === $file->getBasename('.json')) {
+                yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
+                    $this->createRequest($path, 'application/vnd.elife.article-related+json; version=1'),
+                    'application/problem+json',
+                    406
+                ];
+            } else {
+                yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
+                    $this->createRequest($path, 'application/vnd.elife.article-related+json; version=1'),
+                    'application/vnd.elife.article-related+json; version=1',
+                ];
+            }
         }
 
         foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/bioprotocols') as $file) {
