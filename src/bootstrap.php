@@ -783,12 +783,8 @@ $app->get('/articles/{number}/related',
         $headers = ['Content-Type' => $type->getNormalizedValue()];
         $content = $article['relatedArticles'] ?? [];
 
-        if ($type->getParameter('version') < 2) {
-            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
-
-            if ('13410' === $number) {
-                throw new NotAcceptableHttpException('This blog article requires version 2.');
-            }
+        if ($type->getParameter('version') < 2 && '13410' === $number) {
+            throw new NotAcceptableHttpException('These article relations require version 2.');
         }
 
         return new Response(
