@@ -2042,7 +2042,7 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-    if ($type->getParameter('version') < 3 && '13410' !== $id) {
+    if ($type->getParameter('version') < 3 && '13410' === $id) {
         throw new NotAcceptableHttpException('This recommendation requires version 3.');
     }
 

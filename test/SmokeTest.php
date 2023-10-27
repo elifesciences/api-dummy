@@ -30,6 +30,23 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
         }
 
+        foreach ((new Finder())->files()->name('*.json')->in(__DIR__.'/../data/recommendations') as $file) {
+            $name = explode('-', $file->getBasename('.json'));
+
+            yield $path = "/recommendations/${name[0]}/${name[1]}" => [
+                $this->createRequest($path),
+                'application/vnd.elife.recommendations+json; version=3',
+            ];
+
+            if ('13410' === $name[1]) {
+                yield $path = "/recommendations/${name[0]}/${name[1]}" => [
+                    $this->createRequest($path, 'application/vnd.elife.recommendations+json; version=2'),
+                    'application/problem+json',
+                    406,
+                ];
+            }
+        }
+
         yield '/annual-reports wrong version' => [
           $this->createRequest('/annual-reports', 'application/vnd.elife.annual-report-list+json; version=1'),
           'application/problem+json',
