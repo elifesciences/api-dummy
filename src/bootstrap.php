@@ -2042,8 +2042,8 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-    if ($type->getParameter('version') < 2) {
-        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    if ($type->getParameter('version') < 3 && '13410' === $id) {
+        throw new NotAcceptableHttpException('This recommendation requires version 3.');
     }
 
     return new Response(
@@ -2052,8 +2052,8 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.recommendations+json; version=2',
-    'application/vnd.elife.recommendations+json; version=1'
+    'application/vnd.elife.recommendations+json; version=3',
+    'application/vnd.elife.recommendations+json; version=2'
 ));
 
 $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($app){
