@@ -491,6 +491,26 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 'application/vnd.elife.reviewed-preprint+json; version=1',
             ];
         }
+        yield $path = '/reviewed-preprints?start-date=2017-01-01&end-date=2017-01-01' => [
+            $this->createRequest($path),
+            'application/vnd.elife.reviewed-preprint-list+json; version=1',
+        ];
+        yield $path = '/reviewed-preprints?start-date=2017-02-29' => [
+            $this->createRequest($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/reviewed-preprints?end-date=2017-02-29' => [
+            $this->createRequest($path),
+            'application/problem+json',
+            400,
+        ];
+        yield $path = '/reviewed-preprints?start-date=2017-01-02&end-date=2017-01-01' => [
+            $this->createRequest($path),
+            'application/problem+json',
+            400,
+        ];
+
 
         yield $path = '/subjects' => [
             $this->createRequest($path),

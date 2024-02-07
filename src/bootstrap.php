@@ -2062,10 +2062,21 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $content = [
-        'total' => count($reviewedPreprints),
-        'items' => []
-    ];
+    $useDate = $request->query->get('use-date', 'default');
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
+
+    if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
+        throw new BadRequestHttpException('Invalid start date');
+    } elseif (!$endDate || $endDate->format('Y-m-d') !== $originalEndDate) {
+        throw new BadRequestHttpException('Invalid end date');
+    }
+    $startDate = $startDate->setTime(0, 0, 0);
+    $endDate = $endDate->setTime(23, 59, 59);
+
+    if ($endDate < $startDate) {
+        throw new BadRequestHttpException('End date must be on or after start date');
+    }
 
     if ('asc' === $request->query->get('order', 'desc')) {
         $reviewedPreprints = array_reverse($reviewedPreprints);
@@ -2077,10 +2088,49 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($reviewedPreprints as $id => $reviewedPreprint) {
-        unset($reviewedPreprint['indexContent']);
+    foreach ($reviewedPreprints as $i => $reviewedPreprint) {
+        if ('published' === $useDate) {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
+        } elseif (!empty($reviewedPreprint['statusDate'])) {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['statusDate']);
+        } elseif ('collection' === $reviewedPreprint['type'] && !empty($reviewedPreprint['updated'])) {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['updated']);
+        } else {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
+        }
+    }
 
-        $content['items'][] = $reviewedPreprint;
+    uasort($reviewedPreprints, function (array $a, array $b) {
+        return $a['_sort_date'] <=> $b['_sort_date'];
+    });
+
+    $reviewedPreprints = array_filter($reviewedPreprints, function ($result) use ($startDate) {
+        return $result['_sort_date'] >= $startDate;
+    });
+
+    $reviewedPreprints = array_filter($reviewedPreprints, function ($result) use ($endDate) {
+        return $result['_sort_date'] <= $endDate;
+    });
+
+    $content = [
+        'total' => count($reviewedPreprints),
+        'items' => [],
+    ];
+
+    if ('desc' === $request->query->get('order', 'desc')) {
+        $reviewedPreprints = array_reverse($reviewedPreprints);
+    }
+
+    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reviewedPreprints) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($reviewedPreprints as $i => $cover) {
+        unset($cover['_sort_date']);
+
+        $content['items'][] = $cover;
     }
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
