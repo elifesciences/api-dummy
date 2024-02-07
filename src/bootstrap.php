@@ -2082,6 +2082,10 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         $reviewedPreprints = array_reverse($reviewedPreprints);
     }
 
+    $content = [
+        'total' => count($reviewedPreprints),
+        'items' => [],
+    ];
     $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
 
     if (0 === count($reviewedPreprints) && $page > 1) {
@@ -2093,8 +2097,6 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
             $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
         } elseif (!empty($reviewedPreprint['statusDate'])) {
             $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['statusDate']);
-        } elseif ('collection' === $reviewedPreprint['type'] && !empty($reviewedPreprint['updated'])) {
-            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['updated']);
         } else {
             $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
         }
@@ -2111,15 +2113,6 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
     $reviewedPreprints = array_filter($reviewedPreprints, function ($result) use ($endDate) {
         return $result['_sort_date'] <= $endDate;
     });
-
-    $content = [
-        'total' => count($reviewedPreprints),
-        'items' => [],
-    ];
-
-    if ('desc' === $request->query->get('order', 'desc')) {
-        $reviewedPreprints = array_reverse($reviewedPreprints);
-    }
 
     $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
 
