@@ -2127,7 +2127,8 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($reviewedPreprints as $i => $reviewedPreprint) {
+    foreach ($reviewedPreprints as $id => $reviewedPreprint) {
+        unset($reviewedPreprint['indexContent']);
         unset($reviewedPreprint['_sort_date']);
 
         $content['items'][] = $reviewedPreprint;
