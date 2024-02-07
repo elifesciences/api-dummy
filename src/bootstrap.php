@@ -2127,10 +2127,10 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
         throw new NotFoundHttpException('No page '.$page);
     }
 
-    foreach ($reviewedPreprints as $i => $cover) {
-        unset($cover['_sort_date']);
+    foreach ($reviewedPreprints as $i => $reviewedPreprint) {
+        unset($reviewedPreprint['_sort_date']);
 
-        $content['items'][] = $cover;
+        $content['items'][] = $reviewedPreprint;
     }
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
