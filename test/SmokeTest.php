@@ -84,15 +84,15 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                     $vorMinimum = 7;
                     break;
                 default:
-                    $poaMinimum = 2;
-                    $vorMinimum = 6;
+                    $poaMinimum = 3;
+                    $vorMinimum = 7;
             }
 
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
-                    'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=7',
+                    'application/vnd.elife.article-poa+json; version=4',
+                    'application/vnd.elife.article-vor+json; version=8',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -103,8 +103,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
                 200,
                 [
-                    'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
+                    'application/vnd.elife.article-poa+json; version=3' => '299 elifesciences.org "Deprecation: Support for version 3 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=7' => '299 elifesciences.org "Deprecation: Support for version 7 will be removed"',
                 ],
             ];
 
@@ -128,8 +128,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             yield "{$path} version highest" => [
                 $this->createRequest($path),
                 [
-                    'application/vnd.elife.article-poa+json; version=3',
-                    'application/vnd.elife.article-vor+json; version=7',
+                    'application/vnd.elife.article-poa+json; version=4',
+                    'application/vnd.elife.article-vor+json; version=8',
                 ],
             ];
             yield "{$path} version lowest" => [
@@ -140,8 +140,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 ],
                 200,
                 [
-                    'application/vnd.elife.article-poa+json; version=2' => '299 elifesciences.org "Deprecation: Support for version 2 will be removed"',
-                    'application/vnd.elife.article-vor+json; version=6' => '299 elifesciences.org "Deprecation: Support for version 6 will be removed"',
+                    'application/vnd.elife.article-poa+json; version=3' => '299 elifesciences.org "Deprecation: Support for version 3 will be removed"',
+                    'application/vnd.elife.article-vor+json; version=7' => '299 elifesciences.org "Deprecation: Support for version 7 will be removed"',
                 ],
             ];
 
