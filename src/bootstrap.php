@@ -735,13 +735,13 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=8',
                 'application/vnd.elife.article-vor+json; version=7',
-                'application/vnd.elife.article-vor+json; version=6',
             ];
         } else {
             $accepts = [
+                'application/vnd.elife.article-poa+json; version=4',
                 'application/vnd.elife.article-poa+json; version=3',
-                'application/vnd.elife.article-poa+json; version=2',
             ];
         }
 
@@ -758,11 +758,11 @@ $app->get('/articles/{number}/versions/{version}',
             throw new NotAcceptableHttpException('This article VoR requires version 7.');
         }
 
-        if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [2])) {
+        if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [3])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
-        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [6])) {
+        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [7])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
