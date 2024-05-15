@@ -1,0 +1,53 @@
+{
+  "id": "biochemistry-chemical-biology",
+  "name": "Biochemistry and Chemical Biology",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-biochemistry-illustration.jpg",
+      "alt": "Biochemistry and Chemical Biology",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-biochemistry-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-biochemistry-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-biochemistry-illustration.jpg",
+      "alt": "Biochemistry and Chemical Biology",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-biochemistry-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-biochemistry-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    }
+  },
+  "impactStatement": "eLife reviews research that gives new insights into biological molecules or uses chemical approaches to illuminate complex biological processes. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#biochemistry-chemical-biology\">what we review</a> and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=biochemistry\">sign up for the latest research</a>.",
+  "aimsAndScope": [
+    {
+      "type": "paragraph",
+      "text": "We aim to review studies that provide new insights into the structure, function, and regulation of biological molecules including proteins, nucleic acids, lipids, carbohydrates, and natural products. In addition, we are interested in studies that illuminate complex biological processes using chemical tools and approaches. Read the <a href=\"https://elifesciences.org/subjects/biochemistry-chemical-biology\">latest research</a> in this subject area."
+    }
+  ]
+}

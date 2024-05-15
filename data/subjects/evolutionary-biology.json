@@ -1,0 +1,53 @@
+{
+  "id": "evolutionary-biology",
+  "name": "Evolutionary Biology",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-evolutionary-biology-illustration.jpg",
+      "alt": "Evolutionary Biology",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-evolutionary-biology-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-evolutionary-biology-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-evolutionary-biology-illustration.jpg",
+      "alt": "Evolutionary Biology",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-evolutionary-biology-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-evolutionary-biology-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    }
+  },
+  "impactStatement": "eLife reviews research spanning behavior, morphology, evolution of developmental processes, palaeontology, experimental evolution and evolutionary theory. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#evolutionary-biology\">what we review</a> and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=ev_biology\">sign up for the latest research</a>.",
+  "aimsAndScope": [
+    {
+      "type": "paragraph",
+      "text": "We aim to review studies that present new insights into patterns and processes in any field of evolutionary biology. This includes comparative genomics, population genetics, ecology, behavior, morphology, evolution of developmental processes, palaeontology, experimental evolution and evolutionary theory. We also welcome papers that revisit long established evolutionary paradigms in the light of new evidence. Read the <a href=\"https://elifesciences.org/subjects/evolutionary-biology\">latest research</a> in this subject area."
+    }
+  ]
+}
