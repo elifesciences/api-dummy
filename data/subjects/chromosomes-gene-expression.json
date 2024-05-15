@@ -1,0 +1,53 @@
+{
+  "id": "chromosomes-gene-expression",
+  "name": "Chromosomes and Gene Expression",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-chromosomes-and-gene-expression-illustration.jpg",
+      "alt": "Chromosomes and Gene Expression",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-chromosomes-and-gene-expression-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-chromosomes-and-gene-expression-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-chromosomes-and-gene-expression-illustration.jpg",
+      "alt": "Chromosomes and Gene Expression",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-chromosomes-and-gene-expression-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-chromosomes-and-gene-expression-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    }
+  },
+  "impactStatement": "eLife reviews research ranging from transcription and RNA processing to epigenetics and chromatin biology. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#chromosomes-gene-expression\">what we review </a>and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=cge\">sign up for the latest research</a>.",
+  "aimsAndScope": [
+    {
+      "type": "paragraph",
+      "text": "We aim to review research, performed using genetic, biochemical and structural approaches, that relates to all aspects of the central dogma of biology, specifically DNA replication, repair and recombination, transcription and RNA processing, and translation. We welcome studies in organisms from bacteria to humans that provide new insights into the mechanisms of these processes – including how they are regulated, for example during cell differentiation – and the defects in these processes that contribute to disease. Read the <a href=\"https://elifesciences.org/subjects/chromosomes-gene-expression\">latest research</a> in this subject area."
+    }
+  ]
+}

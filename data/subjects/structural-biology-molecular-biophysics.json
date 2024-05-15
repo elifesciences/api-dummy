@@ -1,0 +1,53 @@
+{
+  "id": "structural-biology-molecular-biophysics",
+  "name": "Structural Biology and Molecular Biophysics",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-structural-biology-molecular-biophysics-illustration.jpg",
+      "alt": "Structural Biology and Molecular Biophysics",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-structural-biology-molecular-biophysics-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-structural-biology-molecular-biophysics-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-structural-biology-molecular-biophysics-illustration.jpg",
+      "alt": "Structural Biology and Molecular Biophysics",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-structural-biology-molecular-biophysics-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-structural-biology-molecular-biophysics-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    }
+  },
+  "impactStatement": "eLife reviews research that uses techniques including X-ray crystallography, cryo-EM and single-molecule methods. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#structural-biology-molecular-biophysics\">what we review </a>and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=structural-biology-molecular-biophysics\">sign up for the latest research</a>.",
+  "aimsAndScope": [
+    {
+      "type": "paragraph",
+      "text": "We aim to review studies that advance our understanding of molecular mechanisms in biology, using experimental and computational approaches to provide quantitative insights. We also welcome studies describing structure determination by methods including cryoEM, crystallography and NMR, the investigation of macromolecular dynamics, the evolution of function and specificity in molecular systems, and the application of advanced biophysical methods to capture molecules in action. Read the <a href=\"https://elifesciences.org/subjects/structural-biology-molecular-biophysics\">latest research</a> in this subject area."
+    }
+  ]
+}
