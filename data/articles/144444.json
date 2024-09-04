@@ -4,18 +4,18 @@
     "versions": [
         {
             "status": "poa",
-            "id": "155555",
+            "id": "144444",
             "version": 1,
             "type": "research-article",
-            "doi": "10.7554/eLife.155555",
+            "doi": "10.7554/eLife.144444",
             "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
             "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
             "published": "2018-05-01T00:00:00Z",
             "versionDate": "2018-05-01T00:00:00Z",
             "volume": 7,
-            "elocationId": "e155555",
-            "pdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-v1.pdf",
-            "xml": "https://cdn.elifesciences.org/articles/155555/elife-155555-v1.xml",
+            "elocationId": "e144444",
+            "pdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-v1.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/144444/elife-144444-v1.xml",
             "subjects": [
                 {
                     "id": "structural-biology-molecular-biophysics",
@@ -411,11 +411,11 @@
                             "type": "paragraph"
                         }
                     ],
-                    "filename": "elife-155555-supp-v1.zip",
+                    "filename": "elife-144444-supp-v1.zip",
                     "id": "SD1-data",
                     "label": "All additional files",
                     "mediaType": "application/zip",
-                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-supp-v1.zip"
+                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-supp-v1.zip"
                 }
             ],
             "dataSets": {
@@ -458,18 +458,18 @@
         },
         {
             "status": "vor",
-            "id": "155555",
+            "id": "144444",
             "version": 2,
             "type": "research-article",
-            "doi": "10.7554/eLife.155555",
+            "doi": "10.7554/eLife.144444",
             "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
             "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
             "published": "2018-05-01T00:00:00Z",
             "volume": 7,
-            "elocationId": "e155555",
-            "pdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-v2.pdf",
-            "xml": "https://cdn.elifesciences.org/articles/155555/elife-155555-v2.xml",
-            "figuresPdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-figures-v2.pdf",
+            "elocationId": "e144444",
+            "pdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-v2.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/144444/elife-144444-v2.xml",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-figures-v2.pdf",
             "subjects": [
                 {
                     "id": "structural-biology-molecular-biophysics",
@@ -486,7 +486,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.001"
+                "doi": "10.7554/eLife.144444.001"
             },
             "copyright": {
                 "license": "CC-BY-4.0",
@@ -943,12 +943,12 @@
             },
             "additionalFiles": [
                 {
-                    "doi": "10.7554/eLife.155555.023",
-                    "filename": "elife-155555-transrepform-v2.docx",
+                    "doi": "10.7554/eLife.144444.023",
+                    "filename": "elife-144444-transrepform-v2.docx",
                     "id": "transrepform",
                     "label": "Transparent reporting form",
                     "mediaType": "application/docx",
-                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-transrepform-v2.docx"
+                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-transrepform-v2.docx"
                 }
             ],
             "dataSets": {
@@ -1022,7 +1022,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.002"
+                "doi": "10.7554/eLife.144444.002"
             },
             "body": [
                 {
@@ -1048,31 +1048,31 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.155555.003",
+                                    "doi": "10.7554/eLife.144444.003",
                                     "id": "fig1",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig1-v2.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig1-v2.tif",
                                         "size": {
                                             "width": 2470,
                                             "height": 1959
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig1-v2.tif/full/full/0/default.jpg",
-                                            "filename": "elife-155555-fig1-v2.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig1-v2.tif/full/full/0/default.jpg",
+                                            "filename": "elife-144444-fig1-v2.jpg"
                                         }
                                     },
                                     "label": "Figure 1",
                                     "sourceData": [
                                         {
-                                            "doi": "10.7554/eLife.155555.004",
-                                            "filename": "elife-155555-fig1-data1-v2.docx",
+                                            "doi": "10.7554/eLife.144444.004",
+                                            "filename": "elife-144444-fig1-data1-v2.docx",
                                             "id": "fig1sdata1",
                                             "label": "Figure 1—source data 1",
                                             "mediaType": "application/docx",
                                             "title": "A list of the 10-amino acid motifs and PDB identification codes for the 11 LC8-peptide crystal structures that were used to generate the sequence logo in <a href=\"#fig1\">Figure 1b</a>.",
-                                            "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig1-data1-v2.docx"
+                                            "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig1-data1-v2.docx"
                                         }
                                     ],
                                     "title": "LC8 dimerizes its protein partners",
@@ -1111,19 +1111,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.005",
+                                            "doi": "10.7554/eLife.144444.005",
                                             "id": "fig2",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-v2.tif",
                                                 "size": {
                                                     "width": 1308,
                                                     "height": 1770
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig2-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig2-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 2",
@@ -1135,13 +1135,13 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.155555.007",
-                                                    "filename": "elife-155555-fig2-data1-v2.docx",
+                                                    "doi": "10.7554/eLife.144444.007",
+                                                    "filename": "elife-144444-fig2-data1-v2.docx",
                                                     "id": "fig2sdata1",
                                                     "label": "Figure 2—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "Tables containing the NMR data that were used to generate the graphs in <a href=\"#fig2\">Figure 2e–g</a>.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig2-data1-v2.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig2-data1-v2.docx"
                                                 }
                                             ],
                                             "title": "Domain structures of dASCIZ.",
@@ -1154,19 +1154,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.006",
+                                            "doi": "10.7554/eLife.144444.006",
                                             "id": "fig2s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-figsupp1-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-figsupp1-v2.tif",
                                                 "size": {
                                                     "width": 2279,
                                                     "height": 761
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-figsupp1-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig2-figsupp1-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-figsupp1-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig2-figsupp1-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 2—figure supplement 1",
@@ -1197,19 +1197,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.008",
+                                            "doi": "10.7554/eLife.144444.008",
                                             "id": "fig3",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig3-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig3-v2.tif",
                                                 "size": {
                                                     "width": 2302,
                                                     "height": 2994
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig3-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig3-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig3-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig3-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 3",
@@ -1237,7 +1237,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.009",
+                                            "doi": "10.7554/eLife.144444.009",
                                             "id": "table1",
                                             "label": "Table 1",
                                             "tables": [
@@ -1256,7 +1256,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.010",
+                                            "doi": "10.7554/eLife.144444.010",
                                             "footnotes": [
                                                 {
                                                     "text": [
@@ -1302,19 +1302,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.011",
+                                            "doi": "10.7554/eLife.144444.011",
                                             "id": "fig4",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-v2.tif",
                                                 "size": {
                                                     "width": 1513,
                                                     "height": 1426
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig4-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig4-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 4",
@@ -1328,19 +1328,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.012",
+                                            "doi": "10.7554/eLife.144444.012",
                                             "id": "fig4s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-figsupp1-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-figsupp1-v2.tif",
                                                 "size": {
                                                     "width": 1408,
                                                     "height": 397
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-figsupp1-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig4-figsupp1-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-figsupp1-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig4-figsupp1-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 4—figure supplement 1",
@@ -1390,19 +1390,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.013",
+                                            "doi": "10.7554/eLife.144444.013",
                                             "id": "fig5",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-v2.tif",
                                                 "size": {
                                                     "width": 2551,
                                                     "height": 1302
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig5-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig5-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 5",
@@ -1416,19 +1416,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.014",
+                                            "doi": "10.7554/eLife.144444.014",
                                             "id": "fig5s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-figsupp1-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-figsupp1-v2.tif",
                                                 "size": {
                                                     "width": 2550,
                                                     "height": 869
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-figsupp1-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig5-figsupp1-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-figsupp1-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig5-figsupp1-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 5—figure supplement 1",
@@ -1470,19 +1470,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.015",
+                                            "doi": "10.7554/eLife.144444.015",
                                             "id": "fig6",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-v2.tif",
                                                 "size": {
                                                     "width": 1188,
                                                     "height": 861
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig6-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig6-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 6",
@@ -1494,13 +1494,13 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.155555.017",
-                                                    "filename": "elife-155555-fig6-data1-v2.docx",
+                                                    "doi": "10.7554/eLife.144444.017",
+                                                    "filename": "elife-144444-fig6-data1-v2.docx",
                                                     "id": "fig6sdata1",
                                                     "label": "Figure 6—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "A table of the average I/I<sub>0</sub> values for each 10-amino acid motif in the dLBD construct, QT2-4 construct, and QT4-6 construct.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig6-data1-v2.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig6-data1-v2.docx"
                                                 }
                                             ],
                                             "title": "NMR titration of the dLBD with LC8.",
@@ -1513,19 +1513,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.016",
+                                            "doi": "10.7554/eLife.144444.016",
                                             "id": "fig6s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-figsupp1-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-figsupp1-v2.tif",
                                                 "size": {
                                                     "width": 1151,
                                                     "height": 599
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-figsupp1-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig6-figsupp1-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-figsupp1-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig6-figsupp1-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 6—figure supplement 1",
@@ -1571,31 +1571,31 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.018",
+                                            "doi": "10.7554/eLife.144444.018",
                                             "id": "fig7",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-v2.tif",
                                                 "size": {
                                                     "width": 1601,
                                                     "height": 1474
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig7-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig7-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 7",
                                             "sourceData": [
                                                 {
-                                                    "doi": "10.7554/eLife.155555.020",
-                                                    "filename": "elife-155555-fig7-data1-v2.docx",
+                                                    "doi": "10.7554/eLife.144444.020",
+                                                    "filename": "elife-144444-fig7-data1-v2.docx",
                                                     "id": "fig7sdata1",
                                                     "label": "Figure 7—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "The raw data from the firefly luciferase reporter assays, shown for each ASCIZ construct.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig7-data1-v2.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig7-data1-v2.docx"
                                                 }
                                             ],
                                             "title": "The number of LC8 recognition motifs tunes ASCIZ transcriptional activity.",
@@ -1608,19 +1608,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.019",
+                                            "doi": "10.7554/eLife.144444.019",
                                             "id": "fig7s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-figsupp1-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-figsupp1-v2.tif",
                                                 "size": {
                                                     "width": 812,
                                                     "height": 348
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-figsupp1-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig7-figsupp1-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-figsupp1-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig7-figsupp1-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 7—figure supplement 1",
@@ -1637,7 +1637,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.021",
+                                            "doi": "10.7554/eLife.144444.021",
                                             "id": "table3",
                                             "label": "Table 3",
                                             "tables": [
@@ -1731,19 +1731,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.022",
+                                            "doi": "10.7554/eLife.144444.022",
                                             "id": "fig8",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig8-v2.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig8-v2.tif",
                                                 "size": {
                                                     "width": 1359,
                                                     "height": 706
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig8-v2.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig8-v2.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig8-v2.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig8-v2.jpg"
                                                 }
                                             },
                                             "label": "Figure 8",
@@ -6304,7 +6304,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.027",
+                "doi": "10.7554/eLife.144444.027",
                 "id": "SA1"
             },
             "authorResponse": {
@@ -6471,7 +6471,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.028",
+                "doi": "10.7554/eLife.144444.028",
                 "id": "SA2"
             },
             "stage": "published",
@@ -6480,18 +6480,18 @@
         },
         {
             "status": "vor",
-            "id": "155555",
+            "id": "144444",
             "version": 3,
             "type": "research-article",
-            "doi": "10.7554/eLife.155555",
+            "doi": "10.7554/eLife.144444",
             "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
             "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
             "published": "2018-05-01T00:00:00Z",
             "volume": 7,
-            "elocationId": "e155555",
-            "pdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-v3.pdf",
-            "xml": "https://cdn.elifesciences.org/articles/155555/elife-155555-v3.xml",
-            "figuresPdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-figures-v3.pdf",
+            "elocationId": "e144444",
+            "pdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-v3.pdf",
+            "xml": "https://cdn.elifesciences.org/articles/144444/elife-144444-v3.xml",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-figures-v3.pdf",
             "subjects": [
                 {
                     "id": "structural-biology-molecular-biophysics",
@@ -6508,7 +6508,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.001"
+                "doi": "10.7554/eLife.144444.001"
             },
             "copyright": {
                 "license": "CC-BY-4.0",
@@ -6965,12 +6965,12 @@
             },
             "additionalFiles": [
                 {
-                    "doi": "10.7554/eLife.155555.023",
-                    "filename": "elife-155555-transrepform-v3.docx",
+                    "doi": "10.7554/eLife.144444.023",
+                    "filename": "elife-144444-transrepform-v3.docx",
                     "id": "transrepform",
                     "label": "Transparent reporting form",
                     "mediaType": "application/docx",
-                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-transrepform-v3.docx"
+                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-transrepform-v3.docx"
                 }
             ],
             "dataSets": {
@@ -7044,7 +7044,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.002"
+                "doi": "10.7554/eLife.144444.002"
             },
             "body": [
                 {
@@ -7070,31 +7070,31 @@
                                             "type": "paragraph"
                                         }
                                     ],
-                                    "doi": "10.7554/eLife.155555.003",
+                                    "doi": "10.7554/eLife.144444.003",
                                     "id": "fig1",
                                     "image": {
                                         "alt": "",
-                                        "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig1-v3.tif",
+                                        "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig1-v3.tif",
                                         "size": {
                                             "width": 2470,
                                             "height": 1959
                                         },
                                         "source": {
                                             "mediaType": "image/jpeg",
-                                            "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig1-v3.tif/full/full/0/default.jpg",
-                                            "filename": "elife-155555-fig1-v3.jpg"
+                                            "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig1-v3.tif/full/full/0/default.jpg",
+                                            "filename": "elife-144444-fig1-v3.jpg"
                                         }
                                     },
                                     "label": "Figure 1",
                                     "sourceData": [
                                         {
-                                            "doi": "10.7554/eLife.155555.004",
-                                            "filename": "elife-155555-fig1-data1-v3.docx",
+                                            "doi": "10.7554/eLife.144444.004",
+                                            "filename": "elife-144444-fig1-data1-v3.docx",
                                             "id": "fig1sdata1",
                                             "label": "Figure 1—source data 1",
                                             "mediaType": "application/docx",
                                             "title": "A list of the 10-amino acid motifs and PDB identification codes for the 11 LC8-peptide crystal structures that were used to generate the sequence logo in <a href=\"#fig1\">Figure 1b</a>.",
-                                            "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig1-data1-v3.docx"
+                                            "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig1-data1-v3.docx"
                                         }
                                     ],
                                     "title": "LC8 dimerizes its protein partners",
@@ -7133,19 +7133,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.005",
+                                            "doi": "10.7554/eLife.144444.005",
                                             "id": "fig2",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-v3.tif",
                                                 "size": {
                                                     "width": 1308,
                                                     "height": 1770
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig2-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig2-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 2",
@@ -7157,13 +7157,13 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.155555.007",
-                                                    "filename": "elife-155555-fig2-data1-v3.docx",
+                                                    "doi": "10.7554/eLife.144444.007",
+                                                    "filename": "elife-144444-fig2-data1-v3.docx",
                                                     "id": "fig2sdata1",
                                                     "label": "Figure 2—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "Tables containing the NMR data that were used to generate the graphs in <a href=\"#fig2\">Figure 2e–g</a>.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig2-data1-v3.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig2-data1-v3.docx"
                                                 }
                                             ],
                                             "title": "Domain structures of dASCIZ.",
@@ -7176,19 +7176,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.006",
+                                            "doi": "10.7554/eLife.144444.006",
                                             "id": "fig2s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-figsupp1-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-figsupp1-v3.tif",
                                                 "size": {
                                                     "width": 2279,
                                                     "height": 761
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig2-figsupp1-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig2-figsupp1-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig2-figsupp1-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig2-figsupp1-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 2—figure supplement 1",
@@ -7219,19 +7219,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.008",
+                                            "doi": "10.7554/eLife.144444.008",
                                             "id": "fig3",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig3-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig3-v3.tif",
                                                 "size": {
                                                     "width": 2302,
                                                     "height": 2994
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig3-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig3-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig3-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig3-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 3",
@@ -7259,7 +7259,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.009",
+                                            "doi": "10.7554/eLife.144444.009",
                                             "id": "table1",
                                             "label": "Table 1",
                                             "tables": [
@@ -7278,7 +7278,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.010",
+                                            "doi": "10.7554/eLife.144444.010",
                                             "footnotes": [
                                                 {
                                                     "text": [
@@ -7324,19 +7324,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.011",
+                                            "doi": "10.7554/eLife.144444.011",
                                             "id": "fig4",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-v3.tif",
                                                 "size": {
                                                     "width": 1513,
                                                     "height": 1426
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig4-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig4-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 4",
@@ -7350,19 +7350,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.012",
+                                            "doi": "10.7554/eLife.144444.012",
                                             "id": "fig4s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-figsupp1-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-figsupp1-v3.tif",
                                                 "size": {
                                                     "width": 1408,
                                                     "height": 397
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig4-figsupp1-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig4-figsupp1-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig4-figsupp1-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig4-figsupp1-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 4—figure supplement 1",
@@ -7412,19 +7412,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.013",
+                                            "doi": "10.7554/eLife.144444.013",
                                             "id": "fig5",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-v3.tif",
                                                 "size": {
                                                     "width": 2551,
                                                     "height": 1302
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig5-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig5-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 5",
@@ -7438,19 +7438,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.014",
+                                            "doi": "10.7554/eLife.144444.014",
                                             "id": "fig5s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-figsupp1-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-figsupp1-v3.tif",
                                                 "size": {
                                                     "width": 2550,
                                                     "height": 869
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig5-figsupp1-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig5-figsupp1-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig5-figsupp1-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig5-figsupp1-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 5—figure supplement 1",
@@ -7492,19 +7492,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.015",
+                                            "doi": "10.7554/eLife.144444.015",
                                             "id": "fig6",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-v3.tif",
                                                 "size": {
                                                     "width": 1188,
                                                     "height": 861
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig6-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig6-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 6",
@@ -7516,13 +7516,13 @@
                                                             "type": "paragraph"
                                                         }
                                                     ],
-                                                    "doi": "10.7554/eLife.155555.017",
-                                                    "filename": "elife-155555-fig6-data1-v3.docx",
+                                                    "doi": "10.7554/eLife.144444.017",
+                                                    "filename": "elife-144444-fig6-data1-v3.docx",
                                                     "id": "fig6sdata1",
                                                     "label": "Figure 6—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "A table of the average I/I<sub>0</sub> values for each 10-amino acid motif in the dLBD construct, QT2-4 construct, and QT4-6 construct.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig6-data1-v3.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig6-data1-v3.docx"
                                                 }
                                             ],
                                             "title": "NMR titration of the dLBD with LC8.",
@@ -7535,19 +7535,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.016",
+                                            "doi": "10.7554/eLife.144444.016",
                                             "id": "fig6s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-figsupp1-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-figsupp1-v3.tif",
                                                 "size": {
                                                     "width": 1151,
                                                     "height": 599
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig6-figsupp1-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig6-figsupp1-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig6-figsupp1-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig6-figsupp1-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 6—figure supplement 1",
@@ -7593,31 +7593,31 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.018",
+                                            "doi": "10.7554/eLife.144444.018",
                                             "id": "fig7",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-v3.tif",
                                                 "size": {
                                                     "width": 1601,
                                                     "height": 1474
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig7-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig7-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 7",
                                             "sourceData": [
                                                 {
-                                                    "doi": "10.7554/eLife.155555.020",
-                                                    "filename": "elife-155555-fig7-data1-v3.docx",
+                                                    "doi": "10.7554/eLife.144444.020",
+                                                    "filename": "elife-144444-fig7-data1-v3.docx",
                                                     "id": "fig7sdata1",
                                                     "label": "Figure 7—source data 1",
                                                     "mediaType": "application/docx",
                                                     "title": "The raw data from the firefly luciferase reporter assays, shown for each ASCIZ construct.",
-                                                    "uri": "https://cdn.elifesciences.org/articles/155555/elife-155555-fig7-data1-v3.docx"
+                                                    "uri": "https://cdn.elifesciences.org/articles/144444/elife-144444-fig7-data1-v3.docx"
                                                 }
                                             ],
                                             "title": "The number of LC8 recognition motifs tunes ASCIZ transcriptional activity.",
@@ -7630,19 +7630,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.019",
+                                            "doi": "10.7554/eLife.144444.019",
                                             "id": "fig7s1",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-figsupp1-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-figsupp1-v3.tif",
                                                 "size": {
                                                     "width": 812,
                                                     "height": 348
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig7-figsupp1-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig7-figsupp1-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig7-figsupp1-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig7-figsupp1-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 7—figure supplement 1",
@@ -7659,7 +7659,7 @@
                                 {
                                     "assets": [
                                         {
-                                            "doi": "10.7554/eLife.155555.021",
+                                            "doi": "10.7554/eLife.144444.021",
                                             "id": "table3",
                                             "label": "Table 3",
                                             "tables": [
@@ -7753,19 +7753,19 @@
                                                     "type": "paragraph"
                                                 }
                                             ],
-                                            "doi": "10.7554/eLife.155555.022",
+                                            "doi": "10.7554/eLife.144444.022",
                                             "id": "fig8",
                                             "image": {
                                                 "alt": "",
-                                                "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig8-v3.tif",
+                                                "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig8-v3.tif",
                                                 "size": {
                                                     "width": 1359,
                                                     "height": 706
                                                 },
                                                 "source": {
                                                     "mediaType": "image/jpeg",
-                                                    "uri": "https://iiif.elifesciences.org/lax:155555%2Felife-155555-fig8-v3.tif/full/full/0/default.jpg",
-                                                    "filename": "elife-155555-fig8-v3.jpg"
+                                                    "uri": "https://iiif.elifesciences.org/lax:144444%2Felife-144444-fig8-v3.tif/full/full/0/default.jpg",
+                                                    "filename": "elife-144444-fig8-v3.jpg"
                                                 }
                                             },
                                             "label": "Figure 8",
@@ -12433,7 +12433,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.027",
+                "doi": "10.7554/eLife.144444.027",
                 "id": "SA1"
             },
             "authorResponse": {
@@ -12600,7 +12600,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.028",
+                "doi": "10.7554/eLife.144444.028",
                 "id": "SA2"
             },
             "stage": "published",

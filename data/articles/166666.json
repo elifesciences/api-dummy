@@ -102,7 +102,7 @@
                 {
                     "content": [
                         {
-                            "text": "Clark S, Myers JB, King A, Fiala R, Novacek J, Pearce G, Heierhorst J, Reichow SL, Barbar EJ. 2018. Multivalency regulates activity in an intrinsically disordered transcription factor. <i>eLife</i> <b>7</b>:e155555. doi: <a href=\"http://dx.doi.org/10.7554/eLife.155555\">10.7554/eLife.155555</a>.",
+                            "text": "Clark S, Myers JB, King A, Fiala R, Novacek J, Pearce G, Heierhorst J, Reichow SL, Barbar EJ. 2018. Multivalency regulates activity in an intrinsically disordered transcription factor. <i>eLife</i> <b>7</b>:e144444. doi: <a href=\"http://dx.doi.org/10.7554/eLife.144444\">10.7554/eLife.144444</a>.",
                             "type": "paragraph"
                         },
                         {
@@ -162,17 +162,17 @@
     "relatedArticles": [
         {
             "status": "vor",
-            "id": "155555",
+            "id": "144444",
             "version": 3,
             "type": "research-article",
-            "doi": "10.7554/eLife.155555",
+            "doi": "10.7554/eLife.144444",
             "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
             "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
             "published": "2018-05-01T00:00:00Z",
             "volume": 7,
-            "elocationId": "e155555",
-            "pdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-v3.pdf",
-            "figuresPdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-figures-v3.pdf",
+            "elocationId": "e144444",
+            "pdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-v3.pdf",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/144444/elife-144444-figures-v3.pdf",
             "subjects": [
                 {
                     "id": "structural-biology-molecular-biophysics",
@@ -189,7 +189,7 @@
                         "type": "paragraph"
                     }
                 ],
-                "doi": "10.7554/eLife.155555.001"
+                "doi": "10.7554/eLife.144444.001"
             },
             "copyright": {
                 "license": "CC-BY-4.0",
