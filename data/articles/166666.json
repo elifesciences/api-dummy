@@ -1,0 +1,205 @@
+{
+    "received": null,
+    "accepted": null,
+    "versions": [
+        {
+            "status": "vor",
+            "id": "166666",
+            "version": 1,
+            "type": "expression-concern",
+            "doi": "10.7554/eLife.166666",
+            "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
+            "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
+            "published": "2018-08-03T00:00:00Z",
+            "versionDate": "2018-08-03T00:00:00Z",
+            "volume": 7,
+            "elocationId": "e166666",
+            "xml": "https://cdn.elifesciences.org/articles/166666/elife-166666-v1.xml",
+            "subjects": [
+                {
+                    "id": "structural-biology-molecular-biophysics",
+                    "name": "Structural Biology and Molecular Biophysics"
+                }
+            ],
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Clark et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "authors": [
+                {
+                    "name": {
+                        "index": "Clark, Sarah",
+                        "preferred": "Sarah Clark"
+                    },
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Myers, Janette B",
+                        "preferred": "Janette B Myers"
+                    },
+                    "orcid": "0000-0002-7758-2649",
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "King, Ashleigh",
+                        "preferred": "Ashleigh King"
+                    },
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Fiala, Radovan",
+                        "preferred": "Radovan Fiala"
+                    },
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Novacek, Jiri",
+                        "preferred": "Jiri Novacek"
+                    },
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Pearce, Grant",
+                        "preferred": "Grant Pearce"
+                    },
+                    "orcid": "0000-0002-2683-0331",
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Heierhorst, Jörg",
+                        "preferred": "Jörg Heierhorst"
+                    },
+                    "orcid": "0000-0003-2789-9514",
+                    "type": "person"
+                },
+                {
+                    "name": {
+                        "index": "Reichow, Steve L",
+                        "preferred": "Steve L Reichow"
+                    },
+                    "type": "person"
+                },
+                {
+                    "emailAddresses": [
+                        "barbare@oregonstate.edu"
+                    ],
+                    "name": {
+                        "index": "Barbar, Elisar J",
+                        "preferred": "Elisar J Barbar"
+                    },
+                    "orcid": "0000-0003-4892-5259",
+                    "type": "person"
+                }
+            ],
+            "body": [
+                {
+                    "content": [
+                        {
+                            "text": "Clark S, Myers JB, King A, Fiala R, Novacek J, Pearce G, Heierhorst J, Reichow SL, Barbar EJ. 2018. Multivalency regulates activity in an intrinsically disordered transcription factor. <i>eLife</i> <b>7</b>:e155555. doi: <a href=\"http://dx.doi.org/10.7554/eLife.155555\">10.7554/eLife.155555</a>.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Published 1, May 2018",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "After publication we became aware of three citations that should be included in the Materials and Methods.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The (Motáčková et al., 2010; Nováček et al., 2011) citation In the Materials and Methods subsection NMR experiments should also include Kazimierczuk et al., 2010.",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The new citation is shown below:",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Kazimierczuk, K., Zawadzka-Kazimierczuk, A., Kozminski, W. 2010. Non-uniform frequency domain for optimal exploitation of non-uniform sampling. <i>J Magn Reson,</i> 205(2), 286-292. doi:10.1016/j.jmr.2010.05.012",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The other two citations refer to the processing of non-uniformly sampled five-dimensional HN(CA)CONH and HabCabCONH spectra. The citations should be placed within the text as follows:",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "“All two-dimensional spectra and the three-dimensional HNCO spectra were processed using TopSpin (Bruker Biosciences; RRID:SCR_014227), and the non- uniformly sampled five-dimensional HN(CA)CONH and HabCabCONH spectra were processed with Sparse Multidimensional Fourier Transform (Kazimierczuk et al., 2009; Stanek et al., 2010) (the software for data processing is available online at the Warsaw University Laboratory (nmr.cent3.uw.edu.pl/software)).”",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The citations are shown below:",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Kazimierczuk, K., Zawadzka, A., Kozminski, W. 2009. Narrow peaks and high dimensionalities: exploiting the advantages of random sampling. <i>J Magn Reson,</i> 197(2), 219-228. doi:10.1016/j.jmr.2009.01.003",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "Stanek, J., Kozminski, W. (2010). Iterative algorithm of discrete Fourier transform for processing randomly sampled NMR data sets. <i>J Biomol NMR,</i> 47(1), 65-77. doi:10.1007/s10858-010-9411-2",
+                            "type": "paragraph"
+                        },
+                        {
+                            "text": "The article has been corrected accordingly.",
+                            "type": "paragraph"
+                        }
+                    ],
+                    "id": "s0",
+                    "title": "Main text",
+                    "type": "section"
+                }
+            ],
+            "stage": "published",
+            "statusDate": "2018-08-03T00:00:00Z"
+        }
+    ],
+    "relatedArticles": [
+        {
+            "status": "vor",
+            "id": "155555",
+            "version": 3,
+            "type": "research-article",
+            "doi": "10.7554/eLife.155555",
+            "authorLine": "Sarah Clark, Janette B Myers ... Elisar J Barbar",
+            "title": "Multivalency regulates activity in an intrinsically disordered transcription factor",
+            "published": "2018-05-01T00:00:00Z",
+            "volume": 7,
+            "elocationId": "e155555",
+            "pdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-v3.pdf",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/155555/elife-155555-figures-v3.pdf",
+            "subjects": [
+                {
+                    "id": "structural-biology-molecular-biophysics",
+                    "name": "Structural Biology and Molecular Biophysics"
+                }
+            ],
+            "researchOrganisms": [
+                "Human"
+            ],
+            "abstract": {
+                "content": [
+                    {
+                        "text": "The transcription factor ASCIZ (ATMIN, ZNF822) has an unusually high number of recognition motifs for the product of its main target gene, the hub protein LC8 (DYNLL1). Using a combination of biophysical methods, structural analysis by NMR and electron microscopy, and cellular transcription assays, we developed a model that proposes a concerted role of intrinsic disorder and multiple LC8 binding events in regulating LC8 transcription. We demonstrate that the long intrinsically disordered C-terminal domain of ASCIZ binds LC8 to form a dynamic ensemble of complexes with a gradient of transcriptional activity that is inversely proportional to LC8 occupancy. The preference for low occupancy complexes at saturating LC8 concentrations with both human and <i>Drosophila</i> ASCIZ indicates that negative cooperativity is an important feature of ASCIZ-LC8 interactions. The prevalence of intrinsic disorder and multivalency among transcription factors suggests that formation of heterogeneous, dynamic complexes is a widespread mechanism for tuning transcriptional regulation.",
+                        "type": "paragraph"
+                    }
+                ],
+                "doi": "10.7554/eLife.155555.001"
+            },
+            "copyright": {
+                "license": "CC-BY-4.0",
+                "holder": "Clark et al.",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "impactStatement": "Binding of multiple LC8 copies to the intrinsically disordered region of the transcription factor ASCIZ exemplifies a new and potentially widespread molecular mechanism for negative feedback regulation.",
+            "stage": "published",
+            "statusDate": "2018-05-22T14:18:58Z",
+            "versionDate": "2018-08-03T14:57:49Z"
+        }
+    ]
+}
