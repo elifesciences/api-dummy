@@ -2339,6 +2339,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $allTypeKeys = [
         'correction',
         'editorial',
+        'expression-concern',
         'feature',
         'insight',
         'research-advance',
