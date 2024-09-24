@@ -491,15 +491,6 @@
                     },
                     {
                         "id": "fund3",
-                        "recipients": [
-                            {
-                                "name": {
-                                    "index": "Lapsansky, Anthony",
-                                    "preferred": "Anthony Lapsansky"
-                                },
-                                "type": "person"
-                            }
-                        ],
                         "source": {
                             "name": [
                                 "Drollinger-Dial Family Charitable Foundation"
