@@ -750,12 +750,8 @@ $app->get('/articles/{number}/versions/{version}',
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-        if ('04395' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 3) {
-            throw new NotAcceptableHttpException('This article PoA requires version 3.');
-        }
-
-        if ('09562' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 7) {
-            throw new NotAcceptableHttpException('This article VoR requires version 7.');
+        if ('55774' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 8) {
+            throw new NotAcceptableHttpException('This article VoR requires version 8.');
         }
 
         if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [3])) {
