@@ -5,20 +5,30 @@ eLife 2.0 Dummy API
 
 This contains a dummy implementation of the [eLife 2.0 API](https://github.com/elifesciences/api-raml).
 
-##Import article
+## Import article
 
 ```$sh
-cd /srv/api-dummy
-./bin/import 09560
+docker compose run app ./bin/import 09560
 ```
 
-The above command should result in a data fixture for article 09560 being created at `/srv/api-dummy/data/articles/09560.json`
+The above command should result in a data fixture for article 09560 being created at `data/articles/09560.json`
 
 ## Run locally
 
 ```$sh
-cd /srv/api-dummy
-php -S localhost:5001 ./web/index.php
+docker compose up
 ```
 
-Then visit [http://localhost:5001/articles](http://localhost:5001/articles) in your browser.
+Then visit [http://localhost:8080/articles](http://localhost:8080/articles) in your browser.
+
+## Update local vendor for development
+
+```$sh
+docker compose -f docker-compose.dev.yml run composer install
+```
+
+## Run tests
+
+```$sh
+docker compose run --rm app ./project_tests.sh
+```
