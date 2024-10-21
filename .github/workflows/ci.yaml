@@ -60,7 +60,6 @@ jobs:
           push: true
           load: false
           platforms: linux/amd64,linux/arm64
-          target: prod
           tags: |
             ${{ env.IMAGE_REPO }}:${{ github.sha }}
             ${{ env.IMAGE_REPO }}:${{ env.BRANCH_NAME }}-${{ steps.commit_sha.outputs.commit_sha }}-${{ steps.date.outputs.date }}
