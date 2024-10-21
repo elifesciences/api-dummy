@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Start test stack
       - name: Bring up test stack
         run: docker compose -f docker-compose.yml -f docker-compose.ci.yml up --wait
       - name: Debug bring up test stack
