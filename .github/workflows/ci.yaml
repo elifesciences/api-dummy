@@ -58,7 +58,7 @@ jobs:
         with:
           push: true
           load: false
-          platforms: linux/amd64,linux/arm64
+          # platforms: linux/amd64,linux/arm64
           target: prod
           tags: |
             ${{ env.IMAGE_REPO }}:${{ github.sha }}
