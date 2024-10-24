@@ -31,7 +31,7 @@ jobs:
   build-and-push:
     needs: [tests]
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
     env:
       IMAGE_REPO: ghcr.io/elifesciences/api-dummy
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
@@ -58,6 +58,7 @@ jobs:
         with:
           push: true
           load: false
+          # Disabled until elifesciences/php or another image with ARM support can be used as a base
           # platforms: linux/amd64,linux/arm64
           target: prod
           tags: |
