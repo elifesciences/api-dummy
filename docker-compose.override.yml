@@ -1,3 +1,4 @@
+services:
     app:
         depends_on:
             composer:
