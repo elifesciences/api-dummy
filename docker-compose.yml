@@ -15,6 +15,7 @@ services:
             context: .
             dockerfile: Dockerfile
             target: dev
+        image: elifesciences/api-dummy:${IMAGE_TAG:-dev}
         environment:
             DATA_FOLDER: ${DATA_FOLDER}
         ports:
