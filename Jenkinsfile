@@ -23,7 +23,7 @@ elifePipeline {
                     sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml exec -T app ./project_tests.sh"
                     sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml exec -T app ./smoke_tests.sh"
                 } finally {
-                    sh 'docker-compose down'
+                    sh 'docker-compose -f docker-compose.yml down'
                 }
             }
 
