@@ -1,0 +1,4 @@
+    app:
+        depends_on:
+            composer:
+                condition: service_completed_successfully
