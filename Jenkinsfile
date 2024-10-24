@@ -9,7 +9,7 @@ elifePipeline {
             }
 
             stage 'Build image', {
-                sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yaml build"
+                sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml build"
                 image = DockerImage.elifesciences(this, 'api-dummy', commit)
                 elifePullRequestOnly { prNumber ->
                     // push immediately to allow downstream exploration even with automated tests failing
@@ -19,9 +19,9 @@ elifePipeline {
 
             stage 'Project tests', {
                 try {
-                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yaml up -d"
-                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yaml exec -T app ./project_tests.sh"
-                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yaml exec -T app ./smoke_tests.sh"
+                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml up -d"
+                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml exec -T app ./project_tests.sh"
+                    sh "IMAGE_TAG=${commit} docker-compose -f docker-compose.yml exec -T app ./smoke_tests.sh"
                 } finally {
                     sh 'docker-compose down'
                 }
