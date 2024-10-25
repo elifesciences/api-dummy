@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5960e4c694bf93ff4f5acca59617d182",
+    "content-hash": "366e2392749ae314b6d0ece440c1d810",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -79,16 +79,16 @@
         },
         {
             "name": "elife/api-problem",
-            "version": "dev-support-php-8.x",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-problem-php.git",
-                "reference": "427b0ac603ba536d63d7f24fc577dc4746f19209"
+                "reference": "600091b5b3d62d91be510c53ab48bde1b5510984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-problem-php/zipball/427b0ac603ba536d63d7f24fc577dc4746f19209",
-                "reference": "427b0ac603ba536d63d7f24fc577dc4746f19209",
+                "url": "https://api.github.com/repos/elifesciences/api-problem-php/zipball/600091b5b3d62d91be510c53ab48bde1b5510984",
+                "reference": "600091b5b3d62d91be510c53ab48bde1b5510984",
                 "shasum": ""
             },
             "require": {
@@ -129,22 +129,22 @@
             "description": "eLife Sciences RFC 7807 handler",
             "support": {
                 "issues": "https://github.com/elifesciences/api-problem-php/issues",
-                "source": "https://github.com/elifesciences/api-problem-php/tree/support-php-8.x"
+                "source": "https://github.com/elifesciences/api-problem-php/tree/v1.3.0"
             },
-            "time": "2024-10-21T05:55:59+00:00"
+            "time": "2024-10-25T05:30:07+00:00"
         },
         {
             "name": "elife/content-negotiator",
-            "version": "dev-support-php-8.x",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/content-negotiator-php.git",
-                "reference": "5396fd31289e8761ca51b8aa394dca295c072c16"
+                "reference": "3dadef43a26010a89e7a1c24b70573ec1f94a818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/5396fd31289e8761ca51b8aa394dca295c072c16",
-                "reference": "5396fd31289e8761ca51b8aa394dca295c072c16",
+                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/3dadef43a26010a89e7a1c24b70573ec1f94a818",
+                "reference": "3dadef43a26010a89e7a1c24b70573ec1f94a818",
                 "shasum": ""
             },
             "require": {
@@ -186,22 +186,22 @@
             "description": "eLife Sciences content negotiator",
             "support": {
                 "issues": "https://github.com/elifesciences/content-negotiator-php/issues",
-                "source": "https://github.com/elifesciences/content-negotiator-php/tree/support-php-8.x"
+                "source": "https://github.com/elifesciences/content-negotiator-php/tree/v1.1.0"
             },
-            "time": "2024-10-25T05:22:26+00:00"
+            "time": "2024-10-25T05:27:39+00:00"
         },
         {
             "name": "elife/ping",
-            "version": "dev-support-php-8.x",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/ping-php.git",
-                "reference": "27c75e58bcce7a50d71a6067775c578b84cdd1f6"
+                "reference": "7ecab7e8a604b9d6da85d2af3bf0810a7da5642e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/ping-php/zipball/27c75e58bcce7a50d71a6067775c578b84cdd1f6",
-                "reference": "27c75e58bcce7a50d71a6067775c578b84cdd1f6",
+                "url": "https://api.github.com/repos/elifesciences/ping-php/zipball/7ecab7e8a604b9d6da85d2af3bf0810a7da5642e",
+                "reference": "7ecab7e8a604b9d6da85d2af3bf0810a7da5642e",
                 "shasum": ""
             },
             "require": {
@@ -244,9 +244,9 @@
             "description": "eLife Sciences ping controller",
             "support": {
                 "issues": "https://github.com/elifesciences/ping-php/issues",
-                "source": "https://github.com/elifesciences/ping-php/tree/support-php-8.x"
+                "source": "https://github.com/elifesciences/ping-php/tree/v1.2.0"
             },
-            "time": "2024-10-25T05:17:51+00:00"
+            "time": "2024-10-25T05:19:45+00:00"
         },
         {
             "name": "jdesrosiers/silex-cors-provider",
@@ -2515,16 +2515,16 @@
         },
         {
             "name": "elife/api-validator",
-            "version": "dev-support-php-8.x",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-validator-php.git",
-                "reference": "edf1eb635331b7cf2f5410824556fa65ddaee8bf"
+                "reference": "b24b87248abfc99cf7a6af14876329589ca95d7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/edf1eb635331b7cf2f5410824556fa65ddaee8bf",
-                "reference": "edf1eb635331b7cf2f5410824556fa65ddaee8bf",
+                "url": "https://api.github.com/repos/elifesciences/api-validator-php/zipball/b24b87248abfc99cf7a6af14876329589ca95d7f",
+                "reference": "b24b87248abfc99cf7a6af14876329589ca95d7f",
                 "shasum": ""
             },
             "require": {
@@ -2558,9 +2558,9 @@
             "description": "eLife Sciences API validator",
             "support": {
                 "issues": "https://github.com/elifesciences/api-validator-php/issues",
-                "source": "https://github.com/elifesciences/api-validator-php/tree/support-php-8.x"
+                "source": "https://github.com/elifesciences/api-validator-php/tree/v1.1.0"
             },
-            "time": "2024-10-18T07:21:40+00:00"
+            "time": "2024-10-25T05:29:21+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4950,11 +4950,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "elife/api-problem": 20,
-        "elife/content-negotiator": 20,
-        "elife/ping": 20,
-        "elife/api-client": 20,
-        "elife/api-validator": 20
+        "elife/api-client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

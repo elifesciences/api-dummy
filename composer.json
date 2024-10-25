@@ -14,9 +14,9 @@
     },
     "require": {
         "php": "8.0.*",
-        "elife/api-problem": "dev-support-php-8.x",
-        "elife/content-negotiator": "dev-support-php-8.x",
-        "elife/ping": "dev-support-php-8.x",
+        "elife/api-problem": "^1.3",
+        "elife/content-negotiator": "^1.1",
+        "elife/ping": "^1.2",
         "jdesrosiers/silex-cors-provider": "^1.2",
         "nyholm/psr7": "^1.8",
         "silex/silex": "^2.3",
@@ -27,7 +27,7 @@
     "require-dev": {
         "elife/api": "^2.30",
         "elife/api-client": "dev-support-php-8.x",
-        "elife/api-validator": "dev-support-php-8.x",
+        "elife/api-validator": "^1.1",
         "guzzlehttp/guzzle": "^7.9",
         "guzzlehttp/psr7": "^2.7",
         "justinrainbow/json-schema": "^5.1",
