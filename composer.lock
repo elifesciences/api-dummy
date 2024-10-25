@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adb0aeadb991177ae1ae839ec46d14fe",
+    "content-hash": "5960e4c694bf93ff4f5acca59617d182",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -139,19 +139,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/content-negotiator-php.git",
-                "reference": "5817283b5ceec9df7f962a30220fd9d8a5f79692"
+                "reference": "5396fd31289e8761ca51b8aa394dca295c072c16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/5817283b5ceec9df7f962a30220fd9d8a5f79692",
-                "reference": "5817283b5ceec9df7f962a30220fd9d8a5f79692",
+                "url": "https://api.github.com/repos/elifesciences/content-negotiator-php/zipball/5396fd31289e8761ca51b8aa394dca295c072c16",
+                "reference": "5396fd31289e8761ca51b8aa394dca295c072c16",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0 || ^8.0",
                 "symfony/http-foundation": "^3.4.35 || ^4.4",
                 "symfony/http-kernel": "^3.4 || ^4.4",
-                "willdurand/negotiation": "^3.0"
+                "willdurand/negotiation": "^2.0.2 || ^3.1"
             },
             "conflict": {
                 "sebastian/comparator": "<1.2.3"
@@ -161,9 +161,9 @@
                 "pimple/pimple": "^3.0",
                 "silex/silex": "^2.0",
                 "squizlabs/php_codesniffer": "^3.5",
-                "symfony/browser-kit": "^3.4",
-                "symfony/css-selector": "^3.4",
-                "symfony/debug": "^3.4"
+                "symfony/browser-kit": "^3.4 || ^4.4",
+                "symfony/css-selector": "^3.4 || ^4.4",
+                "symfony/debug": "^3.4 || ^4.4"
             },
             "suggest": {
                 "silex/silex": "^2.0, to use ContentNegotiationProvider"
@@ -188,7 +188,7 @@
                 "issues": "https://github.com/elifesciences/content-negotiator-php/issues",
                 "source": "https://github.com/elifesciences/content-negotiator-php/tree/support-php-8.x"
             },
-            "time": "2024-10-19T06:24:27+00:00"
+            "time": "2024-10-25T05:22:26+00:00"
         },
         {
             "name": "elife/ping",
@@ -196,28 +196,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/ping-php.git",
-                "reference": "b62996a25a799ce0d926a49122239e14c4eb3390"
+                "reference": "27c75e58bcce7a50d71a6067775c578b84cdd1f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/ping-php/zipball/b62996a25a799ce0d926a49122239e14c4eb3390",
-                "reference": "b62996a25a799ce0d926a49122239e14c4eb3390",
+                "url": "https://api.github.com/repos/elifesciences/ping-php/zipball/27c75e58bcce7a50d71a6067775c578b84cdd1f6",
+                "reference": "27c75e58bcce7a50d71a6067775c578b84cdd1f6",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0",
                 "symfony/http-foundation": "^3.4 || ^4.4"
             },
             "require-dev": {
+                "nyholm/psr7": "^1.6",
                 "phpunit/phpunit": "^5.7 || ^6.0 || ^9.6",
                 "pimple/pimple": "^3.0",
                 "silex/silex": "^2.0",
                 "squizlabs/php_codesniffer": "^3.5",
-                "symfony/browser-kit": "^3.4",
-                "symfony/config": "^3.4",
-                "symfony/dependency-injection": "^3.4",
-                "symfony/framework-bundle": "^3.4.23",
-                "symfony/http-kernel": "^3.4"
+                "symfony/browser-kit": "^3.4 || ^4.4",
+                "symfony/config": "^3.4 || ^4.4",
+                "symfony/dependency-injection": "^3.4.23 || ^4.4",
+                "symfony/framework-bundle": "^3.4 || ^4.4",
+                "symfony/http-kernel": "^3.0 || ^4.4"
             },
             "suggest": {
                 "silex/silex": "^2.0, to use PingControllerProvider",
@@ -243,7 +246,7 @@
                 "issues": "https://github.com/elifesciences/ping-php/issues",
                 "source": "https://github.com/elifesciences/ping-php/tree/support-php-8.x"
             },
-            "time": "2024-10-19T06:37:22+00:00"
+            "time": "2024-10-25T05:17:51+00:00"
         },
         {
             "name": "jdesrosiers/silex-cors-provider",
@@ -2456,12 +2459,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-client-php.git",
-                "reference": "38c965e049767a49c081f01fe69d36f594e041ad"
+                "reference": "735d4916ccd894acfd1efdb3b86e980ad8575579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/38c965e049767a49c081f01fe69d36f594e041ad",
-                "reference": "38c965e049767a49c081f01fe69d36f594e041ad",
+                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/735d4916ccd894acfd1efdb3b86e980ad8575579",
+                "reference": "735d4916ccd894acfd1efdb3b86e980ad8575579",
                 "shasum": ""
             },
             "require": {
@@ -2508,7 +2511,7 @@
                 "issues": "https://github.com/elifesciences/api-client-php/issues",
                 "source": "https://github.com/elifesciences/api-client-php/tree/support-php-8.x"
             },
-            "time": "2024-10-21T06:03:10+00:00"
+            "time": "2024-10-23T06:56:18+00:00"
         },
         {
             "name": "elife/api-validator",
@@ -4956,8 +4959,11 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0 || ^8.0"
+        "php": "8.0.*"
     },
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.0.30"
+    },
     "plugin-api-version": "2.2.0"
 }

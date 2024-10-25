@@ -13,7 +13,7 @@
         }
     },
     "require": {
-        "php": "^7.0 || ^8.0",
+        "php": "8.0.*",
         "elife/api-problem": "dev-support-php-8.x",
         "elife/content-negotiator": "dev-support-php-8.x",
         "elife/ping": "dev-support-php-8.x",
@@ -37,6 +37,9 @@
         "symfony/psr-http-message-bridge": "^2.0"
     },
     "config": {
+        "platform": {
+            "php": "8.0.30"
+        },
         "sort-packages": true
     }
 }
