@@ -40,18 +40,4 @@ elifePipeline {
         },
         'elife-libraries--ci'
     )
-
-    elifeMainlineOnly {
-        stage 'Deploy on demo', {
-            checkout scm
-            elifeGitMoveToBranch commit, 'master'
-            elifeOnNode(
-                {
-                    image.tag('latest').push()
-                },
-                'elife-libraries--ci'
-            )
-            builderDeployRevision 'api-dummy--demo', commit
-        }
-    }
 }
