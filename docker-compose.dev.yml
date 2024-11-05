@@ -1,0 +1,10 @@
+services:
+    composer:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: build
+        volumes:
+            - ./composer.json:/app/composer.json
+            - ./composer.lock:/app/composer.lock
+            - ./vendor:/app/vendor
