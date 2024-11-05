@@ -210,7 +210,8 @@
                             "name": [
                                 "Agence Nationale de la Recherche"
                             ]
-                        }
+                        },
+                        "awardDoi": "10.13039/501100001665"
                     },
                     {
                         "awardId": "ANR-10-LABX-54",
@@ -229,7 +230,8 @@
                             "name": [
                                 "Agence Nationale de la Recherche"
                             ]
-                        }
+                        },
+                        "awardDoi": "10.13039/501100001665"
                     },
                     {
                         "awardId": "ANR-11-IDEX-0001-02",
@@ -248,7 +250,8 @@
                             "name": [
                                 "Agence Nationale de la Recherche"
                             ]
-                        }
+                        },
+                        "awardDoi": "10.13039/501100001665"
                     },
                     {
                         "id": "par-4",
@@ -266,7 +269,8 @@
                             "name": [
                                 "Max-Planck-Gesellschaft"
                             ]
-                        }
+                        },
+                        "awardDoi": "10.13039/501100001665"
                     }
                 ],
                 "statement": "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."

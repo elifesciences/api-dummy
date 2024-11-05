@@ -138,7 +138,7 @@
             "title": "Flexible data models",
             "content": [
                 {
-                    "text": "eLife’s articles are all represented in JATS XML, an XML format used to describe scientific literature published online. Since this is an internationally defined technical standard, the use of the eLife data model should be reusable across multiple publishers. However, having explored different examples of publisher articles represented in XML, we found that there are many different forms and lots of publisher archives are difficult to change or update, so having a data model that isn’t fixed is preferable. Although eLife co-leads the <a href=\"http://jats4r.org\">JATS4R</a> effort to provide recommendations to reduce the variation, this group is still relatively young and has, as yet, not covered enough ground.",
+                    "text": "eLife’s articles are all represented in JATS XML, an XML format used to describe scientific literature published online. Since this is an internationally defined technical standard, the use of the eLife data model should be reusable across multiple publishers. However, having explored different examples of publisher articles represented in XML, we found that there are many different forms and lots of publisher archives are difficult to change or update, so having a data model that isn’t fixed is preferable. Although eLife co-leads the <a href=\"https://jats4r.niso.org/\">JATS4R</a> effort to provide recommendations to reduce the variation, this group is still relatively young and has, as yet, not covered enough ground.",
                     "type": "paragraph"
                 },
                 {

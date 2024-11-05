@@ -669,6 +669,10 @@ $app->get('/articles/{number}/versions',
             ];
         }
 
+        if (!empty($article['sentForReview'])) {
+            $content['sentForReview'] = $article['sentForReview'];
+        }
+
         $content['versions'] = [];
         foreach ($article['versions'] as $articleVersion) {
             if ($type->getParameter('version') > 1 || !empty($articleVersion['version'])) {
@@ -731,13 +735,13 @@ $app->get('/articles/{number}/versions/{version}',
 
         if ('vor' === $articleVersion['status']) {
             $accepts = [
+                'application/vnd.elife.article-vor+json; version=8',
                 'application/vnd.elife.article-vor+json; version=7',
-                'application/vnd.elife.article-vor+json; version=6',
             ];
         } else {
             $accepts = [
+                'application/vnd.elife.article-poa+json; version=4',
                 'application/vnd.elife.article-poa+json; version=3',
-                'application/vnd.elife.article-poa+json; version=2',
             ];
         }
 
@@ -746,19 +750,15 @@ $app->get('/articles/{number}/versions/{version}',
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-        if ('04395' === $number && 'poa' === $articleVersion['status'] && $type->getParameter('version') < 3) {
-            throw new NotAcceptableHttpException('This article PoA requires version 3.');
+        if ('55774' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 8) {
+            throw new NotAcceptableHttpException('This article VoR requires version 8.');
         }
 
-        if ('09562' === $number && 'vor' === $articleVersion['status'] && $type->getParameter('version') < 7) {
-            throw new NotAcceptableHttpException('This article VoR requires version 7.');
-        }
-
-        if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [2])) {
+        if ('poa' === $articleVersion['status'] && in_array($type->getParameter('version'), [3])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
-        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [6])) {
+        if ('vor' === $articleVersion['status'] && in_array($type->getParameter('version'), [7])) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
         }
 
@@ -775,18 +775,22 @@ $app->get('/articles/{number}/related',
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
-
         $article = $app['articles'][$number];
-
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
         $content = $article['relatedArticles'] ?? [];
+
+        if ($type->getParameter('version') < 2 && '13410' === $number) {
+            throw new NotAcceptableHttpException('These article relations require version 2.');
+        }
 
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
+    'application/vnd.elife.article-related+json; version=2',
     'application/vnd.elife.article-related+json; version=1'
 ));
 
@@ -872,14 +876,20 @@ $app->get('/blog-articles/{id}',
 
         $article = $app['blog-articles'][$id];
 
-        if ($type->getParameter('version') < 2 && in_array($id, ['359325', '369365', '378207'])) {
-            throw new NotAcceptableHttpException('This blog article requires version 2.');
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if (in_array($id, ['359325', '369365', '378207'])) {
+                throw new NotAcceptableHttpException('This blog article requires version 2.');
+            }
         }
 
         return new Response(
             json_encode($article, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -963,21 +973,25 @@ $app->get('/collections/{id}',
 
         $collection = $app['collections'][$id];
 
-        foreach (['content', 'relatedContent'] as $content) {
-            $collection[$content] = array_filter($collection[$content] ?? [], function ($item) use ($type) {
-                return $type->getParameter('version') > 1 || !in_array($item['type'], ['digest', 'event']);
-            });
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 3) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if ('with-reviewed-preprint' === $id) {
+                throw new NotAcceptableHttpException('This collection requires version 3.');
+            }
         }
 
         return new Response(
             json_encode(array_filter($collection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
-    'application/vnd.elife.collection+json; version=2',
-    'application/vnd.elife.collection+json; version=1'
+    'application/vnd.elife.collection+json; version=3',
+    'application/vnd.elife.collection+json; version=2'
 ));
 
 $app->get('/community', function (Request $request, Accept $type) use ($app) {
@@ -1268,10 +1282,16 @@ $app->get('/events/{id}',
 
         $events = $app['events'][$id];
 
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
         return new Response(
             json_encode($events, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1311,6 +1331,10 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
+    if ($type->getParameter('version') < 3) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
+
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
@@ -1318,8 +1342,7 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     );
 })->before($app['negotiate.accept'](
     'application/vnd.elife.highlight-list+json; version=3',
-    'application/vnd.elife.highlight-list+json; version=2',
-    'application/vnd.elife.highlight-list+json; version=1'
+    'application/vnd.elife.highlight-list+json; version=2'
 ));
 
 $app->get('/interviews', function (Request $request, Accept $type) use ($app) {
@@ -1373,10 +1396,16 @@ $app->get('/interviews/{id}',
 
         $interview = $app['interviews'][$id];
 
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+        }
+
         return new Response(
             json_encode($interview, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1502,14 +1531,20 @@ $app->get('/labs-posts/{id}',
 
         $lab = $app['labs'][$id];
 
-        if ($type->getParameter('version') < 2 && '80000003' === $id) {
-            throw new NotAcceptableHttpException('This labs post requires version 2.');
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+        if ($type->getParameter('version') < 2) {
+            $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+            if ('80000003' === $id) {
+                throw new NotAcceptableHttpException('This labs post requires version 2.');
+            }
         }
 
         return new Response(
             json_encode($lab, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
             Response::HTTP_OK,
-            ['Content-Type' => $type->getNormalizedValue()]
+            $headers
         );
     }
 )->before($app['negotiate.accept'](
@@ -1806,12 +1841,12 @@ $app->get('/press-packages/{id}',
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
 
-        if ($type->getParameter('version') < 3) {
+        if ($type->getParameter('version') < 4) {
             $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
-        }
 
-        if ($type->getParameter('version') < 4 && '6b266861' === $id) {
-            throw new NotAcceptableHttpException('This press package requires version 4.');
+            if ('6b266861' === $id) {
+                throw new NotAcceptableHttpException('This press package requires version 4.');
+            }
         }
 
         return new Response(
@@ -1822,8 +1857,7 @@ $app->get('/press-packages/{id}',
     }
 )->before($app['negotiate.accept'](
     'application/vnd.elife.press-package+json; version=4',
-    'application/vnd.elife.press-package+json; version=3',
-    'application/vnd.elife.press-package+json; version=2'
+    'application/vnd.elife.press-package+json; version=3'
 ));
 
 $app->get('/profiles', function (Request $request, Accept $type) use ($app) {
@@ -1955,12 +1989,23 @@ $app->get('/promotional-collections/{id}', function (Accept $type, string $id) u
 
     $promotionalCollection = $app['promotional-collections'][$id];
 
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    if ($type->getParameter('version') < 2) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+
+        if ('highlights-japan' === $id) {
+            throw new NotAcceptableHttpException('This promotional collection requires version 2.');
+        }
+    }
+
     return new Response(
         json_encode(array_filter($promotionalCollection), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
-        ['Content-Type' => $type->getNormalizedValue()]
+        $headers
     );
 })->before($app['negotiate.accept'](
+    'application/vnd.elife.promotional-collection+json; version=2',
     'application/vnd.elife.promotional-collection+json; version=1'
 ));
 
@@ -1993,14 +2038,18 @@ $app->get('/recommendations/{contentType}/{id}', function (Request $request, Acc
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
 
+    if ($type->getParameter('version') < 3 && '13410' === $id) {
+        throw new NotAcceptableHttpException('This recommendation requires version 3.');
+    }
+
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
         Response::HTTP_OK,
         $headers
     );
 })->before($app['negotiate.accept'](
-    'application/vnd.elife.recommendations+json; version=2',
-    'application/vnd.elife.recommendations+json; version=1'
+    'application/vnd.elife.recommendations+json; version=3',
+    'application/vnd.elife.recommendations+json; version=2'
 ));
 
 $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($app){
@@ -2009,14 +2058,57 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
-    $content = [
-        'total' => count($reviewedPreprints),
-        'items' => []
-    ];
+    $useDate = $request->query->get('use-date', 'default');
+    $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
+    $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $originalEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
+
+    if (!$startDate || $startDate->format('Y-m-d') !== $originalStartDate) {
+        throw new BadRequestHttpException('Invalid start date');
+    } elseif (!$endDate || $endDate->format('Y-m-d') !== $originalEndDate) {
+        throw new BadRequestHttpException('Invalid end date');
+    }
+    $startDate = $startDate->setTime(0, 0, 0);
+    $endDate = $endDate->setTime(23, 59, 59);
+
+    if ($endDate < $startDate) {
+        throw new BadRequestHttpException('End date must be on or after start date');
+    }
 
     if ('asc' === $request->query->get('order', 'desc')) {
         $reviewedPreprints = array_reverse($reviewedPreprints);
     }
+
+    $content = [
+        'total' => count($reviewedPreprints),
+        'items' => [],
+    ];
+    $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
+
+    if (0 === count($reviewedPreprints) && $page > 1) {
+        throw new NotFoundHttpException('No page '.$page);
+    }
+
+    foreach ($reviewedPreprints as $i => $reviewedPreprint) {
+        if ('published' === $useDate) {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
+        } elseif (!empty($reviewedPreprint['statusDate'])) {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['statusDate']);
+        } else {
+            $reviewedPreprints[$i]['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $reviewedPreprint['published']);
+        }
+    }
+
+    uasort($reviewedPreprints, function (array $a, array $b) {
+        return $a['_sort_date'] <=> $b['_sort_date'];
+    });
+
+    $reviewedPreprints = array_filter($reviewedPreprints, function ($result) use ($startDate) {
+        return $result['_sort_date'] >= $startDate;
+    });
+
+    $reviewedPreprints = array_filter($reviewedPreprints, function ($result) use ($endDate) {
+        return $result['_sort_date'] <= $endDate;
+    });
 
     $reviewedPreprints = array_slice($reviewedPreprints, ($page * $perPage) - $perPage, $perPage);
 
@@ -2026,6 +2118,7 @@ $app->get('/reviewed-preprints', function(Request $request, Accept $type) use ($
 
     foreach ($reviewedPreprints as $id => $reviewedPreprint) {
         unset($reviewedPreprint['indexContent']);
+        unset($reviewedPreprint['_sort_date']);
 
         $content['items'][] = $reviewedPreprint;
     }
@@ -2242,6 +2335,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $allTypeKeys = [
         'correction',
         'editorial',
+        'expression-concern',
         'feature',
         'insight',
         'research-advance',
@@ -2307,7 +2401,6 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         usort($results, function (array $a, array $b) {
             return $b['_sort_date'] <=> $a['_sort_date'];
         });
-    } else {
     }
 
     if ('asc' === $request->query->get('order', 'desc')) {
@@ -2327,6 +2420,10 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     }, $results);
 
     $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    if ($type->getParameter('version') < 2) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
 
     return new Response(
         json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
@@ -2425,11 +2522,6 @@ $app->post('/oauth2/token', function (Request $request) {
 });
 
 $app->after(function (Request $request, Response $response, Application $app) {
-    /*if ('/ping' !== $request->getPathInfo()) {
-        $response->headers->set('Cache-Control', 'public, max-age=300, stale-while-revalidate=300, stale-if-error=86400');
-        $response->headers->set('Vary', 'Accept', false);
-    }*/
-
     if ($response instanceof StreamedResponse) {
         return;
     }

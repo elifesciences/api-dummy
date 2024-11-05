@@ -1,14 +1,15 @@
 {
-    "id": "highlights-japan",
-    "title": "Highlights from Japan",
-    "impactStatement": "A selection of research from scientists based in institutions in Japan.",
+    "id": "with-reviewed-preprint",
+    "title": "reviewed preprints",
+    "subTitle": "A selection of papers",
+    "impactStatement": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness.",
     "summary": [
         {
             "type": "paragraph",
             "text": "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness. The articles below have been selected by eLife editors to give a flavour of the breadth of research on tropical diseases published by the journal."
         }
     ],
-    "published": "2020-01-20T11:19:26Z",
+    "published": "2015-09-16T11:19:26Z",
     "image": {
         "banner": {
             "alt": "",
@@ -60,7 +61,32 @@
             "name": "Microbiology and Infectious Disease"
         }
     ],
-    "editors": [
+    "selectedCurator": {
+        "id": "pjha",
+        "type": {
+            "id": "senior-editor",
+            "label": "Senior Editor"
+        },
+        "name": {
+            "preferred": "Prabhat Jha",
+            "index": "Jha, Prabhat"
+        },
+        "image": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg",
+            "source": {
+                "mediaType": "image/png",
+                "uri": "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0213b.jpg/full/full/0/default.png",
+                "filename": "kegley120208elife0213b.jpg"
+            },
+            "size": {
+                "width": 4256,
+                "height": 2832
+            }
+        },
+        "etAl": true
+    },
+    "curators": [
         {
             "id": "bcooper",
             "type": {
@@ -99,25 +125,57 @@
     ],
     "content": [
         {
+            "type": "reviewed-preprint",
+            "id": "19560",
+            "doi": "10.7554/eLife.19560",
+            "status": "reviewed",
+            "authorLine": "Lee R Berger, John Hawks ... Scott A Williams",
+            "title": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "indexContent": "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+            "titlePrefix": "Title prefix",
+            "stage": "published",
+            "published": "2022-08-01T00:00:00Z",
+            "reviewedDate": "2022-08-01T00:00:00Z",
+            "versionDate": "2022-08-05T00:00:00Z",
+            "statusDate": "2022-08-01T00:00:00Z",
+            "volume": 4,
+            "elocationId": "e19560",
+            "pdf": "https://elifesciences.org/content/4/e19560.pdf",
+            "subjects": [
+                {
+                    "id": "genomics-evolutionary-biology",
+                    "name": "Genomics and Evolutionary Biology"
+                }
+            ],
+            "curationLabels": [
+                "Ground-breaking",
+                "Convincing"
+            ],
+            "image": {
+                "thumbnail": {
+                    "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif",
+                    "alt": "",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://iiif.elifesciences.org/lax/19560%2Felife-19560-fig1-v1.tif/full/full/0/default.jpg",
+                        "filename": "an-image.jpg"
+                    },
+                    "size": {
+                        "width": 4194,
+                        "height": 4714
+                    },
+                    "focalPoint": {
+                        "x": 25,
+                        "y": 75
+                    }
+                }
+            }
+        },
+        {
             "type": "blog-article",
             "id": "359325",
             "title": "Media coverage: Slime can see",
             "impactStatement": "In their research paper – Cyanobacteria use micro-optics to sense light direction – Schuergers et al. reveal how bacterial cells act as the equivalent of a microscopic eyeball or the world’s oldest and smallest camera eye, allowing them to ‘see’.",
-            "published": "2016-07-08T08:33:25Z",
-            "subjects": [
-                {
-                    "id": "biophysics-structural-biology",
-                    "name": "Biophysics and Structural Biology"
-                }
-            ]
-        },
-        {
-            "type": "reviewed-preprint",
-            "status": "reviewed",
-            "stage": "published",
-            "id": "89763",
-            "title": " Pleiotropic effects of trisomy and pharmacologic modulation on structural, functional, molecular, and genetic systems in a Down syndrome mouse model ",
-            "impactStatement": " Pleiotropic effects of trisomy and pharmacologic modulation on structural, functional, molecular, and genetic systems in a Down syndrome mouse model ",
             "published": "2016-07-08T08:33:25Z",
             "subjects": [
                 {

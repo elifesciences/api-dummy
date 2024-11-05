@@ -1,0 +1,53 @@
+{
+  "id": "immunology-inflammation",
+  "name": "Immunology and Inflammation",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-immunology-illustration.jpg",
+      "alt": "Immunology and Inflammation",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-immunology-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-immunology-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-immunology-illustration.jpg",
+      "alt": "Immunology and Inflammation",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-immunology-illustration.jpg/full/full/0/default.jpg",
+        "filename": "elife-sciences-immunology-illustration.jpg"
+      },
+      "size": {
+        "width": 7016,
+        "height": 2082
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+      ]
+    }
+  },
+  "impactStatement": "eLife reviews research spanning allergy, immunity and immunoregulation, inflammation and T-cell receptor signalling. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#immunology-inflammation\">what we review</a> and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=immunology-inflammation\">sign up for the latest research</a>.",
+  "aimsAndScope": [
+    {
+      "type": "paragraph",
+      "text": "We aim to review studies that provide new insights into the development and function of the immune system and inflammatory processes, irrespective of model organism. We also welcome studies on associated human diseases, new therapeutic strategies, and development of new methodologies or interdisciplinary studies that integrate immunology and inflammation with other research fields. Read the <a href=\"https://elifesciences.org/subjects/immunology-inflammation\">latest research</a> in this subject area."
+    }
+  ]
+}

@@ -78,6 +78,38 @@
                     "name": "Genetics and Genomics"
                 }
             ]
+        },
+        {
+            "id": "82996",
+            "doi": "10.7554/eLife.82996",
+            "pdf": "https://cdn.elifesciences.org/articles/82996/elife-82996-v1.pdf",
+            "type": "research-article",
+            "stage": "published",
+            "title": "Larger but younger fish when growth outpaces mortality in heated ecosystem",
+            "status": "vor",
+            "volume": 12,
+            "version": 1,
+            "subjects": [
+                {
+                    "id": "ecology",
+                    "name": "Ecology"
+                }
+            ],
+            "copyright": {
+                "holder": "Lindmark et al.",
+                "license": "CC-BY-4.0",
+                "statement": "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+            },
+            "published": "2023-05-09T00:00:00Z",
+            "authorLine": "Max Lindmark, Malin Karlsson, Anna Gårdmark",
+            "figuresPdf": "https://cdn.elifesciences.org/articles/82996/elife-82996-figures-v1.pdf",
+            "statusDate": "2023-05-09T00:00:00Z",
+            "elocationId": "e82996",
+            "versionDate": "2023-05-09T00:00:00Z",
+            "impactStatement": "Elevated growth rates and increased size-at-age leads to a larger population size structure, despite higher mortality and a younger population after three decades of exposure to 5–10°C higher temperatures in a large-scale natural climate change experiment.",
+            "researchOrganisms": [
+                "Eurasian perch (<i>Perca fluviatilis</i>)"
+            ]
         }
     ],
     "subjects": [
