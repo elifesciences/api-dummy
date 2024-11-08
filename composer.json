@@ -26,7 +26,7 @@
     },
     "require-dev": {
         "elife/api": "^2.30",
-        "elife/api-client": "dev-support-php-8.x",
+        "elife/api-client": "^1.1",
         "elife/api-validator": "^1.1",
         "guzzlehttp/guzzle": "^7.9",
         "guzzlehttp/psr7": "^2.7",

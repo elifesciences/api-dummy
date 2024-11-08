@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "366e2392749ae314b6d0ece440c1d810",
+    "content-hash": "b1c28a151640de88c0c06de6f032503e",
     "packages": [
         {
             "name": "crell/api-problem",
@@ -2455,16 +2455,16 @@
         },
         {
             "name": "elife/api-client",
-            "version": "dev-support-php-8.x",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-client-php.git",
-                "reference": "735d4916ccd894acfd1efdb3b86e980ad8575579"
+                "reference": "576268640729faa66d2ab1a0b2d942e3403243ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/735d4916ccd894acfd1efdb3b86e980ad8575579",
-                "reference": "735d4916ccd894acfd1efdb3b86e980ad8575579",
+                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/576268640729faa66d2ab1a0b2d942e3403243ba",
+                "reference": "576268640729faa66d2ab1a0b2d942e3403243ba",
                 "shasum": ""
             },
             "require": {
@@ -2492,11 +2492,6 @@
                 "psr/log": "^1.0, to use the WarningCheckingHttpClient adapter"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "eLife\\ApiClient\\": "./src"
@@ -2509,9 +2504,9 @@
             "description": "eLife Sciences API client",
             "support": {
                 "issues": "https://github.com/elifesciences/api-client-php/issues",
-                "source": "https://github.com/elifesciences/api-client-php/tree/support-php-8.x"
+                "source": "https://github.com/elifesciences/api-client-php/tree/v1.1.0"
             },
-            "time": "2024-10-23T06:56:18+00:00"
+            "time": "2024-11-07T14:19:35+00:00"
         },
         {
             "name": "elife/api-validator",
@@ -4949,9 +4944,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "elife/api-client": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
