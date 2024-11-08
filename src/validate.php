@@ -5,8 +5,9 @@ use eLife\ApiValidator\MessageValidator\FakeHttpsMessageValidator;
 use eLife\ApiValidator\MessageValidator\JsonMessageValidator;
 use eLife\ApiValidator\SchemaFinder\PathBasedSchemaFinder;
 use JsonSchema\Validator;
+use Nyholm\Psr7\Factory\Psr17Factory;
 use Silex\Application;
-use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
+use Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -22,8 +23,17 @@ $app['message-validator'] = function (Application $app) {
     );
 };
 
+$app['psr17-factory'] = function (Application $app) {
+    return new Psr17Factory();
+};
+
 $app['symfony.psr7-factory'] = function (Application $app) {
-    return new DiactorosFactory();
+    return new PsrHttpFactory(
+        $app['psr17-factory'],
+        $app['psr17-factory'],
+        $app['psr17-factory'],
+        $app['psr17-factory'],
+    );
 };
 
 $app->before(function (Request $request, Application $app) {
