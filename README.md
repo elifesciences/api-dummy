@@ -14,7 +14,7 @@ The above command should result in a data fixture for article 09560 being create
 ## Run locally
 
 ```$sh
-docker compose up
+make dev
 ```
 
 Then visit [http://localhost:8080/articles](http://localhost:8080/articles) in your browser.
@@ -28,5 +28,5 @@ docker compose -f docker-compose.dev.yml run composer install
 ## Run tests
 
 ```$sh
-docker compose run --rm app ./project_tests.sh
+make test
 ```
