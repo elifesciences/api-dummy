@@ -5,11 +5,12 @@ This contains a dummy implementation of the [eLife 2.0 API](https://github.com/e
 
 ## Import article
 
+For example to import the article with ID 85111:
 ```$sh
-docker compose run app ./bin/import 09560
+make import-article ARTICLE_ID=85111
 ```
 
-The above command should result in a data fixture for article 09560 being created at `data/articles/09560.json`
+The above command should result in a data fixture for article 85111 being created at `data/articles/85111.json`
 
 ## Run locally
 
