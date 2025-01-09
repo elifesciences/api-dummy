@@ -20,6 +20,23 @@
       "name": "Neuroscience"
     }
   ],
+  "elifeAssessment": {
+    "title": "eLife assessment",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "This important study provides convincing evidence that locus coeruleus is activated during visuomotor mismatches. Gain of function optogenetic experiments complement this evidence and indicate that locus coeruleus could be involved in the learning process that enables visuomotor predictions. This study, therefore, sets the groundwork for the circuit dissection of predictive signals in the visual cortex. Loss-of-function experiments would strengthen the evidence of the involvement of locus coeruleus in prediction learning. These results will be of interest to systems neuroscientists."
+      }
+    ],
+    "id": "sa2",
+    "doi": "10.7554/eLife.85111.2.sa2",
+    "significance": [
+      "important"
+    ],
+    "strength": [
+      "convincing"
+    ]
+  },
   "curationLabels": [
     "Ground-breaking"
   ],
