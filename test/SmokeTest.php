@@ -2,11 +2,11 @@
 
 namespace test\eLife\DummyApi;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
 use Traversable;
 
-final class SmokeTest extends PHPUnit_Framework_TestCase
+final class SmokeTest extends TestCase
 {
     use SilexTestCase;
 
@@ -39,7 +39,8 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
 
             if ('13410' === $name[1]) {
-                yield $path = "/recommendations/${name[0]}/${name[1]}" => [
+                $path = "/recommendations/${name[0]}/${name[1]}";
+                yield $path.'(406)' => [
                     $this->createRequest($path, 'application/vnd.elife.recommendations+json; version=2'),
                     'application/problem+json',
                     406,
@@ -148,13 +149,15 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             ];
 
             if ('13410' === $file->getBasename('.json')) {
-                yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
+                $path = '/articles/'.$file->getBasename('.json').'/related';
+                yield $path.'(406)' => [
                     $this->createRequest($path, 'application/vnd.elife.article-related+json; version=1'),
                     'application/problem+json',
                     406
                 ];
             } else {
-                yield $path = '/articles/'.$file->getBasename('.json').'/related' => [
+                $path = '/articles/'.$file->getBasename('.json').'/related';
+                yield $path.'(v1)' => [
                     $this->createRequest($path, 'application/vnd.elife.article-related+json; version=1'),
                     'application/vnd.elife.article-related+json; version=1',
                 ];
@@ -524,32 +527,37 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             $warning = 1 === $version ? [
                 'application/vnd.elife.search+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
             ] : [];
-            yield $path = '/search?type[]=reviewed-preprint' => [
+            $path = '/search?type[]=reviewed-preprint';
+            yield $path.'('.$version.')' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
                 1 === $version ? 0 : null,
             ];
-            yield $path = '/search' => [
+            $path = '/search';
+            yield $path.'('.$version.')' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield $path = '/search?for=cell' => [
+            $path = '/search?for=cell';
+            yield $path.'('.$version.')' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield $path = '/search?subject[]=cell-biology' => [
+            $path = '/search?subject[]=cell-biology';
+            yield $path.'('.$version.')' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
+            $path = '/search?start-date=2017-01-01&end-date=2017-01-01';
+            yield $path.'('.$version.')' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
