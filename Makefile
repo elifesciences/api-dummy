@@ -1,4 +1,4 @@
-.PHONY: dev test import-article
+.PHONY: dev test import-article import-reviewed-preprint
 
 dev:
 	docker compose up
@@ -9,3 +9,6 @@ test:
 import-article:
 	chmod a+w data/articles/
 	docker compose run app ./bin/import $(ARTICLE_ID)
+
+import-reviewed-preprint:
+	curl https://api.elifesciences.org/reviewed-preprints/$(REVIEWED_PREPRINT_ID) | jq . > data/reviewed-preprints/$(REVIEWED_PREPRINT_ID).json
