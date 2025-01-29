@@ -14,6 +14,7 @@ import-article:
 	docker compose run app ./bin/import $(ARTICLE_ID)
 
 import-reviewed-preprint:
+	@if [ "${REVIEWED_PREPRINT_ID}" = "" ]; then echo "Expected REVIEWED_PREPRINT_ID"; exit 1; fi
 	curl https://api.elifesciences.org/reviewed-preprints/$(REVIEWED_PREPRINT_ID) | jq . > data/reviewed-preprints/$(REVIEWED_PREPRINT_ID).json
 
 vendor:
