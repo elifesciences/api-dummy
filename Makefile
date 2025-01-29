@@ -1,7 +1,10 @@
-.PHONY: dev test import-article import-reviewed-preprint
+.PHONY: dev stop test import-article import-reviewed-preprint
 
 dev:
 	docker compose up
+
+stop:
+	docker compose down
 
 test:
 	docker compose run --rm app ./project_tests.sh
