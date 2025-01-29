@@ -15,3 +15,6 @@ import-article:
 
 import-reviewed-preprint:
 	curl https://api.elifesciences.org/reviewed-preprints/$(REVIEWED_PREPRINT_ID) | jq . > data/reviewed-preprints/$(REVIEWED_PREPRINT_ID).json
+
+vendor:
+	composer install
