@@ -17,7 +17,7 @@ import-article:
 
 .PHONY: import-reviewed-preprint
 import-reviewed-preprint:
-	@if [ "${REVIEWED_PREPRINT_ID}" = "" ]; then echo "Expected REVIEWED_PREPRINT_ID"; exit 1; fi
+	$(if $(REVIEWED_PREPRINT_ID),,$(error REVIEWED_PREPRINT_ID make variable needs to be set))
 	curl https://api.elifesciences.org/reviewed-preprints/$(REVIEWED_PREPRINT_ID) | jq . > data/reviewed-preprints/$(REVIEWED_PREPRINT_ID).json
 
 vendor:
