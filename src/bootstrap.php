@@ -47,6 +47,41 @@ $grabData = function (string $subFolder, callable $prepareData) use ($dataDir, $
     return $data;
 };
 
+$prepareArticleSnippet = function (array $article) {
+    foreach ([
+        'abstract',
+        'issue',
+        'copyright',
+        'authors',
+        'researchOrganisms',
+        'keywords',
+        'digest',
+        'body',
+        'decisionLetter',
+        'authorResponse',
+        'editorEvaluation',
+        'publicReviews',
+        'recommendationsForAuthors',
+        'reviewers',
+        'references',
+        'ethics',
+        'funding',
+        'additionalFiles',
+        'dataSets',
+        'acknowledgements',
+        'appendices',
+        '-related-articles-reviewed-preprints',
+    ] as $field) {
+        unset($article[$field]);
+    }
+    unset($article['image']['banner']);
+    if (empty($article['image'])) {
+        unset($article['image']);
+    }
+
+    return $article;
+};
+
 $app['annotations'] = function () use ($grabData) {
     return $grabData('annotations', function (Finder $finder) {
         $annotations = [];
@@ -563,7 +598,7 @@ $app->get('/annual-reports/{year}',
     'application/vnd.elife.annual-report+json; version=2'
 ))->assert('number', '[1-9][0-9]*');
 
-$app->get('/articles', function (Request $request, Accept $type) use ($app) {
+$app->get('/articles', function (Request $request, Accept $type) use ($app, $prepareArticleSnippet) {
     $articles = $app['articles'];
 
     $page = $request->query->get('page', 1);
@@ -597,28 +632,7 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app) {
 
     foreach ($articles as $i => $article) {
         $latestVersion = $article['versions'][count($article['versions']) - 1];
-
-        unset($latestVersion['issue']);
-        unset($latestVersion['copyright']);
-        unset($latestVersion['authors']);
-        unset($latestVersion['researchOrganisms']);
-        unset($latestVersion['keywords']);
-        unset($latestVersion['digest']);
-        unset($latestVersion['body']);
-        unset($latestVersion['decisionLetter']);
-        unset($latestVersion['authorResponse']);
-        unset($latestVersion['reviewers']);
-        unset($latestVersion['references']);
-        unset($latestVersion['ethics']);
-        unset($latestVersion['funding']);
-        unset($latestVersion['additionalFiles']);
-        unset($latestVersion['dataSets']);
-        unset($latestVersion['acknowledgements']);
-        unset($latestVersion['appendices']);
-        unset($latestVersion['image']['banner']);
-        if (empty($latestVersion['image'])) {
-            unset($latestVersion['image']);
-        }
+        $latestVersion = $prepareArticleSnippet($latestVersion);
 
         $content['items'][] = $latestVersion;
     }
@@ -655,7 +669,7 @@ $app->get('/articles/{number}',
 );
 
 $app->get('/articles/{number}/versions',
-    function (Accept $type, string $number) use ($app) {
+    function (Accept $type, string $number) use ($app, $prepareArticleSnippet) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
@@ -677,24 +691,7 @@ $app->get('/articles/{number}/versions',
         foreach ($article['versions'] as $articleVersion) {
             if ($type->getParameter('version') > 1 || !empty($articleVersion['version'])) {
                 if (!empty($articleVersion['version'])) {
-                    unset($articleVersion['issue']);
-                    unset($articleVersion['copyright']);
-                    unset($articleVersion['authors']);
-                    unset($articleVersion['researchOrganisms']);
-                    unset($articleVersion['keywords']);
-                    unset($articleVersion['digest']);
-                    unset($articleVersion['body']);
-                    unset($articleVersion['decisionLetter']);
-                    unset($articleVersion['authorResponse']);
-                    unset($articleVersion['reviewers']);
-                    unset($articleVersion['references']);
-                    unset($articleVersion['ethics']);
-                    unset($articleVersion['funding']);
-                    unset($articleVersion['additionalFiles']);
-                    unset($articleVersion['dataSets']);
-                    unset($articleVersion['acknowledgements']);
-                    unset($articleVersion['appendices']);
-                    unset($articleVersion['image']['banner']);
+                    $articleVersion = $prepareArticleSnippet($articleVersion);
                 }
 
                 $content['versions'][] = $articleVersion;
@@ -2150,7 +2147,7 @@ $app->get('/reviewed-preprints/{id}', function(Accept $type, $id) use ($app) {
     'application/vnd.elife.reviewed-preprint+json;version=1'
 ));
 
-$app->get('/search', function (Request $request, Accept $type) use ($app) {
+$app->get('/search', function (Request $request, Accept $type) use ($app, $prepareArticleSnippet) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
@@ -2195,28 +2192,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
         }
         $result = $latest;
         $result['_search'] = strtolower(json_encode($latest));
-
-        unset($result['issue']);
-        unset($result['copyright']);
-        unset($result['authors']);
-        unset($result['researchOrganisms']);
-        unset($result['keywords']);
-        unset($result['digest']);
-        unset($result['body']);
-        unset($result['decisionLetter']);
-        unset($result['authorResponse']);
-        unset($result['reviewers']);
-        unset($result['references']);
-        unset($result['ethics']);
-        unset($result['funding']);
-        unset($result['additionalFiles']);
-        unset($result['dataSets']);
-        unset($result['acknowledgements']);
-        unset($result['appendices']);
-        unset($result['image']['banner']);
-        if (empty($result['image'])) {
-            unset($result['image']);
-        }
+        $result = $prepareArticleSnippet($result);
 
         if ('published' === $useDate) {
             $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
