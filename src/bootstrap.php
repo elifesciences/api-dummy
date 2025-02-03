@@ -2160,6 +2160,8 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
     $sort = $request->query->get('sort', 'relevance');
     $subjects = (array) $request->query->get('subject', []);
     $types = (array) $request->query->get('type', []);
+    $elifeAssessmentSignificance = (array) $request->query->get('elifeAssessmentSignificance', []);
+    $elifeAssessmentStrength = (array) $request->query->get('elifeAssessmentStrength', []);
 
     $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
     $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
@@ -2380,6 +2382,29 @@ $app->get('/search', function (Request $request, Accept $type) use ($app) {
                 return $subject['id'];
             }, $result['subjects'] ?? [])));
         });
+    }
+    
+    foreach ([
+        'significance' => $elifeAssessmentSignificance,
+        'strength' => $elifeAssessmentStrength,
+    ] as $termGroup => $terms) {
+        if (false === empty($terms)) {
+            $results = array_filter($results, function ($result) use ($termGroup, $terms) {
+                $resultElifeAssessment = $result['elifeAssessment'] ?? [];
+                $resultElifeAssessmentTerms = $resultElifeAssessment[$termGroup] ?? [];
+                return
+                    (
+                        in_array('not-applicable', $terms) &&
+                        empty($resultElifeAssessment)
+                    ) ||
+                    (
+                        in_array('not-assigned', $terms) &&
+                        !empty($resultElifeAssessment) &&
+                        empty($resultElifeAssessmentTerms)
+                    ) ||
+                    count(array_intersect($terms, $resultElifeAssessmentTerms));
+            });
+        }
     }
 
     $results = array_filter($results, function ($result) use ($startDate) {
