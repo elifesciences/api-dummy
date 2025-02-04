@@ -524,32 +524,32 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
             $warning = 1 === $version ? [
                 'application/vnd.elife.search+json; version=1' => '299 elifesciences.org "Deprecation: Support for version 1 will be removed"',
             ] : [];
-            yield ($path = '/search?type[]=reviewed-preprint')." (version: {$version})" => [
+            yield $path = '/search?type[]=reviewed-preprint' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
                 1 === $version ? 0 : null,
             ];
-            yield ($path = '/search')." (version: {$version})" => [
+            yield $path = '/search' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield ($path = '/search?for=cell')." (version: {$version})" => [
+            yield $path = '/search?for=cell' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield ($path = '/search?subject[]=cell-biology')." (version: {$version})" => [
+            yield $path = '/search?subject[]=cell-biology' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
                 $warning,
             ];
-            yield ($path = '/search?start-date=2017-01-01&end-date=2017-01-01')." (version: {$version})" => [
+            yield $path = '/search?start-date=2017-01-01&end-date=2017-01-01' => [
                 $this->createRequest($path, 'application/vnd.elife.search+json; version='.$version),
                 'application/vnd.elife.search+json; version='.$version,
                 200,
