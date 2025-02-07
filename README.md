@@ -31,3 +31,9 @@ docker compose -f docker-compose.dev.yml run composer install
 ```$sh
 make test
 ```
+
+### Filter smoke tests by path
+
+```$sh
+vendor/bin/phpunit --testdox --filter "/search" test/SmokeTest.php
+```
