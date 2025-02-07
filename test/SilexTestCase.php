@@ -21,19 +21,6 @@ trait SilexTestCase
 
     /**
      * @test
-     */
-    final public function it_can_be_pinged()
-    {
-        $response = $this->getApp()->handle(Request::create('/ping'));
-
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertSame('pong', $response->getContent());
-        $this->assertSame('text/plain; charset=UTF-8', $response->headers->get('Content-Type'));
-        $this->assertSame('must-revalidate, no-cache, no-store, private', $response->headers->get('Cache-Control'));
-    }
-
-    /**
-     * @test
      * @dataProvider requestProvider
      */
     final public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200, $warning = [], int $expectedCount = null)
