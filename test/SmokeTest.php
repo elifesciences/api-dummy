@@ -556,6 +556,13 @@ final class SmokeTest extends PHPUnit_Framework_TestCase
                 $warning,
             ];
         }
+        // yield $path = '/search?elifeAssessmentSignificance[]=important' => [
+        //     $this->createRequest($path),
+        //     'application/vnd.elife.search+json; version=2',
+        //     200,
+        //     [],
+        //     1,
+        // ];
         yield $path = '/search?start-date=2017-02-29' => [
             $this->createRequest($path),
             'application/problem+json',
