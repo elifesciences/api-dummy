@@ -17,6 +17,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/ArticleSnippet.php';
 
 $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
@@ -45,41 +46,6 @@ $grabData = function (string $subFolder, callable $prepareData) use ($dataDir, $
     };
 
     return $data;
-};
-
-$prepareArticleSnippet = function (array $article) {
-    foreach ([
-        'abstract',
-        'issue',
-        'copyright',
-        'authors',
-        'researchOrganisms',
-        'keywords',
-        'digest',
-        'body',
-        'decisionLetter',
-        'authorResponse',
-        'editorEvaluation',
-        'publicReviews',
-        'recommendationsForAuthors',
-        'reviewers',
-        'references',
-        'ethics',
-        'funding',
-        'additionalFiles',
-        'dataSets',
-        'acknowledgements',
-        'appendices',
-        '-related-articles-reviewed-preprints',
-    ] as $field) {
-        unset($article[$field]);
-    }
-    unset($article['image']['banner']);
-    if (empty($article['image'])) {
-        unset($article['image']);
-    }
-
-    return $article;
 };
 
 $app['annotations'] = function () use ($grabData) {
@@ -598,7 +564,7 @@ $app->get('/annual-reports/{year}',
     'application/vnd.elife.annual-report+json; version=2'
 ))->assert('number', '[1-9][0-9]*');
 
-$app->get('/articles', function (Request $request, Accept $type) use ($app, $prepareArticleSnippet) {
+$app->get('/articles', function (Request $request, Accept $type) use ($app) {
     $articles = $app['articles'];
 
     $page = $request->query->get('page', 1);
@@ -632,7 +598,7 @@ $app->get('/articles', function (Request $request, Accept $type) use ($app, $pre
 
     foreach ($articles as $i => $article) {
         $latestVersion = $article['versions'][count($article['versions']) - 1];
-        $latestVersion = $prepareArticleSnippet($latestVersion);
+        $latestVersion = ArticleSnippet::prepare($latestVersion);
 
         $content['items'][] = $latestVersion;
     }
@@ -669,7 +635,7 @@ $app->get('/articles/{number}',
 );
 
 $app->get('/articles/{number}/versions',
-    function (Accept $type, string $number) use ($app, $prepareArticleSnippet) {
+    function (Accept $type, string $number) use ($app) {
         if (false === isset($app['articles'][$number])) {
             throw new NotFoundHttpException('Article not found');
         }
@@ -691,7 +657,7 @@ $app->get('/articles/{number}/versions',
         foreach ($article['versions'] as $articleVersion) {
             if ($type->getParameter('version') > 1 || !empty($articleVersion['version'])) {
                 if (!empty($articleVersion['version'])) {
-                    $articleVersion = $prepareArticleSnippet($articleVersion);
+                    $articleVersion = ArticleSnippet::prepare($articleVersion);
                 }
 
                 $content['versions'][] = $articleVersion;
@@ -2147,7 +2113,7 @@ $app->get('/reviewed-preprints/{id}', function(Accept $type, $id) use ($app) {
     'application/vnd.elife.reviewed-preprint+json;version=1'
 ));
 
-$app->get('/search', function (Request $request, Accept $type) use ($app, $prepareArticleSnippet) {
+$app->get('/search', function (Request $request, Accept $type) use ($app) {
     $page = $request->query->get('page', 1);
     $perPage = $request->query->get('per-page', 10);
 
@@ -2192,7 +2158,7 @@ $app->get('/search', function (Request $request, Accept $type) use ($app, $prepa
         }
         $result = $latest;
         $result['_search'] = strtolower(json_encode($latest));
-        $result = $prepareArticleSnippet($result);
+        $result = ArticleSnippet::prepare($result);
 
         if ('published' === $useDate) {
             $result['_sort_date'] = DateTimeImmutable::createFromFormat(DATE_ATOM, $result['published']);
