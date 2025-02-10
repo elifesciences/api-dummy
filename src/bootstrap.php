@@ -18,6 +18,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/helpers/ArticleSnippet.php';
+require_once __DIR__.'/endpoints/Search.php';
 
 $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
@@ -2476,5 +2477,7 @@ $app->after(function (Request $request, Response $response, Application $app) {
     $response->headers->set('ETag', md5($response->getContent()));
     $response->isNotModified($request);
 });
+
+$app = Search::add($app);
 
 return $app;
