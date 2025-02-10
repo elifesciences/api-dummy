@@ -9,6 +9,11 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Search
 {
+    public static function termFilter(array $results)
+    {
+        return $results;
+    }
+
     public static function add(Application $app)
     {
         $app->get('/search', function (Request $request, Accept $type) use ($app) {
@@ -21,6 +26,7 @@ class Search
             $sort = $request->query->get('sort', 'relevance');
             $subjects = (array) $request->query->get('subject', []);
             $types = (array) $request->query->get('type', []);
+            $elifeAssessmentSignificances = (array) $request->query->get('elifeAssessmentSignificance', []);
         
             $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
             $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
@@ -212,6 +218,10 @@ class Search
                 $results = array_filter($results, function ($result) use ($types) {
                     return in_array($result['type'], $types);
                 });
+            }
+            
+            if (false === empty($elifeAssessmentSignificances)) {
+                $results = self::termFilter($results);
             }
         
             if (false === empty($subjects)) {
