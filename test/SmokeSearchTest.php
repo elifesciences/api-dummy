@@ -6,7 +6,7 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\Finder\Finder;
 use Traversable;
 
-final class SearchTest extends PHPUnit_Framework_TestCase
+final class SmokeSearchTest extends PHPUnit_Framework_TestCase
 {
     use SilexTestCase;
 
