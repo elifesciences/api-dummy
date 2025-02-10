@@ -17,7 +17,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/ArticleSnippet.php';
+require_once __DIR__.'/helpers/ArticleSnippet.php';
 
 $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');
