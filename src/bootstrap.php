@@ -2,6 +2,8 @@
 
 use eLife\ApiProblem\Silex\ApiProblemProvider;
 use eLife\ContentNegotiator\Silex\ContentNegotiationProvider;
+use eLife\DummyApi\endpoints\Search;
+use eLife\DummyApi\helpers\ArticleSnippet;
 use eLife\Ping\Silex\PingControllerProvider;
 use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use Negotiation\Accept;
@@ -17,8 +19,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/helpers/ArticleSnippet.php';
-require_once __DIR__.'/endpoints/Search.php';
 
 $dataDirSet = getenv('DATA_FOLDER');
 $dataDir = __DIR__.'/../'.($dataDirSet ? $dataDirSet : 'data');

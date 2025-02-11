@@ -1,5 +1,7 @@
 <?php
 
+namespace eLife\DummyApi\helpers;
+
 class ArticleSnippet
 {
     public static function prepare(array $article) {

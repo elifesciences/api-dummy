@@ -1,5 +1,10 @@
 <?php
 
+namespace eLife\DummyApi\endpoints;
+
+use DateTimeImmutable;
+use DateTimeZone;
+use eLife\DummyApi\helpers\ArticleSnippet;
 use Silex\Application;
 use Negotiation\Accept;
 use Symfony\Component\HttpFoundation\Request;
