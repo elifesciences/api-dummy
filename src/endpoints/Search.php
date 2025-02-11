@@ -14,8 +14,57 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Search
 {
-    public static function filterBySignificanceTerms(array $results)
+    private static function resultTermFilterNotApplicable(
+        array $resultElifeAssessment,
+        array $terms
+    ) : bool
     {
+        return (
+            in_array('not-applicable', $terms) &&
+            empty($resultElifeAssessment)
+        );
+    }
+
+    private static function resultTermFilterNotAssigned(
+        array $resultElifeAssessment,
+        array $resultElifeAssessmentTerms,
+        array $terms
+    ) : bool
+    {
+        return (
+            in_array('not-assigned', $terms) &&
+            !empty($resultElifeAssessment) &&
+            empty($resultElifeAssessmentTerms)
+        );
+    }
+    
+    private static function resultTermFilter(
+        array $resultElifeAssessmentTerms,
+        array $terms
+    ) : bool
+    {
+        return count(array_intersect($terms, $resultElifeAssessmentTerms));
+    }
+
+    public static function filterByTerms(
+        array $results,
+        array $terms,
+        string $termGroup
+    ) : array
+    {
+        if (false === empty($terms)) {
+            $results = array_filter($results, function ($result) use ($termGroup, $terms) {
+                $resultElifeAssessment = $result['elifeAssessment'] ?? [];
+                $resultElifeAssessmentTerms = $resultElifeAssessment[$termGroup] ?? [];
+                return
+                    self::resultTermFilterNotApplicable($resultElifeAssessment, $terms)
+                    ||
+                    self::resultTermFilterNotAssigned($resultElifeAssessment, $resultElifeAssessmentTerms, $terms)
+                    ||
+                    self::resultTermFilter($resultElifeAssessmentTerms, $terms);
+            });
+        }
+
         return $results;
     }
 
@@ -32,6 +81,7 @@ class Search
             $subjects = (array) $request->query->get('subject', []);
             $types = (array) $request->query->get('type', []);
             $elifeAssessmentSignificances = (array) $request->query->get('elifeAssessmentSignificance', []);
+            $elifeAssessmentStrengths = (array) $request->query->get('elifeAssessmentStrength', []);
         
             $startDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestStartDate = $request->query->get('start-date', '2000-01-01'), new DateTimeZone('Z'));
             $endDate = DateTimeImmutable::createFromFormat('Y-m-d', $requestEndDate = $request->query->get('end-date', '2999-12-31'), new DateTimeZone('Z'));
@@ -226,7 +276,11 @@ class Search
             }
             
             if (false === empty($elifeAssessmentSignificances)) {
-                $results = self::filterBySignificanceTerms($results);
+                $results = self::filterByTerms($results, $elifeAssessmentSignificances, 'significance');
+            }
+
+            if (false === empty($elifeAssessmentStrengths)) {
+                $results = self::filterByTerms($results, $elifeAssessmentStrengths, 'strength');
             }
         
             if (false === empty($subjects)) {
