@@ -32,7 +32,19 @@ final class SearchTest extends PHPUnit_Framework_TestCase
                 'strength' => ['baz'],
             ],
         ];
-        
+        $resultNotApplicable1 = $this->result('2');
+        $expectedNotApplicable1 = [
+            'id' => '2',
+        ];
+        $resultNoSignificance1 = $this->result('3', [], ['baz']);
+        $expectedNoSignificance1 = [
+            'id' => '3',
+            'elifeAssessment' => [
+                'significance' => [],
+                'strength' => ['baz'],
+            ],
+        ];
+
         yield 'no term filters' => [
             [
                 $result1,
@@ -67,16 +79,58 @@ final class SearchTest extends PHPUnit_Framework_TestCase
                 $expected1,
             ],
         ];
+        
+        yield 'match not applicable' => [
+            [
+                $resultNotApplicable1,
+            ],
+            [
+                'not-applicable',
+            ],
+            'strength',
+            [
+                $expectedNotApplicable1,
+            ],
+        ];
+
+        yield 'no match not applicable' => [
+            [
+                $resultNotApplicable1,
+            ],
+            [
+                'foo',
+            ],
+            'strength',
+            [],
+        ];
+        
+        yield 'match not assigned' => [
+            [
+                $resultNoSignificance1,
+            ],
+            [
+                'not-assigned',
+            ],
+            'significance',
+            [
+                $expectedNoSignificance1,
+            ],
+        ];
     }
 
     private function result(string $id, array $significance = [], array $strength = [])
     {
-        return [
+        $result = [
             'id' => $id,
-            'elifeAssessment' => [
+        ];
+
+        if (count($significance) + count($strength) > 0) {
+            $result['elifeAssessment'] = [
                 'significance' => $significance,
                 'strength' => $strength,
-            ],
-        ];
+            ];
+        }
+
+        return $result;
     }
 }
