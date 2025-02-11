@@ -26,4 +26,19 @@ final class TermFilterTest extends PHPUnit_Framework_TestCase
             ],
         ], 'important'));
     }
+
+    /**
+     * @test
+     */
+    final public function is_significance_term_found_returns_false_if_there_is_no_significance()
+    {
+        $this->markTestSkipped();
+        $this->assertTrue(TermFilter::isSignificanceTermFound([
+            'elifeAssessment' => [
+                'strength' => [
+                    'solid',
+                ],
+            ],
+        ], 'important'));
+    }
 };
