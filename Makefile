@@ -6,6 +6,14 @@ dev:
 stop:
 	docker compose down
 
+.PHONY: lint
+lint:
+	vendor/bin/phpcs --standard=phpcs.xml.dist --warning-severity=0 -p src/ web/ test/
+
+.PHONY: lint-fix
+lint-fix:
+	vendor/bin/phpcbf --standard=phpcs.xml.dist --warning-severity=0 -p src/ web/ test/
+
 .PHONY: test
 test:
 	docker compose run --rm app ./project_tests.sh
