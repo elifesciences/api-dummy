@@ -12,4 +12,19 @@ final class TermFilterTest extends PHPUnit_Framework_TestCase
     {
         $this->assertFalse(TermFilter::isSignificanceTermFound([], 'important'));
     }
+
+    /**
+     * @test
+     */
+    final public function is_significance_term_found_returns_true_if_result_has_term()
+    {
+        $this->markTestSkipped('Not yet implemented');
+        $this->assertTrue(TermFilter::isSignificanceTermFound([
+            'elifeAssessment' => [
+                'significance' => [
+                    'important',
+                ],
+            ],
+        ], 'important'));
+    }
 };
