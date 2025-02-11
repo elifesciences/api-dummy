@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Search
 {
-    public static function termFilter(array $results)
+    public static function filterBySignificanceTerms(array $results)
     {
         return $results;
     }
@@ -221,7 +221,7 @@ class Search
             }
             
             if (false === empty($elifeAssessmentSignificances)) {
-                $results = self::termFilter($results);
+                $results = self::filterBySignificanceTerms($results);
             }
         
             if (false === empty($subjects)) {
