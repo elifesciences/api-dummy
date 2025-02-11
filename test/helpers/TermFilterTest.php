@@ -1,0 +1,15 @@
+<?php
+
+use eLife\DummyApi\helpers\TermFilter;
+
+final class TermFilterTest extends PHPUnit_Framework_TestCase
+{
+
+    /**
+     * @test
+     */
+    final public function is_significance_term_found_returns_false_if_there_are_no_results()
+    {
+        $this->assertFalse(TermFilter::isSignificanceTermFound([], 'important'));
+    }
+};
