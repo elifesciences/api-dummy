@@ -332,6 +332,21 @@ $app['metrics'] = function () use ($grabData) {
     });
 };
 
+$app['metrics-versions'] = function () use ($grabData) {
+    return $grabData('metrics-versions', function (Finder $finder) {
+        $items = [];
+
+        foreach ($finder as $file) {
+            $name = explode('-', $file->getBasename('.json'));
+
+            $json = json_decode($file->getContents(), true);
+            $items[$name[0]][$name[1]][$name[2]] = $json;
+        }
+
+        return $items;
+    });
+};
+
 $app['people'] = function () use ($grabData) {
     return $grabData('people', function (Finder $finder) {
         $people = [];
@@ -1524,6 +1539,25 @@ $app->get('/metrics/{contentType}/{id}/citations',
 
         $headers = ['Content-Type' => $type->getNormalizedValue()];
         $content = $app['metrics'][$contentType][$id]['citations'];
+
+        return new Response(
+            json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+            Response::HTTP_OK,
+            $headers
+        );
+    }
+)->before($app['negotiate.accept'](
+    'application/vnd.elife.metric-citations+json; version=1'
+));
+
+$app->get('/metrics/{contentType}/{id}/citations/version/{versionNumber}',
+    function (Accept $type, string $contentType, string $id, string $versionNumber) use ($app) {
+        if (false === isset($app['metrics-versions'][$contentType][$id][$versionNumber])) {
+            throw new NotFoundHttpException('Not found');
+        }
+
+        $headers = ['Content-Type' => $type->getNormalizedValue()];
+        $content = $app['metrics-versions'][$contentType][$id]['citations']['version'][$versionNumber];
 
         return new Response(
             json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),

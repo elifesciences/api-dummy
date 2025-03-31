@@ -1,0 +1,14 @@
+{
+    "citations": [
+        {
+            "service": "Scopus",
+            "uri": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84942027491&origin=inward",
+            "citations": 28
+        },
+        {
+            "service": "PubMed Central",
+            "uri": "https://www.ncbi.nlm.nih.gov/sites/entrez?db=pubmed&cmd=link&LinkName=pubmed_pmc_refs&from_uid=26354291",
+            "citations": 8
+        }
+    ]
+}
