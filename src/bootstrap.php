@@ -1091,7 +1091,7 @@ $app->get('/covers', function (Request $request, Accept $type) use ($app) {
 ));
 
 $app->get('/covers/current', function (Accept $type) use ($app) {
-    $covers = array_slice(array_reverse($app['covers']), 0, 4);
+    $covers = array_slice(array_reverse($app['covers']), 0, 7);
 
     $content = [
         'total' => count($covers),
