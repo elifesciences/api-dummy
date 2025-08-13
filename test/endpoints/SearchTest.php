@@ -3,10 +3,10 @@
 namespace test\eLife\DummyApi\endpoints;
 
 use eLife\DummyApi\endpoints\Search;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Traversable;
 
-final class SearchTest extends PHPUnit_Framework_TestCase
+final class SearchTest extends TestCase
 {
     /**
      * @test
@@ -55,7 +55,7 @@ final class SearchTest extends PHPUnit_Framework_TestCase
                 $expected1,
             ],
         ];
-        
+
         yield 'match' => [
             [
                 $result1,
@@ -66,7 +66,7 @@ final class SearchTest extends PHPUnit_Framework_TestCase
             'significance',
             [],
         ];
-        
+
         yield 'no match' => [
             [
                 $result1,
@@ -79,7 +79,7 @@ final class SearchTest extends PHPUnit_Framework_TestCase
                 $expected1,
             ],
         ];
-        
+
         yield 'match not applicable' => [
             [
                 $resultNotApplicable1,
@@ -103,7 +103,7 @@ final class SearchTest extends PHPUnit_Framework_TestCase
             'strength',
             [],
         ];
-        
+
         yield 'match not assigned' => [
             [
                 $resultNoSignificance1,

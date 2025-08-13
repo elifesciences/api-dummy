@@ -2,11 +2,11 @@
 
 namespace test\eLife\DummyApi;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
-final class PingTest extends PHPUnit_Framework_TestCase
+final class PingTest extends TestCase
 {
     private static $app;
 
