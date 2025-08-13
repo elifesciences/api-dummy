@@ -25,6 +25,7 @@ services:
             - ./:/srv/api-dummy
             - /srv/api-dummy/build
             - vendor:/srv/api-dummy/vendor
+        stop_grace_period: 1s
 
 volumes:
     vendor:

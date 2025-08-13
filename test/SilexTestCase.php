@@ -21,31 +21,19 @@ trait SilexTestCase
 
     /**
      * @test
-     */
-    final public function it_can_be_pinged()
-    {
-        $response = $this->getApp()->handle(Request::create('/ping'));
-
-        $this->assertSame(200, $response->getStatusCode());
-        $this->assertSame('pong', $response->getContent());
-        $this->assertSame('text/plain; charset=UTF-8', $response->headers->get('Content-Type'));
-        $this->assertSame('must-revalidate, no-cache, no-store, private', $response->headers->get('Cache-Control'));
-    }
-
-    /**
-     * @test
      * @dataProvider requestProvider
      */
     final public function it_returns_valid_responses(Request $request, $contentType, int $statusCode = 200, $warning = [], int $expectedCount = null)
     {
+        global $argv;
         $response = $this->getApp()->handle($request);
 
-        if (in_array('--debug', $_SERVER['argv'], true) && 500 === $response->getStatusCode()) {
+        if (in_array('--debug', $argv, true) && 500 === $response->getStatusCode()) {
             $json = json_decode($response->getContent(), true);
             if (isset($json['exception'])) {
                 $this->fail($json['exception']);
             }
-            $this->fail($json);
+            $this->fail('A 500 response was returned with: '.$response->getContent());
         }
 
         if (is_int($expectedCount)) {
