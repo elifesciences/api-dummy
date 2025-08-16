@@ -1,4 +1,4 @@
-FROM composer:2.2 AS build
+FROM composer:2.8 AS build
 
 COPY composer.json composer.lock ./
 RUN composer --no-interaction install --no-suggest --prefer-dist
