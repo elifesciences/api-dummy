@@ -2,11 +2,11 @@
 
 namespace test\eLife\DummyApi;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
 use Traversable;
 
-final class DataFolderTest extends PHPUnit_Framework_TestCase
+final class DataFolderTest extends TestCase
 {
     use SilexTestCase;
 
