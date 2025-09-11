@@ -33,12 +33,12 @@
         "pdf": "https://elifesciences.org/content/4/e29561.pdf",
         "subjects": [
             {
-                "id": "biochemistry",
-                "name": "Biochemistry"
+                "id": "biochemistry-chemical-biology",
+                "name": "Biochemistry and Chemical Biology"
             },
             {
-                "id": "biophysics-structural-biology",
-                "name": "Biophysics and Structural Biology"
+                "id": "structural-biology-molecular-biophysics",
+                "name": "Structural Biology and Molecular Biophysics"
             }
         ],
         "curationLabels": [

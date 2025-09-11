@@ -48,8 +48,8 @@
             "pdf": "https://elifesciences.org/content/4/e10627.pdf",
             "subjects": [
                 {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
                 }
             ],
             "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
@@ -65,8 +65,8 @@
             "published": "2015-09-10T13:45:00Z",
             "subjects": [
                 {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
                 }
             ]
         }

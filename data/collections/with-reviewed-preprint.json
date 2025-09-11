@@ -143,8 +143,8 @@
             "pdf": "https://elifesciences.org/content/4/e19560.pdf",
             "subjects": [
                 {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
                 }
             ],
             "curationLabels": [
@@ -179,8 +179,8 @@
             "published": "2016-07-08T08:33:25Z",
             "subjects": [
                 {
-                    "id": "biophysics-structural-biology",
-                    "name": "Biophysics and Structural Biology"
+                    "id": "structural-biology-molecular-biophysics",
+                    "name": "Structural Biology and Molecular Biophysics"
                 }
             ]
         },
@@ -232,12 +232,12 @@
             "authorLine": "Yongjian Huang, Shashank Bharill ... John Kuriyan",
             "subjects": [
                 {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
                 },
                 {
-                    "id": "biophysics-structural-biology",
-                    "name": "Biophysics and Structural Biology"
+                    "id": "structural-biology-molecular-biophysics",
+                    "name": "Structural Biology and Molecular Biophysics"
                 }
             ]
         },

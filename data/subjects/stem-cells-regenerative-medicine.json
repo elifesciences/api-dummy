@@ -1,0 +1,53 @@
+{
+    "id": "stem-cells-regenerative-medicine",
+    "name": "Stem Cells and Regenerative Medicine",
+    "image": {
+        "banner": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg",
+            "alt": "Stem Cells and Regenerative Medicine",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            },
+            "attribution": [
+                "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+            ]
+        },
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg",
+            "alt": "Stem Cells and Regenerative Medicine",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-stem-cells-and-regenerative-medicine-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            },
+            "attribution": [
+                "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+            ]
+        }
+    },
+    "impactStatement": "eLife reviews research on stem cell function, organogenesis, and tissue regeneration. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#stem-cells-regenerative-medicine\">what we review</a> and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=stem-cells-regenerative-medicine\">sign up for the latest research</a>.",
+    "aimsAndScope": [
+        {
+            "type": "paragraph",
+            "text": "We aim to review advances in all areas of stem cell biology and regenerative medicine, including the discovery of new mechanisms that regulate stem cell function, organogenesis, and tissue regeneration. We are also interested in clinical trials or other clinical observations that reveal new approaches to therapy or new biological insights. Read the <a href=\"https://elifesciences.org/subjects/stem-cells-regenerative-medicine\">latest research</a> in this subject area."
+        }
+    ]
+}

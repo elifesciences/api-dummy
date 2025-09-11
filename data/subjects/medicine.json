@@ -1,0 +1,53 @@
+{
+    "id": "medicine",
+    "name": "Medicine",
+    "image": {
+        "banner": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-medicine-illustration.jpg",
+            "alt": "Medicine",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-medicine-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-medicine-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            },
+            "attribution": [
+                "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+            ]
+        },
+        "thumbnail": {
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-medicine-illustration.jpg",
+            "alt": "Medicine",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2021-11%2Felife-sciences-medicine-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-medicine-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            },
+            "attribution": [
+                "Illustration by <a href=\"http://www.davidebonazzi.com/\">Davide Bonazzi</a>"
+            ]
+        }
+    },
+    "impactStatement": "eLife reviews translational, clinical and health policy research in all areas of medicine. Learn more about <a href=\"https://elifesciences.org/about/aims-scope#medicine\">what we review</a> and <a href=\"https://elifesciences.org/content-alerts?utm_source=website&amp;utm_medium=link&amp;utm_campaign=medicine\">sign up for the latest research</a>.",
+    "aimsAndScope": [
+        {
+            "type": "paragraph",
+            "text": "We aim to review translational research and clinical studies focused on improving human health. Our interests include, but are not limited to, the etiology, pathophysiology, diagnosis, genetics, prevention, and treatment of human disorders, as well as the biological, environmental and socioeconomic determinants of health which lead to changes in medical practice, population health and health policy. Read the <a href=\"https://elifesciences.org/subjects/medicine\">latest research</a> in this subject area."
+        }
+    ]
+}

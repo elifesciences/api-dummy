@@ -25,16 +25,16 @@
             "figuresPdf": "https://elife-publishing-cdn.s3.amazonaws.com/00569/elife-00569-figures-v1.pdf",
             "subjects": [
                 {
-                    "id": "biochemistry",
-                    "name": "Biochemistry"
+                    "id": "biochemistry-chemical-biology",
+                    "name": "Biochemistry and Chemical Biology"
                 },
                 {
-                    "id": "developmental-biology-stem-cells",
-                    "name": "Developmental Biology and Stem Cells"
+                    "id": "developmental-biology",
+                    "name": "Developmental Biology"
                 },
                 {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
                 }
             ],
             "abstract": {

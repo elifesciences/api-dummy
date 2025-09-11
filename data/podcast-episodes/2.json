@@ -61,8 +61,8 @@
                     "pdf": "https://elifesciences.org/content/4/e09560.pdf",
                     "subjects": [
                         {
-                            "id": "genomics-evolutionary-biology",
-                            "name": "Genomics and Evolutionary Biology"
+                            "id": "genetics-genomics",
+                            "name": "Genetics and Genomics"
                         }
                     ],
                     "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa."
@@ -99,8 +99,8 @@
                     "pdf": "https://elifesciences.org/content/4/e10627.pdf",
                     "subjects": [
                         {
-                            "id": "genomics-evolutionary-biology",
-                            "name": "Genomics and Evolutionary Biology"
+                            "id": "genetics-genomics",
+                            "name": "Genetics and Genomics"
                         }
                     ],
                     "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."

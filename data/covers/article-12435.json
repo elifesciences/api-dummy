@@ -31,8 +31,8 @@
         "pdf": "https://elife-publishing-cdn.s3.amazonaws.com/12435/elife-12435-v1.pdf",
         "subjects": [
             {
-                "id": "biochemistry",
-                "name": "Biochemistry"
+                "id": "biochemistry-chemical-biology",
+                "name": "Biochemistry and Chemical Biology"
             },
             {
                 "id": "genomics-evolutionary-biology",

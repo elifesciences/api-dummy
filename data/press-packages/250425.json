@@ -5,8 +5,8 @@
     "published": "2015-09-10T13:45:00Z",
     "subjects": [
         {
-            "id": "genomics-evolutionary-biology",
-            "name": "Genomics and Evolutionary Biology"
+            "id": "genetics-genomics",
+            "name": "Genetics and Genomics"
         }
     ],
     "content": [
@@ -107,8 +107,8 @@
             "pdf": "https://elifesciences.org/content/4/e09560.pdf",
             "subjects": [
                 {
-                    "id": "genomics-evolutionary-biology",
-                    "name": "Genomics and Evolutionary Biology"
+                    "id": "genetics-genomics",
+                    "name": "Genetics and Genomics"
                 }
             ],
             "impactStatement": "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa."

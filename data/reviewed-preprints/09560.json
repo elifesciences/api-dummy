@@ -15,12 +15,12 @@
   "pdf": "https://elifesciences.org/content/4/e09560.pdf",
   "subjects": [
     {
-      "id": "biochemistry",
-      "name": "Biochemistry"
+      "id": "biochemistry-chemical-biology",
+      "name": "Biochemistry and Chemical Biology"
     },
     {
-      "id": "genomics-evolutionary-biology",
-      "name": "Genomics and Evolutionary Biology"
+      "id": "genetics-genomics",
+      "name": "Genetics and Genomics"
     }
   ],
   "curationLabels": [

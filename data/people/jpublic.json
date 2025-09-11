@@ -20,12 +20,12 @@
     "research": {
         "expertises": [
             {
-                "id": "biophysics-structural-biology",
-                "name": "Biophysics and Structural Biology"
+                "id": "structural-biology-molecular-biophysics",
+                "name": "Structural Biology and Molecular Biophysics"
             },
             {
-                "id": "immunology",
-                "name": "Immunology"
+                "id": "immunology-inflammation",
+                "name": "Immunology and Inflammation"
             }
         ],
         "focuses": [
