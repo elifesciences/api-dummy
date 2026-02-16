@@ -1,0 +1,33 @@
+{
+    "id": "physiology",
+    "name": "physiology",
+    "impactStatement": "eLife publishes research including brain function, neuronal circuits, synapses, sensory processing and motor pattern generation. Decisions are made by journal editors who are active researchers in neuroscience.",
+    "image": {
+        "banner": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-neuroscience-illustration.jpg",
+            "source": {
+                "mediaType": "image/jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-neuroscience-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-neuroscience-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            }
+        },
+        "thumbnail": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-neuroscience-illustration.jpg",
+            "source": {
+                "mediaType": "image/jpg",
+                "uri": "https://iiif.elifesciences.org/journal-cms/subjects%2F2017-04%2Felife-sciences-neuroscience-illustration.jpg/full/full/0/default.jpg",
+                "filename": "elife-sciences-neuroscience-illustration.jpg"
+            },
+            "size": {
+                "width": 7016,
+                "height": 2082
+            }
+        }
+    }
+}
