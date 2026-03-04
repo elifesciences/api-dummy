@@ -3,7 +3,7 @@ FROM composer:2.9 AS build
 COPY composer.json composer.lock ./
 RUN composer --no-interaction install --no-suggest --prefer-dist
 
-FROM ghcr.io/elifesciences/php:8.0-cli@sha256:7822d0bab29b09f5ad6c4f338c8fabdd277c1ac3fa00f3b16b598ed4d62739d0 AS base
+FROM ghcr.io/elifesciences/php:8.0-cli@sha256:cdcb4661962133b04f37ff8db2a6bbcd5ad48051564f6e9467a400614a674d8f AS base
 
 USER elife
 
