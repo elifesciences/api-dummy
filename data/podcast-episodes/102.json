@@ -1,0 +1,327 @@
+{
+  "number": 102,
+  "title": "Episode 102: March 2026",
+  "published": "2026-03-12T12:28:00Z",
+  "image": {
+    "banner": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg",
+      "alt": "Kangaroo in Broken Hill, Australia",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg/full/full/0/default.jpg",
+        "filename": "michael-jerrard-a1qjjir-3_u-unsplash.jpeg"
+      },
+      "size": {
+        "width": 5782,
+        "height": 3690
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "michaeljerrard (via unsplash CC0)"
+      ]
+    },
+    "thumbnail": {
+      "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg",
+      "alt": "Kangaroo in Broken Hill, Australia",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg/full/full/0/default.jpg",
+        "filename": "michael-jerrard-a1qjjir-3_u-unsplash.jpeg"
+      },
+      "size": {
+        "width": 5782,
+        "height": 3690
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      },
+      "attribution": [
+        "michaeljerrard (via unsplash CC0)"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "mediaType": "audio/mpeg",
+      "uri": "https://www.thenakedscientists.com/sites/default/files/media/podcasts/episodes/eLife_Podcast_26.02.28.mp3"
+    }
+  ],
+  "impactStatement": "In this episode, we hear about kangaroo energetics, moths that can hear plants, using GPS trackers for epidemiology, fingerprints, and long-overdue recognition for female scientists at the Eiffel Tower.",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Exploring the secrets of kangaroos",
+      "time": 42,
+      "impactStatement": "Kangaroos change their posture when hopping at high speeds to save energy \u003Cbr /\u003E",
+      "longTitle": "Listen to Christofer Clemente discuss kangaroo energetics.",
+      "content": [
+        {
+          "id": "96437",
+          "doi": "10.7554/eLife.96437",
+          "pdf": "https://cdn.elifesciences.org/articles/96437/elife-96437-v1.pdf",
+          "type": "research-article",
+          "stage": "published",
+          "title": "Postural adaptations may contribute to the unique locomotor energetics seen in hopping kangaroos",
+          "status": "vor",
+          "volume": 13,
+          "version": 1,
+          "subjects": [
+            {
+              "id": "physics-living-systems",
+              "name": "Physics of Living Systems"
+            }
+          ],
+          "copyright": {
+            "holder": "Thornton et al.",
+            "license": "CC-BY-4.0",
+            "statement": "This article is distributed under the terms of the \u003Ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003ECreative Commons Attribution License\u003C/a\u003E, which permits unrestricted use and redistribution provided that the original author and source are credited."
+          },
+          "published": "2025-12-16T00:00:00Z",
+          "authorLine": "Lauren Thornton, Taylor Dick ... Christofer J Clemente",
+          "figuresPdf": "https://cdn.elifesciences.org/articles/96437/elife-96437-figures-v1.pdf",
+          "statusDate": "2025-12-16T00:00:00Z",
+          "elocationId": "RP96437",
+          "versionDate": "2025-12-16T00:00:00Z",
+          "elifeAssessment": {
+            "id": "sa0",
+            "doi": "10.7554/eLife.96437.3.sa0",
+            "title": "eLife Assessment",
+            "content": [
+              {
+                "text": "This \u003Cb\u003Evaluable\u003C/b\u003E biomechanical analysis of kangaroo kinematics and kinetics across a range of hopping speeds and masses is a step towards understanding a long-standing problem in locomotion biomechanics: the mechanism for how kangaroos, unlike other mammals, can increase hopping speed without a concomitant increase in metabolic cost. The authors \u003Cb\u003Econvincingly\u003C/b\u003E demonstrate that changes in kangaroo posture with speed increase tendon stress/strain and hence elastic energy storage/return. This greater tendon elastic energy storage/return may counteract the increased cost of generating muscular force at faster speeds and thus allows for the invariance in metabolic cost. This methodologically impressive study sets the stage for further work to investigate the relation of hopping speed to metabolic cost more definitively.",
+                "type": "paragraph"
+              }
+            ],
+            "strength": [
+              "convincing"
+            ],
+            "significance": [
+              "valuable"
+            ]
+          },
+          "impactStatement": "Postural adjustments that reduce ankle leverage in kangaroos enhance tendon stress and elastic energy storage at higher speeds, providing energetic efficiency during hopping but potentially constraining the maximum size achievable by large species."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "It's not just wheat that has ears ",
+      "time": 514,
+      "impactStatement": "Moths detect ultrasonic signals emitted by plants to locate places suitable for laying eggs \u003Cbr /\u003E",
+      "longTitle": "Listen to Yossi Yovel talk about moths and ultrasonic signals emitted by plants.",
+      "content": [
+        {
+          "id": "104700",
+          "doi": "10.7554/eLife.104700",
+          "pdf": "https://cdn.elifesciences.org/articles/104700/elife-104700-v1.pdf",
+          "type": "research-article",
+          "stage": "published",
+          "title": "Female moths incorporate plant acoustic emissions into their oviposition decision-making process",
+          "status": "vor",
+          "volume": 13,
+          "version": 1,
+          "subjects": [
+            {
+              "id": "ecology",
+              "name": "Ecology"
+            }
+          ],
+          "copyright": {
+            "holder": "Seltzer, Zer Eshel et al.",
+            "license": "CC-BY-4.0",
+            "statement": "This article is distributed under the terms of the \u003Ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003ECreative Commons Attribution License\u003C/a\u003E, which permits unrestricted use and redistribution provided that the original author and source are credited."
+          },
+          "published": "2026-01-05T00:00:00Z",
+          "authorLine": "Rya Seltzer, Guy Zer Eshel ... Yossi Yovel",
+          "figuresPdf": "https://cdn.elifesciences.org/articles/104700/elife-104700-figures-v1.pdf",
+          "statusDate": "2026-01-05T00:00:00Z",
+          "elocationId": "RP104700",
+          "versionDate": "2026-01-05T00:00:00Z",
+          "elifeAssessment": {
+            "id": "sa0",
+            "doi": "10.7554/eLife.104700.3.sa0",
+            "title": "eLife Assessment",
+            "content": [
+              {
+                "text": "This study reveals that female moths use ultrasonic sounds emitted by dehydrated plants to guide their oviposition decisions. It highlights sound as an additional sensory modality in host searching, adding an \u003Cb\u003Eimportant\u003C/b\u003E piece to the puzzle of how insects and plants interact. Through \u003Cb\u003Econvincing\u003C/b\u003E experimental approaches, the authors provide insights that advance our understanding of plant-insect interactions.",
+                "type": "paragraph"
+              }
+            ],
+            "strength": [
+              "convincing"
+            ],
+            "significance": [
+              "important"
+            ]
+          },
+          "impactStatement": "Acoustic ecology introduces an additional dimension in plant-insect communication, revealing that female moths use ultrasonic emissions from dehydrated plants to guide oviposition decisions."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Using GPS to fight infectious diseases",
+      "time": 965,
+      "impactStatement": "GPS trackers can be used to study human movement and link it to infection risk",
+      "longTitle": "Listen to Pablo Ruiz Cuenca discuss the use of GPS trackers in epidemiology.",
+      "content": [
+        {
+          "id": "107153",
+          "doi": "10.7554/eLife.107153",
+          "pdf": "https://cdn.elifesciences.org/articles/107153/elife-107153-v1.pdf",
+          "type": "tools-resources",
+          "stage": "published",
+          "title": "Using step selection functions to analyse human mobility using telemetry data in infectious disease epidemiology: a case study of leptospirosis",
+          "status": "vor",
+          "volume": 14,
+          "version": 1,
+          "subjects": [
+            {
+              "id": "epidemiology-global-health",
+              "name": "Epidemiology and Global Health"
+            }
+          ],
+          "copyright": {
+            "holder": "Ruiz Cuenca et al.",
+            "license": "CC-BY-4.0",
+            "statement": "This article is distributed under the terms of the \u003Ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003ECreative Commons Attribution License\u003C/a\u003E, which permits unrestricted use and redistribution provided that the original author and source are credited."
+          },
+          "published": "2025-12-01T00:00:00Z",
+          "authorLine": "Pablo Ruiz Cuenca, Fábio N Souza ... Emanuele Giorgi",
+          "statusDate": "2025-12-01T00:00:00Z",
+          "elocationId": "RP107153",
+          "versionDate": "2025-12-01T00:00:00Z",
+          "elifeAssessment": {
+            "id": "sa0",
+            "doi": "10.7554/eLife.107153.3.sa0",
+            "title": "eLife Assessment",
+            "content": [
+              {
+                "text": "This study makes a novel and \u003Cb\u003Evaluable\u003C/b\u003E contribution by adapting step selection functions, traditionally used in animal ecology, to explore human movement and environmental risk exposure in urban slums, offering a promising framework for spatial epidemiology, particularly regarding leptospirosis. The integration of GPS telemetry with environmental data and the stratification by gender and serostatus are notable strengths that enhance the study's relevance for public health applications. The strength of evidence is \u003Cb\u003Ecompelling\u003C/b\u003E.",
+                "type": "paragraph"
+              }
+            ],
+            "strength": [
+              "compelling"
+            ],
+            "significance": [
+              "valuable"
+            ]
+          },
+          "impactStatement": "Step selection functions are a useful tool for analysing fine-scale human movements to understand environmental interactions in the context of infectious disease epidemiology.",
+          "researchOrganisms": [
+            "Human"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Keeping in touch",
+      "time": 1416,
+      "impactStatement": "A new technique sheds light on tactile sensing.",
+      "longTitle": "Listen to Giulia Corniani explain how the skin deforms when you touch something with your finger.",
+      "content": [
+        {
+          "id": "93554",
+          "doi": "10.7554/eLife.93554",
+          "pdf": "https://cdn.elifesciences.org/articles/93554/elife-93554-v1.pdf",
+          "type": "research-article",
+          "stage": "published",
+          "title": "Sub-surface deformation of individual fingerprint ridges during tactile interactions",
+          "status": "vor",
+          "volume": 13,
+          "version": 1,
+          "subjects": [
+            {
+              "id": "neuroscience",
+              "name": "Neuroscience"
+            },
+            {
+              "id": "physics-living-systems",
+              "name": "Physics of Living Systems"
+            }
+          ],
+          "copyright": {
+            "holder": "Corniani et al.",
+            "license": "CC-BY-4.0",
+            "statement": "This article is distributed under the terms of the \u003Ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003ECreative Commons Attribution License\u003C/a\u003E, which permits unrestricted use and redistribution provided that the original author and source are credited."
+          },
+          "published": "2025-12-04T00:00:00Z",
+          "authorLine": "Giulia Corniani, Zing S Lee ... Hannes P Saal",
+          "figuresPdf": "https://cdn.elifesciences.org/articles/93554/elife-93554-figures-v1.pdf",
+          "statusDate": "2025-12-04T00:00:00Z",
+          "elocationId": "RP93554",
+          "versionDate": "2025-12-04T00:00:00Z",
+          "elifeAssessment": {
+            "id": "sa0",
+            "doi": "10.7554/eLife.93554.3.sa0",
+            "title": "eLife Assessment",
+            "content": [
+              {
+                "text": "By leveraging optical coherence tomography this study provides \u003Cb\u003Eimportant\u003C/b\u003E insight into the deformation of human fingertip ridges when contacting raised features such as edges and contours. The study provides \u003Cb\u003Ecompelling\u003C/b\u003E evidence that such features tend to cause deformation and relative movement of what the authors term ridge flanks rather than bending of the ridges themselves.",
+                "type": "paragraph"
+              }
+            ],
+            "strength": [
+              "compelling"
+            ],
+            "significance": [
+              "important"
+            ]
+          },
+          "impactStatement": "Sub-surface imaging demonstrates that vertical shear beneath fingertip ridges enables high mechanical spatial resolution to support tactile sensing.",
+          "researchOrganisms": [
+            "Human"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Say their name",
+      "time": 1864,
+      "impactStatement": "72 female scientists are going to be commemorated at the Eiffel Tower in Paris. \u003Cbr /\u003E",
+      "longTitle": "Listen to Julie Batut talk about women who have been written out of the history of science.",
+      "content": [
+        {
+          "id": "110644",
+          "doi": "10.7554/eLife.110644",
+          "pdf": "https://cdn.elifesciences.org/articles/110644/elife-110644-v1.pdf",
+          "type": "feature",
+          "stage": "published",
+          "title": "Four women whose pioneering contributions to science have been largely overlooked",
+          "status": "vor",
+          "volume": 15,
+          "version": 1,
+          "subjects": [
+            {
+              "id": "developmental-biology",
+              "name": "Developmental Biology"
+            },
+            {
+              "id": "genetics-genomics",
+              "name": "Genetics and Genomics"
+            }
+          ],
+          "copyright": {
+            "holder": "Thomann and Batut",
+            "license": "CC-BY-4.0",
+            "statement": "This article is distributed under the terms of the \u003Ca href=\"http://creativecommons.org/licenses/by/4.0/\"\u003ECreative Commons Attribution License\u003C/a\u003E, which permits unrestricted use and redistribution provided that the original author and source are credited."
+          },
+          "published": "2026-02-11T00:00:00Z",
+          "authorLine": "Lisa M Thomann, Julie Batut",
+          "statusDate": "2026-02-11T00:00:00Z",
+          "elocationId": "e110644",
+          "titlePrefix": "Equity, Diversity and Inclusion",
+          "versionDate": "2026-02-11T00:00:00Z",
+          "impactStatement": "Ethel Browne Harvey, Hilde Pröscholdt Mangold, Ida Henrietta Hyde and Marthe Gautier all made important contributions to developmental biology, but their names are largely absent from histories of science."
+        }
+      ]
+    }
+  ]
+}

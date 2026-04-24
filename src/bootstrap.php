@@ -1309,6 +1309,45 @@ $app->get('/highlights/{list}', function (Request $request, Accept $type, string
     'application/vnd.elife.highlight-list+json; version=2'
 ));
 
+$app->get('/highlights/{list}/current', function (Request $request, Accept $type, string $list) use ($app) {
+    if (false === isset($app['highlights'][$list])) {
+        throw new NotFoundHttpException('Not found');
+    }
+
+    $highlights = array_filter($app['highlights'][$list], function ($item) use ($type) {
+        return ($type->getParameter('version') > 1 || 'digest' !== $item['item']['type']) &&
+            ($type->getParameter('version') > 2 || 'press-package' !== $item['item']['type']);
+    });
+
+    $highlights = array_slice($highlights, 0, 4);
+
+    $content = [
+        'total' => count($highlights),
+        'items' => [],
+    ];
+
+    if ('asc' === $request->query->get('order', 'desc')) {
+        $highlights = array_reverse($highlights);
+    }
+
+    $content['items'] = $highlights;
+
+    $headers = ['Content-Type' => $type->getNormalizedValue()];
+
+    if ($type->getParameter('version') < 3) {
+        $headers['Warning'] = sprintf('299 elifesciences.org "Deprecation: Support for version %d will be removed"', $type->getParameter('version'));
+    }
+
+    return new Response(
+        json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES),
+        Response::HTTP_OK,
+        $headers
+    );
+})->before($app['negotiate.accept'](
+    'application/vnd.elife.highlight-list+json; version=3',
+    'application/vnd.elife.highlight-list+json; version=2'
+));
+
 $app->get('/interviews', function (Request $request, Accept $type) use ($app) {
     $interviews = $app['interviews'];
 

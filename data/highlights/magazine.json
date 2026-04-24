@@ -1,223 +1,367 @@
 [
-    {
-        "title": "<i>Homo naledi</i>",
-        "authorLine": "Chris Stringer",
-        "image": {
-            "alt": "",
-            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-            "source": {
-                "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                "filename": "elife-09560-fig1-v1.jpg"
-            },
-            "size": {
-                "width": 4194,
-                "height": 4714
-            }
-        },
+  {
+    "title": "Discovery and Translation of Cancer Immunology: A Special Issue",
+    "impactStatement": "A single amino acid residue is responsible for the reciprocal specificity of two odorant receptors in the southern house mosquito.",
+    "image": {
+      "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fbutterfly.jpg",
+      "alt": "",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fbutterfly.jpg/full/full/0/default.jpg",
+        "filename": "butterfly.jpg"
+      },
+      "size": {
+        "width": 3788,
+        "height": 2358
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    "item": {
+      "status": "vor",
+      "stage": "published",
+      "id": "10627",
+      "version": 1,
+      "type": "insight",
+      "image": {
+        "thumbnail": {
+          "alt": "",
+          "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif",
+          "size": {
+            "width": 3000,
+            "height": 2400
+          },
+          "source": {
+            "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif/full/full/0/default.jpg",
+            "filename": "digest-61172.tif",
+            "mediaType": "image/jpeg"
+          }
+        }
+      },
+      "doi": "10.7554/eLife.10627",
+      "title": "The many mysteries of <i>Homo naledi</i>",
+      "titlePrefix": "Title prefix",
+      "published": "2016-09-10T00:00:00Z",
+      "versionDate": "2016-03-28T00:00:00Z",
+      "statusDate": "2016-03-28T00:00:00Z",
+      "volume": 4,
+      "elocationId": "e10627",
+      "authorLine": "Chris Stringer 123456",
+      "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+      "subjects": [
+        {
+          "id": "genetics-genomics",
+          "name": "Genetics and Genomics"
+        }
+      ],
+      "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+    }
+  },
+  {
+    "title": "Immunology",
+    "impactStatement": "A single amino acid residue is responsible for the reciprocal specificity of two odorant receptors in the southern house mosquito.",
+    "image": {
+      "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fbutterfly.jpg",
+      "alt": "",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fbutterfly.jpg/full/full/0/default.jpg",
+        "filename": "butterfly.jpg"
+      },
+      "size": {
+        "width": 3788,
+        "height": 2358
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    "item": {
+      "status": "vor",
+      "stage": "published",
+      "id": "10627",
+      "version": 1,
+      "type": "insight",
+      "image": {
+        "thumbnail": {
+          "alt": "",
+          "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif",
+          "size": {
+            "width": 3000,
+            "height": 2400
+          },
+          "source": {
+            "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif/full/full/0/default.jpg",
+            "filename": "digest-61172.tif",
+            "mediaType": "image/jpeg"
+          }
+        }
+      },
+      "doi": "10.7554/eLife.10627",
+      "title": "The many mysteries of <i>Homo naledi</i>",
+      "titlePrefix": "Title prefix",
+      "published": "2016-09-10T00:00:00Z",
+      "versionDate": "2016-03-28T00:00:00Z",
+      "statusDate": "2016-03-28T00:00:00Z",
+      "volume": 4,
+      "elocationId": "e10627",
+      "authorLine": "Chris Stringer 123456",
+      "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+      "subjects": [
+        {
+          "id": "genetics-genomics",
+          "name": "Genetics and Genomics"
+        }
+      ],
+      "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+    }
+  },
+  {
+    "title": "Homo naledi",
+    "impactStatement": "This is the impact statement for Homo naledi",
+    "image": {
+      "alt": "",
+      "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+      "source": {
+        "mediaType": "image/jpg",
+        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+        "filename": "elife-09560-fig1-v1.jpg"
+      },
+      "size": {
+        "width": 4194,
+        "height": 4714
+      }
+    },
+    "item": {
+      "status": "vor",
+      "stage": "published",
+      "id": "10627",
+      "version": 1,
+      "type": "insight",
+      "image": {
+        "thumbnail": {
+          "alt": "",
+          "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
+          "source": {
+            "mediaType": "image/jpg",
+            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
+            "filename": "elife-09560-fig1-v1.jpg"
+          },
+          "size": {
+            "width": 4194,
+            "height": 4714
+          }
+        }
+      },
+      "doi": "10.7554/eLife.10627",
+      "title": "The many mysteries of <i>Homo naledi</i>",
+      "titlePrefix": "Title prefix",
+      "published": "2016-09-10T00:00:00Z",
+      "versionDate": "2016-03-28T00:00:00Z",
+      "statusDate": "2016-03-28T00:00:00Z",
+      "volume": 4,
+      "elocationId": "e10627",
+      "authorLine": "Chris Stringer 123456",
+      "pdf": "https://elifesciences.org/content/4/e10627.pdf",
+      "subjects": [
+        {
+          "id": "genetics-genomics",
+          "name": "Genetics and Genomics"
+        }
+      ],
+      "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+    }
+  },
+  {
+        "title": "eLife Podcast: Latest episode",
         "item": {
-            "status": "vor",
-            "stage": "published",
-            "id": "10627",
-            "version": 1,
-            "type": "insight",
+            "type": "podcast-episode",
+            "number": 102,
+            "title": "Episode 102: March 2026",
+            "published": "2026-03-12T12:28:00Z",
+            "impactStatement": "In this episode, we hear about kangaroo energetics, moths that can hear plants, using GPS trackers for epidemiology, fingerprints, and long-overdue recognition for female scientists at the Eiffel Tower.",
             "image": {
-                "thumbnail": {
-                    "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                    "source": {
-                        "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                        "filename": "elife-09560-fig1-v1.jpg"
-                    },
-                    "size": {
-                        "width": 4194,
-                        "height": 4714
-                    }
-                }
-            },
-            "doi": "10.7554/eLife.10627",
-            "title": "The many mysteries of <i>Homo naledi</i>",
-            "titlePrefix": "Title prefix",
-            "published": "2016-09-10T00:00:00Z",
-            "versionDate": "2016-03-28T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 4,
-            "elocationId": "e10627",
-            "authorLine": "Chris Stringer",
-            "pdf": "https://elifesciences.org/content/4/e10627.pdf",
-            "subjects": [
-                {
-                    "id": "genetics-genomics",
-                    "name": "Genetics and Genomics"
-                }
-            ],
-            "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
-        }
-    },
-    {
-        "title": "Ebola virus disease in Africa",
-        "item": {
-            "type": "podcast-episode-chapter",
-            "episode": {
-                "number": 1,
-                "title": "June 2013",
-                "impactStatement": "Welcome to the first eLife podcast, which covers topics as diverse as the origins of multicellularity, what modern sequencing technology can tell us about the potato famines of the 1840s, the discovery of the receptor for the hepatitis B and D viruses, the effect of fog on the behaviour of car drivers, and the evolution of chromatin.",
-                "published": "2013-07-17T08:30:27Z",
-                "image": {
-                    "thumbnail": {
-                        "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
-                        "source": {
-                            "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
-                            "filename": "episode-1-elife-podcast.png"
-                        },
-                        "size": {
-                            "width": 1800,
-                            "height": 900
-                        }
-                    }
-                },
-                "sources": [
-                    {
-                        "mediaType": "audio/mpeg",
-                        "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.06.mp3"
-                    }
-                ]
-            },
-            "chapter": {
-                "number": 1,
-                "title": "Ebola virus disease in Africa",
-                "time": 0
-            }
-        }
-    },
-    {
-        "title": "<i>Homo naledi</i>",
-        "authorLine": "Chris Stringer",
-        "image": {
-            "alt": "",
-            "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-            "source": {
-                "mediaType": "image/jpg",
-                "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                "filename": "elife-09560-fig1-v1.jpg"
-            },
-            "size": {
-                "width": 4194,
-                "height": 4714
-            }
-        },
-        "item": {
-            "status": "vor",
-            "stage": "published",
-            "id": "10627",
-            "version": 1,
-            "type": "insight",
-            "image": {
-                "thumbnail": {
-                    "alt": "",
-                    "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif",
-                    "source": {
-                        "mediaType": "image/jpg",
-                        "uri": "https://iiif.elifesciences.org/lax/09560%2Felife-09560-fig1-v1.tif/full/full/0/default.jpg",
-                        "filename": "elife-09560-fig1-v1.jpg"
-                    },
-                    "size": {
-                        "width": 4194,
-                        "height": 4714
-                    }
-                }
-            },
-            "doi": "10.7554/eLife.10627",
-            "title": "The many mysteries of <i>Homo naledi</i>",
-            "titlePrefix": "Title prefix",
-            "published": "2016-09-10T00:00:00Z",
-            "versionDate": "2016-03-28T00:00:00Z",
-            "statusDate": "2016-03-28T00:00:00Z",
-            "volume": 4,
-            "elocationId": "e10627",
-            "authorLine": "Chris Stringer",
-            "pdf": "https://elifesciences.org/content/4/e10627.pdf",
-            "subjects": [
-                {
-                    "id": "genetics-genomics",
-                    "name": "Genetics and Genomics"
-                }
-            ],
-            "impactStatement": "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
-        }
-    },
-    {
-        "title": "Ebola virus disease in Africa",
-        "item": {
-            "type": "podcast-episode-chapter",
-            "episode": {
-                "number": 1,
-                "title": "June 2013",
-                "impactStatement": "Welcome to the first eLife podcast, which covers topics as diverse as the origins of multicellularity, what modern sequencing technology can tell us about the potato famines of the 1840s, the discovery of the receptor for the hepatitis B and D viruses, the effect of fog on the behaviour of car drivers, and the evolution of chromatin.",
-                "published": "2013-07-17T08:30:27Z",
-                "image": {
-                    "thumbnail": {
-                        "alt": "",
-                        "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
-                        "source": {
-                            "mediaType": "image/png",
-                            "uri": "https://iiif.elifesciences.org/journal-cms/podcast_episode%2F2017-04%2Fepisode-1-elife-podcast.png",
-                            "filename": "episode-1-elife-podcast.png"
-                        },
-                        "size": {
-                            "width": 1800,
-                            "height": 900
-                        }
-                    }
-                },
-                "sources": [
-                    {
-                        "mediaType": "audio/mpeg",
-                        "uri": "https://nakeddiscovery.com/libsyn/eLife_Podcast_13.06.mp3"
-                    }
-                ]
-            },
-            "chapter": {
-                "number": 1,
-                "title": "Ebola virus disease in Africa",
-                "time": 0
-            }
-        }
-    },
-    {
-        "title": "Neighborhood watch",
-        "item": {
-            "type": "digest",
-            "id": "f0f08e8d6ee3",
-            "title": "Neighborhood watch",
-            "impactStatement": "Roundworms modify the chemical signals they produce to tell others whether they’re in a good or bad environment.",
-            "stage": "published",
-            "published": "2018-07-06T09:06:01Z",
-            "updated": "2018-07-06T16:23:24Z",
-            "image": {
-                "thumbnail": {
-                    "uri": "https://iiif.elifesciences.org/medium/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
-                    "alt": "",
+                "banner": {
+                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg",
+                    "alt": "Kangaroo in Broken Hill, Australia",
                     "source": {
                         "mediaType": "image/jpeg",
-                        "uri": "https://cdn-images-1.medium.com/1*UaX-QIG8sgCXp6BDzc617w.jpeg",
-                        "filename": "1 UaX-QIG8sgCXp6BDzc617w.jpeg"
+                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg/full/full/0/default.jpg",
+                        "filename": "michael-jerrard-a1qjjir-3_u-unsplash.jpeg"
                     },
                     "size": {
-                        "width": 1152,
-                        "height": 864
-                    }
+                        "width": 5782,
+                        "height": 3690
+                    },
+                    "focalPoint": {
+                        "x": 50,
+                        "y": 50
+                    },
+                    "attribution": [
+                        "michaeljerrard (via unsplash CC0)"
+                    ]
+                },
+                "thumbnail": {
+                    "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg",
+                    "alt": "Kangaroo in Broken Hill, Australia",
+                    "source": {
+                        "mediaType": "image/jpeg",
+                        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/podcast_episode%2F2026-03%2Fmichael-jerrard-a1qjjir-3_u-unsplash.jpeg/full/full/0/default.jpg",
+                        "filename": "michael-jerrard-a1qjjir-3_u-unsplash.jpeg"
+                    },
+                    "size": {
+                        "width": 5782,
+                        "height": 3690
+                    },
+                    "focalPoint": {
+                        "x": 50,
+                        "y": 50
+                    },
+                    "attribution": [
+                        "michaeljerrard (via unsplash CC0)"
+                    ]
                 }
             },
-            "subjects": [
+            "sources": [
                 {
-                    "id": "biochemistry-chemical-biology",
-                    "name": "Biochemistry and Chemical Biology"
+                    "mediaType": "audio/mpeg",
+                    "uri": "https://www.thenakedscientists.com/sites/default/files/media/podcasts/episodes/eLife_Podcast_26.02.28.mp3"
                 }
             ]
+        },
+        "impactStatement": "<p>This is a test impact statement</p>",
+        "image": {
+            "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-03%2F0-pod-kangaroo.jpeg",
+            "alt": "",
+            "source": {
+                "mediaType": "image/jpeg",
+                "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-03%2F0-pod-kangaroo.jpeg/full/full/0/default.jpg",
+                "filename": "0-pod-kangaroo.jpeg"
+            },
+            "size": {
+                "width": 2228,
+                "height": 672
+            },
+            "focalPoint": {
+                "x": 50,
+                "y": 50
+            }
         }
+    },
+  {
+    "title": "Neighborhood Watch",
+    "item": {
+      "type": "digest",
+      "id": "61172",
+      "image": {
+        "thumbnail": {
+          "alt": "",
+          "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif",
+          "size": {
+            "width": 3000,
+            "height": 2400
+          },
+          "source": {
+            "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif/full/full/0/default.jpg",
+            "filename": "digest-61172.tif",
+            "mediaType": "image/jpeg"
+          }
+        }
+      },
+      "stage": "published",
+      "title": "Neighborhood watch",
+      "content": [
+        {
+          "type": "image",
+          "image": {
+            "alt": "",
+            "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif",
+            "size": {
+              "width": 3000,
+              "height": 2400
+            },
+            "source": {
+              "uri": "https://iiif.elifesciences.org/digests/61172%2Fdigest-61172.tif/full/full/0/default.jpg",
+              "filename": "digest-61172.tif",
+              "mediaType": "image/jpeg"
+            }
+          },
+          "caption": [
+            {
+              "text": "Fruit flies eyes in which aneuploid cells (unpigmented) have been induced. On the right, healthy cells have been further modified to not be able to kill their neighbors. In this case, aneuploid cells survive and multiply. On the left, aneuploid cells have been eliminated through competition. Image credit: Nicholas E Baker (CC BY 4.0)",
+              "type": "paragraph"
+            }
+          ]
+        },
+        {
+          "text": "Aneuploid cells emerge when cellular division goes awry and a cell ends up with the wrong number of chromosomes, the tiny genetic structures carrying the instructions that control life’s processes. Aneuploidy can lead to fatal conditions during development, and to cancer in an adult organism.",
+          "type": "paragraph"
+        },
+        {
+          "text": "A safety mechanism may exist that helps the body to detect and remove these cells. Yet, exactly this happens is still poorly understood: in particular, it is unclear how cells manage to ‘count’ their chromosomes.",
+          "type": "paragraph"
+        },
+        {
+          "text": "One way they could do so is through the ribosomes, the molecular ‘factories’ that create the building blocks required for life. In a cell, every chromosome carries genes that code for the proteins (known as Rps) forming ribosomes. Aneuploidy will alter the number of Rp genes, and in turn the amount and type of Rps the cell produces, so that ribosomes and the genes for Rps could act as a ‘readout’ of aneuploidy. Ji et al set out to test this theory in fruit flies.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The first experiment used a genetic manipulation technique called site-specific recombination to remove parts of chromosomes from cells in the developing eye and wing. Cells which retained all their Rp genes survived, while those that were missing some usually died – but only when the surrounding cells were normal. In this situation, healthy cells eliminated their damaged neighbours through a process known as cell competition. A second experiment, using radiation as an alternative method of damaging chromosomes, also gave similar results.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The work by Ji et al. reveals how the body can detect and eliminate aneuploid cells, potentially before they can cause harm. If the same mechanism applies in humans, boosting cell competition may, one day, helps to combat diseases like cancer.",
+          "type": "paragraph"
+        }
+      ],
+      "updated": "2021-04-13T11:30:33Z",
+      "subjects": [
+        {
+          "id": "developmental-biology",
+          "name": "Developmental Biology"
+        },
+        {
+          "id": "genetics-genomics",
+          "name": "Genetics and Genomics"
+        }
+      ],
+      "published": "2021-04-13T00:00:00Z",
+      "relatedContent": [
+        {
+          "id": "61172",
+          "doi": "10.7554/eLife.61172",
+          "type": "research-article",
+          "stage": "preview",
+          "title": "Cell competition removes segmental aneuploid cells from \u003Ci\u003EDrosophila\u003C/i\u003E imaginal disc-derived tissues based on ribosomal protein gene dose",
+          "status": "vor",
+          "volume": 10,
+          "version": 1,
+          "authorLine": "Zhejun Ji et al.",
+          "elocationId": "e61172"
+        }
+      ],
+      "impactStatement": "In fruit flies, competition between cells helps to eliminate those carrying damaged genetic information."
+    },
+    "impactStatement": "<p>This is a test impact statement.</p>",
+    "image": {
+      "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fstreet-and-houses-of-upscale-neighborhood-on-a-summer-morning-1024x682.jpg",
+      "alt": "",
+      "source": {
+        "mediaType": "image/jpeg",
+        "uri": "https://continuumtest--cdn-iiif.elifesciences.org/journal-cms/highlight_item%2F2026-04%2Fstreet-and-houses-of-upscale-neighborhood-on-a-summer-morning-1024x682.jpg/full/full/0/default.jpg",
+        "filename": "street-and-houses-of-upscale-neighborhood-on-a-summer-morning-1024x682.jpg"
+      },
+      "size": {
+        "width": 1024,
+        "height": 682
+      },
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      }
     }
+  }
 ]
