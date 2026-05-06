@@ -2513,16 +2513,16 @@
         },
         {
             "name": "elife/api",
-            "version": "2.33.1",
+            "version": "2.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-raml.git",
-                "reference": "7f1f70646e02e0728f46249e44dfb3c1e1c515cd"
+                "reference": "33062ea5ce7ce424bda26f5aaada9c05652710ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/7f1f70646e02e0728f46249e44dfb3c1e1c515cd",
-                "reference": "7f1f70646e02e0728f46249e44dfb3c1e1c515cd",
+                "url": "https://api.github.com/repos/elifesciences/api-raml/zipball/33062ea5ce7ce424bda26f5aaada9c05652710ae",
+                "reference": "33062ea5ce7ce424bda26f5aaada9c05652710ae",
                 "shasum": ""
             },
             "conflict": {
@@ -2536,9 +2536,9 @@
             "description": "eLife Sciences API specification",
             "support": {
                 "issues": "https://github.com/elifesciences/api-raml/issues",
-                "source": "https://github.com/elifesciences/api-raml/tree/2.33.1"
+                "source": "https://github.com/elifesciences/api-raml/tree/2.35.0"
             },
-            "time": "2025-06-04T11:25:41+00:00"
+            "time": "2026-04-24T14:12:00+00:00"
         },
         {
             "name": "elife/api-client",
@@ -5184,5 +5184,5 @@
     "platform-overrides": {
         "php": "8.0.30"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
